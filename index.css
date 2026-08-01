@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem; 
+    font-size: 16px; 
+  }
+  body { 
+    background-color: #ffffff; 
+    color: #333333; 
+    font-family: 'Roboto', sans-serif; 
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (max-width: 768px) {
+    p, span, li, a, input, button {
+      font-size: 16px !important;
+    }
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.75rem !important; }
+  }
+}
+
+@layer components {
+  .hero-img-container { 
+    min-height: 300px; 
+    background: #f3f4f6; 
+    contain: paint; 
+  }
+  
+  .glass-card { 
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px); 
+  }
+  
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #FFB81C;
+    color: #002855;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+    font-weight: 800;
+  }
+  .skip-link:focus {
+    top: 0;
+  }
+}
