@@ -1,0 +1,78 @@
+import React from 'react';
+import type { Language } from '../types';
+import { SEOHead } from './SEOHead';
+import { AboutUs } from './AboutUs';
+import { WhyChooseUs } from './WhyChooseUs';
+import { translations } from '../constants/translations';
+
+interface AboutPageProps {
+    language: Language;
+    onOpenQuote: () => void;
+}
+
+export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) => {
+    const isEs = language === 'es';
+    const baseUrl = 'https://www.ahbinsurancesolutions.com';
+    const canonical = `${baseUrl}${isEs ? '/es/nosotros' : '/about-us'}`;
+    const enUrl = `${baseUrl}/about-us`;
+    const esUrl = `${baseUrl}/es/nosotros`;
+
+    const title = isEs 
+        ? 'Sobre Nosotros y Broker Andrés H. Bozo | AHB Insurance Solutions' 
+        : 'About Us & Licensed Broker Andres H. Bozo | AHB Insurance Solutions';
+
+    const description = isEs 
+        ? 'Conozca a Andrés H. Bozo (NPN 21228432), corredor independiente especializado en Medicare y Seguros de Vida en Florida. Más de 80 aseguradoras.' 
+        : 'Meet Andres H. Bozo (NPN 21228432), independent insurance broker specializing in Florida Medicare and Life Insurance. 80+ top carriers.';
+
+    const content = translations[language];
+
+    return (
+        <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
+            <SEOHead 
+                title={title}
+                description={description}
+                canonicalUrl={canonical}
+                enUrl={enUrl}
+                esUrl={esUrl}
+                language={language}
+            />
+
+            <div className="bg-light-gray border-b border-gray-200 py-3">
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
+                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                        {isEs ? 'Inicio' : 'Home'}
+                    </a>
+                    <span>/</span>
+                    <span className="text-primary font-bold">{isEs ? 'Nosotros y Licencia' : 'About Broker'}</span>
+                </div>
+            </div>
+
+            <section className="bg-primary text-white py-12 md:py-16 text-center">
+                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                    <span className="bg-accent text-primary text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
+                        NPN: 21228432
+                    </span>
+                    <h1 className="text-3xl md:text-5xl font-black font-heading mb-4">
+                        {isEs ? 'Sobre AHB Insurance Solutions' : 'About AHB Insurance Solutions'}
+                    </h1>
+                    <p className="text-gray-200 text-sm md:text-base font-medium">
+                        {isEs ? 'Su socio independiente para una jubilación segura, protegida y digna en Florida.' : 'Your independent partner for a secure and dignified retirement in Florida.'}
+                    </p>
+                </div>
+            </section>
+
+            <AboutUs content={content.aboutUs} common={content.common} />
+            <WhyChooseUs content={content.whyChooseUs} />
+
+            <div className="container mx-auto px-4 md:px-6 text-center pt-8">
+                <button
+                    onClick={onOpenQuote}
+                    className="bg-accent text-primary font-black uppercase tracking-widest text-sm px-10 py-4 rounded-xl shadow-lg hover:bg-[#FFB81C] transition-all"
+                >
+                    {isEs ? 'Solicitar Asesoría Personalizada ➔' : 'Schedule Custom Advisory ➔'}
+                </button>
+            </div>
+        </div>
+    );
+};

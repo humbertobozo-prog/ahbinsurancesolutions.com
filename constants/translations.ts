@@ -217,7 +217,7 @@ export const translations: Record<Language, TranslationContent> = {
       stepLabel: "Step"
     },
     footer: {
-        companyName: "AHB Insurance Solutions",
+        companyName: "AHB Insurance Solutions LLC",
         description: "Your independent partner for a secure and dignified retirement.",
         licenseInfo: "Licensed Broker | NPN: 21228432",
         linksTitle: "Quick Links",
@@ -239,7 +239,7 @@ export const translations: Record<Language, TranslationContent> = {
         facebook: "Facebook",
         instagram: "Instagram",
         secureConnection: "Advanced CDN & SSL Encryption",
-        copyright: "© 2026 AHB Insurance Solutions. All Rights Reserved."
+        copyright: "© 2026 AHB Insurance Solutions LLC. All Rights Reserved."
     },
     whatsappButton: {
         ariaLabel: "Chat on WhatsApp"
@@ -465,7 +465,7 @@ export const translations: Record<Language, TranslationContent> = {
       stepLabel: "Paso"
     },
     footer: {
-        companyName: "AHB Insurance Solutions",
+        companyName: "AHB Insurance Solutions LLC",
         description: "Su socio independiente para una jubilación segura y digna.",
         licenseInfo: "Broker Licenciado | NPN: 21228432",
         linksTitle: "Enlaces Rápidos",
@@ -487,7 +487,7 @@ export const translations: Record<Language, TranslationContent> = {
         facebook: "Facebook",
         instagram: "Instagram",
         secureConnection: "Encriptación SSL y CDN Avanzada",
-        copyright: "© 2026 AHB Insurance Solutions. Todos los Derechos Reservados."
+        copyright: "© 2026 AHB Insurance Solutions LLC. All Rights Reserved."
     },
     whatsappButton: {
         ariaLabel: "Chat por WhatsApp"

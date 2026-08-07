@@ -14,18 +14,6 @@ const INSTAGRAM_URL = "https://www.instagram.com/ahbinsurancesolutions";
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA";
 
 export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModal }) => {
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-        e.preventDefault();
-        const id = targetId.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-    };
-
     return (
         <footer className="bg-primary text-white pt-16 pb-8" aria-label="Main Footer">
             <div className="container mx-auto px-6">
@@ -59,12 +47,14 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                     </div>
                     <div className="lg:col-span-2">
                         <h3 className="font-bold font-heading text-lg mb-4 text-white uppercase tracking-wider">{content.linksTitle}</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.services}</a></li>
-                            <li><a href="#about-us" onClick={(e) => handleNavClick(e, 'about-us')} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.about}</a></li>
-                            <li><a href="#why-us" onClick={(e) => handleNavClick(e, 'why-us')} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.whyUs}</a></li>
-                            <li><a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.testimonials}</a></li>
-                            <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.contact}</a></li>
+                        <ul className="space-y-2 text-xs font-bold uppercase tracking-wider">
+                            <li><a href="/medicare" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/medicare'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Medicare Plan G & N</a></li>
+                            <li><a href="/final-expense" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/final-expense'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Final Expense / Burial</a></li>
+                            <li><a href="/iul-retirement" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/iul-retirement'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">IUL Life Insurance</a></li>
+                            <li><a href="/blog" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/blog'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Blog & Knowledge Hub</a></li>
+                            <li><a href="/faq" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/faq'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">FAQ / Preguntas</a></li>
+                            <li><a href="/about-us" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/about-us'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.about}</a></li>
+                            <li><a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/contact'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">{content.links.contact}</a></li>
                             <li>
                                 <a 
                                     href="/privacy" 
