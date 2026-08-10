@@ -36,7 +36,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 language={language}
             />
 
-            <div className="bg-light-gray border-b border-gray-200 py-3">
+            <div className="bg-light-gray border-b border-gray-200 py-2">
                 <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
                     <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
                         {isEs ? 'Inicio' : 'Home'}
@@ -46,15 +46,20 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 </div>
             </div>
 
-            <section className="bg-primary text-white py-12 md:py-16 text-center">
+            <section className="bg-primary text-white py-6 md:py-8 text-center border-b border-white/10">
                 <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <span className="bg-accent text-primary text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
-                        {isEs ? 'Atención Inmediata' : 'Immediate Support'}
-                    </span>
-                    <h1 className="text-3xl md:text-5xl font-black font-heading mb-4">
+                    <div className="flex flex-wrap items-center justify-center gap-2 mb-2">
+                        <span className="bg-accent text-primary text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                            {isEs ? 'Atención Inmediata' : 'Immediate Support'}
+                        </span>
+                        <span className="bg-white/10 text-accent border border-accent/30 text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                            NPN: 21228432
+                        </span>
+                    </div>
+                    <h1 className="text-2xl md:text-4xl font-black font-heading mb-2">
                         {isEs ? 'Contacto y Solicitud de Cotización' : 'Contact Us & Free Quote Request'}
                     </h1>
-                    <p className="text-gray-200 text-sm md:text-base font-medium">
+                    <p className="text-gray-200 text-xs md:text-sm font-medium max-w-xl mx-auto">
                         {isEs ? 'Complete sus datos para recibir una comparación objetiva sin costo ni compromiso.' : 'Fill out the simple form to receive a free multi-carrier rate comparison.'}
                     </p>
                 </div>

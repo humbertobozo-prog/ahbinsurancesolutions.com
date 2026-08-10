@@ -212,20 +212,23 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
     }
 
     return (
-        <section id="contact" ref={sectionRef} className="py-16 md:py-20 bg-primary text-white scroll-mt-16">
+        <section id="contact" ref={sectionRef} className="py-8 md:py-12 bg-primary text-white scroll-mt-16">
             <div className="container mx-auto px-4 md:px-6">
-                 <div className="text-center mb-10 md:mb-12">
-                    <h2 className="text-3xl md:text-5xl font-black font-heading mb-4 md:mb-6 leading-tight tracking-tight px-2">
+                 <div className="text-center mb-6 md:mb-8">
+                    <h2 className="text-2xl md:text-4xl font-black font-heading mb-3 leading-tight tracking-tight px-2">
                         {content.mainTitle}
                     </h2>
-                    <div className="flex items-center justify-center gap-3">
-                        <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] text-accent/90 bg-white/5 px-4 py-1.5 rounded-full border border-white/10">
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                        <span className="text-xs md:text-sm font-black uppercase tracking-widest text-primary bg-accent px-4 py-1.5 rounded-full shadow-md">
                             NPN: 21228432
+                        </span>
+                        <span className="text-xs font-bold text-gray-200 bg-white/10 px-3 py-1.5 rounded-full border border-white/10">
+                            {content.licenseInfo}
                         </span>
                     </div>
                 </div>
 
-                <div className={`max-w-4xl mx-auto bg-white text-dark-gray rounded-[2rem] md:rounded-[2.5rem] shadow-2xl overflow-hidden relative transition-all duration-300 ${isShaking ? 'animate-shake' : ''}`}>
+                <div className={`max-w-4xl mx-auto bg-white text-dark-gray rounded-2xl md:rounded-[2rem] shadow-2xl overflow-hidden relative transition-all duration-300 ${isShaking ? 'animate-shake' : ''}`}>
                     {status === 'loading' && (
                         <div className="absolute inset-0 bg-white/95 backdrop-blur-md z-30 flex flex-col items-center justify-center p-8 text-center">
                             <div className="w-16 h-16 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
@@ -242,20 +245,20 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                     )}
 
                     <div className="bg-gray-200 w-full relative">
-                        <div className="h-4 bg-accent transition-all duration-700" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[10px] md:text-xs font-black text-primary uppercase tracking-[0.2em]">
+                        <div className="h-3 bg-accent transition-all duration-700" style={{ width: `${(currentStep / 3) * 100}%` }}></div>
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[9px] md:text-[10px] font-black text-primary uppercase tracking-[0.2em]">
                             {currentStep === 1 ? '33% Complete' : currentStep === 2 ? '66% Complete' : '100% Final Step'}
                         </div>
                     </div>
                     
-                    <div className="p-6 md:p-16">
-                        <div className="flex justify-between items-center mb-10 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                    <div className="p-4 md:p-8">
+                        <div className="flex justify-between items-center mb-5 bg-gray-50 p-3 rounded-xl border border-gray-100">
                             <span className="text-xs md:text-sm font-black text-primary uppercase tracking-[0.2em] flex items-center gap-1.5">
                                 <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse inline-block"></span>
                                 {content.stepLabel} {currentStep} <span className="text-accent font-bold">/</span> 3
                             </span>
                             {currentStep > 1 && (
-                                <button type="button" onClick={() => setCurrentStep(prev => (prev - 1) as Step)} className="text-xs text-secondary font-black uppercase tracking-widest flex items-center hover:text-primary transition-colors bg-white px-3 py-1.5 rounded-lg border border-gray-200 shadow-sm">
+                                <button type="button" onClick={() => setCurrentStep(prev => (prev - 1) as Step)} className="text-xs text-secondary font-black uppercase tracking-widest flex items-center hover:text-primary transition-colors bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-sm">
                                     <span className="mr-1">←</span> {content.backButton}
                                 </button>
                             )}
@@ -263,9 +266,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
 
                         <div className="animate-fade-in-up">
                             {currentStep === 1 && (
-                                <div className="space-y-4">
-                                    <h3 className="text-xl md:text-3xl font-black text-primary mb-8 text-center">{content.steps[1].question}</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="space-y-3">
+                                    <h3 className="text-lg md:text-2xl font-black text-primary mb-4 text-center">{content.steps[1].question}</h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                         {[
                                             { key: 'funeral', label: content.steps[1].options.funeral, icon: 'M12 6v6m0 0v6m0-6h6m-6 0H6' },
                                             { key: 'medicare', label: content.steps[1].options.medicare, icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' },
@@ -276,12 +279,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                                                 key={opt.key}
                                                 type="button"
                                                 onClick={() => { setFormData(prev => ({ ...prev, interest: opt.key })); setCurrentStep(2); }}
-                                                className="flex items-center p-6 rounded-2xl border-2 border-gray-100 hover:border-accent hover:bg-accent/5 transition-all text-left group"
+                                                className="flex items-center p-3.5 md:p-4 rounded-xl border-2 border-gray-100 hover:border-accent hover:bg-accent/5 transition-all text-left group"
                                             >
-                                                <div className="p-3 rounded-xl mr-4 bg-gray-100 text-secondary group-hover:bg-accent group-hover:text-primary transition-colors">
-                                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={opt.icon}></path></svg>
+                                                <div className="p-2.5 rounded-lg mr-3 bg-gray-100 text-secondary group-hover:bg-accent group-hover:text-primary transition-colors flex-shrink-0">
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={opt.icon}></path></svg>
                                                 </div>
-                                                <span className="text-lg font-black text-primary leading-tight">{opt.label}</span>
+                                                <span className="text-base md:text-lg font-black text-primary leading-tight">{opt.label}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -289,9 +292,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                             )}
 
                             {currentStep === 2 && (
-                                <div className="space-y-4">
-                                    <h3 className="text-xl md:text-3xl font-black text-primary mb-8 text-center">{content.steps[2].question}</h3>
-                                    <div className="grid grid-cols-1 gap-4 max-w-md mx-auto">
+                                <div className="space-y-3">
+                                    <h3 className="text-lg md:text-2xl font-black text-primary mb-4 text-center">{content.steps[2].question}</h3>
+                                    <div className="grid grid-cols-1 gap-3 max-w-md mx-auto">
                                         {[
                                             { key: '50-64', label: content.steps[2].options.range1 },
                                             { key: '65-75', label: content.steps[2].options.range2 },
@@ -301,7 +304,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                                                 key={opt.key}
                                                 type="button"
                                                 onClick={() => { setFormData(prev => ({ ...prev, ageRange: opt.key })); setCurrentStep(3); }}
-                                                className="p-6 rounded-2xl border-2 border-gray-100 hover:border-accent hover:bg-accent/5 text-center text-xl font-black transition-all"
+                                                className="p-4 rounded-xl border-2 border-gray-100 hover:border-accent hover:bg-accent/5 text-center text-lg font-black transition-all"
                                             >
                                                 {opt.label}
                                             </button>
@@ -311,9 +314,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                             )}
 
                             {currentStep === 3 && (
-                                <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-8">
-                                    <div className="text-center mb-8">
-                                        <h3 className="text-2xl md:text-3xl font-black text-primary mb-2 leading-tight">{content.steps[3].title}</h3>
+                                <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
+                                    <div className="text-center mb-4">
+                                        <h3 className="text-xl md:text-2xl font-black text-primary mb-1 leading-tight">{content.steps[3].title}</h3>
                                     </div>
 
                                     {/* Honeypot field */}
@@ -322,39 +325,39 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                                     </div>
 
                                     <div>
-                                        <label htmlFor="name" className="block text-sm md:text-base font-black text-primary uppercase tracking-[0.1em] mb-3 ml-1">{content.steps[3].inputs.name}</label>
+                                        <label htmlFor="name" className="block text-xs md:text-sm font-black text-primary uppercase tracking-[0.1em] mb-1.5 ml-1">{content.steps[3].inputs.name}</label>
                                         <input 
                                             id="name"
                                             type="text" name="name" autoComplete="name" value={formData.name} onChange={handleInputChange} onBlur={handleInputBlur}
-                                            className={`w-full px-6 py-5 rounded-2xl border-2 outline-none transition-all text-xl font-bold ${touched.name && errors.name ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
+                                            className={`w-full px-4 py-3 rounded-xl border-2 outline-none transition-all text-base font-bold ${touched.name && errors.name ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
                                         />
-                                        {touched.name && errors.name && <p className="mt-1.5 text-xs text-red-500 font-bold uppercase">{errors.name}</p>}
+                                        {touched.name && errors.name && <p className="mt-1 text-xs text-red-500 font-bold uppercase">{errors.name}</p>}
                                     </div>
 
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>
-                                            <label htmlFor="phone" className="block text-sm md:text-base font-black text-primary uppercase tracking-[0.1em] mb-3 ml-1">{content.steps[3].inputs.phone}</label>
+                                            <label htmlFor="phone" className="block text-xs md:text-sm font-black text-primary uppercase tracking-[0.1em] mb-1.5 ml-1">{content.steps[3].inputs.phone}</label>
                                             <input 
                                                 id="phone"
                                                 type="tel" name="phone" autoComplete="tel" placeholder="+1" value={formData.phone} onChange={handleInputChange} onBlur={handleInputBlur}
-                                                className={`w-full px-6 py-5 rounded-2xl border-2 outline-none transition-all text-xl font-bold ${touched.phone && errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
+                                                className={`w-full px-4 py-3 rounded-xl border-2 outline-none transition-all text-base font-bold ${touched.phone && errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
                                             />
-                                            {touched.phone && errors.phone && <p className="mt-1.5 text-xs text-red-500 font-bold uppercase">{errors.phone}</p>}
+                                            {touched.phone && errors.phone && <p className="mt-1 text-xs text-red-500 font-bold uppercase">{errors.phone}</p>}
                                         </div>
                                         <div>
-                                            <label htmlFor="email" className="block text-sm md:text-base font-black text-primary uppercase tracking-[0.1em] mb-3 ml-1">{content.steps[3].inputs.email}</label>
+                                            <label htmlFor="email" className="block text-xs md:text-sm font-black text-primary uppercase tracking-[0.1em] mb-1.5 ml-1">{content.steps[3].inputs.email}</label>
                                             <input 
                                                 id="email"
                                                 type="email" name="email" autoComplete="email" value={formData.email} onChange={handleInputChange} onBlur={handleInputBlur}
-                                                className={`w-full px-6 py-5 rounded-2xl border-2 outline-none transition-all text-xl font-bold ${touched.email && errors.email ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
+                                                className={`w-full px-4 py-3 rounded-xl border-2 outline-none transition-all text-base font-bold ${touched.email && errors.email ? 'border-red-500 bg-red-50' : 'border-gray-250 focus:border-accent bg-gray-50/50'}`} 
                                             />
-                                            {touched.email && errors.email && <p className="mt-1.5 text-xs text-red-500 font-bold uppercase">{errors.email}</p>}
+                                            {touched.email && errors.email && <p className="mt-1 text-xs text-red-500 font-bold uppercase">{errors.email}</p>}
                                         </div>
                                     </div>
 
-                                    <div className="pt-6">
-                                        <p className="text-xs md:text-sm text-gray-500 italic mb-3 text-center leading-relaxed font-medium">{content.steps[3].legalText}</p>
-                                        <div className="flex justify-center items-center gap-3 text-xs font-bold text-gray-600 mb-6 flex-wrap">
+                                    <div className="pt-3">
+                                        <p className="text-xs text-gray-500 italic mb-2 text-center leading-relaxed font-medium">{content.steps[3].legalText}</p>
+                                        <div className="flex justify-center items-center gap-3 text-xs font-bold text-gray-600 mb-4 flex-wrap">
                                             <button 
                                                 type="button" 
                                                 onClick={() => onOpenLegalModal ? onOpenLegalModal('terms') : window.location.href = '/terms'}
@@ -374,7 +377,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                                         <button 
                                             type="submit" 
                                             disabled={status === 'loading'}
-                                            className="w-full bg-accent text-primary text-xl md:text-2xl font-black py-5 md:py-6 rounded-2xl shadow-xl hover:bg-[#FFB81C] transition-all uppercase tracking-widest flex justify-center items-center active:scale-95 disabled:opacity-50 border-b-4 border-primary/10"
+                                            className="w-full bg-accent text-primary text-lg md:text-xl font-black py-4 rounded-xl shadow-xl hover:bg-[#FFB81C] transition-all uppercase tracking-widest flex justify-center items-center active:scale-95 disabled:opacity-50 border-b-4 border-primary/10"
                                         >
                                             {status === 'loading' ? 'Enviando...' : content.steps[3].submit}
                                         </button>
@@ -386,25 +389,25 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, onOpenLegalMo
                 </div>
 
                 {/* Highly prominent phone-call alternative for Seniors 50+ */}
-                <div className="max-w-4xl mx-auto mt-12 p-8 md:p-10 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-sm text-center flex flex-col md:flex-row items-center justify-between gap-6 hover:border-white/20 transition-colors">
+                <div className="max-w-4xl mx-auto mt-6 p-5 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm text-center flex flex-col md:flex-row items-center justify-between gap-4 hover:border-white/20 transition-colors">
                     <div className="text-center md:text-left">
-                        <span className="inline-flex items-center gap-1.5 bg-accent/25 text-accent text-xs font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full border border-accent/20 mb-3">
+                        <span className="inline-flex items-center gap-1.5 bg-accent/25 text-accent text-xs font-black uppercase tracking-[0.2em] px-3 py-0.5 rounded-full border border-accent/20 mb-1.5">
                             ⚡ Fast VIP Alternative
                         </span>
-                        <h4 className="text-2xl font-black text-white leading-tight flex items-center justify-center md:justify-start gap-2.5">
-                            <svg className="w-6 h-6 animate-pulse text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <h4 className="text-xl font-black text-white leading-tight flex items-center justify-center md:justify-start gap-2">
+                            <svg className="w-5 h-5 animate-pulse text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             Prefer to speak to a licensed human?
                         </h4>
-                        <p className="text-lg text-gray-300 font-semibold mt-1 leading-relaxed">
+                        <p className="text-sm text-gray-300 font-semibold mt-0.5 leading-relaxed">
                             Skip the questions! Call Andres Bozo directly for friendly help in English or Spanish.
                         </p>
                     </div>
                     <div className="w-full md:w-auto flex-shrink-0">
                         <a 
                             href="tel:+13522258389" 
-                            className="w-full md:w-auto text-center inline-flex items-center justify-center gap-3 bg-accent text-primary px-8 py-5 rounded-xl font-black uppercase tracking-widest text-lg md:text-xl hover:bg-[#FFB81C] hover:scale-105 active:scale-95 transition-all shadow-xl border-b-4 border-primary/10"
+                            className="w-full md:w-auto text-center inline-flex items-center justify-center gap-2 bg-accent text-primary px-6 py-3.5 rounded-xl font-black uppercase tracking-widest text-base md:text-lg hover:bg-[#FFB81C] hover:scale-105 active:scale-95 transition-all shadow-xl border-b-4 border-primary/10"
                         >
                             Call +1 (352) 225-8389
                         </a>
