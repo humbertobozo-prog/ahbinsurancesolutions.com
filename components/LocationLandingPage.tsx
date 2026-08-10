@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import type { Language, TranslationContent } from '../types';
 import { translations } from '../constants/translations';
+import { SEOHead } from './SEOHead';
 import { BackToTopButton } from './BackToTopButton';
 import { Footer } from './Footer';
 import { TapToCallButton } from './TapToCallButton';
@@ -81,19 +82,66 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
     };
 
     const details = getPageDetails();
+    const baseUrl = 'https://www.ahbinsurancesolutions.com';
+    const canonical = `${baseUrl}${path}`;
+
+    const localBusinessSchema = {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "InsuranceAgency", "Organization"],
+        "name": "AHB Insurance Solutions",
+        "url": canonical,
+        "telephone": "+1-352-225-8389",
+        "email": "andreshbozo@ahbinsurancesolutions.com",
+        "description": details.description,
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5500 SW Archer Road, Apt H103",
+            "addressLocality": "Gainesville",
+            "addressRegion": "FL",
+            "postalCode": "32607",
+            "addressCountry": "US"
+        },
+        "identifier": {
+            "@type": "PropertyValue",
+            "name": "NPN",
+            "value": "21228432"
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": activeLang === 'es' ? "Inicio" : "Home",
+                "item": `${baseUrl}${activeLang === 'es' ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": details.heading,
+                "item": canonical
+            }
+        ]
+    };
 
     useEffect(() => {
-        document.documentElement.lang = activeLang;
-        document.title = details.title;
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute('content', details.description);
-        }
         window.scrollTo({ top: 0, behavior: 'instant' });
-    }, [path, activeLang, details]);
+    }, [path, activeLang]);
 
     return (
         <div className="bg-white text-dark-gray font-sans flex flex-col min-h-screen pb-20 md:pb-0">
+            <SEOHead 
+                title={details.title}
+                description={details.description}
+                canonicalUrl={canonical}
+                enUrl={canonical}
+                esUrl={canonical}
+                language={activeLang}
+                schema={[localBusinessSchema, breadcrumbSchema]}
+            />
             {/* Header / Sub Nav */}
             <header className="sticky top-0 bg-primary z-50 text-white border-b border-white/5 shadow-md">
                 <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">

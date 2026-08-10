@@ -25,6 +25,47 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
 
     const content = translations[language];
 
+    const contactSchema = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": title,
+        "description": description,
+        "mainEntity": {
+            "@type": ["Organization", "LocalBusiness", "InsuranceAgency"],
+            "name": "AHB Insurance Solutions",
+            "url": baseUrl,
+            "telephone": "+1-352-225-8389",
+            "email": "andreshbozo@ahbinsurancesolutions.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "addressLocality": "Gainesville",
+                "addressRegion": "FL",
+                "postalCode": "32607",
+                "addressCountry": "US"
+            }
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Contacto" : "Contact Us",
+                "item": canonical
+            }
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
             <SEOHead 
@@ -34,6 +75,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                schema={[contactSchema, breadcrumbSchema]}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-2">

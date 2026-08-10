@@ -22,18 +22,45 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         ? 'Compare planes Suplementarios de Medicare (Medigap Plan G, Plan N) y Medicare Advantage en Florida. Asesoría independiente gratuita con Andrés Bozo (NPN 21228432).' 
         : 'Compare Florida Medicare Supplement plans (Medigap Plan G, Plan N) and Medicare Advantage. Free independent advice from licensed broker Andres Bozo (NPN 21228432).';
 
-    const schema = {
+    const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": isEs ? "Planes y Suplementos de Medicare en Florida" : "Medicare Plans & Supplements in Florida",
         "provider": {
-            "@type": "InsuranceAgency",
+            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389"
+            "telephone": "+1-352-225-8389",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "addressLocality": "Gainesville",
+                "addressRegion": "FL",
+                "postalCode": "32607",
+                "addressCountry": "US"
+            }
         },
         "areaServed": "FL",
         "description": description
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Medicare en Florida" : "Medicare in Florida",
+                "item": canonical
+            }
+        ]
     };
 
     return (
@@ -45,7 +72,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
-                schema={schema}
+                schema={[serviceSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb */}

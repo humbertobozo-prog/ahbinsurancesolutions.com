@@ -95,6 +95,25 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         }))
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Preguntas Frecuentes" : "Frequently Asked Questions",
+                "item": canonical
+            }
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
             <SEOHead 
@@ -104,7 +123,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
-                schema={faqSchema}
+                schema={[faqSchema, breadcrumbSchema]}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-3">

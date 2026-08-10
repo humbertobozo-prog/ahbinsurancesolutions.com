@@ -145,6 +145,19 @@ const App: React.FC = () => {
         mainContentComponent = <ContactPage language={language} />;
     } else {
         // Main Home View
+        const homeBreadcrumbSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": isEs ? "Inicio" : "Home",
+                    "item": `${baseUrl}${isEs ? '/es' : ''}`
+                }
+            ]
+        };
+
         mainContentComponent = (
             <>
                 <SEOHead 
@@ -154,6 +167,7 @@ const App: React.FC = () => {
                     enUrl={baseUrl}
                     esUrl={`${baseUrl}/es`}
                     language={language}
+                    schema={homeBreadcrumbSchema}
                 />
                 <Hero content={content.hero} />
                 <KeyTakeaways content={content.keyTakeaways} />

@@ -22,18 +22,45 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
         ? 'Acreciente su capital con protección de piso del 0% contra caídas del mercado y retiros libres de impuestos para su jubilación en Florida.' 
         : 'Grow cash value with a 0% market downside floor and tax-free retirement loans in Florida. Permanent life insurance protection.';
 
-    const schema = {
+    const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": isEs ? "Vida Universal Indexada (IUL) y Jubilación" : "Indexed Universal Life (IUL) & Retirement Planning",
         "provider": {
-            "@type": "InsuranceAgency",
+            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389"
+            "telephone": "+1-352-225-8389",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "addressLocality": "Gainesville",
+                "addressRegion": "FL",
+                "postalCode": "32607",
+                "addressCountry": "US"
+            }
         },
         "areaServed": "FL",
         "description": description
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "IUL y Jubilación" : "IUL Tax-Free Retirement",
+                "item": canonical
+            }
+        ]
     };
 
     return (
@@ -45,7 +72,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
-                schema={schema}
+                schema={[serviceSchema, breadcrumbSchema]}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-3">

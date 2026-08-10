@@ -31,7 +31,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         // 2. Update Title
         document.title = title;
 
-        // 3. Update Meta Description
+        // 3. Update Meta Description and Meta Robots
         let metaDesc = document.querySelector('meta[name="description"]');
         if (!metaDesc) {
             metaDesc = document.createElement('meta');
@@ -39,6 +39,14 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             document.head.appendChild(metaDesc);
         }
         metaDesc.setAttribute('content', description);
+
+        let metaRobots = document.querySelector('meta[name="robots"]');
+        if (!metaRobots) {
+            metaRobots = document.createElement('meta');
+            metaRobots.setAttribute('name', 'robots');
+            document.head.appendChild(metaRobots);
+        }
+        metaRobots.setAttribute('content', 'index, follow, max-image-preview:large');
 
         // 4. Update Canonical
         let canonicalLink = document.getElementById('canonical-link') as HTMLLinkElement;
@@ -94,7 +102,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 script.type = 'application/ld+json';
                 document.head.appendChild(script);
             }
-            script.text = JSON.stringify(schema);
+            const formattedSchema = Array.isArray(schema)
+                ? { "@context": "https://schema.org", "@graph": schema }
+                : schema;
+            script.text = JSON.stringify(formattedSchema);
         } else {
             const script = document.getElementById('dynamic-page-schema');
             if (script) script.remove();

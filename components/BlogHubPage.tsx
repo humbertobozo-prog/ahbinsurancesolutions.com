@@ -52,6 +52,31 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
             }
         };
 
+        const breadcrumbSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": isEs ? "Inicio" : "Home",
+                    "item": `${baseUrl}${isEs ? '/es' : '/'}`
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": `${baseUrl}${isEs ? '/es/blog' : '/blog'}`
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": postTitle,
+                    "item": canonical
+                }
+            ]
+        };
+
         return (
             <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
                 <SEOHead 
@@ -63,7 +88,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                     language={language}
                     type="article"
                     ogImage={currentPost.image}
-                    schema={articleSchema}
+                    schema={[articleSchema, breadcrumbSchema]}
                 />
 
                 {/* Breadcrumb */}
@@ -175,6 +200,25 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
         return matchesCategory && matchesSearch;
     });
 
+    const blogBreadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Blog y Artículos" : "Blog & Articles",
+                "item": canonical
+            }
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
             <SEOHead 
@@ -184,6 +228,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                schema={blogBreadcrumbSchema}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-3">

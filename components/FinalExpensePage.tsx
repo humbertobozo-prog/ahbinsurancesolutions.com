@@ -22,18 +22,45 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         ? 'Asegure entre $5,000 y $35,000 para costos de funeral y entierro en Florida. Tarifas congeladas, aceptación garantizada y sin exámenes médicos.' 
         : 'Secure $5,000 to $35,000 for funeral and burial costs in Florida. Locked-in rates, guaranteed acceptance, no medical exams required.';
 
-    const schema = {
+    const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": isEs ? "Seguro de Gastos Finales y Funeral" : "Final Expense & Burial Life Insurance",
         "provider": {
-            "@type": "InsuranceAgency",
+            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389"
+            "telephone": "+1-352-225-8389",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "addressLocality": "Gainesville",
+                "addressRegion": "FL",
+                "postalCode": "32607",
+                "addressCountry": "US"
+            }
         },
         "areaServed": "FL",
         "description": description
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Gastos Finales en Florida" : "Final Expense Insurance",
+                "item": canonical
+            }
+        ]
     };
 
     return (
@@ -45,7 +72,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
-                schema={schema}
+                schema={[serviceSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb */}

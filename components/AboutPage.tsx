@@ -27,6 +27,53 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
 
     const content = translations[language];
 
+    const aboutSchema = {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": title,
+        "description": description,
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Andres H. Bozo",
+            "jobTitle": "Licensed Insurance Broker",
+            "telephone": "+1-352-225-8389",
+            "identifier": "21228432",
+            "worksFor": {
+                "@type": ["Organization", "LocalBusiness", "InsuranceAgency"],
+                "name": "AHB Insurance Solutions",
+                "url": baseUrl,
+                "telephone": "+1-352-225-8389",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "5500 SW Archer Road, Apt H103",
+                    "addressLocality": "Gainesville",
+                    "addressRegion": "FL",
+                    "postalCode": "32607",
+                    "addressCountry": "US"
+                }
+            }
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": isEs ? "Inicio" : "Home",
+                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": isEs ? "Sobre Nosotros" : "About Us",
+                "item": canonical
+            }
+        ]
+    };
+
     return (
         <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
             <SEOHead 
@@ -36,6 +83,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                schema={[aboutSchema, breadcrumbSchema]}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-3">

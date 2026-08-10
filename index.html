@@ -86,9 +86,10 @@
           "inLanguage": ["en-US", "es-US"]
         },
         {
-          "@type": "InsuranceAgency",
+          "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
           "@id": "https://www.ahbinsurancesolutions.com/#organization",
           "name": "AHB Insurance Solutions",
+          "legalName": "AHB Insurance Solutions",
           "url": "https://www.ahbinsurancesolutions.com/",
           "logo": {
             "@type": "ImageObject",
@@ -98,6 +99,13 @@
           "description": "Licensed insurance agency specializing in Medicare Supplements, Advantage Plans, Final Expense Life Insurance, and Indexed Universal Life (IUL).",
           "telephone": "+1-352-225-8389",
           "email": "andreshbozo@ahbinsurancesolutions.com",
+          "priceRange": "Free Consultation",
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "NPN",
+            "value": "21228432"
+          },
+          "taxID": "21228432",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "5500 SW Archer Road, Apt H103",
@@ -112,14 +120,25 @@
             "longitude": "-82.4013"
           },
           "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ],
+          "areaServed": {
+            "@type": "State",
+            "name": "Florida"
+          },
           "sameAs": [
             "https://www.facebook.com/ahbinsurancesolutions",
             "https://www.instagram.com/ahbinsurancesolutions"
           ],
           "founder": {
             "@id": "https://www.ahbinsurancesolutions.com/#person"
-          },
-          "priceRange": "$$"
+          }
         },
         {
           "@type": "Person",
