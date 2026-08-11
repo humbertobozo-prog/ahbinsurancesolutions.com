@@ -8,21 +8,21 @@ import { translations } from './constants/translations';
 import type { Language } from './types';
 import { Spinner } from './components/Spinner';
 import { BackToTopButton } from './components/BackToTopButton';
-import { LocationLandingPage } from './components/LocationLandingPage';
 import { TapToCallButton } from './components/TapToCallButton';
 import { TermsAndPrivacyModal } from './components/TermsAndPrivacyModal';
-import { LegalPage } from './components/LegalPage';
 import { ErrorBoundary } from './components/ErrorBoundary';
-
-// Dedicated Page Imports
-import { MedicarePage } from './components/MedicarePage';
-import { FinalExpensePage } from './components/FinalExpensePage';
-import { IULPage } from './components/IULPage';
-import { BlogHubPage } from './components/BlogHubPage';
-import { FAQPage } from './components/FAQPage';
-import { AboutPage } from './components/AboutPage';
-import { ContactPage } from './components/ContactPage';
 import { SEOHead } from './components/SEOHead';
+
+// Dedicated Lazy Page Imports
+const MedicarePage = React.lazy(() => import('./components/MedicarePage').then(m => ({ default: m.MedicarePage })));
+const FinalExpensePage = React.lazy(() => import('./components/FinalExpensePage').then(m => ({ default: m.FinalExpensePage })));
+const IULPage = React.lazy(() => import('./components/IULPage').then(m => ({ default: m.IULPage })));
+const BlogHubPage = React.lazy(() => import('./components/BlogHubPage').then(m => ({ default: m.BlogHubPage })));
+const FAQPage = React.lazy(() => import('./components/FAQPage').then(m => ({ default: m.FAQPage })));
+const AboutPage = React.lazy(() => import('./components/AboutPage').then(m => ({ default: m.AboutPage })));
+const ContactPage = React.lazy(() => import('./components/ContactPage').then(m => ({ default: m.ContactPage })));
+const LocationLandingPage = React.lazy(() => import('./components/LocationLandingPage').then(m => ({ default: m.LocationLandingPage })));
+const LegalPage = React.lazy(() => import('./components/LegalPage').then(m => ({ default: m.LegalPage })));
 
 const Services = React.lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
 const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs').then(module => ({ default: module.WhyChooseUs })));
@@ -97,7 +97,7 @@ const App: React.FC = () => {
     // Legal Pages
     if (legalPaths.includes(cleanPath)) {
         return (
-            <>
+            <Suspense fallback={<Spinner height="py-48" />}>
                 <LegalPage path={cleanPath} language={language} setLanguage={setLanguage} />
                 <TermsAndPrivacyModal 
                     isOpen={legalModalOpen} 
@@ -105,14 +105,14 @@ const App: React.FC = () => {
                     initialTab={legalModalTab} 
                     language={language} 
                 />
-            </>
+            </Suspense>
         );
     }
 
     // Landing Pages
     if (landingPaths.includes(cleanPath)) {
         return (
-            <>
+            <Suspense fallback={<Spinner height="py-48" />}>
                 <LocationLandingPage
                     path={cleanPath}
                     language={language}
@@ -135,7 +135,7 @@ const App: React.FC = () => {
                     initialTab={legalModalTab} 
                     language={language} 
                 />
-            </>
+            </Suspense>
         );
     }
 
@@ -143,20 +143,20 @@ const App: React.FC = () => {
     let mainContentComponent: React.ReactNode;
 
     if (cleanPath === '/medicare' || cleanPath === '/es/medicare') {
-        mainContentComponent = <MedicarePage language={language} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><MedicarePage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/final-expense' || cleanPath === '/es/gastos-finales') {
-        mainContentComponent = <FinalExpensePage language={language} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FinalExpensePage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/iul-retirement' || cleanPath === '/es/iul-jubilacion') {
-        mainContentComponent = <IULPage language={language} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><IULPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/blog' || cleanPath === '/es/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/es/blog/')) {
         const slug = cleanPath.startsWith('/blog/') ? cleanPath.replace('/blog/', '') : (cleanPath.startsWith('/es/blog/') ? cleanPath.replace('/es/blog/', '') : undefined);
-        mainContentComponent = <BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/faq' || cleanPath === '/es/preguntas-frecuentes') {
-        mainContentComponent = <FAQPage language={language} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FAQPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/about-us' || cleanPath === '/es/nosotros') {
-        mainContentComponent = <AboutPage language={language} onOpenQuote={handleNavigateToQuote} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AboutPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/contact' || cleanPath === '/es/contacto') {
-        mainContentComponent = <ContactPage language={language} />;
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><ContactPage language={language} /></Suspense>;
     } else {
         // Main Home View
         const homeBreadcrumbSchema = {
