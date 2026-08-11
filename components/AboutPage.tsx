@@ -86,7 +86,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 schema={[aboutSchema, breadcrumbSchema]}
             />
 
-            <div className="bg-light-gray border-b border-gray-200 py-3">
+            <div className="bg-light-gray border-b border-gray-200 py-2">
                 <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
                     <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
                         {isEs ? 'Inicio' : 'Home'}
@@ -96,15 +96,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 </div>
             </div>
 
-            <section className="bg-primary text-white py-12 md:py-16 text-center">
+            <section className="bg-primary text-white py-5 md:py-7 text-center">
                 <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <span className="bg-accent text-primary text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
+                    <span className="bg-accent text-primary text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-0.5 rounded-full mb-1.5 inline-block">
                         NPN: 21228432
                     </span>
-                    <h1 className="text-3xl md:text-5xl font-black font-heading mb-4">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-black font-heading mb-2">
                         {isEs ? 'Sobre AHB Insurance Solutions' : 'About AHB Insurance Solutions'}
                     </h1>
-                    <p className="text-gray-200 text-sm md:text-base font-medium">
+                    <p className="text-gray-200 text-xs sm:text-sm md:text-base font-medium">
                         {isEs ? 'Su socio independiente para una jubilación segura, protegida y digna en Florida.' : 'Your independent partner for a secure and dignified retirement in Florida.'}
                     </p>
                 </div>

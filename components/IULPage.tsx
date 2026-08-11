@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
+import { RelatedServices } from './RelatedServices';
 
 interface IULPageProps {
     language: Language;
@@ -138,6 +139,9 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                     </div>
                 </div>
             </section>
+
+            {/* Internal Cross-Linking to Other Services */}
+            <RelatedServices currentService="iul" language={language} />
         </div>
     );
 };

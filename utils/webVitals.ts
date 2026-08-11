@@ -1,5 +1,5 @@
 export interface Metric {
-    name: 'LCP' | 'CLS' | 'FCP' | 'FID' | 'TTFB';
+    name: 'LCP' | 'CLS' | 'FCP' | 'FID' | 'TTFB' | 'INP';
     value: number;
     rating: 'good' | 'needs-improvement' | 'poor';
     delta: number;
@@ -14,11 +14,13 @@ interface WebVitalsStore {
     FCP?: Metric;
     FID?: Metric;
     TTFB?: Metric;
+    INP?: Metric;
 }
 
 declare global {
     interface Window {
         __webVitals?: WebVitalsStore;
+        __AHB_ANALYTICS_ENDPOINT__?: string;
     }
 }
 
@@ -29,6 +31,7 @@ const THRESHOLDS = {
     FCP: { good: 1800, poor: 3000 }, // ms
     FID: { good: 100, poor: 300 },   // ms
     TTFB: { good: 800, poor: 1800 }, // ms
+    INP: { good: 200, poor: 500 },   // ms
 };
 
 function getRating(name: keyof typeof THRESHOLDS, value: number): 'good' | 'needs-improvement' | 'poor' {
@@ -163,8 +166,131 @@ function trackFCP(onReport: ReportHandler) {
 }
 
 /**
- * Initializes Core Web Vitals tracking for LCP, CLS, and FCP.
- * Logs metrics to dev console, saves to window.__webVitals, and dispatches custom events.
+ * Tracks First Input Delay (FID)
+ */
+function trackFID(onReport: ReportHandler) {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    try {
+        const observer = new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+                const fidEntry = entry as PerformanceEntry & { processingStart: number; startTime: number };
+                const delay = fidEntry.processingStart - fidEntry.startTime;
+                if (delay >= 0) {
+                    const metric: Metric = {
+                        name: 'FID',
+                        value: Math.round(delay),
+                        rating: getRating('FID', delay),
+                        delta: Math.round(delay),
+                        id: generateId(),
+                    };
+                    onReport(metric);
+                    observer.disconnect();
+                    break;
+                }
+            }
+        });
+
+        observer.observe({ type: 'first-input', buffered: true });
+    } catch {
+        // Fallback
+    }
+}
+
+/**
+ * Tracks Time to First Byte (TTFB)
+ */
+function trackTTFB(onReport: ReportHandler) {
+    if (typeof performance === 'undefined') return;
+
+    try {
+        const navEntries = performance.getEntriesByType('navigation') as PerformanceNavigationTiming[];
+        if (navEntries && navEntries.length > 0) {
+            const nav = navEntries[0];
+            const ttfb = nav.responseStart;
+            if (ttfb >= 0) {
+                const metric: Metric = {
+                    name: 'TTFB',
+                    value: Math.round(ttfb),
+                    rating: getRating('TTFB', ttfb),
+                    delta: Math.round(ttfb),
+                    id: generateId(),
+                };
+                onReport(metric);
+            }
+        }
+    } catch {
+        // Fallback
+    }
+}
+
+/**
+ * Tracks Interaction to Next Paint (INP)
+ */
+function trackINP(onReport: ReportHandler) {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    try {
+        let maxDuration = 0;
+        const metricId = generateId();
+
+        const observer = new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+                const evt = entry as PerformanceEntry & { duration: number; interactionId?: number };
+                if (evt.interactionId && evt.duration > maxDuration) {
+                    maxDuration = evt.duration;
+                }
+            }
+        });
+
+        // Observe events with interaction IDs
+        observer.observe({ type: 'event', buffered: true, durationThreshold: 16 } as unknown as PerformanceObserverInit);
+
+        addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden' && maxDuration > 0) {
+                const metric: Metric = {
+                    name: 'INP',
+                    value: Math.round(maxDuration),
+                    rating: getRating('INP', maxDuration),
+                    delta: Math.round(maxDuration),
+                    id: metricId,
+                };
+                onReport(metric);
+                observer.disconnect();
+            }
+        }, { once: true });
+    } catch {
+        // Fallback
+    }
+}
+
+/**
+ * Warns on long tasks that block the main thread for over 50ms
+ */
+function trackLongTasks() {
+    if (typeof PerformanceObserver === 'undefined') return;
+
+    try {
+        const observer = new PerformanceObserver((entryList) => {
+            for (const entry of entryList.getEntries()) {
+                if (entry.duration > 50) {
+                    console.warn(
+                        `%c[AHB Performance Warning] Long Task detected: ${Math.round(entry.duration)}ms blocking main thread.`,
+                        'color: #D97706; font-weight: bold;'
+                    );
+                }
+            }
+        });
+
+        observer.observe({ type: 'longtask', buffered: true });
+    } catch {
+        // Fallback
+    }
+}
+
+/**
+ * Initializes Core Web Vitals tracking for LCP, CLS, FCP, FID, TTFB, and INP.
+ * Logs metrics to dev console, saves to window.__webVitals, dispatches custom events, and reports to monitoring endpoints if configured.
  */
 export function initWebVitals(customHandler?: ReportHandler) {
     if (typeof window === 'undefined') return;
@@ -187,6 +313,22 @@ export function initWebVitals(customHandler?: ReportHandler) {
         // Dispatch browser event for custom analytics integration if needed
         window.dispatchEvent(new CustomEvent('ahb-web-vitals', { detail: metric }));
 
+        // Send telemetry payload to monitoring endpoint if defined
+        const endpoint = window.__AHB_ANALYTICS_ENDPOINT__;
+        if (endpoint) {
+            const body = JSON.stringify({
+                metric,
+                page: window.location.pathname,
+                userAgent: navigator.userAgent,
+                timestamp: new Date().toISOString(),
+            });
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(endpoint, body);
+            } else {
+                fetch(endpoint, { body, method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json' } }).catch(() => {});
+            }
+        }
+
         if (customHandler) {
             customHandler(metric);
         }
@@ -195,4 +337,9 @@ export function initWebVitals(customHandler?: ReportHandler) {
     trackLCP(handleReport);
     trackCLS(handleReport);
     trackFCP(handleReport);
+    trackFID(handleReport);
+    trackTTFB(handleReport);
+    trackINP(handleReport);
+    trackLongTasks();
 }
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
+import { RelatedServices } from './RelatedServices';
 
 interface MedicarePageProps {
     language: Language;
@@ -246,6 +247,9 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
 
                 </div>
             </section>
+
+            {/* Internal Cross-Linking to Other Services */}
+            <RelatedServices currentService="medicare" language={language} />
         </div>
     );
 };

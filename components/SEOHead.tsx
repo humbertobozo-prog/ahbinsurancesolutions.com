@@ -49,7 +49,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         metaRobots.setAttribute('content', 'index, follow, max-image-preview:large');
 
         // 4. Update Canonical
-        let canonicalLink = document.getElementById('canonical-link') as HTMLLinkElement;
+        let canonicalLink = (document.getElementById('canonical-link') || document.querySelector('link[rel="canonical"]')) as HTMLLinkElement;
         if (!canonicalLink) {
             canonicalLink = document.createElement('link');
             canonicalLink.rel = 'canonical';
@@ -60,7 +60,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
         // 5. Update Hreflangs
         const updateHreflang = (lang: string, href: string) => {
-            let link = document.querySelector(`link[hreflang="${lang}"]`) as HTMLLinkElement;
+            let link = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
             if (!link) {
                 link = document.createElement('link');
                 link.rel = 'alternate';
@@ -70,6 +70,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             link.href = href;
         };
 
+        updateHreflang('en', enUrl);
+        updateHreflang('es', esUrl);
         updateHreflang('en-US', enUrl);
         updateHreflang('es-US', esUrl);
         updateHreflang('x-default', enUrl);

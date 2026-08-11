@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
+import { RelatedServices } from './RelatedServices';
 
 interface FinalExpensePageProps {
     language: Language;
@@ -166,6 +167,9 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                     </div>
                 </div>
             </section>
+
+            {/* Internal Cross-Linking to Other Services */}
+            <RelatedServices currentService="final-expense" language={language} />
         </div>
     );
 };
