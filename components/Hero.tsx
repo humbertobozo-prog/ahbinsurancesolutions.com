@@ -71,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[1,2,3].map(i => (
                                 <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt={`Cliente satisfecho de AHB Insurance Solutions en Florida ${i}`} width="32" height="32" loading="lazy" />
+                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="" width="32" height="32" loading="lazy" />
                                 </div>
                             ))}
                         </div>
