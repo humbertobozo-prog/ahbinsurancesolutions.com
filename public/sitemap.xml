@@ -260,6 +260,24 @@
   </url>
 
   <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/seguro-medicare-florida</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/medicare-florida" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-medicare-florida" />
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-florida</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/final-expense" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-florida" />
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
     <loc>https://www.ahbinsurancesolutions.com/final-expense-miami</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>

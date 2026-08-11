@@ -251,8 +251,8 @@ export const translations: Record<Language, TranslationContent> = {
   },
   es: {
     meta: {
-        title: "Expertos en Medicare, Gastos Finales e IUL | AHB Insurance Solutions",
-        description: "Asegure el futuro de su familia con asesoría experta en seguros. Especialistas en Medicare, Gastos Finales e IUL. Broker Licenciado NPN: 21228432."
+        title: "Seguro Medicare Florida y Gastos Finales | Broker de Seguros Bilingüe AHB",
+        description: "Encuentre el mejor Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales sin examen médico. Comparamos 80+ aseguradoras para la comunidad hispana. Broker Licenciado NPN 21228432."
     },
     common: {
       npnTooltip: "Número de Productor Nacional - Un identificador único de la NAIC para profesionales de seguros licenciados."
@@ -273,10 +273,10 @@ export const translations: Record<Language, TranslationContent> = {
       language: "English",
     },
     hero: {
-      heading: "Planes Suplementarios de Medicare en Florida | Cotizaciones de Medigap",
-      subheading: "En AHB Insurance Solutions lo representamos a usted, no a las aseguradoras. Como brokers independientes licenciados, comparamos más de 80 compañías líderes para encontrar los mejores planes de Medicare, seguro de entierro para personas mayores y vida universal indexada (IUL).",
+      heading: "Seguro Medicare en Florida y Gastos Finales | Asesoría en Español",
+      subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como brokers independientes licenciados en Florida, comparamos más de 80 compañías líderes para conseguirle el mejor Seguro Medicare en Florida, Seguro de Gastos Finales (Entierro) y Vida Universal Indexada (IUL).",
       cta: "Verificar Elegibilidad en Florida 2026 ➔",
-      trustText: "🔒 Profesional Licenciado | NPN: 21228432 | Broker Autorizado de Florida"
+      trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría 100% Gratuita"
     },
     keyTakeaways: {
       title: "Resumen de Valor",

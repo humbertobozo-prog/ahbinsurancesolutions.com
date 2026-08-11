@@ -32,38 +32,49 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             case '/medicare-florida':
             case '/medicare-supplement-florida':
             case '/es/suplemento-medicare-florida':
+            case '/es/seguro-medicare-florida':
                 return {
-                    title: "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N",
-                    description: "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed coverage & no network restrictions in FL.",
-                    heading: "Medicare Supplement Insurance in Florida",
-                    subheading: "Florida Seniors 50+: Lock in low monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with zero doctor network restrictions.",
-                    highlights: [
+                    title: activeLang === 'es' 
+                        ? "Seguro Medicare Florida 2026 | Asesoría y Planes Suplementarios en Español" 
+                        : "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N",
+                    description: activeLang === 'es' 
+                        ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de más de 80 aseguradoras. Asesoría gratuita en español." 
+                        : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed coverage & no network restrictions in FL.",
+                    heading: activeLang === 'es' ? "Seguro Medicare en Florida 2026" : "Medicare Supplement Insurance in Florida",
+                    subheading: activeLang === 'es' 
+                        ? "Asesoría especializada 100% en español para la comunidad hispana de Florida. Comparamos las mejores opciones de Suplementos de Medicare (Medigap Plan G y N) con primas bajas y sin redes restringidas." 
+                        : "Florida Seniors 50+: Lock in low monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with zero doctor network restrictions.",
+                    highlights: activeLang === 'es' ? [
+                        { title: "Planes Medigap Plan G y Plan N", desc: "Compare coberturas y primas sin deducibles sorpresa ni costos ocultos en Florida." },
+                        { title: "Sin Redes de Médicos Restringidas", desc: "Visite a cualquier médico o especialista en Florida y todo EE.UU. que acepte Medicare." },
+                        { title: "Atención Bilingüe Personalizada", desc: "Hable directamente en español con Andrés Bozo (Broker Licenciado NPN 21228432)." }
+                    ] : [
                         { title: "Medigap Plan G & N Comparison", desc: "Compare Part G, K, and N premiums side-by-side with 100% transparency." },
                         { title: "Zero Doctor Networks", desc: "See any doctor or hospital in Florida and nationwide that accepts Medicare." },
                         { title: "2026 Rate Protection", desc: "Save up to 35% on standard rates by unlocking licensed broker discounts." }
                     ]
                 };
             case '/final-expense-miami':
-                return {
-                    title: "Burial Insurance Miami Seniors | Miami FL Final Expense Insurance",
-                    description: "Secure affordable Miami Burial & Funeral Insurance for Seniors. Compare permanent life policies with 100% guaranteed approval. Speak with a Miami licensed agent.",
-                    heading: "Burial Insurance for Miami FL Seniors",
-                    subheading: "Protect your Miami-Dade family from high funeral expenses. Simple permanent insurance plans with guaranteed acceptance.",
-                    highlights: [
-                        { title: "Miami Final Expense Coverage", desc: "Cash benefits paid directly to your family members to cover funeral or hospital costs." },
-                        { title: "Guaranteed Acceptance", desc: "No physical checkups or medical tests required. Seniors 50-85 approved instantly." },
-                        { title: "Permanent Rates", desc: "Premium rates remain locked in for life and will never increase." }
-                    ]
-                };
             case '/burial-insurance-tampa':
             case '/es/seguro-gastos-finales-tampa':
+            case '/es/seguro-gastos-finales-florida':
                 return {
-                    title: "Burial Insurance Tampa FL | Final Expense Insurance No Medical Exam",
-                    description: "Burial Insurance & Funeral Expense Coverage in Tampa, FL. $5,000 to $35,000 cash benefits for Tampa seniors with no medical exam. Free quote.",
-                    heading: "Burial & Final Expense Insurance in Tampa, FL",
-                    subheading: "Ensure your family in Tampa and Hillsborough County isn't burdened by $10,000+ funeral costs. Instant guaranteed approval life insurance.",
-                    highlights: [
-                        { title: "No Health Exams Required", desc: "100% guaranteed approval for Tampa seniors aged 50 to 85 regardless of health history." },
+                    title: activeLang === 'es' 
+                        ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Funeral Sin Examen Médico" 
+                        : "Burial & Final Expense Insurance Florida | No Medical Exam Coverage",
+                    description: activeLang === 'es' 
+                        ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas congeladas para siempre, sin exámenes médicos y aprobación garantizada. Asesoría en español." 
+                        : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors with no medical exam. Free quote.",
+                    heading: activeLang === 'es' ? "Seguro de Gastos Finales y Entierro en Florida" : "Burial & Final Expense Insurance in Florida",
+                    subheading: activeLang === 'es' 
+                        ? "Garantice la tranquilidad de su familia y evite deudas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con cuotas fijas que jamás aumentan." 
+                        : "Ensure your family in Florida isn't burdened by $10,000+ funeral costs. Instant guaranteed approval life insurance.",
+                    highlights: activeLang === 'es' ? [
+                        { title: "Sin Exámenes Médicos", desc: "Aprobación garantizada para personas de 50 a 85 años sin pruebas de sangre ni visitas médicas." },
+                        { title: "Pagos Fijos de Por Vida", desc: "Su mensualidad queda congelada para siempre y la póliza nunca vencerá." },
+                        { title: "Efectivo Directo y Libre de Impuestos", desc: "Sus beneficiarios reciben el dinero en efectivo en pocos días para cubrir funeral, cremación o deudas." }
+                    ] : [
+                        { title: "No Health Exams Required", desc: "100% guaranteed approval for seniors aged 50 to 85 regardless of health history." },
                         { title: "Immediate Cash Payouts", desc: "Beneficiaries receive cash tax-free within days to handle burial, cremation, or medical bills." },
                         { title: "Locked Monthly Rates", desc: "Your monthly premium will never increase, and your policy will never expire." }
                     ]
