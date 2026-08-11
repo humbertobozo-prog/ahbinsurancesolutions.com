@@ -41,6 +41,12 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             else if (currentPath === '/final-expense') nextPath = '/es/gastos-finales';
             else if (currentPath === '/iul-retirement') nextPath = '/es/iul-jubilacion';
             else if (currentPath === '/blog') nextPath = '/es/blog';
+            else if (currentPath === '/blog-generator') nextPath = '/es/generador-blog';
+            else if (currentPath === '/city-guides') nextPath = '/es/guias-ciudades';
+            else if (currentPath.startsWith('/cities/')) {
+                const citySlug = currentPath.replace('/cities/', '');
+                nextPath = `/es/ciudades/${citySlug}`;
+            }
             else if (currentPath.startsWith('/blog/')) {
                 const slug = currentPath.replace('/blog/', '');
                 const post = BLOG_POSTS.find(p => p.slug.en === slug);
@@ -57,6 +63,12 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             else if (currentPath === '/es/gastos-finales') nextPath = '/final-expense';
             else if (currentPath === '/es/iul-jubilacion') nextPath = '/iul-retirement';
             else if (currentPath === '/es/blog') nextPath = '/blog';
+            else if (currentPath === '/es/generador-blog') nextPath = '/blog-generator';
+            else if (currentPath === '/es/guias-ciudades') nextPath = '/city-guides';
+            else if (currentPath.startsWith('/es/ciudades/')) {
+                const citySlug = currentPath.replace('/es/ciudades/', '');
+                nextPath = `/cities/${citySlug}`;
+            }
             else if (currentPath.startsWith('/es/blog/')) {
                 const slug = currentPath.replace('/es/blog/', '');
                 const post = BLOG_POSTS.find(p => p.slug.es === slug);
@@ -81,6 +93,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
     const finalExpensePath = isEs ? '/es/gastos-finales' : '/final-expense';
     const iulPath = isEs ? '/es/iul-jubilacion' : '/iul-retirement';
     const blogPath = isEs ? '/es/blog' : '/blog';
+    const cityGuidesPath = isEs ? '/es/guias-ciudades' : '/city-guides';
     const faqPath = isEs ? '/es/preguntas-frecuentes' : '/faq';
     const aboutPath = isEs ? '/es/nosotros' : '/about-us';
     const contactPath = isEs ? '/es/contacto' : '/contact';
@@ -115,6 +128,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     </a>
                     <a href={blogPath} onClick={(e) => navigateTo(e, blogPath)} className={linkClass}>
                         BLOG
+                    </a>
+                    <a href={cityGuidesPath} onClick={(e) => navigateTo(e, cityGuidesPath)} className={linkClass}>
+                        {isEs ? 'CIUDADES' : 'CITIES'}
                     </a>
                     <a href={faqPath} onClick={(e) => navigateTo(e, faqPath)} className={linkClass}>
                         FAQ
@@ -204,6 +220,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         </a>
                         <a href={blogPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, blogPath)}>
                             Blog
+                        </a>
+                        <a href={cityGuidesPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, cityGuidesPath)}>
+                            {isEs ? 'Guía por Ciudades' : 'City Guides'}
                         </a>
                         <a href={faqPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, faqPath)}>
                             FAQ
