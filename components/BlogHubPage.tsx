@@ -9,6 +9,22 @@ interface BlogHubPageProps {
     onOpenQuote: () => void;
 }
 
+const getResponsiveImageProps = (url: string, isHero: boolean = false) => {
+    if (url.includes('images.pexels.com')) {
+        const baseUrl = url.split('&w=')[0].split('?w=')[0];
+        const joinChar = baseUrl.includes('?') ? '&' : '?';
+        const img480 = `${baseUrl}${joinChar}auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=480`;
+        const img800 = `${baseUrl}${joinChar}auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=800`;
+        const img1200 = `${baseUrl}${joinChar}auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=1200`;
+        
+        return {
+            srcSet: `${img480} 480w, ${img800} 800w, ${img1200} 1200w`,
+            sizes: isHero ? "(max-width: 768px) 95vw, 800px" : "(max-width: 768px) 95vw, (max-width: 1024px) 45vw, 400px"
+        };
+    }
+    return {};
+};
+
 export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpenQuote }) => {
     const isEs = language === 'es';
     const [searchTerm, setSearchTerm] = useState('');
@@ -131,7 +147,13 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
 
                     <img 
                         src={currentPost.image} 
+                        {...getResponsiveImageProps(currentPost.image, true)}
                         alt={postTitle} 
+                        width="800"
+                        height="450"
+                        fetchPriority="high"
+                        loading="eager"
+                        decoding="async"
                         className="w-full h-64 sm:h-96 object-cover rounded-2xl shadow-md mb-8"
                     />
 
@@ -312,7 +334,12 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                                 <div className="h-48 overflow-hidden relative">
                                     <img 
                                         src={post.image} 
+                                        {...getResponsiveImageProps(post.image, false)}
                                         alt={postTitle} 
+                                        width="400"
+                                        height="225"
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <span className="absolute top-3 left-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded">

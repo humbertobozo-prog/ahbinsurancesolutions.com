@@ -71,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[1,2,3].map(i => (
                                 <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="" width="32" height="32" loading="lazy" />
+                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt={`Cliente satisfecho de AHB Insurance Solutions en Florida ${i}`} width="32" height="32" loading="lazy" />
                                 </div>
                             ))}
                         </div>
@@ -86,17 +86,14 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <div className="w-full h-full overflow-hidden">
                             <picture>
                                 <source 
-                                    media="(min-width: 1200px)" 
-                                    srcSet={`${image1200} 1x, ${image1600} 2x`} 
-                                />
-                                <source 
-                                    media="(min-width: 768px)" 
-                                    srcSet={`${image800} 1x, ${image1200} 2x`} 
+                                    type="image/webp" 
+                                    srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
+                                    sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
                                 />
                                 <img
                                     src={image800}
                                     srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
-                                    sizes="(max-width: 767px) 95vw, 50vw"
+                                    sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
                                     alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
                                     className="w-full h-full object-cover"
                                     style={parallaxStyle}
@@ -104,6 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                                     width="800"
                                     height="600"
                                     loading="eager"
+                                    decoding="async"
                                 />
                             </picture>
                         </div>

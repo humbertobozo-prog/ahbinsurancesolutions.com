@@ -12,6 +12,7 @@
     "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
     "start": "node dist/server.cjs",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "scan:alts": "tsx utils/scanImageAlts.ts",
     "preview": "vite preview"
   },
   "dependencies": {

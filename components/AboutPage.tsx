@@ -110,7 +110,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 </div>
             </section>
 
-            <AboutUs content={content.aboutUs} common={content.common} />
+            <AboutUs content={content.aboutUs} common={content.common} priority={true} />
             <WhyChooseUs content={content.whyChooseUs} />
 
             <div className="container mx-auto px-4 md:px-6 text-center pt-8">

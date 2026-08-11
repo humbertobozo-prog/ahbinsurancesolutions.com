@@ -4,9 +4,10 @@ import type { TranslationContent } from '../types';
 interface AboutUsProps {
     content: TranslationContent['aboutUs'];
     common: TranslationContent['common'];
+    priority?: boolean;
 }
 
-export const AboutUs: React.FC<AboutUsProps> = ({ content, common }) => {
+export const AboutUs: React.FC<AboutUsProps> = ({ content, common, priority = false }) => {
     // Rutas de las imágenes locales.
     const imageSrc = "/andresbozoofi.webp"; 
     const imageSm = "/andresbozoofi-sm.webp"; 
@@ -84,10 +85,12 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, common }) => {
                                         <source 
                                             type="image/webp" 
                                             srcSet={`${imageSm} 480w, ${imageSrc} 1000w`} 
-                                            sizes="(max-width: 1024px) 90vw, 500px"
+                                            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
                                         />
                                         <img 
                                             src={imageSrc}
+                                            srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
+                                            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
                                             alt={content.imageAlt} 
                                             width="500"
                                             height="625"
@@ -96,7 +99,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, common }) => {
                                             style={{ 
                                                 objectPosition: '50% 20%' 
                                             }}
-                                            loading="lazy"
+                                            loading={priority ? "eager" : "lazy"}
+                                            fetchPriority={priority ? "high" : "auto"}
                                         />
                                     </picture>
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent opacity-60" aria-hidden="true"></div>
