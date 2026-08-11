@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<{ quote: string; author: string; location: strin
                 <div className="absolute -inset-2 bg-gradient-to-tr from-accent to-secondary rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <img 
                     src={imageUrl} 
-                    alt={author} 
+                    alt={`${author} - Cliente de seguros en ${location}`} 
                     className="relative w-24 h-24 rounded-full object-cover border-4 border-white shadow-md" 
                     loading="lazy" 
                     width="96"

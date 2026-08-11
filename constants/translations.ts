@@ -3,8 +3,8 @@ import type { TranslationContent, Language } from '../types';
 export const translations: Record<Language, TranslationContent> = {
   en: {
     meta: {
-      title: "Medicare, Final Expense & IUL Specialists | AHB Insurance Solutions",
-      description: "Secure your family's future with expert insurance guidance. Specializing in Medicare, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432."
+      title: "Medicare, Final Expense & IUL Insurance Specialists in Florida | AHB Insurance Solutions",
+      description: "Secure your family's future with expert insurance guidance in Florida. Specializing in Medicare Supplement, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432."
     },
     common: {
       npnTooltip: "National Producer Number - A unique NAIC identifier for licensed insurance professionals."
@@ -110,7 +110,7 @@ export const translations: Record<Language, TranslationContent> = {
       paragraph1: "Founded on the principles of honesty and transparency, AHB Insurance Solutions was established by <strong>Andres H Bozo</strong>, a <strong>Licensed Broker (NPN: 21228432)</strong>. After seeing many seniors struggle with confusing paperwork and rising costs, Andres committed to creating a brokerage that simplifies the process while maximizing protection.",
       paragraph2: "We specialize in the products that matter most to you as you plan for the future. Whether it's finding the right Medicare Advantage plan, securing a Final Expense policy to protect your children from funeral costs, or using an IUL to build tax-free wealth, we have the expertise to guide you.",
       paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with over 80 nationwide carriers to find the 'Goldilocks' plan—the one that's just right for your budget and your health.",
-      imageAlt: "Andres H. Bozo, expert insurance broker, providing personalized guidance for Medicare and Life Insurance.",
+      imageAlt: "Andres H. Bozo, licensed Florida insurance broker NPN 21228432, providing expert guidance for Medicare, Final Expense, and IUL.",
       statsYears: "Years of Experience",
       statsCompanies: "Carrier Partners",
       statsService: "Client Satisfaction"
@@ -358,7 +358,7 @@ export const translations: Record<Language, TranslationContent> = {
       paragraph1: "Fundada bajo principios de honestidad y transparencia, AHB Insurance Solutions fue establecida por <strong>Andres H Bozo</strong>, <strong>Broker Licenciado (NPN: 21228432)</strong>. Al ver a muchas personas mayores luchar con trámites confusos y costos crecientes, Andres se comprometió a simplificar el proceso.",
       paragraph2: "Nos especializamos en los productos que más le importan. Ya sea encontrar el plan de Medicare adecuado, asegurar una póliza de Gastos Finales para proteger a sus hijos, o usar un IUL para crear riqueza libre de impuestos.",
       paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con más de 80 compañías a nivel nacional para encontrar el plan perfecto para su presupuesto y salud.",
-      imageAlt: "Andres H. Bozo, experto en seguros, brindando asesoría personalizada en Medicare y Seguros de Vida.",
+      imageAlt: "Andres H. Bozo, broker de seguros licenciado en Florida NPN 21228432, asesor especialista en Medicare y Gastos Finales.",
       statsYears: "Años de Experiencia",
       statsCompanies: "Compañías Aliadas",
       statsService: "Satisfacción del Cliente"

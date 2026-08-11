@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                                     src={image800}
                                     srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
                                     sizes="(max-width: 767px) 95vw, 50vw"
-                                    alt="Professional insurance broker helping seniors with Medicare and life insurance plans"
+                                    alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
                                     className="w-full h-full object-cover"
                                     style={parallaxStyle}
                                     fetchPriority="high"

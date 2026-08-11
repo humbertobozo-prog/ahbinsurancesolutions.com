@@ -123,6 +123,16 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         {isEs ? 'NOSOTROS' : 'ABOUT'}
                     </a>
                     <a 
+                        href="tel:+13522258389" 
+                        className="hidden lg:flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-600 text-white px-3.5 py-2 rounded-xl font-black text-xs transition-all shadow-md ml-1"
+                        aria-label={isEs ? "Llamar al broker Andrés Bozo" : "Call broker Andres Bozo"}
+                    >
+                        <svg className="w-3.5 h-3.5 fill-current text-accent" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <span>+1 (352) 225-8389</span>
+                    </a>
+                    <a 
                         href={contactPath} 
                         onClick={(e) => navigateTo(e, contactPath)} 
                         className="bg-accent text-primary px-3.5 py-2 lg:px-4 lg:py-2 rounded-xl font-black uppercase tracking-widest text-[11px] lg:text-xs hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none transition-all shadow-md ml-1"
