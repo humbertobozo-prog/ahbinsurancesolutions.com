@@ -4,6 +4,7 @@ import { legalContent } from '../constants/legalContent';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { translations } from '../constants/translations';
+import { SEOHead } from './SEOHead';
 
 interface LegalPageProps {
     path: string;
@@ -18,6 +19,14 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
 
     const doc = legalContent[language][activeTab];
     const content = translations[language];
+
+    const baseUrl = 'https://www.ahbinsurancesolutions.com';
+    const isEs = language === 'es';
+    const isTerms = activeTab === 'terms';
+
+    const enUrl = `${baseUrl}/${isTerms ? 'terms' : 'privacy'}`;
+    const esUrl = `${baseUrl}/es/${isTerms ? 'terminos' : 'privacidad'}`;
+    const canonical = isEs ? esUrl : enUrl;
 
     useEffect(() => {
         document.documentElement.lang = language;
@@ -38,6 +47,14 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
 
     return (
         <div className="bg-white text-dark-gray font-sans flex flex-col min-h-screen">
+            <SEOHead 
+                title={`${doc.title} | AHB Insurance Solutions Florida`}
+                description={isTerms ? 'Terms of Service for AHB Insurance Solutions.' : 'Privacy Policy for AHB Insurance Solutions.'}
+                canonicalUrl={canonical}
+                enUrl={enUrl}
+                esUrl={esUrl}
+                language={language}
+            />
             <Header content={content.header} currentLang={language} setLanguage={setLanguage} />
 
             <main className="flex-grow pt-8 pb-16">

@@ -30,15 +30,17 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
     const getPageDetails = () => {
         switch (path) {
             case '/medicare-florida':
+            case '/medicare-supplement-florida':
+            case '/es/suplemento-medicare-florida':
                 return {
-                    title: "Florida Medicare Supplement Plans | Private Medigap Insurance Quotes 2026",
-                    description: "Compare Top Medicare Supplement Plans in Florida. Find affordable Medigap plans from 80+ licensed insurers. Get your free personalized insurance rate quotes.",
-                    heading: "Medicare Supplement Plans in Florida",
-                    subheading: "Florida Seniors 50+: Secure premium Medigap Coverage. We compare the leading providers to lock in lower monthly premium rates.",
+                    title: "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N",
+                    description: "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed coverage & no network restrictions in FL.",
+                    heading: "Medicare Supplement Insurance in Florida",
+                    subheading: "Florida Seniors 50+: Lock in low monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with zero doctor network restrictions.",
                     highlights: [
-                        { title: "Florida Medigap Quotes", desc: "Compare Part G, K, and N premiums side-by-side with 100% transparency." },
-                        { title: "No Network Restrictions", desc: "See any doctor, clinic, or hospital in Florida that accepts Medicare." },
-                        { title: "2026 Rate Protection", desc: "Save up to 35% on standard rates by finding premium volume discounts." }
+                        { title: "Medigap Plan G & N Comparison", desc: "Compare Part G, K, and N premiums side-by-side with 100% transparency." },
+                        { title: "Zero Doctor Networks", desc: "See any doctor or hospital in Florida and nationwide that accepts Medicare." },
+                        { title: "2026 Rate Protection", desc: "Save up to 35% on standard rates by unlocking licensed broker discounts." }
                     ]
                 };
             case '/final-expense-miami':
@@ -51,6 +53,45 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                         { title: "Miami Final Expense Coverage", desc: "Cash benefits paid directly to your family members to cover funeral or hospital costs." },
                         { title: "Guaranteed Acceptance", desc: "No physical checkups or medical tests required. Seniors 50-85 approved instantly." },
                         { title: "Permanent Rates", desc: "Premium rates remain locked in for life and will never increase." }
+                    ]
+                };
+            case '/burial-insurance-tampa':
+            case '/es/seguro-gastos-finales-tampa':
+                return {
+                    title: "Burial Insurance Tampa FL | Final Expense Insurance No Medical Exam",
+                    description: "Burial Insurance & Funeral Expense Coverage in Tampa, FL. $5,000 to $35,000 cash benefits for Tampa seniors with no medical exam. Free quote.",
+                    heading: "Burial & Final Expense Insurance in Tampa, FL",
+                    subheading: "Ensure your family in Tampa and Hillsborough County isn't burdened by $10,000+ funeral costs. Instant guaranteed approval life insurance.",
+                    highlights: [
+                        { title: "No Health Exams Required", desc: "100% guaranteed approval for Tampa seniors aged 50 to 85 regardless of health history." },
+                        { title: "Immediate Cash Payouts", desc: "Beneficiaries receive cash tax-free within days to handle burial, cremation, or medical bills." },
+                        { title: "Locked Monthly Rates", desc: "Your monthly premium will never increase, and your policy will never expire." }
+                    ]
+                };
+            case '/annuities-florida':
+            case '/es/anualidades-florida':
+                return {
+                    title: "Florida Fixed Annuities 2026 | Guaranteed Retirement Income Florida",
+                    description: "Protect your retirement savings with Florida Fixed & MYGA Annuities. Earn guaranteed interest rates with 0% stock market risk. Free rate quote.",
+                    heading: "Guaranteed Fixed Annuities in Florida",
+                    subheading: "Safeguard your hard-earned retirement nest egg from stock market volatility while locking in guaranteed high interest returns.",
+                    highlights: [
+                        { title: "0% Stock Market Risk", desc: "Your principal balance is 100% protected against stock market crashes." },
+                        { title: "Guaranteed High Returns", desc: "Lock in fixed interest growth far exceeding standard bank CD rates." },
+                        { title: "Lifetime Pension Cashflow", desc: "Convert savings into a guaranteed monthly paycheck you can never outlive." }
+                    ]
+                };
+            case '/dental-vision-florida':
+            case '/es/dental-vision-florida':
+                return {
+                    title: "Florida Senior Dental & Vision Insurance | Affordable Plans 2026",
+                    description: "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.",
+                    heading: "Senior Dental & Vision Insurance in Florida",
+                    subheading: "Don't pay out-of-pocket for dental cleanings, crowns, implants, or glasses. Comprehensive coverage across top Florida provider networks.",
+                    highlights: [
+                        { title: "Immediate Coverage Available", desc: "No waiting periods for preventive cleanings and routine dental care." },
+                        { title: "Implants, Dentures & Crowns", desc: "Substantial savings on major dental procedures and specialty care." },
+                        { title: "Wide Florida Provider Network", desc: "Choose from thousands of top-rated dentists and optometrists statewide." }
                     ]
                 };
             case '/iul-retirement-tampa':

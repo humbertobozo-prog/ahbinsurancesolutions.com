@@ -71,20 +71,32 @@ const App: React.FC = () => {
     const isEs = language === 'es';
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
+    const cleanPath = path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
+
     const landingPaths = [
         '/medicare-florida',
+        '/medicare-supplement-florida',
+        '/es/suplemento-medicare-florida',
         '/final-expense-miami',
+        '/burial-insurance-tampa',
+        '/es/seguro-gastos-finales-tampa',
         '/iul-retirement-tampa',
-        '/spanish-insurance-orlando'
+        '/spanish-insurance-orlando',
+        '/annuities-florida',
+        '/es/anualidades-florida',
+        '/annuities',
+        '/es/anualidades',
+        '/dental-vision-florida',
+        '/es/dental-vision-florida'
     ];
 
     const legalPaths = ['/terms', '/privacy', '/terminos', '/privacidad', '/es/terminos', '/es/privacidad'];
 
     // Legal Pages
-    if (legalPaths.includes(path)) {
+    if (legalPaths.includes(cleanPath)) {
         return (
             <>
-                <LegalPage path={path} language={language} setLanguage={setLanguage} />
+                <LegalPage path={cleanPath} language={language} setLanguage={setLanguage} />
                 <TermsAndPrivacyModal 
                     isOpen={legalModalOpen} 
                     onClose={() => setLegalModalOpen(false)} 
@@ -96,11 +108,11 @@ const App: React.FC = () => {
     }
 
     // Landing Pages
-    if (landingPaths.includes(path)) {
+    if (landingPaths.includes(cleanPath)) {
         return (
             <>
                 <LocationLandingPage
-                    path={path}
+                    path={cleanPath}
                     language={language}
                     setLanguage={setLanguage}
                     onOpenLegalModal={handleOpenLegalModal}
@@ -108,7 +120,7 @@ const App: React.FC = () => {
                         <ErrorBoundary componentName="ContactForm">
                             <Suspense fallback={<Spinner height="py-48" />}>
                                 <ContactForm 
-                                    content={translations[path === '/spanish-insurance-orlando' ? 'es' : language].contactForm} 
+                                    content={translations[cleanPath === '/spanish-insurance-orlando' ? 'es' : language].contactForm} 
                                     onOpenLegalModal={handleOpenLegalModal}
                                 />
                             </Suspense>
@@ -128,20 +140,20 @@ const App: React.FC = () => {
     // Dedicated Page Views
     let mainContentComponent: React.ReactNode;
 
-    if (path === '/medicare' || path === '/es/medicare') {
+    if (cleanPath === '/medicare' || cleanPath === '/es/medicare') {
         mainContentComponent = <MedicarePage language={language} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/final-expense' || path === '/es/gastos-finales') {
+    } else if (cleanPath === '/final-expense' || cleanPath === '/es/gastos-finales') {
         mainContentComponent = <FinalExpensePage language={language} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/iul-retirement' || path === '/es/iul-jubilacion') {
+    } else if (cleanPath === '/iul-retirement' || cleanPath === '/es/iul-jubilacion') {
         mainContentComponent = <IULPage language={language} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/blog' || path === '/es/blog' || path.startsWith('/blog/') || path.startsWith('/es/blog/')) {
-        const slug = path.startsWith('/blog/') ? path.replace('/blog/', '') : (path.startsWith('/es/blog/') ? path.replace('/es/blog/', '') : undefined);
+    } else if (cleanPath === '/blog' || cleanPath === '/es/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/es/blog/')) {
+        const slug = cleanPath.startsWith('/blog/') ? cleanPath.replace('/blog/', '') : (cleanPath.startsWith('/es/blog/') ? cleanPath.replace('/es/blog/', '') : undefined);
         mainContentComponent = <BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/faq' || path === '/es/preguntas-frecuentes') {
+    } else if (cleanPath === '/faq' || cleanPath === '/es/preguntas-frecuentes') {
         mainContentComponent = <FAQPage language={language} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/about-us' || path === '/es/nosotros') {
+    } else if (cleanPath === '/about-us' || cleanPath === '/es/nosotros') {
         mainContentComponent = <AboutPage language={language} onOpenQuote={handleNavigateToQuote} />;
-    } else if (path === '/contact' || path === '/es/contacto') {
+    } else if (cleanPath === '/contact' || cleanPath === '/es/contacto') {
         mainContentComponent = <ContactPage language={language} />;
     } else {
         // Main Home View
