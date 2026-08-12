@@ -90,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                     </div>
                     <div className="lg:col-span-3" itemScope itemType="https://schema.org/InsuranceAgency">
                         <meta itemProp="name" content="AHB Insurance Solutions" />
-                        <meta itemProp="image" content="https://www.ahbinsurancesolutions.com/andresbozoofi.png" />
+                        <meta itemProp="image" content="https://www.ahbinsurancesolutions.com/andresbozoofi.webp" />
                         <h3 className="font-heading font-bold text-lg mb-4 text-white uppercase tracking-wider">{content.contactTitle}</h3>
                         <ul className="space-y-3 text-gray-200">
                             <li>

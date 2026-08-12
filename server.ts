@@ -197,9 +197,30 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      appType: "custom",
     });
     app.use(vite.middlewares);
+
+    app.get("*all", async (req, res, next) => {
+      try {
+        // Skip serving HTML for static files / assets, let next handle it
+        if (req.path.includes(".") || req.path.startsWith("/api/")) {
+          return next();
+        }
+        
+        let template = fs.readFileSync(path.join(process.cwd(), "index.html"), "utf-8");
+        template = await vite.transformIndexHtml(req.url, template);
+        
+        const metadata = getSeoMetadata(req.path);
+        const seoHtml = rewriteHtmlForSeo(template, metadata);
+        
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.status(200).send(seoHtml);
+      } catch (error) {
+        console.error("Vite SEO Pre-render failed, falling back to next():", error);
+        next(error);
+      }
+    });
   } else {
     const distPath = path.join(process.cwd(), "dist");
     
@@ -208,7 +229,7 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     
     let indexHtmlContent = "";
     
-    app.get("*", (req, res) => {
+    app.get("*all", (req, res) => {
       try {
         // Skip serving HTML for static files / assets, let other routes/static handle or return 404
         if (req.path.includes(".") || req.path.startsWith("/api/")) {

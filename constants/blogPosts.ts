@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
             name: 'Andres H. Bozo',
             title: 'Licensed Insurance Broker',
             npn: '21228432',
-            image: '/andresbozoofi.png'
+            image: '/andresbozoofi.webp'
         },
         image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800',
         tags: ['Medicare', 'Florida', 'Medigap', 'Medicare Advantage'],
@@ -135,7 +135,7 @@ Los planes Medigap trabajan junto al Medicare Original para pagar los deducibles
             name: 'Andres H. Bozo',
             title: 'Licensed Insurance Broker',
             npn: '21228432',
-            image: '/andresbozoofi.png'
+            image: '/andresbozoofi.webp'
         },
         image: 'https://images.pexels.com/photos/7551608/pexels-photo-7551608.jpeg?auto=compress&cs=tinysrgb&w=800',
         tags: ['Final Expense', 'Burial Insurance', 'Florida Seniors', 'Whole Life'],
@@ -213,7 +213,7 @@ Para personas con condiciones médicas preexistentes graves, existen pólizas de
             name: 'Andres H. Bozo',
             title: 'Licensed Insurance Broker',
             npn: '21228432',
-            image: '/andresbozoofi.png'
+            image: '/andresbozoofi.webp'
         },
         image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
         tags: ['IUL', 'Retirement', 'Tax-Free Income', 'Life Insurance'],
