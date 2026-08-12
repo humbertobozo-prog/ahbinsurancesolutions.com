@@ -193,6 +193,11 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     }
   });
 
+  // 301 Permanent Redirect for legacy PNG logo to WebP format
+  app.get("/andresbozoofi.png", (req, res) => {
+    res.redirect(301, "/andresbozoofi.webp");
+  });
+
   // Vite middleware for dev or static serving for production
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

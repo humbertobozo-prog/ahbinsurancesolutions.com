@@ -563,10 +563,18 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData): str
   rewritten = rewritten.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${escapeHtml(metadata.description)}">`);
   rewritten = rewritten.replace(/<meta property="og:locale" content="[^"]*"\s*\/?>/, `<meta property="og:locale" content="${metadata.htmlLang.replace("-", "_")}">`);
 
-  // 7. Inject crawler-friendly body outline inside `<div id="root"></div>`
+  // 6b. Update Twitter Card fields
+  rewritten = rewritten.replace(/<meta property="twitter:url" content="[^"]*"\s*\/?>/, `<meta property="twitter:url" content="${metadata.canonicalUrl}">`);
+  rewritten = rewritten.replace(/<meta property="twitter:title" content="[^"]*"\s*\/?>/, `<meta property="twitter:title" content="${escapeHtml(metadata.title)}">`);
+  rewritten = rewritten.replace(/<meta property="twitter:description" content="[^"]*"\s*\/?>/, `<meta property="twitter:description" content="${escapeHtml(metadata.description)}">`);
+
+  // 7. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback
   const rootDiv = '<div id="root">';
   if (rewritten.includes(rootDiv)) {
-    rewritten = rewritten.replace(rootDiv, `<div id="root">${metadata.bodyOutline}`);
+    // We inject both a noscript block (to prevent hydration clearing and support JS-disabled bots)
+    // and inside the root div (to support standard pre-rendering).
+    const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">${metadata.bodyOutline}`;
+    rewritten = rewritten.replace(rootDiv, replacement);
   }
 
   return rewritten;
