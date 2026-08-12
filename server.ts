@@ -1,7 +1,9 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
+import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
 
 async function startServer() {
   const app = express();
@@ -200,9 +202,32 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
-    app.get("*", (_req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
+    
+    // Serve static assets, disabling automatic serving of index.html for root or directories
+    app.use(express.static(distPath, { index: false }));
+    
+    let indexHtmlContent = "";
+    
+    app.get("*", (req, res) => {
+      try {
+        // Skip serving HTML for static files / assets, let other routes/static handle or return 404
+        if (req.path.includes(".") || req.path.startsWith("/api/")) {
+          return res.status(404).send("Not found");
+        }
+        
+        if (!indexHtmlContent) {
+          indexHtmlContent = fs.readFileSync(path.join(distPath, "index.html"), "utf-8");
+        }
+        
+        const metadata = getSeoMetadata(req.path);
+        const seoHtml = rewriteHtmlForSeo(indexHtmlContent, metadata);
+        
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.send(seoHtml);
+      } catch (error) {
+        console.error("SEO Pre-render/Rewrite failed, falling back to standard index.html:", error);
+        res.sendFile(path.join(distPath, "index.html"));
+      }
     });
   }
 
