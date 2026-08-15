@@ -5,6 +5,8 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
 
+const BOT_REGEX = /googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebot|facebookexternalhit|twitterbot|linkedinbot|embedly|quora link preview|pinterest|whatsapp|telegrambot|slackbot|applebot/i;
+
 async function startServer() {
   const app = express();
   const PORT = 3000;
@@ -204,12 +206,17 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
       server: { middlewareMode: true },
       appType: "custom",
     });
-    app.use(vite.middlewares);
 
+    // Handle HTML pre-rendering BEFORE vite middlewares intercept requests
     app.get("*all", async (req, res, next) => {
       try {
-        // Skip serving HTML for static files / assets, let next handle it
-        if (req.path.includes(".") || req.path.startsWith("/api/")) {
+        // Skip serving HTML for static files, assets, or Vite internal scripts like /@vite/client
+        if (
+          req.path.includes(".") ||
+          req.path.startsWith("/api/") ||
+          req.path.startsWith("/@") ||
+          req.path.includes("node_modules")
+        ) {
           return next();
         }
         
@@ -217,7 +224,8 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         template = await vite.transformIndexHtml(req.url, template);
         
         const metadata = getSeoMetadata(req.path);
-        const seoHtml = rewriteHtmlForSeo(template, metadata);
+        const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
+        const seoHtml = rewriteHtmlForSeo(template, metadata, isBot);
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.status(200).send(seoHtml);
@@ -226,6 +234,8 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         next(error);
       }
     });
+
+    app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), "dist");
     
@@ -246,7 +256,8 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         }
         
         const metadata = getSeoMetadata(req.path);
-        const seoHtml = rewriteHtmlForSeo(indexHtmlContent, metadata);
+        const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
+        const seoHtml = rewriteHtmlForSeo(indexHtmlContent, metadata, isBot);
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
         res.send(seoHtml);

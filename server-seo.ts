@@ -526,7 +526,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   };
 }
 
-export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData): string {
+export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, includeBodyOutline: boolean = true): string {
   let rewritten = indexHtml;
 
   // 1. Replace <html lang="en"> with the specific language
@@ -568,13 +568,13 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData): str
   rewritten = rewritten.replace(/<meta property="twitter:title" content="[^"]*"\s*\/?>/, `<meta property="twitter:title" content="${escapeHtml(metadata.title)}">`);
   rewritten = rewritten.replace(/<meta property="twitter:description" content="[^"]*"\s*\/?>/, `<meta property="twitter:description" content="${escapeHtml(metadata.description)}">`);
 
-  // 7. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback
-  const rootDiv = '<div id="root">';
-  if (rewritten.includes(rootDiv)) {
-    // We inject both a noscript block (to prevent hydration clearing and support JS-disabled bots)
-    // and inside the root div (to support standard pre-rendering).
-    const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">${metadata.bodyOutline}`;
-    rewritten = rewritten.replace(rootDiv, replacement);
+  // 7. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback (only if includeBodyOutline is true)
+  if (includeBodyOutline) {
+    const rootDiv = '<div id="root">';
+    if (rewritten.includes(rootDiv)) {
+      const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">${metadata.bodyOutline}`;
+      rewritten = rewritten.replace(rootDiv, replacement);
+    }
   }
 
   return rewritten;
