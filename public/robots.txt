@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps & LLM Knowledge Base
 Sitemap: https://www.ahbinsurancesolutions.com/sitemap.xml
-# llms-txt: https://www.ahbinsurancesolutions.com/llms.txt
