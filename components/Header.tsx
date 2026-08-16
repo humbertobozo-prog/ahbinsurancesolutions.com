@@ -21,6 +21,18 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Close mobile menu on Escape key press
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setIsOpen(false);
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen]);
+
     const isEs = currentLang === 'es';
 
     const navigateTo = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {

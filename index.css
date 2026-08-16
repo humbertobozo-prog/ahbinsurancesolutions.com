@@ -51,4 +51,19 @@
   .skip-link:focus {
     top: 0;
   }
+
+  /* Layout Shift & Rendering Optimization Classes */
+  .contain-form-card {
+    contain: layout style;
+    contain-intrinsic-size: auto 540px;
+  }
+
+  .contain-carousel {
+    contain: paint layout;
+  }
+
+  .contain-section-defer {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+  }
 }

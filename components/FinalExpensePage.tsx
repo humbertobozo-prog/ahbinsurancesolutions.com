@@ -71,13 +71,23 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": isEs ? "Seguro de Gastos Finales y Funeral" : "Final Expense & Burial Life Insurance",
+        "@type": ["Service", "FinancialProduct"],
+        "name": isEs ? "Seguro de Gastos Finales y Funeral en Florida" : "Final Expense & Burial Life Insurance in Florida",
+        "serviceType": "Final Expense Whole Life Insurance",
+        "category": "LifeInsurance",
+        "description": description,
         "provider": {
             "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
             "telephone": "+1-352-225-8389",
+            "email": "andreshbozo@ahbinsurancesolutions.com",
+            "priceRange": "Free Consultation",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            },
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5500 SW Archer Road, Apt H103",
@@ -87,8 +97,58 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 "addressCountry": "US"
             }
         },
-        "areaServed": "FL",
-        "description": description
+        "broker": {
+            "@type": "Person",
+            "name": "Andres H. Bozo",
+            "jobTitle": "Licensed Life & Medicare Insurance Broker",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            }
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Florida"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": isEs ? "Adultos y adultos mayores de 50 a 85 años en Florida" : "Seniors and adults aged 50-85 in Florida"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": isEs ? "Cotización personalizada sin examen médico y comparación de tarifas" : "Free customized quote with no medical exam required",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Final Expense Coverage Options",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Pólizas de Emisión Simplificada (Sin Examen Médico)" : "Simplified Issue Burial Insurance (No Medical Exam)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Seguro de Vida Entera para Gastos Funerarios ($5,000 - $35,000)" : "Whole Life Funeral Protection ($5,000 - $35,000 Coverage)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Pólizas de Emisión Garantizada (Aprobación Inmediata)" : "Guaranteed Issue Whole Life Policies"
+                    }
+                }
+            ]
+        }
     };
 
     const faqSchema = {

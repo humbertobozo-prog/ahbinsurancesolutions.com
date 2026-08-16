@@ -8,28 +8,30 @@ interface TestimonialsProps {
 
 const TestimonialCard: React.FC<{ quote: string; author: string; location: string; imageUrl: string }> = ({ quote, author, location, imageUrl }) => (
     <div className="flex-shrink-0 w-full px-4 md:w-1/2">
-        <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl flex flex-col items-center text-center border border-gray-50 h-full transform transition-all duration-500 hover:shadow-2xl">
-            <div className="relative mb-8">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-accent to-secondary rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <img 
-                    src={imageUrl} 
-                    alt={`${author} - Cliente de seguros en ${location}`} 
-                    className="relative w-24 h-24 rounded-full object-cover border-4 border-white shadow-md" 
-                    loading="lazy" 
-                    width="96"
-                    height="96"
-                />
-                <div className="absolute -bottom-1 -right-1 bg-green-500 p-1.5 rounded-full border-2 border-white shadow-sm">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+        <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl flex flex-col items-center text-center border border-gray-50 h-full min-h-[380px] justify-between transform transition-all duration-500 hover:shadow-2xl contain-layout">
+            <div className="flex flex-col items-center">
+                <div className="relative mb-6">
+                    <div className="absolute -inset-2 bg-gradient-to-tr from-accent to-secondary rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                    <img 
+                        src={imageUrl} 
+                        alt={`${author} - Cliente de seguros en ${location}`} 
+                        className="relative w-24 h-24 rounded-full object-cover border-4 border-white shadow-md aspect-square" 
+                        loading="lazy" 
+                        width="96"
+                        height="96"
+                    />
+                    <div className="absolute -bottom-1 -right-1 bg-green-500 p-1.5 rounded-full border-2 border-white shadow-sm">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path></svg>
+                    </div>
                 </div>
+                <div className="flex gap-1.5 mb-5">
+                    {[1,2,3,4,5].map(i => (
+                        <svg key={i} className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    ))}
+                </div>
+                <p className="text-gray-700 italic mb-6 leading-relaxed text-base md:text-lg">"{quote}"</p>
             </div>
-            <div className="flex gap-1.5 mb-6">
-                {[1,2,3,4,5].map(i => (
-                    <svg key={i} className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                ))}
-            </div>
-            <p className="text-gray-700 italic mb-8 leading-relaxed text-lg flex-grow">"{quote}"</p>
-            <div>
+            <div className="mt-auto">
                 <div className="font-black text-primary font-heading uppercase text-base tracking-wide">{author}</div>
                 <div className="text-xs font-black text-primary uppercase tracking-[0.25em] mt-2 bg-secondary/5 px-3 py-1 rounded-full">{location}</div>
             </div>
@@ -76,7 +78,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content }) => {
     }, [nextSlide, isPaused]);
 
     return (
-        <section id="testimonials" className="bg-light-gray py-16 md:py-20 overflow-hidden relative">
+        <section id="testimonials" className="bg-light-gray py-16 md:py-20 overflow-hidden relative contain-section-defer">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16 animate-fade-in-down">
                     <span className="text-primary font-black uppercase tracking-[0.3em] text-[11px] mb-3 bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20 inline-block">{content.label}</span>
@@ -85,11 +87,11 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content }) => {
                 </div>
 
                 <div 
-                    className="relative max-w-6xl mx-auto group"
+                    className="relative max-w-6xl mx-auto group contain-carousel"
                     onMouseEnter={() => setIsPaused(true)}
                     onMouseLeave={() => setIsPaused(false)}
                 >
-                    <div className="overflow-hidden py-4 px-2">
+                    <div className="overflow-hidden py-4 px-2 min-h-[420px]">
                         <div 
                             className="flex transition-transform duration-700 ease-in-out"
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

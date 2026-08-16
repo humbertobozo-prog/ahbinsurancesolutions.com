@@ -71,13 +71,23 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": isEs ? "Vida Universal Indexada (IUL) y Jubilación" : "Indexed Universal Life (IUL) & Retirement Planning",
+        "@type": ["Service", "FinancialProduct"],
+        "name": isEs ? "Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Indexed Universal Life (IUL) & Tax-Free Retirement Planning in Florida",
+        "serviceType": "Indexed Universal Life Insurance & Retirement Wealth Structuring",
+        "category": "LifeInsurance",
+        "description": description,
         "provider": {
             "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
             "telephone": "+1-352-225-8389",
+            "email": "andreshbozo@ahbinsurancesolutions.com",
+            "priceRange": "Free Consultation",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            },
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5500 SW Archer Road, Apt H103",
@@ -87,8 +97,58 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 "addressCountry": "US"
             }
         },
-        "areaServed": "FL",
-        "description": description
+        "broker": {
+            "@type": "Person",
+            "name": "Andres H. Bozo",
+            "jobTitle": "Licensed Life Insurance & Financial Broker",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            }
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Florida"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": isEs ? "Personas y familias que buscan crecimiento financiero libre de impuestos y protección de vida en Florida" : "Individuals and families seeking tax-free growth and living benefits in Florida"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": isEs ? "Ilustración personalizada de IUL y análisis de jubilación sin compromiso" : "Complimentary custom IUL illustration and retirement analysis",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IUL Strategy Solutions",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Crecimiento del Valor en Efectivo Indexado (Piso del 0% contra Pérdidas)" : "Indexed Cash Value Growth (0% Market Downside Protection)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Ingresos de Jubilación Libres de Impuestos (Préstamos con Ventaja Fiscal)" : "Tax-Free Retirement Income Streams"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Beneficios en Vida (Enfermedad Crónica, Crítica o Terminal)" : "Living Benefits for Chronic, Critical & Terminal Illness"
+                    }
+                }
+            ]
+        }
     };
 
     const faqSchema = {

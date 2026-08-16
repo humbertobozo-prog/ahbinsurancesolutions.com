@@ -225,7 +225,7 @@ const App: React.FC = () => {
 
                 <ErrorBoundary componentName="ContactForm">
                     <Suspense fallback={<Spinner height="py-48" />}>
-                        <ContactForm content={content.contactForm} onOpenLegalModal={handleOpenLegalModal} />
+                        <ContactForm content={content.contactForm} language={language} onOpenLegalModal={handleOpenLegalModal} />
                     </Suspense>
                 </ErrorBoundary>
 

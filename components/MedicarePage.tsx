@@ -71,13 +71,23 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": "Service",
+        "@type": ["Service", "FinancialProduct"],
         "name": isEs ? "Planes y Suplementos de Medicare en Florida" : "Medicare Plans & Supplements in Florida",
+        "serviceType": "Medicare Insurance Brokerage",
+        "category": "HealthInsurance",
+        "description": description,
         "provider": {
             "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
             "name": "AHB Insurance Solutions",
             "url": "https://www.ahbinsurancesolutions.com/",
             "telephone": "+1-352-225-8389",
+            "email": "andreshbozo@ahbinsurancesolutions.com",
+            "priceRange": "Free Consultation",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            },
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5500 SW Archer Road, Apt H103",
@@ -87,8 +97,58 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                 "addressCountry": "US"
             }
         },
-        "areaServed": "FL",
-        "description": description
+        "broker": {
+            "@type": "Person",
+            "name": "Andres H. Bozo",
+            "jobTitle": "Licensed Medicare & Life Insurance Broker",
+            "identifier": {
+                "@type": "PropertyValue",
+                "name": "NPN",
+                "value": "21228432"
+            }
+        },
+        "areaServed": {
+            "@type": "State",
+            "name": "Florida"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": isEs ? "Adultos mayores de 65 años o beneficiarios de Medicare en Florida" : "Seniors 65+ and Medicare beneficiaries in Florida"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": isEs ? "Comparación y asesoría de Medicare sin costo para el cliente" : "Free Medicare plan comparison and unbiased broker guidance",
+            "availability": "https://schema.org/InStock"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Medicare Solutions Catalog",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Medicare Suplementario (Medigap Plan G y N)" : "Medicare Supplement Insurance (Medigap Plan G & N)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Medicare Advantage (Parte C)" : "Medicare Advantage Plans (Part C)"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": isEs ? "Planes de Medicamentos Recetados (Parte D)" : "Part D Prescription Drug Coverage"
+                    }
+                }
+            ]
+        }
     };
 
     const faqSchema = {

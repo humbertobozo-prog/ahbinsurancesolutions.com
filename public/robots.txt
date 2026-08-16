@@ -1,4 +1,37 @@
+# Robots.txt for AHB Insurance Solutions
+# https://www.ahbinsurancesolutions.com
+
 User-agent: *
 Allow: /
 
+# Protect internal assets, build outputs, and potential administrative/api paths
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_app/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.zip$
+
+# Allow specific public resources needed for rich snippets and crawlers
+Allow: /sitemap.xml
+Allow: /favicon.svg
+Allow: /andresbozoofi.webp
+
+# AI Search & Crawler direct permissions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Primary Sitemap Reference
 Sitemap: https://www.ahbinsurancesolutions.com/sitemap.xml

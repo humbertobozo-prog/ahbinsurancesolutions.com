@@ -107,7 +107,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 </div>
             </section>
 
-            <ContactForm content={content.contactForm} />
+            <ContactForm content={content.contactForm} language={language} />
         </div>
     );
 };

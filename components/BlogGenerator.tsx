@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { Language } from '../types';
+import { notifySearchEngines, type PingResult } from '../utils/searchEnginePinger';
 
 interface BlogGeneratorProps {
   language: Language;
@@ -76,9 +77,14 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
   const [isGenerating, setIsGenerating] = useState(false);
   const [generationStep, setGenerationStep] = useState('');
   const [generatedArticle, setGeneratedArticle] = useState<GeneratedBlogData | null>(null);
-  const [activeTab, setActiveTab] = useState<'preview' | 'seo' | 'markdown'>('preview');
+  const [activeTab, setActiveTab] = useState<'preview' | 'seo' | 'markdown' | 'indexing'>('preview');
   const [copiedStatus, setCopiedStatus] = useState<string | null>(null);
   const [errorNotice, setErrorNotice] = useState<string | null>(null);
+
+  // Search Engine Pinger State
+  const [isPinging, setIsPinging] = useState(false);
+  const [pingResults, setPingResults] = useState<PingResult[] | null>(null);
+  const [pingSummary, setPingSummary] = useState<string | null>(null);
 
   const activeTopicString = customTopic.trim() ? customTopic.trim() : selectedTopic;
 
@@ -308,6 +314,8 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
 
       if (result.success && result.data) {
         setGeneratedArticle(result.data);
+        // Automatically ping search engines for instant indexing notice of newly generated content
+        triggerSearchEnginePing(result.data.slug);
       } else {
         throw new Error(result.error || 'Server response missing article payload');
       }
@@ -317,9 +325,27 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
       // Seamless fallback to high-quality local generator so user always receives complete, beautiful draft!
       const fallbackData = generateFallbackArticle(activeTopicString, targetLanguage);
       setGeneratedArticle(fallbackData);
+      triggerSearchEnginePing(fallbackData.slug);
     } finally {
       setIsGenerating(false);
       setGenerationStep('');
+    }
+  };
+
+  const triggerSearchEnginePing = async (slug?: string) => {
+    setIsPinging(true);
+    try {
+      const response = await notifySearchEngines({
+        sitemapUrl: 'https://www.ahbinsurancesolutions.com/sitemap.xml',
+        articleSlug: slug || generatedArticle?.slug,
+        language: targetLanguage,
+      });
+      setPingResults(response.results);
+      setPingSummary(response.summary);
+    } catch (e: unknown) {
+      console.warn('Ping dispatch notice:', e);
+    } finally {
+      setIsPinging(false);
     }
   };
 
@@ -595,9 +621,38 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
                     >
                       📝 {isEs ? 'Markdown / Exportar' : 'Markdown & Export'}
                     </button>
+                    <button
+                      onClick={() => setActiveTab('indexing')}
+                      className={`px-4 py-2 rounded-xl text-xs font-bold uppercase transition-all flex items-center gap-1.5 ${
+                        activeTab === 'indexing' ? 'bg-primary text-white shadow' : 'bg-white text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      🚀 {isEs ? 'Indexación (Ping)' : 'Indexing (Ping)'}
+                      {pingResults && <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>}
+                    </button>
                   </div>
 
                   <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => triggerSearchEnginePing()}
+                      disabled={isPinging}
+                      className="bg-accent text-primary font-black text-[11px] px-3 py-1.5 rounded-lg hover:bg-[#FFB81C] transition-all flex items-center gap-1 shadow-sm disabled:opacity-50"
+                      title={isEs ? 'Notificar a Google y Bing sobre este contenido' : 'Notify Google and Bing about this content'}
+                    >
+                      {isPinging ? (
+                        <>
+                          <svg className="animate-spin h-3.5 w-3.5" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                          </svg>
+                          <span>{isEs ? 'Enviando Ping...' : 'Pinging...'}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>🚀 {isEs ? 'Ping Buscadores' : 'Ping Search Engines'}</span>
+                        </>
+                      )}
+                    </button>
                     <button
                       onClick={handleCopyMarkdown}
                       className="bg-emerald-700 text-white text-[11px] font-bold px-3 py-1.5 rounded-lg hover:bg-emerald-600 transition-all flex items-center gap-1 shadow-sm"
@@ -794,6 +849,113 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
                       value={`# ${generatedArticle.title}\n\nMeta Description: ${generatedArticle.metaDescription}\nCategory: ${generatedArticle.category}\n\n${generatedArticle.summary}\n\n${generatedArticle.sections.map((s) => `## ${s.heading}\n${s.content}`).join('\n\n')}`}
                       className="w-full p-4 bg-gray-900 text-emerald-400 font-mono text-xs rounded-xl focus:outline-none"
                     />
+                  </div>
+                )}
+
+                {/* Tab Content: Search Engine Indexing & Ping Status */}
+                {activeTab === 'indexing' && (
+                  <div className="p-6 md:p-8 space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-gray-200">
+                      <div>
+                        <h3 className="font-black text-primary text-base flex items-center gap-2">
+                          <span>🚀</span>
+                          {isEs ? 'Estado de Indexación Automática en Buscadores' : 'Search Engine Auto-Ping & Indexation Status'}
+                        </h3>
+                        <p className="text-xs text-gray-500 mt-0.5">
+                          {isEs
+                            ? 'Notifica a Google Search Console, Bing Webmaster e IndexNow para agilizar el rastreo.'
+                            : 'Notifies Google Search Console, Bing Webmaster, and IndexNow API for accelerated crawling.'}
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => triggerSearchEnginePing()}
+                        disabled={isPinging}
+                        className="bg-accent text-primary px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider hover:bg-[#FFB81C] transition-all flex items-center gap-2 shadow self-start sm:self-auto disabled:opacity-50"
+                      >
+                        {isPinging ? (
+                          <>
+                            <svg className="animate-spin h-3.5 w-3.5" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                            </svg>
+                            <span>{isEs ? 'Enviando Pings...' : 'Pinging...'}</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>🔄 {isEs ? 'Reenviar Ping a Motores' : 'Re-Ping Search Engines'}</span>
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    {pingSummary && (
+                      <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-900 font-medium flex items-center gap-2">
+                        <span className="text-base">✅</span>
+                        <span>{pingSummary}</span>
+                      </div>
+                    )}
+
+                    <div className="space-y-3">
+                      <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-xs text-primary">🌐 Google Search Console</span>
+                            <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-0.5 rounded-full">
+                              SITEMAP PING
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-gray-500 font-mono">
+                            {pingResults?.find((r) => r.engine.includes('Google'))?.timestamp
+                              ? new Date(pingResults.find((r) => r.engine.includes('Google'))!.timestamp).toLocaleTimeString()
+                              : 'Ready'}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-600">
+                          {pingResults?.find((r) => r.engine.includes('Google'))?.statusText ||
+                            'Endpoint de Google configurado para sitemap.xml canónico.'}
+                        </p>
+                      </div>
+
+                      <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-xs text-primary">🔍 Bing Webmaster Tools</span>
+                            <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-2 py-0.5 rounded-full">
+                              BING XML PING
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-gray-500 font-mono">
+                            {pingResults?.find((r) => r.engine.includes('Bing'))?.timestamp
+                              ? new Date(pingResults.find((r) => r.engine.includes('Bing'))!.timestamp).toLocaleTimeString()
+                              : 'Ready'}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-600">
+                          {pingResults?.find((r) => r.engine.includes('Bing'))?.statusText ||
+                            'Endpoint de Bing conectado para rastreo de páginas de Florida.'}
+                        </p>
+                      </div>
+
+                      <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
+                        <div className="flex items-center justify-between mb-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-bold text-xs text-primary">⚡ IndexNow Protocol</span>
+                            <span className="bg-purple-100 text-purple-800 text-[10px] font-black px-2 py-0.5 rounded-full">
+                              INSTANT CRAWL
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-gray-500 font-mono">
+                            {pingResults?.find((r) => r.engine.includes('IndexNow'))?.timestamp
+                              ? new Date(pingResults.find((r) => r.engine.includes('IndexNow'))!.timestamp).toLocaleTimeString()
+                              : 'Key Verified'}
+                          </span>
+                        </div>
+                        <p className="text-xs text-gray-600">
+                          {pingResults?.find((r) => r.engine.includes('IndexNow'))?.statusText ||
+                            `URL específica para notificación instantánea: https://www.ahbinsurancesolutions.com/${targetLanguage === 'es' ? 'es/blog/' : 'blog/'}${generatedArticle.slug}`}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import type { Language } from '../types';
 import { legalContent } from '../constants/legalContent';
 
@@ -15,14 +15,63 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
     initialTab = 'terms',
     language
 }) => {
-    const [activeTab, setActiveTab] = useState<'terms' | 'privacy'>(initialTab);
+    const [selectedTab, setSelectedTab] = useState<'terms' | 'privacy' | null>(null);
+    const modalRef = useRef<HTMLDivElement>(null);
+    const closeBtnRef = useRef<HTMLButtonElement>(null);
 
-    // Keep active tab synced if opened with initialTab prop
-    React.useEffect(() => {
-        if (isOpen) {
-            setActiveTab(initialTab);
-        }
-    }, [isOpen, initialTab]);
+    const activeTab = selectedTab ?? initialTab;
+
+    // Reset local selection when modal is closed so subsequent opens use initialTab
+    const handleClose = useCallback(() => {
+        setSelectedTab(null);
+        onClose();
+    }, [onClose]);
+
+    // Keyboard navigation: Escape key listener and Focus Trap
+    useEffect(() => {
+        if (!isOpen) return;
+
+        // Auto focus the close button when opened
+        const timer = setTimeout(() => {
+            closeBtnRef.current?.focus();
+        }, 50);
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                handleClose();
+                return;
+            }
+
+            if (e.key === 'Tab' && modalRef.current) {
+                const focusableElements = modalRef.current.querySelectorAll<HTMLElement>(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                if (!focusableElements.length) return;
+
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [isOpen, handleClose]);
 
     if (!isOpen) return null;
 
@@ -38,8 +87,13 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
             role="dialog"
             aria-modal="true"
             aria-labelledby="legal-modal-title"
+            onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                    handleClose();
+                }
+            }}
         >
-            <div className="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col max-h-[90vh] transition-all">
+            <div ref={modalRef} className="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col max-h-[90vh] transition-all">
                 {/* Header */}
                 <div className="bg-primary text-white p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-white/10">
                     <div>
@@ -60,20 +114,22 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
                     <div className="flex items-center gap-3 self-end sm:self-auto">
                         <button
                             onClick={handlePrint}
-                            className="text-xs font-bold bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-xl transition-colors flex items-center gap-1.5"
+                            className="text-xs font-bold bg-white/10 hover:bg-white/20 text-white px-3 py-2 rounded-xl transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-accent"
                             title={language === 'es' ? 'Imprimir documento' : 'Print document'}
+                            aria-label={language === 'es' ? 'Imprimir documento legal' : 'Print legal document'}
                         >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                             </svg>
                             <span className="hidden sm:inline">{language === 'es' ? 'Imprimir' : 'Print'}</span>
                         </button>
                         <button 
-                            onClick={onClose}
+                            ref={closeBtnRef}
+                            onClick={handleClose}
                             className="p-2 rounded-full bg-white/10 text-white hover:bg-accent hover:text-primary transition-all focus:outline-none focus:ring-2 focus:ring-accent"
-                            aria-label={language === 'es' ? 'Cerrar modal' : 'Close modal'}
+                            aria-label={language === 'es' ? 'Cerrar ventana de términos y privacidad' : 'Close terms and privacy modal'}
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -81,10 +137,14 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
                 </div>
 
                 {/* Tabs */}
-                <div className="bg-light-gray p-2 px-6 border-b border-gray-200 flex gap-2">
+                <div className="bg-light-gray p-2 px-6 border-b border-gray-200 flex gap-2" role="tablist" aria-label={language === 'es' ? 'Documentos Legales' : 'Legal Documents'}>
                     <button
-                        onClick={() => setActiveTab('terms')}
-                        className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-black transition-all uppercase tracking-wider ${
+                        id="tab-terms"
+                        role="tab"
+                        aria-selected={activeTab === 'terms'}
+                        aria-controls="tabpanel-terms"
+                        onClick={() => setSelectedTab('terms')}
+                        className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-black transition-all uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-primary ${
                             activeTab === 'terms'
                                 ? 'bg-primary text-white shadow-md'
                                 : 'text-gray-600 hover:text-primary hover:bg-gray-200/60'
@@ -93,8 +153,12 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
                         {language === 'es' ? 'Términos de Servicio' : 'Terms of Service'}
                     </button>
                     <button
-                        onClick={() => setActiveTab('privacy')}
-                        className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-black transition-all uppercase tracking-wider ${
+                        id="tab-privacy"
+                        role="tab"
+                        aria-selected={activeTab === 'privacy'}
+                        aria-controls="tabpanel-privacy"
+                        onClick={() => setSelectedTab('privacy')}
+                        className={`px-5 py-2.5 rounded-xl text-xs md:text-sm font-black transition-all uppercase tracking-wider focus:outline-none focus:ring-2 focus:ring-primary ${
                             activeTab === 'privacy'
                                 ? 'bg-primary text-white shadow-md'
                                 : 'text-gray-600 hover:text-primary hover:bg-gray-200/60'
@@ -105,7 +169,13 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
                 </div>
 
                 {/* Modal Content - Scrollable */}
-                <div className="p-6 md:p-8 overflow-y-auto space-y-8 flex-grow">
+                <div 
+                    id={`tabpanel-${activeTab}`}
+                    role="tabpanel"
+                    aria-labelledby={`tab-${activeTab}`}
+                    tabIndex={0}
+                    className="p-6 md:p-8 overflow-y-auto space-y-8 flex-grow focus:outline-none focus:ring-1 focus:ring-primary/20"
+                >
                     {doc.sections.map((section) => (
                         <section key={section.id} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
                             <h3 className="text-lg md:text-xl font-black font-heading text-primary mb-3 leading-snug">
