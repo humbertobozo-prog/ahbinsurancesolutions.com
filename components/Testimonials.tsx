@@ -49,18 +49,32 @@ const testimonialImages = [
 export const Testimonials: React.FC<TestimonialsProps> = ({ content }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const [itemsPerPage, setItemsPerPage] = useState(2);
+    const [itemsPerPage, setItemsPerPage] = useState(() => {
+        if (typeof window !== 'undefined' && window.matchMedia) {
+            return window.matchMedia('(min-width: 768px)').matches ? 2 : 1;
+        }
+        return 2;
+    });
     
     const totalItems = content.items.length;
-    const maxIndex = Math.ceil(totalItems / itemsPerPage) - 1;
+    const maxIndex = Math.max(0, Math.ceil(totalItems / itemsPerPage) - 1);
 
     useEffect(() => {
-        const handleResize = () => {
-            setItemsPerPage(window.innerWidth < 768 ? 1 : 2);
+        if (typeof window === 'undefined' || !window.matchMedia) return;
+        const mediaQuery = window.matchMedia('(min-width: 768px)');
+        
+        const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+            setItemsPerPage(e.matches ? 2 : 1);
         };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+
+        if (mediaQuery.addEventListener) {
+            mediaQuery.addEventListener('change', handleChange);
+            return () => mediaQuery.removeEventListener('change', handleChange);
+        } else {
+            // Deprecated fallback for older browsers
+            mediaQuery.addListener(handleChange);
+            return () => mediaQuery.removeListener(handleChange);
+        }
     }, []);
 
     const nextSlide = useCallback(() => {
