@@ -9,19 +9,23 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
+            if (id.includes('@emailjs')) {
+              return 'vendor-emailjs';
+            }
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            return 'vendor';
+            return 'vendor-utils';
           }
         }
       }
     }
   }
 });
+
 

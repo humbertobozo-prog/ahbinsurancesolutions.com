@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import type { TranslationContent, Language } from '../types';
-import emailjs from '@emailjs/browser';
 import { validateFloridaZip, validateBirthYear, ZipValidationResult } from '../utils/floridaZipValidator';
 
 interface ContactFormProps {
@@ -244,6 +243,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         };
 
         try {
+            const emailjsModule = await import('@emailjs/browser');
+            const emailjs = emailjsModule.default || emailjsModule;
             const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
             
             if (result.status === 200) {

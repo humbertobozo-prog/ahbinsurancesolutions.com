@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
-import { initWebVitals } from './utils/webVitals';
-
-initWebVitals();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -17,3 +14,13 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Defer non-critical performance observer until browser is idle
+if (typeof window !== 'undefined') {
+  const scheduleVitals = window.requestIdleCallback || ((cb) => setTimeout(cb, 2000));
+  scheduleVitals(() => {
+    import('./utils/webVitals').then(({ initWebVitals }) => {
+      initWebVitals();
+    }).catch(() => {});
+  });
+}
