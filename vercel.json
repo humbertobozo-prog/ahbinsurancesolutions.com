@@ -1,5 +1,22 @@
 
 {
+  "redirects": [
+    {
+      "source": "/es/anualidades-florida",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/anualidades-florida",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/andresbozoofi.png",
+      "destination": "/andresbozoofi.webp",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!robots.txt|favicon.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico)$).*)",

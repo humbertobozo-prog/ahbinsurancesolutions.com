@@ -318,9 +318,13 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     });
   });
 
-  // 301 Permanent Redirect for legacy PNG logo to WebP format
-  app.get("/andresbozoofi.png", (req, res) => {
+  // 301 Permanent Redirect for legacy URLs and assets
+  app.get("/andresbozoofi.png", (_req, res) => {
     res.redirect(301, "/andresbozoofi.webp");
+  });
+
+  app.get(["/es/anualidades-florida", "/anualidades-florida"], (_req, res) => {
+    res.redirect(301, "/es/iul-jubilacion");
   });
 
   // Vite middleware for dev or static serving for production
