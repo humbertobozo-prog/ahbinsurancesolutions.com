@@ -50,14 +50,14 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
             <div id="main-content" className="container mx-auto px-4 md:px-6 pt-4 pb-8 md:pt-8 md:pb-12 lg:pt-10 lg:pb-16 flex flex-col md:flex-row items-center gap-6 md:gap-10">
                 
                 <div className="w-full md:w-1/2 z-10 text-center md:text-left">
-                    <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-heading text-primary mb-3 md:mb-4 leading-[1.15] md:leading-tight opacity-0 animate-fade-in-down">
+                    <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-heading text-primary mb-3 md:mb-4 leading-[1.15] md:leading-tight">
                         {content.heading}
                     </h1>
-                    <p className="text-sm md:text-base lg:text-lg text-dark-gray/90 mb-4 md:mb-6 leading-relaxed font-medium opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <p className="text-sm md:text-base lg:text-lg text-dark-gray/90 mb-4 md:mb-6 leading-relaxed font-medium">
                         {content.subheading}
                     </p>
                     
-                    <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                    <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                         <a 
                             href="#contact"
                             onClick={(e) => handleNavClick(e, 'contact')}
@@ -67,11 +67,11 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         </a>
                     </div>
 
-                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-2 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-2">
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[1,2,3].map(i => (
                                 <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="" width="32" height="32" loading="lazy" />
+                                    <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="" width="32" height="32" loading="lazy" decoding="async" />
                                 </div>
                             ))}
                         </div>
@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                     </div>
                 </div>
 
-                <div className="w-full md:w-1/2 opacity-0 animate-fade-in-up hero-img-container" style={{ animationDelay: '0.2s' }}>
+                <div className="w-full md:w-1/2 hero-img-container">
                     <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group aspect-[4/3]">
                         <div className="w-full h-full overflow-hidden">
                             <picture>
