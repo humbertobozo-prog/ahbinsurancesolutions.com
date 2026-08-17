@@ -33,7 +33,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
   // Default Fallbacks (Home English)
   let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
-  let description = "Secure your family's future with expert insurance guidance in Florida. Specializing in Medicare Supplement, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432.";
+  let description = "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!";
   const canonicalUrl = `${baseUrl}${cleanPath === "/" ? "" : cleanPath}`;
   let enUrl = `${baseUrl}${cleanPath.replace(/^\/es/, "") || "/"}`;
   let esUrl = `${baseUrl}/es${cleanPath.replace(/^\/es/, "")}`;

@@ -4,7 +4,7 @@ export const translations: Record<Language, TranslationContent> = {
   en: {
     meta: {
       title: "Medicare, Final Expense & IUL in Florida | AHB Solutions",
-      description: "Secure your family's future with expert insurance guidance in Florida. Specializing in Medicare Supplement, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432."
+      description: "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!"
     },
     common: {
       npnTooltip: "National Producer Number - A unique NAIC identifier for licensed insurance professionals."
