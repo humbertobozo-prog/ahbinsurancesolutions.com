@@ -63,10 +63,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
     const [zipValidation, setZipValidation] = useState<ZipValidationResult>(() => validateFloridaZip('', isSpanish));
     const [yearValidation, setYearValidation] = useState(() => validateBirthYear('', isSpanish));
 
-    useEffect(() => {
-        emailjs.init(PUBLIC_KEY);
-    }, []);
-
     // Re-evaluate validation when language changes
     useEffect(() => {
         setZipValidation(validateFloridaZip(formData.zipCode, isSpanish));
