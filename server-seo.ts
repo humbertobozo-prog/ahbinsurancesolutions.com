@@ -32,7 +32,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   const htmlLang = isEs ? "es-US" : "en-US";
 
   // Default Fallbacks (Home English)
-  let title = "Medicare, Final Expense & IUL Insurance Specialists in Florida | AHB Insurance Solutions";
+  let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
   let description = "Secure your family's future with expert insurance guidance in Florida. Specializing in Medicare Supplement, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432.";
   const canonicalUrl = `${baseUrl}${cleanPath === "/" ? "" : cleanPath}`;
   let enUrl = `${baseUrl}${cleanPath.replace(/^\/es/, "") || "/"}`;

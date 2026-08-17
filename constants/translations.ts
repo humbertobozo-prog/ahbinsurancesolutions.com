@@ -3,7 +3,7 @@ import type { TranslationContent, Language } from '../types';
 export const translations: Record<Language, TranslationContent> = {
   en: {
     meta: {
-      title: "Medicare, Final Expense & IUL Insurance Specialists in Florida | AHB Insurance Solutions",
+      title: "Medicare, Final Expense & IUL in Florida | AHB Solutions",
       description: "Secure your family's future with expert insurance guidance in Florida. Specializing in Medicare Supplement, Final Expense Insurance, and Indexed Universal Life (IUL). Licensed Broker NPN: 21228432."
     },
     common: {
