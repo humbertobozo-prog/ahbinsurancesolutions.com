@@ -255,25 +255,72 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         </h2>
                         <p className="text-gray-700 text-base leading-relaxed mb-4">
                             {isEs 
-                                ? 'Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos:'
-                                : 'Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps:'}
+                                ? 'Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos que pueden poner en riesgo los ahorros acumulados durante toda una vida de trabajo:'
+                                : 'Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps that can expose your retirement savings to unexpected medical liabilities:'}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                             <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl">
                                 <h3 className="font-bold text-amber-900 mb-1 text-sm">{isEs ? 'Sin Límite Anual de Gastos (No MOOP)' : 'No Annual Maximum Out-of-Pocket'}</h3>
                                 <p className="text-xs text-amber-800 leading-relaxed">
                                     {isEs 
-                                        ? 'No existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de cáncer y diálisis, sin tope alguno.' 
-                                        : 'Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, and specialty treatments.'}
+                                        ? 'No existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de cáncer y diálisis, sin tope alguno en dólares.' 
+                                        : 'Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, specialty treatments, and imaging.'}
                                 </p>
                             </div>
                             <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl">
                                 <h3 className="font-bold text-amber-900 mb-1 text-sm">{isEs ? 'Deducibles de Hospital Elevados' : 'High Hospital Deductibles'}</h3>
                                 <p className="text-xs text-amber-800 leading-relaxed">
                                     {isEs 
-                                        ? 'En 2026, el deducible de hospitalización de la Parte A supera los $1,600 por cada período de beneficio de 60 días, no por año.' 
+                                        ? 'En 2026, el deducible de hospitalización de la Parte A supera los $1,600 por cada período de beneficio de 60 días, no por año lectivo.' 
                                         : 'The Part A inpatient hospital deductible exceeds $1,600 per benefit period, which can occur multiple times in a single calendar year.'}
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Step by Step Enrollment Roadmap */}
+                    <div className="bg-blue-50/70 p-6 md:p-8 rounded-2xl border border-blue-100 shadow-sm">
+                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-4">
+                            {isEs ? 'Paso a Paso para Inscribirse en Medicare en Florida al Cumplir 65 Años' : 'Step-by-Step Medicare Enrollment Roadmap in Florida'}
+                        </h2>
+                        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                            {isEs 
+                                ? 'Navegar la transición hacia Medicare requiere sincronización precisa. Un descuido en los plazos legales de la Administración del Seguro Social (SSA) puede generar penalidades de por vida o la pérdida de sus derechos de emisión garantizada en seguros suplementarios.'
+                                : 'Navigating Medicare requires precise timing. Missing federal Social Security Administration (SSA) deadlines can result in lifelong premium penalties or the loss of guaranteed-issue rights for Medigap supplements.'}
+                        </p>
+                        <div className="space-y-4">
+                            <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-blue-200">
+                                <span className="bg-primary text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">1</span>
+                                <div>
+                                    <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 1: Identificar su Período Inicial de Inscripción (IEP)' : 'Step 1: Identify Your Initial Enrollment Period (IEP)'}</h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed">
+                                        {isEs 
+                                            ? 'Su IEP dura 7 meses: inicia 3 meses antes de cumplir 65 años, incluye el mes de su cumpleaños y finaliza 3 meses después. Es la ventana para solicitar las Partes A y B en SSA.gov.'
+                                            : 'Your IEP spans 7 months: starts 3 months before your 65th birthday month, includes your birthday month, and ends 3 months after. Use SSA.gov to apply.'}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-blue-200">
+                                <span className="bg-primary text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
+                                <div>
+                                    <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 2: Activar la Ventana Protegida de Medigap (MOEP)' : 'Step 2: Activate Your Medigap Open Enrollment Window (MOEP)'}</h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed">
+                                        {isEs 
+                                            ? 'Al activar la Parte B, arranca su ventana de 6 meses de Medigap. Las aseguradoras no pueden evaluar sus historial médico ni negar cobertura por condiciones preexistentes.'
+                                            : 'Activating Part B triggers your 6-month Medigap window. Insurance carriers cannot review medical history or deny coverage for pre-existing conditions.'}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-blue-200">
+                                <span className="bg-primary text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">3</span>
+                                <div>
+                                    <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D)' : 'Step 3: Select a Part D Prescription Drug Plan'}</h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed">
+                                        {isEs 
+                                            ? 'Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico. De lo contrario, se acumulará una penalidad permanente del 1% mensual por cada mes sin cobertura acreditable.'
+                                            : 'Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP).'}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -281,7 +328,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                     {/* Breakdown of Medicare Parts */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-6">
-                            {isEs ? 'Estructura de las 4 Partes de Medicare' : 'Breakdown of the 4 Parts of Medicare'}
+                            {isEs ? 'Estructura Detallada de las 4 Partes de Medicare' : 'Detailed Breakdown of the 4 Parts of Medicare'}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
@@ -294,48 +341,119 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                         ? 'Cubre hospitalizaciones, centros de enfermería especializada, cuidados paliativos y atención domiciliaria. Por lo general no requiere prima mensual si trabajó 10 años (40 créditos) en EE.UU.' 
                                         : 'Covers inpatient hospital care, skilled nursing facilities, hospice, and home health. Premium-free if you worked 10+ years (40 credits) in the U.S.'}
                                 </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Deducible 2026: ~$1,632 por período' : '2026 Deductible: ~$1,632 per period'}</span>
+                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Deducible 2026: ~$1,632 por período de beneficio' : '2026 Deductible: ~$1,632 per benefit period'}</span>
                             </div>
 
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
                                 <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte B</span>
                                 <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Seguro Médico' : 'Medical Insurance'}
+                                    {isEs ? 'Seguro Médico Ambulatorio' : 'Medical Insurance'}
                                 </h3>
                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                                     {isEs 
-                                        ? 'Cubre consultas médicas, exámenes de laboratorio, ambulancias, equipos médicos duraderos y prevención. Tiene una prima mensual estándar y deducible anual.' 
-                                        : 'Covers doctor visits, outpatient surgery, lab tests, durable medical equipment, and preventive care. Subject to monthly premium and annual deductible.'}
+                                        ? 'Cubre consultas médicas, exámenes de laboratorio, estudios de imagen, cirugías ambulatorias y equipo médico duradero. Medicare paga el 80% y usted el 20% restante.' 
+                                        : 'Covers physician visits, lab tests, imaging, outpatient surgeries, and durable medical equipment. Medicare pays 80%; you pay 20%.'}
                                 </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Deducible Anual 2026: ~$240/año + 20%' : '2026 Annual Deductible: ~$240/yr + 20%'}</span>
+                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Prima Estándar 2026: ~$185/mes | Deducible: ~$257/año' : '2026 Standard Premium: ~$185/mo | Deductible: ~$257/yr'}</span>
                             </div>
 
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-accent text-primary text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Medigap</span>
-                                <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Suplemento de Medicare (Plan G / N)' : 'Medicare Supplement (Plan G / N)'}
-                                </h3>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                    {isEs 
-                                        ? 'Póliza privada que elimina el 20% de gastos no cubiertos. Mantiene acceso total a cualquier médico u hospital en todo EE.UU. que acepte Medicare Original.' 
-                                        : 'Private insurance that pays the 20% gaps left by Original Medicare. Offers total freedom to see any doctor or hospital nationwide that accepts Medicare.'}
-                                </p>
-                                <span className="text-[11px] font-bold text-emerald-700 block">{isEs ? 'Sin redes de médicos | Libertad Total' : 'Zero Networks | Nationwide Acceptance'}</span>
-                            </div>
-
-                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-secondary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte C</span>
+                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte C</span>
                                 <h3 className="text-lg font-bold text-primary mb-2">
                                     {isEs ? 'Medicare Advantage (HMO / PPO)' : 'Medicare Advantage (HMO / PPO)'}
                                 </h3>
                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                                     {isEs 
-                                        ? 'Planes de administración privada que combinan hospital, médico y medicamentos (Parte D) en redes locales restringidas con copagos por uso.' 
-                                        : 'Private managed-care health plans combining Parts A, B, and D into local networks (HMO/PPO) with copays and prior authorization rules.'}
+                                        ? 'Planes administrados por aseguradoras privadas que reemplazan al Medicare Original. Ofrecen primas bajas pero restringen los médicos a redes de condados locales en Florida.' 
+                                        : 'Private managed-care plans replacing Original Medicare. Often feature low monthly premiums but restrict care to local Florida county networks with prior authorizations.'}
                                 </p>
-                                <span className="text-[11px] font-bold text-amber-700 block">{isEs ? 'Redes locales de condados' : 'County-restricted provider networks'}</span>
+                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Requiere mantener activa la Parte B' : 'Requires active Part B enrollment'}</span>
+                            </div>
+
+                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
+                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte D</span>
+                                <h3 className="text-lg font-bold text-primary mb-2">
+                                    {isEs ? 'Medicamentos Recetados (IRA 2026)' : 'Prescription Drugs (2026 IRA Cap)'}
+                                </h3>
+                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                                    {isEs 
+                                        ? 'Planes independientes para farmacia. Bajo la Ley de Reducción de la Inflación, en 2026 sus desembolsos anuales de bolsillo en medicinas están topados a un máximo legal de $2,000.' 
+                                        : 'Standalone pharmacy coverage. Under the Inflation Reduction Act, total annual out-of-pocket prescription costs are capped at $2,000 in 2026.'}
+                                </p>
+                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Tope Anual de Farmacia: $2,000 máximo' : 'Annual Rx OOP Cap: $2,000 maximum'}</span>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Medigap Plan G vs Plan N Deep Dive */}
+                    <div>
+                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-4">
+                            {isEs ? 'Análisis Profundo: Medigap Plan G vs. Plan N en Florida' : 'Deep Dive: Medigap Plan G vs. Plan N in Florida'}
+                        </h2>
+                        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                            {isEs 
+                                ? 'En Florida, más del 90% de los beneficiarios que eligen un Seguro Suplementario de Medicare seleccionan el Plan G o el Plan N. Ambos ofrecen cobertura nacional sin red de médicos, pero difieren en estructura de costos:'
+                                : 'In Florida, over 90% of seniors choosing a Medicare Supplement select either Plan G or Plan N. Both grant complete national doctor freedom without network hurdles, but feature distinct cost structures:'}
+                        </p>
+
+                        <div className="overflow-x-auto my-6 bg-white rounded-2xl border border-gray-200 shadow-sm">
+                            <table className="w-full text-left border-collapse text-xs md:text-sm">
+                                <thead>
+                                    <tr className="bg-primary text-white font-bold">
+                                        <th className="p-4">{isEs ? 'Beneficio / Cobertura' : 'Benefit / Feature'}</th>
+                                        <th className="p-4">{isEs ? 'Medigap Plan G' : 'Medigap Plan G'}</th>
+                                        <th className="p-4">{isEs ? 'Medigap Plan N' : 'Medigap Plan N'}</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100">
+                                    <tr className="hover:bg-gray-50">
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible de Hospital Parte A' : 'Part A Hospital Deductible'}</td>
+                                        <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
+                                        <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50">
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Coseguro del 20% Parte B' : 'Part B 20% Coinsurance'}</td>
+                                        <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
+                                        <td className="p-4 text-amber-700 font-medium">{isEs ? 'Copago hasta $20 por consulta / $50 en ER' : 'Up to $20 copay / $50 ER copay'}</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50">
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible Anual Parte B (~$257)' : 'Part B Annual Deductible (~$257)'}</td>
+                                        <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
+                                        <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50">
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Cargos en Exceso de la Parte B' : 'Part B Excess Charges'}</td>
+                                        <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
+                                        <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Hasta 15% extra)' : 'Not Covered (Up to 15% extra)'}</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50">
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Prima Mensual Promedio en Florida' : 'Avg. Monthly Premium in FL'}</td>
+                                        <td className="p-4 text-gray-700 font-medium">$140 – $185 / mes</td>
+                                        <td className="p-4 text-emerald-800 font-bold">$100 – $145 / mes ({isEs ? 'Ahorro ~$30-50/mes' : 'Saves ~$30-50/mo'})</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    {/* Special Protections & Trial Rights */}
+                    <div className="bg-emerald-50/80 p-6 md:p-8 rounded-2xl border border-emerald-200">
+                        <h2 className="text-2xl md:text-3xl font-black font-heading text-emerald-950 mb-3">
+                            {isEs ? 'Derechos de Prueba (Trial Rights) y Cambio de Plan en Florida' : 'Medicare Advantage Trial Rights & Medigap Switch Protections'}
+                        </h2>
+                        <p className="text-emerald-900 text-xs md:text-sm leading-relaxed mb-4">
+                            {isEs 
+                                ? 'Muchos residentes de Florida prueban un plan Medicare Advantage y luego descubren retrasos en autorizaciones previas o denegaciones de especialistas. La ley federal otorga "Derechos de Prueba" especiales:'
+                                : 'Many Florida seniors try Medicare Advantage only to experience prior authorization delays or network exclusions. Federal law provides specific "Trial Rights" to protect you:'}
+                        </p>
+                        <ul className="space-y-2 text-xs md:text-sm text-emerald-900 list-disc pl-5">
+                            <li>
+                                <strong>{isEs ? 'Prueba por primera vez (Primeros 12 meses):' : 'First-time Trial Right (First 12 months):'}</strong> {isEs ? 'Si se inscribe en Medicare Advantage al cumplir 65 años y decide cambiarse dentro de los primeros 12 meses, tiene derecho garantizado de volver a Medigap sin preguntas médicas.' : 'If you join Medicare Advantage when first eligible at 65, you can drop it within 12 months and switch to Medigap with guaranteed issue.'}
+                            </li>
+                            <li>
+                                <strong>{isEs ? 'Pérdida de cobertura de red o mudanza:' : 'Network Changes or Relocation:'}</strong> {isEs ? 'Si su plan Advantage abandona su condado en Florida o usted se muda fuera del área de servicio, califica para un Período Especial para comprar Medigap.' : 'If your Advantage plan leaves your Florida county or you relocate out of state, you trigger a Special Enrollment Period for Medigap.'}
+                            </li>
+                        </ul>
                     </div>
 
                     {/* Side-by-Side Comparison: Medigap Plan G vs Plan N vs Medicare Advantage */}

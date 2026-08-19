@@ -215,17 +215,19 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             }
         };
 
-        const fullGraph: any[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];
+        const fullGraph: Record<string, unknown>[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];
 
         if (schema) {
             const schemaList = Array.isArray(schema) ? schema : [schema];
             for (const item of schemaList) {
                 if (item && typeof item === 'object') {
-                    if ('@graph' in item && Array.isArray((item as any)['@graph'])) {
-                        fullGraph.push(...(item as any)['@graph']);
+                    const recordItem = item as Record<string, unknown>;
+                    if ('@graph' in recordItem && Array.isArray(recordItem['@graph'])) {
+                        fullGraph.push(...(recordItem['@graph'] as Record<string, unknown>[]));
                     } else {
-                        const { ['@context']: _, ...rest } = item as any;
-                        fullGraph.push(rest);
+                        const copy = { ...recordItem };
+                        delete copy['@context'];
+                        fullGraph.push(copy);
                     }
                 }
             }

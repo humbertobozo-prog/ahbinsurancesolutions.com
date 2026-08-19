@@ -352,6 +352,39 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         </div>
                     </div>
 
+                    {/* IRS Code 7702 & 72(e) Tax Mechanics */}
+                    <div className="bg-blue-50/80 border border-blue-200 rounded-2xl p-6 md:p-8 space-y-4">
+                        <span className="bg-primary text-white font-black text-xs uppercase px-3 py-1 rounded-full inline-block">
+                            {isEs ? 'Sustento Legal IRS Sección 7702 y 72(e)' : 'IRS Code 7702 & 72(e) Legal Framework'}
+                        </span>
+                        <h2 className="text-2xl font-black font-heading text-primary">
+                            {isEs ? 'Mecanismo Legal de los Préstamos Libres de Impuestos' : 'The Tax Mechanics Behind IUL Policy Loans'}
+                        </h2>
+                        <p className="text-sm text-gray-700 leading-relaxed">
+                            {isEs 
+                                ? 'El tratamiento fiscal favorable del IUL se basa en leyes tributarias federales vigentes aprobadas por el Congreso de EE.UU. En lugar de realizar "retiros" que tributan como ganancias de capital, el propietario de la póliza solicita préstamos colateralizados sobre el valor acumulado:'
+                                : 'The tax advantages of an IUL are established under federal tax statutes enacted by the U.S. Congress. Rather than taking taxable capital gains distributions, policyholders request collateralized policy loans:'}
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                            <div className="bg-white p-5 rounded-xl border border-blue-200">
+                                <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Sección 7702 del Código del IRS' : 'IRS Code Section 7702'}</h3>
+                                <p className="text-xs text-gray-600 leading-relaxed">
+                                    {isEs 
+                                        ? 'Define la prueba del valor en efectivo en contratos de seguro de vida, eximiendo del impuesto a la renta el crecimiento del capital y garantizando el desembolso por fallecimiento libre de impuestos para los beneficiarios.' 
+                                        : 'Defines life insurance contracts under federal tax law, granting tax-deferred cash accumulation and income-tax-free death benefit distributions.'}
+                                </p>
+                            </div>
+                            <div className="bg-white p-5 rounded-xl border border-blue-200">
+                                <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Diseño de Máxima Financiación Anti-MEC' : 'Maximum-Funded Anti-MEC Design'}</h3>
+                                <p className="text-xs text-gray-600 leading-relaxed">
+                                    {isEs 
+                                        ? 'Sometemos la póliza a la regla del "7-Pay Test" del IRS para evitar que se convierta en un Contrato de Beneficio Modificado (MEC), asegurando retiros y préstamos 100% libres de penalidades.' 
+                                        : 'We subject every policy to the IRS 7-pay test to prevent Modified Endowment Contract (MEC) status, keeping loans 100% tax-free and penalty-free.'}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Living Benefits Section */}
                     <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 md:p-8 space-y-4">
                         <span className="bg-amber-500 text-white font-black text-xs uppercase px-3 py-1 rounded-full inline-block">

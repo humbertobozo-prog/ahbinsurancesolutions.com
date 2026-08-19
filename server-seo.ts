@@ -628,7 +628,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     }
   };
 
-  const graph: any[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];
+  const graph: Record<string, unknown>[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];
 
   // Route-specific schemas:
   // 1. Breadcrumbs for subpages:
