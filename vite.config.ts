@@ -10,6 +10,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     chunkSizeWarningLimit: 600,
+    modulePreload: {
+      filter(viteModule) {
+        // Exclude webVitals and non-critical assets from initial modulepreload critical path
+        return !viteModule.includes('webVitals') && !viteModule.includes('vendor-emailjs');
+      }
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {

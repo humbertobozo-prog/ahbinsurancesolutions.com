@@ -15,12 +15,20 @@ root.render(
   </React.StrictMode>
 );
 
-// Defer non-critical performance observer until browser is idle
+// Defer non-critical webVitals performance observer until after window load and idle time
 if (typeof window !== 'undefined') {
-  const scheduleVitals = window.requestIdleCallback || ((cb) => setTimeout(cb, 2000));
-  scheduleVitals(() => {
-    import('./utils/webVitals').then(({ initWebVitals }) => {
-      initWebVitals();
-    }).catch(() => {});
-  });
+  const init = () => {
+    const scheduleVitals = window.requestIdleCallback || ((cb) => setTimeout(cb, 3000));
+    scheduleVitals(() => {
+      import('./utils/webVitals').then(({ initWebVitals }) => {
+        initWebVitals();
+      }).catch(() => {});
+    });
+  };
+
+  if (document.readyState === 'complete') {
+    init();
+  } else {
+    window.addEventListener('load', init, { once: true });
+  }
 }
