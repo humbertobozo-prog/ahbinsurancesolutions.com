@@ -797,11 +797,11 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTag}\n</head>`);
   }
 
-  // 8. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback (only if includeBodyOutline is true)
+  // 8. Inject crawler-friendly body outline inside `<noscript>` ONLY to prevent unstyled text flashing on load
   if (includeBodyOutline) {
     const rootDiv = '<div id="root">';
     if (rewritten.includes(rootDiv)) {
-      const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">${metadata.bodyOutline}`;
+      const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">`;
       rewritten = rewritten.replace(rootDiv, replacement);
     }
   }
