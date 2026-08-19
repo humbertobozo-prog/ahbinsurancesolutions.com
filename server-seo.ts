@@ -553,6 +553,8 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
   }
 
   // 5. Update language alternates
+  rewritten = rewritten.replace(/<link rel="alternate" hreflang="en-US" href="[^"]*"\s*\/?>/, `<link rel="alternate" hreflang="en-US" href="${metadata.enUrl}">`);
+  rewritten = rewritten.replace(/<link rel="alternate" hreflang="es-US" href="[^"]*"\s*\/?>/, `<link rel="alternate" hreflang="es-US" href="${metadata.esUrl}">`);
   rewritten = rewritten.replace(/<link rel="alternate" hreflang="en" href="[^"]*"\s*\/?>/, `<link rel="alternate" hreflang="en" href="${metadata.enUrl}">`);
   rewritten = rewritten.replace(/<link rel="alternate" hreflang="es" href="[^"]*"\s*\/?>/, `<link rel="alternate" hreflang="es" href="${metadata.esUrl}">`);
   rewritten = rewritten.replace(/<link rel="alternate" hreflang="x-default" href="[^"]*"\s*\/?>/, `<link rel="alternate" hreflang="x-default" href="${metadata.enUrl}">`);

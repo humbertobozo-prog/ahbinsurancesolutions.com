@@ -153,8 +153,13 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                         </ul>
                     </div>
                 </div>
-                <div className="border-t border-white/10 pt-6 text-center text-gray-400 text-sm">
+                <div className="border-t border-white/10 pt-6 text-center text-gray-400 text-xs space-y-3">
                     <p>{content.copyright}</p>
+                    {content.cmsDisclaimer && (
+                        <p className="max-w-4xl mx-auto text-[11px] leading-relaxed text-gray-300 bg-white/5 p-3 rounded-lg border border-white/10">
+                            {content.cmsDisclaimer}
+                        </p>
+                    )}
                 </div>
             </div>
         </footer>

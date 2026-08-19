@@ -239,6 +239,22 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         };
 
         try {
+            // Backup call to server API to ensure no lead is lost
+            fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: formData.name.trim(),
+                    email: formData.email.trim().toLowerCase(),
+                    phone: formData.phone.trim(),
+                    zipCode: formData.zipCode,
+                    birthYear: formData.birthYear,
+                    region: zipValidation.region || 'Florida Resident',
+                    age: yearValidation.age,
+                    eligibility: yearValidation.eligibilityText,
+                })
+            }).catch(err => console.warn('Server contact backup ping failed:', err));
+
             const emailjsModule = await import('@emailjs/browser');
             const emailjs = emailjsModule.default || emailjsModule;
             const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);

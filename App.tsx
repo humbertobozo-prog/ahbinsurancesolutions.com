@@ -25,6 +25,7 @@ const ContactPage = React.lazy(() => import('./components/ContactPage').then(m =
 const LocationLandingPage = React.lazy(() => import('./components/LocationLandingPage').then(m => ({ default: m.LocationLandingPage })));
 const LegalPage = React.lazy(() => import('./components/LegalPage').then(m => ({ default: m.LegalPage })));
 const CityGuides = React.lazy(() => import('./components/CityGuides').then(m => ({ default: m.CityGuides })));
+const NotFoundPage = React.lazy(() => import('./components/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 const Services = React.lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
 const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs').then(module => ({ default: module.WhyChooseUs })));
@@ -164,7 +165,7 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AboutPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/contact' || cleanPath === '/es/contacto') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><ContactPage language={language} /></Suspense>;
-    } else {
+    } else if (cleanPath === '/' || cleanPath === '/es' || cleanPath === '') {
         // Main Home View
         const homeBreadcrumbSchema = {
             "@context": "https://schema.org",
@@ -235,6 +236,13 @@ const App: React.FC = () => {
                     </Suspense>
                 </ErrorBoundary>
             </>
+        );
+    } else {
+        // Explicit 404 Not Found View
+        mainContentComponent = (
+            <Suspense fallback={<Spinner height="py-48" />}>
+                <NotFoundPage language={language} />
+            </Suspense>
         );
     }
 

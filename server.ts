@@ -34,9 +34,55 @@ async function startServer() {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
   });
 
-  // API Route for Blog Article Generation
+  // API Route for Contact Form Submission (Backup & Log)
+  app.post("/api/contact", (req, res) => {
+    try {
+      const {
+        name,
+        email,
+        phone,
+        zipCode,
+        birthYear,
+        region,
+        age,
+        eligibility,
+      } = req.body || {};
+
+      console.log(`[CONTACT FORM LEAD RECEIVED]`, {
+        name,
+        email,
+        phone,
+        zipCode,
+        birthYear,
+        region,
+        age,
+        eligibility,
+        timestamp: new Date().toISOString(),
+      });
+
+      // Return successful response to client
+      res.json({
+        success: true,
+        message: "Lead recorded successfully by AHB Insurance Solutions server.",
+      });
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : "Failed to record contact lead";
+      console.error("Error in /api/contact:", error);
+      res.status(500).json({ success: false, error: errorMessage });
+    }
+  });
   app.post("/api/generate-blog", async (req, res) => {
     try {
+      const authHeader = req.headers.authorization;
+      const adminSecret = process.env.ADMIN_SECRET || "AHB_SECURE_ADMIN_2026";
+      
+      if (!authHeader || authHeader !== `Bearer ${adminSecret}`) {
+        return res.status(401).json({
+          success: false,
+          error: "Unauthorized: Admin access token required to generate blog articles.",
+        });
+      }
+
       const {
         topic = "Medicare Advantage vs Supplement in Florida",
         language = "en",

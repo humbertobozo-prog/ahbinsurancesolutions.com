@@ -1,5 +1,41 @@
 
 {
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/(favicon.svg|og-image.svg|.*\\.(?:webp|png|jpg|jpeg|svg|ico))$",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/es/anualidades-florida",
@@ -17,9 +53,11 @@
       "permanent": true
     }
   ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!robots.txt|favicon.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico)$).*)",
+      "source": "/((?!robots.txt|favicon.svg|og-image.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico|html|js|css|json)$).*)",
       "destination": "/index.html"
     }
   ]

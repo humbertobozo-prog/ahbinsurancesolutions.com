@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 import type { Language, TranslationContent } from '../types';
 import { translations } from '../constants/translations';
 import { SEOHead } from './SEOHead';
@@ -255,9 +256,10 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a 
                                     href="#contact" 
-                                    className="inline-flex justify-center items-center bg-accent text-primary text-lg font-black px-8 py-5 rounded-xl uppercase tracking-widest hover:bg-[#FFB81C] hover:scale-105 active:scale-95 transition-all shadow-xl"
+                                    className="inline-flex justify-center items-center bg-accent text-primary text-lg font-black px-8 py-5 rounded-xl uppercase tracking-widest hover:bg-[#FFB81C] hover:scale-105 active:scale-95 transition-all shadow-xl group"
                                 >
-                                    {activeLang === 'es' ? 'Obtener Cotización Gratis ➔' : 'Get Free Quote Today ➔'}
+                                    <span>{activeLang === 'es' ? 'Obtener Cotización Gratis' : 'Get Free Quote Today'}</span>
+                                    <ArrowRight className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                                 </a>
                                 <a 
                                     href="tel:+13522258389" 

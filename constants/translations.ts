@@ -239,7 +239,8 @@ export const translations: Record<Language, TranslationContent> = {
         facebook: "Facebook",
         instagram: "Instagram",
         secureConnection: "Advanced CDN & SSL Encryption",
-        copyright: "© 2026 AHB Insurance Solutions LLC. All Rights Reserved."
+        copyright: "© 2026 AHB Insurance Solutions LLC. All Rights Reserved. Licensed Independent Broker NPN: 21228432.",
+        cmsDisclaimer: "Medicare Disclaimer: We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options."
     },
     whatsappButton: {
         ariaLabel: "Chat on WhatsApp"
@@ -487,7 +488,8 @@ export const translations: Record<Language, TranslationContent> = {
         facebook: "Facebook",
         instagram: "Instagram",
         secureConnection: "Encriptación SSL y CDN Avanzada",
-        copyright: "© 2026 AHB Insurance Solutions LLC. All Rights Reserved."
+        copyright: "© 2026 AHB Insurance Solutions LLC. Todos los derechos reservados. Corredor independiente licenciado NPN: 21228432.",
+        cmsDisclaimer: "Aviso Legal de Medicare: No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con Medicare.gov, al 1-800-MEDICARE o con el Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones."
     },
     whatsappButton: {
         ariaLabel: "Chat por WhatsApp"

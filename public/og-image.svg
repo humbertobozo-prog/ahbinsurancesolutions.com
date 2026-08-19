@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09182b" />
+      <stop offset="60%" stop-color="#0f2942" />
+      <stop offset="100%" stop-color="#1e3a5f" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Subtle Geometric Grid Background -->
+  <circle cx="1050" cy="150" r="300" fill="#3b82f6" opacity="0.08" filter="blur(60px)" />
+  <circle cx="150" cy="500" r="250" fill="#f59e0b" opacity="0.06" filter="blur(50px)" />
+
+  <!-- Header Brand Bar -->
+  <g transform="translate(80, 70)">
+    <!-- Shield Logo -->
+    <path d="M24 3 C33 3 42 7 42 14 C42 32 24 44 24 45 C24 44 6 32 6 14 C6 7 15 3 24 3 Z" fill="#0f2b48" stroke="#fbbf24" stroke-width="2" />
+    <text x="24" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">AHB</text>
+    
+    <!-- Brand Title -->
+    <text x="60" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">AHB INSURANCE SOLUTIONS</text>
+    <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#93c5fd" letter-spacing="2">FLORIDA LICENSED INDEPENDENT BROKERAGE</text>
+  </g>
+
+  <!-- Main Headline & Subheadings -->
+  <g transform="translate(80, 190)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="360" height="34" rx="17" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="180" y="22" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#93c5fd" text-anchor="middle" letter-spacing="1">FLORIDA SENIOR &amp; FAMILY SPECIALISTS</text>
+
+    <!-- Main Title -->
+    <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="#ffffff" letter-spacing="-0.5">Medicare, Life &amp; Final Expense</text>
+    <text x="0" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#goldGrad)" letter-spacing="-0.5">Insurance Solutions</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="200" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="400" fill="#cbd5e1">Compare 80+ top-rated carriers with unbiased fiduciary guidance.</text>
+    <text x="0" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="400" fill="#cbd5e1">Medicare Advantage · Medigap Supplement · IUL · Funeral Plans</text>
+  </g>
+
+  <!-- Right Information Card -->
+  <g transform="translate(760, 150)">
+    <rect x="0" y="0" width="360" height="400" rx="20" fill="url(#cardGrad)" stroke="#ffffff" stroke-width="1" stroke-opacity="0.15" />
+    
+    <!-- Agent Profile Section -->
+    <circle cx="180" cy="80" r="50" fill="#0f2942" stroke="#fbbf24" stroke-width="2.5" />
+    <text x="180" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">AB</text>
+
+    <text x="180" y="165" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">Andres Bozo</text>
+    <text x="180" y="192" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#fbbf24" text-anchor="middle" letter-spacing="1">LICENSED AGENT &amp; BROKER</text>
+    <text x="180" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#94a3b8" text-anchor="middle">NPN: 21228432 · Florida State Licensed</text>
+
+    <!-- Divider -->
+    <line x1="40" y1="245" x2="320" y2="245" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+
+    <!-- Phone Call CTA Box -->
+    <rect x="30" y="270" width="300" height="56" rx="12" fill="#10b981" />
+    <text x="180" y="305" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">📞 +1 (352) 225-8389</text>
+    <text x="180" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cbd5e1" text-anchor="middle">100% Free · English &amp; Español</text>
+  </g>
+
+  <!-- Bottom Badges Bar -->
+  <g transform="translate(80, 525)">
+    <!-- Badge 1 -->
+    <text x="0" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#93c5fd">✓ 80+ Insurance Carriers</text>
+    <!-- Badge 2 -->
+    <text x="240" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#93c5fd">✓ Zero Broker Fees</text>
+    <!-- Badge 3 -->
+    <text x="440" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#93c5fd">✓ Statewide Florida Coverage</text>
+  </g>
+</svg>

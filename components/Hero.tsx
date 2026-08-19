@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 import type { TranslationContent } from '../types';
 
 interface HeroProps {
@@ -61,9 +62,10 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <a 
                             href="#contact"
                             onClick={(e) => handleNavClick(e, 'contact')}
-                            className="inline-block bg-accent text-primary border-b-4 border-primary/10 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-6 md:px-8 lg:px-10 py-3.5 md:py-4 rounded-xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl transition-all duration-300 active:scale-95" 
+                            className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/10 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-6 md:px-8 lg:px-10 py-3.5 md:py-4 rounded-xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl transition-all duration-300 active:scale-95 group" 
                         >
-                            {content.cta.replace('➔', '')} <span aria-hidden="true" className="ml-1">➔</span>
+                            <span>{content.cta.replace(/➔|->|▯/g, '').trim()}</span>
+                            <ArrowRight className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                         </a>
                     </div>
 

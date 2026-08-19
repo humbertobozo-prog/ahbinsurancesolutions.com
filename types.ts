@@ -165,6 +165,7 @@ export interface TranslationContent {
     instagram: string;
     secureConnection: string;
     copyright: string;
+    cmsDisclaimer?: string;
   };
   whatsappButton: {
     ariaLabel: string;

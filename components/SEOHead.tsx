@@ -21,7 +21,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     esUrl,
     language,
     type = 'website',
-    ogImage = 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ogImage = 'https://www.ahbinsurancesolutions.com/og-image.svg',
     schema
 }) => {
     useEffect(() => {
@@ -58,7 +58,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         }
         canonicalLink.href = canonicalUrl;
 
-        // 5. Update Hreflangs
+        // 5. Update Hreflangs (Unify en-US, es-US, x-default)
         const updateHreflang = (lang: string, href: string) => {
             let link = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`) as HTMLLinkElement;
             if (!link) {
@@ -70,10 +70,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             link.href = href;
         };
 
-        updateHreflang('en', enUrl);
-        updateHreflang('es', esUrl);
         updateHreflang('en-US', enUrl);
         updateHreflang('es-US', esUrl);
+        updateHreflang('en', enUrl);
+        updateHreflang('es', esUrl);
         updateHreflang('x-default', enUrl);
 
         // 6. Update Open Graph
@@ -92,8 +92,14 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         setMetaProp('og:url', canonicalUrl);
         setMetaProp('og:type', type);
         setMetaProp('og:image', ogImage);
+        setMetaProp('og:image:width', '1200');
+        setMetaProp('og:image:height', '630');
         setMetaProp('og:locale', language === 'es' ? 'es_US' : 'en_US');
         setMetaProp('og:locale:alternate', language === 'es' ? 'en_US' : 'es_US');
+        setMetaProp('twitter:card', 'summary_large_image');
+        setMetaProp('twitter:title', title);
+        setMetaProp('twitter:description', description);
+        setMetaProp('twitter:image', ogImage);
 
         // 7. Inject JSON-LD Schema
         if (schema) {
