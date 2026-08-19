@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/(favicon.svg|og-image.svg|.*\\.(?:webp|png|jpg|jpeg|svg|ico))$",
+      "source": "/(favicon.svg|og-image.png|og-image.svg|.*\\.(?:webp|png|jpg|jpeg|svg|ico))$",
       "headers": [
         {
           "key": "Cache-Control",
@@ -57,7 +57,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/((?!robots.txt|favicon.svg|og-image.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico|html|js|css|json)$).*)",
+      "source": "/((?!robots.txt|favicon.svg|og-image.png|og-image.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico|html|js|css|json)$).*)",
       "destination": "/index.html"
     }
   ]

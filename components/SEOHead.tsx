@@ -21,7 +21,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     esUrl,
     language,
     type = 'website',
-    ogImage = 'https://www.ahbinsurancesolutions.com/og-image.svg',
+    ogImage = 'https://www.ahbinsurancesolutions.com/og-image.png',
     schema
 }) => {
     useEffect(() => {
