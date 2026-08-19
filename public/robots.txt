@@ -15,6 +15,7 @@ Disallow: /*.zip$
 # Allow specific public resources needed for rich snippets and crawlers
 Allow: /sitemap.xml
 Allow: /favicon.svg
+Allow: /manifest.json
 Allow: /andresbozoofi.webp
 
 # AI Search & Crawler direct permissions

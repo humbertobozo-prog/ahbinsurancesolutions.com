@@ -7,15 +7,26 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ content }) => {
-    const [scrollY, setScrollY] = useState(0);
+    const imgRef = React.useRef<HTMLImageElement>(null);
 
     useEffect(() => {
+        let ticking = false;
         const handleScroll = () => {
-            if (window.innerWidth >= 768) {
-                setScrollY(window.scrollY);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (imgRef.current && window.innerWidth >= 768) {
+                        const translateY = Math.min(window.scrollY * 0.08, 40);
+                        imgRef.current.style.transform = `translateY(${translateY}px) scale(1.03)`;
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
-        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        if (window.innerWidth >= 768) {
+            window.addEventListener('scroll', handleScroll, { passive: true });
+        }
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -40,11 +51,6 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
     const image800 = `${imageBase}&w=800`;
     const image1200 = `${imageBase}&w=1200`;
     const image1600 = `${imageBase}&w=1600`;
-
-    const parallaxStyle = {
-        transform: window.innerWidth >= 768 ? `translateY(${scrollY * 0.12}px) scale(1.05)` : 'none',
-        transition: 'transform 0.05s linear'
-    };
 
     return (
         <section id="home" className="bg-light-gray relative overflow-hidden" aria-labelledby="hero-heading">
@@ -93,12 +99,13 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                                     sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
                                 />
                                 <img
+                                    ref={imgRef}
                                     src={image800}
                                     srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
                                     sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
                                     alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
-                                    className="w-full h-full object-cover"
-                                    style={parallaxStyle}
+                                    className="w-full h-full object-cover transition-transform duration-100 ease-out"
+                                    style={{ willChange: 'transform' }}
                                     fetchPriority="high"
                                     width="800"
                                     height="600"
