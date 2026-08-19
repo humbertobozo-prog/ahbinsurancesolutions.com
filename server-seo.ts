@@ -526,6 +526,223 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   };
 }
 
+export function generateJsonLd(metadata: SeoMetaData): object {
+  const isEs = metadata.htmlLang.startsWith("es");
+  const canonical = metadata.canonicalUrl;
+  const cleanPath = canonical.replace("https://www.ahbinsurancesolutions.com", "") || "/";
+
+  const websiteSchema = {
+    "@type": "WebSite",
+    "@id": "https://www.ahbinsurancesolutions.com/#website",
+    "url": "https://www.ahbinsurancesolutions.com/",
+    "name": "AHB Insurance Solutions",
+    "description": "Licensed Medicare and Life Insurance Brokerage",
+    "publisher": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+    "inLanguage": ["en-US", "es-US"]
+  };
+
+  const webpageSchema = {
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
+    "url": canonical,
+    "name": metadata.title,
+    "description": metadata.description,
+    "isPartOf": { "@id": "https://www.ahbinsurancesolutions.com/#website" },
+    "about": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+    "inLanguage": metadata.htmlLang
+  };
+
+  const organizationSchema = {
+    "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
+    "@id": "https://www.ahbinsurancesolutions.com/#organization",
+    "name": "AHB Insurance Solutions",
+    "legalName": "AHB Insurance Solutions LLC",
+    "url": "https://www.ahbinsurancesolutions.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+    },
+    "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+    "description": "Licensed insurance agency specializing in Medicare Supplements, Advantage Plans, Final Expense Life Insurance, and Indexed Universal Life (IUL).",
+    "telephone": "+1-352-225-8389",
+    "email": "andreshbozo@ahbinsurancesolutions.com",
+    "priceRange": "Free Consultation",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "NPN",
+      "value": "21228432"
+    },
+    "taxID": "21228432",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5500 SW Archer Road, Apt H103",
+      "addressLocality": "Gainesville",
+      "addressRegion": "FL",
+      "postalCode": "32607",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "29.6015",
+      "longitude": "-82.4013"
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "areaServed": {
+      "@type": "State",
+      "name": "Florida"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ahbinsurancesolutions",
+      "https://www.instagram.com/ahbinsurancesolutions"
+    ],
+    "founder": {
+      "@id": "https://www.ahbinsurancesolutions.com/#person"
+    }
+  };
+
+  const personSchema = {
+    "@type": "Person",
+    "@id": "https://www.ahbinsurancesolutions.com/#person",
+    "name": "Andres H. Bozo",
+    "alternateName": "Andres Bozo",
+    "jobTitle": "Licensed Insurance Broker",
+    "worksFor": {
+      "@id": "https://www.ahbinsurancesolutions.com/#organization"
+    },
+    "telephone": "+1-352-225-8389",
+    "email": "andreshbozo@ahbinsurancesolutions.com",
+    "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+    "knowsAbout": ["Medicare", "Final Expense Insurance", "Life Insurance", "Indexed Universal Life (IUL)", "Burial Insurance"],
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "NPN",
+      "value": "21228432"
+    }
+  };
+
+  const graph: any[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];
+
+  // Route-specific schemas:
+  // 1. Breadcrumbs for subpages:
+  if (cleanPath !== "/" && cleanPath !== "/es") {
+    const breadcrumbTitle = metadata.title.split("|")[0].trim();
+    graph.push({
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": isEs ? "Inicio" : "Home",
+          "item": `https://www.ahbinsurancesolutions.com${isEs ? '/es' : '/'}`
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": breadcrumbTitle,
+          "item": canonical
+        }
+      ]
+    });
+  }
+
+  // 2. Service schemas for Medicare / Final Expense / IUL
+  if (cleanPath === "/medicare" || cleanPath === "/es/medicare") {
+    graph.push({
+      "@type": "Service",
+      "name": isEs ? "Planes Suplementarios y de Ventaja de Medicare en Florida" : "Florida Medicare Supplement & Advantage Plans",
+      "serviceType": "Health Insurance Brokerage",
+      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "areaServed": { "@type": "State", "name": "Florida" },
+      "description": metadata.description,
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": isEs ? "Servicios de Medicare" : "Medicare Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": isEs ? "Medicare Suplementario (Medigap Plan G y N)" : "Medicare Supplement Insurance (Medigap Plan G & N)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": isEs ? "Medicare Advantage (Parte C)" : "Medicare Advantage Plans (Part C)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": isEs ? "Planes de Medicamentos Recetados (Parte D)" : "Part D Prescription Drug Coverage"
+            }
+          }
+        ]
+      }
+    });
+  } else if (cleanPath === "/final-expense" || cleanPath === "/es/gastos-finales") {
+    graph.push({
+      "@type": "Service",
+      "name": isEs ? "Seguro de Gastos Finales y Entierro en Florida" : "Florida Final Expense & Burial Life Insurance",
+      "serviceType": "Whole Life Insurance",
+      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "areaServed": { "@type": "State", "name": "Florida" },
+      "description": metadata.description
+    });
+  } else if (cleanPath === "/iul-retirement" || cleanPath === "/es/iul-jubilacion") {
+    graph.push({
+      "@type": "Service",
+      "name": isEs ? "Seguro de Vida Universal Indexada (IUL) para Jubilación" : "Indexed Universal Life (IUL) Insurance",
+      "serviceType": "Permanent Life Insurance & Retirement Planning",
+      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "areaServed": { "@type": "State", "name": "Florida" },
+      "description": metadata.description
+    });
+  }
+
+  // 3. BlogPosting for blog articles
+  if (cleanPath.startsWith("/blog/") || cleanPath.startsWith("/es/blog/")) {
+    const slugValue = cleanPath.startsWith("/blog/") ? cleanPath.replace("/blog/", "") : cleanPath.replace("/es/blog/", "");
+    const post = BLOG_POSTS.find(p => p.slug.en === slugValue || p.slug.es === slugValue);
+    if (post) {
+      graph.push({
+        "@type": "BlogPosting",
+        "headline": isEs ? post.title.es : post.title.en,
+        "description": isEs ? post.excerpt.es : post.excerpt.en,
+        "image": post.image,
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": {
+          "@type": "Person",
+          "name": post.author.name,
+          "jobTitle": post.author.title,
+          "url": "https://www.ahbinsurancesolutions.com/#person"
+        },
+        "publisher": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": canonical
+        }
+      });
+    }
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph
+  };
+}
+
 export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, includeBodyOutline: boolean = true): string {
   let rewritten = indexHtml;
 
@@ -568,7 +785,19 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
   rewritten = rewritten.replace(/<meta property="twitter:title" content="[^"]*"\s*\/?>/, `<meta property="twitter:title" content="${escapeHtml(metadata.title)}">`);
   rewritten = rewritten.replace(/<meta property="twitter:description" content="[^"]*"\s*\/?>/, `<meta property="twitter:description" content="${escapeHtml(metadata.description)}">`);
 
-  // 7. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback (only if includeBodyOutline is true)
+  // 7. Inject Route-Accurate JSON-LD Schema
+  const jsonLdData = generateJsonLd(metadata);
+  const jsonLdString = JSON.stringify(jsonLdData, null, 2);
+  const jsonLdScriptTag = `<script type="application/ld+json" id="app-ld-json">\n${jsonLdString}\n    </script>`;
+
+  const ldJsonRegex = /<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/;
+  if (ldJsonRegex.test(rewritten)) {
+    rewritten = rewritten.replace(ldJsonRegex, jsonLdScriptTag);
+  } else {
+    rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTag}\n</head>`);
+  }
+
+  // 8. Inject crawler-friendly body outline inside `<div id="root">` AND as a `<noscript>` fallback (only if includeBodyOutline is true)
   if (includeBodyOutline) {
     const rootDiv = '<div id="root">';
     if (rewritten.includes(rootDiv)) {
