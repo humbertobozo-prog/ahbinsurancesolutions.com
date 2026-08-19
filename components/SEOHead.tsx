@@ -72,8 +72,6 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
         updateHreflang('en-US', enUrl);
         updateHreflang('es-US', esUrl);
-        updateHreflang('en', enUrl);
-        updateHreflang('es', esUrl);
         updateHreflang('x-default', enUrl);
 
         // 6. Update Open Graph

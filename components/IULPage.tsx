@@ -422,7 +422,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                             </h3>
                             <p className="text-sm text-gray-200">
                                 {isEs 
-                                    ? 'Diseñamos proyecciones con mínimo beneficio por fallecimiento y máxima acumulación en efectivo exento de impuestos.' 
+                                    ? 'Diseñamos proyecciones con mínimo beneficio por fallecimiento y máxima acumulación en efectivo con ventajas fiscales.' 
                                     : 'We engineer maximum-funded, minimum-death-benefit policy designs tailored to your retirement timeline.'}
                             </p>
                         </div>
@@ -432,6 +432,16 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         >
                             {isEs ? 'Solicitar Ilustración IUL' : 'Request IUL Illustration'}
                         </button>
+                    </div>
+
+                    {/* Financial/Regulatory Compliance Disclaimer */}
+                    <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg text-[11px] text-gray-500 leading-relaxed text-justify">
+                        <p className="mb-2"><strong>{isEs ? "Aviso Legal Financiero Importante:" : "Important Financial Disclaimer:"}</strong></p>
+                        <p>
+                            {isEs
+                                ? "La Vida Universal Indexada (IUL) es un producto de seguro de vida, no una inversión directa en el mercado de valores. Los términos como 'Piso del 0%' (Floor) se refieren al interés acreditado, lo que significa que el valor en efectivo no disminuirá debido a un rendimiento negativo del índice; sin embargo, se aplican cargos mensuales por costo de seguro (COI) y gastos de póliza que pueden reducir el valor en efectivo si no se pagan suficientes primas, lo que conlleva un riesgo de caducidad (lapse) de la póliza. El acceso libre de impuestos a los fondos se logra típicamente a través de préstamos sobre la póliza (policy loans) bajo la Sección 7702 del Código del IRS. Los préstamos acumulan intereses y reducen el beneficio por fallecimiento. Para mantener las ventajas fiscales, la póliza no debe convertirse en un Contrato de Dotación Modificada (Modified Endowment Contract o MEC). AHB Insurance Solutions no brinda asesoramiento fiscal ni legal independiente; consulte a su contador o asesor fiscal para su situación específica."
+                                : "Indexed Universal Life (IUL) is a life insurance product, not a direct stock market investment. Terms such as '0% Floor' refer to the interest crediting, meaning the cash value will not decrease due to negative index performance; however, monthly cost of insurance (COI) and policy expense charges still apply and can reduce cash value if insufficient premiums are paid, leading to policy lapse risk. Tax-free access to funds is typically achieved through policy loans under IRS Code Section 7702. Loans accrue interest and reduce the death benefit. To maintain tax advantages, the policy must not become a Modified Endowment Contract (MEC). AHB Insurance Solutions does not provide independent tax or legal advice; please consult your CPA or tax professional for your specific situation."}
+                        </p>
                     </div>
 
                 </div>
