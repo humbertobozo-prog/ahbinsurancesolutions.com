@@ -265,8 +265,8 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
               </div>
               <p className="text-xs text-gray-200 leading-relaxed">
                 {isEs
-                  ? `Brindamos asesoría bilingüe y 100% gratuita para residentes de ${activeCity.cityName} y todo ${activeCity.county}. Comparamos más de 80 aseguradoras líderes.`
-                  : `Providing free, unbiased insurance guidance for residents in ${activeCity.cityName} and ${activeCity.county}. We represent over 80 nationwide top-rated carriers.`}
+                  ? `Brindamos asesoría bilingüe y 100% gratuita para residentes de ${activeCity.cityName} y todo ${activeCity.county}. Comparamos tarifas entre aseguradoras de primer nivel.`
+                  : `Providing free, independent insurance guidance for residents in ${activeCity.cityName} and ${activeCity.county}. We represent top-rated national insurance carriers.`}
               </p>
 
               <div className="space-y-2 pt-2">

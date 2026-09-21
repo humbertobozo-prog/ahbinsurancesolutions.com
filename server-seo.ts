@@ -134,7 +134,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre más de 80 de las aseguradoras más sólidas y prestigiosas del país (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría 100% bilingüe y sin cargos por servicio.</p>
+          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de primer nivel nacional (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría 100% bilingüe y sin cargos por servicio.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
@@ -158,7 +158,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>¿Por Qué Elegir a AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos más de 80 compañías para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
+            <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos aseguradoras de primer nivel para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
             <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), San Petersburgo, Fort Myers y todas las zonas de Florida.</li>
             <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para evaluar que su cobertura se mantenga alineada con sus metas y presupuesto.</li>
           </ul>
@@ -195,7 +195,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with over 80 top-rated and state-licensed insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide unbiased guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
+          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with top-rated and state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
           <h2>Our Specialized Florida Insurance Solutions</h2>
@@ -219,7 +219,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Why Choose AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across over 80 top-rated and state-licensed insurance carriers.</li>
+            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across top-rated and state-licensed national insurance carriers.</li>
             <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
             <li><strong>Bilingual, Client-Focused Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance broker fluent in English and Spanish.</li>
           </ul>
@@ -577,8 +577,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Sobre Andrés H. Bozo | Broker de Seguros Licenciado en Florida (NPN 21228432)" 
       : "About Andres H. Bozo | Licensed Florida Insurance Broker (NPN 21228432)";
     description = isEs 
-      ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con más de 80 aseguradoras." 
-      : "Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing 80+ top carriers.";
+      ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con aseguradoras de primer nivel." 
+      : "Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing top national carriers.";
 
     if (isEs) {
       bodyOutline = `
@@ -588,7 +588,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Broker Independiente Andrés H. Bozo — NPN 21228432</h2>
-          <p>Andrés H. Bozo es corredor de seguros independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) y fundador de AHB Insurance Solutions. Brinda asesoría bilingüe de seguros para personas mayores y familias en todo el estado de Florida, con contratos directos con más de 80 aseguradoras de primer nivel nacional.</p>
+          <p>Andrés H. Bozo es corredor de seguros independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) y fundador de AHB Insurance Solutions. Brinda asesoría bilingüe de seguros para personas mayores y familias en todo el estado de Florida, con contratos directos con aseguradoras de primer nivel nacional.</p>
           <h3>Áreas de Especialización en Florida</h3>
           <ul>
             <li><strong>Medicare Suplementario (Medigap Plan G y N) y Medicare Advantage (Parte C)</strong></li>
@@ -602,7 +602,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Metodología de Asesoría en 4 Pasos</h2>
           <ol>
             <li>Diagnóstico exhaustivo de salud, recetas y objetivos financieros.</li>
-            <li>Comparación objetiva de tarifas reguladas entre más de 80 aseguradoras.</li>
+            <li>Comparación objetiva de tarifas reguladas entre aseguradoras líderes.</li>
             <li>Asesoría bilingüe y transparente sin presión comercial (100% gratuita).</li>
             <li>Acompañamiento en reclamos y revisiones anuales de formularios de medicamentos.</li>
           </ol>
@@ -616,7 +616,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Independent Broker Andres H. Bozo — NPN 21228432</h2>
-          <p>Andres H. Bozo is a licensed independent insurance broker authorized by the Florida Department of Financial Services (DFS) and principal of AHB Insurance Solutions. Delivering client-focused, bilingual advisory across all 67 Florida counties with direct appointments at 80+ top-rated national carriers.</p>
+          <p>Andres H. Bozo is a licensed independent insurance broker authorized by the Florida Department of Financial Services (DFS) and principal of AHB Insurance Solutions. Delivering client-focused, bilingual advisory across all 67 Florida counties with direct appointments at top-rated national carriers.</p>
           <h3>Core Practice Areas</h3>
           <ul>
             <li><strong>Florida Medicare Supplement (Medigap Plan G & N) & Medicare Advantage (Part C)</strong></li>
@@ -630,7 +630,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Our 4-Step Client-First Methodology</h2>
           <ol>
             <li>Comprehensive Health Background & Rx Needs Discovery.</li>
-            <li>Market-Wide Rate Comparison Across 80+ Florida Carriers.</li>
+            <li>Market-Wide Rate Comparison Across Top-Rated Carriers.</li>
             <li>Transparent, Bilingual Guidance with Zero Sales Pressure (100% Free).</li>
             <li>Lifetime Client Advocacy & Annual Medicare Prescription Formularies Reviews.</li>
           </ol>
@@ -683,7 +683,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       </header>
       <section>
         <h2>Independent Insurance Brokerage in Gainesville & Alachua County</h2>
-        <p>Located on SW Archer Road, AHB Insurance Solutions provides comprehensive, independent insurance comparisons representing 80+ top carriers with zero broker fees.</p>
+        <p>Located on SW Archer Road, AHB Insurance Solutions provides comprehensive, independent insurance comparisons representing top-rated national carriers with zero broker fees.</p>
         <ul>
           <li><strong>Medicare & Medigap (Plan G & Plan N):</strong> Direct, unrestricted access to UF Health Shands Hospital, HCA Florida North Florida Hospital, and Malcom Randall VA Medical Center without referral bottlenecks or prior authorization delays.</li>
           <li><strong>Final Expense & Burial Insurance:</strong> Whole life coverage from $5,000 to $35,000 with locked rates for life, protecting families across Gainesville, Archer, Newberry, and High Springs. Compatible with local providers like Forest Meadows, Williams-Thomas, Milam, and Chestnut.</li>
@@ -726,8 +726,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           ? "Seguro Medicare Florida 2026 | Asesoría y Planes Suplementarios en Español" 
           : "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N";
         description = isEs 
-          ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de más de 80 aseguradoras. Asesoría gratuita en español." 
-          : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed coverage & no network restrictions in FL.";
+          ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de aseguradoras líderes. Asesoría gratuita en español." 
+          : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from top-rated carriers. Guaranteed coverage & no network restrictions in FL.";
         
         bodyOutline = `
           <header>
@@ -797,7 +797,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </header>
           <section>
             <h2>Asesoría Profesional de Seguros en Español en Orlando</h2>
-            <p>Compare precios de más de 80 aseguradoras para planes de Medicare Suplementario y Gastos Finales con el broker Andrés Bozo en Orlando.</p>
+            <p>Compare precios de aseguradoras de primer nivel para planes de Medicare Suplementario y Gastos Finales con el broker Andrés Bozo en Orlando.</p>
           </section>
         `;
       }

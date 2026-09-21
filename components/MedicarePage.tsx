@@ -119,7 +119,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD",
-            "description": isEs ? "Comparación y asesoría de Medicare sin costo para el cliente" : "Free Medicare plan comparison and unbiased broker guidance",
+            "description": isEs ? "Comparación y asesoría de Medicare sin costo para el cliente" : "Free Medicare plan comparison and independent broker guidance",
             "availability": "https://schema.org/InStock"
         },
         "hasOfferCatalog": {
@@ -243,6 +243,11 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                     </div>
                 </div>
             </section>
+
+            {/* Educational Notice Banner */}
+            <div className="bg-sky-50 border-b border-sky-200 py-3 px-4 text-center text-xs md:text-sm text-sky-950 font-medium">
+                {isEs ? '💡 Información educativa, no constituye garantía de cobertura o beneficios.' : '💡 Educational information, not a guarantee of coverage or benefits.'}
+            </div>
 
             {/* In-Depth Educational Section */}
             <section className="py-12 md:py-16 container mx-auto px-4 md:px-6">
@@ -388,13 +393,97 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                     {/* Medigap Plan G vs Plan N Deep Dive */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-4">
-                            {isEs ? 'Análisis Profundo: Medigap Plan G vs. Plan N en Florida' : 'Deep Dive: Medigap Plan G vs. Plan N in Florida'}
+                            {isEs ? 'Análisis Profundo y Desglose por Plan en Florida' : 'In-Depth Plan Breakdown & Coverage Details in Florida'}
                         </h2>
-                        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
                             {isEs 
-                                ? 'En Florida, más del 90% de los beneficiarios que eligen un Seguro Suplementario de Medicare seleccionan el Plan G o el Plan N. Ambos ofrecen cobertura nacional sin red de médicos, pero difieren en estructura de costos:'
-                                : 'In Florida, over 90% of seniors choosing a Medicare Supplement select either Plan G or Plan N. Both grant complete national doctor freedom without network hurdles, but feature distinct cost structures:'}
+                                ? 'En Florida, conocer los detalles específicos de cada opción de cobertura evita sorpresas financieras. A continuación analizamos individualmente Medigap Plan G, Plan N, Medicare Advantage, la Parte D y los Derechos de Emisión Garantizada.'
+                                : 'Understanding the exact mechanics of each coverage option prevents financial surprises. Below is an individual breakdown of Medigap Plan G, Plan N, Medicare Advantage, Part D, and Guaranteed Issue Rights.'}
                         </p>
+
+                        {/* Individual Plan Cards Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            {/* Plan G Individual Breakdown */}
+                            <div className="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center justify-between mb-3">
+                                        <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Medigap Plan G</span>
+                                        <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">{isEs ? 'Máxima Cobertura' : 'Comprehensive Coverage'}</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-primary mb-2">
+                                        {isEs ? 'Medigap Plan G: Cobertura Total sin Excesos' : 'Medigap Plan G: Zero Excess Exposure'}
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                                        {isEs 
+                                            ? 'El Plan G cubre prácticamente todos los vacíos de Medicare Original, incluyendo el deducible de hospitalización de la Parte A, el coseguro del 20% en servicios ambulatorios y el 100% de los cargos en exceso de la Parte B. El único gasto fuera de bolsillo que el asegurado cubre directamente es el deducible anual de la Parte B (~$257).'
+                                            : 'Plan G covers nearly all Original Medicare gaps, including Part A hospital deductible, Part 20% outpatient coinsurance, and 100% of Part B excess charges. The only standard out-of-pocket item is the annual Part B deductible (~$257).'}
+                                    </p>
+                                </div>
+                                <div className="border-t border-gray-100 pt-3 text-[11px] text-gray-500 font-medium">
+                                    {isEs ? '💡 Ideal para quienes buscan predictibilidad financiera total sin sorpresas en facturas médicas.' : '💡 Ideal for those seeking complete financial predictability with zero medical billing surprises.'}
+                                </div>
+                            </div>
+
+                            {/* Plan N Individual Breakdown */}
+                            <div className="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center justify-between mb-3">
+                                        <span className="bg-secondary text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Medigap Plan N</span>
+                                        <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">{isEs ? 'Primas Reducidas' : 'Lower Monthly Premium'}</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-primary mb-2">
+                                        {isEs ? 'Medigap Plan N: Ahorro con Copagos Moderados' : 'Medigap Plan N: Savings with Structured Copays'}
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                                        {isEs 
+                                            ? 'Ofrece la misma protección sólida de hospitalización que el Plan G, pero incorpora copagos razonables en el consultorio médico (hasta $20) y en la sala de emergencias (hasta $50, si no es admitido). No cubre los cargos en exceso de la Parte B, aunque la inmensa mayoría de los médicos en Florida aceptan la asignación estándar.'
+                                            : 'Offers identical Part A hospital protection as Plan G, but features modest doctor visit copays (up to $20) and ER copays (up to $50 unless admitted). It does not cover Part B excess charges, though the vast majority of Florida doctors accept Medicare assignment.'}
+                                    </p>
+                                </div>
+                                <div className="border-t border-gray-100 pt-3 text-[11px] text-gray-500 font-medium">
+                                    {isEs ? '💡 Ideal para ahorrar ~$30-50 mensuales en primas a cambio de pequeños copagos por visita.' : '💡 Ideal to save ~$30-50/mo in premiums in exchange for minor per-visit copays.'}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Medicare Advantage & Part D Standalone Section */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            {/* Medicare Advantage (Part C) Dedicated Card */}
+                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <span className="bg-gray-800 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Medicare Advantage (Parte C)</span>
+                                    <h3 className="text-lg font-bold text-primary mb-2">
+                                        {isEs ? 'Medicare Advantage: Alternativa de Red Privada' : 'Medicare Advantage: Private Managed Care Alternative'}
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                                        {isEs 
+                                            ? 'Son planes administrados por aseguradoras privadas aprobadas por CMS que agrupan las Partes A, B y frecuentemente la Parte D (MAPD). Suelen ofrecer primas mensuales bajas o de $0 y beneficios adicionales (dental, visión, gimnasio), operando bajo redes locales específicas de condados en Florida (HMO o PPO), con topes anuales de bolsillo (MOOP), copagos por servicio y reglas de autorización previa según el plan.'
+                                            : 'Private managed-care plans approved by CMS bundling Parts A, B, and often Part D (MAPD). They often feature $0 or low monthly premiums and extra benefits (dental, vision, gym), operating under specific county networks in Florida (HMO or PPO) with annual out-of-pocket maximums (MOOP), service copays, and prior authorization rules depending on the plan design.'}
+                                    </p>
+                                </div>
+                                <span className="text-[11px] font-bold text-gray-500 block pt-3 border-t border-gray-200">
+                                    {isEs ? '⚠️ Requiere mantener activa la Parte B y abonar su prima estándar.' : '⚠️ Requires maintaining active Part B enrollment and paying its standard premium.'}
+                                </span>
+                            </div>
+
+                            {/* Part D & Guaranteed Issue Rights Card */}
+                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                                <div>
+                                    <span className="bg-gray-800 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Parte D y Emisión Garantizada</span>
+                                    <h3 className="text-lg font-bold text-primary mb-2">
+                                        {isEs ? 'Medicamentos (Parte D) y Derechos de Emisión' : 'Part D Rx & Guaranteed Issue Protections'}
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
+                                        {isEs 
+                                            ? 'La Parte D cubre farmacia ambulatoria (con tope federal de $2,000 en 2026). Por su parte, los "Derechos de Emisión Garantizada" (Guaranteed Issue Rights) le otorgan el derecho legal de contratar cualquier plan Medigap sin cuestionarios médicos durante su ventana de 6 meses al cumplir 65 y activar la Parte B, o ante eventos especiales como pérdida involuntaria de cobertura laboral.'
+                                            : 'Part D covers outpatient prescriptions (capped at $2,000 federally in 2026). Meanwhile, "Guaranteed Issue Rights" grant you the legal right to purchase any Medigap plan without medical underwriting during your 6-month window upon turning 65 and activating Part B, or during qualifying life events like involuntary loss of employer group coverage.'}
+                                    </p>
+                                </div>
+                                <span className="text-[11px] font-bold text-emerald-700 block pt-3 border-t border-gray-200">
+                                    {isEs ? '🛡️ Protección legal contra denegaciones por condiciones de salud.' : '🛡️ Legal protection against health-based denials.'}
+                                </span>
+                            </div>
+                        </div>
 
                         <div className="overflow-x-auto my-6 bg-white rounded-2xl border border-gray-200 shadow-sm">
                             <table className="w-full text-left border-collapse text-xs md:text-sm">
@@ -678,7 +767,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             <p className="text-sm text-gray-700">
                                 {isEs 
                                     ? 'Como corredor independiente licenciado en Florida (NPN 21228432), le guío de forma gratuita y sin presiones comerciales.' 
-                                    : 'As a licensed independent broker in Florida (NPN 21228432), I provide unbiased carrier analysis at zero cost to you.'}
+                                    : 'As a licensed independent broker in Florida (NPN 21228432), I provide independent carrier analysis at zero cost to you.'}
                             </p>
                         </div>
                         <button

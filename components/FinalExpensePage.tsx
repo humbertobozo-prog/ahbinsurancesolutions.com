@@ -211,7 +211,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 onClick={onOpenQuote}
                                 className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
                             >
-                                {isEs ? 'Ver Mis Opciones de Gastos Finales ➔' : 'Get My Final Expense Options ➔'}
+                                {isEs ? 'Obtener cotización ➔' : 'Get Final Expense Quote ➔'}
                             </button>
                             <a
                                 href="tel:+13522258389"
@@ -642,7 +642,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                                 {isEs 
                                     ? 'Como corredor independiente con licencia del Estado de Florida, no trabajo para una compañía de seguros; trabajo exclusivamente para usted y su familia. Mi compromiso es comparar las mejores opciones del mercado para encontrarle la cobertura más alta al costo mensual más bajo, con atención humana, transparente y 100% en español.' 
-                                    : 'As a state-licensed independent Florida insurance broker, I represent you, not an insurance conglomerate. My objective is to shop the entire marketplace to identify the highest coverage at the lowest locked-in rate, backed by lifelong personal support and unbiased expertise.'}
+                                    : 'As a state-licensed independent Florida insurance broker, I represent you, not an insurance conglomerate. My objective is to shop the entire marketplace to identify the highest coverage at the lowest locked-in rate, backed by lifelong personal support and independent expertise.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
                                 {isEs ? '📍 Residencia y Agencia: Gainesville, Florida | Servicio a todo el estado' : '📍 Based in Gainesville, Florida | Serving families statewide'}
