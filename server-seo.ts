@@ -34,58 +34,219 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // Default Fallbacks (Home English)
   let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
   let description = "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!";
-  const canonicalUrl = `${baseUrl}${cleanPath === "/" ? "" : cleanPath}`;
-  let enUrl = `${baseUrl}${cleanPath.replace(/^\/es/, "") || "/"}`;
-  let esUrl = `${baseUrl}/es${cleanPath.replace(/^\/es/, "")}`;
-  if (cleanPath === "/spanish-insurance-orlando") {
-    enUrl = `${baseUrl}/spanish-insurance-orlando`;
-    esUrl = `${baseUrl}/spanish-insurance-orlando`;
+  const canonicalUrl = `${baseUrl}${cleanPath === "" || cleanPath === "/" ? "/" : cleanPath}`;
+
+  // Complete Hreflang Canonical Route Pairs to prevent 308 redirects and trailing slashes
+  const ROUTE_PAIRS: Record<string, { en: string; es: string }> = {
+    "": { en: "/", es: "/es" },
+    "/": { en: "/", es: "/es" },
+    "/es": { en: "/", es: "/es" },
+    "/medicare": { en: "/medicare", es: "/es/medicare" },
+    "/es/medicare": { en: "/medicare", es: "/es/medicare" },
+    "/final-expense": { en: "/final-expense", es: "/es/gastos-finales" },
+    "/es/gastos-finales": { en: "/final-expense", es: "/es/gastos-finales" },
+    "/iul-retirement": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/es/iul-jubilacion": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/blog": { en: "/blog", es: "/es/blog" },
+    "/es/blog": { en: "/blog", es: "/es/blog" },
+    "/faq": { en: "/faq", es: "/es/preguntas-frecuentes" },
+    "/es/preguntas-frecuentes": { en: "/faq", es: "/es/preguntas-frecuentes" },
+    "/about-us": { en: "/about-us", es: "/es/nosotros" },
+    "/es/nosotros": { en: "/about-us", es: "/es/nosotros" },
+    "/contact": { en: "/contact", es: "/es/contacto" },
+    "/es/contacto": { en: "/contact", es: "/es/contacto" },
+    "/terms": { en: "/terms", es: "/es/terminos" },
+    "/es/terminos": { en: "/terms", es: "/es/terminos" },
+    "/privacy": { en: "/privacy", es: "/es/privacidad" },
+    "/es/privacidad": { en: "/privacy", es: "/es/privacidad" },
+    "/city-guides": { en: "/city-guides", es: "/es/guias-ciudades" },
+    "/es/guias-ciudades": { en: "/city-guides", es: "/es/guias-ciudades" },
+    "/medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
+    "/es/seguro-medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
+    "/medicare-supplement-florida": { en: "/medicare-supplement-florida", es: "/es/suplemento-medicare-florida" },
+    "/es/suplemento-medicare-florida": { en: "/medicare-supplement-florida", es: "/es/suplemento-medicare-florida" },
+    "/final-expense-miami": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
+    "/es/seguro-gastos-finales-florida": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
+    "/burial-insurance-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
+    "/es/seguro-gastos-finales-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
+    "/iul-retirement-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion" },
+    "/annuities-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
+    "/es/anualidades-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
+    "/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
+    "/es/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
+    "/spanish-insurance-orlando": { en: "/spanish-insurance-orlando", es: "/spanish-insurance-orlando" },
+    "/blog/medicare-open-enrollment-florida-2026": {
+      en: "/blog/medicare-open-enrollment-florida-2026",
+      es: "/es/blog/medicare-inscripcion-abierta-florida-2026"
+    },
+    "/es/blog/medicare-inscripcion-abierta-florida-2026": {
+      en: "/blog/medicare-open-enrollment-florida-2026",
+      es: "/es/blog/medicare-inscripcion-abierta-florida-2026"
+    },
+    "/blog/final-expense-burial-costs-florida": {
+      en: "/blog/final-expense-burial-costs-florida",
+      es: "/es/blog/costos-funerales-gastos-finales-florida"
+    },
+    "/blog/burial-insurance-funeral-costs-florida": {
+      en: "/blog/burial-insurance-funeral-costs-florida",
+      es: "/es/blog/costos-funerales-gastos-finales-florida"
+    },
+    "/es/blog/costos-funerales-gastos-finales-florida": {
+      en: "/blog/final-expense-burial-costs-florida",
+      es: "/es/blog/costos-funerales-gastos-finales-florida"
+    },
+    "/blog/iul-vs-401k-tax-free-retirement": {
+      en: "/blog/iul-vs-401k-tax-free-retirement",
+      es: "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos"
+    },
+    "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos": {
+      en: "/blog/iul-vs-401k-tax-free-retirement",
+      es: "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos"
+    }
+  };
+
+  let enUrl: string;
+  let esUrl: string;
+
+  if (ROUTE_PAIRS[cleanPath]) {
+    enUrl = `${baseUrl}${ROUTE_PAIRS[cleanPath].en === "/" ? "/" : ROUTE_PAIRS[cleanPath].en}`;
+    esUrl = `${baseUrl}${ROUTE_PAIRS[cleanPath].es}`;
+  } else if (cleanPath.startsWith("/es")) {
+    esUrl = `${baseUrl}${cleanPath}`;
+    const enSub = cleanPath.replace(/^\/es/, "");
+    enUrl = `${baseUrl}${enSub === "" ? "/" : enSub}`;
+  } else {
+    enUrl = `${baseUrl}${cleanPath === "" ? "/" : cleanPath}`;
+    const esSub = cleanPath === "/" ? "" : cleanPath;
+    esUrl = `${baseUrl}/es${esSub}`;
   }
+
   let ogType = "website";
   let bodyOutline = "";
 
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
     if (isEs) {
-      title = "Especialistas en Seguros de Medicare, Gastos Finales e IUL en Florida | AHB Insurance Solutions";
-      description = "Asegure el futuro de su familia con asesoría especializada en Florida. Expertos en Suplementos de Medicare, Seguro de Gastos Finales y Vida Universal Indexada (IUL). Broker Andrés Bozo NPN: 21228432.";
+      title = "Medicare, Gastos Finales e IUL en Florida | AHB Solutions";
+      description = "Asegure el futuro de su familia en Florida con asesoría en Suplementos de Medicare (Medigap), Seguro de Gastos Finales y Vida Universal Indexada (IUL). Broker Andrés Bozo NPN: 21228432.";
       bodyOutline = `
         <header>
-          <h1>Medicare, Gastos Finales y Vida Universal Indexada (IUL) en Florida</h1>
-          <p>${description}</p>
+          <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
+          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos los planes de más de 80 de las aseguradoras más sólidas y prestigiosas del país (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge) para garantizarle la máxima cobertura al precio más bajo, con asesoría 100% bilingüe y sin cargos por servicio.</p>
         </header>
         <section>
-          <h2>Nuestras Soluciones de Seguros Especializadas</h2>
+          <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
+          <article>
+            <h3>1. Planes Suplementarios de Medicare (Medigap) en Florida</h3>
+            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Con una póliza Medigap en Florida, usted disfruta de libertad total de elección médica: puede consultar a cualquier médico, especialista u hospital en Florida y en todo Estados Unidos que acepte Medicare Original, sin requerir redes restrictivas HMO ni autorizaciones previas de referidos.</p>
+          </article>
+          <article>
+            <h3>2. Seguro de Gastos Finales y Entierro para Adultos Mayores</h3>
+            <p>Los costos promedio de funeral, cremación o servicio conmemorativo en Florida oscilan entre $7,000 y $12,000, representando un impacto financiero repentino para los seres queridos. El pago único por fallecimiento del Seguro Social federal es de tan solo $255. Nuestras pólizas de gastos finales ofrecen protección de vida entera con beneficios en efectivo de $5,000 a $35,000. Cuentan con tarifas congeladas que nunca aumentan con la edad, el beneficio por muerte nunca disminuye y no requieren exámenes médicos invasivos ni agujas. Los fondos se entregan a sus beneficiarios libres de impuestos sobre la renta en cuestión de días tras el reclamo.</p>
+          </article>
+          <article>
+            <h3>3. Seguro de Vida Universal Indexado (IUL) y Jubilación Libre de Impuestos</h3>
+            <p>La Vida Universal Indexada (IUL) es una estrategia de seguro de vida permanente que protege a su familia y al mismo tiempo construye un sólido valor en efectivo para el retiro. El crecimiento financiero está vinculado al desempeño de índices de mercado como el S&P 500, con un piso contractual garantizado del 0% contra caídas del mercado de valores. Conforme a la Sección 7702 del Código del IRS, puede solicitar préstamos de la póliza para generar ingresos de jubilación libres de impuestos, sin las penalidades de edad ni los límites obligatorios de retiro que aplican a las cuentas 401(k) o IRA tradicionales.</p>
+          </article>
+          <article>
+            <h3>4. Anualidades Fijas y Pólizas Dentales, de Visión y Audición</h3>
+            <p>Proteja sus ahorros de jubilación frente a la volatilidad económica con anualidades de tasa fija garantizada, y añada protección integral para gastos dentales, oftálmicos y aparatos auditivos diseñados especialmente para beneficiarios de Medicare en Florida.</p>
+          </article>
+        </section>
+        <section>
+          <h2>¿Por Qué Elegir a AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>Planes de Suplemento de Medicare (Medigap):</strong> Simplificamos las Partes A, B, C y D de Medicare en Florida. Visite a cualquier médico que acepte Medicare sin redes restrictivas ni referidos.</li>
-            <li><strong>Seguro de Gastos Finales para Personas Mayores:</strong> Proteja a su familia de los altos costos de funeral y entierro en Florida. Cobertura de vida entera con tarifas congeladas de por vida.</li>
-            <li><strong>Vida Universal Indexada (IUL):</strong> Una herramienta poderosa para acumular ahorros con crecimiento de valor en efectivo libre de impuestos y protección de pérdidas del mercado con piso del 0%.</li>
+            <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos más de 80 compañías para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
+            <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), San Petersburgo, Fort Myers y todas las zonas de Florida.</li>
+            <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para verificar que continúe pagando la tarifa más baja.</li>
           </ul>
         </section>
         <section>
-          <h2>La Ventaja de Trabajar con AHB Insurance Solutions</h2>
-          <p>Andrés Bozo es un broker independiente de seguros en Florida, con NPN de Licencia 21228432. Comparamos los precios y coberturas de más de 80 de las mejores compañías aseguradoras para garantizar la mejor tasa para usted.</p>
-          <p>Llame al Broker Licenciado para una consulta gratuita al <a href="tel:+13522258389">+1 (352) 225-8389</a>.</p>
+          <h2>Preguntas Frecuentes sobre Seguros en Florida</h2>
+          <h3>¿Cuándo es el mejor momento para contratar un seguro suplementario Medigap en Florida?</h3>
+          <p>El momento más favorable es durante su Período de Inscripción Abierta de Medigap de 6 meses, que inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante esta ventana tiene Derechos de Emisión Garantizada, lo que impide que las aseguradoras rechacen su cobertura o aumenten su precio por antecedentes de salud.</p>
+          <h3>¿Puedo calificar para seguro de entierro si tengo enfermedades previas?</h3>
+          <p>Sí. La mayoría de las pólizas de gastos finales cuentan con emisión simplificada sin chequeos médicos ni muestras de sangre. Incluso adultos mayores con historial de presión alta, diabetes u otros padecimientos crónicos pueden calificar para cobertura inmediata o con beneficios graduados.</p>
+          <h3>¿Cómo protege una póliza IUL mi dinero de las crisis bursátiles?</h3>
+          <p>Las pólizas IUL poseen una cláusula de piso del 0%. En los años en que la bolsa de valores registra pérdidas, su rendimiento no baja de cero, lo que significa que su capital acumulado y las ganancias logradas en períodos previos quedan 100% blindados.</p>
+        </section>
+        <section>
+          <h2>Servicios en Español y Enlaces Principales</h2>
+          <nav aria-label="Enlaces en Español">
+            <ul>
+              <li><a href="/es">Inicio: Seguros en Florida</a></li>
+              <li><a href="/es/medicare">Planes de Suplemento de Medicare (Medigap)</a></li>
+              <li><a href="/es/gastos-finales">Seguro de Gastos Finales y Funeral</a></li>
+              <li><a href="/es/iul-jubilacion">Vida Universal Indexada (IUL)</a></li>
+              <li><a href="/es/anualidades-florida">Anualidades y Retiro Seguro en Florida</a></li>
+              <li><a href="/es/dental-vision-florida">Seguro Dental, Visión y Audición Senior</a></li>
+              <li><a href="/es/preguntas-frecuentes">Preguntas Frecuentes sobre Seguros</a></li>
+              <li><a href="/es/nosotros">Conozca al Broker Andrés Bozo</a></li>
+              <li><a href="/es/contacto">Cotización Gratuita sin Compromiso</a></li>
+            </ul>
+          </nav>
+          <p class="mt-4"><strong>Looking for guidance in English?</strong> Visit our main <a href="/">English Florida Insurance Portal</a> or read our guides on <a href="/medicare">Medicare Supplement Plans</a>, <a href="/final-expense">Final Expense Insurance</a>, and <a href="/iul-retirement">IUL Retirement Plans</a>.</p>
+          <p>Comuníquese hoy mismo con el broker licenciado Andrés Bozo al <a href="tel:+13522258389">+1 (352) 225-8389</a> para recibir su comparativa y cotización sin ningún compromiso.</p>
         </section>
       `;
     } else {
       bodyOutline = `
         <header>
-          <h1>Medicare, Final Expense & IUL Insurance Specialists in Florida</h1>
-          <p>${description}</p>
+          <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
+          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we represent over 80 of the nation's premier A-rated insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide unbiased advice, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
-          <h2>Our Specialized Insurance Solutions</h2>
-          <ul>
-            <li><strong>Medicare Supplement Plans (Medigap):</strong> We simplify Medicare parts A, B, C, and D. See any doctor or specialist in Florida & nationwide that accepts Original Medicare with zero referral mandates.</li>
-            <li><strong>Final Expense Burial Insurance for Florida Seniors:</strong> Protect your family from the sudden financial burden of funeral expenses. Locked whole life rates that never increase.</li>
-            <li><strong>Indexed Universal Life (IUL):</strong> Accumulate tax-free retirement cash value coupled with 100% principal protection against stock market downside crashes.</li>
-          </ul>
+          <h2>Our Specialized Florida Insurance Solutions</h2>
+          <article>
+            <h3>1. Florida Medicare Supplement Plans (Medigap)</h3>
+            <p>Original Medicare (Parts A and B) provides essential healthcare protection but leaves substantial out-of-pocket gaps, such as the Part A hospital deductible and the uncapped 20% Part B outpatient coinsurance. A Medicare Supplement (Medigap) policy, such as Plan G or Plan N, pays these remaining balances on your behalf. With a Florida Medigap plan, you maintain complete freedom of healthcare providers: you can see any doctor, specialist, or healthcare facility across Florida and nationwide that accepts Original Medicare, with zero network constraints, prior authorization hurdles, or specialist referral requirements.</p>
+          </article>
+          <article>
+            <h3>2. Final Expense & Burial Life Insurance for Florida Seniors</h3>
+            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000. These plans feature level premiums that remain locked for life, death benefits that never decrease, and simplified underwriting with no medical exams or bodily fluid tests. Benefit checks are paid directly to your chosen beneficiaries completely free of federal income tax within days of approval.</p>
+          </article>
+          <article>
+            <h3>3. Indexed Universal Life (IUL) for Tax-Advantaged Wealth & Retirement</h3>
+            <p>Indexed Universal Life (IUL) insurance combines permanent death benefit protection with an efficient cash value growth component. Cash value growth is tied to the upward trajectory of major stock indexes like the S&P 500, protected by a guaranteed contractual 0% floor against market drops. Under Internal Revenue Code Section 7702, you can take policy loans to generate a tax-free retirement income stream, bypassing the mandatory minimum distribution rules and early withdrawal penalties found in traditional 401(k) and IRA retirement accounts.</p>
+          </article>
+          <article>
+            <h3>4. Fixed Guaranteed Annuities & Senior Dental, Vision and Hearing</h3>
+            <p>Shield your accumulated savings from stock market volatility with multi-year fixed indexed annuities offering reliable lifetime income options, and supplement your Medicare coverage with affordable dental, vision, and hearing plans designed specifically for Florida seniors.</p>
+          </article>
         </section>
         <section>
           <h2>Why Choose AHB Insurance Solutions?</h2>
-          <p>Andres Bozo is an independent insurance broker in Florida (NPN License 21228432). We compare over 80+ top A-rated insurance carriers to secure you the best coverage and lowest rates in the market.</p>
-          <p>Call our Florida Licensed Broker directly for a free guidance consultation at <a href="tel:+13522258389">+1 (352) 225-8389</a>.</p>
+          <ul>
+            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we shop over 80 A-rated insurance carriers to identify the highest quality policy at the lowest available rate for your individual age and medical profile.</li>
+            <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
+            <li><strong>Bilingual Fiduciary Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance professional fluent in English and Spanish.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Frequently Asked Questions</h2>
+          <h3>What is the best time to purchase a Medigap plan in Florida?</h3>
+          <p>The premier time is during your 6-month Medigap Open Enrollment window, which starts the first day of the month you turn 65 and are enrolled in Medicare Part B. During this period, you have federal Guaranteed Issue rights, meaning insurance companies cannot deny you coverage or increase your premiums based on pre-existing medical conditions.</p>
+          <h3>Can seniors with health challenges qualify for burial insurance?</h3>
+          <p>Yes. Final expense life insurance policies are built with simplified underwriting or guaranteed acceptance options that do not require physical examinations or blood work. Seniors managing diabetes, high blood pressure, or past heart conditions can obtain immediate or graded whole life protection.</p>
+          <h3>How does an IUL shield my retirement cash value from market losses?</h3>
+          <p>Every IUL contract includes an annual 0% minimum interest floor. When market indexes suffer severe corrections or downturns, your account is credited with 0% interest rather than negative returns, permanently securing your principal and all earlier credited gains.</p>
+        </section>
+        <section>
+          <h2>Explore Coverage Options & Bilingual Assistance</h2>
+          <nav aria-label="Insurance Solutions">
+            <ul>
+              <li><a href="/medicare">Medicare Supplement Plans (Medigap)</a></li>
+              <li><a href="/final-expense">Final Expense & Burial Life Insurance</a></li>
+              <li><a href="/iul-retirement">Indexed Universal Life (IUL) for Retirement</a></li>
+              <li><a href="/annuities-florida">Florida Fixed Indexed Annuities</a></li>
+              <li><a href="/dental-vision-florida">Senior Dental, Vision & Hearing Coverage</a></li>
+              <li><a href="/faq">Frequently Asked Questions</a></li>
+              <li><a href="/about-us">About Broker Andres Bozo</a></li>
+              <li><a href="/contact">Free Insurance Quote</a></li>
+            </ul>
+          </nav>
+          <p class="mt-4"><strong>¿Prefiere recibir atención especializada en español?</strong> Visite nuestro <a href="/es">Portal de Seguros en Español en Florida</a> o explore nuestras páginas dedicadas a <a href="/es/medicare">Medicare Suplementario</a>, <a href="/es/gastos-finales">Seguro de Gastos Finales</a> e <a href="/es/iul-jubilacion">IUL y Jubilación</a>.</p>
+          <p>Speak directly with Florida licensed broker Andres Bozo today at <a href="tel:+13522258389">+1 (352) 225-8389</a> to receive your free, zero-obligation insurance analysis.</p>
         </section>
       `;
     }
@@ -102,6 +263,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     
     if (isEs) {
       bodyOutline = `
+        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Medicare Suplementario Medigap</span></p></nav>
         <header>
           <h1>Planes de Medicare y Suplementos (Medigap) en Florida</h1>
           <p>${description}</p>
@@ -155,6 +317,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
     if (isEs) {
       bodyOutline = `
+        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Gastos Finales y Funeral</span></p></nav>
         <header>
           <h1>Seguro de Gastos Finales y Gastos Funerarios en Florida</h1>
           <p>${description}</p>
@@ -199,6 +362,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
     if (isEs) {
       bodyOutline = `
+        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Vida Universal Indexada (IUL)</span></p></nav>
         <header>
           <h1>Seguro de Vida Universal Indexada (IUL) en Florida</h1>
           <p>${description}</p>

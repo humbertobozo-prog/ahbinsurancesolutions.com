@@ -45,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                             </div>
                         </div>
                     </div>
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-3">
                         <h3 className="font-bold font-heading text-lg mb-4 text-white uppercase tracking-wider">{content.linksTitle}</h3>
                         <ul className="space-y-2 text-xs font-bold uppercase tracking-wider">
                             <li><a href="/medicare" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/medicare'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Medicare Plan G & N</a></li>
@@ -86,6 +86,20 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                     {content.links.terms}
                                 </a>
                             </li>
+                        </ul>
+                    </div>
+                    <div className="lg:col-span-2">
+                        <h3 className="font-bold font-heading text-lg mb-4 text-accent uppercase tracking-wider">En Español</h3>
+                        <ul className="space-y-2 text-xs font-bold uppercase tracking-wider">
+                            <li><a href="/es" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Seguros Florida</a></li>
+                            <li><a href="/es/medicare" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/medicare'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Medicare Medigap</a></li>
+                            <li><a href="/es/gastos-finales" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/gastos-finales'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Gastos Finales</a></li>
+                            <li><a href="/es/iul-jubilacion" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/iul-jubilacion'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">IUL y Retiro</a></li>
+                            <li><a href="/es/anualidades-florida" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/anualidades-florida'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Anualidades FL</a></li>
+                            <li><a href="/es/dental-vision-florida" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/dental-vision-florida'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Dental & Visión</a></li>
+                            <li><a href="/es/preguntas-frecuentes" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/preguntas-frecuentes'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Preguntas Frecuentes</a></li>
+                            <li><a href="/es/nosotros" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/nosotros'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Sobre Andrés Bozo</a></li>
+                            <li><a href="/es/contacto" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/contacto'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 rounded transition-colors">Cotización Gratis</a></li>
                         </ul>
                     </div>
                     <div className="lg:col-span-3" itemScope itemType="https://schema.org/InsuranceAgency">
