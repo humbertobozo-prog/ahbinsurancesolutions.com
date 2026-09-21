@@ -61,21 +61,21 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             case '/es/seguro-gastos-finales-florida':
                 return {
                     title: activeLang === 'es' 
-                        ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Funeral Sin Examen Médico" 
-                        : "Burial & Final Expense Insurance Florida | No Medical Exam Coverage",
+                        ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
+                        : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage",
                     description: activeLang === 'es' 
-                        ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas congeladas para siempre, sin exámenes médicos y aprobación garantizada. Asesoría en español." 
-                        : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors with no medical exam. Free quote.",
+                        ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas de por vida. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
+                        : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Many simplified-issue policies do not require a traditional medical exam.",
                     heading: activeLang === 'es' ? "Seguro de Gastos Finales y Entierro en Florida" : "Burial & Final Expense Insurance in Florida",
                     subheading: activeLang === 'es' 
                         ? "Garantice la tranquilidad de su familia y evite deudas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con cuotas fijas que jamás aumentan." 
-                        : "Ensure your family in Florida isn't burdened by $10,000+ funeral costs. Instant guaranteed approval life insurance.",
+                        : "Ensure your family in Florida isn't burdened by $10,000+ funeral costs. Permanent whole life coverage with locked rates.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Sin Exámenes Médicos", desc: "Aprobación garantizada para personas de 50 a 85 años sin pruebas de sangre ni visitas médicas." },
+                        { title: "Emisión Simplificada", desc: "Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, con evaluación ágil." },
                         { title: "Pagos Fijos de Por Vida", desc: "Su mensualidad queda congelada para siempre y la póliza nunca vencerá." },
                         { title: "Efectivo Directo y Libre de Impuestos", desc: "Sus beneficiarios reciben el dinero en efectivo en pocos días para cubrir funeral, cremación o deudas." }
                     ] : [
-                        { title: "No Health Exams Required", desc: "100% guaranteed approval for seniors aged 50 to 85 regardless of health history." },
+                        { title: "Simplified Issue Options", desc: "Many simplified-issue policies do not require a traditional medical exam, subject to carrier underwriting." },
                         { title: "Immediate Cash Payouts", desc: "Beneficiaries receive cash tax-free within days to handle burial, cremation, or medical bills." },
                         { title: "Locked Monthly Rates", desc: "Your monthly premium will never increase, and your policy will never expire." }
                     ]
@@ -83,13 +83,23 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             case '/annuities-florida':
             case '/es/anualidades-florida':
                 return {
-                    title: "Florida Fixed Annuities 2026 | Guaranteed Retirement Income Florida",
-                    description: "Protect your retirement savings with Florida Fixed & MYGA Annuities. Earn guaranteed interest rates with 0% stock market risk. Free rate quote.",
-                    heading: "Guaranteed Fixed Annuities in Florida",
-                    subheading: "Safeguard your hard-earned retirement nest egg from stock market volatility while locking in guaranteed high interest returns.",
-                    highlights: [
-                        { title: "0% Stock Market Risk", desc: "Your principal balance is 100% protected against stock market crashes." },
-                        { title: "Guaranteed High Returns", desc: "Lock in fixed interest growth far exceeding standard bank CD rates." },
+                    title: activeLang === 'es'
+                        ? "Anualidades en Florida 2026 | Fijas, MYGA e Indexadas (FIA)"
+                        : "Florida Fixed Annuities 2026 | MYGA & Fixed Indexed Annuities",
+                    description: activeLang === 'es'
+                        ? "Anualidades en Florida: fijas, MYGA, indexadas (FIA) e inmediatas. Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
+                        : "Florida annuities: Fixed, MYGA, Fixed Indexed (FIA) & Immediate. Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength.",
+                    heading: activeLang === 'es' ? "Anualidades Fijas e Indexadas en Florida" : "Fixed & Indexed Annuities in Florida",
+                    subheading: activeLang === 'es'
+                        ? "Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
+                        : "Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract.",
+                    highlights: activeLang === 'es' ? [
+                        { title: "Protección del Principal", desc: "Su capital principal acumulado está protegido frente a caídas de la bolsa." },
+                        { title: "Términos Contractuales Garantizados", desc: "Rendimientos respaldados por la solidez y solvencia de la aseguradora emisora." },
+                        { title: "Ingresos de Por Vida", desc: "Opción de convertir su saldo en una pensión mensual vitalicia garantizada." }
+                    ] : [
+                        { title: "Principal Protection", desc: "Your accumulated principal balance is insulated against stock market downturns." },
+                        { title: "Contractual Interest Terms", desc: "Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength." },
                         { title: "Lifetime Pension Cashflow", desc: "Convert savings into a guaranteed monthly paycheck you can never outlive." }
                     ]
                 };
@@ -258,7 +268,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                                     href="#contact" 
                                     className="inline-flex justify-center items-center bg-accent text-primary text-lg font-black px-8 py-5 rounded-xl uppercase tracking-widest hover:bg-[#FFB81C] hover:scale-105 active:scale-95 transition-all shadow-xl group"
                                 >
-                                    <span>{activeLang === 'es' ? 'Obtener Cotización Gratis' : 'Get Free Quote Today'}</span>
+                                    <span>{activeLang === 'es' ? 'Hablar con Andrés' : 'Talk With Andres'}</span>
                                     <ArrowRight className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                                 </a>
                                 <a 

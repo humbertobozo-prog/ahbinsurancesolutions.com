@@ -228,7 +228,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 onClick={onOpenQuote}
                                 className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
                             >
-                                {isEs ? 'Solicitar Ilustración Personalizada ➔' : 'Get Custom IUL Illustration ➔'}
+                                {isEs ? 'Solicitar una Revisión de IUL ➔' : 'Request an IUL Review ➔'}
                             </button>
                             <a
                                 href="tel:+13522258389"
@@ -237,7 +237,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                                 </svg>
-                                {isEs ? 'Hablar con Andrés Bozo (+1 352-225-8389)' : 'Speak with Broker (+1 352-225-8389)'}
+                                {isEs ? 'Hablar con Andrés (+1 352-225-8389)' : 'Talk With Andres (+1 352-225-8389)'}
                             </a>
                         </div>
                     </div>
@@ -463,7 +463,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                             onClick={onOpenQuote}
                             className="bg-accent text-primary hover:bg-[#FFB81C] text-xs font-black uppercase tracking-widest px-6 py-3.5 rounded-xl transition-all whitespace-nowrap shadow cursor-pointer"
                         >
-                            {isEs ? 'Solicitar Ilustración IUL' : 'Request IUL Illustration'}
+                            {isEs ? 'Solicitar una Revisión de IUL' : 'Request an IUL Review'}
                         </button>
                     </div>
 

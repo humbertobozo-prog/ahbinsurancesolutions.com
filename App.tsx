@@ -17,6 +17,7 @@ import { SEOHead } from './components/SEOHead';
 const MedicarePage = React.lazy(() => import('./components/MedicarePage').then(m => ({ default: m.MedicarePage })));
 const FinalExpensePage = React.lazy(() => import('./components/FinalExpensePage').then(m => ({ default: m.FinalExpensePage })));
 const IULPage = React.lazy(() => import('./components/IULPage').then(m => ({ default: m.IULPage })));
+const AnnuitiesPage = React.lazy(() => import('./components/AnnuitiesPage').then(m => ({ default: m.AnnuitiesPage })));
 const BlogHubPage = React.lazy(() => import('./components/BlogHubPage').then(m => ({ default: m.BlogHubPage })));
 const BlogGenerator = React.lazy(() => import('./components/BlogGenerator').then(m => ({ default: m.BlogGenerator })));
 const FAQPage = React.lazy(() => import('./components/FAQPage').then(m => ({ default: m.FAQPage })));
@@ -87,10 +88,6 @@ const App: React.FC = () => {
         '/es/seguro-gastos-finales-florida',
         '/iul-retirement-tampa',
         '/spanish-insurance-orlando',
-        '/annuities-florida',
-        '/es/anualidades-florida',
-        '/annuities',
-        '/es/anualidades',
         '/dental-vision-florida',
         '/es/dental-vision-florida'
     ];
@@ -151,6 +148,8 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FinalExpensePage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/iul-retirement' || cleanPath === '/es/iul-jubilacion') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><IULPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+    } else if (cleanPath === '/annuities-florida' || cleanPath === '/es/anualidades-florida' || cleanPath === '/annuities' || cleanPath === '/es/anualidades') {
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AnnuitiesPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/blog' || cleanPath === '/es/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/es/blog/')) {
         const slug = cleanPath.startsWith('/blog/') ? cleanPath.replace('/blog/', '') : (cleanPath.startsWith('/es/blog/') ? cleanPath.replace('/es/blog/', '') : undefined);
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
@@ -196,7 +195,10 @@ const App: React.FC = () => {
                 
                 <ErrorBoundary componentName="Services">
                     <Suspense fallback={<Spinner height="py-32" />}>
-                        <Services content={content.services} />
+                        <Services 
+                            content={content.services} 
+                            language={language} 
+                        />
                     </Suspense>
                 </ErrorBoundary>
 
@@ -257,7 +259,7 @@ const App: React.FC = () => {
                 {mainContentComponent}
             </main>
             <Footer content={content.footer} common={content.common} onOpenLegalModal={handleOpenLegalModal} />
-            <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} />
+            <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} language={language} />
             <BackToTopButton />
             <TapToCallButton label={content.tapToCallButton?.label || (isEs ? 'Llamar al Broker' : 'Call Licensed Broker')} phone={content.tapToCallButton?.phone || '+13522258389'} />
             <TermsAndPrivacyModal 

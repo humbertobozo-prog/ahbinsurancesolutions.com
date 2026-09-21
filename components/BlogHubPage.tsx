@@ -192,7 +192,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                             onClick={onOpenQuote}
                             className="bg-accent text-primary font-black text-xs uppercase tracking-widest px-5 py-3 rounded-xl hover:bg-[#FFB81C] transition-all whitespace-nowrap shadow-sm"
                         >
-                            {isEs ? 'Cotizar Gratis' : 'Free Quote'}
+                            {isEs ? 'Hablar con Andrés' : 'Talk With Andres'}
                         </button>
                     </div>
                 </article>

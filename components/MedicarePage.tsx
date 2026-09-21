@@ -44,7 +44,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         },
         {
             q: "¿Cuánto cuestan las primas de Medigap en Florida en 2026?",
-            a: "Las tarifas varían según la edad, género, uso de tabaco y código postal en Florida. En promedio, un Plan G para una persona de 65 años oscila entre $140 y $185 al mes, mientras que un Plan N oscila entre $100 y $145 al mes. Florida utiliza la estructura de precios por edad alcanzada (Attained-Age) para la mayoría de las pólizas."
+            a: "Las primas varían por código postal (ZIP), edad, género según metodología aplicable, compañía aseguradora (carrier), metodología de cálculo de tarifas (Attained-Age vs. Issue-Age), evaluación de salud (underwriting), uso de tabaco, elegibilidad para descuentos por convivencia en el hogar (household discounts) y fecha de entrada en vigencia. No deben presentarse como una tarifa general o uniforme para todo el estado. Como ejemplo ilustrativo de muestra (con fecha Enero 2026, basado en registros referenciales públicos de aseguradoras de Florida para una persona no fumadora de 65 años en códigos postales seleccionados de Florida Central), un Plan G suele cotizarse típicamente entre $140 y $185 al mes y un Plan N entre $100 y $145 al mes antes de posibles descuentos de hogar. “Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”"
         }
     ] : [
         {
@@ -65,7 +65,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         },
         {
             q: "How much does a Medigap Plan G cost in Florida for 2026?",
-            a: "Average monthly premiums for a 65-year-old non-smoker in Florida range between $140 and $185 per month for Plan G, and $100 to $145 per month for Plan N. Rates depend on county zip codes, gender, tobacco status, and available household discounts."
+            a: "Premiums vary by ZIP code, age, gender (under applicable rating methodology), carrier, rating method (such as Attained-Age vs. Issue-Age), health underwriting status, tobacco usage, household discount qualification, and effective date. There is no single or uniform statewide rate in Florida. As an illustrative example (dated January 2026, based on public sample carrier filings for a 65-year-old non-smoker in select Central Florida ZIP codes), monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N prior to applicable household discounts. “Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison.”"
         }
     ];
 
@@ -220,15 +220,15 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs
-                                ? 'Proteja su jubilación contra facturas médicas ilimitadas del 20%. Comparamos objetivamente más de 80 aseguradoras en Florida para asegurar la máxima libertad médica al mejor costo.'
-                                : 'Shield your retirement from uncapped 20% medical co-pays. We objectively analyze 80+ top carriers to secure complete doctor freedom at the lowest rate in Florida.'}
+                                ? 'Proteja su jubilación contra facturas médicas ilimitadas del 20%. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre más de 80 aseguradoras en Florida.'
+                                : 'Shield your retirement from uncapped 20% medical co-pays. We compare available options based on your needs, eligibility, budget and coverage goals across 80+ top carriers in Florida.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
                                 onClick={onOpenQuote}
                                 className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
                             >
-                                {isEs ? 'Cotizar Medigap Gratis ➔' : 'Get Free Medigap Quote ➔'}
+                                {isEs ? 'Obtener Mi Comparación de Medicare ➔' : 'Get My Medicare Comparison ➔'}
                             </button>
                             <a
                                 href="tel:+13522258389"
@@ -237,7 +237,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                 <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                                 </svg>
-                                {isEs ? 'Hablar con Andrés Bozo (+1 352-225-8389)' : 'Speak with Broker (+1 352-225-8389)'}
+                                {isEs ? 'Hablar con Andrés (+1 352-225-8389)' : 'Talk With Andres (+1 352-225-8389)'}
                             </a>
                         </div>
                     </div>
@@ -427,12 +427,84 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                         <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Hasta 15% extra)' : 'Not Covered (Up to 15% extra)'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-4 font-bold text-primary">{isEs ? 'Prima Mensual Promedio en Florida' : 'Avg. Monthly Premium in FL'}</td>
-                                        <td className="p-4 text-gray-700 font-medium">$140 – $185 / mes</td>
-                                        <td className="p-4 text-emerald-800 font-bold">$100 – $145 / mes ({isEs ? 'Ahorro ~$30-50/mes' : 'Saves ~$30-50/mo'})</td>
+                                        <td className="p-4 font-bold text-primary">
+                                            {isEs ? 'Rango Estimado de Primas Mensuales*' : 'Estimated Monthly Premium Range*'}
+                                            <span className="block text-[11px] font-normal text-gray-500 mt-0.5">
+                                                {isEs ? '(Ejemplo ilustrativo de muestra)' : '(Sample illustrative example)'}
+                                            </span>
+                                        </td>
+                                        <td className="p-4 text-gray-700 font-medium">
+                                            <span className="font-semibold text-gray-900">$140 – $185 / mes*</span>
+                                            <span className="block text-[11px] text-gray-500 mt-0.5 font-normal">
+                                                {isEs ? 'Ejemplo ilustrativo (Edad 65, no tabaco)' : 'Illustrative example (Age 65, non-tobacco)'}
+                                            </span>
+                                        </td>
+                                        <td className="p-4 text-emerald-800 font-bold">
+                                            <span className="font-semibold text-emerald-900">$100 – $145 / mes*</span>
+                                            <span className="block text-[11px] text-emerald-700 mt-0.5 font-normal">
+                                                {isEs ? 'Ahorro ilustrativo ~$30-50/mes vs. Plan G' : 'Illustrative savings ~$30-50/mo vs. Plan G'}
+                                            </span>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+
+                        {/* Medicare Rate Disclosure & Mandatory Pricing Factors */}
+                        <div className="bg-amber-50/80 border border-amber-200/90 rounded-xl p-4 md:p-5 my-5 text-xs text-amber-950 shadow-xs">
+                            <div className="flex items-start gap-2.5">
+                                <span className="text-amber-700 font-bold text-base leading-none mt-0.5" aria-hidden="true">ℹ</span>
+                                <div className="space-y-2">
+                                    <h4 className="font-bold text-amber-950 text-xs md:text-sm">
+                                        {isEs 
+                                            ? '*Aviso Legal y Factores de Tarificación de Medicare en Florida (Enero 2026):' 
+                                            : '*Pricing Disclaimer & Medicare Rating Factors in Florida (January 2026):'}
+                                    </h4>
+                                    <p className="leading-relaxed text-gray-700">
+                                        {isEs ? (
+                                            <>
+                                                Las primas de Medicare Suplementario (Medigap) <strong>no constituyen una tarifa general ni uniforme</strong> en Florida. El precio real de su póliza depende de factores indispensables:
+                                                <span className="font-semibold text-gray-900"> código postal (ZIP), edad alcanzada, género según metodología aplicable, compañía aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), evaluación médica (underwriting), uso de tabaco, descuentos por convivencia en el hogar (household discounts) y fecha de entrada en vigencia</span>.
+                                            </>
+                                        ) : (
+                                            <>
+                                                Medicare Supplement (Medigap) premiums <strong>do not represent a uniform or statewide general rate</strong>. Your actual premium depends on individualized rating variables:
+                                                <span className="font-semibold text-gray-900"> ZIP code, age, gender (under applicable rating methodology), insurance carrier, rating method (such as Attained-Age vs. Issue-Age), medical underwriting evaluation, tobacco status, household discount eligibility, and effective date</span>.
+                                            </>
+                                        )}
+                                    </p>
+                                    <p className="text-gray-600 italic">
+                                        {isEs 
+                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros de muestra de aseguradoras para condados de Florida Central a fecha de enero de 2026 para una persona de 65 años, no fumadora, antes de aplicar posibles descuentos de hogar.' 
+                                            : 'Source & Date: The figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes as of January 2026 for a 65-year-old non-tobacco applicant prior to household discounts.'}
+                                    </p>
+                                    <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-amber-200/70 mt-2">
+                                        <p className="font-bold text-primary text-xs md:text-sm">
+                                            {isEs 
+                                                ? '“Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”' 
+                                                : '“Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison.”'}
+                                        </p>
+                                        <a 
+                                            href="#quote" 
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                const element = document.getElementById('quote');
+                                                if (element) {
+                                                    element.scrollIntoView({ behavior: 'smooth' });
+                                                } else {
+                                                    const target = isEs ? '/es/contacto' : '/contact';
+                                                    window.history.pushState({}, '', target);
+                                                    window.dispatchEvent(new Event('popstate'));
+                                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                }
+                                            }}
+                                            className="inline-flex items-center justify-center whitespace-nowrap font-bold text-xs bg-primary hover:bg-primary/90 text-white px-3.5 py-2 rounded-lg transition-colors shadow-xs"
+                                        >
+                                            {isEs ? 'Solicitar Comparación Personalizada' : 'Request Personalized Comparison'}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -603,7 +675,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             onClick={onOpenQuote}
                             className="bg-primary text-white hover:bg-secondary text-xs font-black uppercase tracking-widest px-6 py-3.5 rounded-xl transition-all whitespace-nowrap shadow cursor-pointer"
                         >
-                            {isEs ? 'Consultar con Andrés Bozo' : 'Consult with Andres Bozo'}
+                            {isEs ? 'Obtener Mi Comparación de Medicare' : 'Get My Medicare Comparison'}
                         </button>
                     </div>
 

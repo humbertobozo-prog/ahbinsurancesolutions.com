@@ -41,6 +41,8 @@ export const ALL_ROUTES: string[] = [
   '/iul-retirement-tampa',
   '/annuities-florida',
   '/es/anualidades-florida',
+  '/annuities',
+  '/es/anualidades',
   '/dental-vision-florida',
   '/es/dental-vision-florida',
   '/spanish-insurance-orlando'

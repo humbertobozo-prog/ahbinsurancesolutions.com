@@ -15,12 +15,12 @@ export const translations: Record<Language, TranslationContent> = {
         expertise: "EXPERTISE",
         benefits: "BENEFITS",
         results: "RESULTS",
-        getQuote: "GET QUOTE",
+        getQuote: "Talk With Andres",
         services: "SOLUTIONS",
         about: "EXPERTISE",
         whyUs: "BENEFITS",
         testimonials: "RESULTS",
-        contact: "GET QUOTE",
+        contact: "Talk With Andres",
       },
       language: "Español",
     },
@@ -30,13 +30,20 @@ export const translations: Record<Language, TranslationContent> = {
       cta: "Check 2026 Florida Eligibility ➔",
       trustText: "🔒 Licensed Professional | NPN: 21228432 | Florida Licensed Broker"
     },
+    cta: {
+      medicare: "Get My Medicare Comparison",
+      finalExpense: "Get My Final Expense Options",
+      iul: "Request an IUL Review",
+      annuities: "Request My Retirement Income Review",
+      general: "Talk With Andres"
+    },
     keyTakeaways: {
       title: "Key Takeaways",
       items: [
         { label: "Medicare Experts", value: "Custom A/B/C/D guidance." },
         { label: "Burial Protection", value: "Guaranteed acceptance burial plans." },
         { label: "IUL Growth", value: "Tax-free wealth & retirement strategies." },
-        { label: "80+ Companies", value: "We compare the market for your best rate." }
+        { label: "80+ Companies", value: "We compare available options for your goals." }
       ]
     },
     services: {
@@ -94,7 +101,7 @@ export const translations: Record<Language, TranslationContent> = {
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
           title: "80+ A-Rated Carriers",
-          description: "We shop the market so you don't have to, ensuring the lowest possible rates.",
+          description: "We compare available options based on your needs, eligibility, budget and coverage goals.",
         },
         {
           icon: "M3 5h12M9 3v2m0 10v2m5.618-4.591A8.966 8.966 0 0118 21l-3.09-3.09m-1.5-1.5l-3.09 3.09A8.966 8.966 0 013 11.008l3.09-3.09m-1.5-1.5l3.09 3.09",
@@ -226,7 +233,7 @@ export const translations: Record<Language, TranslationContent> = {
             about: "Our Story",
             whyUs: "Why AHB",
             testimonials: "Reviews",
-            contact: "Free Quote",
+            contact: "Talk With Andres",
             privacy: "Privacy Policy",
             terms: "Terms of Service"
         },
@@ -246,7 +253,7 @@ export const translations: Record<Language, TranslationContent> = {
         ariaLabel: "Chat on WhatsApp"
     },
     tapToCallButton: {
-        label: "Tap to Call: +1 (352) 225-8389",
+        label: "Talk With Andres: +1 (352) 225-8389",
         phone: "+1-352-225-8389"
     }
   },
@@ -264,12 +271,12 @@ export const translations: Record<Language, TranslationContent> = {
         expertise: "EXPERIENCIA",
         benefits: "BENEFICIOS",
         results: "RESULTADOS",
-        getQuote: "COTIZAR",
+        getQuote: "Hablar con Andrés",
         services: "SOLUCIONES",
         about: "EXPERIENCIA",
         whyUs: "BENEFICIOS",
         testimonials: "RESULTADOS",
-        contact: "COTIZAR",
+        contact: "Hablar con Andrés",
       },
       language: "English",
     },
@@ -278,6 +285,13 @@ export const translations: Record<Language, TranslationContent> = {
       subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como brokers independientes licenciados en Florida, comparamos más de 80 compañías líderes para conseguirle el mejor Seguro Medicare en Florida, Seguro de Gastos Finales (Entierro) y Vida Universal Indexada (IUL).",
       cta: "Verificar Elegibilidad en Florida 2026 ➔",
       trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría 100% Gratuita"
+    },
+    cta: {
+      medicare: "Obtener Mi Comparación de Medicare",
+      finalExpense: "Ver Mis Opciones de Gastos Finales",
+      iul: "Solicitar una Revisión de IUL",
+      annuities: "Solicitar Mi Revisión de Ingresos de Jubilación",
+      general: "Hablar con Andrés"
     },
     keyTakeaways: {
       title: "Resumen de Valor",
@@ -343,7 +357,7 @@ export const translations: Record<Language, TranslationContent> = {
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
           title: "80+ Compañías de Élite",
-          description: "Buscamos en todo el mercado para asegurar que obtenga la tarifa más baja posible.",
+          description: "Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura.",
         },
         {
           icon: "M3 5h12M9 3v2m0 10v2m5.618-4.591A8.966 8.966 0 0118 21l-3.09-3.09m-1.5-1.5l-3.09 3.09A8.966 8.966 0 013 11.008l3.09-3.09m-1.5-1.5l3.09 3.09",
@@ -475,7 +489,7 @@ export const translations: Record<Language, TranslationContent> = {
             about: "Historia",
             whyUs: "Por Qué AHB",
             testimonials: "Reseñas",
-            contact: "Cotizar Gratis",
+            contact: "Hablar con Andrés",
             privacy: "Privacidad",
             terms: "Términos"
         },
@@ -495,7 +509,7 @@ export const translations: Record<Language, TranslationContent> = {
         ariaLabel: "Chat por WhatsApp"
     },
     tapToCallButton: {
-        label: "Llamar Ahora: +1 (352) 225-8389",
+        label: "Hablar con Andrés: +1 (352) 225-8389",
         phone: "+1-352-225-8389"
     }
   },

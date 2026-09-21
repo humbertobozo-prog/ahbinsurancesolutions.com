@@ -50,7 +50,7 @@ const PRESET_TOPICS = [
     titleEn: 'Final Expense & Burial Insurance Cost Guide for Florida Seniors',
     titleEs: 'Guía de Costos de Seguro de Gastos Finales y Funerales en Florida',
     category: 'Final Expense',
-    keyFocus: 'Average funeral costs in Florida, guaranteed acceptance, no medical exams, lifetime frozen premiums',
+    keyFocus: 'Average funeral costs in Florida, simplified issue vs guaranteed issue, underwriting rules, lifetime frozen premiums',
   },
   {
     titleEn: 'Medicare Supplement Plan G vs Plan N: Florida Price & Coverage Comparison',
@@ -247,8 +247,8 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
         ? 'Guía de Seguro de Gastos Finales y Gastos Funerarios en Florida 2026'
         : 'Final Expense & Burial Insurance Complete Guide in Florida 2026',
       metaDescription: isLangEs
-        ? 'Asegure la tranquilidad de su familia en Florida con un seguro de gastos finales. Cuotas congeladas, sin examen médico y emisión rápida con el broker Andrés Bozo.'
-        : 'Protect your family from costly funeral bills in Florida. Frozen premiums, no medical exam, and immediate payout with licensed broker Andres Bozo.',
+        ? 'Asegure la tranquilidad de su familia en Florida con un seguro de gastos finales. Cuotas congeladas, emisión simplificada sin examen médico tradicional y asesoría experta con el broker Andrés Bozo.'
+        : 'Protect your family from costly funeral bills in Florida. Frozen premiums, simplified underwriting options, and direct guidance with licensed broker Andres Bozo.',
       slug: isLangEs ? 'guia-gastos-finales-funerales-florida' : 'final-expense-burial-guide-florida',
       readTime: '6 min read',
       category: 'Final Expense Florida',

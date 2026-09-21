@@ -29,6 +29,13 @@ export interface TranslationContent {
     cta: string;
     trustText: string;
   };
+  cta?: {
+    medicare: string;
+    finalExpense: string;
+    iul: string;
+    annuities: string;
+    general: string;
+  };
   keyTakeaways: {
     title: string;
     items: {

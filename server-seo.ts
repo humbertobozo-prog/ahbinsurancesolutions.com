@@ -132,7 +132,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos los planes de más de 80 de las aseguradoras más sólidas y prestigiosas del país (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge) para garantizarle la máxima cobertura al precio más bajo, con asesoría 100% bilingüe y sin cargos por servicio.</p>
+          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre más de 80 de las aseguradoras más sólidas y prestigiosas del país (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría 100% bilingüe y sin cargos por servicio.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
@@ -158,7 +158,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ul>
             <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos más de 80 compañías para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
             <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), San Petersburgo, Fort Myers y todas las zonas de Florida.</li>
-            <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para verificar que continúe pagando la tarifa más baja.</li>
+            <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para evaluar que su cobertura se mantenga alineada con sus metas y presupuesto.</li>
           </ul>
         </section>
         <section>
@@ -203,7 +203,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>2. Final Expense & Burial Life Insurance for Florida Seniors</h3>
-            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000. These plans feature level premiums that remain locked for life, death benefits that never decrease, and simplified underwriting with no medical exams or bodily fluid tests. Benefit checks are paid directly to your chosen beneficiaries completely free of federal income tax within days of approval.</p>
+            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000. These plans feature level premiums that remain locked for life and death benefits that never decrease. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Benefit checks are paid directly to your chosen beneficiaries completely free of federal income tax within days of approval.</p>
           </article>
           <article>
             <h3>3. Indexed Universal Life (IUL) for Tax-Advantaged Wealth & Retirement</h3>
@@ -217,7 +217,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Why Choose AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we shop over 80 A-rated insurance carriers to identify the highest quality policy at the lowest available rate for your individual age and medical profile.</li>
+            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across over 80 A-rated insurance carriers.</li>
             <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
             <li><strong>Bilingual Fiduciary Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance professional fluent in English and Spanish.</li>
           </ul>
@@ -280,7 +280,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Preguntas Frecuentes de Medicare Suplementario</h2>
           <h3>¿Cuánto cuestan las primas de Medigap en Florida en 2026?</h3>
-          <p>Un Plan G oscila típicamente entre $140 y $185 mensuales para un no fumador de 65 años, mientras que un Plan N oscila entre $100 y $145 mensuales.</p>
+          <p>Las primas varían por código postal (ZIP), edad, género según metodología aplicable, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), evaluación médica (underwriting), condición de fumador, descuentos por hogar y fecha de vigencia. No constituyen una tarifa general o fija para el estado de Florida. Como ejemplo ilustrativo de muestra (Enero 2026, registros referenciales en condados seleccionados de Florida Central para un perfil de 65 años no fumador), un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales antes de descuentos de hogar. “Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”</p>
         </section>
       `;
     } else {
@@ -300,7 +300,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
         <section>
           <h2>Florida Medigap Plan G vs Plan N Costs 2026</h2>
-          <p>Average monthly premiums for a 65-year-old non-smoker in Florida range between $140 and $185 per month for Plan G, and $100 to $145 per month for Plan N depending on county zip codes.</p>
+          <p>Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison. As an illustrative example (dated January 2026, public sample carrier filings for a 65-year-old non-smoker in select Central Florida ZIP codes), Plan G sample premiums typically range between $140 and $185 per month, and Plan N between $100 and $145 per month prior to household discounts, but individual rates may be higher or lower depending on your exact profile.</p>
         </section>
       `;
     }
@@ -309,43 +309,105 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 3. Final Expense Service Page
   else if (cleanPath === "/final-expense" || cleanPath === "/es/gastos-finales") {
     title = isEs 
-      ? "Guía Completa de Seguro de Gastos Finales y Funeral en Florida 2026 | AHB Insurance" 
-      : "Final Expense & Burial Insurance Complete Florida Guide 2026 | AHB Insurance";
+      ? "Seguro de Gastos Finales y Funeral en Florida 2026 | AHB Insurance" 
+      : "Final Expense & Burial Insurance in Florida 2026 | AHB Insurance";
     description = isEs 
-      ? "Asegure entre $5,000 y $35,000 para costos funerales en Florida. Tarifas congeladas de por vida, sin exámenes médicos y desembolso libre de impuestos para su familia." 
-      : "Secure $5,000 to $35,000 for Florida funeral costs. Permanent whole life coverage with locked rates, no medical exams, and immediate tax-free cash payout.";
+      ? "Proteja a su familia con cobertura de $5,000 a $35,000 en Florida. Tarifas fijas de por vida. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
+      : "Secure $5,000 to $35,000 in Florida burial protection. Locked lifetime rates. Many simplified-issue policies do not require a traditional medical exam.";
 
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Gastos Finales y Funeral</span></p></nav>
         <header>
-          <h1>Seguro de Gastos Finales y Gastos Funerarios en Florida</h1>
+          <h1>Seguro de Gastos Finales y Funeral en Florida</h1>
           <p>${description}</p>
         </header>
         <section>
-          <h2>¿Qué es el seguro de gastos finales?</h2>
-          <p>Es una póliza de seguro de vida entera simplificada diseñada para cubrir gastos de entierro, servicios de funeraria, deudas médicas o saldos pendientes. Ofrece beneficios en efectivo desde $5,000 hasta $35,000 para personas de 50 a 85 años.</p>
-          <p>Los pagos mensuales quedan totalmente congelados para siempre y el capital garantizado se entrega libre de impuestos federales a sus beneficiarios designados en pocos días.</p>
+          <h2>¿Qué es el Seguro de Gastos Finales?</h2>
+          <p>Es una póliza de seguro de vida entera (Whole Life) permanente diseñada para cubrir gastos de entierro, cremación, servicios funerarios, deudas médicas pendientes o compromisos financieros tras el fallecimiento. Los beneficios en efectivo oscilan entre $5,000 y $35,000.</p>
         </section>
         <section>
-          <h2>¿El Seguro Social paga los gastos de funeral en Florida?</h2>
-          <p>La ayuda única por fallecimiento del Seguro Social de EE.UU. es de solo $255, una cifra extremadamente baja comparada con los costos reales de un funeral promedio en Florida, que superan fácilmente los $8,000 o $10,000.</p>
+          <h2>¿Quién Necesita este Seguro?</h2>
+          <p>Adultos de 50 a 85 años que desean evitar traspasar una deuda funeraria de $8,000 a $14,000 a sus hijos o familiares, personas sin seguro de vida activo o con pólizas de término que están por vencer.</p>
+        </section>
+        <section>
+          <h2>Montos de Cobertura y Desglose de Gastos en Florida</h2>
+          <p>Planes desde $5,000 para cremación y gastos administrativos, hasta $35,000 para funeral tradicional con parcela de cementerio, ataúd y fondo de emergencia familiar. El beneficio único del Seguro Social de EE.UU. es de solo $255 para cónyuges sobrevivientes.</p>
+        </section>
+        <section>
+          <h2>Criterios de Elegibilidad y Suscripción Médica</h2>
+          <p>Disponible para residentes de Florida entre 50 y 85 años. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la aseguradora y el solicitante. Las compañías evalúan la elegibilidad a través de preguntas de salud, historial de medicamentos recetados, registros del MIB y, en determinados casos, entrevistas telefónicas o informes médicos (APS).</p>
+        </section>
+        <section>
+          <h2>Emisión Simplificada vs. Emisión Garantizada</h2>
+          <p>La emisión simplificada ofrece cobertura inmediata desde el primer día (Level Benefit) para solicitantes con condiciones controladas. La emisión garantizada (Guaranteed Issue) no realiza preguntas médicas y aprueba al 100% de solicitantes con enfermedades graves, con un período de espera graduado de 2 años.</p>
+        </section>
+        <section>
+          <h2>Períodos de Espera y Pago de Beneficios</h2>
+          <p>Explicación transparente de cobertura inmediata desde el Día 1 frente a pólizas con beneficios graduados para perfiles de alto riesgo médico.</p>
+        </section>
+        <section>
+          <h2>Primas Mensuales Congeladas de por Vida</h2>
+          <p>Las tarifas nunca aumentan con la edad ni por cambios de salud. La póliza nunca vence mientras las cuotas se mantengan al día.</p>
+        </section>
+        <section>
+          <h2>Beneficiarios y Control Total del Dinero</h2>
+          <p>El dinero en efectivo se entrega directamente a sus beneficiarios libres de impuestos sobre la renta (IRC §101(a)). A diferencia de los contratos prepagados de funerarias, su familia tiene libertad absoluta para elegir cualquier funeraria en Florida o en todo EE.UU.</p>
+        </section>
+        <section>
+          <h2>Comparativa: Gastos Finales vs. Seguro a Término vs. Funeraria Prepagada</h2>
+          <p>Tabla comparativa exhaustiva que detalla flexibilidad, permanencia, congelación de precios y libertad de proveedores.</p>
+        </section>
+        <section>
+          <h2>Proceso de Solicitud con Andrés Bozo (NPN 21228432)</h2>
+          <p>Paso a paso: consulta gratuita, evaluación de historial médico para ubicar la mejor tarifa en más de 15 aseguradoras, firma electrónica o telefónica y emisión rápida.</p>
         </section>
       `;
     } else {
       bodyOutline = `
         <header>
-          <h1>Final Expense & Burial Life Insurance in Florida</h1>
+          <h1>Final Expense & Burial Insurance in Florida</h1>
           <p>${description}</p>
         </header>
         <section>
           <h2>What is Final Expense Insurance?</h2>
-          <p>Final Expense is a simplified issue whole life policy designed to cover funeral services, cremation, burial costs, medical bills, or credit card debt. Cash benefits range from $5,000 to $35,000 for seniors aged 50 to 85.</p>
-          <p>Premiums are locked and guaranteed to never increase, coverage will never expire as long as premiums are paid, and the cash benefit is paid out completely tax-free to your beneficiaries within days.</p>
+          <p>Final Expense is a permanent whole life policy designed to cover funeral services, cremation, burial costs, leftover medical bills, and personal debts. Cash benefits range from $5,000 to $35,000 for adults aged 50 to 85.</p>
         </section>
         <section>
-          <h2>The $255 Social Security Death Benefit Pitfall</h2>
-          <p>The federal Social Security Administration only provides a one-time lump-sum death payment of $255 to surviving eligible spouses or children. This doesn't come close to covering typical Florida burial expenses, which average between $7,000 and $11,000.</p>
+          <h2>Who Needs Final Expense Coverage?</h2>
+          <p>Florida seniors, retirees, and individuals wanting to shield their children from $9,000 to $14,000 in unexpected funeral debt, or anyone who has outlived their term life insurance policies.</p>
+        </section>
+        <section>
+          <h2>Coverage Amounts & Real Florida Funeral Costs</h2>
+          <p>Options from $5,000 to $35,000. Social Security only pays a $255 one-time lump sum to eligible surviving spouses, leaving thousands of dollars in uncovered funeral and cemetery expenses.</p>
+        </section>
+        <section>
+          <h2>Eligibility & Underwriting Context</h2>
+          <p>Available for Florida residents typically aged 50 to 85. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Insurers verify eligibility through health questionnaire responses, electronic prescription drug history (Rx check), MIB records, and occasionally telephone interviews or attending physician statements (APS).</p>
+        </section>
+        <section>
+          <h2>Simplified Issue vs. Guaranteed Issue</h2>
+          <p>Simplified issue plans provide Day-One Level Benefits for applicants with managed health histories. Guaranteed issue plans require zero health questions, approving applicants with severe medical challenges subject to a 2-year graded benefit waiting period.</p>
+        </section>
+        <section>
+          <h2>Waiting Periods Explained</h2>
+          <p>Honest breakdown between immediate day-one payout policies and modified two-year graded periods for high-risk individuals.</p>
+        </section>
+        <section>
+          <h2>Level Premiums Locked for Life</h2>
+          <p>Monthly rates are locked at your issue age and never rise. Coverage never expires as long as premiums are paid.</p>
+        </section>
+        <section>
+          <h2>Beneficiaries & Complete Financial Freedom</h2>
+          <p>Tax-free cash (IRC §101(a)) paid directly to your designated beneficiaries within days, giving them complete freedom to choose any funeral provider nationwide, unlike restrictive pre-need funeral home contracts.</p>
+        </section>
+        <section>
+          <h2>Comparison: Final Expense vs. Term Life vs. Pre-Need Funeral Plans</h2>
+          <p>Detailed evaluation highlighting permanent guarantees, price locking, and freedom of choice.</p>
+        </section>
+        <section>
+          <h2>Application Process with Andres Bozo, Independent Broker (NPN 21228432)</h2>
+          <p>Streamlined four-step guidance: comparison across 15+ top burial insurers, telephone or electronic sign-up, and rapid approval.</p>
         </section>
       `;
     }
@@ -607,11 +669,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         `;
       } else if (cleanPath.includes("final") || cleanPath.includes("burial") || cleanPath.includes("gastos")) {
         title = isEs 
-          ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Funeral Sin Examen Médico" 
-          : "Burial & Final Expense Insurance Florida | No Medical Exam Coverage";
+          ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
+          : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage";
         description = isEs 
-          ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas congeladas para siempre, sin exámenes médicos y aprobación garantizada. Asesoría en español." 
-          : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors with no medical exam. Free quote.";
+          ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas congeladas para siempre. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
+          : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Many simplified-issue policies do not require a traditional medical exam.";
         
         bodyOutline = `
           <header>
@@ -620,20 +682,24 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </header>
           <section>
             <h2>Funeral & Burial Planning Solutions</h2>
-            <p>Ensure burial and funeral cost safety for your loved ones with guaranteed cash benefit plans from $5,000 to $35,000 in Florida. No medical exam required.</p>
+            <p>Ensure burial and funeral cost safety for your loved ones with permanent cash benefit plans from $5,000 to $35,000 in Florida. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.</p>
           </section>
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
-        title = "Florida Fixed Annuities 2026 | Guaranteed Retirement Income Florida";
-        description = "Protect your retirement savings with Florida Fixed & MYGA Annuities. Earn guaranteed interest rates with 0% stock market risk. Free rate quote.";
+        title = isEs
+          ? "Anualidades en Florida 2026 | Fijas, MYGA e Indexadas (FIA)"
+          : "Florida Fixed Annuities 2026 | MYGA & Fixed Indexed Annuities";
+        description = isEs
+          ? "Anualidades en Florida: fijas, MYGA, indexadas (FIA) e inmediatas. Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
+          : "Florida annuities: Fixed, MYGA, Fixed Indexed (FIA) & Immediate. Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength.";
         bodyOutline = `
           <header>
             <h1>${title}</h1>
             <p>${description}</p>
           </header>
           <section>
-            <h2>Guaranteed High Yield Fixed Annuities</h2>
-            <p>Protect your hard earned savings from index drops or stock market crashes with 0% market risk MYGA products in Florida.</p>
+            <h2>Fixed Annuities & Fixed Indexed Annuities in Florida</h2>
+            <p>Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract. Explore Multi-Year Guarantee Annuities (MYGA), Fixed Indexed Annuities (FIA) for growth potential with downside protection, Single Premium Immediate Annuities (SPIA) for lifetime income, and key differences between annuities and bank CDs.</p>
           </section>
         `;
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {

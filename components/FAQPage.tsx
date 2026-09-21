@@ -36,7 +36,11 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: '¿Qué cubre un seguro de Gastos Finales o de Entierro?',
-            a: 'Es una póliza de seguro de vida entera diseñada específicamente para cubrir los costos funerarios, entierro o cremación, así como facturas médicas pendientes. Mantiene mensualidades congeladas para toda la vida y no requiere exámenes médicos.'
+            a: 'Es una póliza de seguro de vida entera diseñada específicamente para cubrir los costos funerarios, entierro o cremación, así como facturas médicas pendientes. Mantiene mensualidades congeladas para toda la vida. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían por aseguradora y solicitante.'
+        },
+        {
+            q: '¿Cómo garantizan las anualidades fijas mis ahorros de jubilación?',
+            a: 'Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora y al contrato específico. Permiten que su capital crezca con diferimiento fiscal y sin exposición directa a pérdidas del mercado de valores.'
         },
         {
             q: '¿Cómo funciona una póliza de Vida Universal Indexada (IUL)?',
@@ -44,11 +48,11 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: '¿Por qué contratar a través de un corredor (broker) independiente?',
-            a: 'Como corredores independientes en AHB Insurance Solutions (NPN 21228432), no trabajamos para una sola aseguradora. Comparamos opciones con más de 80 compañías líderes para encontrar el mejor plan y tarifa para usted, con una consulta 100% gratuita.'
+            a: 'Como corredores independientes en AHB Insurance Solutions (NPN 21228432), no trabajamos para una sola aseguradora. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre más de 80 compañías líderes, con una consulta 100% gratuita.'
         },
         {
             q: '¿Tiene algún costo la asesoría con AHB Insurance Solutions?',
-            a: 'No. Nuestra asesoría y proceso de cotización son 100% gratuitos para usted. Las compañías de seguros pagan nuestra compensación, por lo que usted obtiene el precio oficial exacto o inferior al acudir directamente a la compañía.'
+            a: 'No. Nuestra asesoría y proceso de cotización son 100% gratuitos para usted. Las compañías de seguros pagan nuestra compensación, por lo que usted obtiene exactamente las mismas tarifas oficiales reguladas sin ningún recargo adicional.'
         }
     ] : [
         {
@@ -61,7 +65,11 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: 'What does Final Expense or Burial Insurance cover?',
-            a: 'It is a whole life insurance policy designed specifically to cover funeral, burial, or cremation costs and remaining medical debts. It locks in your rate for life and requires no medical exams.'
+            a: 'It is a whole life insurance policy designed specifically to cover funeral, burial, or cremation costs and remaining medical debts. It locks in your rate for life. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'
+        },
+        {
+            q: 'How do fixed annuities safeguard retirement savings?',
+            a: 'Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract. They allow your nest egg to compound tax-deferred without exposing your principal to stock market losses.'
         },
         {
             q: 'How does an Indexed Universal Life (IUL) policy work?',
@@ -69,11 +77,11 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: 'Why should I use an independent insurance broker?',
-            a: 'As independent brokers at AHB Insurance Solutions (NPN 21228432), we represent you, not the insurance companies. We compare plans across 80+ top carriers to find you the best rate for free.'
+            a: 'As independent brokers at AHB Insurance Solutions (NPN 21228432), we represent you, not the insurance companies. We compare available options based on your needs, eligibility, budget and coverage goals across 80+ top carriers for free.'
         },
         {
             q: 'Does consulting with AHB Insurance Solutions cost anything?',
-            a: 'No. Our advisory service and custom quote process are 100% free to you. Insurance carriers compensate us directly, so you get the exact same or better rate as going direct.'
+            a: 'No. Our advisory service and custom quote process are 100% free to you. Insurance carriers compensate us directly, so you receive standard regulated carrier rates with zero broker fees or added markups.'
         }
     ];
 
