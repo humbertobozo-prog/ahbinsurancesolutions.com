@@ -118,14 +118,14 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 };
             case '/iul-retirement-tampa':
                 return {
-                    title: "Indexed Universal Life Tampa | Tax-Free Retirement Planning Florida",
-                    description: "Grow your private retirement wealth tax-free with an Indexed Universal Life (IUL) policy in Tampa, FL. Protect capital & secure guaranteed retirement cash streams.",
+                    title: "Indexed Universal Life Tampa | Tax-Advantaged Planning Florida",
+                    description: "Explore Indexed Universal Life (IUL) policies in Tampa, FL with a contractual 0% index floor and potential tax-advantaged retirement policy loan strategies.",
                     heading: "Indexed Universal Life (IUL) in Tampa",
-                    subheading: "Build powerful, protected tax-free cash reserves while protecting your Tampa family. Elite private financial strategies.",
+                    subheading: "Structure permanent life insurance coverage with index-linked cash value accumulation and potential tax advantages for your Tampa family.",
                     highlights: [
-                        { title: "Tax-Free Capital Growth", desc: "Your index-linked cash balances accumulate interest without IRS dividend taxation." },
-                        { title: "Principal Safety Locks", desc: "0% interest floors shield your hard-earned money from stock market downturns." },
-                        { title: "Worry-Free Retirement Cash", desc: "Generate lifelong income streams directly from your private life insurance asset." }
+                        { title: "Tax-Advantaged Growth", desc: "Cash value accumulates on a tax-deferred basis under IRS Section 7702." },
+                        { title: "Contractual 0% Floor", desc: "The index-crediting component has a contractual 0% floor against negative market index returns." },
+                        { title: "Retirement Policy Loans", desc: "Access cash value via policy loans with potentially favorable federal tax treatment when properly maintained." }
                     ]
                 };
             case '/spanish-insurance-orlando':

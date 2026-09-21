@@ -152,8 +152,8 @@ Final Expense insurance (also called burial or funeral insurance) is a **whole l
 #### Core Advantages:
 1. **Locked-In Premium Rates:** Your monthly rate never increases as you age or if your health changes.
 2. **Permanent Coverage:** The policy cannot be canceled by the insurance company as long as premiums are paid.
-3. **No Medical Exam Required:** Most policies only require simple health answering questions.
-4. **Fast Payout:** Death benefits are disbursed directly to your designated beneficiaries tax-free, often within 24–48 hours of filing a claim.
+3. **Simplified Underwriting Options:** Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.
+4. **Beneficiary Payouts:** Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome.
 
 ### Average Monthly Rates for Florida Seniors
 * **Age 55–60:** $30 – $50/month for $10,000 coverage
@@ -161,7 +161,7 @@ Final Expense insurance (also called burial or funeral insurance) is a **whole l
 * **Age 75–80:** $70 – $120/month for $10,000 coverage
 
 ### Guaranteed Issue Policies
-For individuals with severe pre-existing medical conditions (such as active cancer treatment or kidney dialysis), **Guaranteed Acceptance Life Insurance** guarantees approval with zero health questions asked.
+For individuals with severe pre-existing medical conditions (such as active cancer treatment or kidney dialysis), **Guaranteed Issue Life Insurance** provides options with zero health questions asked (subject to graded waiting periods).
 
 > Protect your children and spouse today. Request your instant price quote from licensed broker Andres H. Bozo.
             `,
@@ -177,8 +177,8 @@ El seguro de Gastos Finales (también conocido como seguro de entierro o funeral
 #### Principales Beneficios:
 1. **Primas Congeladas:** Su tarifa mensual nunca aumentará con la edad o cambios en su salud.
 2. **Cobertura Permanente:** La póliza no vence ni se cancela mientras mantenga sus pagos.
-3. **Sin Exámenes Médicos:** La mayoría de los planes se aprueban con preguntas de salud básicas.
-4. **Pago Rápido al Beneficiario:** El beneficio por fallecimiento se entrega directamente a sus beneficiarios libre de impuestos, en cuestión de días.
+3. **Opciones de Emisión Simplificada:** Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante.
+4. **Pago a Beneficiarios:** Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado.
 
 ### Tarifas Mensuales Promedio en Florida
 * **Edad 55–60:** $30 – $50/mes por $10,000 de cobertura
@@ -186,7 +186,7 @@ El seguro de Gastos Finales (también conocido como seguro de entierro o funeral
 * **Edad 75–80:** $70 – $120/mes por $10,000 de cobertura
 
 ### Pólizas de Emisión Garantizada
-Para personas con condiciones médicas preexistentes graves, existen pólizas de **Aceptación Garantizada** sin preguntas médicas.
+Para personas con condiciones médicas preexistentes graves, existen pólizas de **Emisión Garantizada** sin preguntas médicas (sujetas a períodos de espera graduados).
 
 > Cotice hoy mismo con el corredor licenciado Andrés H. Bozo llamando al **+1 (352) 225-8389**.
             `

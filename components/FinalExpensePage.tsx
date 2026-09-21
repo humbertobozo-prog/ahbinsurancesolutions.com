@@ -44,7 +44,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "¿Cuál es la diferencia entre un Seguro de Gastos Finales y un Contrato Funerario Prepagado (Pre-Need)?",
-            a: "Un contrato prepagado lo ata exclusivamente a una funeraria específica. Si esa empresa quiebra, cambia de administración o usted se muda de ciudad o estado, transferir o recuperar los fondos puede ser muy complejo o penalizado. Un seguro de gastos finales entrega dinero en efectivo directo y libre de impuestos federales a sus beneficiarios, quienes pueden contratar cualquier funeraria o servicio en Florida o en todo Estados Unidos con absoluta libertad."
+            a: "Un contrato prepagado lo ata exclusivamente a una funeraria específica. Si esa empresa quiebra, cambia de administración o usted se muda de ciudad o estado, transferir o recuperar los fondos puede ser muy complejo o penalizado. Los beneficios por fallecimiento de un seguro de gastos finales se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado, dándoles libertad para contratar cualquier funeraria o servicio en Florida o en todo el país."
         },
         {
             q: "¿Puedo calificar si tengo condiciones preexistentes como Diabetes o Hipertensión?",
@@ -69,7 +69,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "What is the difference between Final Expense Insurance and a Pre-Need Funeral Plan?",
-            a: "Pre-need plans lock your funds with one specific local funeral home. If that funeral home changes ownership, closes, or if you relocate out of state, transferring funds can be difficult or costly. Final Expense insurance delivers tax-free cash directly to your designated beneficiaries, giving them total freedom to choose any provider nationwide."
+            a: "Pre-need plans lock your funds with one specific local funeral home. If that funeral home changes ownership, closes, or if you relocate out of state, transferring funds can be difficult or costly. Death benefits from a final expense policy are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome, giving them total freedom to choose any provider nationwide."
         },
         {
             q: "Can I qualify with pre-existing conditions like diabetes or high blood pressure?",
@@ -203,8 +203,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs
-                                ? 'Evite que sus hijos o cónyuge enfrenten deudas repentinas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con primas fijas garantizadas y desembolso libre de impuestos.'
-                                : 'Protect your children and spouse from taking on $10,000+ in sudden funeral debt. Permanent whole life coverage with contractually locked rates and fast, tax-free cash payouts.'}
+                                ? 'Evite que sus hijos o cónyuge enfrenten deudas repentinas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con primas fijas garantizadas. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante.'
+                                : 'Protect your children and spouse from taking on $10,000+ in sudden funeral debt. Permanent whole life coverage with contractually locked rates. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -533,17 +533,17 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                     {/* 9. BENEFICIARIES & FINANCIAL CONTROL */}
                     <section id="beneficiaries" className="space-y-4">
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? 'Beneficiarios: Control Total del Dinero Libre de Impuestos' : 'Beneficiaries & Complete Financial Control'}
+                            {isEs ? 'Beneficiarios: Pago de Beneficios y Tratamiento Fiscal' : 'Beneficiaries & Benefit Payout Structure'}
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Al contratar un seguro de gastos finales, usted designa libremente a uno o varios beneficiarios (cónyuge, hijos, hermanos o persona de confianza). Conforme a la Sección 101(a) del Código de Rentas Internas (IRC §101(a)), el beneficio por fallecimiento se entrega en cheque o depósito directo completamente libre de impuestos sobre la renta federales.' 
-                                : 'When setting up your final expense policy, you designate your beneficiaries (spouse, adult children, or trusted loved ones). Under Internal Revenue Code Section 101(a) (IRC §101(a)), death benefits are disbursed via check or electronic transfer completely free of federal income tax.'}
+                                ? 'Al contratar un seguro de gastos finales, usted designa libremente a sus beneficiarios (cónyuge, hijos o persona de confianza). Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado.' 
+                                : 'When setting up your final expense policy, you designate your beneficiaries (spouse, adult children, or trusted loved ones). Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary\'s circumstances can affect the outcome.'}
                         </p>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'A diferencia de los contratos prepagados funerarios (Pre-Need Plans) donde los fondos quedan atados a una empresa específica, sus beneficiarios reciben el efectivo en cuestión de días y tienen total libertad para contratar cualquier funeraria en Florida o en cualquier estado del país, negociar precios justos y destinar el dinero restante a deudas familiares.' 
-                                : 'Unlike pre-need funeral contracts where funds are frozen with a single funeral home company, your beneficiaries receive unrestricted cash within days. They have total freedom to select any provider nationwide, negotiate fair market rates, and apply any remaining balance toward family bills.'}
+                                ? 'A diferencia de los contratos prepagados funerarios (Pre-Need Plans) donde los fondos quedan atados a una empresa específica, sus beneficiarios reciben los fondos según las condiciones de la póliza y tienen libertad para contratar cualquier funeraria en Florida o en cualquier estado del país, comparar costos y destinar los fondos remanentes según sus necesidades.' 
+                                : 'Unlike pre-need funeral contracts where funds are frozen with a single funeral home company, your beneficiaries receive funds according to policy terms. They have freedom to select any provider nationwide, evaluate service options, and utilize any remaining funds according to their needs.'}
                         </p>
                     </section>
 

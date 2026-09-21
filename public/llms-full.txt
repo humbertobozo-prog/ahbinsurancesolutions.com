@@ -2,7 +2,7 @@
 
 > Complete knowledge base for AI agents, LLM assistants, and WebMCP crawlers describing AHB Insurance Solutions, products, services, compliance rules, and state coverage in Florida.
 
-AHB Insurance Solutions is an independent insurance brokerage operating statewide in Florida. Led by licensed insurance broker Andres H. Bozo (NPN 21228432), AHB Insurance Solutions represents more than 80 A-rated national insurance companies (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, AIG, Transamerica, and Corebridge Financial).
+AHB Insurance Solutions is an independent insurance brokerage operating statewide in Florida. Led by licensed insurance broker Andres H. Bozo (NPN 21228432), AHB Insurance Solutions works with more than 80 top-rated and state-licensed national insurance companies (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, AIG, Transamerica, and Corebridge Financial).
 
 ---
 
@@ -28,10 +28,11 @@ Spanish URL: /es/gastos-finales
 Final Expense insurance is whole life insurance designed to pay for funeral services, cremation, medical bills, and outstanding debts upon the policyholder's death.
 
 ### Key Benefits
-- **Coverage Amounts**: $5,000 to $35,000 in immediate cash benefit paid directly to named beneficiaries.
-- **Level Premiums**: Monthly premiums are locked in for life and will NEVER increase.
-- **Guaranteed Acceptance**: Simplified underwriting with no physical medical exams, blood draws, or urine tests required.
-- **Immediate Benefit**: Day-1 coverage options available for applicants with controlled health conditions (e.g. hypertension, type 2 diabetes).
+- **Coverage Amounts**: $5,000 to $35,000 in whole life insurance protection paid to named beneficiaries according to policy terms.
+- **Level Premiums**: Monthly premiums are contractually locked in for life and will never increase.
+- **Simplified Underwriting Options**: Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Guaranteed issue options are also available for applicants with severe health conditions (subject to graded waiting periods).
+- **Day-1 Benefit Options**: Immediate level coverage options available for applicants who qualify through standard simplified underwriting.
+- **Tax Considerations**: Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome.
 
 ---
 
@@ -43,9 +44,9 @@ Spanish URL: /es/iul-retirement
 Indexed Universal Life (IUL) is permanent life insurance that combines death benefit protection with tax-advantaged cash value growth linked to stock market indices like the S&P 500.
 
 ### Core Features
-- **0% Guaranteed Floor**: Principal and accumulated interest are 100% protected against stock market drops. If the index drops, your cash value returns 0% (no loss).
-- **Tax-Free Growth & Distributions**: Cash value grows tax-deferred, and policyholders can access tax-free cash through policy loans during retirement under IRS Code Section 7702.
-- **Living Benefits**: Accelerated death benefit riders allow policyholders to access funds while alive in the event of terminal, chronic, or critical illness.
+- **Contractual 0% Crediting Floor**: The index-crediting component has a contractual 0% floor against negative market index returns (the policy is not directly invested in equities; policy charges, cost of insurance, and withdrawals affect total cash value).
+- **Tax-Advantaged Growth & Policy Loans**: Cash value grows on a tax-deferred basis, and policy loans may provide access to cash value with potentially favorable federal tax treatment under IRS Code Section 7702 when the policy is structured properly, is not a MEC, and remains in force.
+- **Living Benefits**: Accelerated death benefit riders allow policyholders to access funds while alive in the event of qualifying terminal, chronic, or critical illness.
 
 ---
 

@@ -28,7 +28,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
     const faqs = isEs ? [
         {
             q: '¿Qué es un plan Suplementario de Medicare (Medigap)?',
-            a: 'Los planes Suplementarios de Medicare (Medigap) son pólizas privadas que ayudan a pagar los costos de bolsillo no cubiertos por el Medicare Original, como el coseguro del 20%, copagos y deducibles. Le permiten acudir a cualquier médico o centro de EE.UU. que acepte Medicare.'
+            a: 'Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como deducibles, copagos y coseguros). Le permiten acudir a cualquier médico o centro de salud de EE.UU. que acepte Medicare Original.'
         },
         {
             q: '¿Cuál es la diferencia entre Medigap Plan G y Plan N?',
@@ -57,7 +57,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
     ] : [
         {
             q: 'What is a Medicare Supplement (Medigap) plan?',
-            a: 'Medicare Supplement (Medigap) plans are private insurance policies that pay for out-of-pocket costs not covered by Original Medicare, such as the 20% coinsurance, copays, and deductibles. They allow you to visit any doctor or hospital nationwide that accepts Medicare.'
+            a: 'Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select (such as deductibles, copays, and coinsurance). They allow you to visit any doctor or hospital nationwide that accepts Original Medicare.'
         },
         {
             q: 'What is the difference between Medigap Plan G and Plan N?',

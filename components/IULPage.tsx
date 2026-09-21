@@ -21,19 +21,19 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
         : 'Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance';
 
     const description = isEs 
-        ? 'Aprenda cómo el IUL protege su capital con piso del 0% contra caídas del mercado y permite estrategias de préstamos para el retiro con ventajas fiscales según el Código IRS 7702.' 
-        : 'Discover how Indexed Universal Life (IUL) protects wealth with a 0% market downside floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.';
+        ? 'Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos sobre póliza con ventajas fiscales bajo el Código IRS 7702.' 
+        : 'Discover how Indexed Universal Life (IUL) provides index-crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     const faqs = isEs ? [
         {
             q: "¿Cómo funciona la garantía de piso del 0% en un seguro IUL?",
-            a: "En una póliza IUL, su dinero en efectivo no está invertido directamente en la bolsa de valores. En su lugar, el rendimiento se acredita en función de un índice (como el S&P 500). Si el índice cae un 20% o 30% durante un colapso financiero, la cláusula de piso del 0% garantiza que su saldo en efectivo no pierde ni un solo dólar por fluctuaciones del mercado."
+            a: "El componente de acreditación indexada de un IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total."
         },
         {
             q: "¿Los préstamos para el retiro de una póliza IUL son dinero libre de impuestos garantizado?",
-            a: "No. Un préstamo sobre la póliza (policy loan) no es dinero gratuito ni libre de impuestos de forma incondicional. Bajo los Códigos IRS 7702 y 72(e), los retiros hasta la base de costo (primas pagadas) y los préstamos tomados contra el valor en efectivo no se consideran ingresos imponibles mientras la póliza permanezca activa y en vigor. Sin embargo, si la póliza caduca (lapse), se entrega o se cancela con un préstamo pendiente superior a la base de primas pagadas, el monto adeudado en exceso se convierte de inmediato en ingreso ordinario gravable. Por ello, una estrategia de IUL requiere monitoreo periódico y un diseño prudente con cláusulas de protección contra sobrepréstamos."
+            a: "Los préstamos sobre la póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal federal potencialmente favorable cuando la póliza está estructurada adecuadamente, no es un Contrato de Dotación Modificada (MEC), se mantiene en vigor y se cumplen los requisitos fiscales aplicables. Si la póliza caduca (lapse), se entrega o se cancela con un préstamo pendiente superior a la base de primas pagadas, el monto adeudado en exceso se convierte de inmediato en ingreso ordinario gravable. Por ello, una estrategia de IUL requiere monitoreo periódico, un diseño prudente y la consulta con un asesor tributario calificado."
         },
         {
             q: "¿Qué son los Beneficios en Vida (Living Benefits) incluidos en una póliza IUL?",
@@ -49,12 +49,12 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
         }
     ] : [
         {
-            q: "How does the 0% downside market floor work in an IUL policy?",
-            a: "With Indexed Universal Life, your cash value is not invested directly in equity markets. Instead, your interest crediting is linked to an index like the S&P 500. When the market plunges 20% or 30%, the 0% floor guarantees your principal cash value receives 0% loss—protecting your accumulated wealth from market crashes."
+            q: "How does the 0% index crediting floor work in an IUL policy?",
+            a: "The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return. However, policy charges, cost of insurance (COI), loans, withdrawals and other contract provisions can affect overall cash value."
         },
         {
             q: "Are retirement policy loans from an IUL guaranteed tax-free money?",
-            a: "No. A policy loan is not guaranteed free money. Under IRS Tax Code 7702 and Section 72(e), cash value withdrawals up to cost basis and collateralized policy loans are not treated as taxable gross income as long as the policy remains active and in force. However, if the policy lapses, is surrendered, or terminates before death with an outstanding loan balance exceeding the total premiums paid, that unpaid loan balance becomes immediately taxable as ordinary income in that tax year. Maintaining tax advantages requires disciplined policy management, sufficient cash reserves, and overloan protection riders."
+            a: "Policy loans may provide access to cash value with potentially favorable federal tax treatment when the policy remains in force, is structured properly, is not a Modified Endowment Contract (MEC), and applicable tax requirements are satisfied. If the policy lapses, is surrendered, or terminates before death with an outstanding loan balance exceeding the total premiums paid, that unpaid loan balance becomes immediately taxable as ordinary income. Maintaining tax advantages requires disciplined policy management and consulting a qualified tax professional."
         },
         {
             q: "What are Living Benefits (Accelerated Death Benefit Riders) in an IUL?",
@@ -222,21 +222,21 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs ? (
                                 <>
-                                    Combine potencial de crecimiento ligado a índices como el S&P 500, protección garantizada con piso del 0% contra caídas de mercado y estrategias de préstamos sobre póliza con ventajas fiscales para el retiro
+                                    Combine potencial de crecimiento ligado a índices como el S&P 500, un piso contractual del 0% en la acreditación indexada y estrategias de préstamos sobre póliza con ventajas fiscales potenciales
                                     <InfoTooltip 
-                                        text="El estatus libre de impuestos se basa en retiros de base y préstamos sobre póliza bajo el Código IRS 7702. Depende del mantenimiento y fondeo continuo de la póliza para evitar lapsos y cargos tributarios imprevistos." 
+                                        text="Los préstamos y retiros sobre póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal favorable si la póliza no es un MEC, se mantiene activa y cumple con los requisitos del IRS. Los cargos del seguro y costos contractuales afectan el valor en efectivo." 
                                         label="Aviso sobre ventajas fiscales y mantenimiento de la póliza"
                                     />
-                                    {' '}(sujeto a la adecuada estructura, fondeo y mantenimiento del contrato).
+                                    {' '}(sujeto a la adecuada estructura, fondeo, términos contractuales y mantenimiento de la póliza).
                                 </>
                             ) : (
                                 <>
-                                    Participate in index gains tied to the S&P 500, backed by a guaranteed 0% market downside floor and tax-free retirement policy loan strategies
+                                    Combine index-linked growth potential, a contractual 0% floor on index crediting, and policy loan strategies with potentially favorable federal tax treatment
                                     <InfoTooltip 
-                                        text="Tax-free status is achieved via policy loans and withdrawals under IRS Code 7702. It requires ongoing policy maintenance, adequate funding to cover rising insurance charges (COI), and preventing policy lapse so unpaid loans do not become taxable ordinary income." 
+                                        text="Policy loans and withdrawals may provide access to cash value with potentially favorable federal tax treatment when the policy is not a MEC, remains in force, and applicable tax requirements are satisfied. Policy charges, COI, and loans affect cash value. Consult a qualified tax professional." 
                                         label="Tax-advantaged retirement notice"
                                     />
-                                    {' '}(subject to proper funding, structure, and ongoing policy maintenance).
+                                    {' '}(subject to proper funding, contract terms, and ongoing policy maintenance).
                                 </>
                             )}
                         </p>
@@ -268,22 +268,22 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                     {/* How IUL Works Mechanics */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-4">
-                            {isEs ? '¿Cómo Funciona el Motor Financiero de un IUL?' : 'The Financial Engine Behind an IUL Policy'}
+                            {isEs ? '¿Cómo Funciona el Mecanismo de Acreditación de un IUL?' : 'The Index-Crediting Mechanism of an IUL Policy'}
                         </h2>
                         <p className="text-gray-700 text-base leading-relaxed mb-6">
                             {isEs 
-                                ? 'A diferencia de las acciones directas o los fondos mutuos, una póliza IUL separa su dinero del riesgo bursátil directo mediante el uso de opciones sobre índices. Esto crea la regla dorada del IUL: "Cero es su héroe".'
-                                : 'Unlike direct stock investments or mutual funds, an IUL policy protects your money from market crashes using index call options. This enables the core IUL axiom: "Zero is your hero".'}
+                                ? 'En una póliza de Vida Universal Indexada, el valor en efectivo no está invertido directamente en acciones o fondos del mercado. El interés se acredita según el rendimiento del índice de referencia elegido (como el S&P 500) sujeto a reglas contractuales:'
+                                : 'In an Indexed Universal Life policy, cash value is not invested directly in stocks or equity funds. Interest is credited based on the performance of a selected market index (such as the S&P 500) subject to specific contract rules:'}
                         </p>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200">
                                 <span className="text-primary font-black text-2xl block mb-2">01.</span>
-                                <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Piso del 0% Garantizado' : '0% Downside Floor'}</h3>
+                                <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Piso Contractual del 0%' : 'Contractual 0% Crediting Floor'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Si el índice S&P 500 se desploma un 15%, 25% o 40%, su interés acreditado es del 0%. Su saldo acumulado anterior queda intocable.' 
-                                        : 'When the S&P 500 index drops 15%, 25%, or 40%, your policy receives 0% interest—preserving 100% of prior gains.'}
+                                        ? 'El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo. Sin embargo, los cargos de la póliza y costos del seguro se siguen deduciendo.' 
+                                        : 'The index-crediting component has a contractual 0% floor, meaning the strategy is not credited with a negative index return. However, policy charges, cost of insurance, and withdrawals still apply.'}
                                 </p>
                             </div>
 
@@ -292,8 +292,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Participación en Mercados Alcistas' : 'Upside Growth Potential'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Cuando los mercados suben, usted recibe rendimientos hasta un tope de tasa ("Cap") típicamente entre 8% y 12% o tasas de participación ilimitadas.' 
-                                        : 'During bull market cycles, your account yields interest up to capped rates (8%-12%) or via uncapped participation strategies.'}
+                                        ? 'Cuando los mercados suben, usted recibe rendimientos hasta un tope de tasa ("Cap") típicamente entre 8% y 12% o tasas de participación ilimitadas según la opción de la aseguradora.' 
+                                        : 'During upward index periods, your policy is credited with interest up to a specified cap rate (typically 8%-12%) or participation rate defined in the contract.'}
                                 </p>
                             </div>
 
@@ -302,8 +302,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Crecimiento con Impuestos Diferidos' : 'Tax-Deferred Accumulation'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'El crecimiento del valor en efectivo acumula intereses con impuestos diferidos bajo la Sección 7702 del IRS, lo que permite capitalizar sin impuestos anuales por plusvalías.' 
-                                        : 'Cash value accumulates on a tax-deferred basis under IRS Section 7702, allowing interest to compound without yearly capital gains tax friction.'}
+                                        ? 'El crecimiento del valor en efectivo acumula intereses con impuestos diferidos bajo la Sección 7702 del IRS, lo que permite capitalizar sin impuestos anuales por plusvalías mientras la póliza esté activa.' 
+                                        : 'Cash value accumulates on a tax-deferred basis under IRS Section 7702, allowing credited interest to compound without yearly capital gains tax while the policy remains in force.'}
                                 </p>
                             </div>
                         </div>
@@ -322,8 +322,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <thead className="bg-primary text-white text-xs uppercase font-bold">
                                     <tr>
                                         <th className="p-3.5 rounded-tl-xl">{isEs ? 'Criterio Financiero' : 'Financial Metric'}</th>
-                                        <th className="p-3.5 bg-primary text-accent font-black">IUL (Código 7702)</th>
-                                        <th className="p-3.5">401(k) / IRA Tradicional</th>
+                                        <th className="p-3.5 bg-primary text-accent font-black">{isEs ? 'IUL (Código 7702)' : 'IUL (IRS Code 7702)'}</th>
+                                        <th className="p-3.5">{isEs ? '401(k) / IRA Tradicional' : 'Traditional 401(k) / IRA'}</th>
                                         <th className="p-3.5 rounded-tr-xl bg-gray-800">Roth IRA</th>
                                     </tr>
                                 </thead>
@@ -345,26 +345,42 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                                 />
                                             </span>
                                         </td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Tributa como Ingreso Ordinario</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% Libre de Impuestos (tras 5 años)</td>
+                                        <td className="p-3.5 text-amber-700 font-bold">
+                                            {isEs ? 'Tributa como Ingreso Ordinario' : 'Taxed as Ordinary Income'}
+                                        </td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            {isEs ? '100% Libre de Impuestos (tras 5 años)' : '100% Tax-Free (After 5 Years & 59½)'}
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3.5 font-bold">{isEs ? 'Protección contra Caídas Bursátiles' : 'Market Downside Protection'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Garantía del 0% (Sin Pérdida)</td>
-                                        <td className="p-3.5 text-red-600">Sin Protección (Riesgo Total)</td>
-                                        <td className="p-3.5 text-red-600">Sin Protección (Riesgo Total)</td>
+                                        <td className="p-3.5 font-bold">{isEs ? 'Piso de Acreditación ante Caídas' : 'Market Index Downside Crediting'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? 'Piso Contractual del 0% (Sin interés de índice negativo)*' : 'Contractual 0% Floor (No negative index crediting)*'}</td>
+                                        <td className="p-3.5 text-red-600">{isEs ? 'Sin Protección (Riesgo bursátil total)' : 'No Protection (Full market risk)'}</td>
+                                        <td className="p-3.5 text-red-600">{isEs ? 'Sin Protección (Riesgo bursátil total)' : 'No Protection (Full market risk)'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Límite Anual de Contribución' : 'Annual Contribution Limits'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Sin Límite Estatutario IRS (Sujeto a diseño)</td>
-                                        <td className="p-3.5 text-gray-600">Tope de $23,500/año (2026)</td>
-                                        <td className="p-3.5 text-gray-600">Tope estricto de $7,000/año</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            {isEs ? 'Sin Límite Estatutario IRS (Sujeto a diseño)' : 'No Statutory IRS Limit (Subject to policy design)'}
+                                        </td>
+                                        <td className="p-3.5 text-gray-600">
+                                            {isEs ? 'Tope de $23,500/año (2026)' : 'Capped at $23,500/yr (2026)'}
+                                        </td>
+                                        <td className="p-3.5 text-gray-600">
+                                            {isEs ? 'Tope estricto de $7,000/año' : 'Strict Cap of $7,000/yr (2026)'}
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Límite de Ingresos para Calificar' : 'Income Eligibility Cap'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Sin Límite de Ingresos</td>
-                                        <td className="p-3.5 text-gray-600">Sin Límite</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Eliminado a altos ingresos</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            {isEs ? 'Sin Límite de Ingresos' : 'No Income Limits'}
+                                        </td>
+                                        <td className="p-3.5 text-gray-600">
+                                            {isEs ? 'Sin Límite' : 'No Income Limits'}
+                                        </td>
+                                        <td className="p-3.5 text-amber-700 font-bold">
+                                            {isEs ? 'Eliminado a altos ingresos' : 'Phased Out for High Earners'}
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Acceso Antes de los 59.5 Años' : 'Access Before Age 59½'}</td>
@@ -373,14 +389,24 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                                 ? 'Sin penalidad del 10% del IRS en préstamos de pólizas no-MEC (requiere gestión activa para evitar lapse)*' 
                                                 : 'No 10% IRS penalty on non-MEC policy loans (requires ongoing management to prevent lapse)*'}
                                         </td>
-                                        <td className="p-3.5 text-red-600">Penalidad del 10% del IRS (salvo excepción)</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Solo aportes directos sin penalidad</td>
+                                        <td className="p-3.5 text-red-600">
+                                            {isEs ? 'Penalidad del 10% del IRS (salvo excepción)' : '10% IRS Penalty (Unless exempt)'}
+                                        </td>
+                                        <td className="p-3.5 text-amber-700 font-bold">
+                                            {isEs ? 'Solo aportes directos sin penalidad' : 'Contributions accessible penalty-free; earnings penalized'}
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Protección Familiar (Fallecimiento)' : 'Death Benefit Protection'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Beneficio por Fallecimiento Exento de Impuestos</td>
-                                        <td className="p-3.5 text-gray-600">No Incluye Seguro de Vida</td>
-                                        <td className="p-3.5 text-gray-600">No Incluye Seguro de Vida</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            {isEs ? 'Beneficio por Fallecimiento Exento de Impuestos' : 'Income-Tax-Free Death Benefit'}
+                                        </td>
+                                        <td className="p-3.5 text-gray-600">
+                                            {isEs ? 'No Incluye Seguro de Vida' : 'No Life Insurance Benefit'}
+                                        </td>
+                                        <td className="p-3.5 text-gray-600">
+                                            {isEs ? 'No Incluye Seguro de Vida' : 'No Life Insurance Benefit'}
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

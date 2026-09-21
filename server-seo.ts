@@ -144,11 +144,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>2. Seguro de Gastos Finales y Entierro para Adultos Mayores</h3>
-            <p>Los costos promedio de funeral, cremación o servicio conmemorativo en Florida oscilan entre $7,000 y $12,000, representando un impacto financiero repentino para los seres queridos. El pago único por fallecimiento del Seguro Social federal es de tan solo $255. Nuestras pólizas de gastos finales ofrecen protección de vida entera con beneficios en efectivo de $5,000 a $35,000. Cuentan con tarifas congeladas que nunca aumentan con la edad, el beneficio por muerte nunca disminuye y no requieren exámenes médicos invasivos ni agujas. Los fondos se entregan a sus beneficiarios libres de impuestos sobre la renta en cuestión de días tras el reclamo.</p>
+            <p>Los costos promedio de funeral, cremación o servicio conmemorativo en Florida oscilan entre $7,000 y $12,000, representando un impacto financiero repentino para los seres queridos. El pago único por fallecimiento del Seguro Social federal es de tan solo $255. Nuestras pólizas de gastos finales ofrecen protección de vida entera con beneficios en efectivo de $5,000 a $35,000 y tarifas congeladas. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante. Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado.</p>
           </article>
           <article>
-            <h3>3. Seguro de Vida Universal Indexado (IUL) y Jubilación Libre de Impuestos</h3>
-            <p>La Vida Universal Indexada (IUL) es una estrategia de seguro de vida permanente que protege a su familia y al mismo tiempo construye un sólido valor en efectivo para el retiro. El crecimiento financiero está vinculado al desempeño de índices de mercado como el S&P 500, con un piso contractual garantizado del 0% contra caídas del mercado de valores. Conforme a la Sección 7702 del Código del IRS, puede solicitar préstamos de la póliza para generar ingresos de jubilación libres de impuestos, sin las penalidades de edad ni los límites obligatorios de retiro que aplican a las cuentas 401(k) o IRA tradicionales.</p>
+            <h3>3. Seguro de Vida Universal Indexado (IUL) y Estrategias con Ventajas Fiscales</h3>
+            <p>La Vida Universal Indexada (IUL) combina protección permanente de seguro de vida con un componente de valor en efectivo. El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro y cargos contractuales afectan el valor en efectivo total. Bajo el Código IRS 7702, los préstamos de póliza pueden brindar acceso a capital con tratamiento fiscal potencialmente favorable si la póliza se estructura adecuadamente, no es un MEC y se mantiene en vigor (consulte a un profesional tributario calificado).</p>
           </article>
           <article>
             <h3>4. Anualidades Fijas y Pólizas Dentales, de Visión y Audición</h3>
@@ -168,9 +168,9 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h3>¿Cuándo es el mejor momento para contratar un seguro suplementario Medigap en Florida?</h3>
           <p>El momento más favorable es durante su Período de Inscripción Abierta de Medigap de 6 meses, que inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante esta ventana tiene Derechos de Emisión Garantizada, lo que impide que las aseguradoras rechacen su cobertura o aumenten su precio por antecedentes de salud.</p>
           <h3>¿Puedo calificar para seguro de entierro si tengo enfermedades previas?</h3>
-          <p>Sí. La mayoría de las pólizas de gastos finales cuentan con emisión simplificada sin chequeos médicos ni muestras de sangre. Incluso adultos mayores con historial de presión alta, diabetes u otros padecimientos crónicos pueden calificar para cobertura inmediata o con beneficios graduados.</p>
+          <p>Sí. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante. Incluso adultos mayores con historial de condiciones preexistentes pueden calificar para cobertura de nivel inmediato o con beneficios graduados.</p>
           <h3>¿Cómo protege una póliza IUL mi dinero de las crisis bursátiles?</h3>
-          <p>Las pólizas IUL poseen una cláusula de piso del 0%. En los años en que la bolsa de valores registra pérdidas, su rendimiento no baja de cero, lo que significa que su capital acumulado y las ganancias logradas en períodos previos quedan 100% blindados.</p>
+          <p>Las pólizas IUL poseen una cláusula de piso del 0%. En los períodos en que el índice bursátil de referencia registra pérdidas, su rendimiento indexado no baja de cero (el valor en efectivo no está invertido directamente en la bolsa y está sujeto a los costos administrativos de la póliza y a la solidez financiera de la aseguradora emisora).</p>
         </section>
         <section>
           <h2>Servicios en Español y Enlaces Principales</h2>
@@ -195,7 +195,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we represent over 80 of the nation's premier A-rated insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide unbiased advice, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
+          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with over 80 top-rated and state-licensed insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide unbiased guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
           <h2>Our Specialized Florida Insurance Solutions</h2>
@@ -205,11 +205,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>2. Final Expense & Burial Life Insurance for Florida Seniors</h3>
-            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000. These plans feature level premiums that remain locked for life and death benefits that never decrease. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Benefit checks are paid directly to your chosen beneficiaries completely free of federal income tax within days of approval.</p>
+            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000 with locked rates. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome.</p>
           </article>
           <article>
-            <h3>3. Indexed Universal Life (IUL) for Tax-Advantaged Wealth & Retirement</h3>
-            <p>Indexed Universal Life (IUL) insurance combines permanent death benefit protection with an efficient cash value growth component. Cash value growth is tied to the upward trajectory of major stock indexes like the S&P 500, protected by a guaranteed contractual 0% floor against market drops. Under Internal Revenue Code Section 7702, you can take policy loans to generate a tax-free retirement income stream, bypassing the mandatory minimum distribution rules and early withdrawal penalties found in traditional 401(k) and IRA retirement accounts.</p>
+            <h3>3. Indexed Universal Life (IUL) for Tax-Advantaged Wealth & Retirement Planning</h3>
+            <p>Indexed Universal Life (IUL) insurance combines permanent death benefit protection with an index-linked cash value component. The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value. Under Internal Revenue Code Section 7702, policy loans may provide access to cash value with potentially favorable federal tax treatment when the policy is structured properly, is not a Modified Endowment Contract (MEC), remains in force, and applicable tax requirements are satisfied (consult a qualified tax professional).</p>
           </article>
           <article>
             <h3>4. Fixed Guaranteed Annuities & Senior Dental, Vision and Hearing</h3>
@@ -219,7 +219,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Why Choose AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across over 80 A-rated insurance carriers.</li>
+            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across over 80 top-rated and state-licensed insurance carriers.</li>
             <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
             <li><strong>Bilingual, Client-Focused Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance broker fluent in English and Spanish.</li>
           </ul>
@@ -229,9 +229,9 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h3>What is the best time to purchase a Medigap plan in Florida?</h3>
           <p>The premier time is during your 6-month Medigap Open Enrollment window, which starts the first day of the month you turn 65 and are enrolled in Medicare Part B. During this period, you have federal Guaranteed Issue rights, meaning insurance companies cannot deny you coverage or increase your premiums based on pre-existing medical conditions.</p>
           <h3>Can seniors with health challenges qualify for burial insurance?</h3>
-          <p>Yes. Final expense life insurance policies are built with simplified underwriting or guaranteed acceptance options that do not require physical examinations or blood work. Seniors managing diabetes, high blood pressure, or past heart conditions can obtain immediate or graded whole life protection.</p>
-          <h3>How does an IUL shield my retirement cash value from market losses?</h3>
-          <p>Every IUL contract includes an annual 0% minimum interest floor. When market indexes suffer severe corrections or downturns, your account is credited with 0% interest rather than negative returns, permanently securing your principal and all earlier credited gains.</p>
+          <p>Yes. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Guaranteed issue options are also available for applicants managing serious chronic health conditions.</p>
+          <h3>How does the 0% index crediting floor work in an IUL?</h3>
+          <p>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return when markets drop. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value.</p>
         </section>
         <section>
           <h2>Explore Coverage Options & Bilingual Assistance</h2>
@@ -272,7 +272,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage</h2>
-          <p>Medigap (como el Plan G o el Plan N) funciona como seguro secundario al Medicare Original (Partes A y B). Cubre el 20% de copagos y coseguros sin restricciones de red ni requerimientos de referidos en ningún hospital o clínica de EE.UU.</p>
+          <p>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N), funcionando como seguro secundario al Medicare Original (Partes A y B) sin restricciones de red ni requerimientos de referidos en ningún hospital o clínica que acepte Medicare en EE.UU.</p>
           <p>Por otro lado, Medicare Advantage (Parte C) reemplaza al Medicare Original mediante redes administradas privadas (HMO o PPO) con copagos por visita y requerimientos de pre-autorización médica.</p>
         </section>
         <section>
@@ -282,7 +282,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Preguntas Frecuentes de Medicare Suplementario</h2>
           <h3>¿Cuánto cuestan las primas de Medigap en Florida en 2026?</h3>
-          <p>Las primas varían por código postal (ZIP), edad, género según metodología aplicable, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), evaluación médica (underwriting), condición de fumador, descuentos por hogar y fecha de vigencia. No constituyen una tarifa general o fija para el estado de Florida. Como ejemplo ilustrativo de muestra (Enero 2026, registros referenciales en condados seleccionados de Florida Central para un perfil de 65 años no fumador), un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales antes de descuentos de hogar. “Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”</p>
+          <p>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica.</p>
         </section>
       `;
     } else {
@@ -293,7 +293,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Understanding Original Medicare Gaps & Supplement Solutions</h2>
-          <p>Medigap (such as Plan G or Plan N) acts as secondary insurance to Original Medicare (Parts A & B), paying the 20% coinsurance gaps with zero doctor network restrictions or referral mandates anywhere in the U.S.</p>
+          <p>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. They act as secondary insurance to Original Medicare (Parts A & B) with zero doctor network restrictions or referral mandates anywhere in the U.S.</p>
           <p>In contrast, Medicare Advantage (Part C) replaces Original Medicare with a private managed-care network (HMO or PPO) requiring copays, prior authorizations, and county-restricted networks in Florida.</p>
         </section>
         <section>
@@ -302,7 +302,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
         <section>
           <h2>Florida Medigap Plan G vs Plan N Costs 2026</h2>
-          <p>Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison. As an illustrative example (dated January 2026, public sample carrier filings for a 65-year-old non-smoker in select Central Florida ZIP codes), Plan G sample premiums typically range between $140 and $185 per month, and Plan N between $100 and $145 per month prior to household discounts, but individual rates may be higher or lower depending on your exact profile.</p>
+          <p>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), underwriting, household discounts, and geographic area.</p>
         </section>
       `;
     }
@@ -353,8 +353,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Las tarifas nunca aumentan con la edad ni por cambios de salud. La póliza nunca vence mientras las cuotas se mantengan al día.</p>
         </section>
         <section>
-          <h2>Beneficiarios y Control Total del Dinero</h2>
-          <p>El dinero en efectivo se entrega directamente a sus beneficiarios libres de impuestos sobre la renta (IRC §101(a)). A diferencia de los contratos prepagados de funerarias, su familia tiene libertad absoluta para elegir cualquier funeraria en Florida o en todo EE.UU.</p>
+          <h2>Beneficiarios y Pago de Beneficios</h2>
+          <p>Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado. A diferencia de los contratos prepagados de funerarias, su familia tiene libertad para elegir cualquier funeraria en Florida o en todo EE.UU.</p>
         </section>
         <section>
           <h2>Comparativa: Gastos Finales vs. Seguro a Término vs. Funeraria Prepagada</h2>
@@ -400,8 +400,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Monthly rates are locked at your issue age and never rise. Coverage never expires as long as premiums are paid.</p>
         </section>
         <section>
-          <h2>Beneficiaries & Complete Financial Freedom</h2>
-          <p>Tax-free cash (IRC §101(a)) paid directly to your designated beneficiaries within days, giving them complete freedom to choose any funeral provider nationwide, unlike restrictive pre-need funeral home contracts.</p>
+          <h2>Beneficiaries & Benefit Payouts</h2>
+          <p>Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome. Unlike restrictive pre-need funeral contracts, your family has freedom to choose any provider nationwide.</p>
         </section>
         <section>
           <h2>Comparison: Final Expense vs. Term Life vs. Pre-Need Funeral Plans</h2>
@@ -421,8 +421,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Guía Completa de Vida Universal Indexada (IUL) en Florida 2026 | AHB Insurance" 
       : "Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance";
     description = isEs 
-      ? "Aprenda cómo el IUL protege sus ahorros con piso del 0% contra caídas del mercado y permite ingresos de jubilación 100% libres de impuestos según Código IRS 7702 en Florida." 
-      : "Discover how Indexed Universal Life (IUL) protects wealth with a 0% market downside floor and tax-free retirement loans under IRS Section 7702 in Florida.";
+      ? "Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos con ventajas fiscales bajo el Código IRS 7702 en Florida." 
+      : "Discover how Indexed Universal Life (IUL) provides index-linked crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.";
 
     if (isEs) {
       bodyOutline = `
@@ -432,12 +432,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
         </header>
         <section>
-          <h2>¿Cómo funciona el crecimiento con piso del 0% en un IUL?</h2>
-          <p>El seguro IUL asocia sus rendimientos a índices del mercado (como el S&P 500) pero incluye una garantía contractual de piso del 0%. Si el mercado de acciones se desploma, sus fondos de valor en efectivo se congelan de forma segura en lugar de perder valor, lo que le permite mantener todas sus ganancias previas.</p>
+          <h2>¿Cómo funciona el componente de acreditación indexada con piso del 0%?</h2>
+          <p>El componente de acreditación indexada de una póliza IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del índice. Sin embargo, los costos del seguro, cargos administrativos de la póliza, préstamos y retiros afectan el valor en efectivo total.</p>
         </section>
         <section>
-          <h2>Retiro Libre de Impuestos de Jubilación (Sección IRS 7702)</h2>
-          <p>Mediante retiros estructurados y préstamos de póliza colaterales, usted puede acceder a sus ahorros acumulados para su retiro sin pagar impuestos sobre la renta, a diferencia de los planes 401(k) o cuentas IRA tradicionales.</p>
+          <h2>Estrategias de Préstamos para el Retiro y Código IRS Sección 7702</h2>
+          <p>Los préstamos sobre la póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal federal potencialmente favorable cuando la póliza está estructurada adecuadamente, no es un Contrato de Dotación Modificada (MEC), se mantiene en vigor y se cumplen los requisitos fiscales aplicables. Si la póliza caduca con préstamos pendientes o es un MEC, pueden generarse consecuencias fiscales. Consulte siempre a un profesional tributario calificado sobre sus circunstancias particulares.</p>
         </section>
       `;
     } else {
@@ -447,12 +447,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
         </header>
         <section>
-          <h2>Understanding the Power of Indexed Universal Life (IUL)</h2>
-          <p>An IUL policy is permanent life insurance that links its cash value growth to market indexes (like the S&P 500) but shields it contractually with a 0% interest floor. If the stock market crashes, your cash value is locked safely—meaning you participate in market gains but skip all market losses.</p>
+          <h2>Understanding the Index-Crediting Mechanism and 0% Floor</h2>
+          <p>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value.</p>
         </section>
         <section>
-          <h2>Tax-Free Retirement Planning under IRS Section 7702</h2>
-          <p>By utilizing policy loans as collateralized tax-free cash distributions, you can withdraw and take out cash value from your IUL policy completely tax-free to fund your golden years, with no mandatory distribution limits or age restriction penalties unlike a traditional 401k or Traditional IRA.</p>
+          <h2>Tax Considerations and Policy Loans under IRS Section 7702</h2>
+          <p>Policy loans may provide access to cash value with potentially favorable federal tax treatment when the policy is structured properly, is not a Modified Endowment Contract (MEC), remains in force, and applicable tax requirements are satisfied. If a policy lapses with outstanding loans or is classified as a MEC, tax consequences may occur. Consult a qualified tax professional regarding your individual circumstances.</p>
         </section>
       `;
     }

@@ -40,9 +40,9 @@ export const FLORIDA_CITIES: CityData[] = [
     finalExpenseOverviewEs:
       'Los costos funerales en Miami superan el promedio nacional, alcanzando frecuentemente los $10,000 por un servicio tradicional. Un seguro de Gastos Finales de vida entera congela sus cuotas de por vida, otorgando entre $5,000 y $35,000 en beneficio garantizado para proteger a su familia en Miami.',
     iulOverviewEn:
-      'With Miami\'s growing business economy, Indexed Universal Life (IUL) insurance is popular among pre-retirees to build tax-free cash value linked to S&P 500 growth with a guaranteed 0% floor against market drops.',
+      'With Miami\'s growing business economy, Indexed Universal Life (IUL) insurance is popular among professionals to build index-linked cash value with a contractual 0% floor against negative market index returns and tax-advantaged policy loan potential.',
     iulOverviewEs:
-      'Dada la dinámica economía de Miami, el seguro IUL (Vida Universal Indizada) es altamente utilizado por profesionales y emprendedores para acumular riqueza libre de impuestos vinculada al S&P 500 con protección total del 0% contra caídas del mercado.',
+      'Dada la dinámica economía de Miami, el seguro IUL (Vida Universal Indexada) es utilizado por profesionales y emprendedores para acumular valor en efectivo vinculado al índice con piso contractual del 0% y potencial de préstamos con ventajas fiscales.',
     faqsEn: [
       {
         question: 'Can I see doctors at Baptist Health or UHealth with Medigap in Miami?',
@@ -80,13 +80,13 @@ export const FLORIDA_CITIES: CityData[] = [
     medicareOverviewEs:
       'El rápido crecimiento de Orlando ha expandido instalaciones médicas clave como Lake Nona Medical City, AdventHealth y Orlando Health. Los jubilados locales se benefician enormemente al comparar tarifas de Suplementos de Medicare (Plan G y N) para visitar especialistas sin limitaciones de red.',
     finalExpenseOverviewEn:
-      'Burial insurance policies in Central Florida provide peace of mind for seniors in Orlando and Kissimmee. Coverage approval is fast with no medical exams or blood tests required.',
+      'Burial insurance policies in Central Florida provide peace of mind for seniors in Orlando and Kissimmee. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.',
     finalExpenseOverviewEs:
-      'Las pólizas de seguro de entierro y gastos finales en Orlando y Kissimmee brindan tranquilidad total a las familias. La aprobación es rápida sin necesidad de exámenes médicos ni agujas.',
+      'Las pólizas de seguro de entierro y gastos finales en Orlando y Kissimmee brindan tranquilidad a las familias. Muchas pólizas de emisión simplificada no requieren examen médico tradicional, aunque los requisitos varían según la aseguradora.',
     iulOverviewEn:
-      'Central Florida families utilize IUL plans for college funding and tax-free retirement income stream planning protected from market volatility.',
+      'Central Florida families utilize IUL plans for college funding and potential cash accumulation with a contractual 0% index crediting floor against negative market index returns.',
     iulOverviewEs:
-      'Las familias en Florida Central utilizan los planes IUL para financiamiento universitario y crear ingresos de jubilación libres de impuestos protegidos contra la volatilidad bursátil.',
+      'Las familias en Florida Central utilizan los planes IUL para financiamiento universitario y crear acumulación de efectivo con ventajas fiscales y piso contractual del 0% en la acreditación indexada.',
     faqsEn: [
       {
         question: 'How do AdventHealth and Orlando Health handle Medicare Supplement plans?',
@@ -124,13 +124,13 @@ export const FLORIDA_CITIES: CityData[] = [
     medicareOverviewEs:
       'Los residentes mayores en Tampa acuden con frecuencia a centros de prestigio mundial como Moffitt Cancer Center o Tampa General Hospital. Contar con un Suplemento de Medicare Plan G o N le garantiza acceso directo a oncólogos y especialistas de Moffitt sin esperar aprobaciones de planes HMO.',
     finalExpenseOverviewEn:
-      'Final expense policies in Tampa offer whole life guarantees with level premiums and instant cash payouts to cover funeral homes across Hillsborough and Pinellas counties.',
+      'Final expense policies in Tampa offer whole life coverage with level premiums to help families manage funeral and related costs across Hillsborough and Pinellas counties.',
     finalExpenseOverviewEs:
-      'Las pólizas de gastos finales en Tampa ofrecen primas niveladas de vida entera con desembolso en efectivo rápido para cubrir servicios en funerarias de Hillsborough y Pinellas.',
+      'Las pólizas de gastos finales en Tampa ofrecen primas niveladas de vida entera para ayudar a cubrir servicios en funerarias de Hillsborough y Pinellas.',
     iulOverviewEn:
-      'IUL wealth accumulation policies are widely structured in Tampa Bay to build tax-free legacy assets for children and grandchildren.',
+      'IUL wealth accumulation policies are widely structured in Tampa Bay to build cash value and family legacy protection under tax-advantaged life insurance guidelines.',
     iulOverviewEs:
-      'Las pólizas de acumulación IUL son ampliamente utilizadas en Tampa Bay para construir un legado patrimonial libre de impuestos para sus hijos y nietos.',
+      'Las pólizas de acumulación IUL son utilizadas en Tampa Bay para construir valor en efectivo y protección patrimonial familiar con ventajas fiscales.',
     faqsEn: [
       {
         question: 'Does Moffitt Cancer Center accept Medigap plans in Tampa?',
@@ -160,13 +160,13 @@ export const FLORIDA_CITIES: CityData[] = [
     medicareOverviewEs:
       'Jacksonville alberga la prestigiosa Mayo Clinic Florida. Pacientes que buscan atención en Mayo Clinic deben seleccionar cuidadosamente su plan, ya que muchos Advantage HMO no son aceptados. Medigap Plan G otorga cobertura total en Mayo Clinic Jacksonville.',
     finalExpenseOverviewEn:
-      'Protect your loved ones in Duval and St. Johns counties with affordable burial coverage that never expires.',
+      'Protect your loved ones in Duval and St. Johns counties with permanent burial coverage and locked-in rates.',
     finalExpenseOverviewEs:
-      'Proteja a sus seres queridos en los condados de Duval y St. Johns con un seguro de entierro accesible que nunca vence.',
+      'Proteja a sus seres queridos en los condados de Duval y St. Johns con un seguro de entierro de cobertura permanente y tarifas fijas.',
     iulOverviewEn:
-      'Index-linked universal life plans offer Jacksonville families downside market protection and tax-exempt loan provisions for retirement.',
+      'Index-linked universal life plans offer Jacksonville families a contractual 0% index crediting floor and potential policy loan provisions for retirement planning.',
     iulOverviewEs:
-      'Planes universales indizados ofrecen a familias en Jacksonville protección contra caídas del mercado e ingresos libres de impuestos.',
+      'Planes universales indexados ofrecen a familias en Jacksonville un piso contractual del 0% en la acreditación indexada y opciones de préstamos para planificación del retiro.',
     faqsEn: [
       {
         question: 'Can I use Mayo Clinic Jacksonville with Medicare Supplement Plan G?',
@@ -196,13 +196,13 @@ export const FLORIDA_CITIES: CityData[] = [
     medicareOverviewEs:
       'Residentes del condado de Broward se benefician de grandes redes de salud como Memorial Healthcare y Cleveland Clinic Weston. Comparar Medigap Plan G vs Plan N ayuda a asegurar costos médicos predecibles.',
     finalExpenseOverviewEn:
-      'Secure guaranteed acceptance burial insurance for Broward County families with level premiums and immediate coverage options.',
+      'Explore final expense whole life insurance for Broward County families with level premiums and simplified issue options.',
     finalExpenseOverviewEs:
-      'Obtenga seguro de entierro con aceptación garantizada para familias en Broward con cuotas congeladas.',
+      'Explore seguros de gastos finales y vida entera para familias en Broward con cuotas fijas y opciones de emisión simplificada.',
     iulOverviewEn:
-      'Build tax-advantaged cash value in Fort Lauderdale with IUL retirement protection strategies.',
+      'Build tax-advantaged cash value in Fort Lauderdale with IUL retirement and life insurance strategies.',
     iulOverviewEs:
-      'Genere valor en efectivo libre de impuestos en Fort Lauderdale con estrategias de jubilación IUL.',
+      'Genere valor en efectivo con ventajas fiscales en Fort Lauderdale mediante estrategias de seguro de vida e IUL.',
     faqsEn: [
       {
         question: 'Is Cleveland Clinic Weston covered under Medigap plans?',
@@ -236,9 +236,9 @@ export const FLORIDA_CITIES: CityData[] = [
     finalExpenseOverviewEs:
       'Los elevados costos funerarios en Palm Beach hacen que el seguro de gastos finales sea una herramienta fundamental.',
     iulOverviewEn:
-      'Tax-free wealth transfer via IUL policies is a cornerstone of estate planning in Palm Beach County.',
+      'Tax-advantaged wealth transfer via IUL policies with death benefits is a cornerstone of estate planning in Palm Beach County.',
     iulOverviewEs:
-      'La transferencia de riqueza libre de impuestos mediante pólizas IUL es pilar en la planificación patrimonial en Palm Beach.',
+      'La transferencia patrimonial con ventajas fiscales mediante pólizas IUL con beneficios por fallecimiento es pilar en Palm Beach.',
     faqsEn: [
       {
         question: 'Can I travel outside Florida with a West Palm Beach Medigap plan?',

@@ -52,13 +52,13 @@ export const translations: Record<Language, TranslationContent> = {
         {
           icon: "M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z",
           title: "Medicare Supplement Plans in Florida",
-          description: "Confused by Medicare parts A, B, C, and D? We simplify your options to ensure you get the maximum benefits and the lowest out-of-pocket costs.",
+          description: "Confused by Medicare parts A, B, C, and D? We simplify your options to help you maximize your benefits and minimize unpredictable out-of-pocket expenses.",
           highlight: "Florida Medigap Quotes available for instant comparisons today.",
         },
         {
           icon: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z",
           title: "Burial Insurance Florida Seniors",
-          description: "Protect your family from the financial burden of funeral costs. Compare the best final expense options in Tampa, Miami, Orlando, and statewide Florida.",
+          description: "Protect your family from the financial burden of funeral costs. Compare competitive final expense options in Tampa, Miami, Orlando, and statewide Florida.",
           highlight: "Guaranteed acceptance programs — even if you've been denied coverage previously.",
         },
         {
@@ -100,7 +100,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "80+ A-Rated Carriers",
+          title: "80+ Top-Rated Carriers",
           description: "We compare available options based on your needs, eligibility, budget and coverage goals.",
         },
         {
@@ -260,7 +260,7 @@ export const translations: Record<Language, TranslationContent> = {
   es: {
     meta: {
         title: "Seguro Medicare Florida y Gastos Finales | Broker de Seguros Bilingüe AHB",
-        description: "Encuentre el mejor Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales sin examen médico. Comparamos 80+ aseguradoras para la comunidad hispana. Broker Licenciado NPN 21228432."
+        description: "Compare opciones de Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales de emisión simplificada. Comparamos más de 80 aseguradoras líderes para la comunidad hispana. Broker Licenciado NPN 21228432."
     },
     common: {
       npnTooltip: "Número de Productor Nacional - Un identificador único de la NAIC para profesionales de seguros licenciados."
@@ -282,9 +282,9 @@ export const translations: Record<Language, TranslationContent> = {
     },
     hero: {
       heading: "Seguro Medicare en Florida y Gastos Finales | Asesoría en Español",
-      subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como brokers independientes licenciados en Florida, comparamos más de 80 compañías líderes para conseguirle el mejor Seguro Medicare en Florida, Seguro de Gastos Finales (Entierro) y Vida Universal Indexada (IUL).",
+      subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como brokers independientes licenciados en Florida, comparamos más de 80 compañías líderes para orientarle en su Seguro Medicare en Florida, Seguro de Gastos Finales (Entierro) y Vida Universal Indexada (IUL).",
       cta: "Verificar Elegibilidad en Florida 2026 ➔",
-      trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría 100% Gratuita"
+      trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría Sin Costo"
     },
     cta: {
       medicare: "Obtener Mi Comparación de Medicare",
@@ -299,7 +299,7 @@ export const translations: Record<Language, TranslationContent> = {
         { label: "Expertos Medicare", value: "Guía personalizada Partes A/B/C/D." },
         { label: "Gastos Finales", value: "Planes de entierro con aceptación garantizada." },
         { label: "Estrategias IUL", value: "Estrategias de retiro con ventajas fiscales." },
-        { label: "80+ Compañías", value: "Comparamos todo el mercado para usted." }
+        { label: "80+ Compañías", value: "Comparamos opciones líderes para usted." }
       ]
     },
     services: {
@@ -308,13 +308,13 @@ export const translations: Record<Language, TranslationContent> = {
         {
           icon: "M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z",
           title: "Planes Suplementarios de Medicare en Florida",
-          description: "¿Confundido por las partes A, B, C y D? Simplificamos sus opciones para asegurar que obtenga los máximos beneficios con el menor costo posible.",
-          highlight: "Cotizaciones Gratuitas de Medigap en Florida para comparar hoy.",
+          description: "¿Confundido por las partes A, B, C y D? Simplificamos sus opciones para ayudarle a maximizar sus beneficios y minimizar gastos médicos imprevistos.",
+          highlight: "Cotizaciones de Medigap en Florida para comparar hoy.",
         },
         {
           icon: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z",
           title: "Seguro de Gastos Finales y Entierro en Florida",
-          description: "Proteja a su familia de la carga financiera de un funeral. Compare las mejores opciones de seguros de entierros para personas mayores en Miami, Tampa y Orlando.",
+          description: "Proteja a su familia de la carga financiera de un funeral. Compare opciones competitivas de seguros de entierros para personas mayores en Miami, Tampa y Orlando.",
           highlight: "Programas con aceptación garantizada — incluso si le han denegado cobertura antes.",
         },
         {
@@ -356,7 +356,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "80+ Compañías de Élite",
+          title: "80+ Aseguradoras Líderes",
           description: "Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura.",
         },
         {

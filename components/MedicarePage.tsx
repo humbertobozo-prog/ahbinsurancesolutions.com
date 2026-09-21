@@ -28,7 +28,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
     const faqs = isEs ? [
         {
             q: "¿Cuál es la diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage en Florida?",
-            a: "Medigap (como el Plan G o Plan N) actúa como un seguro secundario al Medicare Original (Partes A y B) y cubre el 20% de coseguros sin restringir su red de médicos ni requerir referidos en ningún hospital o clínica de EE.UU. Por el contrario, Medicare Advantage (Parte C) reemplaza al Medicare Original mediante una red privada (HMO o PPO) con copagos por servicio, requerimientos de autorización previa y limitaciones territoriales dentro de condados específicos de Florida."
+            a: "Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Actúan como seguro secundario al Medicare Original (Partes A y B) sin restringir su red de médicos ni requerir referidos en ningún hospital o clínica que acepte Medicare en EE.UU. Por el contrario, Medicare Advantage (Parte C) reemplaza al Medicare Original mediante una red privada (HMO o PPO) con copagos por servicio, requerimientos de autorización previa y limitaciones territoriales dentro de condados específicos de Florida."
         },
         {
             q: "¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?",
@@ -44,12 +44,12 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         },
         {
             q: "¿Cuánto cuestan las primas de Medigap en Florida en 2026?",
-            a: "Las primas varían por código postal (ZIP), edad, género según metodología aplicable, compañía aseguradora (carrier), metodología de cálculo de tarifas (Attained-Age vs. Issue-Age), evaluación de salud (underwriting), uso de tabaco, elegibilidad para descuentos por convivencia en el hogar (household discounts) y fecha de entrada en vigencia. No deben presentarse como una tarifa general o uniforme para todo el estado. Como ejemplo ilustrativo de muestra (con fecha Enero 2026, basado en registros referenciales públicos de aseguradoras de Florida para una persona no fumadora de 65 años en códigos postales seleccionados de Florida Central), un Plan G suele cotizarse típicamente entre $140 y $185 al mes y un Plan N entre $100 y $145 al mes antes de posibles descuentos de hogar. “Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”"
+            a: "“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica."
         }
     ] : [
         {
             q: "What is the difference between Medicare Supplement (Medigap) and Medicare Advantage in Florida?",
-            a: "Medigap (such as Plan G or Plan N) acts as secondary insurance to Original Medicare (Parts A & B), paying the 20% coinsurance gaps with zero doctor network restrictions or referral mandates anywhere in the U.S. Conversely, Medicare Advantage (Part C) replaces Original Medicare with a private managed-care network (HMO or PPO) requiring copays, prior authorizations, and county-restricted networks in Florida."
+            a: "Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. They act as secondary insurance to Original Medicare (Parts A & B) with zero doctor network restrictions or referral mandates anywhere in the U.S. that accepts Medicare. Conversely, Medicare Advantage (Part C) replaces Original Medicare with a private managed-care network (HMO or PPO) requiring copays, prior authorizations, and county-restricted networks in Florida."
         },
         {
             q: "When is the best time to buy a Medigap policy in Florida?",
@@ -65,7 +65,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         },
         {
             q: "How much does a Medigap Plan G cost in Florida for 2026?",
-            a: "Premiums vary by ZIP code, age, gender (under applicable rating methodology), carrier, rating method (such as Attained-Age vs. Issue-Age), health underwriting status, tobacco usage, household discount qualification, and effective date. There is no single or uniform statewide rate in Florida. As an illustrative example (dated January 2026, based on public sample carrier filings for a 65-year-old non-smoker in select Central Florida ZIP codes), monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N prior to applicable household discounts. “Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison.”"
+            a: "“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area."
         }
     ];
 
@@ -428,15 +428,15 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                     </tr>
                                     <tr className="hover:bg-gray-50">
                                         <td className="p-4 font-bold text-primary">
-                                            {isEs ? 'Rango Estimado de Primas Mensuales*' : 'Estimated Monthly Premium Range*'}
+                                            {isEs ? 'Rango de Primas Mensuales Ilustrativo*' : 'Illustrative Monthly Premium Range*'}
                                             <span className="block text-[11px] font-normal text-gray-500 mt-0.5">
-                                                {isEs ? '(Ejemplo ilustrativo de muestra)' : '(Sample illustrative example)'}
+                                                {isEs ? '(Ejemplo de muestra referencial)' : '(Sample illustrative reference)'}
                                             </span>
                                         </td>
                                         <td className="p-4 text-gray-700 font-medium">
                                             <span className="font-semibold text-gray-900">$140 – $185 / mes*</span>
                                             <span className="block text-[11px] text-gray-500 mt-0.5 font-normal">
-                                                {isEs ? 'Ejemplo ilustrativo (Edad 65, no tabaco)' : 'Illustrative example (Age 65, non-tobacco)'}
+                                                {isEs ? 'Ejemplo ilustrativo (Edad 65, no fumador)' : 'Illustrative example (Age 65, non-smoker)'}
                                             </span>
                                         </td>
                                         <td className="p-4 text-emerald-800 font-bold">
@@ -455,34 +455,44 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             <div className="flex items-start gap-2.5">
                                 <span className="text-amber-700 font-bold text-base leading-none mt-0.5" aria-hidden="true">ℹ</span>
                                 <div className="space-y-2">
-                                    <h4 className="font-bold text-amber-950 text-xs md:text-sm">
+                                    <div className="flex flex-wrap items-center justify-between gap-2">
+                                        <h4 className="font-bold text-amber-950 text-xs md:text-sm">
+                                            {isEs 
+                                                ? '*Aviso Legal y Factores de Tarificación de Medigap en Florida:' 
+                                                : '*Pricing Disclaimer & Medigap Rating Factors in Florida:'}
+                                        </h4>
+                                        <span className="inline-block px-2 py-0.5 bg-amber-100/90 text-amber-900 text-[11px] font-semibold rounded border border-amber-300/60">
+                                            {isEs ? 'Actualizado: Septiembre 2026' : 'Updated: September 2026'}
+                                        </span>
+                                    </div>
+                                    <p className="leading-relaxed text-gray-800 font-medium">
                                         {isEs 
-                                            ? '*Aviso Legal y Factores de Tarificación de Medicare en Florida (Enero 2026):' 
-                                            : '*Pricing Disclaimer & Medicare Rating Factors in Florida (January 2026):'}
-                                    </h4>
+                                            ? '“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.”' 
+                                            : '“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.”'}
+                                    </p>
                                     <p className="leading-relaxed text-gray-700">
                                         {isEs ? (
                                             <>
-                                                Las primas de Medicare Suplementario (Medigap) <strong>no constituyen una tarifa general ni uniforme</strong> en Florida. El precio real de su póliza depende de factores indispensables:
-                                                <span className="font-semibold text-gray-900"> código postal (ZIP), edad alcanzada, género según metodología aplicable, compañía aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), evaluación médica (underwriting), uso de tabaco, descuentos por convivencia en el hogar (household discounts) y fecha de entrada en vigencia</span>.
+                                                Las primas de Medicare Suplementario (Medigap) <strong>no constituyen una tarifa general ni uniforme</strong> para el estado de Florida. El costo real de una póliza puede variar según:
+                                                <span className="font-semibold text-gray-900"> código postal (ZIP), edad, método de tarificación actuarial (Attained-Age vs. Issue-Age), compañía aseguradora (carrier), descuentos por convivencia en el hogar (household discounts), evaluación médica (underwriting) y área geográfica</span>.
                                             </>
                                         ) : (
                                             <>
-                                                Medicare Supplement (Medigap) premiums <strong>do not represent a uniform or statewide general rate</strong>. Your actual premium depends on individualized rating variables:
-                                                <span className="font-semibold text-gray-900"> ZIP code, age, gender (under applicable rating methodology), insurance carrier, rating method (such as Attained-Age vs. Issue-Age), medical underwriting evaluation, tobacco status, household discount eligibility, and effective date</span>.
+                                                Medicare Supplement (Medigap) premiums <strong>do not represent a uniform or statewide general rate</strong> across Florida. Actual policy costs vary based on:
+                                                <span className="font-semibold text-gray-900"> ZIP code, age, rating method (such as Attained-Age vs. Issue-Age), insurance carrier, household discounts, health underwriting, and geographic area</span>.
                                             </>
                                         )}
                                     </p>
                                     <p className="text-gray-600 italic">
                                         {isEs 
-                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros de muestra de aseguradoras para condados de Florida Central a fecha de enero de 2026 para una persona de 65 años, no fumadora, antes de aplicar posibles descuentos de hogar.' 
-                                            : 'Source & Date: The figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes as of January 2026 for a 65-year-old non-tobacco applicant prior to household discounts.'}
+                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros de muestra de aseguradoras para condados seleccionados de Florida Central a fecha de Septiembre 2026 para una persona de 65 años no fumadora, antes de aplicar posibles descuentos de hogar.' 
+                                            : 'Source & Date: The sample figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes as of September 2026 for a 65-year-old non-smoker applicant prior to household discounts.'}
                                     </p>
                                     <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-amber-200/70 mt-2">
                                         <p className="font-bold text-primary text-xs md:text-sm">
                                             {isEs 
-                                                ? '“Las primas varían por código postal, edad, aseguradora, método de tarificación y otros factores de elegibilidad. Solicite una comparación personalizada.”' 
-                                                : '“Premiums vary by ZIP code, age, carrier, rating method and other eligibility factors. Request a personalized comparison.”'}
+                                                ? '“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.”' 
+                                                : '“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.”'}
                                         </p>
                                         <a 
                                             href="#quote" 
