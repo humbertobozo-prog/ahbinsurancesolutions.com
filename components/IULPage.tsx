@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { RelatedServices } from './RelatedServices';
+import { InfoTooltip } from './InfoTooltip';
 
 interface IULPageProps {
     language: Language;
@@ -20,8 +21,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
         : 'Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance';
 
     const description = isEs 
-        ? 'Aprenda cómo el IUL protege sus ahorros con piso del 0% contra caídas del mercado y permite ingresos de jubilación 100% libres de impuestos según Código IRS 7702 en Florida.' 
-        : 'Discover how Indexed Universal Life (IUL) protects wealth with a 0% market downside floor and tax-free retirement loans under IRS Section 7702 in Florida.';
+        ? 'Aprenda cómo el IUL protege su capital con piso del 0% contra caídas del mercado y permite estrategias de préstamos para el retiro con ventajas fiscales según el Código IRS 7702.' 
+        : 'Discover how Indexed Universal Life (IUL) protects wealth with a 0% market downside floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -31,20 +32,20 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
             a: "En una póliza IUL, su dinero en efectivo no está invertido directamente en la bolsa de valores. En su lugar, el rendimiento se acredita en función de un índice (como el S&P 500). Si el índice cae un 20% o 30% durante un colapso financiero, la cláusula de piso del 0% garantiza que su saldo en efectivo no pierde ni un solo dólar por fluctuaciones del mercado."
         },
         {
-            q: "¿Son realmente libres de impuestos los retiros de jubilación de un IUL?",
-            a: "Sí. Bajo el Código de Impuestos de EE.UU. (IRS Código 7702 y Sección 72e), usted puede tomar préstamos sobre el valor en efectivo acumulado en la póliza. Dado que los préstamos de seguros no se consideran ingresos imponibles, no paga impuestos sobre la renta, ni afecta la tasa impositiva de sus beneficios de Seguro Social."
+            q: "¿Los préstamos para el retiro de una póliza IUL son dinero libre de impuestos garantizado?",
+            a: "No. Un préstamo sobre la póliza (policy loan) no es dinero gratuito ni libre de impuestos de forma incondicional. Bajo los Códigos IRS 7702 y 72(e), los retiros hasta la base de costo (primas pagadas) y los préstamos tomados contra el valor en efectivo no se consideran ingresos imponibles mientras la póliza permanezca activa y en vigor. Sin embargo, si la póliza caduca (lapse), se entrega o se cancela con un préstamo pendiente superior a la base de primas pagadas, el monto adeudado en exceso se convierte de inmediato en ingreso ordinario gravable. Por ello, una estrategia de IUL requiere monitoreo periódico y un diseño prudente con cláusulas de protección contra sobrepréstamos."
         },
         {
             q: "¿Qué son los Beneficios en Vida (Living Benefits) incluidos en una póliza IUL?",
             a: "Los Beneficios en Vida le permiten adelantar un porcentaje sustancial (hasta un 80% o 90%) del beneficio por fallecimiento mientras está vivo si se le diagnostica una enfermedad grave, crónica (incapacidad para realizar 2 de 6 actividades diarias) o terminal (Cáncer, Infarto, ACV, ALS), sin restricciones en cómo gasta el dinero."
         },
         {
-            q: "¿En qué se diferencia un IUL de una cuenta 401(k) o IRA Tradicional?",
-            a: "En un 401(k) o IRA Tradicional, sus retiros en la jubilación tributan como ingresos ordinarios al 100% y está sujeto a Distribuciones Mínimas Requeridas (RMDs) obligatorias a los 73/75 años. El IUL no tiene RMDs, no tiene límites de aportes según ingresos y permite acceso a capital exento de impuestos a cualquier edad antes o después de los 59.5 años sin penalidades del IRS."
+            q: "¿En qué se diferencia un IUL de una cuenta 401(k) o IRA Tradicional respecto a impuestos y penalidades?",
+            a: "En un 401(k) o IRA Tradicional, las contribuciones son antes de impuestos, pero el 100% de los retiros futuros tributa como ingreso ordinario, además de sufrir una penalidad del 10% del IRS si se retira antes de los 59 años y medio (salvo excepciones) y Distribuciones Mínimas Requeridas (RMDs) obligatorias a los 73/75 años. En un IUL no-MEC, los préstamos sobre la póliza no tienen penalidad por edad del 10% y no existen RMDs obligatorias. No obstante, a diferencia de un 401(k), los préstamos de un IUL acumulan intereses y reducen el valor neto; si no se administran para cubrir los costos internos crecientes del seguro, la póliza puede caducar y generar consecuencias fiscales."
         },
         {
-            q: "¿Qué es un Contrato de Enfriamiento / Contrato de Beneficio Modificado (MEC) y cómo se evita?",
-            a: "Un MEC ocurre si deposita demasiado dinero en efectivo en la póliza demasiado rápido en relación con el monto del beneficio por fallecimiento (prueba de 7 pagos del IRS). Estructuramos profesionalmente su IUL para maximizar la acumulación de efectivo manteniendo la póliza estrictamente no-MEC para preservar todos los privilegios fiscales."
+            q: "¿Qué es un Contrato de Dotación Modificada (MEC) y cómo se evita?",
+            a: "Un MEC ocurre si deposita demasiado dinero en efectivo en la póliza demasiado rápido en relación con el beneficio por fallecimiento, violando la prueba de 7 pagos ('7-pay test') del IRS. En un contrato MEC, los retiros y préstamos pierden su ventaja fiscal, tributando primero sobre ganancias como ingreso ordinario y con penalidad del 10% antes de los 59½ años. Estructuramos profesionalmente su IUL para maximizar la acumulación de efectivo manteniendo la póliza estrictamente no-MEC."
         }
     ] : [
         {
@@ -52,27 +53,27 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
             a: "With Indexed Universal Life, your cash value is not invested directly in equity markets. Instead, your interest crediting is linked to an index like the S&P 500. When the market plunges 20% or 30%, the 0% floor guarantees your principal cash value receives 0% loss—protecting your accumulated wealth from market crashes."
         },
         {
-            q: "Are retirement withdrawals from an IUL policy truly tax-free?",
-            a: "Yes. Under IRS Tax Code 7702 and Section 72(e), cash value distributions accessed via policy loans are tax-free. Because loans are not recognized as reportable gross income, they do not trigger income tax brackets or inflate Social Security benefit taxation."
+            q: "Are retirement policy loans from an IUL guaranteed tax-free money?",
+            a: "No. A policy loan is not guaranteed free money. Under IRS Tax Code 7702 and Section 72(e), cash value withdrawals up to cost basis and collateralized policy loans are not treated as taxable gross income as long as the policy remains active and in force. However, if the policy lapses, is surrendered, or terminates before death with an outstanding loan balance exceeding the total premiums paid, that unpaid loan balance becomes immediately taxable as ordinary income in that tax year. Maintaining tax advantages requires disciplined policy management, sufficient cash reserves, and overloan protection riders."
         },
         {
             q: "What are Living Benefits (Accelerated Death Benefit Riders) in an IUL?",
             a: "Living Benefits allow you to accelerate up to 80%-90% of your policy's death benefit while living if diagnosed with a qualifying critical illness (heart attack, stroke, invasive cancer) or chronic condition (inability to perform 2 of 6 Activities of Daily Living). Funds can pay for experimental medical treatments, mortgage, or long-term care."
         },
         {
-            q: "How does an IUL compare to a Traditional 401(k) or Traditional IRA?",
-            a: "A 401(k) or Traditional IRA defers tax today, but 100% of future withdrawals are taxed as ordinary income in retirement, alongside mandatory Required Minimum Distributions (RMDs) at age 73/75. An IUL has no RMDs, no income eligibility limits, and permits penalty-free tax-exempt loans prior to age 59½."
+            q: "How does an IUL compare to a Traditional 401(k) or Traditional IRA regarding taxes and penalties?",
+            a: "A Traditional 401(k) or IRA defers taxes on contributions, but 100% of future withdrawals are taxed as ordinary income, alongside a 10% IRS early withdrawal penalty prior to age 59½ and mandatory Required Minimum Distributions (RMDs) at age 73/75. In a properly structured non-MEC IUL, policy loans are not subject to the statutory 10% early withdrawal age penalty, and there are no mandatory RMDs. However, unlike a 401(k), policy loans accrue interest and represent debt against your policy. If not actively managed against rising Cost of Insurance charges, an overleveraged loan can cause policy lapse and trigger severe income tax consequences."
         },
         {
             q: "What is a Modified Endowment Contract (MEC) and how do you prevent it?",
-            a: "A policy becomes a MEC if funded with excessive cash relative to the death benefit under the IRS 7-pay test, causing distributions to lose tax-free status. We engineer custom maximum-funded, minimum-death-benefit IUL designs to prevent MEC status and optimize cash growth."
+            a: "A policy becomes a MEC if funded with excessive cash relative to the death benefit under the IRS 7-pay test, causing distributions to lose tax-advantaged status and subjecting loans to ordinary income tax plus a 10% penalty before age 59½. We engineer custom maximum-funded, minimum-death-benefit IUL designs to prevent MEC status and optimize cash growth."
         }
     ];
 
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": ["Service", "FinancialProduct"],
-        "name": isEs ? "Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Indexed Universal Life (IUL) & Tax-Free Retirement Planning in Florida",
+        "name": isEs ? "Vida Universal Indexada (IUL) y Estrategias de Retiro en Florida" : "Indexed Universal Life (IUL) & Retirement Strategy Planning in Florida",
         "serviceType": "Indexed Universal Life Insurance & Retirement Wealth Structuring",
         "category": "LifeInsurance",
         "description": description,
@@ -113,7 +114,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
         },
         "audience": {
             "@type": "Audience",
-            "audienceType": isEs ? "Personas y familias que buscan crecimiento financiero libre de impuestos y protección de vida en Florida" : "Individuals and families seeking tax-free growth and living benefits in Florida"
+            "audienceType": isEs ? "Personas y familias que buscan crecimiento financiero con ventajas fiscales y protección de vida en Florida" : "Individuals and families seeking tax-advantaged growth and living benefits in Florida"
         },
         "offers": {
             "@type": "Offer",
@@ -137,7 +138,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": isEs ? "Ingresos de Jubilación Libres de Impuestos (Préstamos con Ventaja Fiscal)" : "Tax-Free Retirement Income Streams"
+                        "name": isEs ? "Estrategias de Préstamos para el Retiro con Ventajas Fiscales (Código IRS 7702)" : "Tax-Advantaged Retirement Policy Loan Strategies (IRS Code 7702)"
                     }
                 },
                 {
@@ -202,7 +203,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         {isEs ? 'Inicio' : 'Home'}
                     </a>
                     <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'IUL y Jubilación Libre de Impuestos' : 'IUL Tax-Free Retirement'}</span>
+                    <span className="text-primary font-bold">{isEs ? 'Vida Universal Indexada (IUL)' : 'Indexed Universal Life (IUL)'}</span>
                 </div>
             </div>
 
@@ -219,9 +220,25 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 : 'Indexed Universal Life (IUL) Insurance Policies'}
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
-                            {isEs
-                                ? 'Combine crecimiento de capital basado en índices como el S&P 500, protección garantizada contra pérdidas de mercado (piso del 0%) e ingresos de jubilación 100% libres de impuestos.'
-                                : 'Participate in index gains tied to the S&P 500, backed by a guaranteed 0% market downside floor and tax-free retirement loan strategies.'}
+                            {isEs ? (
+                                <>
+                                    Combine potencial de crecimiento ligado a índices como el S&P 500, protección garantizada con piso del 0% contra caídas de mercado y estrategias de préstamos sobre póliza con ventajas fiscales para el retiro
+                                    <InfoTooltip 
+                                        text="El estatus libre de impuestos se basa en retiros de base y préstamos sobre póliza bajo el Código IRS 7702. Depende del mantenimiento y fondeo continuo de la póliza para evitar lapsos y cargos tributarios imprevistos." 
+                                        label="Aviso sobre ventajas fiscales y mantenimiento de la póliza"
+                                    />
+                                    {' '}(sujeto a la adecuada estructura, fondeo y mantenimiento del contrato).
+                                </>
+                            ) : (
+                                <>
+                                    Participate in index gains tied to the S&P 500, backed by a guaranteed 0% market downside floor and tax-free retirement policy loan strategies
+                                    <InfoTooltip 
+                                        text="Tax-free status is achieved via policy loans and withdrawals under IRS Code 7702. It requires ongoing policy maintenance, adequate funding to cover rising insurance charges (COI), and preventing policy lapse so unpaid loans do not become taxable ordinary income." 
+                                        label="Tax-advantaged retirement notice"
+                                    />
+                                    {' '}(subject to proper funding, structure, and ongoing policy maintenance).
+                                </>
+                            )}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -282,11 +299,11 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
 
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200">
                                 <span className="text-secondary font-black text-2xl block mb-2">03.</span>
-                                <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Interés Compuesto Exento' : 'Tax-Free Compounding'}</h3>
+                                <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Crecimiento con Impuestos Diferidos' : 'Tax-Deferred Accumulation'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Sus ganancias crecen libre de impuestos sobre la renta y sobre plusvalías, permitiendo un crecimiento acelerado año tras año.' 
-                                        : 'Interest growth accumulates without capital gains taxation, amplifying compound growth over multi-decade horizons.'}
+                                        ? 'El crecimiento del valor en efectivo acumula intereses con impuestos diferidos bajo la Sección 7702 del IRS, lo que permite capitalizar sin impuestos anuales por plusvalías.' 
+                                        : 'Cash value accumulates on a tax-deferred basis under IRS Section 7702, allowing interest to compound without yearly capital gains tax friction.'}
                                 </p>
                             </div>
                         </div>
@@ -312,10 +329,24 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 font-medium">
                                     <tr>
-                                        <td className="p-3.5 font-bold">{isEs ? 'Tratamiento Fiscal de Retiros' : 'Taxation on Withdrawals'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% Libre de Impuestos</td>
+                                        <td className="p-3.5 font-bold">{isEs ? 'Tratamiento Fiscal de Retiros / Préstamos' : 'Taxation on Withdrawals / Loans'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            <span className="inline-flex items-center flex-wrap">
+                                                <span>
+                                                    {isEs 
+                                                        ? 'Retiros hasta la base y préstamos exentos de impuestos mientras la póliza siga en vigor (no MEC)' 
+                                                        : 'Withdrawals to basis tax-free; loans income-tax-free while policy remains in force (non-MEC)'}
+                                                </span>
+                                                <InfoTooltip 
+                                                    text={isEs 
+                                                        ? 'Los préstamos sobre póliza están exentos de impuestos mientras la póliza esté activa. Requiere fondeo adecuado para evitar un lapse con préstamos pendientes.' 
+                                                        : 'Policy loans are tax-free under IRC 7702 while the policy remains active. Tax-free status depends on ongoing policy maintenance and sufficient funding to prevent lapse.'}
+                                                    label={isEs ? 'Detalles de exención tributaria y mantenimiento' : 'Tax-free loan policy maintenance details'}
+                                                />
+                                            </span>
+                                        </td>
                                         <td className="p-3.5 text-amber-700 font-bold">Tributa como Ingreso Ordinario</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% Libre de Impuestos</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">100% Libre de Impuestos (tras 5 años)</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Protección contra Caídas Bursátiles' : 'Market Downside Protection'}</td>
@@ -325,7 +356,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Límite Anual de Contribución' : 'Annual Contribution Limits'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Sin Límite del IRS</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">Sin Límite Estatutario IRS (Sujeto a diseño)</td>
                                         <td className="p-3.5 text-gray-600">Tope de $23,500/año (2026)</td>
                                         <td className="p-3.5 text-gray-600">Tope estricto de $7,000/año</td>
                                     </tr>
@@ -336,19 +367,100 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                         <td className="p-3.5 text-amber-700 font-bold">Eliminado a altos ingresos</td>
                                     </tr>
                                     <tr>
-                                        <td className="p-3.5 font-bold">{isEs ? 'Retiros Antes de los 59.5 Años' : 'Withdrawals Before Age 59½'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Sin Penalidades del 10%</td>
-                                        <td className="p-3.5 text-red-600">Penalidad del 10% del IRS</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Solo aportes directos</td>
+                                        <td className="p-3.5 font-bold">{isEs ? 'Acceso Antes de los 59.5 Años' : 'Access Before Age 59½'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">
+                                            {isEs 
+                                                ? 'Sin penalidad del 10% del IRS en préstamos de pólizas no-MEC (requiere gestión activa para evitar lapse)*' 
+                                                : 'No 10% IRS penalty on non-MEC policy loans (requires ongoing management to prevent lapse)*'}
+                                        </td>
+                                        <td className="p-3.5 text-red-600">Penalidad del 10% del IRS (salvo excepción)</td>
+                                        <td className="p-3.5 text-amber-700 font-bold">Solo aportes directos sin penalidad</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Protección Familiar (Fallecimiento)' : 'Death Benefit Protection'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Beneficio por Fallecimiento Exento</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">Beneficio por Fallecimiento Exento de Impuestos</td>
                                         <td className="p-3.5 text-gray-600">No Incluye Seguro de Vida</td>
                                         <td className="p-3.5 text-gray-600">No Incluye Seguro de Vida</td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <p className="text-[11px] text-gray-500 mt-4 italic">
+                            {isEs 
+                                ? '*Nota importante de compliance: Los préstamos sobre póliza reducen el valor neto y el beneficio por fallecimiento, y acumulan intereses. Si la póliza caduca con préstamos pendientes que superen las primas pagadas, el saldo en exceso se vuelve gravable como ingreso ordinario.' 
+                                : '*Important compliance note: Policy loans reduce net cash value and death benefit, and accrue interest. If a policy lapses with outstanding loans exceeding the cumulative premiums paid, the excess loan balance becomes taxable ordinary income.'}
+                        </p>
+                    </div>
+
+                    {/* Critical Compliance Callout: Policy Loan ≠ Guaranteed Tax-Free Money */}
+                    <div className="bg-amber-50/90 border-2 border-amber-300 rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <span className="bg-amber-600 text-white font-black text-xs uppercase px-3 py-1 rounded-full inline-block">
+                                {isEs ? 'Educación Financiera y Compliance' : 'Financial Education & Compliance'}
+                            </span>
+                            <span className="text-xs font-bold text-amber-900">
+                                {isEs ? 'Transparencia Normativa para Residentes de Florida' : 'Regulatory Transparency for Florida Families'}
+                            </span>
+                        </div>
+                        <h2 className="text-xl md:text-2xl font-black font-heading text-primary">
+                            {isEs 
+                                ? 'Préstamo sobre Póliza (Policy Loan) ≠ Dinero Libre de Impuestos Garantizado' 
+                                : 'Policy Loan ≠ Guaranteed Tax-Free Money: Understanding Potential Tax Consequences'}
+                        </h2>
+                        <p className="text-sm text-gray-800 leading-relaxed font-medium">
+                            {isEs
+                                ? 'En el mercado de seguros, a menudo se presenta el IUL con promesas comerciales de "ingresos de jubilación 100% libres de impuestos". Aunque los préstamos sobre la póliza son una estrategia legítima respaldada por el Código IRS 7702, NO deben considerarse una garantía universal ni dinero regalado. Para mantener su tratamiento favorable y evitar consecuencias tributarias severas, es imperativo entender cómo funcionan:'
+                                : 'In the marketplace, IUL is frequently marketed with claims of unconditional "tax-free retirement income." While policy loans represent a legitimate, statutory mechanism under IRS Code Section 7702, a policy loan is NOT guaranteed free money. Responsible financial planning requires understanding the conditions, interest mechanics, and potential tax liabilities:'}
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                            <div className="bg-white p-5 rounded-xl border border-amber-200 space-y-2">
+                                <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                                    <span className="text-lg">⚠️</span>
+                                    <h3>{isEs ? 'Riesgo de Caducidad y Consecuencia Fiscal (Lapse Risk)' : 'Policy Lapse & Phantom Tax Liability'}</h3>
+                                </div>
+                                <p className="text-xs text-gray-700 leading-relaxed">
+                                    {isEs
+                                        ? 'Si una póliza con préstamos pendientes caduca (lapse), se cancela o se entrega (surrender) en vida del asegurado, cualquier monto de préstamo que exceda la base de costo (primas netas pagadas) se convierte automáticamente en INGRESO ORDINARIO GRAVABLE en ese año fiscal. Esto puede desencadenar una fuerte factura impositiva sin tener dinero en efectivo disponible para pagarla.'
+                                        : 'If an IUL policy lapses or is surrendered during the insured\'s lifetime with an outstanding loan exceeding total premiums paid (cost basis), that excess loan balance becomes immediately TAXABLE AS ORDINARY INCOME. This can trigger a substantial "phantom tax" bill with zero liquid cash available to pay it.'}
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl border border-amber-200 space-y-2">
+                                <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                                    <span className="text-lg">📈</span>
+                                    <h3>{isEs ? 'Intereses del Préstamo y Costo del Seguro (COI)' : 'Loan Interest Accrual & Rising COI Charges'}</h3>
+                                </div>
+                                <p className="text-xs text-gray-700 leading-relaxed">
+                                    {isEs
+                                        ? 'Los préstamos de póliza acumulan intereses contractuales. Si no se pagan de su bolsillo, los intereses se suman a la deuda principal, restando valor en efectivo y beneficio por fallecimiento. Conforme el asegurado envejece, el Costo de Seguro (COI) mensual aumenta; si el capital restante no cubre el COI y los intereses, la póliza corre riesgo de caducar.'
+                                        : 'Policy loans accrue interest. Unpaid interest is capitalized into the loan balance, reducing net cash value and net death benefit. Meanwhile, internal monthly Cost of Insurance (COI) charges increase with age. If remaining cash value cannot support both loan interest and COI charges, the policy risks lapse.'}
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl border border-amber-200 space-y-2">
+                                <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                                    <span className="text-lg">⚖️</span>
+                                    <h3>{isEs ? 'Estatus de Contrato de Dotación Modificada (MEC)' : 'Modified Endowment Contract (MEC) Rules'}</h3>
+                                </div>
+                                <p className="text-xs text-gray-700 leading-relaxed">
+                                    {isEs
+                                        ? 'Si se aportan primas por encima del límite de 7 pagos ("7-pay test") del IRS, la póliza se reclasifica como MEC. En un MEC, los préstamos tributan bajo la regla LIFO (ganancias primero como ingreso ordinario) y reciben una penalidad adicional del 10% del IRS si se retiran antes de los 59 años y medio.'
+                                        : 'Paying premiums beyond the IRS 7-pay test reclassifies the contract as a MEC. In a MEC, all loans and withdrawals lose tax advantages, are taxed on a LIFO basis (earnings first as ordinary income), and trigger a 10% early withdrawal penalty if taken prior to age 59½.'}
+                                </p>
+                            </div>
+
+                            <div className="bg-white p-5 rounded-xl border border-amber-200 space-y-2">
+                                <div className="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                                    <span className="text-lg">🛡️</span>
+                                    <h3>{isEs ? 'Cómo Diseñamos Pólizas Responsables en AHB' : 'How AHB Protects Your Long-Term Strategy'}</h3>
+                                </div>
+                                <p className="text-xs text-gray-700 leading-relaxed">
+                                    {isEs
+                                        ? 'Diseñamos contratos con Cláusula de Protección contra Sobrepréstamos (Overloan Protection Rider), simulamos proyecciones con tasas conservadoras (5.5% a 6.0% en vez de topes máximos inflados) y realizamos revisiones anuales para garantizar que su póliza mantenga un amortiguador de capital saludable.'
+                                        : 'We incorporate Overloan Protection Riders to safeguard against unintended lapse, model projections using conservative crediting rates (5.5%–6.0% rather than inflated maximum caps), and conduct annual policy reviews to ensure sufficient cash reserves.'}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -358,7 +470,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                             {isEs ? 'Sustento Legal IRS Sección 7702 y 72(e)' : 'IRS Code 7702 & 72(e) Legal Framework'}
                         </span>
                         <h2 className="text-2xl font-black font-heading text-primary">
-                            {isEs ? 'Mecanismo Legal de los Préstamos Libres de Impuestos' : 'The Tax Mechanics Behind IUL Policy Loans'}
+                            {isEs ? 'Mecanismo Legal de los Préstamos con Ventajas Fiscales' : 'The Tax Mechanics Behind IUL Policy Loans'}
                         </h2>
                         <p className="text-sm text-gray-700 leading-relaxed">
                             {isEs 
@@ -378,8 +490,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Diseño de Máxima Financiación Anti-MEC' : 'Maximum-Funded Anti-MEC Design'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Sometemos la póliza a la regla del "7-Pay Test" del IRS para evitar que se convierta en un Contrato de Beneficio Modificado (MEC), asegurando retiros y préstamos 100% libres de penalidades.' 
-                                        : 'We subject every policy to the IRS 7-pay test to prevent Modified Endowment Contract (MEC) status, keeping loans 100% tax-free and penalty-free.'}
+                                        ? 'Sometemos la póliza a la prueba del "7-Pay Test" del IRS para evitar el estatus MEC, preservando el acceso a préstamos sin penalidad por edad y con ventajas fiscales mientras la póliza permanezca en vigor.' 
+                                        : 'We engineer policies under the IRS 7-pay test to prevent MEC classification, preserving tax-advantaged, penalty-free policy loan access while the contract remains in force.'}
                                 </p>
                             </div>
                         </div>
@@ -468,12 +580,12 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                     </div>
 
                     {/* Financial/Regulatory Compliance Disclaimer */}
-                    <div className="mt-8 p-4 bg-gray-50 border border-gray-200 rounded-lg text-[11px] text-gray-500 leading-relaxed text-justify">
-                        <p className="mb-2"><strong>{isEs ? "Aviso Legal Financiero Importante:" : "Important Financial Disclaimer:"}</strong></p>
+                    <div className="mt-8 p-5 bg-gray-50 border border-gray-300 rounded-xl text-[11px] text-gray-600 leading-relaxed text-justify space-y-2">
+                        <p><strong>{isEs ? "Aviso Legal y de Cumplimiento Financiero (IRC § 7702 & § 72):" : "Financial & Regulatory Compliance Disclosure (IRC § 7702 & § 72):"}</strong></p>
                         <p>
                             {isEs
-                                ? "La Vida Universal Indexada (IUL) es un producto de seguro de vida, no una inversión directa en el mercado de valores. Los términos como 'Piso del 0%' (Floor) se refieren al interés acreditado, lo que significa que el valor en efectivo no disminuirá debido a un rendimiento negativo del índice; sin embargo, se aplican cargos mensuales por costo de seguro (COI) y gastos de póliza que pueden reducir el valor en efectivo si no se pagan suficientes primas, lo que conlleva un riesgo de caducidad (lapse) de la póliza. El acceso libre de impuestos a los fondos se logra típicamente a través de préstamos sobre la póliza (policy loans) bajo la Sección 7702 del Código del IRS. Los préstamos acumulan intereses y reducen el beneficio por fallecimiento. Para mantener las ventajas fiscales, la póliza no debe convertirse en un Contrato de Dotación Modificada (Modified Endowment Contract o MEC). AHB Insurance Solutions no brinda asesoramiento fiscal ni legal independiente; consulte a su contador o asesor fiscal para su situación específica."
-                                : "Indexed Universal Life (IUL) is a life insurance product, not a direct stock market investment. Terms such as '0% Floor' refer to the interest crediting, meaning the cash value will not decrease due to negative index performance; however, monthly cost of insurance (COI) and policy expense charges still apply and can reduce cash value if insufficient premiums are paid, leading to policy lapse risk. Tax-free access to funds is typically achieved through policy loans under IRS Code Section 7702. Loans accrue interest and reduce the death benefit. To maintain tax advantages, the policy must not become a Modified Endowment Contract (MEC). AHB Insurance Solutions does not provide independent tax or legal advice; please consult your CPA or tax professional for your specific situation."}
+                                ? "La Vida Universal Indexada (IUL) es una póliza de seguro de vida permanente sujeta a costos de mortalidad y administración, no un instrumento de inversión bursátil directo ni un plan de ahorro garantizado. Un préstamo sobre la póliza (policy loan) NO equivale a dinero libre de impuestos garantizado. Si bien los retiros hasta la base de costos y los préstamos sobre pólizas no-MEC no generan impuestos sobre la renta mientras la póliza permanezca vigente y activa, la existencia de préstamos pendientes acumula intereses y reduce tanto el valor de rescate en efectivo como el beneficio por fallecimiento. Si la póliza caduca (lapse), se entrega (surrender) o se liquida con un saldo de préstamo que supere las primas netas pagadas (cost basis), el monto adeudado en exceso se considerará de inmediato distribución imponible tributable como ingreso ordinario para el asegurado. Mantener la viabilidad fiscal requiere supervisión continua, primas suficientes para cubrir los cargos crecientes por costo de seguro (COI) y la inclusión de cláusulas de protección contra sobrepréstamos. AHB Insurance Solutions y sus agentes autorizados proporcionan orientación formativa e intermediación de seguros, no asesoría fiscal, contable o legal formal; consulte siempre a su CPA o asesor tributario certificado antes de ejecutar estrategias de distribución."
+                                : "Indexed Universal Life (IUL) is a permanent life insurance policy subject to mortality and administrative charges, not an equity security or guaranteed savings vehicle. A policy loan DOES NOT equate to guaranteed tax-free money. While withdrawals up to basis and collateralized loans from a non-MEC policy are non-taxable distributions as long as the policy remains in force, outstanding loans accrue interest and diminish both net surrender value and death benefit. If a policy lapses, is surrendered, or terminates before the death of the insured with an outstanding loan balance that exceeds the cumulative premiums paid (cost basis), the entire excess loan amount becomes immediately recognized as taxable ordinary income in that tax year. Sustaining tax-advantaged income distributions requires ongoing policy stewardship, adequate premium funding to offset rising internal Cost of Insurance (COI) charges, and overloan protection riders. AHB Insurance Solutions and its licensed brokers provide insurance analysis and broker services, not formal tax or legal advice; always consult a certified CPA or tax attorney regarding your individual tax circumstances."}
                         </p>
                     </div>
 

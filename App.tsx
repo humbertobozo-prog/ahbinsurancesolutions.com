@@ -160,7 +160,7 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/faq' || cleanPath === '/es/preguntas-frecuentes') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FAQPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
-    } else if (cleanPath === '/about-us' || cleanPath === '/es/nosotros') {
+    } else if (cleanPath === '/about-us' || cleanPath === '/es/nosotros' || cleanPath === '/about-andres-bozo' || cleanPath === '/es/sobre-andres-bozo') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AboutPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/contact' || cleanPath === '/es/contacto') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><ContactPage language={language} /></Suspense>;
@@ -184,8 +184,8 @@ const App: React.FC = () => {
                 <SEOHead 
                     title={content.meta.title}
                     description={content.meta.description}
-                    canonicalUrl={`${baseUrl}${isEs ? '/es' : ''}`}
-                    enUrl={baseUrl}
+                    canonicalUrl={isEs ? `${baseUrl}/es` : `${baseUrl}/`}
+                    enUrl={`${baseUrl}/`}
                     esUrl={`${baseUrl}/es`}
                     language={language}
                     schema={homeBreadcrumbSchema}

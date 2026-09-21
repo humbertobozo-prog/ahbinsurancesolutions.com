@@ -47,12 +47,12 @@ export const RelatedServices: React.FC<RelatedServicesProps> = ({ currentService
         },
         {
             id: 'iul',
-            title: isEs ? 'Vida Universal Indexada (IUL) y Jubilación' : 'Indexed Universal Life (IUL) & Retirement',
+            title: isEs ? 'Vida Universal Indexada (IUL) y Estrategias de Retiro' : 'Indexed Universal Life (IUL) & Retirement Strategies',
             description: isEs 
-                ? 'Acumule fondos libres de impuestos ligados a índices bursátiles con piso de protección del 0% contra caídas del mercado.' 
-                : 'Build tax-free retirement wealth tied to market indexes with a 0% downside safety floor.',
+                ? 'Estrategia de valor en efectivo con ventajas fiscales y piso del 0% contra caídas del mercado.' 
+                : 'Tax-advantaged cash value growth tied to market index benchmarks with a 0% downside safety floor.',
             link: isEs ? '/es/iul-jubilacion' : '/iul-retirement',
-            cta: isEs ? 'Ver Estrategias IUL ➔' : 'Explore IUL Tax-Free Plans ➔',
+            cta: isEs ? 'Ver Estrategias IUL ➔' : 'Explore IUL Retirement Strategies ➔',
             icon: (
                 <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />

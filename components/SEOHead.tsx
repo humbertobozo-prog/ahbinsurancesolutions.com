@@ -199,20 +199,40 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "@type": "Person",
             "@id": "https://www.ahbinsurancesolutions.com/#person",
             "name": "Andres H. Bozo",
-            "alternateName": "Andres Bozo",
-            "jobTitle": "Licensed Insurance Broker",
+            "alternateName": ["Andres Bozo", "Andrés Bozo", "Andres H Bozo"],
+            "jobTitle": language === 'es' ? "Broker de Seguros Licenciado en Florida" : "Licensed Florida Insurance Broker",
+            "description": language === 'es'
+                ? "Broker independiente de seguros en Florida especializado en Medicare, Seguro de Gastos Finales, Vida Universal Indexada (IUL) y Anualidades. NPN: 21228432."
+                : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
             "worksFor": {
                 "@id": "https://www.ahbinsurancesolutions.com/#organization"
             },
             "telephone": "+1-352-225-8389",
             "email": "andreshbozo@ahbinsurancesolutions.com",
             "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
-            "knowsAbout": ["Medicare", "Final Expense Insurance", "Life Insurance", "Indexed Universal Life (IUL)", "Burial Insurance"],
+            "url": language === 'es' ? "https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" : "https://www.ahbinsurancesolutions.com/about-andres-bozo",
+            "knowsLanguage": ["English", "Spanish"],
+            "knowsAbout": ["Medicare", "Final Expense Insurance", "Life Insurance", "Indexed Universal Life (IUL)", "Burial Insurance", "Annuities"],
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "State Insurance License",
+                    "name": "Florida Resident Insurance Agent License - Life, Health, and Variable Annuity",
+                    "recognizedBy": {
+                        "@type": "GovernmentOrganization",
+                        "name": "Florida Department of Financial Services (DFS)"
+                    }
+                }
+            ],
             "identifier": {
                 "@type": "PropertyValue",
                 "name": "NPN",
                 "value": "21228432"
-            }
+            },
+            "sameAs": [
+                "https://licenseesearch.fldfs.com/",
+                "https://nipr.com/"
+            ]
         };
 
         const fullGraph: Record<string, unknown>[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];

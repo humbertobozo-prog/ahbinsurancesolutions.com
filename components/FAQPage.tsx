@@ -44,7 +44,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: '¿Cómo funciona una póliza de Vida Universal Indexada (IUL)?',
-            a: 'Una póliza IUL ofrece protección de seguro de vida permanente combinada con una cuenta de acumulación de efectivo ligada a un índice de mercado (como el S&P 500). Cuenta con un piso del 0% para proteger su capital de caídas bursátiles y permite préstamos libres de impuestos para su jubilación.'
+            a: 'Una póliza IUL ofrece protección de seguro de vida permanente combinada con una cuenta de acumulación de efectivo ligada a un índice bursátil (como el S&P 500). Cuenta con un piso del 0% para proteger su capital de caídas de mercado y permite préstamos con ventajas fiscales para complementar su retiro bajo el Código IRS 7702, siempre que la póliza se mantenga activa y con fondos suficientes.'
         },
         {
             q: '¿Por qué contratar a través de un corredor (broker) independiente?',
@@ -73,7 +73,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             q: 'How does an Indexed Universal Life (IUL) policy work?',
-            a: 'An IUL policy provides permanent life insurance protection combined with a cash value account tied to a market index (like the S&P 500). It includes a 0% floor to protect your principal from market losses and allows for tax-free retirement loans.'
+            a: 'An IUL policy provides permanent life insurance protection combined with cash value growth benchmarked to a market index (like the S&P 500) with a 0% downside safety floor. It enables tax-advantaged retirement income strategies through policy loans under IRS Code Section 7702, provided the policy remains active and adequately funded.'
         },
         {
             q: 'Why should I use an independent insurance broker?',

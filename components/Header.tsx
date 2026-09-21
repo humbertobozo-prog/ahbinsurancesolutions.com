@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                 nextPath = post ? `/es/blog/${post.slug.es}` : '/es/blog';
             }
             else if (currentPath === '/faq') nextPath = '/es/preguntas-frecuentes';
-            else if (currentPath === '/about-us') nextPath = '/es/nosotros';
+            else if (currentPath === '/about-us' || currentPath === '/about-andres-bozo') nextPath = '/es/sobre-andres-bozo';
             else if (currentPath === '/contact') nextPath = '/es/contacto';
             else if (currentPath === '/terms') nextPath = '/es/terminos';
             else if (currentPath === '/privacy') nextPath = '/es/privacidad';
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                 nextPath = post ? `/blog/${post.slug.en}` : '/blog';
             }
             else if (currentPath === '/es/preguntas-frecuentes') nextPath = '/faq';
-            else if (currentPath === '/es/nosotros') nextPath = '/about-us';
+            else if (currentPath === '/es/nosotros' || currentPath === '/es/sobre-andres-bozo') nextPath = '/about-andres-bozo';
             else if (currentPath === '/es/contacto') nextPath = '/contact';
             else if (currentPath === '/es/terminos') nextPath = '/terms';
             else if (currentPath === '/es/privacidad') nextPath = '/privacy';
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
     const blogPath = isEs ? '/es/blog' : '/blog';
     const cityGuidesPath = isEs ? '/es/guias-ciudades' : '/city-guides';
     const faqPath = isEs ? '/es/preguntas-frecuentes' : '/faq';
-    const aboutPath = isEs ? '/es/nosotros' : '/about-us';
+    const aboutPath = isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo';
     const contactPath = isEs ? '/es/contacto' : '/contact';
     const homePath = isEs ? '/es' : '/';
 

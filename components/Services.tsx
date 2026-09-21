@@ -1,6 +1,7 @@
 
 import React from 'react';
 import type { TranslationContent } from '../types';
+import { InfoTooltip } from './InfoTooltip';
 
 interface ServicesProps {
     content: TranslationContent['services'];
@@ -18,6 +19,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, highlight, language }) => {
     const isEs = language === 'es';
     const lowerTitle = title.toLowerCase();
+    const isIUL = lowerTitle.includes('iul') || lowerTitle.includes('universal');
 
     let ctaText = isEs ? 'Hablar con Andrés ➔' : 'Talk With Andres ➔';
     let targetUrl = isEs ? '/es/contacto' : '/contact';
@@ -28,7 +30,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hig
     } else if (lowerTitle.includes('final') || lowerTitle.includes('gastos') || lowerTitle.includes('burial') || lowerTitle.includes('entierro')) {
         ctaText = isEs ? 'Ver Mis Opciones de Gastos Finales ➔' : 'Get My Final Expense Options ➔';
         targetUrl = isEs ? '/es/gastos-finales' : '/final-expense';
-    } else if (lowerTitle.includes('iul') || lowerTitle.includes('universal')) {
+    } else if (isIUL) {
         ctaText = isEs ? 'Solicitar una Revisión de IUL ➔' : 'Request an IUL Review ➔';
         targetUrl = isEs ? '/es/iul-jubilacion' : '/iul-retirement';
     } else if (lowerTitle.includes('annuit') || lowerTitle.includes('anualidad')) {
@@ -43,6 +45,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hig
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    const tooltipNotice = isEs
+        ? 'El estatus libre de impuestos se logra mediante préstamos sobre la póliza bajo el Código IRS 7702. Depende del mantenimiento activo de la póliza, fondos suficientes para cubrir costos de seguro y evitar la caducidad (lapse) para que los préstamos no se conviertan en ingreso gravable.'
+        : 'Tax-free status is achieved via policy loans and withdrawals under IRS Code 7702. It requires ongoing policy maintenance, adequate funding to cover internal insurance charges, and preventing policy lapse to avoid converting unpaid loans into taxable income.';
+
     return (
         <div className="bg-white p-8 rounded-2xl shadow-lg text-center transform hover:-translate-y-2 transition-all duration-300 flex flex-col h-full border border-gray-100 hover:border-secondary/30 hover:shadow-xl">
             <div className="flex-grow">
@@ -53,8 +59,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hig
                         </svg>
                     </div>
                 </div>
-                <h3 className="text-2xl font-black font-heading text-primary mb-3 leading-tight">{title}</h3>
-                <p className="text-gray-700 leading-relaxed font-medium mb-4">{description}</p>
+                <h3 className="text-2xl font-black font-heading text-primary mb-3 leading-tight flex items-center justify-center">
+                    <span>{title}</span>
+                    {isIUL && (
+                        <InfoTooltip 
+                            text={tooltipNotice} 
+                            label={isEs ? 'Información sobre ventajas fiscales de IUL' : 'IUL Tax-Advantage Disclosure'}
+                            position="top" 
+                        />
+                    )}
+                </h3>
+                <p className="text-gray-700 leading-relaxed font-medium mb-4">
+                    {description}
+                </p>
             </div>
             {highlight && (
                 <div className="mt-2 mb-6 pt-4 border-t border-gray-100">

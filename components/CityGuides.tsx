@@ -61,6 +61,11 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     setTimeout(() => setCopiedSchema(false), 2500);
   };
 
+  const baseUrl = 'https://www.ahbinsurancesolutions.com';
+  const canonical = `${baseUrl}${isEs ? '/es/guias-ciudades' : '/city-guides'}`;
+  const enUrl = `${baseUrl}/city-guides`;
+  const esUrl = `${baseUrl}/es/guias-ciudades`;
+
   return (
     <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
       <SEOHead
@@ -74,6 +79,10 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
             ? `Asesoría de seguros en ${activeCity.cityName} (${activeCity.county}). Compare Suplementos de Medicare, entierro y planes IUL con el broker Andrés Bozo (NPN 21228432).`
             : `Local insurance broker guide for ${activeCity.cityName}, FL. Compare Medicare Supplement Plan G/N, Final Expense burial coverage, and IUL with broker Andres Bozo.`
         }
+        canonicalUrl={canonical}
+        enUrl={enUrl}
+        esUrl={esUrl}
+        language={language}
       />
 
       {/* Header Banner */}
@@ -217,7 +226,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
                   <h3 className="text-xl font-bold font-heading text-primary">
                     {isEs ? `3. Planificación IUL e Ingresos de Jubilación en ${activeCity.cityName}` : `3. IUL Retirement & Wealth Growth in ${activeCity.cityName}`}
                   </h3>
-                  <p className="text-xs text-gray-500 font-medium">{isEs ? 'Estrategia fiscal con piso garantizado del 0%' : 'Tax-free cash accumulation'}</p>
+                  <p className="text-xs text-gray-500 font-medium">{isEs ? 'Estrategia fiscal con piso garantizado del 0%' : 'Tax-advantaged cash accumulation'}</p>
                 </div>
               </div>
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed font-normal">

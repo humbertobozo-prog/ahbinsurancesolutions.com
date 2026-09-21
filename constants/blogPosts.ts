@@ -199,12 +199,12 @@ Para personas con condiciones médicas preexistentes graves, existen pólizas de
             es: 'iul-vs-401k-jubilacion-libre-de-impuestos'
         },
         title: {
-            en: 'Indexed Universal Life (IUL) vs 401(k): Building Tax-Free Wealth in Florida',
-            es: 'Vida Universal Indexada (IUL) vs 401(k): Cómo Construir Riqueza Libre de Impuestos'
+            en: 'Indexed Universal Life (IUL) vs 401(k): Tax-Advantaged Wealth & Retirement in Florida',
+            es: 'Vida Universal Indexada (IUL) vs 401(k): Estrategias de Retiro con Ventajas Fiscales en Florida'
         },
         excerpt: {
-            en: 'Discover how Indexed Universal Life insurance shields your retirement savings from stock market crashes while providing tax-free income and death benefits.',
-            es: 'Descubra cómo el seguro IUL protege sus ahorros de jubilación contra caídas del mercado mientras le brinda ingresos libres de impuestos.'
+            en: 'Understand the strategic differences between an IUL and a 401(k), including 0% market downside protection, IRS 7702 policy loan mechanics, and essential lapse risk rules.',
+            es: 'Conozca las diferencias estratégicas entre un IUL y un 401(k), incluyendo el piso del 0% contra caídas de mercado, la mecánica de préstamos según IRS 7702 y las reglas cruciales sobre riesgo de lapse.'
         },
         category: 'iul',
         date: '2026-07-15',
@@ -216,59 +216,95 @@ Para personas con condiciones médicas preexistentes graves, existen pólizas de
             image: '/andresbozoofi.webp'
         },
         image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['IUL', 'Retirement', 'Tax-Free Income', 'Life Insurance'],
+        tags: ['IUL', 'Retirement Planning', 'Policy Loans', 'Life Insurance Compliance'],
         content: {
             en: `
-## Why High-Earning Floridians and Families are Turning to IUL
+## Why High-Earning Floridians and Families are Analyzing IUL
 
-As tax rates and inflation continue to fluctuate, traditional retirement vehicles like traditional 401(k)s and IRAs carry a hidden risk: **tax liability in retirement**. When you withdraw funds at age 65 or 70, you pay ordinary income tax on every dollar extracted.
+As income tax brackets and economic cycles fluctuate, traditional retirement vehicles like 401(k)s and Traditional IRAs carry a structural reality: **all retirement distributions are taxed as ordinary income**. When you withdraw funds at age 65 or 72, you pay income taxes on both your original contributions and all accumulated earnings.
 
-An **Indexed Universal Life (IUL) policy** offers an alternative strategy under IRS Sections 7702 and 72(e), combining permanent life insurance coverage with tax-free accumulation.
+An **Indexed Universal Life (IUL) policy** offers an alternative supplemental planning vehicle under Internal Revenue Code (IRC) Sections 7702 and 72(e), combining permanent life insurance death benefit protection with tax-deferred cash value growth.
 
 ### How Does an IUL Policy Work?
 
-1. **Market Index Linkage:** Your cash value growth is tied to an index like the S&P 500. When the market goes up, your account credited interest increases up to an index cap (e.g., 9% – 12%).
-2. **0% Downside Floor:** If the stock market drops 20% or 30%, **your account value does NOT lose money**. You receive 0% interest for that period, preserving 100% of your accumulated principal.
-3. **Tax-Free Policy Loans:** You can borrow against your policy's cash value at any age without triggering income taxes or early withdrawal penalties (unlike a 401k before 59½).
-4. **Living Benefits:** If you suffer a chronic, critical, or terminal illness, you can access your death benefit while still alive to pay for care.
+1. **Market Index Linkage:** Your cash value crediting is tied to an underlying benchmark like the S&P 500. When the index rises over a measurement period, interest is credited up to an agreed cap (typically 8%–11%) or via participation rates.
+2. **0% Downside Floor:** If the stock market drops 20% or 30%, **your cash value does NOT suffer negative market interest**. You are credited 0% for that cycle, shielding prior gains from market crashes.
+3. **Tax-Advantaged Distributions (Cost Basis & Policy Loans):** You can access capital first via tax-free withdrawals up to your cost basis (cumulative premiums paid), and subsequently through collateralized policy loans without triggering immediate income tax—provided the policy is maintained properly.
+4. **Living Benefits:** Accelerated death benefit riders allow policyholders to advance funds to cover qualified critical, chronic, or terminal medical conditions.
+
+---
+
+### Critical Compliance Note: Policy Loan ≠ Guaranteed Tax-Free Money
+
+In modern financial marketing, IUL is frequently described as "tax-free retirement income." While policy loans provide a legitimate statutory tax advantage, **a policy loan is NOT guaranteed free money or an unconditional tax shield**. 
+
+Consumers must understand the following essential mechanics:
+
+- **The Lapse Risk & Phantom Tax Liability:** If a policy lapses, terminates, or is surrendered while the insured is alive with an outstanding policy loan exceeding the total premiums paid (cost basis), **that entire excess loan amount becomes immediately taxable as ordinary income in that tax year**. This can trigger a devastating tax liability without any liquid cash distribution.
+- **Loan Interest Accrual:** Policy loans accrue interest continuously. If interest is not serviced out-of-pocket, it is added to the principal balance, reducing net cash value and death benefit.
+- **Cost of Insurance (COI):** As the insured ages, internal monthly mortality charges increase. If cash value reserves are exhausted due to heavy loans or underfunding, the policy risks lapsing.
+- **Modified Endowment Contract (MEC) Rules:** Funding a policy faster than the IRS 7-pay limit causes it to become a MEC. MEC distributions are taxed LIFO (earnings first as ordinary income) and carry a 10% IRS early distribution penalty prior to age 59½.
+- **Protective Policy Structuring:** At AHB Insurance Solutions, we structure policies to prevent MEC status, stress-test illustrations using realistic crediting rates (5.5%–6.0%), include Overloan Protection Riders, and perform regular reviews to protect your policy from unintended lapse.
+
+---
 
 ### IUL vs. Traditional 401(k) Comparison
 
-| Feature | Traditional 401(k) | Indexed Universal Life (IUL) |
+| Financial Dimension | Traditional 401(k) | Indexed Universal Life (IUL) |
 |---|---|---|
-| Market Downside Protection | ❌ None (Can lose 30%+) | ✅ 0% Downside Floor |
-| Retirement Withdrawals | ❌ Taxed as Income | ✅ Tax-Free via Policy Loans |
-| Early Access Penalty (<59½) | ❌ 10% IRS Penalty | ✅ No Age Penalty |
-| Death Benefit to Heirs | ❌ Subject to Taxes | ✅ 10% Tax-Free Payout |
-| Chronic Illness Benefit | ❌ None | ✅ Living Benefits Included |
+| Market Downside Protection | ❌ None (Full equity volatility) | ✅ 0% Guaranteed Downside Floor |
+| Taxation on Retirement Cash Flow | ❌ 100% Taxed as Ordinary Income | ✅ Tax-Free Withdrawals to Basis & Policy Loans (Non-MEC, while in force)* |
+| Early Access Penalty (<59½) | ❌ 10% IRS Penalty (exceptions apply) | ✅ No 10% IRS Age Penalty on non-MEC loans* |
+| Death Benefit Protection | ❌ Taxable account balance only | ✅ Income-Tax-Free Life Insurance Benefit |
+| Living Medical Benefits | ❌ None | ✅ Chronic, Critical & Terminal Illness Riders |
 
-> Want a custom IUL illustration tailored to your age and monthly target savings? Contact Andres H. Bozo today.
+*Important compliance note: Policy loans reduce cash surrender value and death benefit, and accrue interest. To maintain tax advantages, the policy must remain active and in force throughout the insured's life. If a policy lapses with outstanding loans exceeding cost basis, the excess is subject to ordinary income taxation.*
+
+> **Schedule a Consultation:** Want a realistic, transparent IUL illustration tailored to your timeline and budget? Contact licensed broker Andres H. Bozo at AHB Insurance Solutions.
             `,
             es: `
-## Por Qué Familias en Florida Están Optando por el Seguro IUL
+## Por Qué Familias en Florida Analizan Estrategias de Seguro IUL
 
-A medida que aumentan los impuestos y la inflación, los vehículos tradicionales de jubilación como el 401(k) o IRA tradicional conllevan un riesgo oculto: **impuestos altos al momento de retirarse**.
+A medida que los tramos impositivos y los ciclos económicos fluctúan, los instrumentos tradicionales de jubilación como el 401(k) y el IRA Tradicional conllevan una realidad estructural: **todas las distribuciones en el retiro tributan como ingreso ordinario**. Al retirar fondos a los 65 o 72 años, se pagan impuestos sobre cada dólar aportado y sobre el crecimiento acumulado.
 
-Una póliza de **Vida Universal Indexada (IUL)** ofrece una estrategia alternativa bajo las secciones 7702 y 72(e) del IRS, combinando seguro de vida permanente con acumulación libre de impuestos.
+Una póliza de **Vida Universal Indexada (IUL)** ofrece una alternativa complementaria respaldada por las Secciones 7702 y 72(e) del Código de Rentas Internas (IRC), combinando protección de seguro de vida permanente con acumulación de valor en efectivo con impuestos diferidos.
 
 ### ¿Cómo Funciona una Póliza IUL?
 
-1. **Crecimiento Ligado a Índices:** Su valor en efectivo crece según un índice de mercado (como el S&P 500), hasta un límite o tope (cap) de interés (p. ej., 9% al 12%).
-2. **Piso del 0% de Protección:** Si la bolsa cae un 20% o 30%, **su capital no pierde dinero**. Recibe un 0% de interés para ese período, manteniendo su saldo intacto.
-3. **Préstamos Libres de Impuestos:** Puede acceder a su dinero en efectivo a cualquier edad mediante préstamos sobre la póliza sin pagar impuestos ni penalizaciones.
-4. **Beneficios en Vida:** Si sufre una enfermedad crítica, crónica o terminal, puede adelantar fondos de su beneficio por fallecimiento para pagar sus tratamientos.
+1. **Rendimiento Ligado a Índices Bursátiles:** Su valor en efectivo genera intereses según el desempeño de un índice de referencia (como el S&P 500), hasta un tope contractual ("Cap", típicamente del 8% al 11%) o mediante tasas de participación.
+2. **Piso del 0% de Protección Garantizada:** Si el mercado de valores cae un 20% o 30%, **su capital no sufre pérdidas por fluctuación bursátil**. Se le acredita un 0% para ese ciclo, preservando las ganancias previas.
+3. **Distribuciones con Ventajas Fiscales (Base de Costo y Préstamos):** Puede acceder a capital retirando primero hasta el límite de las primas pagadas (base de costo libre de impuestos) y posteriormente mediante préstamos colateralizados sobre la póliza sin generar impuesto sobre la renta inmediato, siempre que la póliza se mantenga en vigor.
+4. **Beneficios en Vida (Living Benefits):** Permite adelantar parte del beneficio por fallecimiento en vida si el asegurado califica por enfermedad crónica, crítica o terminal.
+
+---
+
+### Nota Esencial de Compliance: Préstamo sobre Póliza ≠ Dinero Libre de Impuestos Garantizado
+
+En la publicidad financiera moderna, a menudo se promociona el IUL como "jubilación libre de impuestos garantizada". Si bien los préstamos sobre póliza constituyen una herramienta legal legítima, **un préstamo sobre la póliza NO es dinero gratuito ni libre de impuestos de forma incondicional**.
+
+Todo consumidor responsable debe comprender los siguientes riesgos y reglas operativas:
+
+- **Riesgo de Caducidad (Lapse) y Factura Fiscal Inesperada:** Si una póliza caduca, se cancela o se entrega (surrender) en vida del asegurado con un saldo de préstamo que supere las primas netas aportadas (base de costo), **ese monto adeudado en exceso se convierte de inmediato en INGRESO ORDINARIO GRAVABLE en ese año fiscal**. Esto puede generar una deuda tributaria significativa sin liquidez para cubrirla.
+- **Acumulación Continua de Intereses:** Los préstamos de seguro generan intereses periódicos. Si no se abonan, se capitalizan al saldo del préstamo, reduciendo el valor en efectivo y el beneficio por fallecimiento.
+- **Costo del Seguro (COI):** Conforme el asegurado envejece, los costos internos de mortalidad mensual aumentan. Si el valor en efectivo no es suficiente para cubrir el COI y los intereses del préstamo, la póliza corre riesgo inminente de caducidad.
+- **Regla del Contrato de Dotación Modificada (MEC):** Aportar fondos por encima del límite de 7 pagos del IRS convierte la póliza en MEC. En un contrato MEC, los préstamos tributan como ingreso ordinario (LIFO) y reciben una penalidad del 10% del IRS antes de los 59 años y medio.
+- **Diseño Prudente y Supervisión en AHB:** En AHB Insurance Solutions estructuramos pólizas para evitar la categoría MEC, proyectamos ilustraciones con tasas conservadoras (5.5% a 6.0% en vez de máximos hipotéticos), incorporamos Cláusulas de Protección contra Sobrepréstamos y realizamos auditorías anuales para asegurar la sostenibilidad del contrato.
+
+---
 
 ### Comparativa: IUL vs. 401(k) Tradicional
 
-| Característica | 401(k) Tradicional | Vida Universal Indexada (IUL) |
+| Criterio Financiero | 401(k) Tradicional | Vida Universal Indexada (IUL) |
 |---|---|---|
-| Protección en Caídas del Mercado | ❌ Ninguna | ✅ Piso de Protección del 0% |
-| Retiros en la Jubilación | ❌ Paga Impuestos | ✅ Libres de Impuestos |
-| Penalización por Retiro Anticipado | ❌ 10% Penalización | ✅ Sin Penalización |
-| Beneficio para Herederos | ❌ Sujeto a Impuestos | ✅ Pago 100% Libre de Impuestos |
-| Cobertura por Enfermedades | ❌ Ninguna | ✅ Beneficios en Vida Incluidos |
+| Protección contra Caídas Bursátiles | ❌ Ninguna (Volatilidad total de mercado) | ✅ Garantía de Piso del 0% (Sin Pérdida) |
+| Tributación de Retiros / Flujo de Retiro | ❌ 100% Tributa como Ingreso Ordinario | ✅ Retiros hasta la base y préstamos exentos de impuesto sobre la renta (Póliza no-MEC en vigor)* |
+| Penalización por Retiro Anticipado (<59½) | ❌ 10% Penalidad del IRS (salvo excepción) | ✅ Sin penalidad por edad del 10% en préstamos no-MEC* |
+| Beneficio por Fallecimiento para Herederos | ❌ Saldo de cuenta gravable | ✅ Beneficio de Seguro de Vida Exento de Impuestos |
+| Cobertura por Enfermedades Graves | ❌ Ninguna | ✅ Beneficios en Vida Incluidos |
 
-> ¿Desea una ilustración personalizada de IUL para su edad y presupuesto? Contacte hoy mismo a Andrés H. Bozo.
+*Nota de compliance y legal: Los préstamos sobre la póliza reducen el valor neto en efectivo y el beneficio por fallecimiento, y acumulan intereses. Para mantener los beneficios fiscales, la póliza debe mantenerse activa durante toda la vida del asegurado. Si la póliza caduca con préstamos pendientes superiores a la base de primas pagadas, el saldo restante tributará como ingreso ordinario.*
+
+> **Solicite una Asesoría:** ¿Desea evaluar una ilustración de IUL realista, transparente y personalizada a su edad y capacidad de ahorro? Contacte hoy al corredor licenciado Andrés H. Bozo en AHB Insurance Solutions.
             `
         }
     }

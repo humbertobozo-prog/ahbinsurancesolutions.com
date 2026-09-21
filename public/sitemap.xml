@@ -163,19 +163,19 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- About EN & ES -->
+  <!-- About Andres Bozo EN & ES -->
   <url>
-    <loc>https://www.ahbinsurancesolutions.com/about-us</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-us" />
-    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/nosotros" />
+    <loc>https://www.ahbinsurancesolutions.com/about-andres-bozo</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" />
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ahbinsurancesolutions.com/es/nosotros</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-us" />
-    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/nosotros" />
+    <loc>https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" />
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

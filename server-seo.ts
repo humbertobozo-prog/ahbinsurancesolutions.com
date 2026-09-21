@@ -51,8 +51,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/es/blog": { en: "/blog", es: "/es/blog" },
     "/faq": { en: "/faq", es: "/es/preguntas-frecuentes" },
     "/es/preguntas-frecuentes": { en: "/faq", es: "/es/preguntas-frecuentes" },
-    "/about-us": { en: "/about-us", es: "/es/nosotros" },
-    "/es/nosotros": { en: "/about-us", es: "/es/nosotros" },
+    "/about-us": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
+    "/es/nosotros": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
+    "/about-andres-bozo": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
+    "/es/sobre-andres-bozo": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
     "/contact": { en: "/contact", es: "/es/contacto" },
     "/es/contacto": { en: "/contact", es: "/es/contacto" },
     "/terms": { en: "/terms", es: "/es/terminos" },
@@ -219,7 +221,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ul>
             <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across over 80 A-rated insurance carriers.</li>
             <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
-            <li><strong>Bilingual Fiduciary Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance professional fluent in English and Spanish.</li>
+            <li><strong>Bilingual, Client-Focused Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance broker fluent in English and Spanish.</li>
           </ul>
         </section>
         <section>
@@ -569,14 +571,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     }
   }
 
-  // 7. About Us Page
-  else if (cleanPath === "/about-us" || cleanPath === "/es/nosotros") {
+  // 7. About Us & Broker Andres Bozo Page
+  else if (cleanPath === "/about-us" || cleanPath === "/es/nosotros" || cleanPath === "/about-andres-bozo" || cleanPath === "/es/sobre-andres-bozo") {
     title = isEs 
-      ? "Sobre Nosotros y Broker Andrés H. Bozo | AHB Insurance Solutions" 
-      : "About Us & Licensed Broker Andres H. Bozo | AHB Insurance Solutions";
+      ? "Sobre Andrés H. Bozo | Broker de Seguros Licenciado en Florida (NPN 21228432)" 
+      : "About Andres H. Bozo | Licensed Florida Insurance Broker (NPN 21228432)";
     description = isEs 
-      ? "Conozca a Andrés H. Bozo (NPN 21228432), corredor independiente especializado en Medicare y Seguros de Vida en Florida. Más de 80 aseguradoras." 
-      : "Meet Andres H. Bozo (NPN 21228432), independent insurance broker specializing in Florida Medicare and Life Insurance. 80+ top carriers.";
+      ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con más de 80 aseguradoras." 
+      : "Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing 80+ top carriers.";
 
     if (isEs) {
       bodyOutline = `
@@ -585,8 +587,25 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
         </header>
         <section>
-          <h2>Nuestra Misión y Ética Profesional</h2>
-          <p>En AHB Insurance Solutions, representamos a los clientes y no a las compañías aseguradoras. Andrés H. Bozo es un broker independiente de seguros en Florida, con NPN de Licencia 21228432. Nos especializamos en Medicare y seguros de vida entera.</p>
+          <h2>Broker Independiente Andrés H. Bozo — NPN 21228432</h2>
+          <p>Andrés H. Bozo es corredor de seguros independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) y fundador de AHB Insurance Solutions. Brinda asesoría bilingüe de seguros para personas mayores y familias en todo el estado de Florida, con contratos directos con más de 80 aseguradoras de primer nivel nacional.</p>
+          <h3>Áreas de Especialización en Florida</h3>
+          <ul>
+            <li><strong>Medicare Suplementario (Medigap Plan G y N) y Medicare Advantage (Parte C)</strong></li>
+            <li><strong>Seguro de Gastos Finales y Protección Funeraria para Mayores</strong></li>
+            <li><strong>Vida Universal Indexada (IUL) y Estrategias de Retiro (IRC 7702)</strong></li>
+            <li><strong>Anualidades Fijas Indexadas (FIA) con Ingresos de por Vida</strong></li>
+            <li><strong>Planes Dentales, Visión y Audición para Adultos Mayores</strong></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Metodología de Asesoría en 4 Pasos</h2>
+          <ol>
+            <li>Diagnóstico exhaustivo de salud, recetas y objetivos financieros.</li>
+            <li>Comparación objetiva de tarifas reguladas entre más de 80 aseguradoras.</li>
+            <li>Asesoría bilingüe y transparente sin presión comercial (100% gratuita).</li>
+            <li>Acompañamiento en reclamos y revisiones anuales de formularios de medicamentos.</li>
+          </ol>
         </section>
       `;
     } else {
@@ -596,8 +615,25 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
         </header>
         <section>
-          <h2>Our Independent Commitment</h2>
-          <p>At AHB Insurance Solutions, we are committed to serving you first, not the insurance companies. Andres H. Bozo is a licensed independent Florida insurance broker (NPN: 21228432) with a decade of health and financial experience.</p>
+          <h2>Independent Broker Andres H. Bozo — NPN 21228432</h2>
+          <p>Andres H. Bozo is a licensed independent insurance broker authorized by the Florida Department of Financial Services (DFS) and principal of AHB Insurance Solutions. Delivering client-focused, bilingual advisory across all 67 Florida counties with direct appointments at 80+ top-rated national carriers.</p>
+          <h3>Core Practice Areas</h3>
+          <ul>
+            <li><strong>Florida Medicare Supplement (Medigap Plan G & N) & Medicare Advantage (Part C)</strong></li>
+            <li><strong>Final Expense & Senior Burial Whole Life Insurance</strong></li>
+            <li><strong>Indexed Universal Life (IUL) & Tax-Advantaged Retirement Strategies (IRC 7702)</strong></li>
+            <li><strong>Fixed Indexed Annuities (FIA) for Principal Protection & Lifetime Income</strong></li>
+            <li><strong>Senior Dental, Vision & Hearing Coverage</strong></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Our 4-Step Client-First Methodology</h2>
+          <ol>
+            <li>Comprehensive Health Background & Rx Needs Discovery.</li>
+            <li>Market-Wide Rate Comparison Across 80+ Florida Carriers.</li>
+            <li>Transparent, Bilingual Guidance with Zero Sales Pressure (100% Free).</li>
+            <li>Lifetime Client Advocacy & Annual Medicare Prescription Formularies Reviews.</li>
+          </ol>
         </section>
       `;
     }
@@ -842,20 +878,48 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "@type": "Person",
     "@id": "https://www.ahbinsurancesolutions.com/#person",
     "name": "Andres H. Bozo",
-    "alternateName": "Andres Bozo",
-    "jobTitle": "Licensed Insurance Broker",
+    "alternateName": ["Andres Bozo", "Andrés Bozo", "Andres H Bozo"],
+    "jobTitle": isEs ? "Broker de Seguros Licenciado en Florida" : "Licensed Florida Insurance Broker",
+    "description": isEs 
+      ? "Broker independiente de seguros en Florida especializado en Medicare, Seguro de Gastos Finales, Vida Universal Indexada (IUL) y Anualidades. NPN: 21228432."
+      : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
     "worksFor": {
       "@id": "https://www.ahbinsurancesolutions.com/#organization"
     },
     "telephone": "+1-352-225-8389",
     "email": "andreshbozo@ahbinsurancesolutions.com",
     "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
-    "knowsAbout": ["Medicare", "Final Expense Insurance", "Life Insurance", "Indexed Universal Life (IUL)", "Burial Insurance"],
+    "url": isEs ? "https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" : "https://www.ahbinsurancesolutions.com/about-andres-bozo",
+    "knowsLanguage": ["English", "Spanish"],
+    "knowsAbout": [
+      "Medicare Supplement (Medigap Plan G & Plan N)",
+      "Medicare Advantage (Part C)",
+      "Medicare Part D Prescription Drug Coverage",
+      "Final Expense & Senior Burial Whole Life Insurance",
+      "Indexed Universal Life (IUL)",
+      "Fixed Indexed Annuities (FIA)",
+      "Senior Healthcare Planning"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "State Insurance License",
+        "name": "Florida Resident Insurance Agent License - Life, Health, and Variable Annuity",
+        "recognizedBy": {
+          "@type": "GovernmentOrganization",
+          "name": "Florida Department of Financial Services (DFS)"
+        }
+      }
+    ],
     "identifier": {
       "@type": "PropertyValue",
       "name": "NPN",
       "value": "21228432"
-    }
+    },
+    "sameAs": [
+      "https://licenseesearch.fldfs.com/",
+      "https://nipr.com/"
+    ]
   };
 
   const graph: Record<string, unknown>[] = [websiteSchema, webpageSchema, organizationSchema, personSchema];

@@ -148,6 +148,28 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${path}`;
 
+    // Map landing page route pairs for accurate hreflang and canonical links
+    const PAIR_MAP: Record<string, { en: string; es: string }> = {
+        '/medicare-florida': { en: '/medicare-florida', es: '/es/seguro-medicare-florida' },
+        '/es/seguro-medicare-florida': { en: '/medicare-florida', es: '/es/seguro-medicare-florida' },
+        '/medicare-supplement-florida': { en: '/medicare-supplement-florida', es: '/es/suplemento-medicare-florida' },
+        '/es/suplemento-medicare-florida': { en: '/medicare-supplement-florida', es: '/es/suplemento-medicare-florida' },
+        '/final-expense-miami': { en: '/final-expense-miami', es: '/es/seguro-gastos-finales-florida' },
+        '/es/seguro-gastos-finales-florida': { en: '/final-expense-miami', es: '/es/seguro-gastos-finales-florida' },
+        '/burial-insurance-tampa': { en: '/burial-insurance-tampa', es: '/es/seguro-gastos-finales-tampa' },
+        '/es/seguro-gastos-finales-tampa': { en: '/burial-insurance-tampa', es: '/es/seguro-gastos-finales-tampa' },
+        '/annuities-florida': { en: '/annuities-florida', es: '/es/anualidades-florida' },
+        '/es/anualidades-florida': { en: '/annuities-florida', es: '/es/anualidades-florida' },
+        '/dental-vision-florida': { en: '/dental-vision-florida', es: '/es/dental-vision-florida' },
+        '/es/dental-vision-florida': { en: '/dental-vision-florida', es: '/es/dental-vision-florida' },
+        '/iul-retirement-tampa': { en: '/iul-retirement-tampa', es: '/es/iul-jubilacion' },
+        '/spanish-insurance-orlando': { en: '/', es: '/spanish-insurance-orlando' }
+    };
+
+    const paired = PAIR_MAP[path] || { en: path, es: `/es${path}` };
+    const enUrl = `${baseUrl}${paired.en === '/' ? '/' : paired.en}`;
+    const esUrl = `${baseUrl}${paired.es}`;
+
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "InsuranceAgency", "Organization"],
@@ -200,8 +222,8 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 title={details.title}
                 description={details.description}
                 canonicalUrl={canonical}
-                enUrl={canonical}
-                esUrl={canonical}
+                enUrl={enUrl}
+                esUrl={esUrl}
                 language={activeLang}
                 schema={[localBusinessSchema, breadcrumbSchema]}
             />
