@@ -31,10 +31,10 @@ export const translations: Record<Language, TranslationContent> = {
       trustText: "🔒 Licensed Professional | NPN: 21228432 | Florida Licensed Broker"
     },
     cta: {
-      medicare: "Get My Medicare Comparison",
-      finalExpense: "Get My Final Expense Options",
-      iul: "Request an IUL Review",
-      annuities: "Request My Retirement Income Review",
+      medicare: "Compare Medicare Options",
+      finalExpense: "Get Final Expense Quote",
+      iul: "Request IUL Analysis",
+      annuities: "Review Retirement Income Options",
       general: "Talk With Andres"
     },
     keyTakeaways: {
@@ -287,10 +287,10 @@ export const translations: Record<Language, TranslationContent> = {
       trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría Sin Costo"
     },
     cta: {
-      medicare: "Obtener Mi Comparación de Medicare",
-      finalExpense: "Ver Mis Opciones de Gastos Finales",
-      iul: "Solicitar una Revisión de IUL",
-      annuities: "Solicitar Mi Revisión de Ingresos de Jubilación",
+      medicare: "Comparar opciones de Medicare",
+      finalExpense: "Obtener cotización",
+      iul: "Solicitar análisis de IUL",
+      annuities: "Analizar opciones de ingreso para retiro",
       general: "Hablar con Andrés"
     },
     keyTakeaways: {
