@@ -355,4 +355,21 @@
     <priority>0.85</priority>
   </url>
 
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/locations/gainesville-fl</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/locations/gainesville-fl" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl" />
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/locations/gainesville-fl" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl" />
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
 </urlset>

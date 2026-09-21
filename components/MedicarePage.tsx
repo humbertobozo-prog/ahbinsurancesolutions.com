@@ -689,6 +689,18 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         </button>
                     </div>
 
+                    {/* Official CMS Medicare Marketing Compliance Disclaimer */}
+                    <div className="bg-slate-100 border border-slate-300 rounded-xl p-5 text-xs text-slate-600 leading-relaxed space-y-2">
+                        <p className="font-bold text-slate-800 uppercase tracking-wider">
+                            {isEs ? 'Aviso Legal de Cumplimiento CMS Medicare' : 'Official CMS Medicare Compliance Disclaimer'}
+                        </p>
+                        <p>
+                            {isEs 
+                                ? 'No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con Medicare.gov, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. AHB Insurance Solutions y el corredor Andrés H. Bozo (NPN 21228432) son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.' 
+                                : 'We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.'}
+                        </p>
+                    </div>
+
                 </div>
             </section>
 

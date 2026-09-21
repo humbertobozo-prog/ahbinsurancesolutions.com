@@ -24,6 +24,7 @@ const FAQPage = React.lazy(() => import('./components/FAQPage').then(m => ({ def
 const AboutPage = React.lazy(() => import('./components/AboutPage').then(m => ({ default: m.AboutPage })));
 const ContactPage = React.lazy(() => import('./components/ContactPage').then(m => ({ default: m.ContactPage })));
 const LocationLandingPage = React.lazy(() => import('./components/LocationLandingPage').then(m => ({ default: m.LocationLandingPage })));
+const GainesvilleLocationPage = React.lazy(() => import('./components/GainesvilleLocationPage').then(m => ({ default: m.GainesvilleLocationPage })));
 const LegalPage = React.lazy(() => import('./components/LegalPage').then(m => ({ default: m.LegalPage })));
 const CityGuides = React.lazy(() => import('./components/CityGuides').then(m => ({ default: m.CityGuides })));
 const NotFoundPage = React.lazy(() => import('./components/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
@@ -158,6 +159,37 @@ const App: React.FC = () => {
     } else if (cleanPath === '/city-guides' || cleanPath === '/es/guias-ciudades' || cleanPath.startsWith('/cities/') || cleanPath.startsWith('/es/ciudades/')) {
         const citySlug = cleanPath.startsWith('/cities/') ? cleanPath.replace('/cities/', '') : (cleanPath.startsWith('/es/ciudades/') ? cleanPath.replace('/es/ciudades/', '') : undefined);
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+    } else if (
+        cleanPath === '/locations/gainesville-fl' || 
+        cleanPath === '/es/locations/gainesville-fl' ||
+        cleanPath === '/gainesville-fl-insurance' ||
+        cleanPath === '/es/seguros-gainesville-fl'
+    ) {
+        mainContentComponent = (
+            <Suspense fallback={<Spinner height="py-48" />}>
+                <GainesvilleLocationPage 
+                    language={language} 
+                    setLanguage={setLanguage}
+                    renderContactForm={() => (
+                        <ErrorBoundary componentName="ContactForm">
+                            <Suspense fallback={<Spinner height="py-48" />}>
+                                <ContactForm 
+                                    content={translations[language].contactForm} 
+                                    onOpenLegalModal={handleOpenLegalModal}
+                                />
+                            </Suspense>
+                        </ErrorBoundary>
+                    )}
+                    onOpenLegalModal={handleOpenLegalModal}
+                />
+                <TermsAndPrivacyModal 
+                    isOpen={legalModalOpen} 
+                    onClose={() => setLegalModalOpen(false)} 
+                    initialTab={legalModalTab} 
+                    language={language} 
+                />
+            </Suspense>
+        );
     } else if (cleanPath === '/faq' || cleanPath === '/es/preguntas-frecuentes') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FAQPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/about-us' || cleanPath === '/es/nosotros' || cleanPath === '/about-andres-bozo' || cleanPath === '/es/sobre-andres-bozo') {

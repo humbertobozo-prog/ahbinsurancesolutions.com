@@ -662,6 +662,42 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     `;
   }
 
+  // 8.5 Gainesville Local Landing Page
+  else if (
+    cleanPath === "/locations/gainesville-fl" || 
+    cleanPath === "/es/locations/gainesville-fl" ||
+    cleanPath === "/gainesville-fl-insurance" ||
+    cleanPath === "/es/seguros-gainesville-fl"
+  ) {
+    title = isEs
+      ? "Broker de Seguros de Medicare y Vida en Gainesville, FL | AHB Insurance Solutions"
+      : "Medicare & Life Insurance Broker in Gainesville, FL | AHB Insurance Solutions";
+    description = isEs
+      ? "Corredor de seguros local e independiente en Gainesville, FL (5500 SW Archer Rd). Asesoría experta en Medicare Medigap (UF Health Shands), Gastos Finales e IUL en el Condado de Alachua, Archer, Newberry y High Springs. Andrés Bozo NPN 21228432."
+      : "Local independent insurance broker in Gainesville, FL (5500 SW Archer Rd). Expert Medicare Medigap (UF Health Shands access), Final Expense & IUL guidance across Alachua County, Archer, Newberry & High Springs. Andres Bozo NPN 21228432.";
+
+    bodyOutline = `
+      <header>
+        <h1>${title}</h1>
+        <p>${description}</p>
+      </header>
+      <section>
+        <h2>Independent Insurance Brokerage in Gainesville & Alachua County</h2>
+        <p>Located on SW Archer Road, AHB Insurance Solutions provides comprehensive, independent insurance comparisons representing 80+ top carriers with zero broker fees.</p>
+        <ul>
+          <li><strong>Medicare & Medigap (Plan G & Plan N):</strong> Direct, unrestricted access to UF Health Shands Hospital, HCA Florida North Florida Hospital, and Malcom Randall VA Medical Center without referral bottlenecks or prior authorization delays.</li>
+          <li><strong>Final Expense & Burial Insurance:</strong> Whole life coverage from $5,000 to $35,000 with locked rates for life, protecting families across Gainesville, Archer, Newberry, and High Springs. Compatible with local providers like Forest Meadows, Williams-Thomas, Milam, and Chestnut.</li>
+          <li><strong>Indexed Universal Life (IUL):</strong> Tax-advantaged cash value accumulation with a contractual 0% index crediting floor for UF professors, medical staff, and local professionals.</li>
+          <li><strong>Retirement Annuities:</strong> Fixed (MYGA) and fixed indexed annuities for principal protection and guaranteed lifetime income streams.</li>
+        </ul>
+        <h3>Local Office & Contact Information</h3>
+        <p><strong>Physical Address:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+        <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+        <p><strong>Principal Broker:</strong> Andres Bozo (NPN: 21228432)</p>
+      </section>
+    `;
+  }
+
   // 9. Localized Landing Pages (medicare-florida, final-expense-miami, annuities-florida, dental-vision-florida, etc.)
   else {
     // Check if path is a recognized landing path

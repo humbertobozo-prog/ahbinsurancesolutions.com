@@ -21,6 +21,58 @@ export interface CityData {
 
 export const FLORIDA_CITIES: CityData[] = [
   {
+    slug: 'gainesville',
+    cityName: 'Gainesville',
+    county: 'Alachua County',
+    regionName: 'North Central Florida',
+    taglineEn: 'Medicare & Life Insurance Broker in Gainesville, Alachua County & High Springs',
+    taglineEs: 'Broker de Seguros de Medicare y Vida en Gainesville, Condado de Alachua y High Springs',
+    populationSeniors: '38,000+ Seniors (65+)',
+    neighborhoods: ['Haile Plantation', 'Tioga', 'Archer', 'Newberry', 'High Springs', 'Alachua', 'Duckpond', 'Suburban Heights'],
+    hospitals: ['UF Health Shands Hospital', 'HCA Florida North Florida Hospital', 'Malcom Randall VA Medical Center'],
+    avgFuneralCost: '$7,200 - $9,800',
+    medicareOverviewEn:
+      'Gainesville is North Central Florida\'s healthcare capital with world-class care at UF Health Shands Hospital, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Selecting a Medicare Supplement (Medigap Plan G or Plan N) ensures zero network gatekeeping or referral delays so you can see top UF Health physicians and specialists seamlessly.',
+    medicareOverviewEs:
+      'Gainesville es el centro de atención médica de referencia en el norte de Florida con UF Health Shands Hospital, HCA Florida North Florida Hospital y el Malcom Randall VA Medical Center. Un Suplemento de Medicare (Medigap Plan G o Plan N) le permite consultar a cualquier médico de UF Health sin requerir referidos ni pre-autorizaciones restrictivas.',
+    finalExpenseOverviewEn:
+      'Funeral and cremation costs across Alachua County average between $7,200 and $9,800. Final Expense whole life insurance policies provide locked, level premiums and direct cash benefits of $5,000 to $35,000 to cover local services at Forest Meadows, Williams-Thomas, Milam, or Chestnut funeral homes.',
+    finalExpenseOverviewEs:
+      'Los costos de entierro y cremación en el Condado de Alachua promedian entre $7,200 y $9,800. Las pólizas de seguro de Gastos Finales congelan sus primas de por vida y otorgan beneficios en efectivo de $5,000 a $35,000 para cubrir servicios en Forest Meadows, Williams-Thomas, Milam o Chestnut.',
+    iulOverviewEn:
+      'With the University of Florida (UF), UF Health research facilities, and local entrepreneurial hubs, Indexed Universal Life (IUL) insurance is popular among Gainesville faculty, doctors, and professionals for tax-advantaged cash accumulation with a contractual 0% floor against negative market index returns.',
+    iulOverviewEs:
+      'Con la presencia de la Universidad de Florida (UF), el complejo médico UF Health y empresas locales, el seguro IUL es ampliamente utilizado por profesores, médicos y empresarios para acumular valor en efectivo con ventajas fiscales y piso contractual del 0% frente a caídas del mercado.',
+    faqsEn: [
+      {
+        question: 'Can I see doctors at UF Health Shands Hospital with Medigap in Gainesville?',
+        answer: 'Yes! UF Health Shands Hospital, HCA Florida North Florida Hospital, and all associated outpatient clinics accept Original Medicare and standardized Medigap plans (Plan G and Plan N) with zero network restrictions.',
+      },
+      {
+        question: 'Where is AHB Insurance Solutions located in Gainesville?',
+        answer: 'Our local office is located at 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Independent broker Andres Bozo provides in-person and phone consultations across Alachua County.',
+      },
+      {
+        question: 'Do you serve Archer, Newberry, and High Springs?',
+        answer: 'Yes, we provide full insurance advisory for Medicare, Final Expense, IUL, and Annuities across all Alachua County towns including Archer, Newberry, High Springs, and Alachua.',
+      },
+    ],
+    faqsEs: [
+      {
+        question: '¿Puedo atenderme en UF Health Shands Hospital con un plan Medigap en Gainesville?',
+        answer: '¡Sí! UF Health Shands Hospital, HCA Florida North Florida Hospital y todas sus clínicas asociadas aceptan Medicare Original y planes Medigap (Plan G y N) sin necesidad de referidos.',
+      },
+      {
+        question: '¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?',
+        answer: 'Nuestra oficina local está ubicada en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. El broker Andrés Bozo atiende de forma presencial y telefónica en todo el Condado de Alachua.',
+      },
+      {
+        question: '¿Brindan servicio en Archer, Newberry y High Springs?',
+        answer: 'Sí, ofrecemos asesoría completa de Medicare, Gastos Finales, IUL y Anualidades en todas las localidades del Condado de Alachua, incluyendo Archer, Newberry, High Springs y Alachua.',
+      },
+    ],
+  },
+  {
     slug: 'miami',
     cityName: 'Miami',
     county: 'Miami-Dade County',

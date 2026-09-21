@@ -17,63 +17,63 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
 
     const title = isEs 
         ? 'Anualidades en Florida 2026 | Fijas, MYGA e Indexadas (FIA)' 
-        : 'Fixed & Indexed Annuities in Florida | Guaranteed Retirement Income';
+        : 'Fixed & Indexed Annuities in Florida | MYGA & Retirement Income';
 
     const description = isEs 
-        ? 'Guía completa de anualidades en Florida: fijas tradicionales, MYGA, indexadas (FIA) e inmediatas. Conozca rendimientos garantizados y protección de capital para su jubilación.' 
-        : 'Comprehensive Florida annuities guide: Traditional Fixed, MYGA, Fixed Indexed (FIA), and Immediate Annuities. Contractually guaranteed growth and retirement income.';
+        ? 'Guía completa de anualidades en Florida: fijas tradicionales, MYGA, indexadas (FIA) e inmediatas. Tasas garantizadas, plazos, liquidez y opciones de ingresos para su jubilación con AHB Insurance Solutions.' 
+        : 'Comprehensive guide to Florida annuities: Traditional Fixed, MYGA, Fixed Indexed (FIA), and Immediate Annuities. Contractually guaranteed rates, terms, liquidity, and retirement income options.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
     const faqs = isEs ? [
         {
-            q: "¿Cómo garantizan las anualidades fijas el crecimiento de mi dinero?",
-            a: "Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora y al contrato específico. A diferencia de las inversiones de renta variable, su capital principal no está expuesto directamente a caídas de bolsa, y los intereses crecen con diferimiento de impuestos hasta el momento de su retiro."
+            q: "¿Cómo funciona la tasa de interés garantizada en una anualidad fija de Florida?",
+            a: "Una anualidad fija o MYGA en Florida le permite bloquear una tasa de interés predeterminada por escrito con la aseguradora durante todo el plazo del contrato. Este rendimiento compuesto crece con diferimiento fiscal completo (sin impuestos anuales sobre la renta hasta el momento del retiro), protegiendo su principal de las fluctuaciones del mercado bursátil."
         },
         {
-            q: "¿Cuál es la diferencia entre una Anualidad Fija y una Anualidad Indexada Fija (FIA)?",
-            a: "Una Anualidad Fija tradicional ofrece una tasa de interés fija predeterminada (por ejemplo, 5% anual durante un período convenido). Una Anualidad Indexada Fija (FIA) vincula su potencial de rendimiento al desempeño de un índice de mercado externo (como el S&P 500) a través de topes (caps) o tasas de participación, pero incorpora un piso contractualmente garantizado del 0%. Esto significa que si el índice cae en un año negativo, su cuenta no pierde capital debido al descenso del mercado."
+            q: "¿Qué significan el plazo (term) y el período de cargos por rescate (surrender period)?",
+            a: "El plazo (term) es la duración contractual durante la cual se mantiene vigente la estructura de tasas (por ejemplo, 3, 5, 7 o 10 años). El período de cargos por rescate (surrender period) es el intervalo de tiempo en el que la aseguradora aplica cargos si retira fondos por encima de los límites anuales permitidos. Al concluir este período, el capital y las ganancias pueden retirarse o reinvertirse sin penalización de la compañía."
         },
         {
-            q: "¿Qué es una MYGA (Multi-Year Guarantee Annuity)?",
-            a: "Una MYGA es una anualidad fija con garantía multianual. Funciona de manera conceptual similar a un Certificado de Depósito (CD) bancario, pero es emitida por una aseguradora de vida y ofrece ventajas tributarias: usted bloquea una tasa de interés fija y garantizada durante un plazo determinado (usualmente de 3, 5, 7 o 10 años), y el crecimiento compuesto no paga impuestos sobre la renta anuales hasta que se retire el dinero."
+            q: "¿Qué opciones de liquidez ofrecen las anualidades MYGA e indexadas?",
+            a: "La mayoría de los contratos modernos en Florida incluyen provisiones de liquidez anual libre de penalización, permitiéndole retirar habitualmente hasta un 10% del valor acumulado cada año tras el primer año de vigencia. Además, muchos contratos contemplan cláusulas de exención por atención en hogares de ancianos o enfermedades terminales."
         },
         {
-            q: "¿Puedo retirar dinero de mi anualidad antes de que termine el contrato?",
-            a: "La mayoría de los contratos de anualidades permiten retiros anuales libres de penalización (habitualmente hasta un 10% del valor acumulado por año tras el primer año de contrato). Retiros por encima de ese límite durante el período de penalidad (surrender period) están sujetos a cargos por rescate. Asimismo, retiros antes de los 59 años y medio pueden estar sujetos a una penalidad fiscal del 10% del IRS sobre las ganancias conforme al IRC §72(q)."
+            q: "¿Qué sucede al vencimiento del contrato y cómo funciona la renovación?",
+            a: "Al finalizar el plazo inicial, se abre una ventana de gracia donde usted puede optar por retirar la totalidad de los fondos, realizar un intercambio 1035 libre de impuestos hacia una nueva anualidad con tasas actualizadas, o permitir que la póliza se renueve bajo las tasas vigentes de la aseguradora."
         },
         {
-            q: "¿Qué sucede con mi dinero si fallezco antes de retirar la totalidad de la anualidad?",
-            a: "A diferencia de una pensión tradicional que puede extinguirse al fallecer, el valor total remanente de su anualidad se transfiere directamente a sus beneficiarios designados, sin pasar por los retrasos ni los costos del proceso judicial de sucesión (probate) en Florida."
+            q: "¿Cómo están respaldadas y garantizadas las anualidades por las aseguradoras y el estado?",
+            a: "Las anualidades están respaldadas por las reservas estatutarias, la cartera de inversiones conservadoras y la solidez financiera (ratings de A.M. Best) de la compañía de seguros emisora, regulada por la Oficina de Regulación de Seguros de Florida (OIR). Asimismo, los residentes de Florida cuentan con la protección subsidiaria de la Asociación de Garantía de Seguros de Vida y Salud de Florida (FLAHIGA), conforme a los límites legales del estado."
         },
         {
-            q: "¿Están protegidas las anualidades en Florida?",
-            a: "Sí. Las anualidades son contratos respaldados por la capacidad de pago y las reservas financieras de la compañía de seguros emisora, reguladas por la Oficina de Regulación de Seguros de Florida (OIR). Además, los residentes de Florida cuentan con la cobertura de la Asociación de Garantía de Seguros de Vida y Salud de Florida (FLAHIGA), sujeta a los límites legales del estado."
+            q: "¿Cuáles son las opciones de ingresos vitalicios (income options)?",
+            a: "Usted puede estructurar sus ahorros para convertirlos en un flujo de ingresos predecible mediante una Anualidad Inmediata (SPIA) o agregando una cláusula de retiro vitalicio garantizado (GLWB / Income Rider). Estas opciones le aseguran pagos regulares de por vida que no puede sobrevivir, creando una pensión privada a su medida."
         }
     ] : [
         {
-            q: "How do fixed annuities guarantee my retirement savings?",
-            a: "Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract terms. Unlike direct stock market investments, your principal balance is shielded from negative market swings, and your compounded interest accumulates tax-deferred until distribution."
+            q: "How does the guaranteed interest rate work in a Florida fixed annuity?",
+            a: "A fixed annuity or MYGA allows you to lock in a contractually guaranteed interest rate with the issuing insurance carrier for the duration of your chosen term. This compounded yield accumulates 100% tax-deferred (with no annual 1099 taxes until withdrawal), shielding your principal from stock market volatility."
         },
         {
-            q: "What is the key difference between a Fixed Annuity and a Fixed Indexed Annuity (FIA)?",
-            a: "A Traditional Fixed Annuity credits a stated, predetermined fixed annual interest rate (e.g., 5% per year for a set term). A Fixed Indexed Annuity (FIA) links interest earning potential to an external financial benchmark (such as the S&P 500) using caps or participation rates, while incorporating a contractual 0% floor. If the underlying market index loses value during a contract period, your annuity account is protected from market loss."
+            q: "What is the difference between the contract term and the surrender period?",
+            a: "The term is the contractual duration for which your rate structure applies (e.g., 3, 5, 7, or 10 years). The surrender period is the timeframe during which early withdrawal charges apply if you access funds above your penalty-free allowance. Once the surrender period expires, your funds are fully liquid and accessible without carrier penalties."
         },
         {
-            q: "What is a MYGA (Multi-Year Guarantee Annuity)?",
-            a: "A MYGA is a Multi-Year Guarantee Annuity. It functions similarly in concept to a bank Certificate of Deposit (CD), but is issued by an insurance carrier with distinct tax advantages: you lock in an exact contractual interest rate for a chosen term (typically 3, 5, 7, or 10 years), and your compounded gains grow 100% tax-deferred until withdrawal."
+            q: "What liquidity provisions do MYGAs and Fixed Indexed Annuities offer?",
+            a: "Most modern Florida annuity contracts feature penalty-free annual liquidity provisions—typically allowing you to withdraw up to 10% of the accumulated account value each year after year one without incurring surrender charges. Many contracts also include nursing home or terminal illness waiver riders."
         },
         {
-            q: "Can I access my funds before the annuity contract term expires?",
-            a: "Most modern annuity contracts feature penalty-free annual withdrawal provisions (typically 10% of the account value annually after year one). Withdrawals exceeding that allowance during the surrender charge period are subject to carrier surrender fees. Additionally, IRS rules impose a 10% premature tax penalty on earnings withdrawn prior to age 59½ under IRC §72(q)."
+            q: "What happens at maturity and how does contract renewal work?",
+            a: "At the end of your initial term, a renewal window opens. You can elect to take a full lump-sum distribution, execute an IRS Section 1035 tax-free exchange into a new annuity contract with current market rates, or let the policy renew automatically under the carrier's then-current renewal rate."
         },
         {
-            q: "What happens to my annuity balance if I pass away?",
-            a: "Unlike certain traditional corporate pension structures that terminate upon death, your annuity contract designates named beneficiaries. The full remaining accumulated value transfers directly to your beneficiaries, bypassing costly and time-consuming Florida probate court proceedings."
+            q: "How are insurer guarantees and state protections structured for Florida annuities?",
+            a: "Annuities are backed by the statutory reserves, conservative general account investments, and claims-paying financial strength (such as A.M. Best ratings) of the issuing life insurance carrier, supervised by the Florida Office of Insurance Regulation (OIR). Additionally, eligible Florida policyholders receive secondary backing from the Florida Life and Health Insurance Guaranty Association (FLAHIGA) up to statutory limits."
         },
         {
-            q: "Are annuities protected in Florida?",
-            a: "Yes. Annuities are backed by the financial strength, statutory reserves, and claims-paying ability of the issuing life insurance carrier, supervised by the Florida Office of Insurance Regulation (OIR). Additionally, eligible Florida policyholders have protection via the Florida Life and Health Insurance Guaranty Association (FLAHIGA), up to statutory limits."
+            q: "What lifetime income options are available for retirement cash flow?",
+            a: "You can convert accumulated savings into a dependable income stream using a Single Premium Immediate Annuity (SPIA) or by attaching a Guaranteed Lifetime Withdrawal Benefit (GLWB) rider. These income options provide reliable cash flow for life that you cannot outlive, establishing a personal private pension."
         }
     ];
 
@@ -174,13 +174,18 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
 
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">
-                        {isEs ? 'Anualidades en Florida' : 'Florida Annuities'}
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">
+                            {isEs ? 'Anualidades en Florida' : 'Florida Annuities'}
+                        </span>
+                    </div>
+                    <span className="text-xs text-gray-500 font-semibold hidden sm:inline">
+                        {isEs ? 'Broker Independiente NPN 21228432' : 'Independent Broker NPN 21228432'}
                     </span>
                 </div>
             </nav>
@@ -188,19 +193,19 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
             {/* HERO SECTION */}
             <section className="bg-primary text-white py-12 md:py-20 relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="max-w-3xl">
+                    <div className="max-w-4xl">
                         <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3.5 py-1 rounded-full mb-4">
                             {isEs ? 'Planificación de Jubilación en Florida | Protección de Capital' : 'Florida Retirement Planning | Capital Preservation'}
                         </span>
-                        <h1 className="text-3xl md:text-5xl font-black font-heading mb-5 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading mb-5 leading-tight">
                             {isEs 
                                 ? 'Anualidades en Florida: Fijas, MYGA e Indexadas' 
-                                : 'Florida Fixed & Indexed Annuities'}
+                                : 'Florida Fixed Annuities & MYGA Options'}
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs
-                                ? 'Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora y al contrato específico. Proteja sus ahorros de jubilación y genere ingresos predecibles.'
-                                : 'Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract. Safeguard retirement savings while establishing predictable lifelong income.'}
+                                ? 'Guía experta de anualidades en Florida (fixed annuity Florida, MYGA Florida, retirement income Florida). Compare tasas de interés garantizadas, plazos, liquidez y opciones de ingresos para proteger sus ahorros de jubilación.'
+                                : 'Expert guide to Florida annuities (fixed annuity Florida, MYGA Florida, retirement income Florida, fixed indexed annuity Florida). Compare guaranteed rates, terms, liquidity provisions, and lifetime income solutions across top-rated carriers.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -227,63 +232,116 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
             <div className="py-12 md:py-16 container mx-auto px-4 md:px-6">
                 <div className="max-w-4xl mx-auto space-y-16">
 
-                    {/* SECTION 1: FIXED ANNUITIES */}
-                    <section id="fixed-annuities" className="space-y-4">
+                    {/* SECTION 1: FIXED ANNUITY & MYGA OPTIONS */}
+                    <section id="fixed-annuities" className="space-y-6">
                         <div className="flex items-center gap-2">
                             <span className="bg-primary/10 text-primary text-xs font-black uppercase px-2.5 py-0.5 rounded">
-                                {isEs ? 'Seguridad Contractual' : 'Contractual Certainty'}
+                                {isEs ? 'Opciones de Anualidades Fijas y MYGA' : 'Fixed Annuity & MYGA Options'}
                             </span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? '1. Anualidades Fijas Tradicionales (Fixed Annuities)' : '1. Traditional Fixed Annuities'}
+                            {isEs ? '1. Anualidades Fijas y MYGA en Florida: Fundamentos y Mecánica' : '1. Florida Fixed Annuity & MYGA Options: Core Mechanics'}
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Una anualidad fija es un contrato emitido por una compañía de seguros de vida en el que el titular deposita una cantidad de capital y la aseguradora garantiza una tasa de rendimiento periódica establecida. Este tipo de producto está diseñado primordialmente para la preservación del capital y la obtención de rendimientos predecibles y estables.' 
-                                : 'A traditional fixed annuity is a contract issued by a life insurance company where the policyholder deposits principal and the carrier guarantees a specified interest rate for a stated duration. This vehicle is primarily built for capital preservation and stable, predictable financial accumulation.'}
+                                ? 'Las anualidades fijas y las anualidades con garantía multianual (MYGA) son contratos emitidos por aseguradoras de vida altamente solventes para salvaguardar el capital de los jubilados en Florida. A diferencia de los instrumentos bursátiles volátiles, una anualidad fija permite estructurar un crecimiento compuesto con diferimiento fiscal completo y total predictibilidad financiera.' 
+                                : 'Fixed annuities and Multi-Year Guarantee Annuities (MYGAs) are contracts issued by top-rated life insurance carriers to safeguard retiree capital across Florida (fixed annuity Florida, MYGA Florida). Unlike volatile equity portfolios, a fixed annuity establishes reliable, compounding growth with complete tax deferral and predictable contractual backing.'}
                         </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Protección del Principal' : 'Principal Protection'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Su balance depositado no fluctúa con las caídas del mercado de valores.' : 'Your initial deposit is insulated from stock market fluctuations.'}</p>
+                        
+                        {/* 7 Core Elements Explained in Depth */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                            
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">1</span>
+                                    <span>{isEs ? 'Tasa Garantizada (Guaranteed Rate)' : 'Guaranteed Rate'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'La tasa de interés se fija por escrito desde el día de la emisión. El rendimiento pactado se acumula de forma compuesta sin estar sujeto a reducciones unilaterales por parte de la aseguradora durante el plazo acordado.' 
+                                        : 'The interest rate is locked in writing on the contract issue date. Your agreed yield compounds steadily and cannot be unilaterally adjusted downward by the carrier during the committed term.'}
+                                </p>
                             </div>
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Crecimiento con Diferimiento Fiscal' : 'Tax-Deferred Compounding'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Los intereses acumulados no generan tributación anual hasta su retiro.' : 'Earnings compound without annual 1099 taxable distributions.'}</p>
+
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">2</span>
+                                    <span>{isEs ? 'Plazo del Contrato (Term)' : 'Contract Term'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'Los plazos de compromiso varían comúnmente entre 3, 5, 7 y 10 años. Seleccionar el plazo adecuado depende de su horizonte temporal de inversión, necesidades de liquidez futura y objetivos de jubilación.' 
+                                        : 'Commitment terms typically range from 3, 5, 7, to 10 years. Selecting the appropriate term length aligns directly with your personal time horizon, upcoming liquidity needs, and retirement milestones.'}
+                                </p>
                             </div>
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Tasa de Interés Contractual' : 'Contractual Interest'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Rendimiento garantizado por escrito según los términos del contrato.' : 'Guaranteed interest rates specified contractually by the insurer.'}</p>
+
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">3</span>
+                                    <span>{isEs ? 'Período de Cargos por Rescate (Surrender Period)' : 'Surrender Period'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'Es el intervalo cronológico en el cual la aseguradora aplica cargos por retiro anticipado si se rescata la póliza por encima de las provisiones libres permitidas. Al expirar este período, el contrato queda libre de cargos por rescate.' 
+                                        : 'This is the specific window during which carrier surrender charges apply if funds are withdrawn beyond penalty-free allowances. Once the surrender period lapses, the contract becomes fully liquid with zero carrier fees.'}
+                                </p>
                             </div>
+
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">4</span>
+                                    <span>{isEs ? 'Liquidez Anual (Liquidity Provisions)' : 'Liquidity Provisions'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'Para brindar flexibilidad, la mayoría de los contratos en Florida permiten retiros anuales libres de penalización (típicamente hasta un 10% del valor acumulado de la cuenta a partir del segundo año).' 
+                                        : 'To ensure financial flexibility, most modern Florida contracts feature penalty-free withdrawal provisions—frequently allowing up to 10% of the accumulated account value to be withdrawn annually after year one.'}
+                                </p>
+                            </div>
+
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">5</span>
+                                    <span>{isEs ? 'Renovación y Vencimiento (Renewal Options)' : 'Renewal & Maturity Options'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'Al finalizar el plazo inicial, se abre una ventana de renovación. Usted puede retirar el capital, transferirlo mediante un intercambio 1035 del IRS a otra anualidad o renovar bajo las tasas vigentes.' 
+                                        : 'Upon contract maturity, a renewal window opens. You can elect to withdraw funds, execute an IRS Section 1035 tax-free exchange into a new carrier contract, or renew under current prevailing rates.'}
+                                </p>
+                            </div>
+
+                            <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
+                                <h3 className="font-black text-primary text-base flex items-center gap-2">
+                                    <span className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-xs">6</span>
+                                    <span>{isEs ? 'Respaldo de la Aseguradora (Insurer Guarantees & FLAHIGA)' : 'Insurer Guarantees & FLAHIGA Support'}</span>
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                    {isEs 
+                                        ? 'Los contratos están respaldados por las reservas estatutarias y calificaciones financieras (A.M. Best) de la aseguradora, con el respaldo adicional de la Asociación de Garantía de Florida (FLAHIGA).' 
+                                        : 'Contracts are backed by the statutory reserves and financial strength ratings (A.M. Best A/A+) of issuing life insurers, with secondary safety backed by the Florida Life & Health Insurance Guaranty Association (FLAHIGA).'}
+                                </p>
+                            </div>
+
+                        </div>
+
+                        {/* 7th Element: Income Options */}
+                        <div className="p-6 bg-primary text-white rounded-2xl space-y-3">
+                            <div className="flex items-center gap-2">
+                                <span className="w-6 h-6 rounded-full bg-accent text-primary flex items-center justify-center font-bold text-xs">7</span>
+                                <h3 className="font-black text-accent text-lg">
+                                    {isEs ? 'Opciones de Ingresos Vitalicios (Income Options & GLWB)' : 'Income Options & Lifetime Payouts'}
+                                </h3>
+                            </div>
+                            <p className="text-gray-200 text-sm leading-relaxed">
+                                {isEs 
+                                    ? 'Las anualidades permiten convertir el capital acumulado en un flujo constante de ingresos para la jubilación (retirement income Florida). Mediante anualidades inmediatas (SPIA) o cláusulas de retiro vitalicio garantizado (GLWB), usted obtiene pagos periódicos seguros de por vida que eliminan el riesgo de longevidad.' 
+                                    : 'Annuities can transform accumulated savings into dependable retirement income (retirement income Florida). Through Single Premium Immediate Annuities (SPIAs) or Guaranteed Lifetime Withdrawal Benefit (GLWB) riders, you establish reliable lifetime cash flow that safeguards against longevity risk.'}
+                            </p>
                         </div>
                     </section>
 
-                    {/* SECTION 2: MYGA (MULTI-YEAR GUARANTEE ANNUITIES) */}
-                    <section id="myga" className="bg-light-gray p-6 md:p-8 rounded-2xl border border-gray-200 space-y-4">
-                        <div className="flex items-center gap-2">
-                            <span className="bg-accent text-primary text-xs font-black uppercase px-2.5 py-0.5 rounded">
-                                {isEs ? 'Plazo Fijo Garantizado' : 'Guaranteed Fixed Term'}
-                            </span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? '2. Anualidades con Garantía Multianual (MYGA)' : '2. Multi-Year Guarantee Annuities (MYGA)'}
-                        </h2>
-                        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                            {isEs 
-                                ? 'Las anualidades MYGA (Multi-Year Guarantee Annuity) son un subtipo de anualidad fija sumamente popular entre los jubilados de Florida. Funcionan de forma conceptual similar a los Certificados de Depósito (CD) de los bancos, pero son emitidas por compañías aseguradoras y gozan de diferimiento fiscal completo.' 
-                                : 'Multi-Year Guarantee Annuities (MYGAs) are a specific fixed annuity category widely used by Florida retirees. They function conceptually like bank Certificates of Deposit (CDs), but are issued by life insurance carriers and benefit from comprehensive tax deferral.'}
-                        </p>
-                        <div className="bg-white p-5 rounded-xl border border-gray-200 space-y-3">
-                            <h4 className="font-bold text-primary text-base">{isEs ? 'Características Clave de las MYGA:' : 'Key MYGA Characteristics:'}</h4>
-                            <ul className="text-xs md:text-sm text-gray-700 space-y-2">
-                                <li>• <strong>{isEs ? 'Plazos Definidos:' : 'Flexible Term Durations:'}</strong> {isEs ? 'Plazos típicos de 3, 5, 7 o 10 años donde la tasa convenida permanece idéntica y congelada.' : 'Typical terms of 3, 5, 7, or 10 years locking an exact interest rate for the whole period.'}</li>
-                                <li>• <strong>{isEs ? 'Retiros Anuales Libres de Penalidad:' : 'Penalty-Free Withdrawals:'}</strong> {isEs ? 'La mayoría de los contratos permiten retirar hasta un 10% del balance anualmente a partir del segundo año.' : 'Most contracts permit penalty-free annual withdrawals (typically up to 10%) after year one.'}</li>
-                                <li>• <strong>{isEs ? 'Transferencias 1035 Libres de Impuestos:' : '1035 Tax-Free Exchanges:'}</strong> {isEs ? 'Al vencer el plazo, puede renovar o transferir el capital a otra anualidad mediante un intercambio 1035 del IRS sin pagar impuestos.' : 'At contract maturity, you can roll funds into another annuity via an IRS Section 1035 tax-free exchange.'}</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    {/* SECTION 3: FIXED INDEXED ANNUITIES (FIA) */}
+                    {/* SECTION 2: FIXED INDEXED ANNUITIES (FIA) */}
                     <section id="fixed-indexed-annuities" className="border-2 border-primary/20 bg-blue-50/40 rounded-2xl p-6 md:p-8 space-y-4">
                         <div className="flex items-center gap-2">
                             <span className="bg-secondary text-white text-xs font-black uppercase px-2.5 py-0.5 rounded">
@@ -291,89 +349,21 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             </span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? '3. Anualidades Indexadas Fijas (Fixed Indexed Annuities - FIA)' : '3. Fixed Indexed Annuities (FIA)'}
+                            {isEs ? '2. Anualidades Indexadas Fijas en Florida (Fixed Indexed Annuities - FIA)' : '2. Fixed Indexed Annuities (FIA) in Florida'}
                         </h2>
                         <div className="bg-white p-4 rounded-xl border border-blue-200 text-xs md:text-sm text-blue-950 font-medium leading-relaxed">
                             {isEs 
-                                ? 'Nota de Diferenciación: Es fundamental distinguir una Anualidad Fija Tradicional de una Anualidad Indexada Fija (FIA). Mientras que la anualidad fija acredita una tasa establecida, la FIA vincula su potencial de ganancias al rendimiento de un índice bursátil externo (como el S&P 500), manteniendo un piso garantizado de protección de capital.' 
-                                : 'Important Distinction: It is essential to distinguish traditional fixed annuities from Fixed Indexed Annuities (FIAs). While a fixed annuity credits a predetermined fixed rate, an FIA links interest credits to the performance of an external market index (such as the S&P 500), while maintaining a contractually guaranteed 0% floor against market downturns.'}
+                                ? 'Nota de Diferenciación: Las Anualidades Indexadas Fijas (fixed indexed annuity Florida) vinculan el potencial de ganancias al rendimiento de un índice bursátil externo (como el S&P 500) a través de topes o tasas de participación, manteniendo un piso contractual del 0% contra las caídas del mercado.' 
+                                : 'Important Distinction: Fixed Indexed Annuities (fixed indexed annuity Florida) link interest crediting potential to an external financial benchmark (such as the S&P 500) via caps or participation rates, while maintaining a contractual 0% floor against market downturns.'}
                         </div>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? '¿Cómo funciona una FIA? Su dinero nunca se invierte directamente en acciones ni en la bolsa. La aseguradora invierte en sus reservas conservadoras de alta calidad y utiliza una porción de las ganancias para adquirir opciones sobre el índice. Si el índice sube, usted recibe un crédito de interés calculado según topes (caps) o porcentajes de participación. Si el índice sufre pérdidas durante el período de medición, se aplica el piso del 0%: su cuenta simplemente recibe 0% de interés y no sufre pérdidas de capital por caídas del mercado.' 
-                                : 'How does an FIA function? Your funds are not directly invested in the stock market or equity shares. Instead, the insurer backs your principal within its general account and credits interest based on external index gains subject to contractual caps, spreads, or participation rates. If the underlying index falls into negative territory during a crediting cycle, the 0% floor protects your account: you receive zero interest for that period, but your principal and prior locked-in gains remain intact.'}
+                                ? '¿Cómo funciona una FIA? Su principal se mantiene protegido dentro de las reservas de la aseguradora. Si el índice de referencia experimenta ganancias en el ciclo anual, usted recibe un crédito de interés. Si el índice cae en terreno negativo, se aplica el piso del 0%: su cuenta recibe 0% de rendimiento pero su saldo principal y ganancias previas bloqueadas permanecen intactos.' 
+                                : 'How an FIA operates: Your principal is shielded within the insurer general account. If the benchmark index logs positive gains during a crediting cycle, you receive an interest credit. If the index drops into negative territory, the 0% floor engages: your account receives zero interest for that period, but your principal and prior locked-in gains remain completely secure.'}
                         </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-                            <div className="bg-white p-4 rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Piso Garantizado del 0%' : '0% Contractual Floor'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'En años de caídas bursátiles severas, su saldo acreditado no disminuye por caídas del índice.' : 'During market corrections, your credited balance is protected from index losses.'}</p>
-                            </div>
-                            <div className="bg-white p-4 rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Bloqueo Anual de Ganancias (Reset)' : 'Annual Gains Reset'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Los intereses acreditados cada año se consolidan y pasan a formar parte del principal garantizado.' : 'Interest credited each cycle is locked in and becomes part of your new guaranteed baseline.'}</p>
-                            </div>
-                        </div>
                     </section>
 
-                    {/* SECTION 4: IMMEDIATE ANNUITIES (SPIA) */}
-                    <section id="immediate-annuities" className="space-y-4">
-                        <div className="flex items-center gap-2">
-                            <span className="bg-primary/10 text-primary text-xs font-black uppercase px-2.5 py-0.5 rounded">
-                                {isEs ? 'Ingresos de Jubilación Inmediatos' : 'Immediate Cashflow'}
-                            </span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? '4. Anualidades Inmediatas de Prima Única (SPIA)' : '4. Single Premium Immediate Annuities (SPIA)'}
-                        </h2>
-                        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                            {isEs 
-                                ? 'Una Anualidad Inmediata de Prima Única (SPIA, por sus siglas en inglés) está diseñada para personas que ya están en el momento de la jubilación y necesitan transformar un monto acumulado (por ejemplo, de una cuenta 401(k), IRA o venta de una propiedad) en un flujo regular de ingresos mensuales a partir de los siguientes 30 días a 12 meses.' 
-                                : 'A Single Premium Immediate Annuity (SPIA) is structured for individuals entering retirement who need to convert a lump sum (such as a 401(k) rollover, IRA distribution, or property sale proceeds) into an immediate stream of reliable monthly income starting within 30 days to 12 months.'}
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs md:text-sm">
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary mb-1">{isEs ? 'Vida Única (Single Life)' : 'Single Life Annuity'}</h4>
-                                <p className="text-gray-600">{isEs ? 'Pagos mensuales garantizados mientras el titular viva.' : 'Guaranteed monthly payouts for the duration of the policyholder\'s lifetime.'}</p>
-                            </div>
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary mb-1">{isEs ? 'Vida Conjunta (Joint Life)' : 'Joint & Survivor Life'}</h4>
-                                <p className="text-gray-600">{isEs ? 'Los ingresos continúan entregándose al cónyuge sobreviviente.' : 'Income payments continue to a surviving spouse for their lifetime.'}</p>
-                            </div>
-                            <div className="p-4 bg-light-gray rounded-xl border border-gray-200">
-                                <h4 className="font-bold text-primary mb-1">{isEs ? 'Período Cierto (Period Certain)' : 'Period Certain'}</h4>
-                                <p className="text-gray-600">{isEs ? 'Garantiza pagos por 10, 15 o 20 años incluso en caso de fallecimiento temprano.' : 'Guarantees payments for a fixed timeframe (e.g. 10 or 20 years) to beneficiaries.'}</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* SECTION 5: LIFETIME INCOME RIDERS */}
-                    <section id="lifetime-income" className="bg-primary text-white rounded-2xl p-6 md:p-8 space-y-4">
-                        <div className="flex items-center gap-2">
-                            <span className="bg-accent text-primary text-xs font-black uppercase px-2.5 py-0.5 rounded">
-                                {isEs ? 'Solución de Pensión Privada' : 'Private Pension Structure'}
-                            </span>
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-black font-heading text-white">
-                            {isEs ? '5. Ingresos de por Vida Garantizados (Lifetime Income Riders - GLWB)' : '5. Guaranteed Lifetime Income Solutions (GLWB)'}
-                        </h2>
-                        <p className="text-gray-200 text-sm md:text-base leading-relaxed">
-                            {isEs 
-                                ? 'El mayor temor de los jubilados modernos es el riesgo de longevidad: agotar sus ahorros antes de fallecer. Mediante cláusulas adicionales de ingresos vitalicios garantizados (Guaranteed Lifetime Withdrawal Benefit - GLWB), una anualidad le asegura una pensión mensual predecible de por vida, sin importar cuántos años viva e incluso si el balance de la cuenta llega a cero.' 
-                                : 'The primary concern for modern retirees is longevity risk: outliving their accumulated assets. Through Guaranteed Lifetime Withdrawal Benefit (GLWB) riders, an annuity establishes a personal private pension. You receive contractually guaranteed monthly income for as long as you live, regardless of how long your retirement lasts, even if your underlying account balance is depleted to zero.'}
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm pt-2">
-                            <div className="bg-white/10 p-4 rounded-xl border border-white/10 space-y-1">
-                                <h4 className="font-bold text-accent">{isEs ? 'Ingresos Predecibles' : 'Predictable Cashflow'}</h4>
-                                <p className="text-gray-300">{isEs ? 'Sepa exactamente cuánto dinero recibirá cada mes para complementar el Seguro Social.' : 'Know exactly what monthly amount will arrive to supplement your Social Security benefits.'}</p>
-                            </div>
-                            <div className="bg-white/10 p-4 rounded-xl border border-white/10 space-y-1">
-                                <h4 className="font-bold text-accent">{isEs ? 'Control de Activos Remanentes' : 'Retained Asset Ownership'}</h4>
-                                <p className="text-gray-300">{isEs ? 'A diferencia de una anualización irrevocable, usted conserva el control del valor de rescate restante.' : 'Unlike traditional annuitization, you retain ownership of any remaining cash balance for heirs.'}</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* SECTION 6: ANNUITY VS CD COMPARISON */}
+                    {/* SECTION 3: ANNUITY VS CD COMPARISON */}
                     <section id="annuity-vs-cd" className="space-y-4">
                         <div className="flex items-center gap-2">
                             <span className="bg-primary/10 text-primary text-xs font-black uppercase px-2.5 py-0.5 rounded">
@@ -381,12 +371,12 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             </span>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? '6. Comparativa Exhaustiva: Anualidad vs. Certificado de Depósito Bancario (CD)' : '6. Comprehensive Comparison: Annuity vs. Bank CD'}
+                            {isEs ? '3. Comparativa: Anualidad MYGA vs. Certificado de Depósito Bancario (CD)' : '3. Comparative Analysis: MYGA Annuity vs. Bank Certificate of Deposit (CD)'}
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Tanto las anualidades fijas (MYGA) como los certificados de depósito (CD) son herramientas conservadoras diseñadas para la seguridad del capital. No obstante, presentan diferencias regulatorias, fiscales y operativas determinantes:' 
-                                : 'Both fixed annuities (MYGAs) and bank certificates of deposit (CDs) are conservative instruments designed for principal safety. However, their tax treatment, yield potential, and regulatory mechanics differ significantly:'}
+                                ? 'Aunque tanto las MYGA como los CD bancarios ofrecen seguridad de capital, sus ventajas fiscales, normativas y de liquidez son muy diferentes para los jubilados en Florida:' 
+                                : 'While both MYGAs and bank CDs offer principal safety, their tax treatment, regulatory backing, and liquidity mechanics differ significantly for Florida retirees:'}
                         </p>
                         
                         <div className="overflow-x-auto border border-gray-200 rounded-2xl shadow-xs">
@@ -406,7 +396,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                     </tr>
                                     <tr className="hover:bg-gray-50">
                                         <td className="p-3.5 md:p-4 font-semibold text-gray-900">{isEs ? 'Entidad Emisora y Respaldo' : 'Issuing Institution & Backing'}</td>
-                                        <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'Compañías de Seguros de Vida + FLAHIGA estatal' : 'Insurance Carrier Reserves + State FLAHIGA'}</td>
+                                        <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'Aseguradoras de Vida + FLAHIGA estatal' : 'Life Insurers + State FLAHIGA'}</td>
                                         <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'Bancos Comerciales asegurados por FDIC ($250k)' : 'FDIC-insured commercial banks up to $250k'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">
@@ -415,7 +405,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                         <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'Penalidad de meses de interés por retiro anticipado' : 'Severe interest penalty for early withdrawal'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-3.5 md:p-4 font-semibold text-gray-900">{isEs ? 'Opciones de Ingreso de por Vida' : 'Lifetime Income Conversion'}</td>
+                                        <td className="p-3.5 md:p-4 font-semibold text-gray-900">{isEs ? 'Opciones de Ingreso Vitalicio' : 'Lifetime Income Conversion'}</td>
                                         <td className="p-3.5 md:p-4 font-bold text-emerald-700 bg-emerald-50/40">{isEs ? 'Disponible mediante cláusulas de ingreso vitalicio' : 'Available with lifetime income riders'}</td>
                                         <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'No disponible (Solo reinversión o retiro)' : 'Not available (Simple principal return)'}</td>
                                     </tr>
@@ -429,7 +419,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </div>
                     </section>
 
-                    {/* SECTION 7: BROKER ADVICE WITH ANDRES BOZO */}
+                    {/* SECTION 4: BROKER ADVICE WITH ANDRES BOZO */}
                     <section id="andres-bozo" className="bg-white border-2 border-primary/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-xs">
                         <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary/10 border-4 border-accent flex items-center justify-center text-3xl font-black text-primary shrink-0">
                             AB
@@ -443,8 +433,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             </h3>
                             <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                                 {isEs 
-                                    ? 'Como corredor independiente con licencia en Florida, comparo contratos de anualidades en múltiples aseguradoras de máxima calificación crediticia (A.M. Best A/A+ como Allianz, Athene, Corebridge, Lincoln, Pacific Life y SILAC). Mi objetivo es estructurar una propuesta adaptada a sus metas de liquidez, horizonte temporal y tolerancia al riesgo con total transparencia y rigor analítico.' 
-                                    : 'As an independent licensed Florida broker, I analyze annuity contracts across top-rated carriers (A.M. Best A/A+ ratings including Allianz, Athene, Corebridge, Lincoln, Pacific Life, and SILAC). My objective is to structure a personalized solution tailored to your liquidity horizon, tax bracket, and retirement goals with complete analytical transparency.'}
+                                    ? 'Como corredor independiente con licencia en Florida, comparo contratos de anualidades en múltiples aseguradoras de máxima calificación (Allianz, Athene, Corebridge, Lincoln, Pacific Life y SILAC). Le ayudo a evaluar tasas garantizadas, plazos y opciones de ingresos para diseñar la estrategia de retiro ideal.' 
+                                    : 'As an independent licensed Florida broker, I analyze annuity contracts across top-rated carriers (Allianz, Athene, Corebridge, Lincoln, Pacific Life, and SILAC). I help you evaluate guaranteed rates, terms, and income options to craft your optimal retirement strategy.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
                                 {isEs ? '📍 Sede en Gainesville, Florida | Servicio a residentes en todo el estado' : '📍 Based in Gainesville, FL | Serving clients across all Florida counties'}
@@ -452,7 +442,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </div>
                     </section>
 
-                    {/* SECTION 8: ANNUITY FAQ */}
+                    {/* SECTION 5: ANNUITY FAQ */}
                     <section id="faq">
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-6">
                             {isEs ? 'Preguntas Frecuentes sobre Anualidades en Florida' : 'Frequently Asked Questions About Florida Annuities'}
@@ -485,20 +475,20 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </div>
                     </section>
 
-                    {/* SECTION 9: CTA / ILLUSTRATION REQUEST */}
+                    {/* SECTION 6: CTA / ILLUSTRATION REQUEST */}
                     <section id="cta" className="bg-primary text-white rounded-2xl p-6 md:p-10 text-center space-y-6 shadow-xl">
                         <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3 py-1 rounded-full">
                             {isEs ? 'Ilustración y Análisis Gratuito' : 'Free Customized Illustration'}
                         </span>
                         <h2 className="text-2xl md:text-4xl font-black font-heading max-w-2xl mx-auto leading-tight">
                             {isEs 
-                                ? 'Descubra Cuánto Rendimiento Contractual Puede Proteger su Jubilación' 
-                                : 'Explore Guaranteed Growth & Retirement Payout Options'}
+                                ? 'Descubra las Mejores Tasas Garantizadas para su Jubilación en Florida' 
+                                : 'Explore Guaranteed Rates & Retirement Income Options in Florida'}
                         </h2>
                         <p className="text-sm md:text-base text-gray-200 max-w-xl mx-auto leading-relaxed">
                             {isEs 
-                                ? 'Solicite una comparativa detallada de tasas de interés contractuales y opciones de ingresos de por vida de las principales aseguradoras en Florida.' 
-                                : 'Request a comprehensive comparison of contractual rates and guaranteed lifetime income options from top Florida carriers.'}
+                                ? 'Solicite una comparativa detallada de tasas de interés contractuales, plazos y opciones de ingresos de por vida de las principales aseguradoras.' 
+                                : 'Request a comprehensive rate comparison and customized retirement income strategy across top-rated carriers in Florida.'}
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                             <button
