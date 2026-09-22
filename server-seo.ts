@@ -272,8 +272,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage</h2>
-          <p>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N), funcionando como seguro secundario al Medicare Original (Partes A y B) sin restricciones de red ni requerimientos de referidos en ningún hospital o clínica que acepte Medicare en EE.UU.</p>
-          <p>Por otro lado, Medicare Advantage (Parte C) reemplaza al Medicare Original mediante redes administradas privadas (HMO o PPO) con copagos por visita y requerimientos de pre-autorización médica.</p>
+          <p>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap.</p>
+          <p>Por otro lado, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado.</p>
         </section>
         <section>
           <h2>Período de Inscripción Abierta de Medigap en Florida</h2>
@@ -293,8 +293,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Understanding Original Medicare Gaps & Supplement Solutions</h2>
-          <p>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. They act as secondary insurance to Original Medicare (Parts A & B) with zero doctor network restrictions or referral mandates anywhere in the U.S.</p>
-          <p>In contrast, Medicare Advantage (Part C) replaces Original Medicare with a private managed-care network (HMO or PPO) requiring copays, prior authorizations, and county-restricted networks in Florida.</p>
+          <p>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules.</p>
+          <p>In contrast, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county.</p>
         </section>
         <section>
           <h2>Medigap Open Enrollment Period (MOEP) in Florida</h2>
@@ -389,15 +389,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
         <section>
           <h2>Simplified Issue vs. Guaranteed Issue</h2>
-          <p>Simplified issue plans provide Day-One Level Benefits for applicants with managed health histories. Guaranteed issue plans require zero health questions, approving applicants with severe medical challenges subject to a 2-year graded benefit waiting period.</p>
+          <p>Simplified issue plans provide Day-One Level Benefits for applicants with managed health histories. Guaranteed-issue policies generally do not require traditional medical underwriting or health questions, but eligibility, benefit limitations and waiting periods vary by carrier and product.</p>
         </section>
         <section>
           <h2>Waiting Periods Explained</h2>
           <p>Honest breakdown between immediate day-one payout policies and modified two-year graded periods for high-risk individuals.</p>
         </section>
         <section>
-          <h2>Level Premiums Locked for Life</h2>
-          <p>Monthly rates are locked at your issue age and never rise. Coverage never expires as long as premiums are paid.</p>
+          <h2>Level Premiums & Permanent Coverage</h2>
+          <p>Many participating whole life policies offer level premiums and permanent coverage, subject to the policy’s terms, conditions and continued payment of required premiums.</p>
         </section>
         <section>
           <h2>Beneficiaries & Benefit Payouts</h2>

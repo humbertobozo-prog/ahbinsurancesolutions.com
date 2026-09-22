@@ -378,7 +378,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             {/* Official Licensing & Entity Profile Box */}
             <section className="container mx-auto px-4 md:px-6 -mt-8 relative z-20 max-w-6xl">
                 <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-200">
-                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-gray-100">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-gray-100">
                         <div>
                             <span className="text-[11px] font-black uppercase tracking-widest text-secondary block mb-1">
                                 {isEs ? 'Ficha Profesional & Licenciamiento Estatal' : 'Professional Record & State Licensing'}
@@ -387,11 +387,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                 {isEs ? 'Estructura Profesional y Acreditación de Andrés Bozo' : 'Andres Bozo Professional & Agency Profile'}
                             </h2>
                         </div>
-                        <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-lg text-emerald-800 text-xs font-bold">
-                            <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-                            </svg>
-                            <span>{isEs ? 'Licencia Residente Activa en Florida' : 'Active Florida Resident License'}</span>
+                        <div className="flex items-center gap-3 flex-wrap">
+                            <span className="bg-gray-200 text-gray-700 text-[11px] font-bold px-3 py-1 rounded-full">
+                                {isEs ? 'Actualizado: Septiembre 2026' : 'Updated: September 2026'}
+                            </span>
+                            <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-lg text-emerald-800 text-xs font-bold">
+                                <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                                </svg>
+                                <span>{isEs ? 'Licencia Residente Activa en Florida' : 'Active Florida Resident License'}</span>
+                            </div>
                         </div>
                     </div>
 
@@ -623,6 +628,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         <strong>{isEs ? 'Descargo de Responsabilidad de Medicare (CMS):' : 'CMS Medicare Disclaimer:'}</strong> {isEs 
                             ? 'No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o al 1-800-MEDICARE las 24 horas del día, los 7 días de la semana, o con su Programa Estatal de Asistencia en Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones.' 
                             : 'We do not offer every plan available in your area. Currently we represent multiple organizations which offer multiple products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.'}
+                    </p>
+                    <p>
+                        <strong>{isEs ? 'Divulgación de Compensación y Relación con Aseguradoras:' : 'Compensation & Carrier Relationship Disclosure:'}</strong> {isEs 
+                            ? 'Como corredor de seguros independiente, Andrés H. Bozo recibe una compensación directa de las compañías aseguradoras a través de comisiones estándar cuando se emite una póliza. Esta estructura de compensación no añade ningún recargo, tarifa adicional ni sobreprecio a su prima oficial regulada por el estado.' 
+                            : 'As an independent insurance broker, Andres H. Bozo is compensated directly by insurance carriers through standard commissions when a policy is placed. This commission structure does not add any fee, surcharge, or markup to your official state-regulated premium.'}
                     </p>
                     <p>
                         <strong>{isEs ? 'Aviso Fiscal y Legal:' : 'Tax & Legal Disclaimer:'}</strong> {isEs 

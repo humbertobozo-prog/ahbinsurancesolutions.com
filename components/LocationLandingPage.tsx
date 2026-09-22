@@ -40,18 +40,18 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                         : "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N",
                     description: activeLang === 'es' 
                         ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de más de 80 aseguradoras. Asesoría gratuita en español." 
-                        : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed coverage & no network restrictions in FL.",
+                        : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed issue coverage options in FL.",
                     heading: activeLang === 'es' ? "Seguro Medicare en Florida 2026" : "Medicare Supplement Insurance in Florida",
                     subheading: activeLang === 'es' 
-                        ? "Asesoría especializada 100% en español para la comunidad hispana de Florida. Comparamos las mejores opciones de Suplementos de Medicare (Medigap Plan G y N) con primas bajas y sin redes restringidas." 
-                        : "Florida Seniors 50+: Lock in low monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with zero doctor network restrictions.",
+                        ? "Asesoría especializada 100% en español para la comunidad hispana de Florida. Comparamos las mejores opciones de Suplementos de Medicare (Medigap Plan G y N) con primas competitivas y flexibilidad de proveedores." 
+                        : "Florida Seniors 50+: Compare monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with nationwide provider flexibility.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Planes Medigap Plan G y Plan N", desc: "Compare coberturas y primas sin deducibles sorpresa ni costos ocultos en Florida." },
-                        { title: "Sin Redes de Médicos Restringidas", desc: "Visite a cualquier médico o especialista en Florida y todo EE.UU. que acepte Medicare." },
+                        { title: "Planes Medigap Plan G y Plan N", desc: "Compare coberturas y primas sin sorpresas ni costos ocultos en Florida." },
+                        { title: "Flexibilidad de Proveedores", desc: "Atiéndase con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a reglas de Medigap." },
                         { title: "Atención Bilingüe Personalizada", desc: "Hable directamente en español con Andrés Bozo (Broker Licenciado NPN 21228432)." }
                     ] : [
-                        { title: "Medigap Plan G & N Comparison", desc: "Compare Part G, K, and N premiums side-by-side with 100% transparency." },
-                        { title: "Zero Doctor Networks", desc: "See any doctor or hospital in Florida and nationwide that accepts Medicare." },
+                        { title: "Medigap Plan G & N Comparison", desc: "Compare Part G and N premiums side-by-side with 100% transparency." },
+                        { title: "Nationwide Provider Flexibility", desc: "See any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules." },
                         { title: "2026 Rate Protection", desc: "Save up to 35% on standard rates by unlocking licensed broker discounts." }
                     ]
                 };

@@ -28,7 +28,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
     const faqs = isEs ? [
         {
             q: "¿Cuál es la diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage en Florida?",
-            a: "Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Actúan como seguro secundario al Medicare Original (Partes A y B) sin restringir su red de médicos ni requerir referidos en ningún hospital o clínica que acepte Medicare en EE.UU. Por el contrario, Medicare Advantage (Parte C) reemplaza al Medicare Original mediante una red privada (HMO o PPO) con copagos por servicio, requerimientos de autorización previa y limitaciones territoriales dentro de condados específicos de Florida."
+            a: "Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap. Por el contrario, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado."
         },
         {
             q: "¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?",
@@ -49,7 +49,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
     ] : [
         {
             q: "What is the difference between Medicare Supplement (Medigap) and Medicare Advantage in Florida?",
-            a: "Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. They act as secondary insurance to Original Medicare (Parts A & B) with zero doctor network restrictions or referral mandates anywhere in the U.S. that accepts Medicare. Conversely, Medicare Advantage (Part C) replaces Original Medicare with a private managed-care network (HMO or PPO) requiring copays, prior authorizations, and county-restricted networks in Florida."
+            a: "Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules. Conversely, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county."
         },
         {
             q: "When is the best time to buy a Medigap policy in Florida?",

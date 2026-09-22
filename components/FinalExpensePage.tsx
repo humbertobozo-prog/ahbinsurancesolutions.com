@@ -32,7 +32,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "¿Aumentarán mis primas mensuales a medida que cumpla más años?",
-            a: "No. Todas nuestras pólizas de Gastos Finales son de Vida Entera (Whole Life). Una vez emitida la póliza, su prima mensual queda contractualmente congelada de por vida, el beneficio por fallecimiento nunca disminuirá y la póliza nunca expirará mientras se mantengan los pagos al día."
+            a: "Muchas pólizas de vida entera participantes ofrecen primas niveladas y cobertura permanente, sujetas a los términos, condiciones y al pago continuo de las primas requeridas."
         },
         {
             q: "¿Qué significa que la póliza sea sin examen médico tradicional?",
@@ -40,7 +40,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "¿Cuál es la diferencia entre Emisión Simplificada y Emisión Garantizada?",
-            a: "La Emisión Simplificada incluye preguntas de salud y verificación de recetas; si califica, otorga cobertura completa inmediata desde el Día 1 (Level Benefit) con las primas más bajas. La Emisión Garantizada (Guaranteed Issue) no formula ninguna pregunta médica ni revisa historial de salud, aceptando al 100% de solicitantes entre 50 y 85 años, pero requiere un período de espera graduado de 2 años para muertes por causas naturales."
+            a: "La Emisión Simplificada incluye preguntas de salud y verificación de recetas; si califica, otorga cobertura completa inmediata desde el Día 1 (Level Benefit) con las primas más competitivas. Las pólizas de emisión garantizada generalmente no requieren suscripción médica tradicional ni preguntas de salud, pero la elegibilidad, las limitaciones de beneficios y los períodos de espera varían según el asegurador y el producto."
         },
         {
             q: "¿Cuál es la diferencia entre un Seguro de Gastos Finales y un Contrato Funerario Prepagado (Pre-Need)?",
@@ -57,7 +57,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "Will my monthly premiums increase as I grow older?",
-            a: "No. All of our Final Expense policies are Permanent Whole Life insurance. Once your policy is issued, your monthly premium is locked in for life, your death benefit will never decrease, and the policy will never expire as long as premiums are paid on time."
+            a: "Many participating whole life policies offer level premiums and permanent coverage, subject to the policy’s terms, conditions and continued payment of required premiums."
         },
         {
             q: "What does 'no traditional medical exam' mean?",
@@ -65,7 +65,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "What is the difference between Simplified Issue and Guaranteed Issue?",
-            a: "Simplified Issue policies require answering health questions and an Rx database check; qualifying applicants receive immediate Day-One Level Benefit protection with more competitive rates than guaranteed issue options. Guaranteed Issue plans require zero health questions and guarantee acceptance for seniors aged 50 to 85 regardless of severe medical conditions, but include a 2-year graded waiting period for non-accidental death."
+            a: "Simplified Issue policies require answering health questions and an Rx database check; qualifying applicants receive immediate Day-One Level Benefit protection with more competitive rates than guaranteed issue options. Guaranteed-issue policies generally do not require traditional medical underwriting or health questions, but eligibility, benefit limitations and waiting periods vary by carrier and product."
         },
         {
             q: "What is the difference between Final Expense Insurance and a Pre-Need Funeral Plan?",
@@ -525,7 +525,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">100%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Permanencia' : 'Lifetime Permanence'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'La póliza nunca vence mientras se mantengan las primas al día.' : 'Coverage never expires as long as premiums remain current.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'Cobertura permanente sujeta a los términos del contrato y pago continuo de primas.' : 'Coverage is structured to be permanent, subject to policy terms and continued payment of required premiums.'}</p>
                             </div>
                         </div>
                     </section>
