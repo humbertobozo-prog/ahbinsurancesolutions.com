@@ -175,7 +175,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             title: "Fixed Indexed Annuities (FIA)",
-            desc: "Principal protection for accumulated retirement savings against stock market downturns, paired with contractual guaranteed lifetime income streams and tax-deferred compound growth.",
+            desc: "Fixed Indexed Annuities for Contract-Based Interest Crediting & Income Options. Principal protection for accumulated retirement savings against stock market downturns, paired with contractual guaranteed lifetime income streams.",
             badge: "Annuities"
         },
         {
@@ -214,7 +214,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             step: "02",
-            title: "Market-Wide Comparison Across 80+ Carriers",
+            title: "Comparison of Available Options Across Multiple Carriers",
             desc: "As an independent broker, we compare state-regulated rates and medical underwriting guidelines across 80+ top Florida carriers to identify your most cost-effective solution."
         },
         {
@@ -224,7 +224,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             step: "04",
-            title: "Lifetime Advocacy & Annual Policy Reviews",
+            title: "Ongoing Client Support",
             desc: "Our client relationship is lifelong. We provide ongoing assistance with claims, carrier questions, and annual Medicare prescription formulary audits at zero cost to you."
         }
     ];

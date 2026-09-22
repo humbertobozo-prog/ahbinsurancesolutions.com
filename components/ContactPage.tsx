@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { ContactForm } from './ContactForm';
@@ -24,6 +24,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
         : 'Request your free quote for Medicare, Final Expense, or IUL. Speak directly with broker Andres H. Bozo at (352) 225-8389.';
 
     const content = translations[language];
+    const [selectedService, setSelectedService] = useState<string | null>(null);
+
+    const services = [
+        { id: 'medicare', labelEn: 'Medicare Comparison', labelEs: 'Comparación Medicare' },
+        { id: 'final-expense', labelEn: 'Final Expense Quote', labelEs: 'Cotización Gastos Finales' },
+        { id: 'iul', labelEn: 'IUL Review', labelEs: 'Revisión IUL' },
+        { id: 'annuities', labelEn: 'Retirement Income Review', labelEs: 'Revisión Jubilación' }
+    ];
 
     const contactSchema = {
         "@context": "https://schema.org",
@@ -107,7 +115,39 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 </div>
             </section>
 
-            <ContactForm content={content.contactForm} language={language} />
+            <section className="py-10 bg-white">
+                <div className="container mx-auto px-4 text-center max-w-4xl">
+                    <h2 className="text-xl font-black text-primary mb-6">
+                        {isEs ? '¿Qué tipo de asesoría busca?' : 'What type of assistance are you looking for?'}
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {services.map(s => (
+                            <button
+                                key={s.id}
+                                onClick={() => setSelectedService(s.id)}
+                                className={`p-4 rounded-xl font-bold transition-all border ${
+                                    selectedService === s.id
+                                        ? 'bg-primary text-white border-primary'
+                                        : 'bg-light-gray hover:bg-gray-200 border-gray-200 text-dark-gray'
+                                }`}
+                            >
+                                {isEs ? s.labelEs : s.labelEn}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            
+            <section className="bg-white py-6 md:py-8">
+                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+                    {selectedService && (
+                        <div className="bg-light-gray p-4 mb-4 rounded-lg text-center font-bold text-primary">
+                            {isEs ? 'Has seleccionado:' : 'You selected:'} {services.find(s => s.id === selectedService)?.labelEs || services.find(s => s.id === selectedService)?.labelEn}
+                        </div>
+                    )}
+                    <ContactForm content={content.contactForm} language={language} />
+                </div>
+            </section>
         </div>
     );
 };
