@@ -26,9 +26,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
 
     const content = translations[language];
 
-    // Local image paths
-    const imageSrc = "/andresbozoofi.webp";
-    const imageSm = "/andresbozoofi-sm.webp";
+    // Local image paths (exclusive new portrait for About page)
+    const imageSrc = "/andresbozo-portrait-new.jpg";
+    const imageSm = "/andresbozo-portrait-new.jpg";
 
     const personSchema = {
         "@context": "https://schema.org",
@@ -42,7 +42,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
         "telephone": "+1-352-225-8389",
         "email": "andreshbozo@ahbinsurancesolutions.com",
-        "image": `${baseUrl}/andresbozoofi.webp`,
+        "image": `${baseUrl}/andresbozo-portrait-new.jpg`,
         "url": canonical,
         "knowsLanguage": [
             { "@type": "Language", "name": "English" },
