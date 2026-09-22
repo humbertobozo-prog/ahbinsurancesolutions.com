@@ -19,20 +19,21 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
     const esUrl = `${baseUrl}/es/preguntas-frecuentes`;
 
     const title = isEs 
-        ? 'Preguntas Frecuentes sobre Medicare, Gastos Finales e IUL en Florida | AHB Insurance' 
-        : 'Medicare, Final Expense & IUL FAQ Florida | AHB Insurance Solutions';
+        ? 'Preguntas Frecuentes sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades | AHB' 
+        : 'Medicare, Final Expense, Life Insurance, IUL & Annuities FAQ | AHB Solutions';
 
     const description = isEs 
-        ? 'Respuestas detalladas a más de 24 preguntas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, IUL y Anualidades en Florida con el corredor Andrés H. Bozo.' 
-        : 'Comprehensive answers to 24+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, IUL, and Annuities with licensed broker Andres H. Bozo.';
+        ? 'Respuestas detalladas a más de 30 preguntas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, Seguro de Vida, IUL y Anualidades en Florida con el broker Andrés H. Bozo.' 
+        : 'Comprehensive answers to 30+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, Life Insurance, IUL, and Annuities with licensed broker Andres H. Bozo.';
 
     const categories = [
         { id: 'all', labelEn: 'All Topics', labelEs: 'Todos los Temas' },
-        { id: 'medicare', labelEn: 'Medicare & Medigap', labelEs: 'Medicare y Medigap' },
+        { id: 'medicare', labelEn: 'Medicare', labelEs: 'Medicare' },
         { id: 'final-expense', labelEn: 'Final Expense', labelEs: 'Gastos Finales' },
+        { id: 'life-insurance', labelEn: 'Life Insurance', labelEs: 'Seguro de Vida' },
         { id: 'iul', labelEn: 'IUL & Retirement', labelEs: 'IUL y Jubilación' },
         { id: 'annuities', labelEn: 'Annuities', labelEs: 'Anualidades' },
-        { id: 'general', labelEn: 'General / Broker', labelEs: 'General / Corredor' }
+        { id: 'general', labelEn: 'General & Broker', labelEs: 'General y Broker' }
     ];
 
     const faqs = isEs ? [
@@ -100,102 +101,129 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
             a: 'Las primas de Gastos Finales varían según la edad, historial de salud, consumo de tabaco, monto de cobertura, suscripción médica y la compañía aseguradora específica.'
         },
 
+        // Life Insurance (5)
+        {
+            category: 'life-insurance',
+            q: '¿Cuál es la diferencia entre Seguro de Vida a Término y Seguro de Vida Entera?',
+            a: 'El Seguro de Vida a Término brinda protección temporal (por ejemplo 10, 20 o 30 años) con primas bajas, ideal para cubrir una hipoteca o los años de crianza de los hijos. El Seguro de Vida Entera ofrece cobertura permanente para toda la vida con primas fijas garantizadas y acumula valor en efectivo garantizado.'
+        },
+        {
+            category: 'life-insurance',
+            q: '¿Qué son los Beneficios en Vida (Living Benefits) en un seguro de vida?',
+            a: 'Son cláusulas adicionales (riders) que le permiten adelantar un porcentaje significativo de su beneficio por muerte en caso de ser diagnosticado con una enfermedad terminal, crítica o crónica (como cáncer, infarto o incapacidad para realizar actividades de la vida diaria), permitiéndole costear tratamientos en vida.'
+        },
+        {
+            category: 'life-insurance',
+            q: '¿Cómo funciona el seguro de vida sin examen médico en Florida?',
+            a: 'Las pólizas de emisión acelerada y simplificada utilizan tecnología de suscripción electrónica que consulta historiales farmacéuticos y registros vehiculares en tiempo real. Permiten que solicitantes con perfiles de salud calificados obtengan cobertura en cuestión de horas o días sin agujas ni enfermeros.'
+        },
+        {
+            category: 'life-insurance',
+            q: '¿El beneficio por muerte del seguro de vida paga impuestos en Florida?',
+            a: 'En la gran mayoría de los casos, los beneficios por fallecimiento pagados a beneficiarios designados son transferidos libres de impuesto sobre la renta federal y estatal (IRS Código 101(a)). Además, en Florida, los beneficios pasan directamente a los beneficiarios evitando el proceso de sucesión testamentaria (probate).'
+        },
+        {
+            category: 'life-insurance',
+            q: '¿Cuánta cobertura de seguro de vida necesita una familia promedio?',
+            a: 'Una regla general utilizada en la industria es entre 7 y 10 veces los ingresos anuales del sostén de familia, sumado a las deudas existentes (hipoteca, autos, préstamos) y los fondos futuros para la educación de los hijos. Un análisis de necesidades financieras personalizado con un corredor independiente le ayuda a determinar la cifra exacta sin pagar de más.'
+        },
+
         // IUL & Retirement (6)
         {
             category: 'iul',
-            q: '¿Cómo funciona una póliza de Vida Universal Indexada (IUL)?',
-            a: 'Una póliza IUL combina protección de seguro de vida permanente con valor en efectivo vinculado al rendimiento de un índice bursátil (como el S&P 500). Cuenta con un piso contractual del 0% en la acreditación indexada (los costos de seguro y cargos administrativos se siguen deduciendo). Permite acceder a fondos mediante préstamos bajo el Código IRS 7702, siempre que la póliza esté debidamente fondeada, no sea un MEC y se mantenga activa.'
+            q: '¿Cómo funciona una póliza de Seguro de Vida Universal Indexada (IUL)?',
+            a: 'Combina protección permanente por fallecimiento con valor en efectivo vinculado a un índice externo (como el S&P 500). Cuenta con un piso contractual del 0% frente a pérdidas bursátiles directas y permite acceder a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del Código IRS, siempre que la póliza esté debidamente fondeada, no sea un MEC y se mantenga en vigor.'
         },
         {
             category: 'iul',
-            q: '¿Puedo perder dinero en efectivo si la bolsa de valores cae?',
-            a: 'El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que su valor no se acredita con rendimientos negativos ante caídas del mercado. Sin embargo, los costos internos del seguro (COI) y los cargos administrativos de la póliza continúan deduciéndose independientemente del comportamiento bursátil.'
+            q: '¿Puedo perder mi valor en efectivo si la bolsa de valores cae?',
+            a: 'El componente de acreditación indexada cuenta con un piso contractual del 0%, por lo que a la estrategia de índice no se le acreditan rendimientos negativos durante caídas del mercado. No obstante, los costos internos de seguro (COI) y cargos administrativos continúan deduciéndose periódicamente.'
         },
         {
             category: 'iul',
-            q: '¿Cómo funcionan los préstamos de póliza bajo el Código IRS 7702?',
-            a: 'Los préstamos sobre el valor en efectivo permiten retirar fondos colateralizados de una póliza no-MEC con ventajas fiscales mientras la póliza permanezca en vigor. No son "dinero gratis": los préstamos acumulan intereses devengados por la aseguradora y reducen tanto el valor de rescate como el beneficio por fallecimiento.'
+            q: '¿Cómo funcionan los préstamos de póliza bajo la Sección 7702 del IRS?',
+            a: 'Permiten acceder a fondos colateralizados de la póliza sin considerarse ingresos gravables bajo el Código IRS 7702 (para pólizas no-MEC). No son dinero regalado: devengan intereses fijados por la compañía y reducen el valor de rescate neto y el beneficio por fallecimiento si no se reembolsan.'
         },
         {
             category: 'iul',
-            q: '¿Qué es un Contrato de Donación Modificado (MEC)?',
-            a: 'Un MEC ocurre cuando una póliza de seguro de vida recibe aportes de primas que exceden los límites federales establecidos por el Código IRS 7702A. Si una póliza se convierte en MEC, las distribuciones y retiros pierden su tratamiento fiscal favorable y se gravan como ingresos ordinarios sujetos a multas por retiro anticipado.'
+            q: '¿Qué es un Contrato de Dotación Modificada (MEC) y cómo se evita?',
+            a: 'Un MEC ocurre si los pagos de primas exceden los límites tributarios federales estipulados por la Sección 7702A del IRS (la prueba de las 7 primas niveladas). Si se convierte en MEC, los retiros y préstamos pasan a tributar bajo la regla LIFO como ingreso ordinario más posibles multas por retiro prematuro.'
         },
         {
             category: 'iul',
-            q: '¿Requiere una IUL mantenimiento y fondos de primas constantes?',
-            a: 'Sí. Una IUL no es un depósito bancario ni una cuenta de ahorro automatizada. Requiere una gestión y supervisión cuidadosa, así como un fondeo adecuado para compensar el incremento de los costos del seguro (COI) a medida que el asegurado envejece, previniendo así la caducidad (lapse) de la póliza.'
+            q: '¿Requiere una póliza IUL supervisión y fondeo continuo?',
+            a: 'Sí. Un IUL no es un depósito bancario automático. Requiere una gestión disciplinada y un fondeo suficiente de primas para compensar el costo del seguro (COI), el cual se incrementa de manera natural a medida que el asegurado avanza en edad.'
         },
         {
             category: 'iul',
-            q: '¿Qué son los beneficios en vida (Living Benefits) en pólizas IUL?',
-            a: 'Son cláusulas opcionales o integradas que permiten acelerar una porción significativa del beneficio por fallecimiento (típicamente entre 60% y 90%) en vida si al asegurado se le diagnostica una enfermedad terminal, crónica o crítica, sujeto a las definiciones médicas y reglas de aprobación de la compañía.'
+            q: '¿Cuáles son las opciones de índices disponibles en una póliza IUL?',
+            a: 'La mayoría de las aseguradoras ofrecen opciones vinculadas al índice S&P 500, índices ponderados por volatilidad (volatility-controlled indices) y cuentas de interés fijo garantizado, permitiendo diversificar la estrategia de acreditación dentro de la misma póliza.'
         },
 
         // Annuities (6)
         {
             category: 'annuities',
             q: '¿Qué es una Anualidad Fija Indexada (FIA)?',
-            a: 'Es un contrato financiero emitido por una compañía de seguros que ofrece crecimiento con diferimiento fiscal vinculado a un índice externo (como el S&P 500), protegiendo el principal contra pérdidas directas de mercado mediante un piso contractual del 0%.'
+            a: 'Es un contrato con una aseguradora que ofrece crecimiento de intereses con impuestos diferidos vinculado a un índice externo de mercado (como el S&P 500), con un piso contractual del 0% que garantiza que el capital principal y las ganancias bloqueadas no disminuyen por caídas bursátiles.'
         },
         {
             category: 'annuities',
-            q: '¿Cómo protege el principal una anualidad fija durante caídas del mercado?',
-            a: 'Debido a la estructura de opciones y garantías del emisor, si el índice bursátil registra un año negativo, el interés acreditado es del 0% en lugar de negativo. Su capital principal previamente acreditado y las ganancias bloqueadas no se reducen por el rendimiento negativo del mercado.'
+            q: '¿Cómo protege el capital el piso contractual del 0% en una anualidad?',
+            a: 'Debido a la estructura de opciones del asegurador, si el índice tiene un rendimiento anual negativo, su rendimiento acreditado es del 0% en lugar de negativo. Todo el capital previamente acreditado queda blindado.'
         },
         {
             category: 'annuities',
             q: '¿Qué es un intercambio libre de impuestos según la Sección 1035 del IRS?',
-            a: 'Es una provisión del código fiscal de EE. UU. que permite transferir fondos directamente de una póliza de seguro de vida, contrato de dotación o anualidad existente a una nueva anualidad u otro contrato elegible sin generar un evento tributario gravable en el momento del traspaso.'
+            a: 'Es una disposición del Código Tributario que permite transferir directamente fondos de una anualidad existente (o de una póliza de seguro de vida) a una nueva anualidad sin generar un hecho imponible ni pagar impuestos en ese momento.'
         },
         {
             category: 'annuities',
-            q: '¿Qué opciones tengo al finalizar el plazo inicial de mi anualidad?',
-            a: 'Al término del período de vigencia inicial (por ejemplo, 5, 7 o 10 años), se abre una ventana de renovación. Puede retirar la suma total, realizar un intercambio tax-free bajo la Sección 1035 a un nuevo contrato o dejar que el contrato se renueve bajo las tasas vigentes de la aseguradora.'
+            q: '¿Qué sucede al vencer el plazo de una anualidad MYGA?',
+            a: 'Al vencer el plazo contratado, se abre una ventana de gracia para retirar los fondos sin penalización, transferirlos mediante un intercambio 1035 a una nueva anualidad con mejores tasas, o renovar el contrato bajo las tasas vigentes de la aseguradora.'
         },
         {
             category: 'annuities',
-            q: '¿Existen cargos por rescate anticipado (surrender charges) en las anualidades?',
-            a: 'Sí. Las anualidades están diseñadas como vehículos a mediano y largo plazo. Retiros que excedan el límite anual exento de penalización (generalmente el 10% del valor del contrato) durante el período de penalización por rescate están sujetos a cargos de la aseguradora y posibles penalizaciones federales por retiro antes de los 59½ años.'
+            q: '¿Existen penalizaciones o cargos por rescate (surrender charges) en las anualidades?',
+            a: 'Sí. Las anualidades son instrumentos diseñados para mediano y largo plazo. Los retiros que excedan el límite anual libre de penalizaciones (generalmente 10% anual) durante el período de rescate están sujetos a cargos contractuales y a una multa del 10% del IRS si se retiran antes de los 59½ años.'
         },
         {
             category: 'annuities',
-            q: '¿Cómo se gravan los retiros de una anualidad?',
-            a: 'Los retiros de una anualidad con impuestos diferidos se gravan bajo la regla "LIFO" (último en entrar, primero en salir), lo que significa que las ganancias acumuladas se retiran y se gravan como ingreso ordinario antes de que comience a retirar el capital principal aportado.'
+            q: '¿Cómo se gravan los retiros de una anualidad no calificada?',
+            a: 'Tributan bajo la regla LIFO (Last-In, First-Out): las ganancias acumuladas se retiran y tributan primero como ingreso ordinario, antes de que se devuelva el capital principal no gravable.'
         },
 
         // General / Broker (3)
         {
             category: 'general',
-            q: '¿Tiene algún costo la consulta con AHB Insurance Solutions?',
-            a: 'No. Nuestra asesoría, análisis de necesidades y proceso de cotización son 100% gratuitos y sin compromiso para usted. Las compañías aseguradoras nos compensan directamente.'
+            q: '¿Tiene algún costo consultar con AHB Insurance Solutions?',
+            a: 'No, ninguno. Nuestros servicios de asesoría, análisis de necesidades y comparativa entre más de 80 compañías de seguros son 100% gratuitos y sin compromiso para usted. Las aseguradoras nos compensan directamente bajo tarifas reguladas.'
         },
         {
             category: 'general',
-            q: '¿Por qué trabajar con un corredor independiente en Florida?',
-            a: 'Como corredores independientes (NPN 21228432), no estamos atados a una sola aseguradora. Comparamos planes imparcialmente entre más de 80 compañías líderes para encontrar la combinación ideal de cobertura y presupuesto.'
+            q: '¿Por qué conviene trabajar con un corredor independiente en Florida?',
+            a: 'Como corredores independientes (NPN: 21228432), no estamos atados a una sola compañía. Comparamos objetivamente pólizas de más de 80 aseguradoras líderes nacionales para hallar la que mejor proteja su salud, familia y presupuesto.'
         },
         {
             category: 'general',
-            q: '¿Cómo puedo solicitar una cotización personalizada o hablar con un experto?',
-            a: 'Puede hacer clic en cualquiera de los botones de cotización en nuestro sitio web, completar el formulario seguro o llamar directamente al corredor Andrés H. Bozo al +1 (352) 225-8389.'
+            q: '¿Cómo puedo solicitar una cotización o hablar con el corredor Andrés Bozo?',
+            a: 'Puede hacer clic en cualquier botón de cotización de nuestra web, completar el formulario de contacto o llamar directamente al broker licenciado Andrés H. Bozo al +1 (352) 225-8389.'
         }
     ] : [
         // Medicare (6)
         {
             category: 'medicare',
-            q: 'What is a Medicare Supplement (Medigap) plan?',
-            a: 'Medigap policies help pay certain Medicare-covered out-of-pocket costs (such as deductibles, copays, and coinsurance). They act as secondary insurance to Original Medicare (Parts A & B). Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules.'
+            q: 'What is a Medicare Supplement (Medigap) insurance plan?',
+            a: 'Medigap policies help pay certain out-of-pocket costs covered by Medicare (such as copayments, coinsurance, and deductibles). They act as secondary insurance to Original Medicare (Parts A & B). Medigap generally allows you to see any provider nationwide that accepts Medicare assignment, subject to Medicare and Medigap rules.'
         },
         {
             category: 'medicare',
             q: 'What is the difference between Medigap Plan G and Plan N in Florida?',
-            a: 'Plan G covers 100% of Medicare-approved out-of-pocket medical costs after you meet the annual Part B deductible, including Part B excess charges. Plan N offers more competitive monthly premiums with small copays of up to $20 for doctor visits and does not cover Part B excess charges.'
+            a: 'Plan G covers 100% of Medicare-approved out-of-pocket medical costs once you satisfy the annual Part B deductible, including Part B excess charges. Plan N features lower monthly premiums, but requires small copayments of up to $20 for doctor visits and up to $50 for emergency room visits that do not lead to inpatient admission, and does not cover Part B excess charges.'
         },
         {
             category: 'medicare',
-            q: 'When is the best time to buy a Medigap policy in Florida?',
-            a: 'Your 6-month Medigap Open Enrollment Period (MOEP) begins the month you turn 65 and are enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage or charge higher premiums due to pre-existing health conditions.'
+            q: 'When is the best time to enroll in a Florida Medigap plan?',
+            a: 'Your 6-month Medigap Open Enrollment Period (MOEP) begins on the first day of the month you are 65 or older and enrolled in Medicare Part B. During this period, you have Guaranteed Issue Rights, meaning carriers cannot deny coverage or charge higher premiums based on pre-existing health conditions.'
         },
         {
             category: 'medicare',
@@ -245,6 +273,33 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
             a: 'Final Expense premiums vary based on age, health history, tobacco use, coverage amount, underwriting, and the specific insurance carrier.'
         },
 
+        // Life Insurance (5)
+        {
+            category: 'life-insurance',
+            q: 'What is the main difference between Term Life and Permanent Whole Life insurance?',
+            a: 'Term Life Insurance provides pure death benefit protection for a specified period (such as 10, 20, or 30 years) with the lowest initial premium, ideal for debt payoff and child-rearing years. Permanent Whole Life provides lifelong coverage with guaranteed level premiums and builds guaranteed cash value over time.'
+        },
+        {
+            category: 'life-insurance',
+            q: 'What are Living Benefits riders on a life insurance policy?',
+            a: 'Living Benefits riders allow policyholders to accelerate a portion of the tax-free death benefit while living if diagnosed with a qualifying qualifying critical, chronic, or terminal illness (such as invasive cancer, stroke, heart attack, or cognitive impairment) to cover healthcare and living expenses.'
+        },
+        {
+            category: 'life-insurance',
+            q: 'How does no-medical-exam life insurance work in Florida?',
+            a: 'Modern accelerated underwriting uses electronic databases (including prescription records and motor vehicle checks) to evaluate qualified applicants instantly. Eligible applicants can secure coverage up to $1,000,000 or more within days without undergoing needle blood draws or paramedical exams.'
+        },
+        {
+            category: 'life-insurance',
+            q: 'Are life insurance death benefits taxable to beneficiaries in Florida?',
+            a: 'In the vast majority of cases, death benefit proceeds paid to designated beneficiaries are free of federal and Florida state income taxes under Internal Revenue Code Section 101(a). Beneficiary designations also bypass public probate court proceedings.'
+        },
+        {
+            category: 'life-insurance',
+            q: 'How much life insurance coverage does a typical family need?',
+            a: 'A sound benchmark is 7 to 10 times the annual income of breadwinners, added to mortgage liabilities, outstanding consumer loans, and expected education funds. An independent broker performs a personalized capital needs analysis to establish your optimal coverage.'
+        },
+
         // IUL & Retirement (6)
         {
             category: 'iul',
@@ -273,8 +328,8 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             category: 'iul',
-            q: 'What are living benefits in IUL policies?',
-            a: 'Living benefits are optional or built-in riders allowing you to accelerate a significant portion of the death benefit (typically 60% to 90%) while living if diagnosed with a qualifying terminal, chronic, or critical illness, subject to carrier definitions and approval rules.'
+            q: 'What are the index options typically available in an IUL policy?',
+            a: 'Most top carriers offer options linked to the S&P 500, volatility-controlled multi-asset indexes, and guaranteed fixed accounts, allowing policyholders to diversify interest-crediting allocations inside the same policy.'
         },
 
         // Annuities (6)
@@ -355,20 +410,20 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": isEs ? "Inicio" : "Home",
-                "item": `${baseUrl}${isEs ? '/es' : '/'}`
+                "name": isEs ? 'Inicio' : 'Home',
+                "item": isEs ? `${baseUrl}/es` : baseUrl
             },
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": isEs ? "Preguntas Frecuentes" : "Frequently Asked Questions",
+                "name": isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions',
                 "item": canonical
             }
         ]
     };
 
     return (
-        <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
+        <div className="bg-white min-h-screen text-dark-gray font-sans">
             <SEOHead 
                 title={title}
                 description={description}
@@ -379,103 +434,197 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                 schema={[faqSchema, breadcrumbSchema]}
             />
 
-            <div className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions'}</span>
-                </div>
-            </div>
-
-            <section className="bg-primary text-white py-12 md:py-16 text-center">
-                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <span className="bg-accent text-primary text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full mb-3 inline-block">
-                        {isEs ? 'Centro de Conocimiento y Ayuda' : 'Knowledge & Help Center'}
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb" className="bg-light-gray border-b border-gray-200 py-3">
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">
+                            {isEs ? 'Preguntas Frecuentes' : 'FAQ'}
+                        </span>
+                    </div>
+                    <span className="text-xs text-gray-500 font-semibold hidden sm:inline">
+                        {isEs ? 'Actualizado para Florida 2026' : 'Updated for Florida 2026'}
                     </span>
-                    <h1 className="text-3xl md:text-5xl font-black font-heading mb-4">
-                        {isEs ? 'Preguntas Frecuentes (FAQ)' : 'Frequently Asked Questions'}
+                </div>
+            </nav>
+
+            {/* Hero Section */}
+            <section className="bg-primary text-white py-12 md:py-16">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
+                    <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3.5 py-1 rounded-full mb-4">
+                        {isEs ? 'Base de Conocimiento y Asesoría' : 'Knowledge Base & Expert Guidance'}
+                    </span>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading mb-4 leading-tight text-white">
+                        {isEs 
+                            ? 'Preguntas Frecuentes: Seguros y Jubilación en Florida' 
+                            : 'Frequently Asked Questions: Florida Insurance & Retirement'}
                     </h1>
-                    <p className="text-gray-200 text-sm md:text-base font-medium">
-                        {isEs ? 'Explore nuestra base completa con más de 24 respuestas autorizadas sobre Medicare, Gastos Finales, IUL y Anualidades en Florida.' : 'Explore our comprehensive knowledge base with 24+ authoritative answers regarding Florida Medicare, Final Expense, IUL, and Annuities.'}
+                    <p className="text-base md:text-lg text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        {isEs 
+                            ? 'Claridad directa, objetiva y respaldada por licencias sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades con el broker Andrés H. Bozo.' 
+                            : 'Direct, objective, and licensed answers regarding Medicare, Final Expense, Life Insurance, IUL, and Annuities with broker Andres H. Bozo.'}
                     </p>
+
+                    {/* Search Bar */}
+                    <div className="relative max-w-xl mx-auto">
+                        <input 
+                            type="text"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            placeholder={isEs ? "Buscar una pregunta (ej. Medigap, IUL, funeral, 0% piso)..." : "Search a question (e.g., Medigap, IUL, burial, 0% floor)..."}
+                            className="w-full px-5 py-3.5 pl-12 rounded-xl bg-white text-dark-gray placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent shadow-lg text-sm md:text-base"
+                        />
+                        <svg className="w-5 h-5 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        {searchTerm && (
+                            <button 
+                                onClick={() => setSearchTerm('')}
+                                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 px-2 py-1 rounded"
+                            >
+                                {isEs ? 'Borrar' : 'Clear'}
+                            </button>
+                        )}
+                    </div>
                 </div>
             </section>
 
-            <section className="container mx-auto px-4 md:px-6 py-10 max-w-4xl">
-                {/* Search and Category Filters */}
-                <div className="mb-8 space-y-4">
-                    <input 
-                        type="text"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder={isEs ? 'Buscar una pregunta o palabra clave...' : 'Search a question or keyword...'}
-                        className="w-full px-5 py-3.5 rounded-2xl border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
-                    />
-
-                    <div className="flex flex-wrap gap-2 pt-2">
-                        {categories.map(cat => (
-                            <button
-                                key={cat.id}
-                                onClick={() => setSelectedCategory(cat.id)}
-                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                                    selectedCategory === cat.id 
-                                        ? 'bg-primary text-white shadow-md' 
-                                        : 'bg-light-gray text-gray-700 hover:bg-gray-200 border border-gray-200'
-                                }`}
-                            >
-                                {isEs ? cat.labelEs : cat.labelEn}
-                            </button>
-                        ))}
-                    </div>
+            {/* Category Filter Pills */}
+            <div className="border-b border-gray-200 bg-white sticky top-0 z-20 shadow-xs">
+                <div className="container mx-auto px-4 md:px-6 py-3 flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar">
+                    {categories.map((cat) => (
+                        <button
+                            key={cat.id}
+                            onClick={() => setSelectedCategory(cat.id)}
+                            className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
+                                selectedCategory === cat.id
+                                    ? 'bg-primary text-white shadow-sm'
+                                    : 'bg-light-gray text-gray-600 hover:bg-gray-200 hover:text-dark-gray'
+                            }`}
+                        >
+                            {isEs ? cat.labelEs : cat.labelEn}
+                        </button>
+                    ))}
                 </div>
+            </div>
 
-                {/* FAQ List */}
-                <div className="space-y-4">
-                    {filteredFaqs.length === 0 ? (
-                        <div className="text-center py-12 bg-light-gray rounded-2xl border border-gray-200">
-                            <p className="text-gray-600 font-medium">
-                                {isEs ? 'No se encontraron preguntas que coincidan con su búsqueda.' : 'No questions found matching your search term.'}
-                            </p>
-                        </div>
-                    ) : (
-                        filteredFaqs.map((faq, idx) => {
-                            const isOpen = openIndex === idx;
-                            return (
-                                <div key={idx} className="bg-light-gray rounded-2xl border border-gray-200 overflow-hidden transition-all">
-                                    <button
-                                        onClick={() => setOpenIndex(isOpen ? null : idx)}
-                                        className="w-full p-5 text-left font-bold text-primary flex justify-between items-center gap-4 hover:bg-gray-200/50 transition-colors"
-                                    >
-                                        <span className="text-base sm:text-lg">{faq.q}</span>
-                                        <span className="text-accent-dark font-black text-xl">{isOpen ? '−' : '+'}</span>
-                                    </button>
-                                    {isOpen && (
-                                        <div className="p-5 pt-0 text-sm text-gray-700 leading-relaxed border-t border-gray-200/50">
-                                            {faq.a}
-                                        </div>
-                                    )}
-                                </div>
-                            );
-                        })
+            {/* FAQs Accordion Section */}
+            <section className="py-12 md:py-16 container mx-auto px-4 md:px-6 max-w-4xl">
+                <div className="mb-6 flex items-center justify-between text-xs text-gray-500 font-semibold">
+                    <span>
+                        {isEs 
+                            ? `Mostrando ${filteredFaqs.length} de ${faqs.length} preguntas` 
+                            : `Showing ${filteredFaqs.length} of ${faqs.length} questions`}
+                    </span>
+                    {(searchTerm || selectedCategory !== 'all') && (
+                        <button 
+                            onClick={() => { setSearchTerm(''); setSelectedCategory('all'); }}
+                            className="text-primary hover:underline"
+                        >
+                            {isEs ? 'Restablecer filtros' : 'Reset filters'}
+                        </button>
                     )}
                 </div>
 
-                {/* Direct Contact Banner */}
-                <div className="mt-12 p-8 bg-amber-50 border border-amber-200 rounded-2xl text-center">
-                    <h3 className="font-black text-primary text-xl mb-2">
-                        {isEs ? '¿No encuentra la respuesta a su pregunta?' : 'Didn’t find the answer you were looking for?'}
-                    </h3>
-                    <p className="text-sm text-gray-700 mb-6 max-w-lg mx-auto">
-                        {isEs ? 'Hable directamente con el broker licenciado Andrés H. Bozo y reciba orientación personalizada en español o inglés.' : 'Speak directly with licensed broker Andres H. Bozo for personalized guidance in English or Spanish.'}
-                    </p>
-                    <button
-                        onClick={onOpenQuote}
-                        className="bg-accent text-primary font-black text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow hover:bg-[#FFB81C] transition-all"
-                    >
-                        {isEs ? 'Solicitar Asesoría Gratuita ➔' : 'Request Free Consultation ➔'}
-                    </button>
+                <div className="space-y-4">
+                    {filteredFaqs.map((item, idx) => {
+                        const isOpen = openIndex === idx;
+                        return (
+                            <div 
+                                key={idx}
+                                className={`border rounded-2xl transition-all duration-200 ${
+                                    isOpen 
+                                        ? 'border-primary/40 bg-white shadow-md ring-1 ring-primary/10' 
+                                        : 'border-gray-200 bg-white hover:border-gray-300'
+                                }`}
+                            >
+                                <button
+                                    onClick={() => setOpenIndex(isOpen ? null : idx)}
+                                    className="w-full text-left p-5 md:p-6 flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                                    aria-expanded={isOpen}
+                                >
+                                    <div className="flex items-center gap-3">
+                                        <span className={`w-2 h-2 rounded-full flex-shrink-0 ${
+                                            item.category === 'medicare' ? 'bg-blue-600' :
+                                            item.category === 'final-expense' ? 'bg-amber-600' :
+                                            item.category === 'life-insurance' ? 'bg-indigo-600' :
+                                            item.category === 'iul' ? 'bg-emerald-600' :
+                                            item.category === 'annuities' ? 'bg-purple-600' : 'bg-primary'
+                                        }`} />
+                                        <span className="font-bold text-dark-gray text-base md:text-lg">
+                                            {item.q}
+                                        </span>
+                                    </div>
+                                    <span className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-200 text-xs font-black ${
+                                        isOpen ? 'bg-primary text-white rotate-180' : 'bg-light-gray text-gray-600'
+                                    }`}>
+                                        ▼
+                                    </span>
+                                </button>
+                                {isOpen && (
+                                    <div className="px-5 pb-6 md:px-6 md:pb-6 text-gray-700 text-sm md:text-base leading-relaxed border-t border-gray-100 pt-4">
+                                        <p>{item.a}</p>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
+
+                    {filteredFaqs.length === 0 && (
+                        <div className="text-center py-12 bg-light-gray rounded-2xl border border-gray-200 p-8">
+                            <p className="text-gray-600 font-bold mb-2">
+                                {isEs ? 'No se encontraron preguntas para su búsqueda.' : 'No matching questions found.'}
+                            </p>
+                            <p className="text-xs text-gray-500 mb-4">
+                                {isEs ? 'Intente con otros términos o consulte directamente con nuestro broker.' : 'Try different keywords or ask our licensed broker directly.'}
+                            </p>
+                            <button
+                                onClick={() => { setSearchTerm(''); setSelectedCategory('all'); }}
+                                className="bg-primary text-white font-bold text-xs uppercase px-4 py-2 rounded-lg"
+                            >
+                                {isEs ? 'Ver todas las preguntas' : 'View all questions'}
+                            </button>
+                        </div>
+                    )}
+                </div>
+            </section>
+
+            {/* Broker Direct Help CTA */}
+            <section className="bg-light-gray border-t border-gray-200 py-12">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div className="space-y-2 text-center md:text-left">
+                            <span className="text-xs font-black text-accent uppercase tracking-widest bg-primary px-3 py-1 rounded-full inline-block">
+                                {isEs ? '¿Tiene una pregunta específica no listada?' : 'Have a specific question not listed?'}
+                            </span>
+                            <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
+                                {isEs ? 'Hable directamente con Andrés Bozo' : 'Speak Directly With Andres Bozo'}
+                            </h2>
+                            <p className="text-gray-600 text-sm max-w-xl">
+                                {isEs 
+                                    ? 'Broker de seguros independiente con licencia en Florida (NPN 21228432). Asesoría 100% gratuita, imparcial y sin presiones comerciales.' 
+                                    : 'Florida-licensed independent insurance broker (NPN 21228432). 100% free, impartial, zero-pressure guidance.'}
+                            </p>
+                        </div>
+                        <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto">
+                            <button
+                                onClick={onOpenQuote}
+                                className="bg-primary hover:bg-primary-light text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow transition-colors text-center cursor-pointer"
+                            >
+                                {isEs ? 'Solicitar Asesoría Gratuita' : 'Request Free Consultation'}
+                            </button>
+                            <a
+                                href="tel:+13522258389"
+                                className="bg-accent hover:bg-[#FFB81C] text-primary font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-colors text-center"
+                            >
+                                {isEs ? 'Llamar: (352) 225-8389' : 'Call: (352) 225-8389'}
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

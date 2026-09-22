@@ -45,7 +45,11 @@ export const ALL_ROUTES: string[] = [
   '/es/anualidades',
   '/dental-vision-florida',
   '/es/dental-vision-florida',
-  '/spanish-insurance-orlando'
+  '/spanish-insurance-orlando',
+  '/locations/gainesville-fl',
+  '/es/locations/gainesville-fl',
+  '/gainesville-fl-insurance',
+  '/es/seguros-gainesville-fl'
 ];
 
 export function prerenderAllPages(): void {

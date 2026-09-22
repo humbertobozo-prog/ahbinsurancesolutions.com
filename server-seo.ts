@@ -77,6 +77,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
     "/es/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
     "/spanish-insurance-orlando": { en: "/spanish-insurance-orlando", es: "/spanish-insurance-orlando" },
+    "/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
+    "/es/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
+    "/gainesville-fl-insurance": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
+    "/es/seguros-gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/blog/medicare-open-enrollment-florida-2026": {
       en: "/blog/medicare-open-enrollment-florida-2026",
       es: "/es/blog/medicare-inscripcion-abierta-florida-2026"
@@ -674,30 +678,92 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     cleanPath === "/es/seguros-gainesville-fl"
   ) {
     title = isEs
-      ? "Broker de Seguros de Medicare y Vida en Gainesville, FL | AHB Insurance Solutions"
-      : "Medicare & Life Insurance Broker in Gainesville, FL | AHB Insurance Solutions";
+      ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville | AHB Insurance Solutions"
+      : "Gainesville, FL Insurance Broker | Medicare, Life & Annuities | AHB Insurance Solutions";
     description = isEs
-      ? "Corredor de seguros local e independiente en Gainesville, FL (5500 SW Archer Rd). Asesoría experta en Medicare Medigap (UF Health Shands), Gastos Finales e IUL en el Condado de Alachua, Archer, Newberry y High Springs. Andrés Bozo NPN 21228432."
-      : "Local independent insurance broker in Gainesville, FL (5500 SW Archer Rd). Expert Medicare Medigap (UF Health Shands access), Final Expense & IUL guidance across Alachua County, Archer, Newberry & High Springs. Andres Bozo NPN 21228432.";
+      ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
+      : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
 
     bodyOutline = `
       <header>
-        <h1>${title}</h1>
+        <h1>${isEs ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville" : "Gainesville, FL Insurance Broker"}</h1>
         <p>${description}</p>
+        <div class="broker-contact-badge">
+          <p><strong>Broker Licenciado:</strong> Andres Bozo (NPN: 21228432)</p>
+          <p><strong>Dirección:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+          <p><strong>Teléfono:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+        </div>
       </header>
+
       <section>
-        <h2>Independent Insurance Brokerage in Gainesville & Alachua County</h2>
-        <p>Located on SW Archer Road, AHB Insurance Solutions provides comprehensive, independent insurance comparisons representing top-rated national carriers with zero broker fees.</p>
+        <h2>Medicare Gainesville: Cobertura y Suplementos Medigap en el Condado de Alachua</h2>
+        <p>Gainesville es el epicentro médico del norte de Florida gracias al reconocido sistema hospitalario UF Health Shands Hospital y al HCA Florida North Florida Hospital. Los residentes del Condado de Alachua que dependen de Medicare Original a menudo necesitan protección frente a deducibles y al coseguro del 20% sin límite de la Parte B. Con un Suplemento de Medicare (Medigap Plan G o Plan N), usted obtiene acceso directo y sin restricciones a UF Health Shands, HCA Florida y al Malcom Randall VA Medical Center, sin requerir redes restrictivas HMO ni referidos de médicos primarios.</p>
         <ul>
-          <li><strong>Medicare & Medigap (Plan G & Plan N):</strong> Direct, unrestricted access to UF Health Shands Hospital, HCA Florida North Florida Hospital, and Malcom Randall VA Medical Center without referral bottlenecks or prior authorization delays.</li>
-          <li><strong>Final Expense & Burial Insurance:</strong> Whole life coverage from $5,000 to $35,000 with locked rates for life, protecting families across Gainesville, Archer, Newberry, and High Springs. Compatible with local providers like Forest Meadows, Williams-Thomas, Milam, and Chestnut.</li>
-          <li><strong>Indexed Universal Life (IUL):</strong> Tax-advantaged cash value accumulation with a contractual 0% index crediting floor for UF professors, medical staff, and local professionals.</li>
-          <li><strong>Retirement Annuities:</strong> Fixed (MYGA) and fixed indexed annuities for principal protection and guaranteed lifetime income streams.</li>
+          <li>Libertad total para elegir médicos y especialistas en UF Health Shands.</li>
+          <li>Sin demoras de autorizaciones previas para tratamientos o cirugías.</li>
+          <li>Garantía de cobertura médica válida en cualquier hospital de Florida y de todo Estados Unidos.</li>
         </ul>
-        <h3>Local Office & Contact Information</h3>
-        <p><strong>Physical Address:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
-        <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
-        <p><strong>Principal Broker:</strong> Andres Bozo (NPN: 21228432)</p>
+      </section>
+
+      <section>
+        <h2>Final Expense Gainesville: Seguro de Gastos Finales y Entierro</h2>
+        <p>Los costos promedio de funerales y cremaciones en Gainesville, Archer, Newberry y High Springs oscilan entre $7,200 y $9,800. Dado que el beneficio único por fallecimiento del Seguro Social federal es de solo $255, una póliza de gastos finales de vida entera garantiza entre $5,000 y $35,000 en efectivo inmediato a sus beneficiarios, con primas congeladas de por vida y sin necesidad de examen médico tradicional. Sus seres queridos tienen total libertad para coordinar servicios con funerarias y cementerios locales de Alachua County, tales como Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home y Prairie Creek Conservation Cemetery.</p>
+      </section>
+
+      <section>
+        <h2>IUL Gainesville: Seguro de Vida Universal Indexada con Ventajas Fiscales</h2>
+        <p>Para la comunidad académica de la University of Florida (UF), el personal médico de UF Health, veteranos y trabajadores del VA Medical Center, y dueños de empresas locales en Gainesville y Alachua, el IUL (Indexed Universal Life) ofrece una estrategia eficiente para complementar planes 403(b), 401(k) o el Florida Retirement System (FRS). Con un piso contractual del 0% frente a caídas del mercado de valores y acceso a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del IRS, el IUL protege a su familia mientras acumula valor en efectivo.</p>
+      </section>
+
+      <section>
+        <h2>Annuities Gainesville: Anualidades Fijas y Pensión Vitalicia Garantizada</h2>
+        <p>Para los jubilados en Gainesville, incluyendo residentes de comunidades como Oak Hammock at UF, The Village y Haile Plantation, las Anualidades Fijas de Garantía Multianual (MYGA) y las Anualidades Fijas Indexadas (FIA) proporcionan protección contractual del capital principal contra la volatilidad bursátil. Disfrute de crecimiento con impuestos diferidos y cláusulas de ingresos vitalicios garantizados que proporcionan un sueldo predecible de por vida que jamás podrá sobrevivir.</p>
+      </section>
+
+      <section>
+        <h2>Andres Bozo: Su Corredor Independiente de Confianza en Alachua County</h2>
+        <p>Andrés Bozo (NPN: 21228432) es un corredor de seguros independiente con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS). Al ser una agencia independiente, AHB Insurance Solutions compara objetivamente opciones entre más de 80 compañías aseguradoras nacionales líderes, garantizando una recomendación honesta, personalizada y 100% gratuita, sin costo adicional ni comisiones cobradas al asegurado.</p>
+      </section>
+
+      <section>
+        <h2>Dirección, Teléfono y Mapa de Ubicación en Gainesville</h2>
+        <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la I-75).</p>
+        <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
+        <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
+        <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
+      </section>
+
+      <section>
+        <h2>Áreas de Servicio en el Condado de Alachua (Alachua County Service Areas)</h2>
+        <p>Atendemos presencialmente con cita previa en nuestra oficina de Archer Road o a domicilio, así como mediante consultas telefónicas y remotas en las siguientes comunidades:</p>
+        <ul>
+          <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIPs 32601, 32605, 32607, 32608, 32653).</li>
+          <li><strong>Archer:</strong> ZIP 32618 (a minutos directos por SW Archer Road).</li>
+          <li><strong>Newberry:</strong> ZIP 32669 (familias y jubilados en el oeste de Alachua).</li>
+          <li><strong>High Springs:</strong> ZIP 32643 (cobertura integral para el norte del condado).</li>
+          <li><strong>Alachua:</strong> ZIP 32615.</li>
+          <li><strong>Hawthorne (32640), Micanopy (32667) y Waldo (32694).</strong></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Preguntas Frecuentes sobre Seguros en Gainesville, FL (FAQ)</h2>
+        <h3>¿Puedo utilizar un Suplemento de Medicare (Medigap) en UF Health Shands Hospital?</h3>
+        <p>Sí, absolutamente. Con un plan Medigap (como Plan G o Plan N), usted puede atenderse con cualquier médico o especialista que acepte Medicare en UF Health Shands, HCA Florida y en cualquier hospital del país, sin restricciones de red ni necesidad de referidos.</p>
+
+        <h3>¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?</h3>
+        <p>Nuestra sede física se encuentra en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</p>
+
+        <h3>¿Cobran honorarios por comparar planes o cotizar seguros?</h3>
+        <p>No. Nuestros servicios de consultoría, comparación entre más de 80 aseguradoras y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</p>
+
+        <h3>¿Ofrecen atención bilingüe en español en Gainesville?</h3>
+        <p>Sí. El corredor Andrés Bozo es completamente bilingüe (español e inglés), facilitando que la comunidad hispana de Gainesville y Alachua County comprenda cada detalle de su póliza con claridad.</p>
+      </section>
+
+      <section>
+        <h2>Solicite una Consulta Gratuita con Andres Bozo en Gainesville (CTA)</h2>
+        <p>Comuníquese hoy mismo al <a href="tel:+13522258389">(352) 225-8389</a> o complete nuestro formulario web para recibir un análisis comparativo personalizado sin costo ni compromiso para Medicare, Gastos Finales, IUL o Anualidades en Gainesville, FL.</p>
       </section>
     `;
   }
@@ -763,68 +829,164 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
         title = isEs
-          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance"
+          ? "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance"
           : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
         description = isEs
-          ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas de interés garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
-          : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
+          ? "Guía pilar completa sobre anualidades fijas en Florida: tradicionales, MYGA, FIA y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
+          : "Comprehensive Florida pillar guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
         bodyOutline = `
           <header>
-            <h1>${isEs ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos para la Jubilación" : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options"}</h1>
+            <h1>Florida Fixed Annuities: MYGA, FIA & Retirement Income Options</h1>
             <p>${description}</p>
           </header>
           <main>
             <section>
-              <h2>${isEs ? "¿Qué es una Anualidad Fija?" : "What Is a Fixed Annuity?"}</h2>
-              <p>${isEs ? "Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida en Florida diseñado para proteger el capital, acumular intereses con diferimiento fiscal del 100% y ofrecer opciones de ingresos de jubilación predecibles." : "A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company to safeguard principal, compound interest 100% tax-deferred, and establish guaranteed retirement income."}</p>
+              <h2>What Is a Fixed Annuity?</h2>
+              <p>A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary purpose is to safeguard hard-earned principal, compound interest 100% tax-deferred, and provide contractual mechanisms to convert accumulated savings into a guaranteed, predictable stream of retirement income. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio.</p>
+              <ul>
+                <li><strong>Accumulation Phase:</strong> Your principal earns contractually guaranteed interest or index-linked growth without annual 1099 tax erosion.</li>
+                <li><strong>Distribution Phase:</strong> You choose how to access your assets: via annual penalty-free withdrawals, a full payout at maturity, or a guaranteed lifetime income stream that you cannot outlive.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Anualidades Fijas Tradicionales" : "Fixed Annuities"}</h2>
-              <p>${isEs ? "Ofrecen tasas periódicas declaradas con un piso mínimo contractual garantizado para ahorradores conservadores." : "Traditional fixed declared-rate annuities offering steady compounding and a contractual minimum guaranteed floor."}</p>
+              <h2>Fixed Annuities</h2>
+              <p>Traditional fixed annuities declare an annual interest rate credited to your contract value. Key structural elements include:</p>
+              <ul>
+                <li><strong>Declared Rate:</strong> The insurer announces a competitive interest rate for an initial term (e.g., 1 to 3 years).</li>
+                <li><strong>Guaranteed Minimum Floor:</strong> State insurance regulations and the contract mandate a minimum lifetime rate (typically 1.0% to 3.0%) below which the declared yield cannot fall.</li>
+                <li><strong>Principal Preservation:</strong> Your initial deposit and all previously credited interest are 100% protected against market declines.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "MYGA: Anualidad con Garantía Multianual" : "MYGA (Multi-Year Guarantee Annuity)"}</h2>
-              <p>${isEs ? "Bloquea una tasa de interés fija exacta por contrato durante plazos de 3, 5, 7 o 10 años sin fluctuaciones de mercado." : "Locks in an exact, contractually guaranteed fixed yield for committed multi-year terms of 3, 5, 7, or 10 years."}</p>
+              <h2>MYGA</h2>
+              <p>A Multi-Year Guarantee Annuity (MYGA) is the insurance equivalent of a bank CD, but with tax deferral. You commit your deposit for a fixed period (such as 3, 5, 7, or 10 years), and the insurer contractually guarantees the exact same annual interest rate for every year of that term.</p>
+              <ul>
+                <li><strong>Zero Rate Volatility:</strong> The crediting rate never fluctuates during your chosen commitment window.</li>
+                <li><strong>Flexible Maturity Options:</strong> At term end, you can withdraw your funds in full, renew at current market rates, or perform an IRS Section 1035 tax-free rollover into a new contract.</li>
+                <li><strong>Compounding Power:</strong> Earnings remain in the contract and compound without annual tax drag.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Anualidades Indexadas Fijas (FIA)" : "Fixed Indexed Annuities"}</h2>
-              <p>${isEs ? "Crecimiento indexado vinculado a índices de mercado con un piso contractual del 0% para prevenir pérdidas en caídas bursátiles." : "Index-linked interest potential with a contractual 0% floor against market declines. Not directly invested in the stock market."}</p>
+              <h2>Fixed Indexed Annuities</h2>
+              <p>A Fixed Indexed Annuity (FIA) offers interest potential linked to the positive performance of an external financial benchmark (such as the S&P 500), while contractually guaranteeing zero loss of principal when the index declines.</p>
+              <ul>
+                <li><strong>Contractual 0% Floor:</strong> If the underlying market index loses value over the crediting period, your credited interest is simply 0%. You never lose principal or locked gains.</li>
+                <li><strong>Annual Reset Feature:</strong> At each contract anniversary, gains are locked in and become your new guaranteed principal baseline for future periods.</li>
+                <li><strong>Growth Levers:</strong> Returns are governed by contractual crediting formulas such as cap rates, participation rates, or spreads.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "SPIA: Anualidad Inmediata de Prima Única" : "SPIA (Single Premium Immediate Annuity)"}</h2>
-              <p>${isEs ? "Convierte un depósito único en un flujo de ingresos garantizado que comienza dentro de 30 días a 12 meses." : "Converts a single lump sum into immediate guaranteed monthly payments starting within 30 days to 12 months."}</p>
+              <h2>SPIA</h2>
+              <p>A Single Premium Immediate Annuity (SPIA) is designed for individuals requiring immediate guaranteed cash flow. You deposit a single lump sum, and the insurer begins paying guaranteed monthly or annual checks immediately (typically within 30 days to 12 months).</p>
+              <ul>
+                <li><strong>Immediate Cash Flow:</strong> Ideal for retirees facing an immediate retirement income shortfall.</li>
+                <li><strong>Exclusion Ratio Advantage:</strong> A portion of each payout represents a tax-free return of principal, lowering your immediate tax bill compared to standard distributions.</li>
+                <li><strong>Irrevocable Conversion:</strong> In exchange for guaranteed lifetime payments, the lump sum is annuitized and cannot typically be surrendered.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Ingresos de por Vida (GLWB y Anuitización)" : "Lifetime Income"}</h2>
-              <p>${isEs ? "Protección contra el riesgo de longevidad mediante cheques mensuales garantizados de por vida a través de cláusulas GLWB." : "Longevity risk protection generating guaranteed monthly retirement paychecks for life through GLWB income riders."}</p>
+              <h2>Lifetime Income</h2>
+              <p>Longevity risk—outliving one's savings—is the single greatest financial hazard in modern retirement. Fixed annuities solve this through two distinct lifetime income structures:</p>
+              <ul>
+                <li><strong>Guaranteed Lifetime Withdrawal Benefit (GLWB):</strong> An optional living benefit rider that calculates a separate 'Income Base'. It pays a guaranteed annual withdrawal percentage for life, even if your account value drops to zero due to longevity, while allowing you to retain control of the underlying cash value.</li>
+                <li><strong>Traditional Annuitization:</strong> Irrevocably converting contract balance into a guaranteed income stream based on life expectancy (Single Life, Joint & Survivor, or Period Certain).</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Acreditación de Intereses" : "Interest Crediting"}</h2>
-              <p>${isEs ? "Estrategias de acreditación fija, topes (caps), tasas de participación y bloqueo anual de ganancias." : "Declared fixed yields, cap rates, participation rates, spreads, and the annual reset feature."}</p>
+              <h2>Interest Crediting</h2>
+              <p>Understanding how insurers credit interest is essential for selecting the right contract:</p>
+              <ul>
+                <li><strong>Fixed Declared Rate:</strong> A clear, unchanging percentage credited daily or monthly.</li>
+                <li><strong>Cap Rate:</strong> The maximum percentage gain credited over a measurement period (e.g., a 9% cap means if the S&P 500 rises 15%, you receive 9%).</li>
+                <li><strong>Participation Rate:</strong> The percentage of index gains credited (e.g., an 80% participation rate on a 10% index gain credits 8%).</li>
+                <li><strong>Annual Reset:</strong> Locks in index gains at each anniversary, ensuring negative index years never erase previous credits.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Liquidez y Retiros Libres de Penalización" : "Liquidity"}</h2>
-              <p>${isEs ? "Disposiciones de liquidez anual libre de penalidad del 10%, compatibilidad con RMD y cláusulas de salud." : "10% annual penalty-free withdrawal provisions, RMD waivers for qualified accounts, and health crisis waivers."}</p>
+              <h2>Liquidity</h2>
+              <p>Modern Florida fixed annuities provide reasonable liquidity for unexpected life events:</p>
+              <ul>
+                <li><strong>10% Annual Penalty-Free Withdrawals:</strong> Most contracts permit withdrawing up to 10% of accumulated contract value each year after year one without carrier surrender charges.</li>
+                <li><strong>Cumulative Interest Access:</strong> Many contracts allow immediate penalty-free withdrawal of earned interest from month one.</li>
+                <li><strong>RMD Waivers:</strong> Required Minimum Distributions (RMDs) from qualified IRAs are exempt from surrender charges.</li>
+                <li><strong>Confinement & Terminal Illness Waivers:</strong> Grants up to 100% penalty-free access if the owner is confined to a skilled nursing facility or diagnosed with a terminal condition.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Cargos por Rescate y Reglas del IRS" : "Surrender Charges"}</h2>
-              <p>${isEs ? "Cronogramas decrecientes de rescate, ajuste de valor de mercado (MVA) y penalidad del 10% del IRS antes de los 59½ años." : "Declining surrender charge schedules, Market Value Adjustments (MVA), and the IRS 10% premature withdrawal penalty under age 59½."}</p>
+              <h2>Surrender Charges</h2>
+              <p>Annuities are designed as medium- to long-term wealth preservation contracts. Withdrawing funds beyond penalty-free limits during the surrender period triggers specific charges:</p>
+              <ul>
+                <li><strong>Declining Surrender Schedule:</strong> Typically starts between 7% and 10% in Year 1 and decreases by 1% each year until reaching 0%.</li>
+                <li><strong>Market Value Adjustment (MVA):</strong> An adjustment reflecting interest rate movements since contract inception, applied only to early excess withdrawals.</li>
+                <li><strong>IRS 10% Premature Distribution Penalty:</strong> The IRS assesses a 10% excise tax on taxable earnings withdrawn before age 59½, similar to traditional IRAs.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Consideraciones Fiscales" : "Tax Considerations"}</h2>
-              <p>${isEs ? "Triple interés compuesto por diferimiento fiscal, regla tributaria LIFO e intercambios 1035 libres de impuestos." : "Triple compounding via 100% tax deferral, LIFO taxation of non-qualified withdrawals, and IRS Section 1035 tax-free rollovers."}</p>
+              <h2>Tax Considerations</h2>
+              <p>Fixed annuities offer substantial tax advantages over taxable bank accounts and CDs:</p>
+              <ul>
+                <li><strong>100% Tax Deferral:</strong> No annual Form 1099-INT is issued while funds remain inside the contract, enabling triple compounding (interest on principal, interest on interest, and interest on tax savings).</li>
+                <li><strong>LIFO Tax Treatment:</strong> Non-qualified withdrawals are taxed on a Last-In, First-Out basis (accumulated earnings withdraw and are taxed first as ordinary income).</li>
+                <li><strong>IRS Section 1035 Exchanges:</strong> Allows you to roll over funds from an existing annuity or life insurance policy into a new annuity without triggering a taxable event.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Comparativa: Anualidad vs. Certificado de Depósito (CD)" : "Annuity vs CD"}</h2>
-              <p>${isEs ? "Diferencias clave en impuestos (diferimiento vs 1099 anual), liquidez anual del 10%, respaldo de FLAHIGA y opciones de pensión vitalicia." : "Key contrasts across tax deferral, annual liquidity, regulatory backing (FDIC vs Insurer Statutory Reserves & FLAHIGA), and lifetime income conversion."}</p>
+              <h2>Annuity vs CD</h2>
+              <p>Comparing Fixed Annuities (MYGAs) and Bank Certificates of Deposit:</p>
+              <ul>
+                <li><strong>Tax Treatment:</strong> Bank CD interest is taxed annually as ordinary income (Form 1099-INT). MYGAs compound 100% tax-deferred until withdrawn.</li>
+                <li><strong>Backing & Guarantees:</strong> Bank CDs are backed by the FDIC up to $250,000 per institution. Annuities are backed by insurer general account reserves and state guaranty associations (FLAHIGA in Florida).</li>
+                <li><strong>Annual Liquidity:</strong> Bank CDs generally charge 3 to 6 months of interest penalties for early withdrawal of any principal. Modern annuities allow 10% penalty-free withdrawals annually.</li>
+                <li><strong>Income Conversion:</strong> CDs cannot guarantee income for life; annuities offer guaranteed lifetime income riders.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "¿Quién Debería Considerar una Anualidad?" : "Who May Consider an Annuity?"}</h2>
-              <p>${isEs ? "Perfiles ideales: pre-jubilados de 50 a 65 años, ahorradores conservadores de CD, jubilados sin pensión corporativa y candidatos a rollovers de 401(k)/IRA." : "Ideal for pre-retirees ages 50-65, CD savers seeking tax relief, individuals lacking pensions, and 401(k)/IRA rollovers."}</p>
+              <h2>Who May Consider an Annuity?</h2>
+              <p>Fixed annuities are especially well-suited for:</p>
+              <ul>
+                <li><strong>Pre-Retirees (Ages 50-65):</strong> Seeking to protect their nest egg from market volatility as they near retirement.</li>
+                <li><strong>Conservative CD Savers:</strong> Looking for higher yields and relief from annual income taxes on interest.</li>
+                <li><strong>Retirees Without Corporate Pensions:</strong> Wanting to create a personal, guaranteed monthly pension paycheck for life.</li>
+                <li><strong>401(k) / IRA Rollover Candidates:</strong> Moving employer plan balances into safe, principal-protected vehicles.</li>
+              </ul>
             </section>
+
             <section>
-              <h2>${isEs ? "Consideraciones Importantes" : "Important Considerations"}</h2>
-              <p>${isEs ? "Evaluación de costos de cláusulas, horizontes de inversión a mediano y largo plazo, y calificaciones de solidez financiera de la aseguradora (A.M. Best)." : "Critical suitability factors, rider fees, medium-to-long term horizons, and insurer financial strength ratings."}</p>
+              <h2>Important Considerations</h2>
+              <p>Before purchasing an annuity, carefully review these suitability factors:</p>
+              <ul>
+                <li><strong>Time Horizon:</strong> Commit only funds you do not require for short-term emergency expenses.</li>
+                <li><strong>Insurer Financial Strength:</strong> Select carriers rated A- or higher by independent rating agencies like A.M. Best.</li>
+                <li><strong>Rider Fees:</strong> Optional income riders (GLWB) typically carry an annual fee (e.g., 0.95% to 1.25%) deducted from contract value.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>FAQ</h2>
+              <h3>What is the minimum deposit required to open a Florida fixed annuity?</h3>
+              <p>Most fixed and indexed annuities require a minimum initial deposit between $10,000 and $25,000, depending on the carrier and product.</p>
+
+              <h3>Can I fund an annuity with an existing traditional IRA or 401(k)?</h3>
+              <p>Yes. You can complete a direct, tax-free trustee-to-trustee rollover from an employer 401(k), 403(b), or traditional IRA into a qualified fixed annuity without taxes or penalties.</p>
+
+              <h3>What happens to my annuity balance when I pass away?</h3>
+              <p>Annuities feature a designated beneficiary designation that bypasses probate. Your named beneficiaries receive the remaining contract value directly without court delays.</p>
+            </section>
+
+            <section>
+              <h2>CTA</h2>
+              <p>Speak directly with independent licensed broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">(352) 225-8389</a> or request a personalized Florida annuity comparison with zero fees.</p>
             </section>
           </main>
         `;
@@ -1090,6 +1252,26 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "serviceType": "Permanent Life Insurance & Retirement Planning",
       "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
       "areaServed": { "@type": "State", "name": "Florida" },
+      "description": metadata.description
+    });
+  } else if (
+    cleanPath === "/locations/gainesville-fl" || 
+    cleanPath === "/es/locations/gainesville-fl" ||
+    cleanPath === "/gainesville-fl-insurance" ||
+    cleanPath === "/es/seguros-gainesville-fl"
+  ) {
+    graph.push({
+      "@type": "Service",
+      "name": isEs ? "Gainesville, FL Insurance Broker" : "Gainesville, FL Insurance Broker",
+      "serviceType": "Independent Insurance Brokerage",
+      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "areaServed": [
+        { "@type": "City", "name": "Gainesville" },
+        { "@type": "AdministrativeArea", "name": "Alachua County" },
+        { "@type": "City", "name": "Archer" },
+        { "@type": "Newberry", "name": "Newberry" },
+        { "@type": "City", "name": "High Springs" }
+      ],
       "description": metadata.description
     });
   }
