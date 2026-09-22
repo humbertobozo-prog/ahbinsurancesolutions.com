@@ -96,8 +96,8 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             category: 'final-expense',
-            q: '¿Cómo se determinan las primas de un seguro de Gastos Finales?',
-            a: 'Las primas exactas varían en función de múltiples factores individuales, incluyendo la edad al momento de la emisión, el sexo, el estado de salud, el uso de tabaco, el monto de cobertura seleccionado (por ejemplo, $10,000 o $20,000), las reglas de suscripción de la aseguradora y su estado o código postal.'
+            q: '¿Cuánto cuesta un seguro de Gastos Finales y cómo se determinan las primas?',
+            a: 'Las primas de Gastos Finales varían según la edad, historial de salud, consumo de tabaco, monto de cobertura, suscripción médica y la compañía aseguradora específica.'
         },
 
         // IUL & Retirement (6)
@@ -241,8 +241,8 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         },
         {
             category: 'final-expense',
-            q: 'How are final expense insurance premiums determined?',
-            a: 'Exact premiums depend on multiple individual factors, including issue age, biological sex, tobacco use, health history, face amount selected (e.g., $10,000 or $20,000), carrier underwriting guidelines, and your state or ZIP code.'
+            q: 'How much does final expense insurance cost, and how are premiums determined?',
+            a: 'Final Expense premiums vary based on age, health history, tobacco use, coverage amount, underwriting, and the specific insurance carrier.'
         },
 
         // IUL & Retirement (6)

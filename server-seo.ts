@@ -551,8 +551,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <dl>
             <dt>¿Qué es un plan Suplementario de Medicare (Medigap)?</dt>
             <dd>Es una póliza vendida por compañías privadas para cubrir los "vacíos" de costos del Medicare Original, como coseguros del 20% y copagos de hospital.</dd>
-            <dt>¿Cuál es el costo de una póliza de gastos finales?</dt>
-            <dd>El costo depende de la edad, sexo y salud general del solicitante. Generalmente es muy accesible, con planes desde $30 a $80 al mes.</dd>
+            <dt>¿Cuánto cuesta un seguro de Gastos Finales?</dt>
+            <dd>Las primas de Gastos Finales varían según la edad, historial de salud, consumo de tabaco, monto de cobertura, suscripción médica y la compañía aseguradora específica.</dd>
           </dl>
         </section>
       `;
@@ -568,7 +568,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dt>What is a Medicare Supplement Plan (Medigap)?</dt>
             <dd>Medigap is extra private health insurance that helps pay standard gaps in Original Medicare, like the 20% outpatient coinsurance and hospital deductibles.</dd>
             <dt>How much does Final Expense life insurance cost?</dt>
-            <dd>Rates depend on age, gender, and tobacco usage. Highly affordable rates average $30 to $80 a month for $10,000 to $15,000 of locked coverage.</dd>
+            <dd>Final Expense premiums vary based on age, health history, tobacco use, coverage amount, underwriting, and the specific insurance carrier.</dd>
           </dl>
         </section>
       `;
@@ -763,20 +763,70 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
         title = isEs
-          ? "Anualidades en Florida 2026 | Fijas, MYGA e Indexadas (FIA)"
-          : "Florida Fixed Annuities 2026 | MYGA & Fixed Indexed Annuities";
+          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance"
+          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
         description = isEs
-          ? "Anualidades en Florida: fijas, MYGA, indexadas (FIA) e inmediatas. Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
-          : "Florida annuities: Fixed, MYGA, Fixed Indexed (FIA) & Immediate. Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength.";
+          ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas de interés garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
+          : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
         bodyOutline = `
           <header>
-            <h1>${title}</h1>
+            <h1>${isEs ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos para la Jubilación" : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options"}</h1>
             <p>${description}</p>
           </header>
-          <section>
-            <h2>Fixed Annuities & Fixed Indexed Annuities in Florida</h2>
-            <p>Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract. Explore Multi-Year Guarantee Annuities (MYGA), Fixed Indexed Annuities (FIA) for growth potential with downside protection, Single Premium Immediate Annuities (SPIA) for lifetime income, and key differences between annuities and bank CDs.</p>
-          </section>
+          <main>
+            <section>
+              <h2>${isEs ? "¿Qué es una Anualidad Fija?" : "What Is a Fixed Annuity?"}</h2>
+              <p>${isEs ? "Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida en Florida diseñado para proteger el capital, acumular intereses con diferimiento fiscal del 100% y ofrecer opciones de ingresos de jubilación predecibles." : "A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company to safeguard principal, compound interest 100% tax-deferred, and establish guaranteed retirement income."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Anualidades Fijas Tradicionales" : "Fixed Annuities"}</h2>
+              <p>${isEs ? "Ofrecen tasas periódicas declaradas con un piso mínimo contractual garantizado para ahorradores conservadores." : "Traditional fixed declared-rate annuities offering steady compounding and a contractual minimum guaranteed floor."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "MYGA: Anualidad con Garantía Multianual" : "MYGA (Multi-Year Guarantee Annuity)"}</h2>
+              <p>${isEs ? "Bloquea una tasa de interés fija exacta por contrato durante plazos de 3, 5, 7 o 10 años sin fluctuaciones de mercado." : "Locks in an exact, contractually guaranteed fixed yield for committed multi-year terms of 3, 5, 7, or 10 years."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Anualidades Indexadas Fijas (FIA)" : "Fixed Indexed Annuities"}</h2>
+              <p>${isEs ? "Crecimiento indexado vinculado a índices de mercado con un piso contractual del 0% para prevenir pérdidas en caídas bursátiles." : "Index-linked interest potential with a contractual 0% floor against market declines. Not directly invested in the stock market."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "SPIA: Anualidad Inmediata de Prima Única" : "SPIA (Single Premium Immediate Annuity)"}</h2>
+              <p>${isEs ? "Convierte un depósito único en un flujo de ingresos garantizado que comienza dentro de 30 días a 12 meses." : "Converts a single lump sum into immediate guaranteed monthly payments starting within 30 days to 12 months."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Ingresos de por Vida (GLWB y Anuitización)" : "Lifetime Income"}</h2>
+              <p>${isEs ? "Protección contra el riesgo de longevidad mediante cheques mensuales garantizados de por vida a través de cláusulas GLWB." : "Longevity risk protection generating guaranteed monthly retirement paychecks for life through GLWB income riders."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Acreditación de Intereses" : "Interest Crediting"}</h2>
+              <p>${isEs ? "Estrategias de acreditación fija, topes (caps), tasas de participación y bloqueo anual de ganancias." : "Declared fixed yields, cap rates, participation rates, spreads, and the annual reset feature."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Liquidez y Retiros Libres de Penalización" : "Liquidity"}</h2>
+              <p>${isEs ? "Disposiciones de liquidez anual libre de penalidad del 10%, compatibilidad con RMD y cláusulas de salud." : "10% annual penalty-free withdrawal provisions, RMD waivers for qualified accounts, and health crisis waivers."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Cargos por Rescate y Reglas del IRS" : "Surrender Charges"}</h2>
+              <p>${isEs ? "Cronogramas decrecientes de rescate, ajuste de valor de mercado (MVA) y penalidad del 10% del IRS antes de los 59½ años." : "Declining surrender charge schedules, Market Value Adjustments (MVA), and the IRS 10% premature withdrawal penalty under age 59½."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Consideraciones Fiscales" : "Tax Considerations"}</h2>
+              <p>${isEs ? "Triple interés compuesto por diferimiento fiscal, regla tributaria LIFO e intercambios 1035 libres de impuestos." : "Triple compounding via 100% tax deferral, LIFO taxation of non-qualified withdrawals, and IRS Section 1035 tax-free rollovers."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Comparativa: Anualidad vs. Certificado de Depósito (CD)" : "Annuity vs CD"}</h2>
+              <p>${isEs ? "Diferencias clave en impuestos (diferimiento vs 1099 anual), liquidez anual del 10%, respaldo de FLAHIGA y opciones de pensión vitalicia." : "Key contrasts across tax deferral, annual liquidity, regulatory backing (FDIC vs Insurer Statutory Reserves & FLAHIGA), and lifetime income conversion."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "¿Quién Debería Considerar una Anualidad?" : "Who May Consider an Annuity?"}</h2>
+              <p>${isEs ? "Perfiles ideales: pre-jubilados de 50 a 65 años, ahorradores conservadores de CD, jubilados sin pensión corporativa y candidatos a rollovers de 401(k)/IRA." : "Ideal for pre-retirees ages 50-65, CD savers seeking tax relief, individuals lacking pensions, and 401(k)/IRA rollovers."}</p>
+            </section>
+            <section>
+              <h2>${isEs ? "Consideraciones Importantes" : "Important Considerations"}</h2>
+              <p>${isEs ? "Evaluación de costos de cláusulas, horizontes de inversión a mediano y largo plazo, y calificaciones de solidez financiera de la aseguradora (A.M. Best)." : "Critical suitability factors, rider fees, medium-to-long term horizons, and insurer financial strength ratings."}</p>
+            </section>
+          </main>
         `;
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {
         title = "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
