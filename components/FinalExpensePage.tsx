@@ -20,8 +20,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         : 'Final Expense & Burial Insurance in Florida 2026 | AHB Insurance';
 
     const description = isEs 
-        ? 'Guía completa de seguro de gastos finales en Florida. Coberturas de $5,000 a $35,000, tarifas fijas de por vida y opciones de emisión simplificada. Asesoría con Andrés Bozo (NPN 21228432).' 
-        : 'Complete Florida guide to Final Expense & Burial Insurance. $5,000 to $35,000 permanent coverage, locked rates, and simplified issue options with broker Andres Bozo (NPN 21228432).';
+        ? 'Guía completa de seguro de gastos finales en Florida. Coberturas de $5,000 a $35,000. Muchas pólizas ofrecen primas niveladas sujetas a términos del contrato. Asesoría con Andrés Bozo (NPN 21228432).' 
+        : 'Complete Florida guide to Final Expense & Burial Insurance. $5,000 to $35,000 permanent coverage. Many policies offer level premiums subject to contract terms, with simplified issue options available with broker Andres Bozo (NPN 21228432).';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -501,21 +501,21 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </div>
                     </section>
 
-                    {/* 8. PREMIUMS & PRICE LOCK GUARANTEE */}
+                    {/* 8. PREMIUMS & COST PREDICTABILITY */}
                     <section id="premiums" className="bg-light-gray p-6 md:p-8 rounded-2xl border border-gray-200">
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-3">
-                            {isEs ? 'Primas Mensuales Congeladas de por Vida' : 'Premiums Locked for Life: Cost Predictability'}
+                            {isEs ? 'Primas Niveladas y Previsibilidad de Costos' : 'Level Premiums & Cost Predictability'}
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
                             {isEs 
-                                ? 'La mayor ventaja de una póliza de Vida Entera (Whole Life) para gastos finales frente a seguros temporales o asociaciones de ayuda mutua es la certeza absoluta en su presupuesto:' 
-                                : 'The defining advantage of a permanent Whole Life final expense policy over term plans or fraternal associations is complete budget certainty:'}
+                                ? 'La ventaja de una póliza de Vida Entera (Whole Life) para gastos finales frente a seguros temporales es la estabilidad en su presupuesto:' 
+                                : 'The advantage of a permanent Whole Life final expense policy over term plans is budget stability:'}
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">0%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Aumentos por Edad' : 'Age Increases'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'En pólizas estándar de prima nivelada, las cuotas mensuales se fijan en su edad de emisión y generalmente no aumentan con la edad, sujetas a los términos del contrato.' : 'In standard level-premium policies, monthly rates are locked at issue age and generally do not increase as you age, subject to policy terms.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'En pólizas estándar, las cuotas mensuales se fijan en su edad de emisión y generalmente no aumentan con la edad, sujetas a los términos del contrato.' : 'In standard policies, monthly rates are locked at issue age and generally do not increase as you age, subject to policy terms.'}</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">0%</span>
@@ -525,7 +525,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">100%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Permanencia' : 'Lifetime Permanence'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'Cobertura de vida entera estructurada para ser permanente durante toda su vida, siempre y cuando se mantengan los pagos requeridos de primas y sujeta a las disposiciones del contrato.' : 'Whole life coverage is structured to remain in force throughout your lifetime, provided required premiums are paid and subject to policy contract provisions.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'Cobertura estructurada para ser permanente durante toda su vida, siempre y cuando se mantengan los pagos requeridos de primas y sujeta a las disposiciones del contrato.' : 'Whole life coverage is structured to remain in force throughout your lifetime, provided required premiums are paid and subject to policy contract provisions.'}</p>
                             </div>
                         </div>
                     </section>

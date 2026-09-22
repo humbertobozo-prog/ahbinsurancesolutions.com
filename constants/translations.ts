@@ -26,7 +26,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     hero: {
       heading: "Medicare Supplement Plans in Florida | Florida Medigap Quotes",
-      subheading: "At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare 80+ top carriers to find the perfect Medicare Supplement, Burial Insurance for Florida Seniors, or Indexed Universal Life (IUL) plan for your unique needs.",
+      subheading: "At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare available options from multiple insurance carriers to find the perfect plan for your unique needs. With Medigap, you can generally see any healthcare provider nationwide who accepts Medicare, subject to Medicare and Medigap rules. Our Final Expense options include permanent whole life policies from $5,000 to $35,000, including policies that may offer level premiums subject to contract terms. We also offer fixed and fixed indexed annuity strategies designed to provide contract-based interest-crediting and income options without directly investing premiums in the stock market.",
       cta: "Check 2026 Florida Eligibility ➔",
       trustText: "🔒 Licensed Professional | NPN: 21228432 | Florida Licensed Broker"
     },
