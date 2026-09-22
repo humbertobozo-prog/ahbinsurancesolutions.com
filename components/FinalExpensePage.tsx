@@ -449,19 +449,19 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                         {isEs ? 'Póliza de Emisión Garantizada' : 'Guaranteed Issue Policy'}
                                     </h3>
                                     <span className="bg-blue-700 text-white text-[10px] font-black uppercase px-2.5 py-1 rounded">
-                                        {isEs ? '100% Aceptación' : 'Zero Questions'}
+                                        {isEs ? '100% Aceptación' : 'Generally No Questions'}
                                     </span>
                                 </div>
                                 <p className="text-xs md:text-sm text-blue-900 leading-relaxed">
                                     {isEs 
-                                        ? 'Diseñada para adultos de 50 a 85 años con problemas de salud graves (cáncer activo, diálisis, insuficiencia cardíaca). No se formulan preguntas médicas ni se revisa historial.' 
-                                        : 'Designed for adults aged 50 to 85 with critical medical challenges (active cancer treatment, dialysis, CHF). No medical questions or history checks required.'}
+                                        ? 'Diseñada para adultos de 50 a 85 años con problemas de salud graves (cáncer activo, diálisis, insuficiencia cardíaca). Generalmente no requiere preguntas de salud ni revisión médica, aunque la disponibilidad del producto, las pautas de suscripción del asegurador y los períodos de espera por beneficios graduados pueden variar.' 
+                                        : 'Designed for adults aged 50 to 85 with critical medical challenges (active cancer treatment, dialysis, CHF). Generally requires no medical questions or history checks, though product availability, carrier underwriting rules, and graded benefit waiting periods vary.'}
                                 </p>
                                 <ul className="text-xs text-blue-900 space-y-1.5 pt-2">
-                                    <li>✓ {isEs ? 'Cero preguntas de salud' : 'Zero health questionnaire requirements'}</li>
-                                    <li>✓ {isEs ? 'Aprobación garantizada 100%' : '100% guaranteed approval acceptance'}</li>
+                                    <li>✓ {isEs ? 'Generalmente sin preguntas de salud' : 'Generally no health questions required'}</li>
+                                    <li>✓ {isEs ? 'Aprobación garantizada 100% (según elegibilidad)' : '100% guaranteed acceptance (subject to eligibility)'}</li>
                                     <li>✓ {isEs ? 'Sujeta a período de espera de 2 años' : 'Subject to a 2-year graded waiting period'}</li>
-                                    <li>✓ {isEs ? 'Primas ligeramente más altas' : 'Slightly higher premium structure'}</li>
+                                    <li>✓ {isEs ? 'Primas estructuradas por la aseguradora' : 'Carrier-defined premium structure'}</li>
                                 </ul>
                             </div>
                         </div>
@@ -515,17 +515,17 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">0%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Aumentos por Edad' : 'Age Increases'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'Su cuota mensual nunca subirá al cumplir 70, 80 o 90 años.' : 'Your monthly rate never rises as you reach 70, 80, or 90 years old.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'En pólizas estándar de prima nivelada, las cuotas mensuales se fijan en su edad de emisión y generalmente no aumentan con la edad, sujetas a los términos del contrato.' : 'In standard level-premium policies, monthly rates are locked at issue age and generally do not increase as you age, subject to policy terms.'}</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">0%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Cambios por Salud' : 'Health Deterioration'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'Si su salud cambia tras contratar, su póliza jamás podrá ser cancelada ni aumentada.' : 'New diagnoses after approval cannot alter your rate or cancel your plan.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'Una vez aprobada la póliza, cambios posteriores en su salud no alterarán su tarifa ni cancelarán su plan.' : 'New diagnoses after approval cannot alter your rate or cancel your plan.'}</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="text-xl font-black text-primary block mb-1">100%</span>
                                 <h4 className="font-bold text-gray-900 text-sm mb-1">{isEs ? 'Permanencia' : 'Lifetime Permanence'}</h4>
-                                <p className="text-xs text-gray-600">{isEs ? 'Cobertura permanente sujeta a los términos del contrato y pago continuo de primas.' : 'Coverage is structured to be permanent, subject to policy terms and continued payment of required premiums.'}</p>
+                                <p className="text-xs text-gray-600">{isEs ? 'Cobertura de vida entera estructurada para ser permanente durante toda su vida, siempre y cuando se mantengan los pagos requeridos de primas y sujeta a las disposiciones del contrato.' : 'Whole life coverage is structured to remain in force throughout your lifetime, provided required premiums are paid and subject to policy contract provisions.'}</p>
                             </div>
                         </div>
                     </section>

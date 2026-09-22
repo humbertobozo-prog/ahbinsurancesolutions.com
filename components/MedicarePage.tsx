@@ -369,8 +369,8 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                 </h3>
                                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                                     {isEs 
-                                        ? 'Planes administrados por aseguradoras privadas que reemplazan al Medicare Original. Ofrecen primas bajas pero restringen los médicos a redes de condados locales en Florida.' 
-                                        : 'Private managed-care plans replacing Original Medicare. Often feature low monthly premiums but restrict care to local Florida county networks with prior authorizations.'}
+                                        ? 'Planes administrados por aseguradoras privadas que reemplazan al Medicare Original. Ofrecen primas bajas y beneficios adicionales, operando bajo estructuras de red, copagos por servicio y reglas de autorización previa que varían según el plan, la aseguradora y el condado.' 
+                                        : 'Private managed-care plans replacing Original Medicare. Often feature low monthly premiums and bundled extras, operating under specific provider networks, service copays, and prior authorization rules that vary by plan design, carrier, and county.'}
                                 </p>
                                 <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Requiere mantener activa la Parte B' : 'Requires active Part B enrollment'}</span>
                             </div>
@@ -451,14 +451,14 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             {/* Medicare Advantage (Part C) Dedicated Card */}
                             <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <span className="bg-gray-800 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Medicare Advantage (Parte C)</span>
+                                     <span className="bg-gray-800 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">Medicare Advantage (Parte C)</span>
                                     <h3 className="text-lg font-bold text-primary mb-2">
                                         {isEs ? 'Medicare Advantage: Alternativa de Red Privada' : 'Medicare Advantage: Private Managed Care Alternative'}
                                     </h3>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                         {isEs 
-                                            ? 'Son planes administrados por aseguradoras privadas aprobadas por CMS que agrupan las Partes A, B y frecuentemente la Parte D (MAPD). Suelen ofrecer primas mensuales bajas o de $0 y beneficios adicionales (dental, visión, gimnasio), operando bajo redes locales específicas de condados en Florida (HMO o PPO), con topes anuales de bolsillo (MOOP), copagos por servicio y reglas de autorización previa según el plan.'
-                                            : 'Private managed-care plans approved by CMS bundling Parts A, B, and often Part D (MAPD). They often feature $0 or low monthly premiums and extra benefits (dental, vision, gym), operating under specific county networks in Florida (HMO or PPO) with annual out-of-pocket maximums (MOOP), service copays, and prior authorization rules depending on the plan design.'}
+                                            ? 'Son planes administrados por aseguradoras privadas aprobadas por CMS que agrupan las Partes A, B y frecuentemente la Parte D (MAPD). Suelen ofrecer primas mensuales bajas o de $0 y beneficios adicionales (dental, visión, gimnasio), operando bajo estructuras de red, topes anuales de bolsillo (MOOP), copagos por servicio y reglas de autorización previa que varían según el diseño del plan, la aseguradora y el condado.'
+                                            : 'Private managed-care plans approved by CMS bundling Parts A, B, and often Part D (MAPD). They often feature $0 or low monthly premiums and extra benefits (dental, vision, gym), operating under specific provider networks, annual out-of-pocket maximums (MOOP), service copays, and prior authorization rules that vary by plan design, carrier, and county.'}
                                     </p>
                                 </div>
                                 <span className="text-[11px] font-bold text-gray-500 block pt-3 border-t border-gray-200">
@@ -648,9 +648,9 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                 <tbody className="divide-y divide-gray-200 font-medium">
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Red de Médicos' : 'Doctor Network'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% EE.UU. Sin Red</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% EE.UU. Sin Red</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Red Local (HMO/PPO)</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold text-xs">{isEs ? 'Cualquier proveedor nacional que acepte Medicare' : 'Any provider nationwide accepting Medicare'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold text-xs">{isEs ? 'Cualquier proveedor nacional que acepte Medicare' : 'Any provider nationwide accepting Medicare'}</td>
+                                        <td className="p-3.5 text-amber-700 font-bold">{isEs ? 'Red del Plan (HMO/PPO)' : 'Plan Network (HMO/PPO)'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Referidos para Especialistas' : 'Specialist Referrals'}</td>

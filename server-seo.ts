@@ -428,16 +428,20 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Vida Universal Indexada (IUL)</span></p></nav>
         <header>
-          <h1>Seguro de Vida Universal Indexada (IUL) en Florida</h1>
+          <h1>Seguro de Vida Universal Indexada (IUL) y Jubilación en Florida</h1>
           <p>${description}</p>
         </header>
         <section>
-          <h2>¿Cómo funciona el componente de acreditación indexada con piso del 0%?</h2>
-          <p>El componente de acreditación indexada de una póliza IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del índice. Sin embargo, los costos del seguro, cargos administrativos de la póliza, préstamos y retiros afectan el valor en efectivo total.</p>
+          <h2>Piso Contractual del 0% en Acreditación Indexada (No Garantía Total de Cash Value)</h2>
+          <p>El piso del 0% aplica exclusivamente a la acreditación de la estrategia indexada (index-crediting floor), lo que significa que el índice no recibe rendimientos negativos ante caídas del mercado. Sin embargo, esto no garantiza el valor en efectivo total ni lo exime de la deducción continua de cargos administrativos y el Costo del Seguro (COI).</p>
         </section>
         <section>
-          <h2>Estrategias de Préstamos para el Retiro y Código IRS Sección 7702</h2>
-          <p>Los préstamos sobre la póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal federal potencialmente favorable cuando la póliza está estructurada adecuadamente, no es un Contrato de Dotación Modificada (MEC), se mantiene en vigor y se cumplen los requisitos fiscales aplicables. Si la póliza caduca con préstamos pendientes o es un MEC, pueden generarse consecuencias fiscales. Consulte siempre a un profesional tributario calificado sobre sus circunstancias particulares.</p>
+          <h2>Impacto de Préstamos y Retiros (Policy Loans & Withdrawals)</h2>
+          <p>Los préstamos y retiros sobre la póliza reducen el valor en efectivo y el beneficio por fallecimiento, acumulando intereses. Si la póliza caduca con préstamos pendientes que superan las primas netas pagadas (cost basis), el exceso se convierte inmediatamente en ingreso ordinario gravable.</p>
+        </section>
+        <section>
+          <h2>Tratamiento Fiscal bajo IRS Sección 7702 y Reglas MEC</h2>
+          <p>El tratamiento fiscal favorable (préstamos exentos de impuesto a la renta) depende estrictamente de que la póliza esté debidamente estructurada, no sea un Contrato de Dotación Modificada (MEC) bajo la prueba de 7 pagos del IRS, y se mantenga activa y en vigor durante toda la vida del asegurado. Consulte siempre a un CPA o asesor tributario certificado.</p>
         </section>
       `;
     } else {
@@ -744,8 +748,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
           : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage";
         description = isEs 
-          ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas congeladas para siempre. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
-          : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Many simplified-issue policies do not require a traditional medical exam.";
+          ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. En pólizas estándar, las tarifas se fijan a la edad de emisión. Muchas pólizas de emisión simplificada generalmente no requieren examen médico tradicional." 
+          : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Standard level-premium policies lock rates at issue age. Many simplified-issue policies generally do not require a traditional medical exam.";
         
         bodyOutline = `
           <header>
@@ -754,7 +758,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </header>
           <section>
             <h2>Funeral & Burial Planning Solutions</h2>
-            <p>Ensure burial and funeral cost safety for your loved ones with permanent cash benefit plans from $5,000 to $35,000 in Florida. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.</p>
+            <p>Ensure burial and funeral cost safety for your loved ones with permanent cash benefit plans from $5,000 to $35,000 in Florida. Many simplified-issue and guaranteed-issue policies generally do not require a traditional medical exam, although underwriting requirements, eligibility guidelines, and graded waiting periods vary by carrier and product.</p>
           </section>
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
