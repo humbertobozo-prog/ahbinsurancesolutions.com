@@ -68,16 +68,16 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                         : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Many simplified-issue policies do not require a traditional medical exam.",
                     heading: activeLang === 'es' ? "Seguro de Gastos Finales y Entierro en Florida" : "Burial & Final Expense Insurance in Florida",
                     subheading: activeLang === 'es' 
-                        ? "Garantice la tranquilidad de su familia y evite deudas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con cuotas fijas que jamás aumentan." 
-                        : "Ensure your family in Florida isn't burdened by $10,000+ funeral costs. Permanent whole life coverage with locked rates.",
+                        ? "Ayude a proteger a su familia de los costos de funeral y cremación ($7,000–$12,000+). Pólizas de vida entera permanentes con primas niveladas según su edad de emisión mientras se paguen las primas requeridas." 
+                        : "Help protect your family from $7,000–$12,000+ funeral and cremation costs. Permanent whole life coverage with locked rates based on your issue age as long as required premiums are paid.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Emisión Simplificada", desc: "Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, con evaluación ágil." },
-                        { title: "Pagos Fijos de Por Vida", desc: "Su mensualidad queda congelada para siempre y la póliza nunca vencerá." },
-                        { title: "Efectivo Directo y Libre de Impuestos", desc: "Sus beneficiarios reciben el dinero en efectivo en pocos días para cubrir funeral, cremación o deudas." }
+                        { title: "Emisión Simplificada", desc: "Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque la suscripción médica depende de la aseguradora." },
+                        { title: "Primas Niveladas de Por Vida", desc: "Sus primas quedan fijadas según su edad de emisión y no aumentan mientras la póliza se mantenga activa con sus pagos al día." },
+                        { title: "Beneficio por Fallecimiento Directo", desc: "Sus beneficiarios reciben el beneficio por fallecimiento según los términos de la póliza para cubrir gastos funerarios o deudas (generalmente con tratamiento fiscal favorable bajo el Código IRC §101(a))." }
                     ] : [
-                        { title: "Simplified Issue Options", desc: "Many simplified-issue policies do not require a traditional medical exam, subject to carrier underwriting." },
-                        { title: "Immediate Cash Payouts", desc: "Beneficiaries receive cash tax-free within days to handle burial, cremation, or medical bills." },
-                        { title: "Locked Monthly Rates", desc: "Your monthly premium will never increase, and your policy will never expire." }
+                        { title: "Simplified Issue Options", desc: "Many simplified-issue policies do not require a traditional medical exam, subject to carrier underwriting requirements." },
+                        { title: "Direct Death Benefit Payout", desc: "Beneficiaries receive death benefit funds according to policy provisions to handle burial, cremation, or debts (generally receiving favorable federal tax treatment under IRC §101(a))." },
+                        { title: "Locked Issue-Age Rates", desc: "Your premium is locked at your issue age and will not increase as long as required premiums are paid." }
                     ]
                 };
             case '/annuities-florida':

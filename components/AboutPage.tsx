@@ -144,12 +144,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             title: "Vida Universal Indexada (IUL) y Estrategias de Retiro",
-            desc: "Estructuración de pólizas con acumulación de valor en efectivo ligadas al índice S&P 500 con piso garantizado del 0% contra caídas bursátiles y estrategias de préstamos con ventajas fiscales según el Código IRS 7702.",
+            desc: "Estructuración de pólizas con acumulación de valor en efectivo ligadas a índices como el S&P 500 con piso contractual del 0% en la acreditación indexada y estrategias de préstamos con ventajas fiscales según el Código IRS 7702.",
             badge: "IUL y Retiro"
         },
         {
             title: "Anualidades Fijas Indexadas (FIA)",
-            desc: "Protección total del capital de jubilación contra volatilidad del mercado, garantizando flujos de ingresos vitalicios y crecimiento con impuestos diferidos para personas en etapa de retiro o pre-retiro.",
+            desc: "Protección del capital principal de jubilación frente a caídas del mercado, con opciones de flujos de ingresos vitalicios garantizados contractualmente y crecimiento con impuestos diferidos.",
             badge: "Anualidades"
         },
         {
@@ -170,12 +170,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             title: "Indexed Universal Life (IUL) & Retirement Strategies",
-            desc: "Designing maximum-funded, anti-MEC cash value contracts tied to the S&P 500 with a 0% downside market loss floor and tax-advantaged policy loan retirement strategies under Internal Revenue Code Section 7702.",
+            desc: "Designing maximum-funded, anti-MEC cash value contracts tied to the S&P 500 with a contractual 0% index-crediting floor and tax-advantaged policy loan retirement strategies under Internal Revenue Code Section 7702.",
             badge: "IUL & Wealth"
         },
         {
             title: "Fixed Indexed Annuities (FIA)",
-            desc: "Complete protection of accumulated retirement savings against stock market crashes, paired with contractual guaranteed lifetime income streams and tax-deferred compound growth.",
+            desc: "Principal protection for accumulated retirement savings against stock market downturns, paired with contractual guaranteed lifetime income streams and tax-deferred compound growth.",
             badge: "Annuities"
         },
         {

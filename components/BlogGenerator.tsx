@@ -195,39 +195,39 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
     if (isIUL) {
       return {
         title: isLangEs
-          ? 'Planificación de Jubilación con IUL en Florida: Riqueza e Ingresos Libres de Impuestos'
-          : 'Retirement Planning with IULs in Florida: Accumulate Tax-Free Wealth for Life',
+          ? 'Planificación de Jubilación con IUL en Florida: Estrategias con Ventajas Fiscales'
+          : 'Retirement Planning with IULs in Florida: Tax-Advantaged Growth Strategies',
         metaDescription: isLangEs
-          ? 'Descubra cómo las Pólizas de Vida Universal Indizadas (IUL) le permiten acumular capital con protección de mercado y retiro libre de impuestos en Florida.'
-          : 'Learn how Indexed Universal Life (IUL) insurance offers tax-free growth, downside protection, and tax-exempt retirement income in Florida.',
+          ? 'Descubra cómo las Pólizas de Vida Universal Indexada (IUL) le permiten acumular capital con piso contractual del 0% en la acreditación y préstamos bajo IRC 7702 en Florida.'
+          : 'Learn how Indexed Universal Life (IUL) insurance offers index-linked accumulation, a contractual 0% floor, and potential tax-advantaged retirement loans under IRC 7702 in Florida.',
         slug: isLangEs ? 'planificacion-jubilacion-iul-florida' : 'retirement-planning-iul-florida',
         readTime: '9 min read',
         category: 'IUL Retirement Florida',
         summary: isLangEs
-          ? 'Resumen Ejecutivo: Una póliza IUL (Indexed Universal Life) combina protección de seguro de vida con una cuenta de acumulación de efectivo vinculada al rendimiento de índices bursátiles (como el S&P 500) garantizando un piso del 0% contra pérdidas de mercado.'
-          : 'Executive Summary: An Indexed Universal Life (IUL) policy provides permanent life insurance protection alongside a cash-value accumulation account tied to market indexes (like S&P 500) featuring a 0% floor against market losses.',
-        keywords: ['IUL Florida', 'Indexed Universal Life', 'Tax-Free Retirement Income', 'S&P 500 Index Insurance', 'Andres Bozo NPN 21228432', 'Florida Estate Wealth'],
+          ? 'Resumen Ejecutivo: Una póliza IUL (Indexed Universal Life) combina protección de seguro de vida con una cuenta de acumulación de efectivo vinculada al rendimiento de índices bursátiles (como el S&P 500) con un piso contractual del 0% en la acreditación indexada (los costos internos del seguro siguen aplicando).'
+          : 'Executive Summary: An Indexed Universal Life (IUL) policy provides permanent life insurance protection alongside a cash-value accumulation account tied to market indexes (like S&P 500) featuring a contractual 0% floor on index crediting (internal policy charges and cost of insurance still apply).',
+        keywords: ['IUL Florida', 'Indexed Universal Life', 'Tax-Advantaged Retirement', 'S&P 500 Index Insurance', 'Andres Bozo NPN 21228432', 'Florida Estate Wealth'],
         tableOfContents: isLangEs
-          ? ['1. ¿Qué es un IUL y Cómo Funciona en Florida?', '2. Ventajas Fiscales: Código IRS 7702', '3. La Regla del Piso del 0%: Crecimiento sin Riesgo de Pérdida', '4. IUL vs 401(k) / IRA Tradicional']
-          : ['1. What is an IUL and How Does it Work in Florida?', '2. Tax Benefits under IRS Code Section 7702', '3. The 0% Floor Rule: Growth Without Market Risk', '4. Comparing IUL vs 401(k) / Traditional IRA'],
+          ? ['1. ¿Qué es un IUL y Cómo Funciona en Florida?', '2. Ventajas Fiscales: Código IRS 7702', '3. Piso Contractual del 0% en la Acreditación Indexada', '4. IUL vs 401(k) / IRA Tradicional']
+          : ['1. What is an IUL and How Does it Work in Florida?', '2. Tax Benefits under IRS Code Section 7702', '3. Contractual 0% Floor on Index Crediting', '4. Comparing IUL vs 401(k) / Traditional IRA'],
         sections: [
           {
             heading: isLangEs ? '1. ¿Qué es un IUL y Cómo Funciona en Florida?' : '1. What is an IUL and How Does it Work in Florida?',
-            subheading: isLangEs ? 'Doble Propósito: Protección y Riqueza' : 'Dual Purpose: Family Protection & Wealth Building',
+            subheading: isLangEs ? 'Doble Propósito: Protección y Acumulación' : 'Dual Purpose: Family Protection & Wealth Accumulation',
             content: isLangEs
-              ? 'El Seguro de Vida Universal Indizado (IUL) es una herramienta financiera avanzada aprobada en Florida. Permite a las familias destinar prima a una cobertura de beneficio por fallecimiento mientras acumulan valor en efectivo (*cash value*) libre de impuestos.'
-              : 'Indexed Universal Life (IUL) is an advanced financial strategy designed for long-term growth and protection. It allows individuals to secure permanent death benefit protection while accumulating tax-advantaged cash value.',
+              ? 'El Seguro de Vida Universal Indexado (IUL) es una herramienta financiera permanente aprobada en Florida. Permite a las familias destinar prima a una cobertura de beneficio por fallecimiento mientras acumulan valor en efectivo (*cash value*) con ventajas fiscales bajo el Código IRS 7702.'
+              : 'Indexed Universal Life (IUL) is an advanced financial strategy designed for long-term growth and protection. It allows individuals to secure permanent death benefit protection while accumulating tax-advantaged cash value under IRS Section 7702.',
             calloutBox: isLangEs
-              ? 'Asesoría de Andres Bozo (NPN 21228432): "La clave de una IUL exitosa radica en la estructuración adecuada desde el día uno. Maximizamos el valor en efectivo manteniendo el beneficio por fallecimiento en el mínimo permitido por el IRS para acelerar su patrimonio."'
-              : 'Insight from Broker Andres Bozo (NPN 21228432): "The key to a successful IUL strategy lies in proper design. We structure the policy to maximize cash accumulation while minimizing insurance costs to boost your compound interest growth."',
+              ? 'Asesoría de Andres Bozo (NPN 21228432): "La clave de una IUL exitosa radica en la estructuración adecuada desde el día uno. Maximizamos el valor en efectivo manteniendo el beneficio por fallecimiento en el mínimo permitido por el IRS para acelerar su patrimonio sin caer en estatus MEC."'
+              : 'Insight from Broker Andres Bozo (NPN 21228432): "The key to a successful IUL strategy lies in proper design. We structure the policy to maximize cash accumulation while minimizing insurance costs to boost compound interest growth without triggering MEC status."',
           },
         ],
         faqList: [
           {
-            question: isLangEs ? '¿Puedo perder mi dinero si la bolsa de valores cae?' : 'Can I lose my money if the stock market crashes?',
+            question: isLangEs ? '¿Puedo perder valor en efectivo si el índice de la bolsa cae?' : 'Can I lose cash value if the stock market index drops?',
             answer: isLangEs
-              ? 'No. Su valor en efectivo está protegido por la garantía de piso del 0%. Si el índice pierde un 20%, su cuenta simplemente acredita 0% ese año.'
-              : 'No. Your cash value is safeguarded by a guaranteed 0% floor. If the index drops 20%, your account simply credits 0% for that period without losing principal.',
+              ? 'El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI) y cargos administrativos se continúan deduciendo del valor en efectivo.'
+              : 'The index-crediting component features a contractual 0% floor, meaning the policy is not credited with negative index returns during market downturns. However, internal policy charges, cost of insurance (COI), and administrative fees continue to apply.',
           },
         ],
         authorBio: 'Andres H. Bozo, Licensed Insurance Broker NPN 21228432.',
@@ -236,7 +236,7 @@ export const BlogGenerator: React.FC<BlogGeneratorProps> = ({ language, onOpenQu
           wordCount: 1510,
           readabilityGrade: '9th Grade',
           topicalCoveragePercent: 97,
-          keywordDensityNote: 'Optimal keyword distribution for tax-free retirement keywords in Florida.',
+          keywordDensityNote: 'Optimal keyword distribution for tax-advantaged retirement keywords in Florida.',
         },
       };
     }

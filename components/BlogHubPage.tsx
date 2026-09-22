@@ -211,7 +211,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
 
     const description = isEs 
         ? 'Artículos educativos, guías de inscripción abierta de Medicare, seguros de gastos finales e IUL por el broker licenciado Andrés H. Bozo.' 
-        : 'Educational guides on Florida Medicare enrollment, burial insurance, and tax-free IUL retirement by licensed broker Andres H. Bozo.';
+        : 'Educational guides on Florida Medicare enrollment, burial insurance, and tax-advantaged IUL retirement planning by licensed broker Andres H. Bozo.';
 
     const filteredPosts = BLOG_POSTS.filter(post => {
         const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
@@ -274,7 +274,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                     <p className="text-gray-200 text-sm md:text-base font-medium mb-6">
                         {isEs 
                             ? 'Guías detalladas para ayudar a la comunidad de Florida a tomar decisiones informadas sobre Medicare, gastos finales e IUL.' 
-                            : 'In-depth guides designed to help Florida retirees and families navigate Medicare, burial insurance, and tax-free wealth planning.'}
+                            : 'In-depth guides designed to help Florida retirees and families navigate Medicare, burial insurance, and tax-advantaged retirement planning.'}
                     </p>
                     <div>
                         <a 

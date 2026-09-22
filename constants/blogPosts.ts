@@ -228,8 +228,8 @@ An **Indexed Universal Life (IUL) policy** offers an alternative supplemental pl
 ### How Does an IUL Policy Work?
 
 1. **Market Index Linkage:** Your cash value crediting is tied to an underlying benchmark like the S&P 500. When the index rises over a measurement period, interest is credited up to an agreed cap (typically 8%–11%) or via participation rates.
-2. **0% Downside Floor:** If the stock market drops 20% or 30%, **your cash value does NOT suffer negative market interest**. You are credited 0% for that cycle, shielding prior gains from market crashes.
-3. **Tax-Advantaged Distributions (Cost Basis & Policy Loans):** You can access capital first via tax-free withdrawals up to your cost basis (cumulative premiums paid), and subsequently through collateralized policy loans without triggering immediate income tax—provided the policy is maintained properly.
+2. **Contractual 0% Index Floor:** If the underlying stock market index drops 20% or 30%, **your policy strategy is NOT credited with a negative index return**. You are credited 0% for that measurement cycle, protecting credited gains from negative index returns (internal policy costs and charges still apply).
+3. **Tax-Advantaged Distributions (Cost Basis & Policy Loans):** You can access capital first via withdrawals up to your cost basis (cumulative premiums paid), and subsequently through collateralized policy loans without triggering immediate income tax—provided the policy is maintained properly and is not a MEC.
 4. **Living Benefits:** Accelerated death benefit riders allow policyholders to advance funds to cover qualified critical, chronic, or terminal medical conditions.
 
 ---
@@ -252,10 +252,10 @@ Consumers must understand the following essential mechanics:
 
 | Financial Dimension | Traditional 401(k) | Indexed Universal Life (IUL) |
 |---|---|---|
-| Market Downside Protection | ❌ None (Full equity volatility) | ✅ 0% Guaranteed Downside Floor |
-| Taxation on Retirement Cash Flow | ❌ 100% Taxed as Ordinary Income | ✅ Tax-Free Withdrawals to Basis & Policy Loans (Non-MEC, while in force)* |
+| Market Downside Protection | ❌ None (Full equity volatility) | ✅ Contractual 0% Index Floor (charges still apply)* |
+| Taxation on Retirement Cash Flow | ❌ 100% Taxed as Ordinary Income | ✅ Withdrawals to Basis & Policy Loans without immediate tax (Non-MEC, while in force)* |
 | Early Access Penalty (<59½) | ❌ 10% IRS Penalty (exceptions apply) | ✅ No 10% IRS Age Penalty on non-MEC loans* |
-| Death Benefit Protection | ❌ Taxable account balance only | ✅ Income-Tax-Free Life Insurance Benefit |
+| Death Benefit Protection | ❌ Taxable account balance only | ✅ Life Insurance Death Benefit (IRC §101(a))* |
 | Living Medical Benefits | ❌ None | ✅ Chronic, Critical & Terminal Illness Riders |
 
 *Important compliance note: Policy loans reduce cash surrender value and death benefit, and accrue interest. To maintain tax advantages, the policy must remain active and in force throughout the insured's life. If a policy lapses with outstanding loans exceeding cost basis, the excess is subject to ordinary income taxation.*
@@ -272,8 +272,8 @@ Una póliza de **Vida Universal Indexada (IUL)** ofrece una alternativa compleme
 ### ¿Cómo Funciona una Póliza IUL?
 
 1. **Rendimiento Ligado a Índices Bursátiles:** Su valor en efectivo genera intereses según el desempeño de un índice de referencia (como el S&P 500), hasta un tope contractual ("Cap", típicamente del 8% al 11%) o mediante tasas de participación.
-2. **Piso del 0% de Protección Garantizada:** Si el mercado de valores cae un 20% o 30%, **su capital no sufre pérdidas por fluctuación bursátil**. Se le acredita un 0% para ese ciclo, preservando las ganancias previas.
-3. **Distribuciones con Ventajas Fiscales (Base de Costo y Préstamos):** Puede acceder a capital retirando primero hasta el límite de las primas pagadas (base de costo libre de impuestos) y posteriormente mediante préstamos colateralizados sobre la póliza sin generar impuesto sobre la renta inmediato, siempre que la póliza se mantenga en vigor.
+2. **Piso Contractual del 0% en Acreditación:** Si el índice bursátil de referencia cae un 20% o 30%, **a la estrategia indexada no se le acredita un rendimiento negativo**. Se le acredita un 0% para ese ciclo de medición (aunque los cargos administrativos y el costo del seguro se continúan deduciendo del valor en efectivo).
+3. **Distribuciones con Ventajas Fiscales (Base de Costo y Préstamos):** Puede acceder a capital retirando primero hasta el límite de las primas pagadas (base de costo libre de impuestos) y posteriormente mediante préstamos colateralizados sobre la póliza sin generar impuesto sobre la renta inmediato, siempre que la póliza se mantenga en vigor y no sea un MEC.
 4. **Beneficios en Vida (Living Benefits):** Permite adelantar parte del beneficio por fallecimiento en vida si el asegurado califica por enfermedad crónica, crítica o terminal.
 
 ---
@@ -296,10 +296,10 @@ Todo consumidor responsable debe comprender los siguientes riesgos y reglas oper
 
 | Criterio Financiero | 401(k) Tradicional | Vida Universal Indexada (IUL) |
 |---|---|---|
-| Protección contra Caídas Bursátiles | ❌ Ninguna (Volatilidad total de mercado) | ✅ Garantía de Piso del 0% (Sin Pérdida) |
-| Tributación de Retiros / Flujo de Retiro | ❌ 100% Tributa como Ingreso Ordinario | ✅ Retiros hasta la base y préstamos exentos de impuesto sobre la renta (Póliza no-MEC en vigor)* |
+| Protección contra Caídas Bursátiles | ❌ Ninguna (Volatilidad total de mercado) | ✅ Piso Contractual del 0% en Acreditación (cargos aplican)* |
+| Tributación de Retiros / Flujo de Retiro | ❌ 100% Tributa como Ingreso Ordinario | ✅ Retiros hasta la base y préstamos sin impuesto inmediato (Póliza no-MEC en vigor)* |
 | Penalización por Retiro Anticipado (<59½) | ❌ 10% Penalidad del IRS (salvo excepción) | ✅ Sin penalidad por edad del 10% en préstamos no-MEC* |
-| Beneficio por Fallecimiento para Herederos | ❌ Saldo de cuenta gravable | ✅ Beneficio de Seguro de Vida Exento de Impuestos |
+| Beneficio por Fallecimiento para Herederos | ❌ Saldo de cuenta gravable | ✅ Beneficio de Seguro de Vida (IRC §101(a))* |
 | Cobertura por Enfermedades Graves | ❌ Ninguna | ✅ Beneficios en Vida Incluidos |
 
 *Nota de compliance y legal: Los préstamos sobre la póliza reducen el valor neto en efectivo y el beneficio por fallecimiento, y acumulan intereses. Para mantener los beneficios fiscales, la póliza debe mantenerse activa durante toda la vida del asegurado. Si la póliza caduca con préstamos pendientes superiores a la base de primas pagadas, el saldo restante tributará como ingreso ordinario.*

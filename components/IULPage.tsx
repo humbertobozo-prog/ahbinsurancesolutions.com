@@ -131,7 +131,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": isEs ? "Crecimiento del Valor en Efectivo Indexado (Piso del 0% contra Pérdidas)" : "Indexed Cash Value Growth (0% Market Downside Protection)"
+                        "name": isEs ? "Crecimiento de Valor en Efectivo Indexado (Piso Contractual del 0% en Acreditación)" : "Indexed Cash Value Growth (Contractual 0% Index Crediting Floor)"
                     }
                 },
                 {
@@ -178,7 +178,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": isEs ? "IUL y Jubilación" : "IUL Tax-Free Retirement",
+                "name": isEs ? "Vida Universal Indexada (IUL)" : "Indexed Universal Life (IUL)",
                 "item": canonical
             }
         ]
@@ -529,12 +529,12 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                             {isEs ? 'Protección en Vida sin Costo Adicional' : 'Accelerated Living Benefits Included'}
                         </span>
                         <h2 className="text-2xl font-black font-heading text-primary">
-                            {isEs ? 'Beneficios en Vida: Use su Beneficio por Fallecimiento Mientras Vive' : 'Living Benefits: Access Your Policy Benefit While Living'}
+                            {isEs ? 'Beneficios en Vida: Acceda a su Beneficio de Póliza Mientras Vive' : 'Living Benefits: Access Your Policy Benefit While Living'}
                         </h2>
                         <p className="text-sm text-gray-700 leading-relaxed">
                             {isEs 
-                                ? 'Las pólizas modernas de IUL en Florida no solo pagan cuando usted fallece. Si sufre una condición médica grave, puede acelerar entre el 60% y el 90% del beneficio por fallecimiento directamente a su cuenta bancaria para cubrir costos médicos o personales:'
-                                : 'Modern Florida IUL policies offer living benefit riders that allow you to accelerate 60% to 90% of your tax-free death benefit while still living if diagnosed with:'}
+                                ? 'Las pólizas modernas de IUL en Florida permiten incorporar cláusulas de beneficios acelerados en vida que le permiten adelantar una parte (típicamente del 60% al 90% según las pautas de la aseguradora) de su beneficio por fallecimiento si es diagnosticado con una condición cubierta:'
+                                : 'Modern Florida IUL policies offer accelerated death benefit riders that allow you to advance a portion (typically 60% to 90% subject to carrier guidelines) of your policy death benefit while still living if diagnosed with a qualifying condition:'}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
                             <div className="bg-white p-4 rounded-xl border border-amber-200">
