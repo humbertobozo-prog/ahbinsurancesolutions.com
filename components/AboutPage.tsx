@@ -27,8 +27,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
     const content = translations[language];
 
     // Local image paths (exclusive new portrait for About page)
-    const imageSrc = "/andresbozo-portrait-new.jpg";
-    const imageSm = "/andresbozo-portrait-new.jpg";
+    const imageSrc = "/andrebozoofi.webp";
+    const imageSm = "/andresbozoofi-sm.webp";
 
     const personSchema = {
         "@context": "https://schema.org",
