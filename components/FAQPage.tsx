@@ -170,7 +170,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
             </div>
 
             {/* FAQs Accordion Section */}
-            <section className="py-12 md:py-16 container mx-auto px-4 md:px-6 max-w-4xl">
+            <section className="py-12 md:py-16 container mx-auto px-4 md:px-6 max-w-4xl min-h-[600px]">
                 <div className="mb-6 flex items-center justify-between text-xs text-gray-500 font-semibold">
                     <span>
                         {isEs 
