@@ -117,11 +117,11 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center h-full">
                 <a 
                     href={homePath} 
-                    aria-label="AHB Insurance Solutions Home"
+                    aria-label="AHB Insurance Solutions"
                     onClick={(e) => navigateTo(e, homePath)}
                     className="flex-shrink-0 focus-visible:ring-2 focus-visible:ring-accent outline-none rounded-lg p-1"
                 >
-                    <Logo variant="light" />
+                    <Logo variant="light" aria-hidden="true" />
                 </a>
 
                 {/* Desktop Navigation */}
@@ -156,9 +156,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     <a 
                         href="tel:+13522258389" 
                         className="hidden lg:flex items-center gap-1.5 bg-emerald-700 hover:bg-emerald-600 text-white px-3.5 py-2 rounded-xl font-black text-xs transition-all shadow-md ml-1"
-                        aria-label={isEs ? "Llamar al broker Andrés Bozo" : "Call broker Andres Bozo"}
+                        aria-label={isEs ? "+1 (352) 225-8389 - Llamar a Andrés Bozo" : "+1 (352) 225-8389 - Call broker Andres Bozo"}
                     >
-                        <svg className="w-3.5 h-3.5 fill-current text-accent" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" className="w-3.5 h-3.5 fill-current text-accent" viewBox="0 0 24 24">
                             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                         </svg>
                         <span>+1 (352) 225-8389</span>
@@ -196,9 +196,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     <a 
                         href="tel:+13522258389" 
                         className="w-12 h-12 flex items-center justify-center text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none rounded-lg"
-                        aria-label="Call Andres Bozo"
+                        aria-label={isEs ? "Llamar a Andrés Bozo (+1 352-225-8389)" : "Call Andres Bozo (+1 352-225-8389)"}
                     >
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                         </svg>
                     </a>

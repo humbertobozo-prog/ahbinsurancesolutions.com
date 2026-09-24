@@ -122,14 +122,14 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content }) => {
 
                     <button 
                         onClick={prevSlide}
-                        className="absolute top-1/2 -left-4 md:-left-8 lg:-left-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-white transition-all duration-300 z-20 hidden md:block active:scale-90"
+                        className="absolute top-1/2 -left-4 md:-left-8 lg:-left-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-primary transition-all duration-300 z-20 hidden md:block active:scale-90"
                         aria-label="Previous testimonial"
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
                     <button 
                         onClick={nextSlide}
-                        className="absolute top-1/2 -right-4 md:-right-8 lg:-right-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-white transition-all duration-300 z-20 hidden md:block active:scale-90"
+                        className="absolute top-1/2 -right-4 md:-right-8 lg:-right-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-primary transition-all duration-300 z-20 hidden md:block active:scale-90"
                         aria-label="Next testimonial"
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path></svg>

@@ -250,7 +250,7 @@ export const translations: Record<Language, TranslationContent> = {
         cmsDisclaimer: "Medicare Disclaimer: We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options."
     },
     whatsappButton: {
-        ariaLabel: "Chat on WhatsApp"
+        ariaLabel: "Talk With Andres on WhatsApp"
     },
     tapToCallButton: {
         label: "Talk With Andres: +1 (352) 225-8389",
@@ -506,7 +506,7 @@ export const translations: Record<Language, TranslationContent> = {
         cmsDisclaimer: "Aviso Legal de Medicare: No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con Medicare.gov, al 1-800-MEDICARE o con el Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones."
     },
     whatsappButton: {
-        ariaLabel: "Chat por WhatsApp"
+        ariaLabel: "Hablar con Andrés por WhatsApp"
     },
     tapToCallButton: {
         label: "Hablar con Andrés: +1 (352) 225-8389",

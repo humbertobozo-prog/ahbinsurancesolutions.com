@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
                     <div className="lg:col-span-4">
-                        <Logo variant="light" className="mb-4" />
+                        <Logo variant="light" className="mb-4" aria-hidden="true" />
                         <p className="text-gray-200 mb-4 leading-relaxed">{content.description}</p>
                         
                         <div className="group relative border-t border-white/20 pt-2 inline-block focus-within:ring-2 focus-within:ring-accent rounded p-1 outline-none" tabIndex={0}>
