@@ -29,15 +29,11 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            if (id.includes('@emailjs')) {
-              return 'vendor-emailjs';
-            }
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('react') || id.includes('react-dom')) {
+            // Put React and core libraries in vendor-react
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'vendor-react';
             }
+            // Put large UI components and other libs in vendor-utils
             return 'vendor-utils';
           }
         }
