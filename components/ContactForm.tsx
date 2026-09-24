@@ -204,6 +204,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         setYearValidation(validateBirthYear('', isSpanish));
     };
 
+    const handleFormSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (currentStep === 1) {
+            nextStep();
+        } else if (currentStep === 3) {
+            handleSubmit(e);
+        }
+    };
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (formData.fax_number !== '') return; 
@@ -367,7 +376,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                         </div>
                     </div>
                     
-                    <div className="p-5 md:p-8 min-h-[460px] flex flex-col justify-between">
+                    <form 
+                        onSubmit={handleFormSubmit}
+                        // @ts-expect-error WebMCP declarative attributes
+                        toolname="floridaInsuranceEligibilityQuote"
+                        tooldescription="Compare Florida Medicare, Medigap, Final Expense burial, and IUL insurance options with licensed broker Andres H. Bozo"
+                        className="p-5 md:p-8 min-h-[460px] flex flex-col justify-between"
+                    >
                         <div className="flex justify-between items-center mb-6 bg-gray-50 p-3 rounded-xl border border-gray-100">
                             <span className="text-xs md:text-sm font-black text-primary uppercase tracking-[0.2em] flex items-center gap-1.5">
                                 <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse inline-block"></span>
@@ -419,6 +434,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                                 maxLength={5}
                                                 name="zipCode" 
                                                 autoComplete="postal-code"
+                                                // @ts-expect-error WebMCP parameter description
+                                                toolparamdescription="5-digit Florida ZIP code, e.g. 32607"
                                                 aria-describedby={formData.zipCode.length > 0 ? "zip-feedback" : undefined}
                                                 aria-invalid={touched.zipCode ? !zipValidation.isValid : undefined}
                                                 value={formData.zipCode} 
@@ -516,6 +533,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                                 maxLength={4}
                                                 name="birthYear" 
                                                 autoComplete="bday-year"
+                                                // @ts-expect-error WebMCP parameter description
+                                                toolparamdescription="4-digit birth year of applicant, e.g. 1958"
                                                 aria-describedby={formData.birthYear.length >= 4 ? "birth-year-feedback" : undefined}
                                                 aria-invalid={touched.birthYear ? !yearValidation.isValid : undefined}
                                                 value={formData.birthYear} 
@@ -602,15 +621,15 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                     </div>
                                     <p className="text-xs text-gray-500 font-medium animate-pulse">
                                         {isSpanish 
-                                            ? 'Comparando más de 80 aseguradoras líderes en su condado...' 
-                                            : 'Querying 80+ top-rated carriers in your Florida area...'}
+                                            ? 'Comparando múltiples aseguradoras líderes en su condado...' 
+                                            : 'Querying top-rated carriers in your Florida area...'}
                                     </p>
                                 </div>
                             )}
 
                             {/* STEP 3: LEAD CAPTURE FORM */}
                             {currentStep === 3 && (
-                                <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4 animate-fade-in-up">
+                                <div className="max-w-xl mx-auto space-y-4 animate-fade-in-up">
                                     <div className="text-center mb-4">
                                         <div className="inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-black px-3 py-1 rounded-full mb-2 border border-emerald-300">
                                             <span>✓</span>
@@ -637,6 +656,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                             type="text" 
                                             name="name" 
                                             autoComplete="name" 
+                                            // @ts-expect-error WebMCP parameter description
+                                            toolparamdescription="Applicant full legal name"
                                             value={formData.name} 
                                             onChange={handleInputChange} 
                                             onBlur={handleInputBlur}
@@ -656,6 +677,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                                 type="tel" 
                                                 name="phone" 
                                                 autoComplete="tel" 
+                                                // @ts-expect-error WebMCP parameter description
+                                                toolparamdescription="Applicant 10-digit telephone number"
                                                 placeholder="(352) 225-8389" 
                                                 value={formData.phone} 
                                                 onChange={handleInputChange} 
@@ -673,6 +696,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                                 type="email" 
                                                 name="email" 
                                                 autoComplete="email" 
+                                                // @ts-expect-error WebMCP parameter description
+                                                toolparamdescription="Applicant email address for quote delivery"
                                                 placeholder="ejemplo@email.com"
                                                 value={formData.email} 
                                                 onChange={handleInputChange} 
@@ -724,10 +749,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                             <span className="text-[10px] bg-accent/30 text-primary px-1.5 py-0.5 rounded font-bold">FL BROKER</span>
                                         </a>
                                     </div>
-                                </form>
+                                </div>
                             )}
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>

@@ -704,32 +704,32 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
       <section>
         <h2>Medicare Gainesville: Cobertura y Suplementos Medigap en el Condado de Alachua</h2>
-        <p>Gainesville es el epicentro médico del norte de Florida gracias al reconocido sistema hospitalario UF Health Shands Hospital y al HCA Florida North Florida Hospital. Los residentes del Condado de Alachua que dependen de Medicare Original a menudo necesitan protección frente a deducibles y al coseguro del 20% sin límite de la Parte B. Con un Suplemento de Medicare (Medigap Plan G o Plan N), usted obtiene acceso directo y sin restricciones a UF Health Shands, HCA Florida y al Malcom Randall VA Medical Center, sin requerir redes restrictivas HMO ni referidos de médicos primarios.</p>
+        <p>Gainesville es el epicentro médico del norte de Florida gracias al reconocido sistema hospitalario UF Health Shands Hospital y al HCA Florida North Florida Hospital. Los residentes del Condado de Alachua que dependen de Medicare Original a menudo necesitan protección frente a deducibles y al coseguro del 20% sin límite de la Parte B. Con un Suplemento de Medicare (Medigap Plan G o Plan N), usted obtiene acceso a médicos y especialistas que aceptan Medicare en UF Health Shands, HCA Florida y al Malcom Randall VA Medical Center, sin requerir redes restrictivas HMO ni referidos de médicos primarios.</p>
         <ul>
-          <li>Libertad total para elegir médicos y especialistas en UF Health Shands.</li>
-          <li>Sin demoras de autorizaciones previas para tratamientos o cirugías.</li>
-          <li>Garantía de cobertura médica válida en cualquier hospital de Florida y de todo Estados Unidos.</li>
+          <li>Libertad para consultar especialistas que aceptan Medicare en UF Health Shands.</li>
+          <li>Sin requerimiento de autorizaciones previas bajo Medicare Original y Medigap para procedimientos cubiertos por Medicare.</li>
+          <li>Cobertura médica válida ante cualquier proveedor que acepte Medicare en Florida y en todo Estados Unidos.</li>
         </ul>
       </section>
 
       <section>
         <h2>Final Expense Gainesville: Seguro de Gastos Finales y Entierro</h2>
-        <p>Los costos promedio de funerales y cremaciones en Gainesville, Archer, Newberry y High Springs oscilan entre $7,200 y $9,800. Dado que el beneficio único por fallecimiento del Seguro Social federal es de solo $255, una póliza de gastos finales de vida entera garantiza entre $5,000 y $35,000 en efectivo inmediato a sus beneficiarios, con primas congeladas de por vida y sin necesidad de examen médico tradicional. Sus seres queridos tienen total libertad para coordinar servicios con funerarias y cementerios locales de Alachua County, tales como Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home y Prairie Creek Conservation Cemetery.</p>
+        <p>Los costos promedio de funerales y cremaciones en Gainesville, Archer, Newberry y High Springs oscilan entre $7,200 y $9,800. Dado que el beneficio único por fallecimiento del Seguro Social federal es de solo $255, una póliza de gastos finales de vida entera ofrece beneficios por fallecimiento de entre $5,000 y $35,000 para sus beneficiarios, con primas niveladas (sujetas a los términos de la póliza) y opciones de emisión simplificada sin examen médico tradicional según la aseguradora. Sus seres queridos tienen la potestad de coordinar servicios con funerarias y cementerios locales de Alachua County, tales como Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home y Prairie Creek Conservation Cemetery.</p>
       </section>
 
       <section>
         <h2>IUL Gainesville: Seguro de Vida Universal Indexada con Ventajas Fiscales</h2>
-        <p>Para la comunidad académica de la University of Florida (UF), el personal médico de UF Health, veteranos y trabajadores del VA Medical Center, y dueños de empresas locales en Gainesville y Alachua, el IUL (Indexed Universal Life) ofrece una estrategia eficiente para complementar planes 403(b), 401(k) o el Florida Retirement System (FRS). Con un piso contractual del 0% frente a caídas del mercado de valores y acceso a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del IRS, el IUL protege a su familia mientras acumula valor en efectivo.</p>
+        <p>Para la comunidad académica de la University of Florida (UF), el personal médico de UF Health, veteranos y trabajadores del VA Medical Center, y dueños de empresas locales en Gainesville y Alachua, el IUL (Indexed Universal Life) ofrece una estrategia eficiente para complementar planes 403(b), 401(k) o el Florida Retirement System (FRS). Con un piso contractual del 0% en acreditación frente a caídas del índice bursátil de referencia (los costos de póliza continúan deduciéndose) y acceso a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del IRS mientras la póliza permanezca en vigor, el IUL brinda protección por fallecimiento a su familia y potencial de acumulación de valor en efectivo.</p>
       </section>
 
       <section>
-        <h2>Annuities Gainesville: Anualidades Fijas y Pensión Vitalicia Garantizada</h2>
-        <p>Para los jubilados en Gainesville, incluyendo residentes de comunidades como Oak Hammock at UF, The Village y Haile Plantation, las Anualidades Fijas de Garantía Multianual (MYGA) y las Anualidades Fijas Indexadas (FIA) proporcionan protección contractual del capital principal contra la volatilidad bursátil. Disfrute de crecimiento con impuestos diferidos y cláusulas de ingresos vitalicios garantizados que proporcionan un sueldo predecible de por vida que jamás podrá sobrevivir.</p>
+        <h2>Annuities Gainesville: Anualidades Fijas y Pensión Vitalicia</h2>
+        <p>Para los jubilados en Gainesville, incluyendo residentes de comunidades como Oak Hammock at UF, The Village y Haile Plantation, las Anualidades Fijas de Garantía Multianual (MYGA) y las Anualidades Fijas Indexadas (FIA) proporcionan protección contractual del capital principal contra la volatilidad bursátil, respaldadas por la solvencia financiera de la compañía aseguradora emisora. Disfrute de crecimiento con impuestos diferidos y opciones de cláusulas de ingresos vitalicios según los términos del contrato.</p>
       </section>
 
       <section>
         <h2>Andres Bozo: Su Corredor Independiente de Confianza en Alachua County</h2>
-        <p>Andrés Bozo (NPN: 21228432) es un corredor de seguros independiente con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS). Al ser una agencia independiente, AHB Insurance Solutions compara objetivamente opciones entre más de 80 compañías aseguradoras nacionales líderes, garantizando una recomendación honesta, personalizada y 100% gratuita, sin costo adicional ni comisiones cobradas al asegurado.</p>
+        <p>Andrés Bozo (NPN: 21228432) es un corredor de seguros independiente con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS). Como correduría independiente, AHB Insurance Solutions compara de forma objetiva entre múltiples compañías aseguradoras líderes y solventes a nivel nacional, ofreciendo una orientación personalizada, transparente y 100% gratuita, sin costo adicional ni comisiones cobradas al asegurado.</p>
       </section>
 
       <section>
@@ -762,7 +762,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <p>Nuestra sede física se encuentra en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</p>
 
         <h3>¿Cobran honorarios por comparar planes o cotizar seguros?</h3>
-        <p>No. Nuestros servicios de consultoría, comparación entre más de 80 aseguradoras y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</p>
+        <p>No. Nuestros servicios de consultoría, comparación entre múltiples aseguradoras líderes y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</p>
 
         <h3>¿Ofrecen atención bilingüe en español en Gainesville?</h3>
         <p>Sí. El corredor Andrés Bozo es completamente bilingüe (español e inglés), facilitando que la comunidad hispana de Gainesville y Alachua County comprenda cada detalle de su póliza con claridad.</p>

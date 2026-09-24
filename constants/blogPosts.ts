@@ -82,7 +82,7 @@ Medigap policies work alongside Original Medicare to pay for out-of-pocket deduc
 2. **Annual Enrollment Period (AEP):** October 15 to December 7 each year.
 3. **Special Enrollment Periods (SEP):** Triggered when moving counties, losing employer coverage, or qualifying for Extra Help.
 
-> **Need expert assistance?** Call Andres H. Bozo directly at **+1 (352) 225-8389** for a free, no-obligation comparison across 80+ top carriers.
+> **Need expert assistance?** Call Andres H. Bozo directly at **+1 (352) 225-8389** for a free, no-obligation comparison across top-rated national carriers.
             `,
             es: `
 ## Cómo Navegar las Opciones de Medicare en Florida para 2026

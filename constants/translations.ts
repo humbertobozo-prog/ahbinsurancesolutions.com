@@ -41,9 +41,9 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Key Takeaways",
       items: [
         { label: "Medicare Experts", value: "Custom A/B/C/D guidance." },
-        { label: "Burial Protection", value: "Guaranteed acceptance burial plans." },
+        { label: "Burial Protection", value: "Simplified issue and guaranteed options." },
         { label: "IUL Growth", value: "Tax-advantaged retirement strategies." },
-        { label: "80+ Companies", value: "We compare available options for your goals." }
+        { label: "Top Carriers", value: "We compare available options for your goals." }
       ]
     },
     services: {
@@ -116,7 +116,7 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Our Mission: Protecting Your Legacy",
       paragraph1: "Founded on the principles of honesty and transparency, AHB Insurance Solutions was established by <strong>Andres H Bozo</strong>, a <strong>Licensed Broker (NPN: 21228432)</strong>. After seeing many seniors struggle with confusing paperwork and rising costs, Andres committed to creating a brokerage that simplifies the process while maximizing protection.",
       paragraph2: "We specialize in the products that matter most to you as you plan for the future. Whether it's finding the right Medicare Advantage plan, securing a Final Expense policy to protect your children from funeral costs, or using an IUL for tax-advantaged retirement wealth strategies, we have the expertise to guide you.",
-      paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with over 80 nationwide carriers to find the 'Goldilocks' plan—the one that's just right for your budget and your health.",
+      paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with multiple top-rated nationwide carriers to find the plan that is just right for your budget and your health.",
       imageAlt: "Andres H. Bozo, licensed Florida insurance broker NPN 21228432, providing expert guidance for Medicare, Final Expense, and IUL.",
       statsYears: "Years of Experience",
       statsCompanies: "Carrier Partners",
@@ -260,7 +260,7 @@ export const translations: Record<Language, TranslationContent> = {
   es: {
     meta: {
         title: "Seguro Medicare Florida y Gastos Finales | Broker de Seguros Bilingüe AHB",
-        description: "Compare opciones de Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales de emisión simplificada. Comparamos más de 80 aseguradoras líderes para la comunidad hispana. Broker Licenciado NPN 21228432."
+        description: "Compare opciones de Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales de emisión simplificada. Comparamos múltiples aseguradoras líderes para la comunidad hispana. Broker Licenciado NPN 21228432."
     },
     common: {
       npnTooltip: "Número de Productor Nacional - Un identificador único de la NAIC para profesionales de seguros licenciados."
@@ -282,7 +282,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     hero: {
       heading: "Seguro Medicare en Florida y Gastos Finales | Asesoría en Español",
-      subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como brokers independientes licenciados en Florida, comparamos más de 80 compañías líderes para orientarle en su Seguro Medicare en Florida, Seguro de Gastos Finales (Entierro) y Vida Universal Indexada (IUL).",
+      subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como corredores independientes licenciados en Florida, comparamos opciones disponibles entre múltiples compañías aseguradoras líderes para encontrar el plan idóneo para sus necesidades. Con Medigap, generalmente puede consultar a cualquier proveedor de salud a nivel nacional que acepte Medicare, conforme a las normas de Medicare y Medigap. Nuestras opciones de Gastos Finales incluyen pólizas permanentes de vida entera de $5,000 a $35,000, incluyendo pólizas que pueden ofrecer primas niveladas sujetas a los términos del contrato. También ofrecemos estrategias de anualidades fijas e indexadas diseñadas para brindar acreditación de intereses y opciones de ingresos basadas en contrato sin invertir directamente sus primas en el mercado de valores.",
       cta: "Verificar Elegibilidad en Florida 2026 ➔",
       trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría Sin Costo"
     },
@@ -297,9 +297,9 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Resumen de Valor",
       items: [
         { label: "Expertos Medicare", value: "Guía personalizada Partes A/B/C/D." },
-        { label: "Gastos Finales", value: "Planes de entierro con aceptación garantizada." },
+        { label: "Gastos Finales", value: "Opciones de emisión simplificada y garantizada." },
         { label: "Estrategias IUL", value: "Estrategias de retiro con ventajas fiscales." },
-        { label: "80+ Compañías", value: "Comparamos opciones líderes para usted." }
+        { label: "Aseguradoras Líderes", value: "Comparamos opciones líderes para usted." }
       ]
     },
     services: {
@@ -356,7 +356,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "80+ Aseguradoras Líderes",
+          title: "Aseguradoras Líderes",
           description: "Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura.",
         },
         {
@@ -372,7 +372,7 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Nuestra Misión: Proteger su Legado",
       paragraph1: "Fundada bajo principios de honestidad y transparencia, AHB Insurance Solutions fue establecida por <strong>Andres H Bozo</strong>, <strong>Broker Licenciado (NPN: 21228432)</strong>. Al ver a muchas personas mayores luchar con trámites confusos y costos crecientes, Andres se comprometió a simplificar el proceso.",
       paragraph2: "Nos especializamos en los productos que más le importan. Ya sea encontrar el plan de Medicare adecuado, asegurar una póliza de Gastos Finales para proteger a sus hijos, o estructurar un IUL con ventajas fiscales para su estrategia de retiro.",
-      paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con más de 80 compañías a nivel nacional para encontrar el plan perfecto para su presupuesto y salud.",
+      paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con múltiples aseguradoras líderes a nivel nacional para encontrar el plan adecuado para su presupuesto y salud.",
       imageAlt: "Andres H. Bozo, broker de seguros licenciado en Florida NPN 21228432, asesor especialista en Medicare y Gastos Finales.",
       statsYears: "Años de Experiencia",
       statsCompanies: "Compañías Aliadas",
