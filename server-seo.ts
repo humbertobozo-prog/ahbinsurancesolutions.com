@@ -80,6 +80,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/spanish-insurance-orlando": { en: "/spanish-insurance-orlando", es: "/spanish-insurance-orlando" },
     "/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/es/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
+    "/es/localidades/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/gainesville-fl-insurance": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/es/seguros-gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/blog/medicare-open-enrollment-florida-2026": {
@@ -139,17 +140,17 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias hispanas en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de primer nivel nacional (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría 100% bilingüe y sin cargos por servicio.</p>
+          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
           <article>
             <h3>1. Planes Suplementarios de Medicare (Medigap) en Florida</h3>
-            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Con una póliza Medigap en Florida, usted disfruta de libertad total de elección médica: puede consultar a cualquier médico, especialista u hospital en Florida y en todo Estados Unidos que acepte Medicare Original, sin requerir redes restrictivas HMO ni autorizaciones previas de referidos.</p>
+            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Un plan de Suplemento de Medicare (Medigap) en Florida generalmente le permite consultar a cualquier médico, especialista o centro de salud en Florida y a nivel nacional que acepte la asignación de Medicare, sin restricciones de redes de proveedores ni requisitos de referidos de especialistas, sujeto a las normas de Medicare y Medigap.</p>
           </article>
           <article>
             <h3>2. Seguro de Gastos Finales y Entierro para Adultos Mayores</h3>
-            <p>Los costos promedio de funeral, cremación o servicio conmemorativo en Florida oscilan entre $7,000 y $12,000, representando un impacto financiero repentino para los seres queridos. El pago único por fallecimiento del Seguro Social federal es de tan solo $255. Nuestras pólizas de gastos finales ofrecen protección de vida entera con beneficios en efectivo de $5,000 a $35,000 y tarifas congeladas. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante. Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado.</p>
+            <p>El seguro de gastos finales ofrece protección de vida entera permanente, comúnmente de $5,000 a $35,000, diseñada para ayudar a las familias a costear servicios funerarios, cremación y gastos médicos finales sin endeudamiento inesperado. En pólizas estándar, las primas se mantienen niveladas y generalmente no aumentan con la edad, sujeto a los términos del contrato. Muchas pólizas de emisión simplificada no requieren examen médico tradicional, aunque los requisitos de suscripción y elegibilidad varían por compañía aseguradora y solicitante. Los beneficios por fallecimiento se pagan a los beneficiarios designados según las estipulaciones de la póliza.</p>
           </article>
           <article>
             <h3>3. Seguro de Vida Universal Indexado (IUL) y Estrategias con Ventajas Fiscales</h3>
@@ -157,7 +158,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>4. Anualidades Fijas y Pólizas Dentales, de Visión y Audición</h3>
-            <p>Proteja sus ahorros de jubilación frente a la volatilidad económica con anualidades de tasa fija garantizada, y añada protección integral para gastos dentales, oftálmicos y aparatos auditivos diseñados especialmente para beneficiarios de Medicare en Florida.</p>
+            <p>Proteja sus ahorros de jubilación con anualidades fijas e indexadas que ofrecen preservación de capital frente a caídas del mercado, crecimiento con impuestos diferidos mientras los fondos permanezcan en la anualidad y opciones de ingresos de por vida respaldadas por la solvencia financiera de aseguradoras autorizadas, además de seguros dentales, de visión y audición.</p>
           </article>
         </section>
         <section>
@@ -188,7 +189,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/es/anualidades-florida">Anualidades y Retiro Seguro en Florida</a></li>
               <li><a href="/es/dental-vision-florida">Seguro Dental, Visión y Audición Senior</a></li>
               <li><a href="/es/preguntas-frecuentes">Preguntas Frecuentes sobre Seguros</a></li>
-              <li><a href="/es/nosotros">Conozca al Broker Andrés Bozo</a></li>
+              <li><a href="/es/sobre-andres-bozo">Conozca al Broker Andrés Bozo</a></li>
               <li><a href="/es/contacto">Cotización Gratuita sin Compromiso</a></li>
             </ul>
           </nav>
@@ -200,17 +201,17 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with top-rated and state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
+          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
           <h2>Our Specialized Florida Insurance Solutions</h2>
           <article>
             <h3>1. Florida Medicare Supplement Plans (Medigap)</h3>
-            <p>Original Medicare (Parts A and B) provides essential healthcare protection but leaves substantial out-of-pocket gaps, such as the Part A hospital deductible and the uncapped 20% Part B outpatient coinsurance. A Medicare Supplement (Medigap) policy, such as Plan G or Plan N, pays these remaining balances on your behalf. With a Florida Medigap plan, you maintain complete freedom of healthcare providers: you can see any doctor, specialist, or healthcare facility across Florida and nationwide that accepts Original Medicare, with zero network constraints, prior authorization hurdles, or specialist referral requirements.</p>
+            <p>Original Medicare (Parts A and B) provides essential healthcare protection but leaves substantial out-of-pocket gaps, such as the Part A hospital deductible and the uncapped 20% Part B outpatient coinsurance. A Medicare Supplement (Medigap) policy, such as Plan G or Plan N, pays these remaining balances on your behalf. A Florida Medicare Supplement (Medigap) plan generally allows you to see any provider nationwide that accepts Medicare assignment, without network constraints or specialist referral requirements, subject to Medicare and Medigap rules.</p>
           </article>
           <article>
             <h3>2. Final Expense & Burial Life Insurance for Florida Seniors</h3>
-            <p>The cost of a typical funeral, cremation, or memorial service in Florida ranges between $7,000 and $12,000, creating an unexpected financial hardship for grieving family members. The standard federal Social Security death benefit is only $255 for eligible surviving spouses. Our final expense life insurance policies offer permanent whole life protection from $5,000 to $35,000 with locked rates. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome.</p>
+            <p>Final expense life insurance policies offer permanent whole life protection, commonly from $5,000 to $35,000, designed to help families cover burial, cremation, and final medical expenses without unexpected debt. Standard policies feature level premiums that do not increase with age, subject to contract terms. Many simplified-issue policies do not require a traditional medical exam, although underwriting and eligibility requirements vary by carrier and applicant. Death benefits are paid to designated beneficiaries according to policy terms.</p>
           </article>
           <article>
             <h3>3. Indexed Universal Life (IUL) for Tax-Advantaged Wealth & Retirement Planning</h3>
@@ -218,13 +219,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>4. Fixed Guaranteed Annuities & Senior Dental, Vision and Hearing</h3>
-            <p>Shield your accumulated savings from stock market volatility with multi-year fixed indexed annuities offering reliable lifetime income options, and supplement your Medicare coverage with affordable dental, vision, and hearing plans designed specifically for Florida seniors.</p>
+            <p>Preserve retirement savings with fixed and fixed indexed annuities offering contractual principal protection against index downturns, tax-deferred growth while funds remain in the contract, and lifetime income options backed by the claims-paying ability of issuing insurers, alongside senior dental, vision, and hearing plans.</p>
           </article>
         </section>
         <section>
           <h2>Why Choose AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across top-rated and state-licensed national insurance carriers.</li>
+            <li><strong>True Independent Representation:</strong> Unlike captive agents restricted to one brand, we compare available options based on your needs, eligibility, budget and coverage goals across well-established, state-licensed national insurance carriers.</li>
             <li><strong>Statewide Florida Service:</strong> Assisting seniors and working families in Miami-Dade, Broward, Palm Beach, Orange (Orlando), Hillsborough (Tampa), Duval (Jacksonville), Pinellas, Lee, and across all 67 Florida counties.</li>
             <li><strong>Bilingual, Client-Focused Guidance:</strong> Transparent, ethical, and pressure-free advice from a Florida-licensed insurance broker fluent in English and Spanish.</li>
           </ul>
@@ -248,7 +249,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/annuities-florida">Florida Fixed Indexed Annuities</a></li>
               <li><a href="/dental-vision-florida">Senior Dental, Vision & Hearing Coverage</a></li>
               <li><a href="/faq">Frequently Asked Questions</a></li>
-              <li><a href="/about-us">About Broker Andres Bozo</a></li>
+              <li><a href="/about-andres-bozo">About Broker Andres Bozo</a></li>
               <li><a href="/contact">Free Insurance Quote</a></li>
             </ul>
           </nav>
@@ -414,7 +415,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
         <section>
           <h2>Application Process with Andres Bozo, Independent Broker (NPN 21228432)</h2>
-          <p>Streamlined four-step guidance: comparison across 15+ top burial insurers, telephone or electronic sign-up, and rapid approval.</p>
+          <p>Streamlined guidance: we compare available Final Expense options from multiple state-licensed insurance carriers, assist with telephone or electronic applications, and walk you through carrier underwriting.</p>
         </section>
       `;
     }
@@ -849,10 +850,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <main>
             <section>
               <h2>What Is a Fixed Annuity?</h2>
-              <p>A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary purpose is to safeguard hard-earned principal, compound interest 100% tax-deferred, and provide contractual mechanisms to convert accumulated savings into a guaranteed, predictable stream of retirement income. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio.</p>
+              <p>A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary purpose is to provide principal preservation, tax-deferred growth while funds remain in the annuity (subject to applicable tax rules), and contractual mechanisms to convert accumulated savings into predictable retirement income options, backed by the claims-paying ability of the issuing insurer. Principal and credited interest are supported by the insurer's general account statutory reserves and conservative investment portfolio.</p>
               <ul>
-                <li><strong>Accumulation Phase:</strong> Your principal earns contractually guaranteed interest or index-linked growth without annual 1099 tax erosion.</li>
-                <li><strong>Distribution Phase:</strong> You choose how to access your assets: via annual penalty-free withdrawals, a full payout at maturity, or a guaranteed lifetime income stream that you cannot outlive.</li>
+                <li><strong>Accumulation Phase:</strong> Your principal earns contractually guaranteed interest or index-linked growth without annual 1099 tax erosion while funds remain in the contract.</li>
+                <li><strong>Distribution Phase:</strong> You choose how to access your assets: via penalty-free withdrawals (where permitted by contract), a lump-sum payout at maturity, or a guaranteed lifetime income stream backed by the insurer.</li>
               </ul>
             </section>
 
@@ -862,26 +863,26 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <ul>
                 <li><strong>Declared Rate:</strong> The insurer announces a competitive interest rate for an initial term (e.g., 1 to 3 years).</li>
                 <li><strong>Guaranteed Minimum Floor:</strong> State insurance regulations and the contract mandate a minimum lifetime rate (typically 1.0% to 3.0%) below which the declared yield cannot fall.</li>
-                <li><strong>Principal Preservation:</strong> Your initial deposit and all previously credited interest are 100% protected against market declines.</li>
+                <li><strong>Principal Preservation:</strong> Initial deposit and credited interest are protected against market declines, subject to contract terms and insurer claims-paying ability.</li>
               </ul>
             </section>
 
             <section>
               <h2>MYGA</h2>
-              <p>A Multi-Year Guarantee Annuity (MYGA) is the insurance equivalent of a bank CD, but with tax deferral. You commit your deposit for a fixed period (such as 3, 5, 7, or 10 years), and the insurer contractually guarantees the exact same annual interest rate for every year of that term.</p>
+              <p>A Multi-Year Guarantee Annuity (MYGA) is a fixed annuity offering a guaranteed interest rate for a specified period (such as 3, 5, 7, or 10 years). The insurer contractually guarantees a fixed annual interest rate for the duration of that term, subject to contract terms.</p>
               <ul>
-                <li><strong>Zero Rate Volatility:</strong> The crediting rate never fluctuates during your chosen commitment window.</li>
-                <li><strong>Flexible Maturity Options:</strong> At term end, you can withdraw your funds in full, renew at current market rates, or perform an IRS Section 1035 tax-free rollover into a new contract.</li>
-                <li><strong>Compounding Power:</strong> Earnings remain in the contract and compound without annual tax drag.</li>
+                <li><strong>Predictable Crediting:</strong> The crediting rate is contractually set for the duration of the guarantee period, subject to contract terms.</li>
+                <li><strong>Flexible Maturity Options:</strong> At term end, you can withdraw your funds, renew at available rates, or complete a qualifying IRS Section 1035 exchange into a new contract.</li>
+                <li><strong>Compounding Power:</strong> Earnings remain in the contract and compound on a tax-deferred basis, subject to applicable tax rules.</li>
               </ul>
             </section>
 
             <section>
               <h2>Fixed Indexed Annuities</h2>
-              <p>A Fixed Indexed Annuity (FIA) offers interest potential linked to the positive performance of an external financial benchmark (such as the S&P 500), while contractually guaranteeing zero loss of principal when the index declines.</p>
+              <p>A Fixed Indexed Annuity (FIA) offers interest crediting potential linked to an external financial benchmark (such as the S&P 500), combined with protection against index declines.</p>
               <ul>
-                <li><strong>Contractual 0% Floor:</strong> If the underlying market index loses value over the crediting period, your credited interest is simply 0%. You never lose principal or locked gains.</li>
-                <li><strong>Annual Reset Feature:</strong> At each contract anniversary, gains are locked in and become your new guaranteed principal baseline for future periods.</li>
+                <li><strong>Contractual 0% Floor:</strong> A fixed indexed annuity may credit 0% rather than a negative index return during a crediting period, subject to the contract’s terms, charges and crediting method.</li>
+                <li><strong>Annual Reset Feature:</strong> Depending on the contract, index gains may be locked in at anniversary dates and become part of your contract value for future periods.</li>
                 <li><strong>Growth Levers:</strong> Returns are governed by contractual crediting formulas such as cap rates, participation rates, or spreads.</li>
               </ul>
             </section>
@@ -890,17 +891,17 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <h2>SPIA</h2>
               <p>A Single Premium Immediate Annuity (SPIA) is designed for individuals requiring immediate guaranteed cash flow. You deposit a single lump sum, and the insurer begins paying guaranteed monthly or annual checks immediately (typically within 30 days to 12 months).</p>
               <ul>
-                <li><strong>Immediate Cash Flow:</strong> Ideal for retirees facing an immediate retirement income shortfall.</li>
-                <li><strong>Exclusion Ratio Advantage:</strong> A portion of each payout represents a tax-free return of principal, lowering your immediate tax bill compared to standard distributions.</li>
+                <li><strong>Immediate Cash Flow:</strong> Designed for retirees seeking immediate, predictable retirement disbursements.</li>
+                <li><strong>Exclusion Ratio Advantage:</strong> For non-qualified contracts, a portion of each payout represents a tax-free return of principal, subject to tax rules.</li>
                 <li><strong>Irrevocable Conversion:</strong> In exchange for guaranteed lifetime payments, the lump sum is annuitized and cannot typically be surrendered.</li>
               </ul>
             </section>
 
             <section>
               <h2>Lifetime Income</h2>
-              <p>Longevity risk—outliving one's savings—is the single greatest financial hazard in modern retirement. Fixed annuities solve this through two distinct lifetime income structures:</p>
+              <p>Longevity risk—outliving one's savings—is an important financial consideration in retirement. Fixed annuities address this through distinct lifetime income structures:</p>
               <ul>
-                <li><strong>Guaranteed Lifetime Withdrawal Benefit (GLWB):</strong> An optional living benefit rider that calculates a separate 'Income Base'. It pays a guaranteed annual withdrawal percentage for life, even if your account value drops to zero due to longevity, while allowing you to retain control of the underlying cash value.</li>
+                <li><strong>Guaranteed Lifetime Withdrawal Benefit (GLWB):</strong> An optional living benefit rider that calculates an Income Base to provide lifetime withdrawals, subject to rider terms and fees.</li>
                 <li><strong>Traditional Annuitization:</strong> Irrevocably converting contract balance into a guaranteed income stream based on life expectancy (Single Life, Joint & Survivor, or Period Certain).</li>
               </ul>
             </section>
@@ -909,21 +910,21 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <h2>Interest Crediting</h2>
               <p>Understanding how insurers credit interest is essential for selecting the right contract:</p>
               <ul>
-                <li><strong>Fixed Declared Rate:</strong> A clear, unchanging percentage credited daily or monthly.</li>
-                <li><strong>Cap Rate:</strong> The maximum percentage gain credited over a measurement period (e.g., a 9% cap means if the S&P 500 rises 15%, you receive 9%).</li>
-                <li><strong>Participation Rate:</strong> The percentage of index gains credited (e.g., an 80% participation rate on a 10% index gain credits 8%).</li>
-                <li><strong>Annual Reset:</strong> Locks in index gains at each anniversary, ensuring negative index years never erase previous credits.</li>
+                <li><strong>Fixed Declared Rate:</strong> A clear, contractual percentage credited as specified by the policy.</li>
+                <li><strong>Cap Rate:</strong> The maximum percentage gain credited over a measurement period.</li>
+                <li><strong>Participation Rate:</strong> The percentage of index gains credited according to contract formula.</li>
+                <li><strong>Annual Reset:</strong> Protects previously credited gains from subsequent index downturns, subject to contract provisions.</li>
               </ul>
             </section>
 
             <section>
               <h2>Liquidity</h2>
-              <p>Modern Florida fixed annuities provide reasonable liquidity for unexpected life events:</p>
+              <p>Modern Florida fixed annuities provide structured liquidity provisions, subject to contract terms:</p>
               <ul>
-                <li><strong>10% Annual Penalty-Free Withdrawals:</strong> Most contracts permit withdrawing up to 10% of accumulated contract value each year after year one without carrier surrender charges.</li>
-                <li><strong>Cumulative Interest Access:</strong> Many contracts allow immediate penalty-free withdrawal of earned interest from month one.</li>
-                <li><strong>RMD Waivers:</strong> Required Minimum Distributions (RMDs) from qualified IRAs are exempt from surrender charges.</li>
-                <li><strong>Confinement & Terminal Illness Waivers:</strong> Grants up to 100% penalty-free access if the owner is confined to a skilled nursing facility or diagnosed with a terminal condition.</li>
+                <li><strong>Penalty-Free Withdrawal Provisions:</strong> Some contracts provide a penalty-free withdrawal provision, often up to a stated percentage (such as 10% annually), subject to contract terms.</li>
+                <li><strong>Earned Interest Access:</strong> Many contracts permit withdrawal of credited interest without surrender charges.</li>
+                <li><strong>RMD Provisions:</strong> Some contracts may waive surrender charges for certain required minimum distributions, subject to contract provisions.</li>
+                <li><strong>Confinement & Illness Provisions:</strong> Certain contracts may provide surrender-charge waivers under specified qualifying conditions, such as skilled nursing confinement or terminal illness, subject to state availability and contract provisions.</li>
               </ul>
             </section>
 
@@ -931,19 +932,19 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <h2>Surrender Charges</h2>
               <p>Annuities are designed as medium- to long-term wealth preservation contracts. Withdrawing funds beyond penalty-free limits during the surrender period triggers specific charges:</p>
               <ul>
-                <li><strong>Declining Surrender Schedule:</strong> Typically starts between 7% and 10% in Year 1 and decreases by 1% each year until reaching 0%.</li>
+                <li><strong>Declining Surrender Schedule:</strong> Typically starts between 7% and 10% in Year 1 and decreases over time until reaching 0%.</li>
                 <li><strong>Market Value Adjustment (MVA):</strong> An adjustment reflecting interest rate movements since contract inception, applied only to early excess withdrawals.</li>
-                <li><strong>IRS 10% Premature Distribution Penalty:</strong> The IRS assesses a 10% excise tax on taxable earnings withdrawn before age 59½, similar to traditional IRAs.</li>
+                <li><strong>IRS 10% Premature Distribution Penalty:</strong> Taxable earnings withdrawn before age 59½ may be subject to a 10% federal IRS tax penalty.</li>
               </ul>
             </section>
 
             <section>
               <h2>Tax Considerations</h2>
-              <p>Fixed annuities offer substantial tax advantages over taxable bank accounts and CDs:</p>
+              <p>Fixed annuities offer tax-deferred growth characteristics:</p>
               <ul>
-                <li><strong>100% Tax Deferral:</strong> No annual Form 1099-INT is issued while funds remain inside the contract, enabling triple compounding (interest on principal, interest on interest, and interest on tax savings).</li>
-                <li><strong>LIFO Tax Treatment:</strong> Non-qualified withdrawals are taxed on a Last-In, First-Out basis (accumulated earnings withdraw and are taxed first as ordinary income).</li>
-                <li><strong>IRS Section 1035 Exchanges:</strong> Allows you to roll over funds from an existing annuity or life insurance policy into a new annuity without triggering a taxable event.</li>
+                <li><strong>Tax-Deferred Growth:</strong> Tax-deferred growth while funds remain in the annuity, subject to applicable tax rules, enabling earnings to compound without annual tax drag.</li>
+                <li><strong>LIFO Tax Treatment:</strong> Non-qualified withdrawals are taxed on a Last-In, First-Out basis (earnings are withdrawn and taxed first as ordinary income).</li>
+                <li><strong>Qualifying IRS Section 1035 Exchanges:</strong> Allows qualifying transfer of funds from an existing annuity into a new annuity without immediate income taxation.</li>
               </ul>
             </section>
 
@@ -951,10 +952,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <h2>Annuity vs CD</h2>
               <p>Comparing Fixed Annuities (MYGAs) and Bank Certificates of Deposit:</p>
               <ul>
-                <li><strong>Tax Treatment:</strong> Bank CD interest is taxed annually as ordinary income (Form 1099-INT). MYGAs compound 100% tax-deferred until withdrawn.</li>
+                <li><strong>Tax Treatment:</strong> Bank CD interest is taxed annually as ordinary income (Form 1099-INT). MYGAs offer tax-deferred growth while funds remain in the contract, subject to applicable tax rules.</li>
                 <li><strong>Backing & Guarantees:</strong> Bank CDs are backed by the FDIC up to $250,000 per institution. Annuities are backed by insurer general account reserves and state guaranty associations (FLAHIGA in Florida).</li>
-                <li><strong>Annual Liquidity:</strong> Bank CDs generally charge 3 to 6 months of interest penalties for early withdrawal of any principal. Modern annuities allow 10% penalty-free withdrawals annually.</li>
-                <li><strong>Income Conversion:</strong> CDs cannot guarantee income for life; annuities offer guaranteed lifetime income riders.</li>
+                <li><strong>Liquidity Provisions:</strong> Bank CDs generally assess interest penalties for early withdrawal. Some annuity contracts provide penalty-free withdrawal provisions, often up to 10% annually, subject to contract terms.</li>
+                <li><strong>Income Conversion:</strong> CDs cannot guarantee income for life; annuities offer guaranteed lifetime income options.</li>
               </ul>
             </section>
 

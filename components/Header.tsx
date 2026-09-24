@@ -64,6 +64,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                 const post = BLOG_POSTS.find(p => p.slug.en === slug);
                 nextPath = post ? `/es/blog/${post.slug.es}` : '/es/blog';
             }
+            else if (currentPath === '/annuities-florida' || currentPath === '/annuities') nextPath = '/es/anualidades-florida';
+            else if (currentPath === '/dental-vision-florida') nextPath = '/es/dental-vision-florida';
+            else if (currentPath === '/locations/gainesville-fl' || currentPath === '/gainesville-fl-insurance') nextPath = '/es/locations/gainesville-fl';
             else if (currentPath === '/faq') nextPath = '/es/preguntas-frecuentes';
             else if (currentPath === '/about-us' || currentPath === '/about-andres-bozo') nextPath = '/es/sobre-andres-bozo';
             else if (currentPath === '/contact') nextPath = '/es/contacto';
@@ -86,6 +89,9 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                 const post = BLOG_POSTS.find(p => p.slug.es === slug);
                 nextPath = post ? `/blog/${post.slug.en}` : '/blog';
             }
+            else if (currentPath === '/es/anualidades-florida' || currentPath === '/es/anualidades') nextPath = '/annuities-florida';
+            else if (currentPath === '/es/dental-vision-florida') nextPath = '/dental-vision-florida';
+            else if (currentPath === '/es/locations/gainesville-fl' || currentPath === '/es/localidades/gainesville-fl' || currentPath === '/es/seguros-gainesville-fl') nextPath = '/locations/gainesville-fl';
             else if (currentPath === '/es/preguntas-frecuentes') nextPath = '/faq';
             else if (currentPath === '/es/nosotros' || currentPath === '/es/sobre-andres-bozo') nextPath = '/about-andres-bozo';
             else if (currentPath === '/es/contacto') nextPath = '/contact';

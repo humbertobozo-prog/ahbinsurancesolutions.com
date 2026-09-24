@@ -24,6 +24,8 @@ export const ALL_ROUTES: string[] = [
   '/es/preguntas-frecuentes',
   '/about-us',
   '/es/nosotros',
+  '/about-andres-bozo',
+  '/es/sobre-andres-bozo',
   '/contact',
   '/es/contacto',
   '/terms',
@@ -48,6 +50,7 @@ export const ALL_ROUTES: string[] = [
   '/spanish-insurance-orlando',
   '/locations/gainesville-fl',
   '/es/locations/gainesville-fl',
+  '/es/localidades/gainesville-fl',
   '/gainesville-fl-insurance',
   '/es/seguros-gainesville-fl'
 ];

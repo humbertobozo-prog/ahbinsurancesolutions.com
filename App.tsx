@@ -90,9 +90,7 @@ const App: React.FC = () => {
         '/iul-retirement-tampa',
         '/spanish-insurance-orlando',
         '/dental-vision-florida',
-        '/es/dental-vision-florida',
-        '/locations/gainesville-fl',
-        '/es/localidades/gainesville-fl'
+        '/es/dental-vision-florida'
     ];
 
     const legalPaths = ['/terms', '/privacy', '/terminos', '/privacidad', '/es/terminos', '/es/privacidad'];
@@ -163,6 +161,7 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (
         cleanPath === '/locations/gainesville-fl' || 
+        cleanPath === '/es/locations/gainesville-fl' ||
         cleanPath === '/es/localidades/gainesville-fl' ||
         cleanPath === '/gainesville-fl-insurance' ||
         cleanPath === '/es/seguros-gainesville-fl'
