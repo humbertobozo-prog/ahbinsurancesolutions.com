@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 
+// Asynchronously load Google Fonts stylesheet to avoid render-blocking the critical path (retaining preloaded cache)
+if (typeof document !== 'undefined') {
+  const fontHref = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap';
+  if (!document.querySelector(`link[href="${fontHref}"][rel="stylesheet"]`)) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = fontHref;
+    document.head.appendChild(link);
+  }
+}
+
 const rootElement = document.getElementById('root');
 if (!rootElement) {
   throw new Error("Could not find root element to mount to");
