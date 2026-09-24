@@ -15,7 +15,7 @@ const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW
 
 export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModal }) => {
     return (
-        <footer className="bg-primary text-white pt-16 pb-8" aria-label="Main Footer">
+        <footer className="bg-primary text-white pt-16 pb-8 min-h-[400px]" aria-label="Main Footer">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
                     <div className="lg:col-span-4">
