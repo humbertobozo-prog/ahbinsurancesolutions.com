@@ -35,7 +35,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
             a: "Muchas pólizas de vida entera participantes ofrecen primas niveladas y cobertura permanente, sujetas a los términos, condiciones y al pago continuo de las primas requeridas."
         },
         {
-            q: "¿Qué significa que la póliza sea sin examen médico tradicional?",
+            q: "¿Cómo funciona la suscripción médica simplificada?",
             a: "Muchas pólizas de emisión simplificada no requieren un examen médico tradicional (como pruebas de sangre, orina o visitas de enfermeros), aunque los requisitos de suscripción varían según la aseguradora y el solicitante. En lugar de exámenes físicos invasivos, la aseguradora evalúa la solicitud mediante preguntas de salud, revisión electrónica del historial de recetas médicas (Rx check) y bases de datos del MIB. Esto permite emitir la póliza en cuestión de días u horas."
         },
         {
@@ -178,8 +178,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs
-                                ? 'Evite que sus hijos o cónyuge enfrenten deudas repentinas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con primas fijas garantizadas. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante.'
-                                : 'Protect your children and spouse from taking on $10,000+ in sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'}
+                                ? 'Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes con primas niveladas sujetas a los términos del contrato. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante.'
+                                : 'Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -284,11 +284,11 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 {isEs ? 'Montos de Cobertura Disponibles' : 'Available Coverage Amounts'}
                             </span>
                             <h2 className="text-2xl md:text-3xl font-black font-heading text-white mt-1 mb-2">
-                                {isEs ? 'Opciones de $5,000 a $35,000 y Costos Funerarios Reales en Florida' : 'Options from $5,000 to $35,000 & Real Florida Funeral Costs'}
+                                {isEs ? 'Opciones de Cobertura y Costos Funerarios en Florida' : 'Options & Florida Funeral Costs'}
                             </h2>
                             <p className="text-xs md:text-sm text-gray-200 leading-relaxed">
                                 {isEs 
-                                    ? 'Usted elige la cantidad exacta de beneficio según sus deseos (cremación o sepelio tradicional) y su presupuesto mensual. Los costos de funeral y cremación pueden variar significativamente dependiendo de los servicios y la ubicación:' 
+                                    ? 'Usted elige la cantidad de beneficio según sus deseos (cremación o sepelio tradicional) y su presupuesto. Los costos de funeral y cremación pueden variar significativamente según los servicios y la ubicación:' 
                                     : 'Choose the exact face amount based on your preferred arrangement and monthly budget. Funeral and cremation costs can vary significantly depending on the services and location:'}
                             </p>
                         </div>
