@@ -29,12 +29,16 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            // Put React and core libraries in vendor-react
+            // Separate React core
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
               return 'vendor-react';
             }
-            // Put large UI components and other libs in vendor-utils
-            return 'vendor-utils';
+            // Separate UI/animation libraries
+            if (id.includes('framer-motion') || id.includes('lucide-react')) {
+              return 'vendor-ui';
+            }
+            // Other core dependencies
+            return 'vendor-core';
           }
         }
       }
