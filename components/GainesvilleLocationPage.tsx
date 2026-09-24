@@ -381,7 +381,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                   <span className="hidden sm:inline-block text-slate-500">Alachua County, FL</span>
                 </div>
                 
-                <div className="relative w-full h-[360px] lg:h-full min-h-[350px]">
+                <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-full">
                   <iframe 
                     title="AHB Insurance Solutions Gainesville Office Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3468.106404764833!2d-82.40351782355524!3d29.601550975149363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e8a3a0ea7d9bb7%3A0x8e82ef42878d655f!2s5500%20SW%20Archer%20Rd%20H103%2C%20Gainesville%2C%20FL%2032607!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
@@ -391,7 +391,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                     allowFullScreen 
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade" 
-                    className="w-full h-full min-h-[350px]"
+                    className="w-full h-full"
                   />
                 </div>
               </div>
