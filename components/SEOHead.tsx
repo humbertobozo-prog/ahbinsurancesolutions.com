@@ -153,13 +153,11 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "description": "Licensed insurance agency specializing in Medicare Supplements, Advantage Plans, Final Expense Life Insurance, and Indexed Universal Life (IUL).",
             "telephone": "+1-352-225-8389",
             "email": "andreshbozo@ahbinsurancesolutions.com",
-            "priceRange": "Free Consultation",
             "identifier": {
                 "@type": "PropertyValue",
                 "name": "NPN",
                 "value": "21228432"
             },
-            "taxID": "21228432",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "5500 SW Archer Road, Apt H103",

@@ -48,7 +48,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "¿Puedo calificar si tengo condiciones preexistentes como Diabetes o Hipertensión?",
-            a: "Sí. Más del 90% de nuestros clientes adultos mayores en Florida tienen condiciones preexistentes diagnosticadas. Como corredores independientes, revisamos qué medicamentos toma para ubicarlo en la aseguradora que apruebe su condición específica con cobertura inmediata desde el primer día."
+            a: "Sí. Gran parte de nuestros clientes adultos mayores en Florida manejan condiciones de salud crónicas. Como corredores independientes, revisamos su historial de salud y medicamentos para identificar las aseguradoras con pautas de suscripción más favorables, buscando alternativas con cobertura inmediata de beneficio nivelado desde el primer día cuando el solicitante califique según las reglas de la compañía."
         }
     ] : [
         {
@@ -73,7 +73,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         },
         {
             q: "Can I qualify with pre-existing conditions like diabetes or high blood pressure?",
-            a: "Yes. The vast majority of our Florida clients manage chronic health conditions. As independent brokers representing over 15 specialized burial insurers, we match your exact prescription history with the carrier most favorable to your profile to secure immediate Day-One coverage."
+            a: "Yes. Many of our Florida senior clients manage common chronic health conditions. As independent brokers working with multiple specialized final expense insurers, we compare your health and prescription history against carrier underwriting guidelines to locate available options, including immediate Day-One coverage where qualifying criteria are met."
         }
     ];
 
@@ -85,35 +85,10 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         "category": "LifeInsurance",
         "description": description,
         "provider": {
-            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
-            "name": "AHB Insurance Solutions",
-            "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389",
-            "email": "andreshbozo@ahbinsurancesolutions.com",
-            "priceRange": "Free Consultation",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Apt H103",
-                "addressLocality": "Gainesville",
-                "addressRegion": "FL",
-                "postalCode": "32607",
-                "addressCountry": "US"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#organization"
         },
         "broker": {
-            "@type": "Person",
-            "name": "Andres H. Bozo",
-            "jobTitle": "Licensed Life & Medicare Insurance Broker",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#person"
         },
         "areaServed": {
             "@type": "State",

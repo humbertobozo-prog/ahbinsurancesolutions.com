@@ -1,4 +1,5 @@
 import { BLOG_POSTS } from "./constants/blogPosts";
+import { faqsEs, faqsEn } from "./constants/faqData";
 
 interface SeoMetaData {
   title: string;
@@ -538,45 +539,51 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 6. FAQ Page
   else if (cleanPath === "/faq" || cleanPath === "/es/preguntas-frecuentes") {
     title = isEs 
-      ? "Preguntas Frecuentes sobre Medicare y Seguros en Florida | AHB Insurance" 
-      : "Medicare & Insurance FAQ Florida | AHB Insurance Solutions";
+      ? "Preguntas Frecuentes sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades | AHB" 
+      : "Medicare, Final Expense, Life Insurance, IUL & Annuities FAQ | AHB Solutions";
     description = isEs 
-      ? "Respuestas claras a sus dudas sobre Medicare Suplementario, Gastos Finales, IUL y seguro de vida en Florida. Corredor independiente Andrés H. Bozo." 
-      : "Clear answers to your questions about Medicare Supplement, Final Expense, IUL, and life insurance in Florida. Independent broker Andres H. Bozo.";
+      ? "Respuestas completas a más de 30 dudas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, Seguro de Vida, IUL y Anualidades en Florida con el broker Andrés H. Bozo." 
+      : "Comprehensive answers to 30+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, Life Insurance, IUL, and Annuities with licensed broker Andres H. Bozo.";
 
-    if (isEs) {
-      bodyOutline = `
-        <header>
-          <h1>${title}</h1>
-          <p>${description}</p>
-        </header>
-        <section>
-          <h2>Preguntas Frecuentes Respondidas</h2>
+    const activeFaqs = isEs ? faqsEs : faqsEn;
+    const categoryTitles: Record<string, { en: string; es: string }> = {
+      'medicare': { en: 'Medicare & Medigap Questions', es: 'Preguntas sobre Medicare y Medigap' },
+      'final-expense': { en: 'Final Expense & Burial Insurance', es: 'Gastos Finales y Seguro de Entierro' },
+      'life-insurance': { en: 'Term & Whole Life Insurance', es: 'Seguro de Vida a Término y Entera' },
+      'iul': { en: 'Indexed Universal Life (IUL) & Retirement', es: 'Vida Universal Indexada (IUL) y Jubilación' },
+      'annuities': { en: 'Fixed & Indexed Annuities', es: 'Anualidades Fijas e Indexadas' },
+      'general': { en: 'General Broker & Consultation Process', es: 'Proceso de Consulta y Broker Independiente' }
+    };
+
+    const categories = ['medicare', 'final-expense', 'life-insurance', 'iul', 'annuities', 'general'] as const;
+
+    const faqSectionsHtml = categories.map(cat => {
+      const catFaqs = activeFaqs.filter(f => f.category === cat);
+      const catTitle = isEs ? categoryTitles[cat].es : categoryTitles[cat].en;
+      return `
+        <section class="faq-category-section" style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem;">${escapeHtml(catTitle)}</h2>
           <dl>
-            <dt>¿Qué es un plan Suplementario de Medicare (Medigap)?</dt>
-            <dd>Es una póliza vendida por compañías privadas para cubrir los "vacíos" de costos del Medicare Original, como coseguros del 20% y copagos de hospital.</dd>
-            <dt>¿Cuánto cuesta un seguro de Gastos Finales?</dt>
-            <dd>Las primas de Gastos Finales varían según la edad, historial de salud, consumo de tabaco, monto de cobertura, suscripción médica y la compañía aseguradora específica.</dd>
+            ${catFaqs.map(item => `
+              <div class="faq-item" style="margin-bottom: 1.25rem;">
+                <dt style="font-weight: 700; font-size: 1.05rem; color: #1e293b; margin-bottom: 0.35rem;">${escapeHtml(item.q)}</dt>
+                <dd style="color: #475569; line-height: 1.6; margin-left: 0;">${escapeHtml(item.a)}</dd>
+              </div>
+            `).join('')}
           </dl>
         </section>
       `;
-    } else {
-      bodyOutline = `
-        <header>
-          <h1>${title}</h1>
-          <p>${description}</p>
-        </header>
-        <section>
-          <h2>Frequently Asked Questions & Answers</h2>
-          <dl>
-            <dt>What is a Medicare Supplement Plan (Medigap)?</dt>
-            <dd>Medigap is extra private health insurance that helps pay standard gaps in Original Medicare, like the 20% outpatient coinsurance and hospital deductibles.</dd>
-            <dt>How much does Final Expense life insurance cost?</dt>
-            <dd>Final Expense premiums vary based on age, health history, tobacco use, coverage amount, underwriting, and the specific insurance carrier.</dd>
-          </dl>
-        </section>
-      `;
-    }
+    }).join('\n');
+
+    bodyOutline = `
+      <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2rem; font-weight: 900; color: #0f172a; margin-bottom: 0.75rem;">${escapeHtml(title)}</h1>
+        <p style="font-size: 1.1rem; color: #475569; line-height: 1.6;">${escapeHtml(description)}</p>
+      </header>
+      <main>
+        ${faqSectionsHtml}
+      </main>
+    `;
   }
 
   // 7. About Us & Broker Andres Bozo Page
@@ -1084,13 +1091,11 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "description": "Licensed insurance agency specializing in Medicare Supplements, Advantage Plans, Final Expense Life Insurance, and Indexed Universal Life (IUL).",
     "telephone": "+1-352-225-8389",
     "email": "andreshbozo@ahbinsurancesolutions.com",
-    "priceRange": "Free Consultation",
     "identifier": {
       "@type": "PropertyValue",
       "name": "NPN",
       "value": "21228432"
     },
-    "taxID": "21228432",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "5500 SW Archer Road, Apt H103",
@@ -1269,10 +1274,38 @@ export function generateJsonLd(metadata: SeoMetaData): object {
         { "@type": "City", "name": "Gainesville" },
         { "@type": "AdministrativeArea", "name": "Alachua County" },
         { "@type": "City", "name": "Archer" },
-        { "@type": "Newberry", "name": "Newberry" },
+        { "@type": "City", "name": "Newberry" },
         { "@type": "City", "name": "High Springs" }
       ],
       "description": metadata.description
+    });
+  } else if (
+    cleanPath === "/annuities-florida" || 
+    cleanPath === "/es/anualidades-florida" ||
+    cleanPath === "/annuities" ||
+    cleanPath === "/es/anualidades"
+  ) {
+    graph.push({
+      "@type": ["Service", "FinancialProduct"],
+      "name": isEs ? "Anualidades Fijas e Indexadas en Florida (FIA & MYGA)" : "Florida Fixed & Indexed Annuities (FIA & MYGA)",
+      "serviceType": "Retirement Annuity Planning & Wealth Preservation",
+      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "areaServed": { "@type": "State", "name": "Florida" },
+      "description": metadata.description
+    });
+  } else if (cleanPath === "/faq" || cleanPath === "/es/preguntas-frecuentes") {
+    const activeFaqs = isEs ? faqsEs : faqsEn;
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      "mainEntity": activeFaqs.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
     });
   }
 

@@ -48,39 +48,17 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
     ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
     : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
 
-  const localBusinessSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "InsuranceAgency", "FinancialService"],
-    "@id": "https://www.ahbinsurancesolutions.com/#organization",
-    "name": "AHB Insurance Solutions - Gainesville",
-    "legalName": "AHB Insurance Solutions LLC",
-    "url": canonicalUrl,
-    "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
-    "telephone": "+1-352-225-8389",
-    "email": "andreshbozo@ahbinsurancesolutions.com",
-    "priceRange": "Free Consultation",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5500 SW Archer Road, Apt H103",
-      "addressLocality": "Gainesville",
-      "addressRegion": "FL",
-      "postalCode": "32607",
-      "addressCountry": "US"
+    "@type": "Service",
+    "name": isEs ? "Broker de Seguros en Gainesville, FL" : "Gainesville, FL Insurance Broker Services",
+    "serviceType": "Independent Insurance Brokerage",
+    "provider": {
+      "@id": "https://www.ahbinsurancesolutions.com/#organization"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.601551,
-      "longitude": -82.403518
+    "broker": {
+      "@id": "https://www.ahbinsurancesolutions.com/#person"
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:00",
-        "closes": "20:00"
-      }
-    ],
     "areaServed": [
       { "@type": "City", "name": "Gainesville" },
       { "@type": "AdministrativeArea", "name": "Alachua County" },
@@ -93,16 +71,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
       { "@type": "City", "name": "Waldo" },
       { "@type": "State", "name": "Florida" }
     ],
-    "founder": {
-      "@type": "Person",
-      "name": "Andres H. Bozo",
-      "jobTitle": isEs ? "Broker de Seguros Licenciado en Florida" : "Licensed Florida Insurance Broker",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "NPN",
-        "value": "21228432"
-      }
-    }
+    "description": pageDescription
   };
 
   const breadcrumbSchema = {
@@ -198,7 +167,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         enUrl={enUrl}
         esUrl={esUrl}
         language={language}
-        schema={[localBusinessSchema, breadcrumbSchema, faqSchema]}
+        schema={[serviceSchema, breadcrumbSchema, faqSchema]}
       />
 
       {/* Breadcrumbs Navigation Bar */}
@@ -265,8 +234,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
 
             <p className="text-base md:text-lg text-slate-200 leading-relaxed font-normal mb-8 max-w-3xl">
               {isEs 
-                ? "Asesoría independiente, ética y personalizada en Gainesville y todo el Condado de Alachua. Comparamos objetivamente más de 80 aseguradoras líderes para Suplementos de Medicare (Medigap), Gastos Finales, Seguro de Vida IUL y Anualidades. Acceso sin restricciones a UF Health Shands y HCA Florida sin tarifas de corretaje." 
-                : "Local independent insurance brokerage headquartered on SW Archer Road in Gainesville, FL. We compare 80+ top-rated national carriers for Medicare Supplements (Medigap), Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities with zero broker fees. Unrestricted access to UF Health Shands Hospital."}
+                ? "Asesoría independiente, ética y personalizada en Gainesville y todo el Condado de Alachua. Comparamos objetivamente entre múltiples aseguradoras líderes y reconocidas a nivel nacional para Suplementos de Medicare (Medigap), Gastos Finales, Seguro de Vida IUL y Anualidades. Libertad para atenderse en UF Health Shands y HCA Florida, sin tarifas de corretaje." 
+                : "Local independent insurance brokerage headquartered on SW Archer Road in Gainesville, FL. We compare multiple top-rated national carriers for Medicare Supplements (Medigap), Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities with zero broker fees. Freedom of access to UF Health Shands Hospital."}
             </p>
 
             {/* Direct CTAs & Local Phone */}
@@ -300,7 +269,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                <span>{isEs ? "80+ Aseguradoras" : "80+ Top Carriers"}</span>
+                <span>{isEs ? "Aseguradoras Líderes" : "Top National Carriers"}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
@@ -531,10 +500,10 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                       <span>{isEs ? "Ventajas de Medigap (Plan G / Plan N)" : "Medigap Plan G & Plan N Advantages"}</span>
                     </h4>
                     <ul className="text-sm space-y-2 text-slate-600">
-                      <li>• {isEs ? "Libertad total para atenderse en UF Health Shands sin referidos." : "Complete freedom to consult any doctor at UF Health Shands with zero referrals."}</li>
-                      <li>• {isEs ? "Válido en cualquier médico u hospital de EE.UU. que acepte Medicare." : "Nationwide coverage at any clinic or hospital accepting Original Medicare."}</li>
-                      <li>• {isEs ? "Sin autorizaciones previas ni rechazos de tratamientos médicos." : "No HMO prior authorization delays for scans, surgeries, or therapies."}</li>
-                      <li>• {isEs ? "Costos predecibles: el Plan G cubre el 100% tras el deducible de Parte B." : "Predictable costs: Plan G covers 100% of out-of-pocket costs after the Part B deductible."}</li>
+                      <li>• {isEs ? "Flexibilidad para atenderse en UF Health Shands sin necesidad de referidos de médico primario (sujeto a aceptación de Medicare)." : "Freedom to consult doctors at UF Health Shands without primary care referrals (subject to Medicare assignment)."}</li>
+                      <li>• {isEs ? "Válido con cualquier médico u hospital a nivel nacional que acepte Medicare Original y la asignación correspondiente." : "Nationwide access with any healthcare provider or hospital accepting Original Medicare and assignment."}</li>
+                      <li>• {isEs ? "Sin requisitos de autorizaciones previas de redes HMO para procedimientos médicamente necesarios cubiertos por Medicare." : "No HMO network prior authorization barriers for medically necessary procedures covered under Medicare."}</li>
+                      <li>• {isEs ? "Costos predecibles: el Plan G cubre los costos de coseguro tras el deducible anual de Parte B." : "Predictable costs: Plan G covers out-of-pocket coinsurance after the annual Part B deductible."}</li>
                     </ul>
                   </div>
 
@@ -620,9 +589,9 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                       {isEs ? "Aspectos Clave de la Póliza" : "Key Policy Highlights"}
                     </h4>
                     <ul className="text-sm space-y-2 text-slate-600">
-                      <li>• <strong>{isEs ? "Beneficio en Efectivo:" : "Cash Benefit:"}</strong> $5,000 {isEs ? "a" : "to"} $35,000.</li>
-                      <li>• <strong>{isEs ? "Primas Congeladas:" : "Locked Premiums:"}</strong> {isEs ? "Su cuota mensual jamás aumentará con la edad." : "Your monthly payment is contractually locked for life."}</li>
-                      <li>• <strong>{isEs ? "Sin Examen Médico:" : "No Medical Exam:"}</strong> {isEs ? "Emisión simplificada basada en preguntas de salud." : "Simplified issue based on health questions, no needles or doctor visits."}</li>
+                      <li>• <strong>{isEs ? "Beneficio por Fallecimiento:" : "Death Benefit:"}</strong> {isEs ? "De $5,000 a $35,000 desembolsados a sus beneficiarios tras la aprobación del reclamo." : "$5,000 to $35,000 disbursed to designated beneficiaries upon claim approval."}</li>
+                      <li>• <strong>{isEs ? "Primas Niveladas:" : "Level Premiums:"}</strong> {isEs ? "Primas niveladas que no aumentan con la edad, sujetas a las condiciones de la póliza y al pago oportuno." : "Level premiums that do not increase with age, subject to contract terms and timely payment."}</li>
+                      <li>• <strong>{isEs ? "Sin Examen Médico Tradicional:" : "Simplified Underwriting:"}</strong> {isEs ? "Emisión simplificada basada en cuestionario de salud y verificación Rx, según la aseguradora." : "Simplified issue based on health questions and prescription checks, depending on carrier."}</li>
                       <li>• <strong>{isEs ? "Fondos Libres:" : "Unrestricted Funds:"}</strong> {isEs ? "Para funeral, deudas pendientes o legado familiar." : "Can be used for burial, cremation, medical bills, or family legacy."}</li>
                     </ul>
                   </div>
@@ -746,12 +715,12 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
 
                   <div>
                     <h4 className="font-bold text-slate-900 mb-2">
-                      {isEs ? "Ingreso Vitalicio Garantizado" : "Guaranteed Lifetime Income Riders"}
+                      {isEs ? "Cláusulas de Ingreso Vitalicio (Income Riders)" : "Guaranteed Lifetime Income Riders"}
                     </h4>
                     <p className="text-sm text-slate-600">
                       {isEs 
-                        ? "Convierta parte de sus ahorros en un sueldo mensual seguro de por vida que usted jamás podrá sobrevivir, sin importar cuánto viva el mercado."
-                        : "Transform a portion of your savings into a dependable monthly paycheck for life that you cannot outlive, regardless of market conditions."}
+                        ? "Opciones contractuales que permiten generar un flujo de ingresos predecibles durante el retiro, sujetas a los términos del contrato y a la solvencia de la aseguradora emisora."
+                        : "Contractual rider options designed to provide predictable retirement income disbursements, subject to policy terms and the claims-paying ability of the issuing carrier."}
                     </p>
                   </div>
                 </div>
@@ -919,8 +888,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
 
               <p className="text-slate-300 text-sm md:text-base leading-relaxed">
                 {isEs 
-                  ? "A diferencia de los agentes cautivos que solo pueden ofrecer los productos de una única compañía, Andrés Bozo es un corredor independiente regulado por el Departamento de Servicios Financieros de Florida. Evaluamos y comparamos objetivamente opciones entre más de 80 compañías líderes (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge y más) para garantizar la póliza que mejor se adapta a su presupuesto, salud y metas familiares."
-                  : "Unlike captive agents obligated to sell only one company's policies, Andres Bozo is an independent insurance broker regulated by the Florida Department of Financial Services. We compare plans across 80+ top carriers (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge, and more) to deliver the right coverage tailored to your budget and family goals."}
+                  ? "A diferencia de los agentes cautivos que solo pueden ofrecer los productos de una única compañía, Andrés Bozo es un corredor independiente regulado por el Departamento de Servicios Financieros de Florida. Evaluamos y comparamos objetivamente opciones entre múltiples compañías líderes y reconocidas (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge y más) para ayudarle a encontrar la póliza adecuada a su presupuesto, salud y metas familiares."
+                  : "Unlike captive agents obligated to sell only one company's policies, Andres Bozo is an independent insurance broker regulated by the Florida Department of Financial Services. We evaluate options across multiple top-rated national carriers (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge, and more) to help you find coverage aligned with your budget and family goals."}
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs md:text-sm text-slate-200">
@@ -1016,8 +985,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed pl-7">
                 {isEs 
-                  ? "No, jamás. Nuestros servicios de consultoría, análisis comparativo de más de 80 aseguradoras y trámite de pólizas son 100% gratuitos para usted. Las compañías de seguros nos compensan directamente bajo tarifas reguladas por el estado de Florida, por lo que su prima es exactamente la misma." 
-                  : "No, never. Our independent broker services, rate comparisons across 80+ top carriers, and policy enrollments are 100% free of charge. Insurance carriers compensate us directly under state-regulated rates."}
+                  ? "No, jamás. Nuestros servicios de consultoría, análisis comparativo entre múltiples aseguradoras líderes y trámite de pólizas son 100% gratuitos para usted. Las compañías de seguros nos compensan directamente bajo tarifas reguladas por el estado de Florida, por lo que su prima es exactamente la misma." 
+                  : "No, never. Our independent broker services, rate comparisons across top national carriers, and policy enrollments are 100% free of charge to you. Insurance carriers compensate us directly under state-regulated rates."}
               </p>
             </div>
 

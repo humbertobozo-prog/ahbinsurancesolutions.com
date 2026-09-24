@@ -42,13 +42,18 @@
   ],
   "redirects": [
     {
-      "source": "/es/anualidades-florida",
-      "destination": "/es/iul-jubilacion",
+      "source": "/annuities",
+      "destination": "/annuities-florida",
+      "permanent": true
+    },
+    {
+      "source": "/es/anualidades",
+      "destination": "/es/anualidades-florida",
       "permanent": true
     },
     {
       "source": "/anualidades-florida",
-      "destination": "/es/iul-jubilacion",
+      "destination": "/es/anualidades-florida",
       "permanent": true
     },
     {

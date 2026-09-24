@@ -77,35 +77,10 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         "category": "HealthInsurance",
         "description": description,
         "provider": {
-            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
-            "name": "AHB Insurance Solutions",
-            "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389",
-            "email": "andreshbozo@ahbinsurancesolutions.com",
-            "priceRange": "Free Consultation",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Apt H103",
-                "addressLocality": "Gainesville",
-                "addressRegion": "FL",
-                "postalCode": "32607",
-                "addressCountry": "US"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#organization"
         },
         "broker": {
-            "@type": "Person",
-            "name": "Andres H. Bozo",
-            "jobTitle": "Licensed Medicare & Life Insurance Broker",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#person"
         },
         "areaServed": {
             "@type": "State",

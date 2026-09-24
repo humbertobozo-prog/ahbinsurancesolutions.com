@@ -101,35 +101,10 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         "category": "RetirementPlanning",
         "description": description,
         "provider": {
-            "@type": ["InsuranceAgency", "Organization", "LocalBusiness"],
-            "name": "AHB Insurance Solutions",
-            "url": "https://www.ahbinsurancesolutions.com/",
-            "telephone": "+1-352-225-8389",
-            "email": "andreshbozo@ahbinsurancesolutions.com",
-            "priceRange": "Free Consultation",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Apt H103",
-                "addressLocality": "Gainesville",
-                "addressRegion": "FL",
-                "postalCode": "32607",
-                "addressCountry": "US"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#organization"
         },
         "broker": {
-            "@type": "Person",
-            "name": "Andres H. Bozo",
-            "jobTitle": "Licensed Florida Insurance & Annuity Broker",
-            "identifier": {
-                "@type": "PropertyValue",
-                "name": "NPN",
-                "value": "21228432"
-            }
+            "@id": "https://www.ahbinsurancesolutions.com/#person"
         },
         "areaServed": {
             "@type": "State",
@@ -261,8 +236,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Una anualidad fija es un contrato legalmente vinculante entre usted y una compañía de seguros de vida con licencia en Florida. Su propósito principal es proteger el capital depositado, acumular intereses compuestos con diferimiento fiscal completo y ofrecer la opción de convertir los ahorros en un flujo garantizado y predecible de ingresos para la jubilación.' 
-                                : 'A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary objective is to safeguard hard-earned principal, compound interest 100% tax-deferred, and provide contractual mechanisms to convert accumulated savings into a guaranteed, predictable stream of retirement income.'}
+                                ? 'Una anualidad fija es un contrato emitido por una compañía de seguros de vida autorizada en Florida. Su objetivo principal es ofrecer una alternativa conservadora diseñada para proteger el capital contra caídas bursátiles, acumular intereses con diferimiento fiscal y brindar opciones contractuales para convertir ahorros en un flujo predecible de ingresos de jubilación, sujeto a los términos del contrato y a la solvencia de la aseguradora.' 
+                                : 'A fixed annuity is a contract issued by a state-licensed life insurance company. Its primary objective is to provide a conservative vehicle designed to protect principal against direct market declines, compound interest on a tax-deferred basis, and offer contractual mechanisms to convert accumulated savings into a predictable stream of retirement income, subject to contract terms and insurer claims-paying ability.'}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                             <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
@@ -281,8 +256,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                 </h3>
                                 <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Usted decide cómo y cuándo acceder a su dinero: mediante retiros anuales libres de penalización, un retiro total al vencimiento o una pensión vitalicia que no se puede agotar.' 
-                                        : 'You choose how to access your assets: via penalty-free annual withdrawals, lump-sum payout at term maturity, or lifetime income disbursements that cannot be outlived.'}
+                                        ? 'Usted decide cómo y cuándo acceder a su dinero: mediante retiros anuales libres de penalización (según contrato), retiro al vencimiento o una opción de ingresos vitalicios respaldada por la póliza.' 
+                                        : 'You choose how to access your assets: via penalty-free annual withdrawals (subject to policy provisions), lump-sum at term maturity, or contractual lifetime income options designed to provide disbursements for life.'}
                                 </p>
                             </div>
                         </div>
@@ -322,8 +297,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Una MYGA es una variante de anualidad fija en la que la aseguradora fija por contrato una tasa de interés invariable durante todo el plazo acordado (habitualmente 3, 5, 7 o 10 años). A diferencia de las anualidades tradicionales, la tasa no se renegocia ni cambia cada año: el rendimiento pactado el día de la firma se mantiene idéntico hasta el último día del contrato.' 
-                                : 'A Multi-Year Guarantee Annuity (MYGA) is a specialized fixed annuity where the insurance carrier locks in a contractually fixed, unchanging interest rate for the entirety of a committed term (commonly 3, 5, 7, or 10 years). Unlike traditional fixed products, the rate does not fluctuate or reset annually—the agreed yield on day one compounds steadily through the final day of the term.'}
+                                ? 'Una MYGA es una variante de anualidad fija en la que la aseguradora fija por contrato una tasa de interés garantizada durante todo el plazo acordado (habitualmente 3, 5, 7 o 10 años). A diferencia de las anualidades con tasas renovables anualmente, el rendimiento pactado se garantiza contractualmente para la duración del período comprometido, sujeto a la solvencia financiera de la aseguradora.' 
+                                : 'A Multi-Year Guarantee Annuity (MYGA) is a specialized fixed annuity where the insurance carrier contractually guarantees a fixed interest rate for the duration of a committed term (commonly 3, 5, 7, or 10 years). Unlike products with annual renewal rates, the agreed yield is locked for the multi-year period, backed by the financial strength of the issuing insurer.'}
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                             <div className="bg-white p-4 rounded-xl border border-blue-100 text-center shadow-xs">
@@ -331,8 +306,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                 <span className="text-xs text-gray-500 font-semibold">{isEs ? 'Plazos Contractuales' : 'Contract Terms'}</span>
                             </div>
                             <div className="bg-white p-4 rounded-xl border border-blue-100 text-center shadow-xs">
-                                <span className="block font-black text-emerald-700 text-xl">100% Garantizada</span>
-                                <span className="text-xs text-gray-500 font-semibold">{isEs ? 'Tasa Fija por Escrito' : 'Locked Yield in Writing'}</span>
+                                <span className="block font-black text-emerald-700 text-xl">Tasa Garantizada</span>
+                                <span className="text-xs text-gray-500 font-semibold">{isEs ? 'Fija por Contrato' : 'Contractually Locked'}</span>
                             </div>
                             <div className="bg-white p-4 rounded-xl border border-blue-100 text-center shadow-xs">
                                 <span className="block font-black text-primary text-xl">Diferido de IRS</span>
@@ -359,13 +334,13 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         <div className="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs md:text-sm text-amber-950 leading-relaxed font-medium">
                             <strong className="text-primary">{isEs ? 'Punto Clave de Cumplimiento:' : 'Key Regulatory Distinction:'} </strong>
                             {isEs 
-                                ? 'Usted NO invierte directamente en acciones, fondos mutuos ni en el mercado de valores. Los fondos están custodiados en las reservas seguras de la aseguradora. La compañía utiliza una pequeña fracción de los rendimientos de bonos para adquirir opciones sobre el índice, lo que permite acreditar intereses cuando el índice sube sin poner en riesgo su capital cuando baja.' 
-                                : 'You are NOT directly invested in equities, stock portfolios, or mutual funds. Your assets are housed within the insurer statutory general account. The carrier utilizes a portion of conservative bond yields to purchase index options, crediting interest when the benchmark rises while completely protecting your principal when it drops.'}
+                                ? 'Usted NO invierte directamente en acciones, fondos mutuos ni en el mercado de valores. Los fondos están custodiados en las reservas de la aseguradora. La compañía utiliza una porción de sus rendimientos de inversión para adquirir opciones sobre el índice, lo que permite acreditar intereses cuando el índice sube mientras protege el capital principal de pérdidas directas del mercado, sujeto a los términos del contrato y a la solvencia de la aseguradora.' 
+                                : 'You are NOT directly invested in equities, stock portfolios, or mutual funds. Your assets are housed within the insurer general account. The carrier utilizes investment yields to purchase index options, crediting interest when the benchmark rises while protecting principal against direct market downturns, subject to contract provisions and insurer claims-paying ability.'}
                         </div>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'El piso contractual del 0% garantiza que en los años en que el índice de referencia caiga (incluso caídas severas del 20% o 35%), su cuenta recibirá un crédito de interés del 0% en lugar de una pérdida. Su capital principal y todas las ganancias previamente acumuladas permanecen intactas.' 
-                                : 'The contractual 0% floor guarantees that during down-market years (even severe 20% to 35% equity plunges), your policy is credited with 0% interest rather than a loss. Your core principal and all past locked-in gains remain completely secure.'}
+                                ? 'El piso contractual del 0% estipula que en los períodos en que el índice de referencia registre caídas, su cuenta recibirá un crédito de interés del 0% en lugar de un rendimiento negativo. Las ganancias previamente acreditadas se consolidan según las reglas de reajuste del contrato, sujetas a posibles deducciones por comisiones de cláusulas o rescate aplicables.' 
+                                : 'The contractual 0% floor provides that during down-market periods, your policy receives a 0% interest credit rather than a negative market return. Subject to contract terms, optional rider fees, and insurer claims-paying ability, previously credited gains are locked in and protected from future market index declines.'}
                         </p>
                     </section>
 
@@ -506,40 +481,40 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </h2>
                         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                             {isEs 
-                                ? 'Existe el mito común de que los fondos en una anualidad están totalmente bloqueados. En realidad, los contratos modernos en Florida ofrecen múltiples mecanismos de liquidez para atender imprevistos:' 
-                                : 'A common misconception suggests annuity funds are permanently locked away. In reality, modern Florida contracts incorporate extensive liquidity provisions to accommodate unexpected lifestyle needs:'}
+                                ? 'A diferencia de lo que a veces se piensa, las anualidades fijas modernas en Florida suelen incorporar mecanismos de liquidez contractuales para atender necesidades imprevistas, dependiendo del contrato específico y de la aseguradora:' 
+                                : 'Depending on the contract and carrier, modern Florida fixed annuities provide structured liquidity provisions to accommodate unexpected lifestyle needs:'}
                         </p>
                         <div className="space-y-3">
                             <div className="p-4 bg-white rounded-xl border border-gray-200 shadow-xs flex items-start gap-3">
                                 <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-black flex items-center justify-center text-xs shrink-0 mt-0.5">10%</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Retiro Anual Libre de Penalización (Penalty-Free Withdrawal)' : 'Penalty-Free Annual Withdrawals'}</h3>
+                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Retiro Anual Libre de Penalización (Según Contrato)' : 'Penalty-Free Annual Withdrawals (Where Applicable)'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'La mayoría de los contratos permiten retirar hasta un 10% del valor acumulado de la cuenta cada año a partir del segundo año (o tras 12 meses) sin cargos de rescate de la aseguradora.' 
-                                            : 'Most contracts allow withdrawals of up to 10% of total accumulated contract value each year after the first policy anniversary without carrier surrender charges.'}
+                                            ? 'Muchos contratos permiten retirar hasta un 10% del valor acumulado de la cuenta por año (típicamente a partir del segundo año o tras 12 meses) sin cargos de rescate de la aseguradora, sujeto a las disposiciones de la póliza.' 
+                                            : 'Many contracts permit annual penalty-free withdrawals (commonly up to 10% of accumulated contract value after the first contract year) without carrier surrender charges, subject to contract terms.'}
                                     </p>
                                 </div>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200 shadow-xs flex items-start gap-3">
                                 <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-black flex items-center justify-center text-xs shrink-0 mt-0.5">RMD</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Exención para Distribuciones Mínimas Requeridas (RMD Friendly)' : 'RMD Friendly for Qualified Accounts'}</h3>
+                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Distribuciones Mínimas Requeridas (RMD Friendly)' : 'RMD Friendly for Qualified Accounts'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'Si su anualidad está dentro de una cuenta IRA tradicional o 401(k) rollover, las aseguradoras exoneran los cargos de rescate si su RMD obligatorio por el IRS excede el 10% libre.' 
-                                            : 'For Traditional IRA and 401(k) rollovers, insurers automatically waive surrender charges on IRS-mandated RMD amounts, even if they exceed 10%.'}
+                                            ? 'En contratos mantenidos dentro de cuentas calificadas (IRA tradicional o 401k rollover), muchas aseguradoras exoneran los cargos de rescate para montos correspondientes a RMDs obligatorios por el IRS.' 
+                                            : 'Under many carrier contracts, surrender charges are waived for IRS-mandated Required Minimum Distributions (RMDs) on qualified IRA and 401(k) rollovers, subject to policy provisions.'}
                                     </p>
                                 </div>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200 shadow-xs flex items-start gap-3">
                                 <span className="w-8 h-8 rounded-full bg-purple-100 text-purple-800 font-black flex items-center justify-center text-xs shrink-0 mt-0.5">🏥</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Cláusulas de Hogar de Ancianos y Enfermedad Terminal' : 'Nursing Home & Terminal Illness Waivers'}</h3>
+                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Cláusulas de Enfermería y Enfermedad Terminal' : 'Nursing Home & Terminal Illness Waivers'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'Muchos contratos eximen el 100% de los cargos por rescate si el titular es ingresado a un centro de enfermería especializada o diagnosticado con una condición terminal.' 
-                                            : 'Many contracts permit 100% penalty-free access to total accumulated value if confined to a qualified skilled nursing facility or diagnosed with a terminal condition.'}
+                                            ? 'Algunos contratos incorporan cláusulas adicionales que permiten acceder a fondos sin penalización de rescate ante internación en centros de enfermería calificados o diagnóstico de enfermedad terminal, sujeto a las condiciones contractuales y aprobación estatal.' 
+                                            : 'Some contracts offer waiver riders that, subject to qualifying medical conditions and state availability, permit penalty-free access to contract value in the event of qualified nursing confinement or terminal illness.'}
                                     </p>
                                 </div>
                             </div>
@@ -609,11 +584,11 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
-                                <h3 className="font-bold text-primary text-sm">{isEs ? '1. Diferimiento Fiscal del 100%' : '1. 100% Tax Deferral'}</h3>
+                                <h3 className="font-bold text-primary text-sm">{isEs ? '1. Crecimiento con Diferimiento Fiscal' : '1. Tax-Deferred Compounding'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Sus fondos se benefician del triple interés compuesto: gana interés sobre su principal, interés sobre el interés acumulado y ganancias sobre los dólares que no tuvo que entregar al IRS en impuestos anuales.' 
-                                        : 'You benefit from triple compounding: interest on principal, interest on interest, and interest on tax dollars that remain in the account compounding rather than paid to the IRS annually.'}
+                                        ? 'Los intereses acumulados no tributan anualmente mientras permanezcan en el contrato. Al momento del retiro, las ganancias se gravan como ingreso ordinario y los retiros antes de los 59½ años pueden conllevar una penalidad del 10% del IRS.' 
+                                        : 'Accumulated interest compounds tax-deferred while inside the contract. Upon withdrawal, earnings are taxed as ordinary income, and withdrawals prior to age 59½ may be subject to a 10% IRS penalty.'}
                                 </p>
                             </div>
                             <div className="p-5 bg-light-gray rounded-2xl border border-gray-200 space-y-2">
