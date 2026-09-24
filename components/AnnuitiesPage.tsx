@@ -28,7 +28,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
     const faqs = isEs ? [
         {
             q: "¿Qué es una anualidad fija y cómo protege el capital en Florida?",
-            a: "Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. A diferencia de las inversiones en bolsa, el capital está respaldado por las reservas estatutarias y la cartera de bonos de grado de inversión de la aseguradora. El contrato ofrece un crecimiento de intereses compuesto con diferimiento fiscal del 100% y un piso contractual que protege su saldo contra cualquier pérdida de mercado."
+            a: "Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. A diferencia de las inversiones en bolsa, el capital está respaldado por las reservas estatutarias y la cartera de bonos de grado de inversión de la aseguradora. El contrato ofrece un crecimiento de intereses compuesto con diferimiento fiscal y un piso contractual que, sujeto a los términos del contrato, cargos y método de acreditación, puede proteger su saldo contra pérdidas directas del mercado."
         },
         {
             q: "¿Cuál es la diferencia exacta entre una anualidad tradicional, una MYGA y una FIA?",
@@ -44,15 +44,15 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         },
         {
             q: "¿Qué sucede al vencer el plazo de una anualidad MYGA?",
-            a: "Al término del plazo contractual (por ejemplo, al concluir los 5 años), se abre una ventana de gracia de 30 días. Usted tiene tres alternativas: 1) Retirar la totalidad de su capital y ganancias en un pago único; 2) Realizar un intercambio 1035 libre de impuestos hacia una nueva anualidad con las tasas más competitivas del mercado en ese momento; o 3) Permitir que la póliza se renueve bajo la tasa vigente estipulada por la aseguradora."
+            a: "Al término del plazo contractual (por ejemplo, al concluir los 5 años), se abre una ventana de gracia de 30 días. Usted tiene tres alternativas: 1) Retirar la totalidad de su capital y ganancias en un pago único; 2) Realizar un intercambio calificado bajo la Sección 1035 del IRS hacia una nueva anualidad con las tasas más competitivas del mercado en ese momento; o 3) Permitir que la póliza se renueve bajo la tasa vigente estipulada por la aseguradora."
         },
         {
             q: "¿Cómo se comparan las anualidades con los Certificados de Depósito (CD) bancarios?",
-            a: "Los CD bancarios están respaldados por la FDIC hasta $250,000 por depositante y generan impuestos anuales ordinarios a través del Formulario 1099-INT. Las anualidades MYGA ofrecen diferimiento fiscal del 100%, están respaldadas por las reservas de la aseguradora y por la Asociación de Garantía de Seguros de Vida y Salud de Florida (FLAHIGA), permiten retiros parciales anuales del 10% sin penalización y pueden convertirse en ingresos vitalicios garantizados que no se agotan."
+            a: "Los CD bancarios están respaldados por la FDIC hasta $250,000 por depositante y generan impuestos anuales ordinarios a través del Formulario 1099-INT. Las anualidades MYGA ofrecen diferimiento fiscal, están respaldadas por las reservas de la aseguradora y por la Asociación de Garantía de Seguros de Vida y Salud de Florida (FLAHIGA), permiten retiros parciales anuales sujetos a términos del contrato y pueden convertirse en ingresos vitalicios garantizados que no se agotan."
         },
         {
-            q: "¿Qué es un intercambio libre de impuestos según la Sección 1035 del IRS?",
-            a: "La Sección 1035 del Código de Rentas Internas permite transferir fondos directamente de una anualidad existente (o el valor en efectivo de una póliza de seguro de vida) a una nueva anualidad sin generar un hecho imponible ni pagar impuestos en el momento del traspaso. Esto permite a los titulares modernizar contratos antiguos con tasas bajas a contratos contemporáneos con mejores rendimientos o beneficios en vida."
+            q: "¿Qué es un intercambio calificado según la Sección 1035 del IRS?",
+            a: "La Sección 1035 del Código de Rentas Internas permite transferir fondos directamente de una anualidad existente (o el valor en efectivo de una póliza de seguro de vida) a una nueva anualidad en un intercambio calificado, sujeto a las normas fiscales. Esto permite a los titulares modernizar contratos antiguos con tasas bajas a contratos contemporáneos con mejores rendimientos o beneficios en vida."
         },
         {
             q: "¿Cómo garantiza una anualidad un flujo de ingresos de por vida (Lifetime Income)?",
@@ -61,7 +61,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
     ] : [
         {
             q: "What is a fixed annuity and how does it protect retirement principal in Florida?",
-            a: "A fixed annuity is a legally binding contract issued by a state-licensed life insurance company. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio. The contract provides 100% tax-deferred compound interest growth and a contractual guarantee ensuring your balance is completely shielded from market downturns."
+            a: "A fixed annuity is a legally binding contract issued by a state-licensed life insurance company. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio. The contract provides tax-deferred compound interest growth and a contractual guarantee that, subject to contract terms, charges and crediting method, may protect your balance against direct market downturns."
         },
         {
             q: "What is the exact difference between a traditional fixed annuity, a MYGA, and an FIA?",
@@ -69,23 +69,23 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         },
         {
             q: "How does tax deferral work in fixed annuities?",
-            a: "With an annuity, you do not receive annual 1099-INT tax forms on accrued interest as long as funds remain within the contract. Money that would otherwise go toward annual income taxes stays in your account, generating triple compounding (interest on principal, interest on interest, and interest on tax savings). Income taxes are only paid when distributions are withdrawn."
+            a: "With an annuity, tax is deferred while funds remain within the contract, subject to applicable tax rules. Money that would otherwise go toward annual income taxes stays in your account, generating triple compounding (interest on principal, interest on interest, and interest on tax savings). Income taxes are only paid when distributions are withdrawn."
         },
         {
             q: "What liquidity options are available if I face an unexpected financial emergency?",
-            a: "Most modern Florida annuity contracts feature an annual penalty-free withdrawal provision, typically permitting withdrawals of up to 10% of your accumulated account value each year after the first contract anniversary. Furthermore, many contracts include waiver riders for nursing home confinement or terminal illness that grant 100% penalty-free access to your capital."
+            a: "Most modern Florida annuity contracts feature an annual penalty-free withdrawal provision, typically permitting withdrawals of up to a stated percentage of your accumulated account value each year, subject to contract terms. Furthermore, many contracts include waiver riders for nursing home confinement or terminal illness that may provide surrender-charge waivers under specified qualifying conditions."
         },
         {
             q: "What happens when a MYGA contract term matures?",
-            a: "When your contractual term ends (for example, at the end of a 5-year term), a 30-day window opens. You have three primary choices: 1) Take a full lump-sum distribution of your principal and earnings; 2) Execute an IRS Section 1035 tax-free exchange into a new annuity offering top market rates at that time; or 3) Allow the contract to automatically renew under the carrier's prevailing renewal rate."
+            a: "When your contractual term ends (for example, at the end of a 5-year term), a 30-day window opens. You have three primary choices: 1) Take a full lump-sum distribution of your principal and earnings; 2) Execute a qualifying IRS Section 1035 exchange into a new annuity offering top market rates at that time; or 3) Allow the contract to automatically renew under the carrier's prevailing renewal rate."
         },
         {
             q: "How do fixed annuities compare to bank Certificates of Deposit (CDs)?",
-            a: "Bank CDs are FDIC-insured up to $250,000 per depositor and generate taxable income annually reported on Form 1099-INT. Annuities grow 100% tax-deferred, are backed by insurer statutory reserves and the Florida Life and Health Insurance Guaranty Association (FLAHIGA), typically offer 10% penalty-free annual liquidity, and provide the option to convert funds into guaranteed lifetime retirement income that you cannot outlive."
+            a: "Bank CDs are FDIC-insured up to $250,000 per depositor and generate taxable income annually reported on Form 1099-INT. Annuities grow tax-deferred subject to applicable tax rules, are backed by insurer statutory reserves and the Florida Life and Health Insurance Guaranty Association (FLAHIGA), typically offer a penalty-free withdrawal provision subject to contract terms, and provide the option to convert funds into guaranteed lifetime retirement income that you cannot outlive."
         },
         {
-            q: "What is an IRS Section 1035 tax-free exchange?",
-            a: "Section 1035 of the Internal Revenue Code allows you to roll over funds directly from an existing annuity contract (or the cash value of a permanent life policy) into a new annuity without triggering a taxable event or paying tax penalties. This empowers Florida savers to upgrade older, low-yielding contracts to modern products with higher yields and superior living benefits."
+            q: "What is a qualifying IRS Section 1035 exchange?",
+            a: "Section 1035 of the Internal Revenue Code allows you to roll over funds directly from an existing annuity contract (or the cash value of a permanent life policy) into a new annuity as a qualifying exchange, subject to tax rules. This empowers Florida savers to upgrade older, low-yielding contracts to modern products with higher yields and superior living benefits."
         },
         {
             q: "How does an annuity establish guaranteed lifetime income?",
@@ -488,18 +488,18 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             <div className="p-4 bg-white rounded-xl border border-gray-200 shadow-xs flex items-start gap-3">
                                 <span className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-800 font-black flex items-center justify-center text-xs shrink-0 mt-0.5">10%</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Retiro Anual Libre de Penalización (Según Contrato)' : 'Penalty-Free Annual Withdrawals (Where Applicable)'}</h3>
+                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Retiros Libres de Penalización (Sujeto a Términos)' : 'Penalty-Free Withdrawals (Subject to Terms)'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'Muchos contratos permiten retirar hasta un 10% del valor acumulado de la cuenta por año (típicamente a partir del segundo año o tras 12 meses) sin cargos de rescate de la aseguradora, sujeto a las disposiciones de la póliza.' 
-                                            : 'Many contracts permit annual penalty-free withdrawals (commonly up to 10% of accumulated contract value after the first contract year) without carrier surrender charges, subject to contract terms.'}
+                                            ? 'Muchos contratos permiten retiros anuales libres de penalización hasta un porcentaje estipulado, sujeto a los términos del contrato y disposiciones de la póliza.' 
+                                            : 'Many contracts permit annual penalty-free withdrawals up to a stated percentage, subject to contract terms and policy provisions.'}
                                     </p>
                                 </div>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200 shadow-xs flex items-start gap-3">
                                 <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-800 font-black flex items-center justify-center text-xs shrink-0 mt-0.5">RMD</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Distribuciones Mínimas Requeridas (RMD Friendly)' : 'RMD Friendly for Qualified Accounts'}</h3>
+                                    <h3 className="font-bold text-primary text-sm">{isEs ? 'Distribuciones Mínimas Requeridas (Cumplimiento RMD)' : 'RMD Compliant for Qualified Accounts'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
                                             ? 'En contratos mantenidos dentro de cuentas calificadas (IRA tradicional o 401k rollover), muchas aseguradoras exoneran los cargos de rescate para montos correspondientes a RMDs obligatorios por el IRS.' 
@@ -638,7 +638,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                 <tbody className="divide-y divide-gray-200">
                                     <tr className="hover:bg-gray-50">
                                         <td className="p-3.5 md:p-4 font-semibold text-gray-900">{isEs ? 'Tratamiento Fiscal de Intereses' : 'Tax Treatment on Growth'}</td>
-                                        <td className="p-3.5 md:p-4 font-bold text-emerald-700 bg-emerald-50/40">{isEs ? 'Diferimiento fiscal del 100% (Cero 1099 anual)' : '100% Tax-Deferred (No annual 1099 tax)'}</td>
+                                        <td className="p-3.5 md:p-4 font-bold text-emerald-700 bg-emerald-50/40">{isEs ? 'Diferimiento fiscal del crecimiento mientras los fondos permanezcan en la anualidad, sujeto a las normas fiscales' : 'Tax-deferred growth while funds remain in the annuity, subject to applicable tax rules'}</td>
                                         <td className="p-3.5 md:p-4 text-gray-700">{isEs ? 'Tributable anualmente como ingreso ordinario (Form 1099-INT)' : 'Taxed annually as ordinary income via 1099-INT'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">

@@ -57,6 +57,31 @@
       "permanent": true
     },
     {
+      "source": "/es/localidades/gainesville-fl",
+      "destination": "/es/locations/gainesville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/gainesville-fl-insurance",
+      "destination": "/locations/gainesville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/es/seguros-gainesville-fl",
+      "destination": "/es/locations/gainesville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about-andres-bozo",
+      "permanent": true
+    },
+    {
+      "source": "/es/nosotros",
+      "destination": "/es/sobre-andres-bozo",
+      "permanent": true
+    },
+    {
       "source": "/andresbozoofi.png",
       "destination": "/andresbozoofi.webp",
       "permanent": true

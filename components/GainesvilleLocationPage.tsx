@@ -111,8 +111,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         "acceptedAnswer": {
           "@type": "Answer",
           "text": isEs 
-            ? "Sí. UF Health Shands Hospital y sus clínicas especializadas aceptan Medicare Original y pólizas suplementarias Medigap (como Plan G y Plan N). No requiere referidos de médico primario ni autorizaciones previas."
-            : "Yes. UF Health Shands Hospital and outpatient facilities accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N) without network restrictions or specialist referrals."
+            ? "Sí. UF Health Shands Hospital y sus clínicas especializadas aceptan Medicare Original y pólizas suplementarias Medigap (como Plan G y Plan N), sujeto a las reglas de Medicare y Medigap."
+            : "Yes. UF Health Shands Hospital and outpatient facilities accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N), subject to Medicare and Medigap rules."
         }
       },
       {
@@ -502,7 +502,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                     <ul className="text-sm space-y-2 text-slate-600">
                       <li>• {isEs ? "Flexibilidad para atenderse en UF Health Shands sin necesidad de referidos de médico primario (sujeto a aceptación de Medicare)." : "Freedom to consult doctors at UF Health Shands without primary care referrals (subject to Medicare assignment)."}</li>
                       <li>• {isEs ? "Válido con cualquier médico u hospital a nivel nacional que acepte Medicare Original y la asignación correspondiente." : "Nationwide access with any healthcare provider or hospital accepting Original Medicare and assignment."}</li>
-                      <li>• {isEs ? "Sin requisitos de autorizaciones previas de redes HMO para procedimientos médicamente necesarios cubiertos por Medicare." : "No HMO network prior authorization barriers for medically necessary procedures covered under Medicare."}</li>
+                      <li>• {isEs ? "Sujeto a las reglas de Medicare y Medigap para procedimientos cubiertos." : "Subject to Medicare and Medigap rules for covered procedures."}</li>
                       <li>• {isEs ? "Costos predecibles: el Plan G cubre los costos de coseguro tras el deducible anual de Parte B." : "Predictable costs: Plan G covers out-of-pocket coinsurance after the annual Part B deductible."}</li>
                     </ul>
                   </div>
@@ -953,8 +953,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed pl-7">
                 {isEs 
-                  ? "¡Sí! UF Health Shands Hospital y todas sus clínicas asociadas aceptan Medicare Original y pólizas suplementarias Medigap (como Plan G y Plan N). A diferencia de los planes Medicare Advantage HMO, usted no necesita referidos ni autorizaciones previas para ver a los especialistas de Shands." 
-                  : "Yes! UF Health Shands Hospital and its outpatient clinics accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N). Unlike Medicare Advantage HMOs, you do not need specialist referrals or prior authorization approvals."}
+                  ? "¡Sí! UF Health Shands Hospital y todas sus clínicas asociadas aceptan Medicare Original y pólizas suplementarias Medigap (como Plan G y Plan N), sujeto a las reglas de Medicare y Medigap." 
+                  : "Yes! UF Health Shands Hospital and its outpatient clinics accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N), subject to Medicare and Medigap rules."}
               </p>
             </div>
 

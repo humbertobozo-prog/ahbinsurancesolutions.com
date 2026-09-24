@@ -440,7 +440,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         
                         <p className="text-gray-700">
                             {isEs 
-                                ? 'AHB Insurance Solutions nació de una convicción clara: las familias y las personas mayores en Florida merecen una asesoría honesta, transparente y 100% independiente. A lo largo de los años, Andrés H. Bozo observó cómo muchos adultos mayores eran empujados hacia pólizas inadecuadas por agentes cautivos con cuotas de venta restrictivas, o se sentían desamparados ante la complejidad de los formularios de Medicare y los costos inesperados de funeral.' 
+                                ? 'AHB Insurance Solutions nació de una convicción clara: las familias y las personas mayores en Florida merecen una asesoría honesta, transparente e independiente. A lo largo de los años, Andrés H. Bozo observó cómo muchos adultos mayores eran empujados hacia pólizas inadecuadas por agentes cautivos con cuotas de venta restrictivas, o se sentían desamparados ante la complejidad de los formularios de Medicare y los costos inesperados de funeral.' 
                                 : 'AHB Insurance Solutions was built on a simple conviction: Florida seniors and working families deserve honest, transparent, and completely independent insurance guidance. Over the years, Andres H. Bozo saw firsthand how retirees were often steered into one-size-fits-all plans by captive agents bound to corporate quotas, leaving them exposed to unexpected medical bills or costly gaps in burial coverage.'}
                         </p>
 
@@ -469,7 +469,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             <ul className="space-y-3.5 text-xs text-gray-700 font-medium">
                                 <li className="flex items-start gap-2.5">
                                     <span className="text-emerald-600 font-bold text-base leading-none">✓</span>
-                                    <span><strong>{isEs ? 'Cero Costo para el Cliente:' : '100% Free Service:'}</strong> {isEs ? 'La asesoría y gestión es gratuita. Las tarifas están reguladas por el estado de Florida.' : 'Broker advisory is free to you. Rates are state-regulated by law.'}</span>
+                                    <span><strong>{isEs ? 'Servicio Sin Costo para el Cliente:' : 'Broker Service at No Cost to You:'}</strong> {isEs ? 'La asesoría y gestión es gratuita. Las tarifas están reguladas por el estado de Florida.' : 'Broker advisory is free to you. Rates are state-regulated by law.'}</span>
                                 </li>
                                 <li className="flex items-start gap-2.5">
                                     <span className="text-emerald-600 font-bold text-base leading-none">✓</span>

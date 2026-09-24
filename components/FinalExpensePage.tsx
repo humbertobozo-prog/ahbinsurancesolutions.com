@@ -179,7 +179,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                             {isEs
                                 ? 'Evite que sus hijos o cónyuge enfrenten deudas repentinas de $10,000+ por costos funerarios. Pólizas de vida entera permanentes con primas fijas garantizadas. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante.'
-                                : 'Protect your children and spouse from taking on $10,000+ in sudden funeral debt. Permanent whole life coverage with contractually locked rates. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'}
+                                : 'Protect your children and spouse from taking on $10,000+ in sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -288,8 +288,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             </h2>
                             <p className="text-xs md:text-sm text-gray-200 leading-relaxed">
                                 {isEs 
-                                    ? 'Usted elige la cantidad exacta de beneficio según sus deseos (cremación o sepelio tradicional) y su presupuesto mensual:' 
-                                    : 'Choose the exact face amount based on your preferred arrangement and monthly budget:'}
+                                    ? 'Usted elige la cantidad exacta de beneficio según sus deseos (cremación o sepelio tradicional) y su presupuesto mensual. Los costos de funeral y cremación pueden variar significativamente dependiendo de los servicios y la ubicación:' 
+                                    : 'Choose the exact face amount based on your preferred arrangement and monthly budget. Funeral and cremation costs can vary significantly depending on the services and location:'}
                             </p>
                         </div>
 
@@ -298,7 +298,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 <h3 className="text-accent font-bold text-sm uppercase tracking-wide">
                                     {isEs ? 'Funeral Tradicional con Sepelio' : 'Traditional Funeral & Burial'}
                                 </h3>
-                                <p className="text-3xl font-black text-white">$9,500 – $14,000</p>
+                                <p className="text-3xl font-black text-white">$Varies</p>
                                 <p className="text-xs text-gray-300 leading-relaxed">
                                     {isEs 
                                         ? 'Recomendamos una cobertura de $15,000 a $25,000 para cubrir ataúd, bóveda, honorarios funerarios, parcela de cementerio, lástima y gastos médicos.' 
@@ -309,7 +309,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 <h3 className="text-accent font-bold text-sm uppercase tracking-wide">
                                     {isEs ? 'Cremación con Ceremonia Memorial' : 'Cremation & Memorial Service'}
                                 </h3>
-                                <p className="text-3xl font-black text-white">$4,000 – $7,500</p>
+                                <p className="text-3xl font-black text-white">$Varies</p>
                                 <p className="text-xs text-gray-300 leading-relaxed">
                                     {isEs 
                                         ? 'Recomendamos una póliza de $5,000 a $10,000 para cubrir la cremación, urna, permisos del condado, misa o reunión familiar y pequeñas deudas.' 
@@ -325,8 +325,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             </p>
                             <p className="leading-relaxed">
                                 {isEs 
-                                    ? 'La Administración del Seguro Social de EE.UU. otorga únicamente un pago único de $255 por fallecimiento a cónyuges sobrevivientes que califiquen. Esta cifra federal no ha cambiado en décadas y no cubre ni una fracción de los costos funerarios en Florida.' 
-                                    : 'The federal Social Security Administration provides only a one-time lump-sum death payment of $255 to eligible surviving spouses. This amount has remained unchanged for decades and covers only a tiny fraction of real Florida burial costs.'}
+                                    ? 'La Administración del Seguro Social de EE.UU. otorga únicamente un pago único de $255 por fallecimiento a cónyuges sobrevivientes o hijos dependientes que califiquen. Esta cifra federal no ha cambiado en décadas y no cubre los costos funerarios en Florida.' 
+                                    : 'The federal Social Security Administration provides only a one-time lump-sum death payment of $255 to eligible surviving spouses or qualifying children. This amount has remained unchanged for decades and does not cover real Florida burial costs.'}
                             </p>
                         </div>
                     </section>
@@ -587,7 +587,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="w-8 h-8 rounded-lg bg-accent text-primary font-black flex items-center justify-center text-sm mb-3">2</span>
                                 <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Comparación de 15+ Aseguradoras' : 'Multi-Carrier Quote'}</h4>
-                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Comparamos Mutual of Omaha, Aetna, Foresters y más.' : 'We shop 15+ top A-rated insurers based on your budget and goals.'}</p>
+                                <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Comparamos diversas aseguradoras con licencia estatal según su presupuesto y objetivos.' : 'We compare available Final Expense options from multiple state-licensed insurance carriers based on your budget and goals.'}</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="w-8 h-8 rounded-lg bg-accent text-primary font-black flex items-center justify-center text-sm mb-3">3</span>
@@ -701,13 +701,13 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </span>
                         <h2 className="text-2xl md:text-4xl font-black font-heading max-w-2xl mx-auto leading-tight">
                             {isEs 
-                                ? 'Proteja a Sus Seres Queridos Hoy con Tarifas Congeladas' 
-                                : 'Protect Your Family Today with Contractually Locked Rates'}
+                                ? 'Proteja a Sus Seres Queridos Hoy con Primas Niveladas' 
+                                : 'Protect Your Family Today with Level Premium Coverage'}
                         </h2>
                         <p className="text-sm md:text-base text-gray-200 max-w-xl mx-auto leading-relaxed">
                             {isEs 
-                                ? 'Permítanos cotizar y comparar más de 15 aseguradoras para encontrarle la opción más accesible para su edad y estado de salud.' 
-                                : 'Let us quote and compare 15+ top burial insurers to find the most affordable, dependable option for your budget.'}
+                                ? 'Permítanos comparar opciones de Gastos Finales de varias aseguradoras con licencia estatal para encontrar la opción más accesible y confiable según su presupuesto.' 
+                                : 'Let us compare available Final Expense options from multiple state-licensed insurance carriers to find the most affordable, dependable option for your budget.'}
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
                             <button
