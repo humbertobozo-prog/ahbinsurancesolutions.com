@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { KeyTakeaways } from './components/KeyTakeaways';
-import { Footer } from './components/Footer';
+const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
 import type { Language } from './types';
@@ -291,7 +291,9 @@ const App: React.FC = () => {
             <main className="flex-grow">
                 {mainContentComponent}
             </main>
-            <Footer content={content.footer} common={content.common} onOpenLegalModal={handleOpenLegalModal} />
+            <Suspense fallback={<div className="h-[400px]" />}>
+                <Footer content={content.footer} common={content.common} onOpenLegalModal={handleOpenLegalModal} />
+            </Suspense>
             <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} language={language} />
             <BackToTopButton />
             <TapToCallButton label={content.tapToCallButton?.label || (isEs ? 'Llamar al Broker' : 'Call Licensed Broker')} phone={content.tapToCallButton?.phone || '+13522258389'} />
