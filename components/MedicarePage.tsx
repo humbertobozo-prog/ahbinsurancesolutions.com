@@ -15,13 +15,8 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
     const enUrl = `${baseUrl}/medicare`;
     const esUrl = `${baseUrl}/es/medicare`;
 
-    const title = isEs 
-        ? 'Guía Completa de Medicare en Florida 2026: Medigap Plan G, N y Advantage' 
-        : 'Florida Medicare & Medigap Complete Guide 2026: Plan G, N & Advantage';
-
-    const description = isEs 
-        ? 'Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432).' 
-        : 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';
+    const title = 'Medicare Supplement (Medigap) Plans in Florida 2026–2027 | AHB Insurance';
+    const description = 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -189,14 +184,10 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             {isEs ? 'Guía de Autoridad 2026 | Asesoría Licenciada en Florida' : '2026 Master Guide | Licensed Florida Broker'}
                         </span>
                         <h1 className="text-3xl md:text-5xl font-black font-heading mb-6 leading-tight">
-                            {isEs 
-                                ? 'Planes de Medicare y Suplementos (Medigap) en Florida' 
-                                : 'Florida Medicare & Supplement Insurance Plans'}
+                            Medicare Supplement (Medigap) Plans in Florida 2026–2027
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
-                            {isEs
-                                ? 'Proteja su jubilación contra facturas médicas ilimitadas del 20%. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre más de 80 aseguradoras en Florida.'
-                                : 'Shield your retirement from uncapped 20% medical co-pays. We compare available options based on your needs, eligibility, budget and coverage goals across 80+ top carriers in Florida.'}
+                            If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
@@ -305,121 +296,37 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         </div>
                     </div>
 
-                    {/* Breakdown of Medicare Parts */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-6">
-                            {isEs ? 'Estructura Detallada de las 4 Partes de Medicare' : 'Detailed Breakdown of the 4 Parts of Medicare'}
+                    {/* Detailed Coverage Analysis Section */}
+                    <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
+                            {isEs ? 'Análisis Detallado de Planes Medigap en Florida' : 'Detailed Analysis of Medigap Plans in Florida'}
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte A</span>
-                                <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Seguro Hospitalario' : 'Hospital Insurance'}
-                                </h3>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                    {isEs 
-                                        ? 'Cubre hospitalizaciones, centros de enfermería especializada, cuidados paliativos y atención domiciliaria. Por lo general no requiere prima mensual si trabajó 10 años (40 créditos) en EE.UU.' 
-                                        : 'Covers inpatient hospital care, skilled nursing facilities, hospice, and home health. Premium-free if you worked 10+ years (40 credits) in the U.S.'}
-                                </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Deducible 2026: ~$1,632 por período de beneficio' : '2026 Deductible: ~$1,632 per benefit period'}</span>
-                            </div>
+                        
+                        <div className="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+                            <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan G: La Opción Más Completa' : 'Medicare Supplement Plan G: Most Comprehensive'}</h3>
+                            <p>
+                                {isEs 
+                                    ? 'El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B.'
+                                    : 'Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible.'}
+                            </p>
+                            
+                            <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan N: El Equilibrio entre Costo y Cobertura' : 'Medicare Supplement Plan N: Balancing Cost and Coverage'}</h3>
+                            <p>
+                                {isEs 
+                                    ? 'El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados en visitas médicas y servicios de urgencias. Es una opción inteligente para quienes buscan protección sólida contra grandes gastos hospitalarios pero desean mantener primas mensuales contenidas.'
+                                    : 'Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays for doctor visits and emergency services. It is a smart option for those seeking robust protection against large hospital expenses while keeping monthly premiums contained.'}
+                            </p>
 
-                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte B</span>
-                                <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Seguro Médico Ambulatorio' : 'Medical Insurance'}
-                                </h3>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                    {isEs 
-                                        ? 'Cubre consultas médicas, exámenes de laboratorio, estudios de imagen, cirugías ambulatorias y equipo médico duradero. Medicare paga el 80% y usted el 20% restante.' 
-                                        : 'Covers physician visits, lab tests, imaging, outpatient surgeries, and durable medical equipment. Medicare pays 80%; you pay 20%.'}
-                                </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Prima Estándar 2026: ~$185/mes | Deducible: ~$257/año' : '2026 Standard Premium: ~$185/mo | Deductible: ~$257/yr'}</span>
-                            </div>
-
-                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte C</span>
-                                <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Medicare Advantage (HMO / PPO)' : 'Medicare Advantage (HMO / PPO)'}
-                                </h3>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                    {isEs 
-                                        ? 'Planes administrados por aseguradoras privadas que reemplazan al Medicare Original. Ofrecen primas bajas y beneficios adicionales, operando bajo estructuras de red, copagos por servicio y reglas de autorización previa que varían según el plan, la aseguradora y el condado.' 
-                                        : 'Private managed-care plans replacing Original Medicare. Often feature low monthly premiums and bundled extras, operating under specific provider networks, service copays, and prior authorization rules that vary by plan design, carrier, and county.'}
-                                </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Requiere mantener activa la Parte B' : 'Requires active Part B enrollment'}</span>
-                            </div>
-
-                            <div className="bg-light-gray p-6 rounded-2xl border border-gray-200 shadow-sm">
-                                <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full mb-3 inline-block">Parte D</span>
-                                <h3 className="text-lg font-bold text-primary mb-2">
-                                    {isEs ? 'Medicamentos Recetados (IRA 2026)' : 'Prescription Drugs (2026 IRA Cap)'}
-                                </h3>
-                                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                                    {isEs 
-                                        ? 'Planes independientes para farmacia. Bajo la Ley de Reducción de la Inflación, en 2026 sus desembolsos anuales de bolsillo en medicinas están topados a un máximo legal de $2,000.' 
-                                        : 'Standalone pharmacy coverage. Under the Inflation Reduction Act, total annual out-of-pocket prescription costs are capped at $2,000 in 2026.'}
-                                </p>
-                                <span className="text-[11px] font-bold text-gray-500 block">{isEs ? 'Tope Anual de Farmacia: $2,000 máximo' : 'Annual Rx OOP Cap: $2,000 maximum'}</span>
-                            </div>
+                            <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan F: Disponibilidad Limitada' : 'Medicare Supplement Plan F: Limited Availability'}</h3>
+                            <p>
+                                {isEs 
+                                    ? 'El Plan F ya no está disponible para personas que se inscribieron en Medicare por primera vez el 1 de enero de 2020 o después. Si usted ya era elegible antes de esa fecha, aún puede contratarlo, aunque usualmente el Plan G ofrece una mejor relación costo-beneficio debido a que las primas del Plan F tienden a aumentar más rápidamente.'
+                                    : 'Plan F is no longer available to individuals who first enrolled in Medicare on or after January 1, 2020. If you were eligible before that date, you may still purchase it, although Plan G typically offers a better cost-benefit ratio as Plan F premiums tend to increase more rapidly.'}
+                            </p>
                         </div>
                     </div>
 
-                    {/* Medigap Plan G vs Plan N Deep Dive */}
-                    <div>
-                        <h2 className="text-2xl md:text-3xl font-black font-heading text-primary mb-4">
-                            {isEs ? 'Análisis Profundo y Desglose por Plan en Florida' : 'In-Depth Plan Breakdown & Coverage Details in Florida'}
-                        </h2>
-                        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
-                            {isEs 
-                                ? 'En Florida, conocer los detalles específicos de cada opción de cobertura evita sorpresas financieras. A continuación analizamos individualmente Medigap Plan G, Plan N, Medicare Advantage, la Parte D y los Derechos de Emisión Garantizada.'
-                                : 'Understanding the exact mechanics of each coverage option prevents financial surprises. Below is an individual breakdown of Medigap Plan G, Plan N, Medicare Advantage, Part D, and Guaranteed Issue Rights.'}
-                        </p>
-
-                        {/* Individual Plan Cards Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            {/* Plan G Individual Breakdown */}
-                            <div className="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div className="flex items-center justify-between mb-3">
-                                        <span className="bg-primary text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Medigap Plan G</span>
-                                        <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">{isEs ? 'Máxima Cobertura' : 'Comprehensive Coverage'}</span>
-                                    </div>
-                                    <h3 className="text-lg font-bold text-primary mb-2">
-                                        {isEs ? 'Medigap Plan G: Cobertura Total sin Excesos' : 'Medigap Plan G: Zero Excess Exposure'}
-                                    </h3>
-                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                        {isEs 
-                                            ? 'El Plan G cubre prácticamente todos los vacíos de Medicare Original, incluyendo el deducible de hospitalización de la Parte A, el coseguro del 20% en servicios ambulatorios y el 100% de los cargos en exceso de la Parte B. El único gasto fuera de bolsillo que el asegurado cubre directamente es el deducible anual de la Parte B (~$257).'
-                                            : 'Plan G covers nearly all Original Medicare gaps, including Part A hospital deductible, Part 20% outpatient coinsurance, and 100% of Part B excess charges. The only standard out-of-pocket item is the annual Part B deductible (~$257).'}
-                                    </p>
-                                </div>
-                                <div className="border-t border-gray-100 pt-3 text-[11px] text-gray-500 font-medium">
-                                    {isEs ? '💡 Ideal para quienes buscan predictibilidad financiera total sin sorpresas en facturas médicas.' : '💡 Ideal for those seeking complete financial predictability with zero medical billing surprises.'}
-                                </div>
-                            </div>
-
-                            {/* Plan N Individual Breakdown */}
-                            <div className="bg-white p-6 rounded-2xl border border-primary/20 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div className="flex items-center justify-between mb-3">
-                                        <span className="bg-secondary text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Medigap Plan N</span>
-                                        <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">{isEs ? 'Primas Reducidas' : 'Lower Monthly Premium'}</span>
-                                    </div>
-                                    <h3 className="text-lg font-bold text-primary mb-2">
-                                        {isEs ? 'Medigap Plan N: Ahorro con Copagos Moderados' : 'Medigap Plan N: Savings with Structured Copays'}
-                                    </h3>
-                                    <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                        {isEs 
-                                            ? 'Ofrece la misma protección sólida de hospitalización que el Plan G, pero incorpora copagos razonables en el consultorio médico (hasta $20) y en la sala de emergencias (hasta $50, si no es admitido). No cubre los cargos en exceso de la Parte B, aunque la inmensa mayoría de los médicos en Florida aceptan la asignación estándar.'
-                                            : 'Offers identical Part A hospital protection as Plan G, but features modest doctor visit copays (up to $20) and ER copays (up to $50 unless admitted). It does not cover Part B excess charges, though the vast majority of Florida doctors accept Medicare assignment.'}
-                                    </p>
-                                </div>
-                                <div className="border-t border-gray-100 pt-3 text-[11px] text-gray-500 font-medium">
-                                    {isEs ? '💡 Ideal para ahorrar ~$30-50 mensuales en primas a cambio de pequeños copagos por visita.' : '💡 Ideal to save ~$30-50/mo in premiums in exchange for minor per-visit copays.'}
-                                </div>
-                            </div>
-                        </div>
+                    {/* Pricing Comparison Table (Refined) */}
 
                         {/* Medicare Advantage & Part D Standalone Section */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -764,8 +671,6 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                 : 'We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.'}
                         </p>
                     </div>
-
-                </div>
             </section>
 
             {/* Internal Cross-Linking to Other Services */}
