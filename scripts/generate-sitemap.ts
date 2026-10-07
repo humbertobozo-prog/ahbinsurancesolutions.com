@@ -19,49 +19,41 @@ export interface SitemapRouteEntry {
  * to ensure 100% crawl efficiency and 0 redirect errors in Google Search Console.
  */
 export function getAllSitemapRoutes(): SitemapRouteEntry[] {
-  const today = new Date().toISOString().split('T')[0];
-
   const routes: SitemapRouteEntry[] = [
     // 1. Core Pillar & Primary Service Pages
     {
       enPath: '/',
       esPath: '/es',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 1.0,
     },
     {
       enPath: '/medicare-florida',
       esPath: '/es/seguro-medicare-florida',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.95,
     },
     {
       enPath: '/final-expense',
       esPath: '/es/gastos-finales',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.9,
     },
     {
       enPath: '/iul-retirement',
       esPath: '/es/iul-jubilacion',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.9,
     },
     {
       enPath: '/annuities-florida',
       esPath: '/es/anualidades-florida',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.9,
     },
     {
       enPath: '/dental-vision-florida',
       esPath: '/es/dental-vision-florida',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
@@ -70,14 +62,12 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     {
       enPath: '/blog',
       esPath: '/es/blog',
-      lastmod: today,
       changefreq: 'daily',
       priority: 0.85,
     },
     {
       enPath: '/city-guides',
       esPath: '/es/guias-ciudades',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
@@ -86,35 +76,30 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     {
       enPath: '/locations/gainesville-fl',
       esPath: '/es/locations/gainesville-fl',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
     {
       enPath: '/final-expense-miami',
       esPath: '/es/seguro-gastos-finales-florida',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
     {
       enPath: '/burial-insurance-tampa',
       esPath: '/es/seguro-gastos-finales-tampa',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
     {
       enPath: '/iul-retirement-tampa',
-      esPath: '/es/iul-jubilacion',
-      lastmod: today,
+      esPath: '/es/iul-jubilacion-tampa',
       changefreq: 'weekly',
       priority: 0.85,
     },
     {
-      enPath: '/spanish-insurance-orlando',
+      enPath: '/orlando-spanish-insurance',
       esPath: '/spanish-insurance-orlando',
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.85,
     },
@@ -123,59 +108,39 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     {
       enPath: '/faq',
       esPath: '/es/preguntas-frecuentes',
-      lastmod: today,
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       enPath: '/about-andres-bozo',
       esPath: '/es/sobre-andres-bozo',
-      lastmod: today,
       changefreq: 'monthly',
       priority: 0.8,
     },
     {
       enPath: '/contact',
       esPath: '/es/contacto',
-      lastmod: today,
       changefreq: 'monthly',
       priority: 0.8,
     },
-
-    // 5. Legal & Compliance Pages
-    {
-      enPath: '/terms',
-      esPath: '/es/terminos',
-      lastmod: today,
-      changefreq: 'yearly',
-      priority: 0.5,
-    },
-    {
-      enPath: '/privacy',
-      esPath: '/es/privacidad',
-      lastmod: today,
-      changefreq: 'yearly',
-      priority: 0.5,
-    },
   ];
 
-  // 6. Dynamic City Guides from FLORIDA_CITIES
+  // 5. Dynamic City Guides from FLORIDA_CITIES
   for (const city of FLORIDA_CITIES) {
     routes.push({
       enPath: `/cities/${city.slug}`,
       esPath: `/es/ciudades/${city.slug}`,
-      lastmod: today,
       changefreq: 'weekly',
       priority: 0.8,
     });
   }
 
-  // 7. Dynamic Blog Posts from BLOG_POSTS
+  // 6. Dynamic Blog Posts from BLOG_POSTS
   for (const post of BLOG_POSTS) {
     routes.push({
       enPath: `/blog/${post.slug.en}`,
       esPath: `/es/blog/${post.slug.es}`,
-      lastmod: post.date || today,
+      lastmod: post.date,
       changefreq: 'monthly',
       priority: 0.75,
     });

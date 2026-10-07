@@ -101,12 +101,12 @@ async function startServer() {
   app.post("/api/generate-blog", async (req, res) => {
     try {
       const authHeader = req.headers.authorization;
-      const adminSecret = process.env.ADMIN_SECRET || "AHB_SECURE_ADMIN_2026";
+      const adminSecret = process.env.ADMIN_SECRET;
       
-      if (!authHeader || authHeader !== `Bearer ${adminSecret}`) {
+      if (!adminSecret || !authHeader || authHeader !== `Bearer ${adminSecret}`) {
         return res.status(401).json({
           success: false,
-          error: "Unauthorized: Admin access token required to generate blog articles.",
+          error: "Unauthorized: Valid admin secret configuration required.",
         });
       }
 

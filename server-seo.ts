@@ -60,6 +60,8 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/es/seguro-gastos-finales-tampa",
   "/es/seguro-gastos-finales-florida",
   "/iul-retirement-tampa",
+  "/es/iul-jubilacion-tampa",
+  "/orlando-spanish-insurance",
   "/spanish-insurance-orlando",
   "/locations/gainesville-fl",
   "/es/locations/gainesville-fl",
@@ -209,12 +211,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/es/seguro-gastos-finales-florida": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
     "/burial-insurance-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
     "/es/seguro-gastos-finales-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
-    "/iul-retirement-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion" },
+    "/iul-retirement-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion-tampa" },
+    "/es/iul-jubilacion-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion-tampa" },
     "/annuities-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
     "/es/anualidades-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
     "/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
     "/es/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
-    "/spanish-insurance-orlando": { en: "/spanish-insurance-orlando", es: "/spanish-insurance-orlando" },
+    "/orlando-spanish-insurance": { en: "/orlando-spanish-insurance", es: "/spanish-insurance-orlando" },
+    "/spanish-insurance-orlando": { en: "/orlando-spanish-insurance", es: "/spanish-insurance-orlando" },
     "/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/es/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
     "/es/localidades/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
@@ -920,15 +924,153 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     `;
   }
 
-  // 9. Localized Landing Pages (final-expense-miami, annuities-florida, dental-vision-florida, etc.)
+  // 8.6 Legal & Compliance Pages
+  else if (
+    cleanPath === "/terms" || 
+    cleanPath === "/es/terminos" || 
+    cleanPath === "/terminos" ||
+    cleanPath === "/privacy" || 
+    cleanPath === "/es/privacidad" || 
+    cleanPath === "/privacidad"
+  ) {
+    const isTerms = cleanPath.includes("term");
+    if (isTerms) {
+      title = isEs ? "Términos de Servicio | AHB Insurance Solutions" : "Terms of Service | AHB Insurance Solutions";
+      description = isEs 
+        ? "Términos y condiciones de uso del portal de AHB Insurance Solutions. Información legal sobre servicios de corretaje de seguros en Florida."
+        : "Terms of service and legal conditions for using AHB Insurance Solutions online portal in Florida.";
+    } else {
+      title = isEs ? "Política de Privacidad | AHB Insurance Solutions" : "Privacy Policy | AHB Insurance Solutions";
+      description = isEs 
+        ? "Política de privacidad y protección de datos personales de AHB Insurance Solutions. Compromiso con la confidencialidad de nuestros clientes en Florida."
+        : "Privacy policy and client data protection commitments for AHB Insurance Solutions in Florida.";
+    }
+
+    bodyOutline = `
+      <header>
+        <h1>${escapeHtml(title)}</h1>
+        <p>${escapeHtml(description)}</p>
+      </header>
+      <section>
+        <h2>AHB Insurance Solutions Legal Notices</h2>
+        <p>AHB Insurance Solutions LLC is an independent insurance brokerage licensed by the Florida Department of Financial Services (DFS). Principal Broker Andres H. Bozo (NPN: 21228432).</p>
+      </section>
+    `;
+  }
+
+  // 8.7 City Guides Hub Page
+  else if (cleanPath === "/city-guides" || cleanPath === "/es/guias-ciudades") {
+    title = isEs 
+      ? "Guías de Seguros y Medicare por Ciudad en Florida | AHB" 
+      : "Florida City Medicare & Insurance Guides | AHB";
+    description = isEs 
+      ? "Directorio de guías locales de Medicare, Gastos Finales e IUL en Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale y Gainesville con Andrés Bozo." 
+      : "Local insurance & healthcare guide directory across Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale, West Palm Beach & Gainesville with Andres Bozo.";
+
+    const cityListHtml = FLORIDA_CITIES.map(c => {
+      const cTitle = isEs ? c.taglineEs : c.taglineEn;
+      const cDesc = isEs ? c.medicareOverviewEs : c.medicareOverviewEn;
+      const cLink = isEs ? `/es/ciudades/${c.slug}` : `/cities/${c.slug}`;
+      return `
+        <article style="margin-bottom: 1.5rem; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 0.5rem;">
+          <h2><a href="${cLink}">${escapeHtml(c.cityName)}, FL Insurance Guide</a></h2>
+          <p><strong>${escapeHtml(cTitle)}</strong></p>
+          <p>${escapeHtml(cDesc)}</p>
+          <p><em>Hospitals served: ${escapeHtml(c.hospitals.join(", "))}</em></p>
+        </article>
+      `;
+    }).join("\n");
+
+    bodyOutline = `
+      <header>
+        <h1>${escapeHtml(title)}</h1>
+        <p>${escapeHtml(description)}</p>
+      </header>
+      <main>
+        <section>
+          <h2>Explore Florida City Guides</h2>
+          ${cityListHtml}
+        </section>
+      </main>
+    `;
+  }
+
+  // 8.8 Individual Dynamic City Guides (/cities/:slug or /es/ciudades/:slug)
+  else if (cleanPath.startsWith("/cities/") || cleanPath.startsWith("/es/ciudades/")) {
+    const citySlug = cleanPath.startsWith("/cities/") ? cleanPath.replace("/cities/", "") : cleanPath.replace("/es/ciudades/", "");
+    const city = FLORIDA_CITIES.find(c => c.slug === citySlug);
+
+    if (city) {
+      title = isEs 
+        ? `Guía de Seguros y Medicare en ${city.cityName}, FL | AHB` 
+        : `${city.cityName}, FL Medicare & Life Insurance Guide | AHB`;
+      description = isEs 
+        ? `Guía local de Suplementos de Medicare, Gastos Finales y seguro IUL en ${city.cityName} y ${city.county}. Compare precios gratis con el broker Andrés Bozo NPN 21228432.` 
+        : `Local Medicare Supplement, Final Expense burial insurance & IUL guide for ${city.cityName} and ${city.county}. Compare top rates with Andres Bozo NPN 21228432.`;
+
+      const activeFaqs = isEs ? city.faqsEs : city.faqsEn;
+      const faqHtml = activeFaqs.map(f => `
+        <div style="margin-bottom: 1rem;">
+          <dt style="font-weight: 700; color: #0f172a;">${escapeHtml(f.question)}</dt>
+          <dd style="color: #334155; margin-left: 0;">${escapeHtml(f.answer)}</dd>
+        </div>
+      `).join("\n");
+
+      bodyOutline = `
+        <header>
+          <h1>${isEs ? `Guía de Seguros de Medicare, Gastos Finales e IUL en ${city.cityName}, FL` : `${city.cityName}, FL Medicare, Final Expense & IUL Insurance Guide`}</h1>
+          <p><strong>${escapeHtml(isEs ? city.taglineEs : city.taglineEn)}</strong></p>
+          <p>${escapeHtml(description)}</p>
+        </header>
+
+        <section>
+          <h2>${isEs ? `Coordinación de Medicare y Medigap en ${city.cityName} (${city.county})` : `Medicare & Medigap Coordination in ${city.cityName} (${city.county})`}</h2>
+          <p>${escapeHtml(isEs ? city.medicareOverviewEs : city.medicareOverviewEn)}</p>
+          <p><strong>${isEs ? "Hospitales y Centros Médicos Locales:" : "Key Hospitals & Healthcare Networks:"}</strong> ${escapeHtml(city.hospitals.join(", "))}</p>
+        </section>
+
+        <section>
+          <h2>${isEs ? `Seguro de Gastos Finales y Entierro en ${city.cityName}` : `Final Expense & Burial Life Insurance in ${city.cityName}`}</h2>
+          <p>${escapeHtml(isEs ? city.finalExpenseOverviewEs : city.finalExpenseOverviewEn)}</p>
+          <p><em>${isEs ? "Costo promedio de funeral en la zona:" : "Average local funeral & cremation cost:"} ${escapeHtml(city.avgFuneralCost)}</em></p>
+        </section>
+
+        <section>
+          <h2>${isEs ? `Seguro de Vida Universal Indexada (IUL) en ${city.cityName}` : `Indexed Universal Life (IUL) Retirement Planning in ${city.cityName}`}</h2>
+          <p>${escapeHtml(isEs ? city.iulOverviewEs : city.iulOverviewEn)}</p>
+        </section>
+
+        <section>
+          <h2>${isEs ? `Comunidades y Vecindarios Atendidos en ${city.cityName}` : `Senior Demographics & Neighborhoods Served in ${city.cityName}`}</h2>
+          <p><strong>${isEs ? "Población de Adultos Mayores:" : "Senior Population:"}</strong> ${escapeHtml(city.populationSeniors)}</p>
+          <p><strong>${isEs ? "Vecindarios:" : "Local Neighborhoods:"}</strong> ${escapeHtml(city.neighborhoods.join(", "))}</p>
+        </section>
+
+        <section>
+          <h2>${isEs ? `Preguntas Frecuentes sobre Seguros en ${city.cityName}` : `Frequently Asked Questions in ${city.cityName}`}</h2>
+          <dl>
+            ${faqHtml}
+          </dl>
+        </section>
+
+        <section>
+          <h2>${isEs ? `Asesoría Gratuita con el Broker Andrés Bozo en ${city.cityName}` : `Free Insurance Consultation in ${city.cityName} with Andres Bozo`}</h2>
+          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432) directly at +1 (352) 225-8389 for a free rate comparison across top-rated carriers."}</p>
+        </section>
+      `;
+    }
+  }
+
+  // 9. Localized Landing Pages (final-expense-miami, burial-insurance-tampa, iul-retirement-tampa, etc.)
   else {
-    // Check if path is a recognized landing path
     const landingPaths = [
       "/final-expense-miami",
       "/burial-insurance-tampa",
       "/es/seguro-gastos-finales-tampa",
       "/es/seguro-gastos-finales-florida",
       "/iul-retirement-tampa",
+      "/es/iul-jubilacion-tampa",
+      "/orlando-spanish-insurance",
       "/spanish-insurance-orlando",
       "/annuities-florida",
       "/es/anualidades-florida",
@@ -939,31 +1081,85 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ];
 
     if (landingPaths.includes(cleanPath)) {
-      if (cleanPath.includes("final") || cleanPath.includes("burial") || cleanPath.includes("gastos")) {
+      if (cleanPath === "/final-expense-miami" || cleanPath === "/es/seguro-gastos-finales-florida") {
         title = isEs 
-          ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
-          : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage";
+          ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" 
+          : "Miami, FL Final Expense & Burial Insurance | AHB";
         description = isEs 
-          ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. En pólizas estándar, las tarifas se fijan a la edad de emisión. Muchas pólizas de emisión simplificada generalmente no requieren examen médico tradicional." 
-          : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Standard level-premium policies lock rates at issue age. Many simplified-issue policies generally do not require a traditional medical exam.";
+          ? "Seguro de vida entera para gastos finales y entierro en Miami y Miami-Dade. Cobertura de $5,000 a $35,000 con tarifas fijas. Cotización gratis." 
+          : "Permanent whole life burial insurance in Miami & Miami-Dade County. $5,000 to $35,000 cash benefits & locked rates. Free broker quote: (352) 225-8389.";
         
         bodyOutline = `
           <header>
-            <h1>${title}</h1>
-            <p>${description}</p>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(description)}</p>
           </header>
           <section>
-            <h2>Funeral & Burial Planning Solutions</h2>
-            <p>Ensure burial and funeral cost safety for your loved ones with permanent cash benefit plans from $5,000 to $35,000 in Florida. Many simplified-issue and guaranteed-issue policies generally do not require a traditional medical exam, although underwriting requirements, eligibility guidelines, and graded waiting periods vary by carrier and product.</p>
+            <h2>Miami Burial & Final Expense Solutions</h2>
+            <p>Ensure funeral and burial cost protection for your loved ones with whole life cash benefit plans from $5,000 to $35,000 in Miami, Hialeah, Kendall, and Miami-Dade County. Many simplified-issue policies require no traditional medical exam, with level premiums locked for life.</p>
+          </section>
+        `;
+      } else if (cleanPath === "/burial-insurance-tampa" || cleanPath === "/es/seguro-gastos-finales-tampa") {
+        title = isEs 
+          ? "Seguro de Entierro y Gastos Finales en Tampa, FL | AHB" 
+          : "Tampa, FL Burial & Final Expense Insurance | AHB";
+        description = isEs 
+          ? "Seguro de entierro y funeral en Tampa y Condado de Hillsborough. Cobertura de $5,000 a $35,000 para adultos mayores. Compare precios con Andrés Bozo." 
+          : "Burial & funeral expense insurance in Tampa & Hillsborough County. $5,000 to $35,000 level benefits for seniors. Compare top rates with Andres Bozo.";
+
+        bodyOutline = `
+          <header>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Tampa Senior Burial Insurance Planning</h2>
+            <p>Shield your family in Tampa, St. Petersburg, and Hillsborough County from unexpected funeral costs. Permanent whole life policies with locked rates and $5,000 to $35,000 cash payouts directly to your beneficiaries.</p>
+          </section>
+        `;
+      } else if (cleanPath === "/iul-retirement-tampa" || cleanPath === "/es/iul-jubilacion-tampa") {
+        title = isEs 
+          ? "Guía de Seguro IUL y Jubilación en Tampa, FL | AHB" 
+          : "Tampa, FL IUL & Retirement Insurance Guide | AHB";
+        description = isEs 
+          ? "Descubra el seguro de Vida Universal Indexada (IUL) en Tampa y el Condado de Hillsborough. Piso del 0% y préstamos exentos de impuestos. Consulta gratis." 
+          : "Discover Indexed Universal Life (IUL) insurance in Tampa & Hillsborough County. 0% market floor & tax-free policy loans. Free broker quote: (352) 225-8389.";
+
+        bodyOutline = `
+          <header>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Tampa Tax-Advantaged Retirement & Life Insurance</h2>
+            <p>Learn how Indexed Universal Life (IUL) insurance helps professionals and business owners in Tampa accumulation cash value with a contractual 0% floor against market index drops and tax-free policy loan options under IRS Section 7702.</p>
+          </section>
+        `;
+      } else if (cleanPath === "/orlando-spanish-insurance" || cleanPath === "/spanish-insurance-orlando") {
+        title = isEs 
+          ? "Seguros de Vida y Medicare en Orlando, FL | AHB" 
+          : "Orlando Spanish Insurance Services | AHB Solutions";
+        description = isEs 
+          ? "Asesoría bilingüe de seguros en Orlando y Condado de Orange. Medicare Suplementario, Gastos Finales e IUL con el broker Andrés Bozo (NPN 21228432)." 
+          : "Bilingual insurance brokerage services in Orlando & Orange County. Medicare Supplement, Final Expense, and IUL guidance from Andres Bozo NPN 21228432.";
+
+        bodyOutline = `
+          <header>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Bilingual Insurance Advisory in Orlando, FL</h2>
+            <p>Independent insurance brokerage for Medicare, Final Expense burial coverage, and IUL retirement plans in Orlando, Kissimmee, and Orange County with licensed broker Andres Bozo.</p>
           </section>
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
         title = isEs
-          ? "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance"
-          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
+          ? "Florida Fixed Annuities: MYGA & FIA Income | AHB"
+          : "Florida Fixed Annuities: MYGA & FIA Income | AHB";
         description = isEs
-          ? "Guía pilar completa sobre anualidades fijas en Florida: tradicionales, MYGA, FIA y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
-          : "Comprehensive Florida pillar guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
+          ? "Guía de anualidades fijas en Florida (MYGA y FIA). Tasas garantizadas, crecimiento con impuestos diferidos e ingresos vitalicios con el broker Andrés Bozo."
+          : "Guide to Florida fixed annuities, MYGAs, and FIAs. Guaranteed interest rates, tax-deferred growth, and lifetime income options with broker Andres Bozo.";
         bodyOutline = `
           <header>
             <h1>Florida Fixed Annuities: MYGA, FIA & Retirement Income Options</h1>
@@ -1131,19 +1327,6 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <section>
             <h2>Senior Dental and Optical Insurance Plans</h2>
             <p>Immediate dental checkups, implants, eyeglasses, and dentures coverage across elite health networks in Florida.</p>
-          </section>
-        `;
-      } else if (cleanPath === "/spanish-insurance-orlando") {
-        title = "Seguros de Vida y Medicare en Orlando | Broker de Seguros Florida";
-        description = "Especialista en Seguros de Medicare y Gastos Finales de Entierro en Orlando. Obtenga asesoría profesional bilingüe gratuita con Andres Bozo NPN 21228432.";
-        bodyOutline = `
-          <header>
-            <h1>Seguros de Vida y Medicare en Orlando</h1>
-            <p>${description}</p>
-          </header>
-          <section>
-            <h2>Asesoría Profesional de Seguros en Español en Orlando</h2>
-            <p>Compare precios de aseguradoras de primer nivel para planes de Medicare Suplementario y Gastos Finales con el broker Andrés Bozo en Orlando.</p>
           </section>
         `;
       }

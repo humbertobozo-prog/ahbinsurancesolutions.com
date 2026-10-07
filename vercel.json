@@ -154,11 +154,5 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/((?!robots.txt|favicon.svg|og-image.png|og-image.svg|sitemap.xml|.*\\.(?:webp|png|jpg|jpeg|svg|ico|html|js|css|json)$).*)",
-      "destination": "/index.html"
-    }
-  ]
+  "trailingSlash": false
 }
