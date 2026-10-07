@@ -237,6 +237,135 @@ const App: React.FC = () => {
             ]
         };
 
+        const organizationAndLocalBusinessSchema = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": ["InsuranceAgency", "LocalBusiness", "Organization"],
+                    "@id": `${baseUrl}/#organization`,
+                    "name": "AHB Insurance Solutions",
+                    "legalName": "AHB Insurance Solutions LLC",
+                    "url": `${baseUrl}/`,
+                    "logo": `${baseUrl}/andresbozoofi.webp`,
+                    "image": `${baseUrl}/andresbozoofi.webp`,
+                    "description": isEs
+                        ? "Agencia de seguros independiente en Florida licenciada y especializada en Suplementos de Medicare (Medigap), Seguro de Gastos Finales, Vida Universal Indexada (IUL) y Anualidades. Broker Andrés Bozo NPN: 21228432."
+                        : "Independent licensed Florida insurance brokerage specializing in Medicare Supplement Plans (Medigap), Final Expense Life Insurance, Indexed Universal Life (IUL), and Annuities. Broker Andres Bozo NPN: 21228432.",
+                    "telephone": "+1-352-225-8389",
+                    "email": "andreshbozo@ahbinsurancesolutions.com",
+                    "priceRange": "$$",
+                    "currenciesAccepted": "USD",
+                    "paymentAccepted": "Cash, Credit Card, Bank Transfer, Direct Debit",
+                    "identifier": {
+                        "@type": "PropertyValue",
+                        "name": "National Producer Number (NPN)",
+                        "value": "21228432",
+                        "url": "https://nipr.com/"
+                    },
+                    "taxID": "NPN-21228432",
+                    "hasCredential": {
+                        "@type": "EducationalOccupationalCredential",
+                        "name": "Florida Resident Insurance Agent License - Life, Health, and Variable Annuity",
+                        "credentialCategory": "State Insurance License",
+                        "recognizedBy": {
+                            "@type": "GovernmentOrganization",
+                            "name": "Florida Department of Financial Services (DFS)"
+                        }
+                    },
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+1-352-225-8389",
+                            "contactType": "customer service",
+                            "email": "andreshbozo@ahbinsurancesolutions.com",
+                            "areaServed": "US-FL",
+                            "availableLanguage": ["English", "Spanish"]
+                        }
+                    ],
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "5500 SW Archer Road, Apt H103",
+                        "addressLocality": "Gainesville",
+                        "addressRegion": "FL",
+                        "postalCode": "32607",
+                        "addressCountry": "US"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 29.6015,
+                        "longitude": -82.4013
+                    },
+                    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
+                    "openingHoursSpecification": [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                            "opens": "08:00",
+                            "closes": "20:00"
+                        }
+                    ],
+                    "areaServed": [
+                        { "@type": "State", "name": "Florida" },
+                        { "@type": "AdministrativeArea", "name": "Alachua County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Miami-Dade County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Orange County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Hillsborough County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Duval County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Broward County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Palm Beach County, Florida" },
+                        { "@type": "AdministrativeArea", "name": "Pinellas County, Florida" }
+                    ],
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": isEs ? "Catálogo de Seguros de Florida" : "Florida Insurance Products & Brokerage",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": isEs ? "Planes Suplementarios de Medicare (Medigap Plan G y N)" : "Medicare Supplement Insurance (Medigap Plan G & N)"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": isEs ? "Seguro de Gastos Finales y Entierro" : "Final Expense & Senior Burial Whole Life Insurance"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": isEs ? "Seguro de Vida Universal Indexada (IUL) para Retiro" : "Indexed Universal Life (IUL) Retirement Strategies"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": isEs ? "Anualidades Fijas e Indexadas de Retiro" : "Fixed & Fixed Indexed Annuities (FIA)"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": isEs ? "Seguro Dental, Visión y Audición Senior" : "Senior Dental, Vision & Hearing Coverage"
+                                }
+                            }
+                        ]
+                    },
+                    "sameAs": [
+                        "https://www.facebook.com/ahbinsurancesolutions",
+                        "https://www.instagram.com/ahbinsurancesolutions",
+                        "https://licenseesearch.fldfs.com/",
+                        "https://nipr.com/"
+                    ]
+                }
+            ]
+        };
+
         mainContentComponent = (
             <>
                 <SEOHead 
@@ -246,7 +375,7 @@ const App: React.FC = () => {
                     enUrl={`${baseUrl}/`}
                     esUrl={`${baseUrl}/es`}
                     language={language}
-                    schema={homeBreadcrumbSchema}
+                    schema={[homeBreadcrumbSchema, organizationAndLocalBusinessSchema]}
                 />
                 <Hero content={content.hero} />
                 <KeyTakeaways content={content.keyTakeaways} />
@@ -262,7 +391,7 @@ const App: React.FC = () => {
 
                 <ErrorBoundary componentName="AboutUs">
                     <Suspense fallback={<Spinner height="py-40" />}>
-                        <AboutUs content={content.aboutUs} common={content.common} />
+                        <AboutUs content={content.aboutUs} common={content.common} priority={true} />
                     </Suspense>
                 </ErrorBoundary>
 
