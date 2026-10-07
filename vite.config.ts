@@ -66,9 +66,10 @@ export default defineConfig({
     minify: 'esbuild',
     modulePreload: {
       filter(viteModule) {
-        // Exclude webVitals, emailjs, and icon bundles from critical path modulepreload
+        // Exclude non-critical and heavy third-party bundles from initial critical modulepreload
         return !viteModule.includes('webVitals') && 
                !viteModule.includes('vendor-emailjs') && 
+               !viteModule.includes('vendor-genai') && 
                !viteModule.includes('vendor-icons');
       }
     },
@@ -76,15 +77,32 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            // Separate React core
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+            // 1. External form/contact services (only loaded on form usage)
+            if (id.includes('@emailjs')) {
+              return 'vendor-emailjs';
+            }
+            // 2. Heavy AI/LLM SDK (only loaded for AI features/blog generation)
+            if (id.includes('@google/genai')) {
+              return 'vendor-genai';
+            }
+            // 3. Icons: isolated from React core to avoid bundling icon definitions into React chunk
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+            // 4. React core & scheduler (pure React runtime)
+            if (
+              id.includes('/react/') ||
+              id.includes('/react-dom/') ||
+              id.includes('/scheduler/') ||
+              id.includes('react-router')
+            ) {
               return 'vendor-react';
             }
-            // Separate UI/animation libraries
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
+            // 5. CSS/Class utilities
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
             }
-            // Other core dependencies
+            // 6. Remaining 3rd party vendor libraries
             return 'vendor-core';
           }
         }
