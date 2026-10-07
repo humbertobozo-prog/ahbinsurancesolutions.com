@@ -4,6 +4,7 @@ import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
+import { generateSitemapXml } from "./scripts/generate-sitemap";
 
 const BOT_REGEX = /googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebot|facebookexternalhit|twitterbot|linkedinbot|embedly|quora link preview|pinterest|whatsapp|telegrambot|slackbot|applebot/i;
 
@@ -50,6 +51,14 @@ async function startServer() {
   // Health check
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", timestamp: new Date().toISOString() });
+  });
+
+  // Dynamic XML Sitemap Route
+  app.get("/sitemap.xml", (_req, res) => {
+    const xml = generateSitemapXml();
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.send(xml);
   });
 
   // API Route for Contact Form Submission (Backup & Log)
@@ -433,9 +442,10 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         const metadata = getSeoMetadata(req.path);
         const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
         const seoHtml = rewriteHtmlForSeo(template, metadata, isBot);
+        const statusCode = metadata.is404 ? 404 : 200;
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.status(200).send(seoHtml);
+        res.status(statusCode).send(seoHtml);
       } catch (error) {
         console.error("Vite SEO Pre-render failed, falling back to next():", error);
         next(error);
@@ -465,12 +475,13 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         const metadata = getSeoMetadata(req.path);
         const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
         const seoHtml = rewriteHtmlForSeo(indexHtmlContent, metadata, isBot);
+        const statusCode = metadata.is404 ? 404 : 200;
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
-        res.send(seoHtml);
+        res.status(statusCode).send(seoHtml);
       } catch (error) {
         console.error("SEO Pre-render/Rewrite failed, falling back to standard index.html:", error);
-        res.sendFile(path.join(distPath, "index.html"));
+        res.status(500).sendFile(path.join(distPath, "index.html"));
       }
     });
   }

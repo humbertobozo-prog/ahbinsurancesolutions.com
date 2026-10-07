@@ -8,7 +8,7 @@ AHB Insurance Solutions is an independent insurance brokerage operating statewid
 
 ## 1. Medicare Supplement & Advantage Plans (Florida)
 URL: /medicare-florida
-Spanish URL: /es/medicare-florida
+Spanish URL: /es/seguro-medicare-florida
 
 ### Overview
 Medicare in Florida consists of Original Medicare (Part A for hospital coverage, Part B for medical provider coverage), Part C (Medicare Advantage HMO/PPO), and Part D (Prescription Drug coverage).
@@ -37,7 +37,7 @@ Final Expense insurance is whole life insurance designed to pay for funeral serv
 
 ## 3. Indexed Universal Life (IUL) Retirement & Wealth Growth
 URL: /iul-retirement
-Spanish URL: /es/iul-retirement
+Spanish URL: /es/iul-jubilacion
 
 ### Overview
 Indexed Universal Life (IUL) is permanent life insurance that combines death benefit protection with tax-advantaged cash value growth linked to stock market indices like the S&P 500.

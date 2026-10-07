@@ -5,6 +5,8 @@ import { KeyTakeaways } from './components/KeyTakeaways';
 const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
+import { BLOG_POSTS } from './constants/blogPosts';
+import { FLORIDA_CITIES } from './data/cityGuidesData';
 import type { Language } from './types';
 import { Spinner } from './components/Spinner';
 import { BackToTopButton } from './components/BackToTopButton';
@@ -166,12 +168,22 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AnnuitiesPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/blog' || cleanPath === '/es/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/es/blog/')) {
         const slug = cleanPath.startsWith('/blog/') ? cleanPath.replace('/blog/', '') : (cleanPath.startsWith('/es/blog/') ? cleanPath.replace('/es/blog/', '') : undefined);
-        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+        const postExists = !slug || BLOG_POSTS.some(p => p.slug.en === slug || p.slug.es === slug);
+        if (!postExists) {
+            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><NotFoundPage language={language} /></Suspense>;
+        } else {
+            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+        }
     } else if (cleanPath === '/blog-generator' || cleanPath === '/es/generador-blog') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogGenerator language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/city-guides' || cleanPath === '/es/guias-ciudades' || cleanPath.startsWith('/cities/') || cleanPath.startsWith('/es/ciudades/')) {
         const citySlug = cleanPath.startsWith('/cities/') ? cleanPath.replace('/cities/', '') : (cleanPath.startsWith('/es/ciudades/') ? cleanPath.replace('/es/ciudades/', '') : undefined);
-        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+        const cityExists = !citySlug || FLORIDA_CITIES.some(c => c.slug === citySlug);
+        if (!cityExists) {
+            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><NotFoundPage language={language} /></Suspense>;
+        } else {
+            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+        }
     } else if (
         cleanPath === '/locations/gainesville-fl' || 
         cleanPath === '/es/locations/gainesville-fl' ||

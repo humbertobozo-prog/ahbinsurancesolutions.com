@@ -11,6 +11,7 @@ interface SEOHeadProps {
     type?: string;
     ogImage?: string;
     schema?: object | object[];
+    noindex?: boolean;
 }
 
 export const SEOHead: React.FC<SEOHeadProps> = ({
@@ -22,7 +23,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     language,
     type = 'website',
     ogImage = 'https://www.ahbinsurancesolutions.com/og-image.png',
-    schema
+    schema,
+    noindex = false
 }) => {
     useEffect(() => {
         // 1. Update HTML lang
@@ -46,7 +48,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             metaRobots.setAttribute('name', 'robots');
             document.head.appendChild(metaRobots);
         }
-        metaRobots.setAttribute('content', 'index, follow, max-image-preview:large');
+        metaRobots.setAttribute('content', noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large');
 
         // 4. Update Canonical
         let canonicalLink = (document.getElementById('canonical-link') || document.querySelector('link[rel="canonical"]')) as HTMLLinkElement;
@@ -256,7 +258,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "@graph": fullGraph
         }, null, 2);
 
-    }, [title, description, canonicalUrl, enUrl, esUrl, language, type, ogImage, schema]);
+    }, [title, description, canonicalUrl, enUrl, esUrl, language, type, ogImage, schema, noindex]);
 
     return null;
 };

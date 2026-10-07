@@ -24,6 +24,7 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ language }) => {
         enUrl={`${baseUrl}/404`}
         esUrl={`${baseUrl}/404`}
         language={language}
+        noindex={true}
       />
 
       <div className="max-w-lg w-full text-center bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">

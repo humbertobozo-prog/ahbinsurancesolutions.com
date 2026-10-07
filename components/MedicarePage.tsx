@@ -15,8 +15,13 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
     const enUrl = `${baseUrl}/medicare-florida`;
     const esUrl = `${baseUrl}/es/seguro-medicare-florida`;
 
-    const title = 'Medicare Supplement (Medigap) Plans in Florida 2026–2027 | AHB Insurance';
-    const description = 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';
+    const title = isEs 
+        ? 'Medicare Suplementario (Medigap) Florida | AHB Insurance' 
+        : 'Medicare Supplement (Medigap) Florida | AHB Insurance';
+
+    const description = isEs 
+        ? 'Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432).' 
+        : 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -184,10 +189,14 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                             {isEs ? 'Guía de Autoridad 2026 | Asesoría Licenciada en Florida' : '2026 Master Guide | Licensed Florida Broker'}
                         </span>
                         <h1 className="text-3xl md:text-5xl font-black font-heading mb-6 leading-tight">
-                            Medicare Supplement (Medigap) Plans in Florida 2026–2027
+                            {isEs 
+                                ? 'Planes de Medicare Suplementario (Medigap) en Florida 2026–2027' 
+                                : 'Medicare Supplement (Medigap) Plans in Florida 2026–2027'}
                         </h1>
                         <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
-                            If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.
+                            {isEs
+                                ? 'Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida, le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de más de 80 aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita hoy.'
+                                : 'If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.'}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button

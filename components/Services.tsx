@@ -26,7 +26,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hig
 
     if (lowerTitle.includes('medicare')) {
         ctaText = isEs ? 'Obtener Mi Comparación de Medicare ➔' : 'Get My Medicare Comparison ➔';
-        targetUrl = isEs ? '/es/medicare' : '/medicare';
+        targetUrl = isEs ? '/es/seguro-medicare-florida' : '/medicare-florida';
     } else if (lowerTitle.includes('final') || lowerTitle.includes('gastos') || lowerTitle.includes('burial') || lowerTitle.includes('entierro')) {
         ctaText = isEs ? 'Ver Mis Opciones de Gastos Finales ➔' : 'Get My Final Expense Options ➔';
         targetUrl = isEs ? '/es/gastos-finales' : '/final-expense';

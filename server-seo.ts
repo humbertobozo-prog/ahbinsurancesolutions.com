@@ -1,7 +1,8 @@
 import { BLOG_POSTS } from "./constants/blogPosts";
 import { faqsEs, faqsEn } from "./constants/faqData";
+import { FLORIDA_CITIES } from "./data/cityGuidesData";
 
-interface SeoMetaData {
+export interface SeoMetaData {
   title: string;
   description: string;
   htmlLang: string;
@@ -10,9 +11,94 @@ interface SeoMetaData {
   esUrl: string;
   ogType: string;
   bodyOutline: string;
+  is404?: boolean;
+  robots?: string;
 }
 
 const baseUrl = "https://www.ahbinsurancesolutions.com";
+
+export const KNOWN_STATIC_ROUTES = new Set([
+  "",
+  "/",
+  "/es",
+  "/medicare-florida",
+  "/es/seguro-medicare-florida",
+  "/medicare",
+  "/es/medicare",
+  "/medicare-supplement-florida",
+  "/es/suplemento-medicare-florida",
+  "/final-expense",
+  "/es/gastos-finales",
+  "/iul-retirement",
+  "/es/iul-jubilacion",
+  "/annuities-florida",
+  "/es/anualidades-florida",
+  "/annuities",
+  "/es/anualidades",
+  "/dental-vision-florida",
+  "/es/dental-vision-florida",
+  "/blog",
+  "/es/blog",
+  "/faq",
+  "/es/preguntas-frecuentes",
+  "/about-andres-bozo",
+  "/es/sobre-andres-bozo",
+  "/about-us",
+  "/es/nosotros",
+  "/contact",
+  "/es/contacto",
+  "/terms",
+  "/es/terminos",
+  "/privacy",
+  "/es/privacidad",
+  "/terminos",
+  "/privacidad",
+  "/city-guides",
+  "/es/guias-ciudades",
+  "/final-expense-miami",
+  "/burial-insurance-tampa",
+  "/es/seguro-gastos-finales-tampa",
+  "/es/seguro-gastos-finales-florida",
+  "/iul-retirement-tampa",
+  "/spanish-insurance-orlando",
+  "/locations/gainesville-fl",
+  "/es/locations/gainesville-fl",
+  "/es/localidades/gainesville-fl",
+  "/gainesville-fl-insurance",
+  "/es/seguros-gainesville-fl",
+  "/blog-generator",
+  "/es/generador-blog"
+]);
+
+export function isKnownRoute(requestPath: string): boolean {
+  const cleanPath = requestPath.endsWith("/") && requestPath.length > 1 ? requestPath.slice(0, -1) : requestPath;
+
+  if (KNOWN_STATIC_ROUTES.has(cleanPath)) {
+    return true;
+  }
+
+  // Dynamic Blog Posts (/blog/:slug or /es/blog/:slug)
+  if (cleanPath.startsWith("/blog/")) {
+    const slug = cleanPath.replace("/blog/", "");
+    return BLOG_POSTS.some(p => p.slug.en === slug || p.slug.es === slug);
+  }
+  if (cleanPath.startsWith("/es/blog/")) {
+    const slug = cleanPath.replace("/es/blog/", "");
+    return BLOG_POSTS.some(p => p.slug.en === slug || p.slug.es === slug);
+  }
+
+  // Dynamic City Guides (/cities/:slug or /es/ciudades/:slug)
+  if (cleanPath.startsWith("/cities/")) {
+    const citySlug = cleanPath.replace("/cities/", "");
+    return FLORIDA_CITIES.some(c => c.slug === citySlug);
+  }
+  if (cleanPath.startsWith("/es/ciudades/")) {
+    const citySlug = cleanPath.replace("/es/ciudades/", "");
+    return FLORIDA_CITIES.some(c => c.slug === citySlug);
+  }
+
+  return false;
+}
 
 // Helper to sanitize HTML tags if needed
 function escapeHtml(text: string): string {
@@ -31,6 +117,57 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                cleanPath === "/terminos" || 
                cleanPath === "/privacidad";
   const htmlLang = isEs ? "es-US" : "en-US";
+
+  // Check if the requested route is known or an explicit 404
+  const isKnown = isKnownRoute(cleanPath);
+  const isExplicit404 = cleanPath === "/404" || cleanPath === "/es/404";
+
+  if (!isKnown || isExplicit404) {
+    return {
+      title: isEs ? "404 - Página no encontrada | AHB Insurance Solutions" : "404 - Page Not Found | AHB Insurance Solutions",
+      description: isEs
+        ? "La página solicitada no existe o ha sido movida. Regrese a la página principal de AHB Insurance Solutions para explorar opciones de Medicare, Gastos Finales e IUL en Florida."
+        : "The page you requested could not be found on AHB Insurance Solutions. Return to our homepage to explore Medicare, Final Expense, and IUL options in Florida.",
+      htmlLang,
+      canonicalUrl: `${baseUrl}/404`,
+      enUrl: `${baseUrl}/404`,
+      esUrl: `${baseUrl}/404`,
+      ogType: "website",
+      is404: true,
+      robots: "noindex, nofollow",
+      bodyOutline: isEs ? `
+        <header>
+          <h1>Error 404: Página no encontrada</h1>
+          <p>Lo sentimos, el enlace que intentó abrir no existe o ha sido reubicado.</p>
+        </header>
+        <section>
+          <h2>Enlaces Principales de Navegación</h2>
+          <ul>
+            <li><a href="/es">Inicio: Seguros en Florida</a></li>
+            <li><a href="/es/seguro-medicare-florida">Planes Suplementarios de Medicare (Medigap)</a></li>
+            <li><a href="/es/gastos-finales">Seguro de Gastos Finales y Funeral</a></li>
+            <li><a href="/es/iul-jubilacion">Vida Universal Indexada (IUL)</a></li>
+            <li><a href="/es/contacto">Contacto y Cotización Gratuita</a></li>
+          </ul>
+        </section>
+      ` : `
+        <header>
+          <h1>404: Page Not Found</h1>
+          <p>Sorry, the page you requested could not be found or has been moved.</p>
+        </header>
+        <section>
+          <h2>Helpful Resources & Navigation</h2>
+          <ul>
+            <li><a href="/">Home: Florida Insurance Solutions</a></li>
+            <li><a href="/medicare-florida">Medicare Supplement Plans (Medigap)</a></li>
+            <li><a href="/final-expense">Final Expense & Burial Life Insurance</a></li>
+            <li><a href="/iul-retirement">Indexed Universal Life (IUL) for Retirement</a></li>
+            <li><a href="/contact">Get a Free Insurance Consultation</a></li>
+          </ul>
+        </section>
+      `
+    };
+  }
 
   // Default Fallbacks (Home English)
   let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
@@ -269,7 +406,9 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     cleanPath === "/medicare-supplement-florida" ||
     cleanPath === "/es/suplemento-medicare-florida"
   ) {
-    title = "Medicare Supplement (Medigap) Plans in Florida 2026–2027 | AHB Insurance";
+    title = isEs 
+      ? "Medicare Suplementario (Medigap) Florida | AHB Insurance" 
+      : "Medicare Supplement (Medigap) Florida | AHB Insurance";
     description = isEs 
       ? "Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432)." 
       : "Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).";
@@ -1342,6 +1481,15 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
   } else {
     // Add inside <head>
     rewritten = rewritten.replace("</head>", `    <meta name="description" content="${escapeHtml(metadata.description)}">\n</head>`);
+  }
+
+  // 3b. Replace or Insert Meta Robots
+  const robotsContent = metadata.robots || "index, follow, max-image-preview:large";
+  const robotsRegex = /<meta name="robots" content="[^"]*"\s*\/?>/;
+  if (robotsRegex.test(rewritten)) {
+    rewritten = rewritten.replace(robotsRegex, `<meta name="robots" content="${robotsContent}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta name="robots" content="${robotsContent}">\n</head>`);
   }
 
   // 4. Replace Canonical URL link tag
