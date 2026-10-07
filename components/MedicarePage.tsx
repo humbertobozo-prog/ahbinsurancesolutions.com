@@ -11,9 +11,9 @@ interface MedicarePageProps {
 export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es';
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/medicare' : '/medicare'}`;
-    const enUrl = `${baseUrl}/medicare`;
-    const esUrl = `${baseUrl}/es/medicare`;
+    const canonical = `${baseUrl}${isEs ? '/es/seguro-medicare-florida' : '/medicare-florida'}`;
+    const enUrl = `${baseUrl}/medicare-florida`;
+    const esUrl = `${baseUrl}/es/seguro-medicare-florida`;
 
     const title = 'Medicare Supplement (Medigap) Plans in Florida 2026–2027 | AHB Insurance';
     const description = 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';

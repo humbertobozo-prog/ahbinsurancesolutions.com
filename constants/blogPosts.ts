@@ -82,6 +82,8 @@ Medigap policies work alongside Original Medicare to pay for out-of-pocket deduc
 2. **Annual Enrollment Period (AEP):** October 15 to December 7 each year.
 3. **Special Enrollment Periods (SEP):** Triggered when moving counties, losing employer coverage, or qualifying for Extra Help.
 
+Read our authoritative guide on [Medicare Supplement (Medigap) Plans in Florida](/medicare-florida) to compare Plan G, Plan N, and county pricing breakdown.
+
 > **Need expert assistance?** Call Andres H. Bozo directly at **+1 (352) 225-8389** for a free, no-obligation comparison across top-rated national carriers.
             `,
             es: `
@@ -109,6 +111,8 @@ Los planes Medigap trabajan junto al Medicare Original para pagar los deducibles
 1. **Período Inicial de Inscripción (IEP):** Ventana de 7 meses alrededor de su cumpleaños número 65.
 2. **Período de Inscripción Anual (AEP):** Del 15 de octubre al 7 de diciembre de cada año.
 3. **Períodos Especiales de Inscripción (SEP):** Al mudarse de condado o perder cobertura laboral.
+
+Consulte nuestra guía completa sobre [planes suplementarios de Medicare (Medigap) en Florida](/es/seguro-medicare-florida) para comparar tarifas del Plan G y Plan N por condado.
 
 > **¿Desea asesoría profesional gratuita?** Llame directamente a Andrés H. Bozo al **+1 (352) 225-8389** para una consulta 100% gratuita.
             `

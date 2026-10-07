@@ -387,6 +387,26 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     res.redirect(301, "/andresbozoofi.webp");
   });
 
+  // 301 Permanent Redirects consolidating Medicare into /medicare-florida
+  const MEDICARE_301_REDIRECTS: Record<string, string> = {
+    "/medicare": "/medicare-florida",
+    "/medicare/": "/medicare-florida",
+    "/medicare-supplement-florida": "/medicare-florida",
+    "/medicare-supplement-florida/": "/medicare-florida",
+    "/es/medicare": "/es/seguro-medicare-florida",
+    "/es/medicare/": "/es/seguro-medicare-florida",
+    "/es/suplemento-medicare-florida": "/es/seguro-medicare-florida",
+    "/es/suplemento-medicare-florida/": "/es/seguro-medicare-florida",
+  };
+
+  app.use((req, res, next) => {
+    const target = MEDICARE_301_REDIRECTS[req.path];
+    if (target) {
+      return res.redirect(301, target);
+    }
+    next();
+  });
+
   // Vite middleware for dev or static serving for production
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

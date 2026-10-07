@@ -56,7 +56,17 @@ const App: React.FC = () => {
 
     useEffect(() => {
         const syncPathAndLang = () => {
-            const currentPath = window.location.pathname;
+            let currentPath = window.location.pathname;
+
+            // Client-side instant normalization for legacy Medicare URLs
+            if (currentPath === '/medicare' || currentPath === '/medicare/' || currentPath === '/medicare-supplement-florida') {
+                window.history.replaceState({}, '', '/medicare-florida');
+                currentPath = '/medicare-florida';
+            } else if (currentPath === '/es/medicare' || currentPath === '/es/medicare/' || currentPath === '/es/suplemento-medicare-florida') {
+                window.history.replaceState({}, '', '/es/seguro-medicare-florida');
+                currentPath = '/es/seguro-medicare-florida';
+            }
+
             setPath(currentPath);
 
             const isSpanishPath = currentPath.startsWith('/es') || 
@@ -79,10 +89,6 @@ const App: React.FC = () => {
     const cleanPath = path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
 
     const landingPaths = [
-        '/medicare-florida',
-        '/medicare-supplement-florida',
-        '/es/suplemento-medicare-florida',
-        '/es/seguro-medicare-florida',
         '/final-expense-miami',
         '/burial-insurance-tampa',
         '/es/seguro-gastos-finales-tampa',
@@ -143,7 +149,14 @@ const App: React.FC = () => {
     // Dedicated Page Views
     let mainContentComponent: React.ReactNode;
 
-    if (cleanPath === '/medicare' || cleanPath === '/es/medicare') {
+    if (
+        cleanPath === '/medicare-florida' || 
+        cleanPath === '/es/seguro-medicare-florida' ||
+        cleanPath === '/medicare' || 
+        cleanPath === '/es/medicare' ||
+        cleanPath === '/medicare-supplement-florida' ||
+        cleanPath === '/es/suplemento-medicare-florida'
+    ) {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><MedicarePage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/final-expense' || cleanPath === '/es/gastos-finales') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><FinalExpensePage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;

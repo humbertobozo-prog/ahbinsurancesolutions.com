@@ -42,8 +42,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "": { en: "/", es: "/es" },
     "/": { en: "/", es: "/es" },
     "/es": { en: "/", es: "/es" },
-    "/medicare": { en: "/medicare", es: "/es/medicare" },
-    "/es/medicare": { en: "/medicare", es: "/es/medicare" },
+    "/medicare": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
+    "/es/medicare": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
     "/final-expense": { en: "/final-expense", es: "/es/gastos-finales" },
     "/es/gastos-finales": { en: "/final-expense", es: "/es/gastos-finales" },
     "/iul-retirement": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
@@ -66,8 +66,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/es/guias-ciudades": { en: "/city-guides", es: "/es/guias-ciudades" },
     "/medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
     "/es/seguro-medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/medicare-supplement-florida": { en: "/medicare-supplement-florida", es: "/es/suplemento-medicare-florida" },
-    "/es/suplemento-medicare-florida": { en: "/medicare-supplement-florida", es: "/es/suplemento-medicare-florida" },
+    "/medicare-supplement-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
+    "/es/suplemento-medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
     "/final-expense-miami": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
     "/es/seguro-gastos-finales-florida": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
     "/burial-insurance-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
@@ -261,10 +261,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   }
 
   // 2. Medicare Service Page
-  else if (cleanPath === "/medicare" || cleanPath === "/es/medicare") {
-    title = isEs 
-      ? "Guía Completa de Medicare en Florida 2026: Medigap Plan G, N y Advantage" 
-      : "Florida Medicare & Medigap Complete Guide 2026: Plan G, N & Advantage";
+  else if (
+    cleanPath === "/medicare-florida" || 
+    cleanPath === "/es/seguro-medicare-florida" ||
+    cleanPath === "/medicare" || 
+    cleanPath === "/es/medicare" ||
+    cleanPath === "/medicare-supplement-florida" ||
+    cleanPath === "/es/suplemento-medicare-florida"
+  ) {
+    title = "Medicare Supplement (Medigap) Plans in Florida 2026–2027 | AHB Insurance";
     description = isEs 
       ? "Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432)." 
       : "Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).";
@@ -776,14 +781,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     `;
   }
 
-  // 9. Localized Landing Pages (medicare-florida, final-expense-miami, annuities-florida, dental-vision-florida, etc.)
+  // 9. Localized Landing Pages (final-expense-miami, annuities-florida, dental-vision-florida, etc.)
   else {
     // Check if path is a recognized landing path
     const landingPaths = [
-      "/medicare-florida",
-      "/medicare-supplement-florida",
-      "/es/suplemento-medicare-florida",
-      "/es/seguro-medicare-florida",
       "/final-expense-miami",
       "/burial-insurance-tampa",
       "/es/seguro-gastos-finales-tampa",
@@ -799,25 +800,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ];
 
     if (landingPaths.includes(cleanPath)) {
-      if (cleanPath.includes("medicare") || cleanPath.includes("suplemento")) {
-        title = isEs 
-          ? "Seguro Medicare Florida 2026 | Asesoría y Planes Suplementarios en Español" 
-          : "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N";
-        description = isEs 
-          ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de aseguradoras líderes. Asesoría gratuita en español." 
-          : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from top-rated carriers. Guaranteed coverage & no network restrictions in FL.";
-        
-        bodyOutline = `
-          <header>
-            <h1>${title}</h1>
-            <p>${description}</p>
-          </header>
-          <section>
-            <h2>Medicare Supplement (Medigap) Solutions</h2>
-            <p>Compare Medigap Plan G and Plan N rates. Get 100% doctor choice freedom with Andres Bozo, licensed broker (NPN 21228432).</p>
-          </section>
-        `;
-      } else if (cleanPath.includes("final") || cleanPath.includes("burial") || cleanPath.includes("gastos")) {
+      if (cleanPath.includes("final") || cleanPath.includes("burial") || cleanPath.includes("gastos")) {
         title = isEs 
           ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
           : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage";

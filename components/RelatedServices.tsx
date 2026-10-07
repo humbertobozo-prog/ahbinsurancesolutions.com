@@ -23,7 +23,7 @@ export const RelatedServices: React.FC<RelatedServicesProps> = ({ currentService
             description: isEs 
                 ? 'Proteja sus ahorros contra copagos y deducibles médicos ilimitados con los Planes G y N en Florida.' 
                 : 'Shield your savings from uncapped medical co-pays with Florida Plan G & Plan N coverage.',
-            link: isEs ? '/es/medicare' : '/medicare',
+            link: isEs ? '/es/seguro-medicare-florida' : '/medicare-florida',
             cta: isEs ? 'Ver Planes de Medicare ➔' : 'Explore Medicare Plans ➔',
             icon: (
                 <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">

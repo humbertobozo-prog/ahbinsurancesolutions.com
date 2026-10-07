@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
         let nextPath: string;
 
         if (targetLang === 'es') {
-            if (currentPath === '/medicare') nextPath = '/es/medicare';
+            if (currentPath === '/medicare' || currentPath === '/medicare-florida') nextPath = '/es/seguro-medicare-florida';
             else if (currentPath === '/final-expense') nextPath = '/es/gastos-finales';
             else if (currentPath === '/iul-retirement') nextPath = '/es/iul-jubilacion';
             else if (currentPath === '/blog') nextPath = '/es/blog';
@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             else if (currentPath === '/privacy') nextPath = '/es/privacidad';
             else nextPath = '/es';
         } else {
-            if (currentPath === '/es/medicare') nextPath = '/medicare';
+            if (currentPath === '/es/medicare' || currentPath === '/es/seguro-medicare-florida') nextPath = '/medicare-florida';
             else if (currentPath === '/es/gastos-finales') nextPath = '/final-expense';
             else if (currentPath === '/es/iul-jubilacion') nextPath = '/iul-retirement';
             else if (currentPath === '/es/blog') nextPath = '/blog';
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
 
     const linkClass = "hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none transition-colors duration-300 cursor-pointer text-xs lg:text-sm font-bold uppercase tracking-wider px-2 py-1 rounded";
 
-    const medicarePath = isEs ? '/es/medicare' : '/medicare';
+    const medicarePath = isEs ? '/es/seguro-medicare-florida' : '/medicare-florida';
     const finalExpensePath = isEs ? '/es/gastos-finales' : '/final-expense';
     const iulPath = isEs ? '/es/iul-jubilacion' : '/iul-retirement';
     const blogPath = isEs ? '/es/blog' : '/blog';
