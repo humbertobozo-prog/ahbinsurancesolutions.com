@@ -12,16 +12,11 @@ for (const entry of sitemapRoutes) {
   routeSet.add(entry.esPath);
 }
 
-// Add canonical location aliases & legal / utility pages
-routeSet.add('/es/localidades/gainesville-fl');
-routeSet.add('/gainesville-fl-insurance');
-routeSet.add('/es/seguros-gainesville-fl');
+// Add non-sitemap legal & utility pages (excluding redirected routes so 301 status takes effect)
 routeSet.add('/terms');
 routeSet.add('/privacy');
 routeSet.add('/es/terminos');
 routeSet.add('/es/privacidad');
-routeSet.add('/terminos');
-routeSet.add('/privacidad');
 routeSet.add('/blog-generator');
 routeSet.add('/es/generador-blog');
 

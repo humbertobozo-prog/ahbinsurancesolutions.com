@@ -151,6 +151,16 @@
       "source": "/andresbozoofi.png",
       "destination": "/andresbozoofi.webp",
       "permanent": true
+    },
+    {
+      "source": "/terminos",
+      "destination": "/es/terminos",
+      "permanent": true
+    },
+    {
+      "source": "/privacidad",
+      "destination": "/es/privacidad",
+      "permanent": true
     }
   ],
   "cleanUrls": true,

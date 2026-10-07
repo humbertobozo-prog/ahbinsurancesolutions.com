@@ -277,7 +277,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
     if (isEs) {
       title = "Medicare, Gastos Finales e IUL en Florida | AHB Solutions";
-      description = "Asegure el futuro de su familia en Florida con asesoría en Suplementos de Medicare (Medigap), Seguro de Gastos Finales y Vida Universal Indexada (IUL). Broker Andrés Bozo NPN: 21228432.";
+      description = "Asesoría experta en Florida: Suplementos de Medicare, Gastos Finales y seguro IUL. Andrés Bozo (NPN 21228432) compara las mejores opciones. ¡Cotice gratis!";
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
@@ -414,8 +414,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Medicare Suplementario (Medigap) Florida | AHB Insurance" 
       : "Medicare Supplement (Medigap) Florida | AHB Insurance";
     description = isEs 
-      ? "Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432)." 
-      : "Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).";
+      ? "Guía de Medicare en Florida 2026. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
+      : "Compare Florida Medicare Supplement Plan G & N rates, Advantage, and Part D. Expert independent broker guidance from Andres Bozo (NPN 21228432). Free quote!";
     
     if (isEs) {
       bodyOutline = `
@@ -465,11 +465,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 3. Final Expense Service Page
   else if (cleanPath === "/final-expense" || cleanPath === "/es/gastos-finales") {
     title = isEs 
-      ? "Seguro de Gastos Finales y Funeral en Florida 2026 | AHB Insurance" 
-      : "Final Expense & Burial Insurance in Florida 2026 | AHB Insurance";
+      ? "Seguro de Gastos Finales y Funeral Florida 2026 | AHB" 
+      : "Final Expense & Burial Insurance Florida 2026 | AHB";
     description = isEs 
-      ? "Proteja a su familia con cobertura de $5,000 a $35,000 en Florida. Tarifas fijas de por vida. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
-      : "Secure $5,000 to $35,000 in Florida burial protection. Locked lifetime rates. Many simplified-issue policies do not require a traditional medical exam.";
+      ? "Proteja a su familia con cobertura de $5,000 a $35,000 en Florida. Tarifas fijas de por vida. Emisión simplificada sin examen médico. ¡Cotice hoy sin costo!" 
+      : "Secure $5,000 to $35,000 in Florida burial protection. Locked lifetime rates. Simplified-issue whole life policies without medical exam. Get a free quote!";
 
     if (isEs) {
       bodyOutline = `

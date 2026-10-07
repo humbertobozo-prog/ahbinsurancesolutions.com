@@ -37,12 +37,12 @@ export const BLOG_POSTS: BlogPost[] = [
             es: 'medicare-inscripcion-abierta-florida-2026'
         },
         title: {
-            en: '2026 Florida Medicare Open Enrollment Guide: Advantage vs Medigap',
-            es: 'Guía de Inscripción Abierta de Medicare en Florida 2026: Advantage vs Medigap'
+            en: 'Florida Medicare Open Enrollment 2026 Guide',
+            es: 'Inscripción Abierta Medicare en Florida 2026'
         },
         excerpt: {
-            en: 'Everything Florida seniors need to know about navigating Medicare Advantage, Medigap Plan G vs N, and prescription drug plans for 2026.',
-            es: 'Todo lo que los adultos mayores en Florida necesitan saber para navegar Medicare Advantage, Medigap Plan G vs N y planes de medicamentos para 2026.'
+            en: 'Florida seniors guide to navigating Medicare Advantage, Medigap Plan G vs N, and prescription drug plans for 2026 with broker Andres Bozo.',
+            es: 'Guía para adultos mayores en Florida sobre Medicare Advantage, Medigap Plan G vs N y medicamentos para 2026 con el broker Andrés Bozo.'
         },
         category: 'medicare',
         date: '2026-08-01',
@@ -125,8 +125,8 @@ Consulte nuestra guía completa sobre [planes suplementarios de Medicare (Mediga
             es: 'costos-funerales-gastos-finales-florida'
         },
         title: {
-            en: 'How Much Does Burial & Funeral Insurance Cost in Florida in 2026?',
-            es: '¿Cuánto Cuesta un Seguro de Gastos Finales y Funeral en Florida en 2026?'
+            en: 'Florida Burial & Funeral Insurance Costs 2026',
+            es: 'Costos de Seguro de Entierro en Florida 2026'
         },
         excerpt: {
             en: 'Average funeral expenses in Miami, Orlando, and Tampa range between $8,000 and $12,000. Learn how Final Expense life insurance protects your family.',
@@ -203,12 +203,12 @@ Para personas con condiciones médicas preexistentes graves, existen pólizas de
             es: 'iul-vs-401k-jubilacion-libre-de-impuestos'
         },
         title: {
-            en: 'Indexed Universal Life (IUL) vs 401(k): Tax-Advantaged Wealth & Retirement in Florida',
-            es: 'Vida Universal Indexada (IUL) vs 401(k): Estrategias de Retiro con Ventajas Fiscales en Florida'
+            en: 'IUL vs 401(k): Retirement Plans in Florida',
+            es: 'IUL vs 401(k): Planes de Retiro en Florida'
         },
         excerpt: {
-            en: 'Understand the strategic differences between an IUL and a 401(k), including 0% market downside protection, IRS 7702 policy loan mechanics, and essential lapse risk rules.',
-            es: 'Conozca las diferencias estratégicas entre un IUL y un 401(k), incluyendo el piso del 0% contra caídas de mercado, la mecánica de préstamos según IRS 7702 y las reglas cruciales sobre riesgo de lapse.'
+            en: 'Compare IUL and 401(k) retirement in Florida: 0% market downside floor, IRS 7702 tax-free policy loans, and key lapse risk rules with broker Andres Bozo.',
+            es: 'Compare IUL vs 401(k) en Florida: piso del 0% contra caídas de mercado, préstamos exentos de impuestos IRS 7702 y reglas de lapse con el broker Andrés Bozo.'
         },
         category: 'iul',
         date: '2026-07-15',

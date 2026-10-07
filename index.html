@@ -49,13 +49,35 @@
     <meta name="theme-color" content="#002855" />
     <meta name="google-site-verification" content="cK88T1AJ1i4ljtEceJEG44tQA_EflbbGB2s_VvHZIVA" />
 
-    <!-- Google Fonts Optimized (Preconnect & Stylesheet) -->
+    <!-- Google Fonts Optimized (Preconnect & Non-blocking Async Stylesheet) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
-      rel="stylesheet" 
+      rel="preload" 
+      as="style" 
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
     />
+    <link 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
+      media="print" 
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
+      />
+    </noscript>
+
+    <!-- Google Analytics (GA4) Integration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G84T1W2Z2V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G84T1W2Z2V', { send_page_view: true });
+    </script>
     
     <!-- LCP Responsive Image Preload -->
     <link 
