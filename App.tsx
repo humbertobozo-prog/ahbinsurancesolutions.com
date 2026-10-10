@@ -60,13 +60,25 @@ const App: React.FC = () => {
         const syncPathAndLang = () => {
             let currentPath = window.location.pathname;
 
-            // Client-side instant normalization for legacy Medicare URLs
+            // Client-side instant normalization for legacy URLs
             if (currentPath === '/medicare' || currentPath === '/medicare/' || currentPath === '/medicare-supplement-florida') {
                 window.history.replaceState({}, '', '/medicare-florida');
                 currentPath = '/medicare-florida';
             } else if (currentPath === '/es/medicare' || currentPath === '/es/medicare/' || currentPath === '/es/suplemento-medicare-florida') {
                 window.history.replaceState({}, '', '/es/seguro-medicare-florida');
                 currentPath = '/es/seguro-medicare-florida';
+            } else if (currentPath === '/iul' || currentPath === '/iul/' || currentPath === '/iul-florida' || currentPath === '/iul-florida/') {
+                window.history.replaceState({}, '', '/iul-retirement');
+                currentPath = '/iul-retirement';
+            } else if (currentPath === '/es/iul' || currentPath === '/es/iul/' || currentPath === '/es/iul-florida' || currentPath === '/es/iul-florida/' || currentPath === '/iul-jubilacion') {
+                window.history.replaceState({}, '', '/es/iul-jubilacion');
+                currentPath = '/es/iul-jubilacion';
+            } else if (currentPath === '/annuities' || currentPath === '/annuities/') {
+                window.history.replaceState({}, '', '/annuities-florida');
+                currentPath = '/annuities-florida';
+            } else if (currentPath === '/es/anualidades' || currentPath === '/es/anualidades/') {
+                window.history.replaceState({}, '', '/es/anualidades-florida');
+                currentPath = '/es/anualidades-florida';
             }
 
             setPath(currentPath);
@@ -166,7 +178,12 @@ const App: React.FC = () => {
         cleanPath === '/iul-retirement' || 
         cleanPath === '/es/iul-jubilacion' ||
         cleanPath === '/iul-retirement-tampa' ||
-        cleanPath === '/es/iul-jubilacion-tampa'
+        cleanPath === '/es/iul-jubilacion-tampa' ||
+        cleanPath === '/iul' ||
+        cleanPath === '/es/iul' ||
+        cleanPath === '/iul-florida' ||
+        cleanPath === '/es/iul-florida' ||
+        cleanPath === '/iul-jubilacion'
     ) {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><IULPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/annuities-florida' || cleanPath === '/es/anualidades-florida' || cleanPath === '/annuities' || cleanPath === '/es/anualidades') {

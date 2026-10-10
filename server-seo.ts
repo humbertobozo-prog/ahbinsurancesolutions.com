@@ -31,6 +31,11 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/es/gastos-finales",
   "/iul-retirement",
   "/es/iul-jubilacion",
+  "/iul",
+  "/es/iul",
+  "/iul-florida",
+  "/es/iul-florida",
+  "/iul-jubilacion",
   "/annuities-florida",
   "/es/anualidades-florida",
   "/annuities",
@@ -174,7 +179,6 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // Default Fallbacks (Home English)
   let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
   let description = "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!";
-  const canonicalUrl = `${baseUrl}${cleanPath === "" || cleanPath === "/" ? "/" : cleanPath}`;
 
   // Complete Hreflang Canonical Route Pairs to prevent 308 redirects and trailing slashes
   const ROUTE_PAIRS: Record<string, { en: string; es: string }> = {
@@ -187,6 +191,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/es/gastos-finales": { en: "/final-expense", es: "/es/gastos-finales" },
     "/iul-retirement": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
     "/es/iul-jubilacion": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/iul": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/es/iul": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/iul-florida": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/es/iul-florida": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
+    "/iul-jubilacion": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
     "/blog": { en: "/blog", es: "/es/blog" },
     "/es/blog": { en: "/blog", es: "/es/blog" },
     "/faq": { en: "/faq", es: "/es/preguntas-frecuentes" },
@@ -269,6 +278,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     const esSub = cleanPath === "/" ? "" : cleanPath;
     esUrl = `${baseUrl}/es${esSub}`;
   }
+
+  const canonicalUrl = ROUTE_PAIRS[cleanPath] 
+    ? (isEs ? esUrl : enUrl) 
+    : `${baseUrl}${cleanPath === "" || cleanPath === "/" ? "/" : cleanPath}`;
 
   let ogType = "website";
   let bodyOutline = "";
@@ -570,7 +583,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   }
 
   // 4. IUL Service Page
-  else if (cleanPath === "/iul-retirement" || cleanPath === "/es/iul-jubilacion") {
+  else if (
+    cleanPath === "/iul-retirement" || 
+    cleanPath === "/es/iul-jubilacion" ||
+    cleanPath === "/iul" ||
+    cleanPath === "/es/iul" ||
+    cleanPath === "/iul-florida" ||
+    cleanPath === "/es/iul-florida" ||
+    cleanPath === "/iul-jubilacion"
+  ) {
     title = isEs 
       ? "Guía Completa de Vida Universal Indexada (IUL) en Florida 2026 | AHB Insurance" 
       : "Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance";
@@ -1632,7 +1653,15 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "areaServed": { "@type": "State", "name": "Florida" },
       "description": metadata.description
     });
-  } else if (cleanPath === "/iul-retirement" || cleanPath === "/es/iul-jubilacion") {
+  } else if (
+    cleanPath === "/iul-retirement" || 
+    cleanPath === "/es/iul-jubilacion" ||
+    cleanPath === "/iul" ||
+    cleanPath === "/es/iul" ||
+    cleanPath === "/iul-florida" ||
+    cleanPath === "/es/iul-florida" ||
+    cleanPath === "/iul-jubilacion"
+  ) {
     graph.push({
       "@type": "Service",
       "name": isEs ? "Seguro de Vida Universal Indexada (IUL) para Jubilación" : "Indexed Universal Life (IUL) Insurance",

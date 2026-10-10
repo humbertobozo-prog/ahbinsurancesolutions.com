@@ -161,6 +161,61 @@
       "source": "/privacidad",
       "destination": "/es/privacidad",
       "permanent": true
+    },
+    {
+      "source": "/iul",
+      "destination": "/iul-retirement",
+      "permanent": true
+    },
+    {
+      "source": "/iul/",
+      "destination": "/iul-retirement",
+      "permanent": true
+    },
+    {
+      "source": "/iul-florida",
+      "destination": "/iul-retirement",
+      "permanent": true
+    },
+    {
+      "source": "/iul-florida/",
+      "destination": "/iul-retirement",
+      "permanent": true
+    },
+    {
+      "source": "/es/iul",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/es/iul/",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/es/iul-florida",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/es/iul-florida/",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/iul-jubilacion",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/iul-jubilacion/",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
+    },
+    {
+      "source": "/es/iul-retirement",
+      "destination": "/es/iul-jubilacion",
+      "permanent": true
     }
   ],
   "cleanUrls": true,

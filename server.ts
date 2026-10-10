@@ -397,7 +397,7 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
   });
 
   // 301 Permanent Redirects consolidating Medicare into /medicare-florida
-  const MEDICARE_301_REDIRECTS: Record<string, string> = {
+  const PERMANENT_301_REDIRECTS: Record<string, string> = {
     "/medicare": "/medicare-florida",
     "/medicare/": "/medicare-florida",
     "/medicare-supplement-florida": "/medicare-florida",
@@ -406,10 +406,35 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     "/es/medicare/": "/es/seguro-medicare-florida",
     "/es/suplemento-medicare-florida": "/es/seguro-medicare-florida",
     "/es/suplemento-medicare-florida/": "/es/seguro-medicare-florida",
+    "/iul": "/iul-retirement",
+    "/iul/": "/iul-retirement",
+    "/iul-florida": "/iul-retirement",
+    "/iul-florida/": "/iul-retirement",
+    "/es/iul": "/es/iul-jubilacion",
+    "/es/iul/": "/es/iul-jubilacion",
+    "/es/iul-florida": "/es/iul-jubilacion",
+    "/es/iul-florida/": "/es/iul-jubilacion",
+    "/iul-jubilacion": "/es/iul-jubilacion",
+    "/iul-jubilacion/": "/es/iul-jubilacion",
+    "/es/iul-retirement": "/es/iul-jubilacion",
+    "/annuities": "/annuities-florida",
+    "/annuities/": "/annuities-florida",
+    "/es/anualidades": "/es/anualidades-florida",
+    "/es/anualidades/": "/es/anualidades-florida",
+    "/anualidades-florida": "/es/anualidades-florida",
+    "/anualidades-florida/": "/es/anualidades-florida",
+    "/terminos": "/es/terminos",
+    "/terminos/": "/es/terminos",
+    "/privacidad": "/es/privacidad",
+    "/privacidad/": "/es/privacidad",
+    "/about-us": "/about-andres-bozo",
+    "/about-us/": "/about-andres-bozo",
+    "/es/nosotros": "/es/sobre-andres-bozo",
+    "/es/nosotros/": "/es/sobre-andres-bozo",
   };
 
   app.use((req, res, next) => {
-    const target = MEDICARE_301_REDIRECTS[req.path];
+    const target = PERMANENT_301_REDIRECTS[req.path];
     if (target) {
       return res.redirect(301, target);
     }
