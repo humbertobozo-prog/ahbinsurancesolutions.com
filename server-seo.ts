@@ -337,7 +337,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <nav aria-label="Enlaces en Español">
             <ul>
               <li><a href="/es">Inicio: Seguros en Florida</a></li>
-              <li><a href="/es/medicare">Planes de Suplemento de Medicare (Medigap)</a></li>
+              <li><a href="/es/seguro-medicare-florida">Planes de Suplemento de Medicare (Medigap)</a></li>
               <li><a href="/es/gastos-finales">Seguro de Gastos Finales y Funeral</a></li>
               <li><a href="/es/iul-jubilacion">Vida Universal Indexada (IUL)</a></li>
               <li><a href="/es/anualidades-florida">Anualidades y Retiro Seguro en Florida</a></li>
@@ -347,7 +347,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/es/contacto">Cotización Gratuita sin Compromiso</a></li>
             </ul>
           </nav>
-          <p class="mt-4"><strong>Looking for guidance in English?</strong> Visit our main <a href="/">English Florida Insurance Portal</a> or read our guides on <a href="/medicare">Medicare Supplement Plans</a>, <a href="/final-expense">Final Expense Insurance</a>, and <a href="/iul-retirement">IUL Retirement Plans</a>.</p>
+          <p class="mt-4"><strong>Looking for guidance in English?</strong> Visit our main <a href="/">English Florida Insurance Portal</a> or read our guides on <a href="/medicare-florida">Medicare Supplement Plans</a>, <a href="/final-expense">Final Expense Insurance</a>, and <a href="/iul-retirement">IUL Retirement Plans</a>.</p>
           <p>Comuníquese hoy mismo con el broker licenciado Andrés Bozo al <a href="tel:+13522258389">+1 (352) 225-8389</a> para recibir su comparativa y cotización sin ningún compromiso.</p>
         </section>
       `;
@@ -397,7 +397,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Explore Coverage Options & Bilingual Assistance</h2>
           <nav aria-label="Insurance Solutions">
             <ul>
-              <li><a href="/medicare">Medicare Supplement Plans (Medigap)</a></li>
+              <li><a href="/medicare-florida">Medicare Supplement Plans (Medigap)</a></li>
               <li><a href="/final-expense">Final Expense & Burial Life Insurance</a></li>
               <li><a href="/iul-retirement">Indexed Universal Life (IUL) for Retirement</a></li>
               <li><a href="/annuities-florida">Florida Fixed Indexed Annuities</a></li>
@@ -407,7 +407,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/contact">Free Insurance Quote</a></li>
             </ul>
           </nav>
-          <p class="mt-4"><strong>¿Prefiere recibir atención especializada en español?</strong> Visite nuestro <a href="/es">Portal de Seguros en Español en Florida</a> o explore nuestras páginas dedicadas a <a href="/es/medicare">Medicare Suplementario</a>, <a href="/es/gastos-finales">Seguro de Gastos Finales</a> e <a href="/es/iul-jubilacion">IUL y Jubilación</a>.</p>
+          <p class="mt-4"><strong>¿Prefiere recibir atención especializada en español?</strong> Visite nuestro <a href="/es">Portal de Seguros en Español en Florida</a> o explore nuestras páginas dedicadas a <a href="/es/seguro-medicare-florida">Medicare Suplementario</a>, <a href="/es/gastos-finales">Seguro de Gastos Finales</a> e <a href="/es/iul-jubilacion">IUL y Jubilación</a>.</p>
           <p>Speak directly with Florida licensed broker Andres Bozo today at <a href="tel:+13522258389">+1 (352) 225-8389</a> to receive your free, zero-obligation insurance analysis.</p>
         </section>
       `;
@@ -434,42 +434,300 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Medicare Suplementario Medigap</span></p></nav>
         <header>
-          <h1>Planes de Medicare y Suplementos (Medigap) en Florida</h1>
-          <p>${description}</p>
+          <h1>Planes de Medicare Suplementario (Medigap) en Florida 2026–2027</h1>
+          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de más de 80 aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita y personalizada hoy.</p>
         </header>
+
         <section>
-          <h2>Diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage</h2>
-          <p>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap.</p>
-          <p>Por otro lado, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado.</p>
+          <h2>La Realidad de Medicare Original (Partes A y B) en Florida</h2>
+          <p>Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos que pueden poner en riesgo los ahorros acumulados durante toda una vida de trabajo:</p>
+          <ul>
+            <li><strong>Sin Límite Anual de Gastos (No MOOP):</strong> En Medicare Original no existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de quimioterapia y diálisis, sin tope alguno en dólares.</li>
+            <li><strong>Deducibles de Hospital Elevados:</strong> En 2026, el deducible de hospitalización de la Parte A supera los $1,600 por cada período de beneficio de 60 días, no por año calendario, pudiendo repetirse varias veces en un mismo año.</li>
+          </ul>
         </section>
+
         <section>
-          <h2>Período de Inscripción Abierta de Medigap en Florida</h2>
-          <p>Su período clave dura 6 meses y comienza el mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante este tiempo tiene Derechos de Emisión Garantizada sin underwriting de salud.</p>
+          <h2>Paso a Paso para Inscribirse en Medicare en Florida al Cumplir 65 Años</h2>
+          <p>Navegar la transición hacia Medicare requiere sincronización precisa. Un descuido en los plazos legales de la Administración del Seguro Social (SSA) puede generar penalidades de por vida o la pérdida de sus derechos de emisión garantizada en seguros suplementarios:</p>
+          <ol>
+            <li><strong>Paso 1: Identificar su Período Inicial de Inscripción (IEP):</strong> Su IEP dura 7 meses: inicia 3 meses antes de cumplir 65 años, incluye el mes de su cumpleaños y finaliza 3 meses después. Es la ventana para solicitar las Partes A y B en SSA.gov.</li>
+            <li><strong>Paso 2: Activar la Ventana Protegida de Medigap (MOEP):</strong> Al activar la Parte B, arranca su ventana de 6 meses de Medigap. Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
+            <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico. De lo contrario, se acumulará una penalidad permanente del 1% mensual por cada mes sin cobertura acreditable.</li>
+          </ol>
         </section>
+
         <section>
-          <h2>Preguntas Frecuentes de Medicare Suplementario</h2>
-          <h3>¿Cuánto cuestan las primas de Medigap en Florida en 2026?</h3>
-          <p>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica.</p>
+          <h2>Análisis Detallado de Planes Medigap en Florida: Plan G vs Plan N vs Plan F</h2>
+          <article>
+            <h3>Medigap Plan G: La Opción Más Completa</h3>
+            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B (~$257 en 2026). Cubre el 100% del deducible de la Parte A, el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
+          </article>
+          <article>
+            <h3>Medigap Plan N: El Equilibrio entre Costo y Cobertura</h3>
+            <p>El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados: hasta $20 por consulta médica y hasta $50 en visitas a salas de urgencias que no resulten en admisión hospitalaria. El Plan N no cubre los cargos en exceso de la Parte B, pero en Florida la gran mayoría de los médicos aceptan la tarifa asignada por Medicare.</p>
+          </article>
+          <article>
+            <h3>Medigap Plan F: Disponibilidad Limitada</h3>
+            <p>El Plan F ya no está disponible para personas que se inscribieron en Medicare por primera vez el 1 de enero de 2020 o después. Si usted ya era elegible antes de esa fecha, aún puede contratarlo, aunque usualmente el Plan G ofrece una mejor relación costo-beneficio debido a que las primas del Plan F tienden a aumentar más rápidamente.</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Comparativa Exhaustiva: Medigap Plan G vs Plan N vs Medicare Advantage (Parte C)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Beneficio / Característica</th>
+                <th>Medigap Plan G</th>
+                <th>Medigap Plan N</th>
+                <th>Medicare Advantage (Parte C)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Red de Médicos y Hospitales</td>
+                <td>Cualquier proveedor nacional que acepte Medicare</td>
+                <td>Cualquier proveedor nacional que acepte Medicare</td>
+                <td>Red restringida del Plan (HMO o PPO local)</td>
+              </tr>
+              <tr>
+                <td>Referidos para Especialistas</td>
+                <td>Nunca requeridos</td>
+                <td>Nunca requeridos</td>
+                <td>Frecuente en redes HMO</td>
+              </tr>
+              <tr>
+                <td>Deducible de Hospital Parte A</td>
+                <td>$0 (100% Cubierto)</td>
+                <td>$0 (100% Cubierto)</td>
+                <td>Copagos diarios ($300-$400/día días 1-5)</td>
+              </tr>
+              <tr>
+                <td>Copagos por Visitas Médicas</td>
+                <td>$0 (Tras deducible de Parte B)</td>
+                <td>Hasta $20 por consulta</td>
+                <td>Copagos de $0 a $45+ por visita</td>
+              </tr>
+              <tr>
+                <td>Cargos en Exceso Parte B</td>
+                <td>100% Cubierto</td>
+                <td>No Cubierto (hasta 15% extra)</td>
+                <td>N/A (Sujeto a tarifas de red)</td>
+              </tr>
+              <tr>
+                <td>Predecibilidad Financiera</td>
+                <td>Máxima (Sin facturas sorpresa)</td>
+                <td>Muy Alta (Copagos menores)</td>
+                <td>Variable según uso médico (MOOP hasta $8,850+)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Rangos de Primas Mensuales y Factores de Tarificación en Florida 2026</h2>
+          <p>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026).</p>
+          <p>Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar:</p>
+          <ul>
+            <li><strong>Medigap Plan G:</strong> Suele oscilar entre $140 y $185 mensuales.</li>
+            <li><strong>Medigap Plan N:</strong> Suele oscilar entre $100 y $145 mensuales (ahorro ilustrativo de ~$30-50/mes frente al Plan G).</li>
+          </ul>
+          <p>Las primas de Medicare Suplementario no constituyen una tarifa general ni uniforme para el estado de Florida. El costo real depende de su código postal (ZIP), edad, método de tarificación actuarial (Attained-Age vs. Issue-Age), compañía aseguradora (carrier), descuentos por convivencia en el hogar (household discounts), evaluación médica (underwriting) y área geográfica.</p>
+        </section>
+
+        <section>
+          <h2>Derechos de Prueba (Trial Rights) y Cambio de Plan en Florida</h2>
+          <p>Muchos residentes de Florida prueban un plan Medicare Advantage y luego descubren retrasos en autorizaciones previas o denegaciones de especialistas. La ley federal otorga "Derechos de Prueba" especiales:</p>
+          <ul>
+            <li><strong>Prueba por primera vez (Primeros 12 meses):</strong> Si se inscribe en Medicare Advantage al cumplir 65 años y decide cambiarse dentro de los primeros 12 meses, tiene derecho garantizado de volver a Medigap sin preguntas médicas ni evaluación de salud.</li>
+            <li><strong>Pérdida de cobertura de red o mudanza:</strong> Si su plan Advantage abandona su condado en Florida o usted se muda fuera del área de servicio, califica para un Período Especial para comprar Medigap.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Fechas Clave de Inscripción de Medicare en Florida</h2>
+          <ul>
+            <li><strong>IEP (Período Inicial de Inscripción):</strong> Ventana de 7 meses (3 meses antes del mes de cumpleaños 65, el mes del cumpleaños y 3 meses después). Momento para activar Partes A y B.</li>
+            <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde la fecha de inicio de su Parte B. Inmunidad total contra cuestionarios médicos de salud. Emisión 100% garantizada por ley federal.</li>
+            <li><strong>AEP (Inscripción Anual - Octubre 15 a Diciembre 7):</strong> Ventana anual para modificar planes de medicamentos Parte D o cambiar coberturas Advantage para el siguiente año calendario.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Preguntas Frecuentes sobre Medicare Suplementario en Florida</h2>
+          <dl>
+            <dt><strong>¿Cuál es la diferencia entre Medicare Suplementario (Medigap) y Medicare Advantage en Florida?</strong></dt>
+            <dd>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap. Por el contrario, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado.</dd>
+            
+            <dt><strong>¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?</strong></dt>
+            <dd>El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses e inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes.</dd>
+            
+            <dt><strong>¿Puedo cambiarme de Medicare Advantage a un plan Medigap en Florida?</strong></dt>
+            <dd>Sí, pero en la mayoría de los casos deberá pasar por un proceso de suscripción médica (underwriting), respondiendo cuestionarios de salud, a menos que califique para un Período de Inscripción Especial o derechos de prueba ('trial rights') dentro de sus primeros 12 meses en Medicare Advantage.</dd>
+            
+            <dt><strong>¿Qué son los Cargos en Exceso de la Parte B y cómo me afectan en Florida?</strong></dt>
+            <dd>Si un médico o especialista no acepta la asignación de Medicare, la ley le permite cobrar hasta un 15% adicional sobre la tarifa aprobada por Medicare. El Medigap Plan G cubre el 100% de estos cargos en exceso, mientras que el Plan N no los cubre, aunque muchos médicos en Florida aceptan la asignación estándar.</dd>
+            
+            <dt><strong>¿Cuánto cuestan las primas de Medigap en Florida en 2026?</strong></dt>
+            <dd>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Asesoría Licenciada y Aviso Legal de Cumplimiento CMS</h2>
+          <p>Comuníquese hoy mismo con el corredor independiente licenciado Andrés Bozo (NPN: 21228432) al <a href="tel:+13522258389">+1 (352) 225-8389</a> para recibir una comparativa imparcial y personalizada sin costo.</p>
+          <p><small>Aviso Legal de Cumplimiento CMS Medicare: No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con Medicare.gov, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. AHB Insurance Solutions y el corredor Andrés H. Bozo son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.</small></p>
         </section>
       `;
     } else {
       bodyOutline = `
+        <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Medicare Supplement (Medigap) Plans</span></p></nav>
         <header>
-          <h1>Florida Medicare & Supplement Insurance Plans (Medigap)</h1>
-          <p>${description}</p>
+          <h1>Medicare Supplement (Medigap) Plans in Florida 2026–2027</h1>
+          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.</p>
         </header>
+
         <section>
-          <h2>Understanding Original Medicare Gaps & Supplement Solutions</h2>
-          <p>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules.</p>
-          <p>In contrast, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county.</p>
+          <h2>The Reality of Original Medicare (Parts A & B) in Florida</h2>
+          <p>Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps that can expose your retirement savings to unexpected medical liabilities:</p>
+          <ul>
+            <li><strong>No Annual Maximum Out-of-Pocket (No MOOP):</strong> Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, specialty treatments, and imaging.</li>
+            <li><strong>High Hospital Deductibles:</strong> In 2026, the Part A inpatient hospital deductible exceeds $1,600 per benefit period, which can occur multiple times in a single calendar year.</li>
+          </ul>
         </section>
+
         <section>
-          <h2>Medigap Open Enrollment Period (MOEP) in Florida</h2>
-          <p>The best time to buy a Medigap policy is during your 6-month Medigap Open Enrollment window. It starts the month you turn 65 and enroll in Medicare Part B. During this window, you have Guaranteed Issue Rights meaning carriers cannot reject you or charge higher premiums for pre-existing health conditions.</p>
+          <h2>Step-by-Step Medicare Enrollment Roadmap in Florida</h2>
+          <p>Navigating Medicare requires precise timing. Missing federal Social Security Administration (SSA) deadlines can result in lifelong premium penalties or the loss of guaranteed-issue rights for Medigap supplements:</p>
+          <ol>
+            <li><strong>Step 1: Identify Your Initial Enrollment Period (IEP):</strong> Your IEP spans 7 months: starts 3 months before your 65th birthday month, includes your birthday month, and ends 3 months after. Use SSA.gov to apply for Parts A and B.</li>
+            <li><strong>Step 2: Activate Your Medigap Open Enrollment Window (MOEP):</strong> Activating Part B triggers your 6-month Medigap window. During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
+            <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,000 out-of-pocket cap.</li>
+          </ol>
         </section>
+
         <section>
-          <h2>Florida Medigap Plan G vs Plan N Costs 2026</h2>
-          <p>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), underwriting, household discounts, and geographic area.</p>
+          <h2>Detailed Analysis of Florida Medigap Plans: Plan G vs Plan N vs Plan F</h2>
+          <article>
+            <h3>Medicare Supplement Plan G: Most Comprehensive Coverage</h3>
+            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible (~$257 in 2026). It covers 100% of the Part A hospital deductible, the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
+          </article>
+          <article>
+            <h3>Medicare Supplement Plan N: Balancing Cost and Coverage</h3>
+            <p>Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays: up to $20 for doctor visits and up to $50 for emergency room visits that do not lead to inpatient admission. Plan N does not cover Part B excess charges, but the vast majority of Florida physicians accept Medicare assignment rates.</p>
+          </article>
+          <article>
+            <h3>Medicare Supplement Plan F: Limited Availability</h3>
+            <p>Plan F is no longer available to individuals who first enrolled in Medicare on or after January 1, 2020. If you were eligible before that date, you may still purchase it, although Plan G typically offers a better cost-benefit ratio as Plan F premiums tend to increase more rapidly over time.</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Comprehensive Comparison: Medigap Plan G vs Plan N vs Medicare Advantage (Part C)</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Benefit / Feature</th>
+                <th>Medigap Plan G</th>
+                <th>Medigap Plan N</th>
+                <th>Medicare Advantage (Part C)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Doctor & Hospital Network</td>
+                <td>Any provider nationwide accepting Medicare</td>
+                <td>Any provider nationwide accepting Medicare</td>
+                <td>Plan restricted network (local HMO / PPO)</td>
+              </tr>
+              <tr>
+                <td>Specialist Referrals</td>
+                <td>Never required</td>
+                <td>Never required</td>
+                <td>Frequently required in HMOs</td>
+              </tr>
+              <tr>
+                <td>Part A Hospital Deductible</td>
+                <td>$0 (100% Covered)</td>
+                <td>$0 (100% Covered)</td>
+                <td>Daily copays ($300-$400/day days 1-5)</td>
+              </tr>
+              <tr>
+                <td>Doctor Office Copays</td>
+                <td>$0 (After Part B deductible)</td>
+                <td>Up to $20 per visit</td>
+                <td>$0 to $45+ copays per visit</td>
+              </tr>
+              <tr>
+                <td>Part B Excess Charges</td>
+                <td>100% Covered</td>
+                <td>Not Covered (Up to 15% extra)</td>
+                <td>N/A (Subject to plan network terms)</td>
+              </tr>
+              <tr>
+                <td>Financial Predictability</td>
+                <td>Maximum (No surprise bills)</td>
+                <td>Very High (Small copays only)</td>
+                <td>Variable based on utilization (MOOP up to $8,850+)</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Florida Medigap Plan G & Plan N Pricing Factors 2026</h2>
+          <p>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026).</p>
+          <p>As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts:</p>
+          <ul>
+            <li><strong>Medigap Plan G:</strong> Typically ranges between $140 and $185 per month.</li>
+            <li><strong>Medigap Plan N:</strong> Typically ranges between $100 and $145 per month (illustrative savings of ~$30-50/month compared to Plan G).</li>
+          </ul>
+          <p>Medicare Supplement (Medigap) premiums do not represent a uniform or statewide general rate across Florida. Actual policy costs vary based on: ZIP code, age, rating method (such as Attained-Age vs. Issue-Age), insurance carrier, household discounts, health underwriting, and geographic area.</p>
+        </section>
+
+        <section>
+          <h2>Medicare Advantage Trial Rights & Switching Protections in Florida</h2>
+          <p>Many Florida seniors try Medicare Advantage only to experience prior authorization delays or network exclusions. Federal law provides specific "Trial Rights" to protect you:</p>
+          <ul>
+            <li><strong>First-time Trial Right (First 12 months):</strong> If you join Medicare Advantage when first eligible at 65, you can drop it within 12 months and switch to Medigap with guaranteed issue rights and zero medical questions.</li>
+            <li><strong>Network Changes or Relocation:</strong> If your Advantage plan leaves your Florida county or you relocate out of state, you trigger a Special Enrollment Period to purchase a Medigap plan.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Key Florida Medicare Enrollment Windows</h2>
+          <ul>
+            <li><strong>IEP (Initial Enrollment Period):</strong> 7-month window spanning 3 months before your 65th birthday month, your birthday month, and 3 months after.</li>
+            <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month golden window starting on your Part B effective date with guaranteed acceptance and zero medical underwriting.</li>
+            <li><strong>AEP (Annual Enrollment Period - Oct 15 to Dec 7):</strong> Annual period to join, drop, or switch Medicare Advantage and Part D prescription drug plans for the upcoming coverage year.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Frequently Asked Questions About Florida Medicare</h2>
+          <dl>
+            <dt><strong>What is the difference between Medicare Supplement (Medigap) and Medicare Advantage in Florida?</strong></dt>
+            <dd>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules. Conversely, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county.</dd>
+
+            <dt><strong>What is the importance of the Medigap Open Enrollment Period in Florida?</strong></dt>
+            <dd>Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It begins the month you turn 65 and are enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history.</dd>
+
+            <dt><strong>Can I switch from a Medicare Advantage plan back to Medigap in Florida?</strong></dt>
+            <dd>Yes, but outside of specific Trial Rights (such as trying Advantage for the first time for under 12 months), you will generally need to pass medical underwriting questions. As an independent broker, we review your health history to identify carriers most likely to approve your Medigap application.</dd>
+
+            <dt><strong>What are Part B Excess Charges and does Plan G cover them?</strong></dt>
+            <dd>Part B excess charges occur when a doctor does not accept Medicare's baseline assignment rate and charges up to an additional 15%. Medigap Plan G covers 100% of Part B excess charges, whereas Plan N does not cover them.</dd>
+
+            <dt><strong>How much does a Medigap Plan G cost in Florida for 2026?</strong></dt>
+            <dd>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Independent Broker Advisory & CMS Compliance Disclaimer</h2>
+          <p>Contact Florida-licensed independent insurance broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">+1 (352) 225-8389</a> for an unbiased Medicare review with zero broker fees.</p>
+          <p><small>Official CMS Medicare Compliance Disclaimer: We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. AHB Insurance Solutions and broker Andres H. Bozo are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.</small></p>
         </section>
       `;
     }
@@ -488,95 +746,242 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Gastos Finales y Funeral</span></p></nav>
         <header>
-          <h1>Seguro de Gastos Finales y Funeral en Florida</h1>
-          <p>${description}</p>
+          <h1>Seguro de Gastos Finales y Funeral en Florida 2026</h1>
+          <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida, Andrés Bozo (NPN: 21228432) compara las tarifas más competitivas entre más de 15 aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
         </header>
+
         <section>
           <h2>¿Qué es el Seguro de Gastos Finales?</h2>
-          <p>Es una póliza de seguro de vida entera (Whole Life) permanente diseñada para cubrir gastos de entierro, cremación, servicios funerarios, deudas médicas pendientes o compromisos financieros tras el fallecimiento. Los beneficios en efectivo oscilan entre $5,000 y $35,000.</p>
+          <p>El Seguro de Gastos Finales (comúnmente denominado seguro de entierro o seguro funerario) es una póliza de seguro de Vida Entera (Whole Life) permanente. Está específicamente estructurada para cubrir costos de entierro o cremación, servicios funerarios, ataúd, parcela de cementerio, facturas médicas pendientes del hospital y deudas no saldadas tras el fallecimiento.</p>
+          <p>A diferencia de los seguros a término que expiran cuando usted cumple 70 u 80 años, el seguro de gastos finales permanece activo durante toda su vida siempre que mantenga sus cuotas al día. Acumula valor en efectivo garantizado y garantiza que su familia disponga de liquidez inmediata en sus momentos más vulnerables.</p>
         </section>
+
         <section>
-          <h2>¿Quién Necesita este Seguro?</h2>
-          <p>Adultos de 50 a 85 años que desean evitar traspasar una deuda funeraria de $8,000 a $14,000 a sus hijos o familiares, personas sin seguro de vida activo o con pólizas de término que están por vencer.</p>
+          <h2>¿Quién Necesita Cobertura de Gastos Finales en Florida?</h2>
+          <ul>
+            <li><strong>Adultos Mayores de 50 a 85 años:</strong> Personas que no desean traspasar una factura funeraria de $10,000+ a sus hijos o cónyuge en momentos de duelo.</li>
+            <li><strong>Personas que Han Superado Pólizas a Término:</strong> Retirados cuyas pólizas de término expiraron o cuyas cuotas de renovación se volvieron inasequibles al envejecer.</li>
+            <li><strong>Personas con Historial Médico Moderado:</strong> Quienes manejan hipertensión, diabetes, sobrepeso o afecciones crónicas y buscan cobertura accesible sin exámenes médicos exhaustivos.</li>
+            <li><strong>Familias que Buscan Dinero en Efectivo Directo:</strong> Familias que prefieren efectivo líquido para sus beneficiarios en lugar de contratos prepagados atados a una sola funeraria.</li>
+          </ul>
         </section>
+
         <section>
-          <h2>Montos de Cobertura y Desglose de Gastos en Florida</h2>
-          <p>Planes desde $5,000 para cremación y gastos administrativos, hasta $35,000 para funeral tradicional con parcela de cementerio, ataúd y fondo de emergencia familiar. El beneficio único del Seguro Social de EE.UU. es de solo $255 para cónyuges sobrevivientes.</p>
+          <h2>Opciones de Cobertura y Costos Funerarios Reales en Florida</h2>
+          <p>Usted elige la cantidad de beneficio según sus deseos (cremación o sepelio tradicional) y su presupuesto. En Florida, los costos funerarios promedio incluyen:</p>
+          <ul>
+            <li><strong>Funeral Tradicional con Sepelio ($9,500 – $14,000+):</strong> Incluye servicios profesionales del director funerario, embalsamamiento, preparación estética, velación, coche fúnebre, ataúd de metal o madera, parcela en cementerio, bóveda (outer burial container) y lápida conmemorativa.</li>
+            <li><strong>Cremación con Servicio Memorial ($4,000 – $7,500):</strong> Incluye cremación profesional, urna conmemorativa, servicio memorial o religioso en capilla y disposición de cenizas.</li>
+            <li><strong>Cremación Directa Simple ($1,500 – $3,000):</strong> El servicio más elemental sin velación ni ceremonia previa.</li>
+          </ul>
+          <p><strong>El Pago del Seguro Social Federal:</strong> La Administración del Seguro Social federal otorga únicamente un pago único por fallecimiento de $255 a cónyuges sobrevivientes o dependientes calificados. Deja miles de dólares en gastos al descubierto que recaen directamente sobre los familiares.</p>
         </section>
+
         <section>
-          <h2>Criterios de Elegibilidad y Suscripción Médica</h2>
-          <p>Disponible para residentes de Florida entre 50 y 85 años. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la aseguradora y el solicitante. Las compañías evalúan la elegibilidad a través de preguntas de salud, historial de medicamentos recetados, registros del MIB y, en determinados casos, entrevistas telefónicas o informes médicos (APS).</p>
+          <h2>Tipos de Pólizas: Emisión Simplificada vs. Emisión Garantizada</h2>
+          <article>
+            <h3>Emisión Simplificada (Simplified Issue): Cobertura Inmediata Día 1</h3>
+            <p>Muchas pólizas de emisión simplificada no requieren un examen médico tradicional (sin agujas, análisis de sangre ni visitas de enfermeros a domicilio). La aprobación se basa en responder un cuestionario de salud básico y en una verificación digital de su historial de recetas médicas (Rx database check). Si califica, obtiene el beneficio nivelado completo (Level Benefit) desde el primer día con las primas más económicas.</p>
+          </article>
+          <article>
+            <h3>Emisión Garantizada (Guaranteed Issue): Sin Preguntas Médicas</h3>
+            <p>Diseñada para solicitantes que manejan enfermedades graves (como diálisis, cáncer activo, demencia o fallo cardíaco congestivo). La aseguradora no hace preguntas de salud ni revisa historial médico. Estas pólizas suelen incluir un período de espera de 2 años (Graded Benefit): si el asegurado fallece por causas naturales durante los primeros 24 meses, los beneficiarios reciben la devolución total de las primas pagadas más un 10% de interés.</p>
+          </article>
         </section>
+
         <section>
-          <h2>Emisión Simplificada vs. Emisión Garantizada</h2>
-          <p>La emisión simplificada ofrece cobertura inmediata desde el primer día (Level Benefit) para solicitantes con condiciones controladas. La emisión garantizada (Guaranteed Issue) no realiza preguntas médicas y aprueba al 100% de solicitantes con enfermedades graves, con un período de espera graduado de 2 años.</p>
+          <h2>Comparativa: Gastos Finales vs. Seguro a Término vs. Plan Funerario Prepagado</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Seguro de Gastos Finales</th>
+                <th>Seguro de Vida a Término</th>
+                <th>Plan Funerario Prepagado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Duración de Cobertura</td>
+                <td>Toda la vida (Permanente)</td>
+                <td>10, 20 o 30 años (Expira)</td>
+                <td>Atado al contrato de la funeraria</td>
+              </tr>
+              <tr>
+                <td>Primas Mensuales</td>
+                <td>Fijas y niveladas para siempre</td>
+                <td>Suben drásticamente al vencer</td>
+                <td>Pagos fijos o suma global</td>
+              </tr>
+              <tr>
+                <td>Flexibilidad de Fondos</td>
+                <td>100% Efectivo libre para familia</td>
+                <td>Efectivo libre (si fallece a tiempo)</td>
+                <td>Solo servicios fúnebres contratados</td>
+              </tr>
+              <tr>
+                <td>Libertad de Proveedores</td>
+                <td>Cualquier funeraria en todo EE.UU.</td>
+                <td>Cualquier funeraria</td>
+                <td>Solo la empresa funeraria local</td>
+              </tr>
+              <tr>
+                <td>Tratamiento Fiscal</td>
+                <td>Libre de impuestos federales (IRC 101a)</td>
+                <td>Libre de impuestos federales</td>
+                <td>Sujeto a normas contractuales</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
+
         <section>
-          <h2>Períodos de Espera y Pago de Beneficios</h2>
-          <p>Explicación transparente de cobertura inmediata desde el Día 1 frente a pólizas con beneficios graduados para perfiles de alto riesgo médico.</p>
+          <h2>Preguntas Frecuentes sobre Seguro de Gastos Finales en Florida</h2>
+          <dl>
+            <dt><strong>¿El Seguro Social paga los gastos de funeral en Florida?</strong></dt>
+            <dd>El Seguro Social federal solo otorga un pago único por fallecimiento de $255 a cónyuges sobrevivientes o hijos dependientes elegibles. Dado que los funerales tradicionales promedio en Florida superan los $9,500 y las cremaciones con servicios conmemorativos oscilan entre $4,000 y $7,500, un seguro de gastos finales es indispensable para evitar que su familia enfrente deudas repentinas.</dd>
+
+            <dt><strong>¿Aumentarán mis primas mensuales a medida que cumpla más años?</strong></dt>
+            <dd>No. Muchas pólizas de vida entera participantes ofrecen primas niveladas y cobertura permanente, sujetas a los términos, condiciones y al pago continuo de las primas requeridas. Sus cuotas quedan congeladas desde la fecha de emisión.</dd>
+
+            <dt><strong>¿Cómo funciona la suscripción médica simplificada?</strong></dt>
+            <dd>Muchas pólizas de emisión simplificada no requieren un examen médico tradicional (como pruebas de sangre, orina o visitas de enfermeros), aunque los requisitos de suscripción varían según la aseguradora y el solicitante. En lugar de exámenes físicos invasivos, la aseguradora evalúa la solicitud mediante preguntas de salud, revisión electrónica del historial de recetas médicas (Rx check) y bases de datos del MIB. Esto permite emitir la póliza en cuestión de días u horas.</dd>
+
+            <dt><strong>¿Cuál es la diferencia entre Emisión Simplificada y Emisión Garantizada?</strong></dt>
+            <dd>La Emisión Simplificada incluye preguntas de salud y verificación de recetas; si califica, otorga cobertura completa inmediata desde el Día 1 (Level Benefit) con las primas más competitivas. Las pólizas de emisión garantizada generalmente no requieren suscripción médica tradicional ni preguntas de salud, pero la elegibilidad, las limitaciones de beneficios y los períodos de espera varían según el asegurador y el producto.</dd>
+
+            <dt><strong>¿Cuál es la diferencia entre un Seguro de Gastos Finales y un Contrato Funerario Prepagado (Pre-Need)?</strong></dt>
+            <dd>Un contrato prepagado lo ata exclusivamente a una funeraria específica. Si esa empresa quiebra, cambia de administración o usted se muda de ciudad o estado, transferir o recuperar los fondos puede ser muy complejo o penalizado. Los beneficios por fallecimiento de un seguro de gastos finales se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado, dándoles libertad para contratar cualquier funeraria o servicio en Florida o en todo el país.</dd>
+
+            <dt><strong>¿Puedo calificar si tengo condiciones preexistentes como Diabetes o Hipertensión?</strong></dt>
+            <dd>Sí. Gran parte de nuestros clientes adultos mayores en Florida manejan condiciones de salud crónicas. Como corredores independientes, revisamos su historial de salud y medicamentos para identificar las aseguradoras con pautas de suscripción más favorables, buscando alternativas con cobertura inmediata de beneficio nivelado desde el primer día cuando el solicitante califique según las reglas de la compañía.</dd>
+          </dl>
         </section>
+
         <section>
-          <h2>Primas Mensuales Congeladas de por Vida</h2>
-          <p>Las tarifas nunca aumentan con la edad ni por cambios de salud. La póliza nunca vence mientras las cuotas se mantengan al día.</p>
-        </section>
-        <section>
-          <h2>Beneficiarios y Pago de Beneficios</h2>
-          <p>Los beneficios por fallecimiento se pagan generalmente a los beneficiarios según los términos de la póliza y pueden recibir un tratamiento fiscal federal favorable; las disposiciones de la póliza y las circunstancias de los beneficiarios pueden incidir en el resultado. A diferencia de los contratos prepagados de funerarias, su familia tiene libertad para elegir cualquier funeraria en Florida o en todo EE.UU.</p>
-        </section>
-        <section>
-          <h2>Comparativa: Gastos Finales vs. Seguro a Término vs. Funeraria Prepagada</h2>
-          <p>Tabla comparativa exhaustiva que detalla flexibilidad, permanencia, congelación de precios y libertad de proveedores.</p>
-        </section>
-        <section>
-          <h2>Proceso de Solicitud con Andrés Bozo (NPN 21228432)</h2>
-          <p>Paso a paso: consulta gratuita, evaluación de historial médico para ubicar la mejor tarifa en más de 15 aseguradoras, firma electrónica o telefónica y emisión rápida.</p>
+          <h2>Proceso de Solicitud y Cotización Gratuita en Florida</h2>
+          <p>El corredor licenciado Andrés Bozo (NPN: 21228432) le acompaña en cada paso para elegir la póliza que mejor cuide su presupuesto y a sus seres queridos. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> para una cotización inmediata y personalizada sin compromiso.</p>
         </section>
       `;
     } else {
       bodyOutline = `
+        <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Final Expense & Burial Insurance</span></p></nav>
         <header>
-          <h1>Final Expense & Burial Insurance in Florida</h1>
-          <p>${description}</p>
+          <h1>Final Expense & Burial Insurance in Florida 2026</h1>
+          <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432) compares rates across top carriers to secure the best policy for your family.</p>
         </header>
+
         <section>
           <h2>What is Final Expense Insurance?</h2>
-          <p>Final Expense is a permanent whole life policy designed to cover funeral services, cremation, burial costs, leftover medical bills, and personal debts. Cash benefits range from $5,000 to $35,000 for adults aged 50 to 85.</p>
+          <p>Final Expense Insurance (often called burial or funeral insurance) is a permanent Whole Life insurance policy. It is specifically structured to cover burial or cremation expenses, funeral home services, caskets, cemetery plots, outstanding hospital bills, and unpaid debts upon your passing.</p>
+          <p>Unlike term life insurance policies that expire when you reach age 70 or 80, final expense coverage stays active for your entire life as long as premiums are paid. It builds guaranteed cash value and delivers immediate liquidity to your loved ones when they need it most.</p>
         </section>
+
         <section>
-          <h2>Who Needs Final Expense Coverage?</h2>
-          <p>Florida seniors, retirees, and individuals wanting to shield their children from $9,000 to $14,000 in unexpected funeral debt, or anyone who has outlived their term life insurance policies.</p>
+          <h2>Who Needs Final Expense Coverage in Florida?</h2>
+          <ul>
+            <li><strong>Seniors Aged 50 to 85:</strong> Individuals who want to ensure their children and spouse are not left with a sudden $10,000+ funeral bill during their time of grief.</li>
+            <li><strong>Outlived Term Life Insurance:</strong> Retirees whose 20 or 30-year term policies expired or whose term renewal rates became unaffordable as they aged.</li>
+            <li><strong>Applicants with Health Conditions:</strong> Those managing hypertension, diabetes, or other chronic conditions who need accessible whole life coverage without undergoing invasive medical exams.</li>
+            <li><strong>Families Wanting Direct Cash Freedom:</strong> Families who prefer unrestricted cash payouts for their beneficiaries instead of restrictive funeral home pre-need packages.</li>
+          </ul>
         </section>
+
         <section>
-          <h2>Coverage Amounts & Real Florida Funeral Costs</h2>
-          <p>Options from $5,000 to $35,000. Social Security only pays a $255 one-time lump sum to eligible surviving spouses, leaving thousands of dollars in uncovered funeral and cemetery expenses.</p>
+          <h2>Coverage Options & Real Florida Funeral Costs</h2>
+          <p>You choose the exact face amount based on your preferred arrangement and monthly budget. In Florida, typical funeral and memorial expenses include:</p>
+          <ul>
+            <li><strong>Traditional Funeral with Burial ($9,500 – $14,000+):</strong> Basic services fee of funeral director, embalming, cosmetology, viewing/visitation, hearse transport, metal or wood casket, cemetery plot, outer burial container (vault), and opening/closing costs.</li>
+            <li><strong>Cremation with Memorial Service ($4,000 – $7,500):</strong> Professional cremation, memorial service at chapel or church, urn, and disposition arrangements.</li>
+            <li><strong>Direct Cremation ($1,500 – $3,000):</strong> Basic cremation without prior viewing or ceremonial service.</li>
+          </ul>
+          <p><strong>Federal Social Security Death Benefit:</strong> The federal Social Security Administration pays only a single, one-time lump-sum death benefit of $255 to eligible surviving spouses, leaving thousands of dollars in uncovered funeral expenses for your loved ones.</p>
         </section>
+
         <section>
-          <h2>Eligibility & Underwriting Context</h2>
-          <p>Available for Florida residents typically aged 50 to 85. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Insurers verify eligibility through health questionnaire responses, electronic prescription drug history (Rx check), MIB records, and occasionally telephone interviews or attending physician statements (APS).</p>
+          <h2>Policy Types: Simplified Issue vs. Guaranteed Issue</h2>
+          <article>
+            <h3>Simplified Issue: Day-One Immediate Level Coverage</h3>
+            <p>Many simplified-issue policies do not require a traditional medical exam (no needles, blood draws, or home nurse visits). Approval is based on answering basic health questionnaire questions and an electronic prescription drug database check (Rx check). Qualifying applicants receive full Day-One Level Benefit protection at the lowest monthly rates.</p>
+          </article>
+          <article>
+            <h3>Guaranteed Issue: No Medical Questions</h3>
+            <p>Designed for applicants managing severe health challenges (such as active cancer, dialysis, dementia, or congestive heart failure). The insurer does not ask health questions or review medical records. These policies typically feature a 2-year graded waiting period: if death occurs from natural causes in the first 24 months, beneficiaries receive a full return of all paid premiums plus 10% interest.</p>
+          </article>
         </section>
-        <section>
-          <h2>Simplified Issue vs. Guaranteed Issue</h2>
-          <p>Simplified issue plans provide Day-One Level Benefits for applicants with managed health histories. Guaranteed-issue policies generally do not require traditional medical underwriting or health questions, but eligibility, benefit limitations and waiting periods vary by carrier and product.</p>
-        </section>
-        <section>
-          <h2>Waiting Periods Explained</h2>
-          <p>Honest breakdown between immediate day-one payout policies and modified two-year graded periods for high-risk individuals.</p>
-        </section>
-        <section>
-          <h2>Level Premiums & Permanent Coverage</h2>
-          <p>Many participating whole life policies offer level premiums and permanent coverage, subject to the policy’s terms, conditions and continued payment of required premiums.</p>
-        </section>
-        <section>
-          <h2>Beneficiaries & Benefit Payouts</h2>
-          <p>Death benefits are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome. Unlike restrictive pre-need funeral contracts, your family has freedom to choose any provider nationwide.</p>
-        </section>
+
         <section>
           <h2>Comparison: Final Expense vs. Term Life vs. Pre-Need Funeral Plans</h2>
-          <p>Detailed evaluation highlighting permanent guarantees, price locking, and freedom of choice.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Final Expense Whole Life</th>
+                <th>Term Life Insurance</th>
+                <th>Pre-Need Funeral Contract</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Coverage Duration</td>
+                <td>Lifelong (Permanent)</td>
+                <td>10, 20, or 30 Years (Expires)</td>
+                <td>Locked to specific funeral home</td>
+              </tr>
+              <tr>
+                <td>Premium Rates</td>
+                <td>Fixed and level for life</td>
+                <td>Skyrockets upon expiration</td>
+                <td>Fixed payments or lump sum</td>
+              </tr>
+              <tr>
+                <td>Benefit Flexibility</td>
+                <td>100% Tax-free cash for family</td>
+                <td>Cash benefit (if death occurs in term)</td>
+                <td>Limited strictly to funeral package</td>
+              </tr>
+              <tr>
+                <td>Provider Freedom</td>
+                <td>Any funeral home nationwide</td>
+                <td>Any funeral home</td>
+                <td>Only the contracted funeral home</td>
+              </tr>
+              <tr>
+                <td>Federal Tax Treatment</td>
+                <td>Income-tax-free death benefit (IRC 101a)</td>
+                <td>Income-tax-free death benefit</td>
+                <td>Subject to contract and state laws</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
+
         <section>
-          <h2>Application Process with Andres Bozo, Independent Broker (NPN 21228432)</h2>
-          <p>Streamlined guidance: we compare available Final Expense options from multiple state-licensed insurance carriers, assist with telephone or electronic applications, and walk you through carrier underwriting.</p>
+          <h2>Frequently Asked Questions About Florida Final Expense Insurance</h2>
+          <dl>
+            <dt><strong>Does Social Security cover funeral costs in Florida?</strong></dt>
+            <dd>The federal Social Security Administration pays only a single, one-time lump-sum death benefit of $255 to eligible surviving spouses or dependent children. Given that traditional Florida funerals average over $9,500 and memorial cremations range from $4,000 to $7,500, final expense insurance is essential to protect loved ones from unexpected debt.</dd>
+
+            <dt><strong>Will my monthly premiums increase as I grow older?</strong></dt>
+            <dd>Many participating whole life policies offer level premiums and permanent coverage, subject to the policy’s terms, conditions and continued payment of required premiums. Your rates are locked in on day one.</dd>
+
+            <dt><strong>What does 'no traditional medical exam' mean?</strong></dt>
+            <dd>Many simplified-issue policies do not require a traditional medical exam (such as blood draws, urine tests, or nurse physicals), although underwriting requirements vary by carrier and applicant. Instead of invasive physical exams, insurers review health application questions, electronic prescription drug histories (Rx checks), and MIB databases, allowing policies to be approved in days or hours.</dd>
+
+            <dt><strong>What is the difference between Simplified Issue and Guaranteed Issue?</strong></dt>
+            <dd>Simplified Issue policies require answering health questions and an Rx database check; qualifying applicants receive immediate Day-One Level Benefit protection with more competitive rates than guaranteed issue options. Guaranteed-issue policies generally do not require traditional medical underwriting or health questions, but eligibility, benefit limitations and waiting periods vary by carrier and product.</dd>
+
+            <dt><strong>What is the difference between Final Expense Insurance and a Pre-Need Funeral Plan?</strong></dt>
+            <dd>Pre-need plans lock your funds with one specific local funeral home. If that funeral home changes ownership, closes, or if you relocate out of state, transferring funds can be difficult or costly. Death benefits from a final expense policy are generally paid to beneficiaries according to the policy terms and may receive favorable federal tax treatment; policy provisions and the beneficiary's circumstances can affect the outcome, giving them total freedom to choose any provider nationwide.</dd>
+
+            <dt><strong>Can I qualify with pre-existing conditions like diabetes or high blood pressure?</strong></dt>
+            <dd>Yes. Many of our Florida senior clients manage common chronic health conditions. As independent brokers working with multiple specialized final expense insurers, we compare your health and prescription history against carrier underwriting guidelines to locate available options, including immediate Day-One coverage where qualifying criteria are met.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Application Process with Andres Bozo, Independent Broker (NPN: 21228432)</h2>
+          <p>Streamlined guidance: we compare available Final Expense options from multiple state-licensed insurance carriers, assist with telephone or electronic applications, and walk you through carrier underwriting. Call today at <a href="tel:+13522258389">+1 (352) 225-8389</a> for a free, pressure-free quote.</p>
         </section>
       `;
     }
@@ -603,35 +1008,242 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Vida Universal Indexada (IUL)</span></p></nav>
         <header>
-          <h1>Seguro de Vida Universal Indexada (IUL) y Jubilación en Florida</h1>
-          <p>${description}</p>
+          <h1>Seguro de Vida Universal Indexada (IUL) y Estrategias de Retiro en Florida 2026</h1>
+          <p>Descubra cómo el seguro de Vida Universal Indexada (IUL) combina protección permanente para su familia con acumulación de valor en efectivo indexado a índices bursátiles como el S&P 500, un piso contractual del 0% en la acreditación indexada y estrategias de préstamos sobre póliza con ventajas fiscales potenciales bajo el Código IRS 7702. Asesoría experta y transparente con el broker independiente licenciado en Florida Andrés Bozo (NPN: 21228432).</p>
         </header>
+
         <section>
-          <h2>Piso Contractual del 0% en Acreditación Indexada (No Garantía Total de Cash Value)</h2>
-          <p>El piso del 0% aplica exclusivamente a la acreditación de la estrategia indexada (index-crediting floor), lo que significa que el índice no recibe rendimientos negativos ante caídas del mercado. Sin embargo, esto no garantiza el valor en efectivo total ni lo exime de la deducción continua de cargos administrativos y el Costo del Seguro (COI).</p>
+          <h2>¿Cómo Funciona el Mecanismo de Acreditación de un IUL?</h2>
+          <p>En una póliza de Vida Universal Indexada, el valor en efectivo no está invertido directamente en acciones o fondos del mercado bursátil. El interés se acredita según el rendimiento del índice de referencia elegido (como el S&P 500) sujeto a reglas contractuales claras:</p>
+          <ol>
+            <li><strong>Piso Contractual del 0%:</strong> El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los cargos administrativos de la póliza y los costos internos del seguro (COI) continúan deduciéndose.</li>
+            <li><strong>Participación en Mercados Alcistas:</strong> Cuando los índices suben, usted recibe rendimientos hasta un tope de tasa ("Cap Rate"), típicamente entre el 8% y el 12%, o según tasas de participación definidas contractualmente.</li>
+            <li><strong>Crecimiento con Impuestos Diferidos:</strong> El valor en efectivo acumula intereses con diferimiento de impuestos bajo la Sección 7702 del Código de Rentas Internas (IRC), permitiendo que su dinero capitalice año tras año sin erosión tributaria por plusvalías anuales.</li>
+          </ol>
         </section>
+
         <section>
-          <h2>Impacto de Préstamos y Retiros (Policy Loans & Withdrawals)</h2>
-          <p>Los préstamos y retiros sobre la póliza reducen el valor en efectivo y el beneficio por fallecimiento, acumulando intereses. Si la póliza caduca con préstamos pendientes que superan las primas netas pagadas (cost basis), el exceso se convierte inmediatamente en ingreso ordinario gravable.</p>
+          <h2>Comparación Estratégica: IUL vs 401(k) / IRA Tradicional vs Roth IRA</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Criterio Financiero</th>
+                <th>IUL (Código IRS 7702)</th>
+                <th>401(k) / IRA Tradicional</th>
+                <th>Roth IRA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tratamiento de Retiros y Préstamos</td>
+                <td>Préstamos y retiros hasta la base libres de impuestos (no-MEC en vigor)</td>
+                <td>Tributa 100% como Ingreso Ordinario</td>
+                <td>100% Libre de Impuestos (tras 5 años y 59½)</td>
+              </tr>
+              <tr>
+                <td>Protección ante Caídas Bursátiles</td>
+                <td>Piso Contractual del 0% (Sin acreditación negativa)</td>
+                <td>Sin Protección (Riesgo total de pérdida)</td>
+                <td>Sin Protección (Riesgo total de pérdida)</td>
+              </tr>
+              <tr>
+                <td>Límites Anuales de Contribución</td>
+                <td>Sin Límite Estatutario IRS (Sujeto al diseño de la póliza)</td>
+                <td>Tope de $23,500/año (2026)</td>
+                <td>Tope estricto de $7,000/año (2026)</td>
+              </tr>
+              <tr>
+                <td>Límite de Ingresos para Aportar</td>
+                <td>Sin Límite de Ingresos</td>
+                <td>Sin Límite de Ingresos</td>
+                <td>Eliminado para personas con altos ingresos</td>
+              </tr>
+              <tr>
+                <td>Acceso a Fondos Antes de 59½ Años</td>
+                <td>Sin penalidad del 10% del IRS en pólizas no-MEC</td>
+                <td>Penalidad del 10% del IRS (salvo excepciones)</td>
+                <td>Aportes sin penalidad; ganancias penalizadas</td>
+              </tr>
+              <tr>
+                <td>Distribuciones Mínimas Requeridas (RMD)</td>
+                <td>Sin RMDs obligatorias a ninguna edad</td>
+                <td>RMDs obligatorias a los 73/75 años</td>
+                <td>Sin RMDs durante la vida del titular</td>
+              </tr>
+              <tr>
+                <td>Protección por Fallecimiento</td>
+                <td>Beneficio por Fallecimiento exento de impuesto sobre la renta</td>
+                <td>No incluye seguro de vida</td>
+                <td>No incluye seguro de vida</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
+
         <section>
-          <h2>Tratamiento Fiscal bajo IRS Sección 7702 y Reglas MEC</h2>
-          <p>El tratamiento fiscal favorable (préstamos exentos de impuesto a la renta) depende estrictamente de que la póliza esté debidamente estructurada, no sea un Contrato de Dotación Modificada (MEC) bajo la prueba de 7 pagos del IRS, y se mantenga activa y en vigor durante toda la vida del asegurado. Consulte siempre a un CPA o asesor tributario certificado.</p>
+          <h2>Educación Financiera: Préstamos de Póliza (Policy Loans) y Mitigación de Riesgos</h2>
+          <p>Aunque los préstamos sobre la póliza son una estrategia legal bajo el Código IRS 7702, NO representan dinero regalado ni garantizado. Para conservar el tratamiento favorable de exención impositiva, es fundamental considerar:</p>
+          <ul>
+            <li><strong>Riesgo de Caducidad (Lapse Risk) y Consecuencia Fiscal:</strong> Si una póliza con préstamos pendientes caduca o se cancela en vida del asegurado, cualquier monto adeudado que supere las primas pagadas (cost basis) se convierte de inmediato en INGRESO ORDINARIO GRAVABLE. Por ello, el IUL requiere un monitoreo continuo.</li>
+            <li><strong>Intereses del Préstamo y Costo del Seguro (COI):</strong> Los préstamos acumulan intereses contractuales. Conforme el asegurado envejece, el Costo del Seguro (COI) aumenta naturalmente; la póliza debe mantener fondos suficientes para soportar tanto los intereses como el COI sin descapitalizarse.</li>
+            <li><strong>Estatus de Contrato de Dotación Modificada (MEC):</strong> Si se deposita dinero por encima de los límites de la prueba de 7 pagos ("7-pay test") del IRS, la póliza se clasifica como MEC, perdiendo ventajas fiscales en retiros y préstamos. Diseñamos pólizas con el beneficio por fallecimiento mínimo legal para maximizar la acumulación protegiendo el estatus no-MEC.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Beneficios en Vida (Living Benefits) Incluidos en el IUL</h2>
+          <p>Un IUL moderno no solo protege a sus beneficiarios en caso de fallecimiento, sino que también protege sus finanzas mientras está vivo a través de Cláusulas de Aceleración de Beneficios:</p>
+          <ul>
+            <li><strong>Enfermedades Terminales:</strong> Adelanto de hasta el 90% del beneficio por muerte si recibe un diagnóstico con expectativa de vida menor a 12 o 24 meses.</li>
+            <li><strong>Enfermedades Crónicas:</strong> Fondos mensuales si no puede realizar 2 de las 6 Actividades de la Vida Diaria (bañarse, vestirse, comer, transferirse, continencia o aseo) o sufre deterioro cognitivo severo.</li>
+            <li><strong>Enfermedades Críticas:</strong> Acceso a capital libre de impuestos ante eventos graves como infarto de miocardio, accidente cerebrovascular (ACV), cáncer invasivo o trasplante de órganos.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Preguntas Frecuentes sobre Vida Universal Indexada en Florida</h2>
+          <dl>
+            <dt><strong>¿Cómo funciona la garantía de piso del 0% en un seguro IUL?</strong></dt>
+            <dd>El componente de acreditación indexada de un IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total.</dd>
+
+            <dt><strong>¿Los préstamos para el retiro de una póliza IUL son dinero libre de impuestos garantizado?</strong></dt>
+            <dd>Los préstamos sobre la póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal federal potencialmente favorable cuando la póliza está estructurada adecuadamente, no es un Contrato de Dotación Modificada (MEC), se mantiene en vigor y se cumplen los requisitos fiscales aplicables. Si la póliza caduca (lapse), se entrega o se cancela con un préstamo pendiente superior a la base de primas pagadas, el monto adeudado en exceso se convierte de inmediato en ingreso ordinario gravable. Por ello, una estrategia de IUL requiere monitoreo periódico, un diseño prudente y la consulta con un asesor tributario calificado.</dd>
+
+            <dt><strong>¿Qué son los Beneficios en Vida (Living Benefits) incluidos en una póliza IUL?</strong></dt>
+            <dd>Los Beneficios en Vida le permiten adelantar un porcentaje sustancial (hasta un 80% o 90%) del beneficio por fallecimiento mientras está vivo si se le diagnostica una enfermedad grave, crónica (incapacidad para realizar 2 de 6 actividades diarias) o terminal (Cáncer, Infarto, ACV, ALS), sin restricciones en cómo gasta el dinero.</dd>
+
+            <dt><strong>¿En qué se diferencia un IUL de una cuenta 401(k) o IRA Tradicional respecto a impuestos y penalidades?</strong></dt>
+            <dd>En un 401(k) o IRA Tradicional, las contribuciones son antes de impuestos, pero el 100% de los retiros futuros tributa como ingreso ordinario, además de sufrir una penalidad del 10% del IRS si se retira antes de los 59 años y medio (salvo excepciones) y Distribuciones Mínimas Requeridas (RMDs) obligatorias a los 73/75 años. En un IUL no-MEC, los préstamos sobre la póliza no tienen penalidad por edad del 10% y no existen RMDs obligatorias. No obstante, a diferencia de un 401(k), los préstamos de un IUL acumulan intereses y reducen el valor neto; si no se administran para cubrir los costos internos crecientes del seguro, la póliza puede caducar y generar consecuencias fiscales.</dd>
+
+            <dt><strong>¿Qué es un Contrato de Dotación Modificada (MEC) y cómo se evita?</strong></dt>
+            <dd>Un MEC ocurre si deposita demasiado dinero en efectivo en la póliza demasiado rápido en relación con el beneficio por fallecimiento, violando la prueba de 7 pagos ('7-pay test') del IRS. En un contrato MEC, los retiros y préstamos pierden su ventaja fiscal, tributando primero sobre ganancias como ingreso ordinario y con penalidad del 10% antes de los 59½ años. Estructuramos profesionalmente su IUL para maximizar la acumulación de efectivo manteniendo la póliza estrictamente no-MEC.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Solicite su Ilustración Personalizada de IUL en Florida</h2>
+          <p>Obtenga un análisis financiero personalizado adaptado a su edad, objetivos de retiro y capacidad de ahorro. Contacte al broker independiente Andrés Bozo (NPN: 21228432) al <a href="tel:+13522258389">+1 (352) 225-8389</a>.</p>
         </section>
       `;
     } else {
       bodyOutline = `
+        <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Indexed Universal Life (IUL)</span></p></nav>
         <header>
-          <h1>Indexed Universal Life (IUL) Insurance Guide</h1>
-          <p>${description}</p>
+          <h1>Indexed Universal Life (IUL) Insurance Master Guide Florida 2026</h1>
+          <p>Discover how Indexed Universal Life (IUL) insurance combines permanent death benefit protection for your family with index-linked cash value growth (such as the S&P 500), a contractual 0% floor against market declines, and tax-advantaged policy loan strategies under IRS Code Section 7702. Independent Florida broker Andres Bozo (NPN: 21228432) provides unbiased illustrations and personalized structuring.</p>
         </header>
+
         <section>
-          <h2>Understanding the Index-Crediting Mechanism and 0% Floor</h2>
-          <p>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value.</p>
+          <h2>How the Index-Crediting Mechanism Works in an IUL Policy</h2>
+          <p>In an Indexed Universal Life insurance policy, your cash value is never directly invested in equity markets or volatile mutual funds. Instead, interest crediting is linked to an underlying financial benchmark (such as the S&P 500) based on clear contractual mechanisms:</p>
+          <ol>
+            <li><strong>Contractual 0% Crediting Floor:</strong> The index-crediting component has a contractual 0% floor, meaning your cash value is never credited with negative returns during market downturns. However, internal policy charges, administrative fees, and monthly Cost of Insurance (COI) deductions still apply.</li>
+            <li><strong>Market Upside Participation:</strong> When financial indexes perform well, your account receives interest up to an annual Cap Rate (typically 8% to 12%) or according to contractual Participation Rates.</li>
+            <li><strong>Tax-Deferred Compound Growth:</strong> Under IRS Code Section 7702, credited cash value accumulates on a tax-deferred basis, enabling your funds to compound year over year without annual 1099 capital gains erosion.</li>
+          </ol>
         </section>
+
         <section>
-          <h2>Tax Considerations and Policy Loans under IRS Section 7702</h2>
-          <p>Policy loans may provide access to cash value with potentially favorable federal tax treatment when the policy is structured properly, is not a Modified Endowment Contract (MEC), remains in force, and applicable tax requirements are satisfied. If a policy lapses with outstanding loans or is classified as a MEC, tax consequences may occur. Consult a qualified tax professional regarding your individual circumstances.</p>
+          <h2>Strategic Comparison: IUL vs 401(k) / Traditional IRA vs Roth IRA</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Financial Metric</th>
+                <th>IUL (IRS Code 7702)</th>
+                <th>Traditional 401(k) / IRA</th>
+                <th>Roth IRA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Withdrawals & Loans Taxation</td>
+                <td>Withdrawals to basis tax-free; loans income-tax-free while policy remains in force (non-MEC)</td>
+                <td>100% Taxed as Ordinary Income</td>
+                <td>100% Tax-Free (After 5 years & age 59½)</td>
+              </tr>
+              <tr>
+                <td>Downside Market Protection</td>
+                <td>Contractual 0% Floor (No negative index crediting)</td>
+                <td>No Protection (Full market downside risk)</td>
+                <td>No Protection (Full market downside risk)</td>
+              </tr>
+              <tr>
+                <td>Annual Contribution Limits</td>
+                <td>No Statutory IRS Cap (Subject to policy death benefit)</td>
+                <td>Capped at $23,500/yr (2026)</td>
+                <td>Strict Cap of $7,000/yr (2026)</td>
+              </tr>
+              <tr>
+                <td>Income Eligibility Restrictions</td>
+                <td>No Income Limits</td>
+                <td>No Income Limits</td>
+                <td>Phased out for higher-income earners</td>
+              </tr>
+              <tr>
+                <td>Access Prior to Age 59½</td>
+                <td>No 10% IRS penalty on non-MEC policy loans</td>
+                <td>10% IRS early withdrawal penalty (unless exempt)</td>
+                <td>Contributions penalty-free; earnings penalized</td>
+              </tr>
+              <tr>
+                <td>Required Minimum Distributions (RMD)</td>
+                <td>No Mandatory RMDs at any age</td>
+                <td>Mandatory RMDs starting at age 73/75</td>
+                <td>No RMDs during owner's lifetime</td>
+              </tr>
+              <tr>
+                <td>Family Death Benefit Protection</td>
+                <td>Income-Tax-Free Death Benefit for beneficiaries</td>
+                <td>No Life Insurance Protection</td>
+                <td>No Life Insurance Protection</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2>Financial Education: Policy Loans ≠ Guaranteed Free Money</h2>
+          <p>In the insurance marketplace, IUL is frequently marketed with claims of unconditional "tax-free retirement income." While policy loans represent a legitimate statutory mechanism under IRS Code Section 7702, a policy loan is NOT guaranteed free money. Responsible financial planning requires understanding the conditions and potential tax liabilities:</p>
+          <ul>
+            <li><strong>Lapse Risk and Phantom Tax Consequences:</strong> If an IUL policy lapses or is surrendered during the insured's lifetime with an outstanding loan exceeding total premiums paid (cost basis), that excess loan balance becomes immediately TAXABLE AS ORDINARY INCOME. This can trigger a substantial tax bill with zero liquid cash available to pay it.</li>
+            <li><strong>Loan Interest Accrual & Rising COI Charges:</strong> Policy loans accrue interest. Unpaid interest is capitalized into the loan balance, reducing net cash value and net death benefit. Meanwhile, internal monthly Cost of Insurance (COI) charges increase with age. If remaining cash value cannot support both loan interest and COI charges, the policy risks lapse.</li>
+            <li><strong>Modified Endowment Contract (MEC) Rules:</strong> Paying premiums beyond the IRS 7-pay test reclassifies the contract as a MEC. In a MEC, all loans and withdrawals lose tax advantages, are taxed on a LIFO basis (earnings first as ordinary income), and trigger a 10% early withdrawal penalty if taken prior to age 59½. We engineer custom maximum-funded, minimum-death-benefit IUL designs to prevent MEC status.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Living Benefits (Accelerated Death Benefit Riders) in Florida IULs</h2>
+          <p>Modern Indexed Universal Life policies feature Accelerated Death Benefit Riders that allow you to access your death benefit while still living if diagnosed with severe health conditions:</p>
+          <ul>
+            <li><strong>Terminal Illness:</strong> Accelerate up to 90% of your policy's death benefit if diagnosed with a certified life expectancy of 12 to 24 months or less.</li>
+            <li><strong>Chronic Illness:</strong> Access periodic payouts if you become unable to perform at least 2 of 6 Activities of Daily Living (eating, bathing, dressing, transferring, toileting, continence) or suffer severe cognitive impairment.</li>
+            <li><strong>Critical Illness:</strong> Receive lump-sum distributions upon qualifying diagnoses of heart attack, stroke, invasive cancer, major organ transplant, or ALS.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Frequently Asked Questions About Florida IUL Insurance</h2>
+          <dl>
+            <dt><strong>How does the 0% index crediting floor work in an IUL policy?</strong></dt>
+            <dd>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return. However, policy charges, cost of insurance (COI), loans, withdrawals and other contract provisions can affect overall cash value.</dd>
+
+            <dt><strong>Are retirement policy loans from an IUL guaranteed tax-free money?</strong></dt>
+            <dd>Policy loans may provide access to cash value with potentially favorable federal tax treatment when the policy remains in force, is structured properly, is not a Modified Endowment Contract (MEC), and applicable tax requirements are satisfied. If the policy lapses, is surrendered, or terminates before death with an outstanding loan balance exceeding the total premiums paid, that unpaid loan balance becomes immediately taxable as ordinary income. Maintaining tax advantages requires disciplined policy management and consulting a qualified tax professional.</dd>
+
+            <dt><strong>What are Living Benefits (Accelerated Death Benefit Riders) in an IUL?</strong></dt>
+            <dd>Living Benefits allow you to accelerate up to 80%-90% of your policy's death benefit while living if diagnosed with a qualifying critical illness (heart attack, stroke, invasive cancer) or chronic condition (inability to perform 2 of 6 Activities of Daily Living). Funds can pay for experimental medical treatments, mortgage, or long-term care.</dd>
+
+            <dt><strong>How does an IUL compare to a Traditional 401(k) or Traditional IRA regarding taxes and penalties?</strong></dt>
+            <dd>A Traditional 401(k) or IRA defers taxes on contributions, but 100% of future withdrawals are taxed as ordinary income, alongside a 10% IRS early withdrawal penalty prior to age 59½ and mandatory Required Minimum Distributions (RMDs) at age 73/75. In a properly structured non-MEC IUL, policy loans are not subject to the statutory 10% early withdrawal age penalty, and there are no mandatory RMDs. However, unlike a 401(k), policy loans accrue interest and represent debt against your policy. If not actively managed against rising Cost of Insurance charges, an overleveraged loan can cause policy lapse and trigger severe income tax consequences.</dd>
+
+            <dt><strong>What is a Modified Endowment Contract (MEC) and how do you prevent it?</strong></dt>
+            <dd>A policy becomes a MEC if funded with excessive cash relative to the death benefit under the IRS 7-pay test, causing distributions to lose tax-advantaged status and subjecting loans to ordinary income tax plus a 10% penalty before age 59½. We engineer custom maximum-funded, minimum-death-benefit IUL designs to prevent MEC status and optimize cash growth.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Request a Free Custom Florida IUL Illustration</h2>
+          <p>Receive a clear, personalized IUL policy illustration showing index performance modeling, cash value accumulation, and loan distributions. Call licensed independent broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">+1 (352) 225-8389</a>.</p>
         </section>
       `;
     }
@@ -861,88 +1473,183 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
       : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
 
-    bodyOutline = `
-      <header>
-        <h1>${isEs ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville" : "Gainesville, FL Insurance Broker"}</h1>
-        <p>${description}</p>
-        <div class="broker-contact-badge">
-          <p><strong>Broker Licenciado:</strong> Andres Bozo (NPN: 21228432)</p>
-          <p><strong>Dirección:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
-          <p><strong>Teléfono:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
-        </div>
-      </header>
+    if (isEs) {
+      bodyOutline = `
+        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/guias-ciudades">Florida</a> &gt; <span>Gainesville FL</span></p></nav>
+        <header>
+          <h1>Broker de Seguros en Gainesville, FL | Medicare, Gastos Finales y Jubilación</h1>
+          <p>${description}</p>
+          <div class="broker-contact-badge">
+            <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
+            <p><strong>Dirección:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+            <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+          </div>
+        </header>
 
-      <section>
-        <h2>Medicare Gainesville: Cobertura y Suplementos Medigap en el Condado de Alachua</h2>
-        <p>Gainesville es el epicentro médico del norte de Florida gracias al reconocido sistema hospitalario UF Health Shands Hospital y al HCA Florida North Florida Hospital. Los residentes del Condado de Alachua que dependen de Medicare Original a menudo necesitan protección frente a deducibles y al coseguro del 20% sin límite de la Parte B. Con un Suplemento de Medicare (Medigap Plan G o Plan N), usted obtiene acceso a médicos y especialistas que aceptan Medicare en UF Health Shands, HCA Florida y al Malcom Randall VA Medical Center, sin requerir redes restrictivas HMO ni referidos de médicos primarios.</p>
-        <ul>
-          <li>Libertad para consultar especialistas que aceptan Medicare en UF Health Shands.</li>
-          <li>Sin requerimiento de autorizaciones previas bajo Medicare Original y Medigap para procedimientos cubiertos por Medicare.</li>
-          <li>Cobertura médica válida ante cualquier proveedor que acepte Medicare en Florida y en todo Estados Unidos.</li>
-        </ul>
-      </section>
+        <section>
+          <h2>Medicare Gainesville: Cobertura y Suplementos Medigap en el Condado de Alachua</h2>
+          <p>Gainesville es el epicentro médico del norte de Florida gracias al reconocido sistema hospitalario UF Health Shands Hospital y al HCA Florida North Florida Hospital. Los residentes del Condado de Alachua que dependen de Medicare Original a menudo necesitan protección frente a deducibles y al coseguro del 20% sin límite de la Parte B. Con un Suplemento de Medicare (Medigap Plan G o Plan N), usted obtiene acceso a médicos y especialistas que aceptan Medicare en UF Health Shands, HCA Florida y al Malcom Randall VA Medical Center, sin requerir redes restrictivas HMO ni referidos de médicos primarios.</p>
+          <ul>
+            <li><strong>Libertad Total de Especialistas:</strong> Consulte a cualquier médico o especialista que acepte Medicare en UF Health Shands y sus centros ambulatorios sin restricciones de red.</li>
+            <li><strong>Sin Autorizaciones Previas:</strong> A diferencia de los planes Medicare Advantage locales, Medicare Original y Medigap no imponen barreras de autorización previa para tratamientos médicos aprobados.</li>
+            <li><strong>Validez Nacional:</strong> Cobertura válida ante cualquier proveedor que acepte Medicare en Florida y en cualquier estado del país, ideal para quienes viajan con frecuencia.</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Final Expense Gainesville: Seguro de Gastos Finales y Entierro</h2>
-        <p>Los costos promedio de funerales y cremaciones en Gainesville, Archer, Newberry y High Springs oscilan entre $7,200 y $9,800. Dado que el beneficio único por fallecimiento del Seguro Social federal es de solo $255, una póliza de gastos finales de vida entera ofrece beneficios por fallecimiento de entre $5,000 y $35,000 para sus beneficiarios, con primas niveladas (sujetas a los términos de la póliza) y opciones de emisión simplificada sin examen médico tradicional según la aseguradora. Sus seres queridos tienen la potestad de coordinar servicios con funerarias y cementerios locales de Alachua County, tales como Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home y Prairie Creek Conservation Cemetery.</p>
-      </section>
+        <section>
+          <h2>Final Expense Gainesville: Seguro de Gastos Finales y Entierro</h2>
+          <p>Los costos promedio de funerales y cremaciones en Gainesville, Archer, Newberry y High Springs oscilan entre $7,200 y $9,800. Dado que el beneficio único por fallecimiento del Seguro Social federal es de solo $255, una póliza de gastos finales de vida entera ofrece beneficios por fallecimiento de entre $5,000 y $35,000 para sus beneficiarios, con primas niveladas (sujetas a los términos de la póliza) y opciones de emisión simplificada sin examen médico tradicional según la aseguradora.</p>
+          <p>Sus seres queridos tienen la potestad de coordinar servicios con funerarias y cementerios locales de Alachua County, tales como Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home y Prairie Creek Conservation Cemetery.</p>
+        </section>
 
-      <section>
-        <h2>IUL Gainesville: Seguro de Vida Universal Indexada con Ventajas Fiscales</h2>
-        <p>Para la comunidad académica de la University of Florida (UF), el personal médico de UF Health, veteranos y trabajadores del VA Medical Center, y dueños de empresas locales en Gainesville y Alachua, el IUL (Indexed Universal Life) ofrece una estrategia eficiente para complementar planes 403(b), 401(k) o el Florida Retirement System (FRS). Con un piso contractual del 0% en acreditación frente a caídas del índice bursátil de referencia (los costos de póliza continúan deduciéndose) y acceso a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del IRS mientras la póliza permanezca en vigor, el IUL brinda protección por fallecimiento a su familia y potencial de acumulación de valor en efectivo.</p>
-      </section>
+        <section>
+          <h2>IUL Gainesville: Seguro de Vida Universal Indexada para Profesionales y Familias</h2>
+          <p>Para la comunidad académica de la University of Florida (UF), el personal médico de UF Health, veteranos y trabajadores del Malcom Randall VA Medical Center, y dueños de empresas locales en Gainesville y Alachua, el IUL (Indexed Universal Life) ofrece una estrategia eficiente para complementar planes 403(b), 401(k) o el Florida Retirement System (FRS).</p>
+          <p>Con un piso contractual del 0% en acreditación frente a caídas del índice bursátil de referencia (los costos de póliza continúan deduciéndose) y acceso a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del IRS mientras la póliza permanezca en vigor, el IUL brinda protección por fallecimiento a su familia y potencial de acumulación de valor en efectivo sin penalidades del 10% por edad.</p>
+        </section>
 
-      <section>
-        <h2>Annuities Gainesville: Anualidades Fijas y Pensión Vitalicia</h2>
-        <p>Para los jubilados en Gainesville, incluyendo residentes de comunidades como Oak Hammock at UF, The Village y Haile Plantation, las Anualidades Fijas de Garantía Multianual (MYGA) y las Anualidades Fijas Indexadas (FIA) proporcionan protección contractual del capital principal contra la volatilidad bursátil, respaldadas por la solvencia financiera de la compañía aseguradora emisora. Disfrute de crecimiento con impuestos diferidos y opciones de cláusulas de ingresos vitalicios según los términos del contrato.</p>
-      </section>
+        <section>
+          <h2>Annuities Gainesville: Anualidades Fijas y Pensión Vitalicia Garantizada</h2>
+          <p>Para los jubilados en Gainesville, incluyendo residentes de comunidades como Oak Hammock at UF, The Village y Haile Plantation, las Anualidades Fijas de Garantía Multianual (MYGA) y las Anualidades Fijas Indexadas (FIA) proporcionan protección contractual del capital principal contra la volatilidad bursátil, respaldadas por la solvencia financiera de la compañía aseguradora emisora y la Asociación de Garantía FLAHIGA. Disfrute de crecimiento con impuestos diferidos y opciones de cláusulas de ingresos vitalicios según los términos del contrato.</p>
+        </section>
 
-      <section>
-        <h2>Andres Bozo: Su Corredor Independiente de Confianza en Alachua County</h2>
-        <p>Andrés Bozo (NPN: 21228432) es un corredor de seguros independiente con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS). Como correduría independiente, AHB Insurance Solutions compara de forma objetiva entre múltiples compañías aseguradoras líderes y solventes a nivel nacional, ofreciendo una orientación personalizada, transparente y 100% gratuita, sin costo adicional ni comisiones cobradas al asegurado.</p>
-      </section>
+        <section>
+          <h2>Andrés Bozo: Su Corredor Independiente de Confianza en Alachua County</h2>
+          <p>Andrés Bozo (NPN: 21228432) es un corredor de seguros independiente con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS). Como correduría independiente, AHB Insurance Solutions compara de forma objetiva entre múltiples compañías aseguradoras líderes y solventes a nivel nacional, ofreciendo una orientación personalizada, transparente y 100% gratuita, sin costo adicional ni comisiones cobradas al asegurado.</p>
+        </section>
 
-      <section>
-        <h2>Dirección, Teléfono y Mapa de Ubicación en Gainesville</h2>
-        <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la I-75).</p>
-        <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
-        <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-        <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
-      </section>
+        <section>
+          <h2>Dirección, Teléfono y Ubicación de Nuestra Oficina en Gainesville</h2>
+          <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la autopista I-75).</p>
+          <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
+          <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
+          <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
+        </section>
 
-      <section>
-        <h2>Áreas de Servicio en el Condado de Alachua (Alachua County Service Areas)</h2>
-        <p>Atendemos presencialmente con cita previa en nuestra oficina de Archer Road o a domicilio, así como mediante consultas telefónicas y remotas en las siguientes comunidades:</p>
-        <ul>
-          <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIPs 32601, 32605, 32607, 32608, 32653).</li>
-          <li><strong>Archer:</strong> ZIP 32618 (a minutos directos por SW Archer Road).</li>
-          <li><strong>Newberry:</strong> ZIP 32669 (familias y jubilados en el oeste de Alachua).</li>
-          <li><strong>High Springs:</strong> ZIP 32643 (cobertura integral para el norte del condado).</li>
-          <li><strong>Alachua:</strong> ZIP 32615.</li>
-          <li><strong>Hawthorne (32640), Micanopy (32667) y Waldo (32694).</strong></li>
-        </ul>
-      </section>
+        <section>
+          <h2>Áreas de Servicio en el Condado de Alachua (Alachua County Service Areas)</h2>
+          <p>Atendemos presencialmente con cita previa en nuestra oficina de Archer Road o a domicilio, así como mediante consultas telefónicas y remotas en las siguientes comunidades:</p>
+          <ul>
+            <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIPs 32601, 32605, 32607, 32608, 32653).</li>
+            <li><strong>Archer:</strong> ZIP 32618 (a minutos directos por SW Archer Road).</li>
+            <li><strong>Newberry:</strong> ZIP 32669 (familias y jubilados en el oeste de Alachua).</li>
+            <li><strong>High Springs:</strong> ZIP 32643 (cobertura integral para el norte del condado).</li>
+            <li><strong>Alachua:</strong> ZIP 32615.</li>
+            <li><strong>Hawthorne (32640), Micanopy (32667) y Waldo (32694).</strong></li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Preguntas Frecuentes sobre Seguros en Gainesville, FL (FAQ)</h2>
-        <h3>¿Puedo utilizar un Suplemento de Medicare (Medigap) en UF Health Shands Hospital?</h3>
-        <p>Sí, absolutamente. Con un plan Medigap (como Plan G o Plan N), usted puede atenderse con cualquier médico o especialista que acepte Medicare en UF Health Shands, HCA Florida y en cualquier hospital del país, sin restricciones de red ni necesidad de referidos.</p>
+        <section>
+          <h2>Preguntas Frecuentes sobre Seguros en Gainesville, FL (FAQ)</h2>
+          <dl>
+            <dt><strong>¿Puedo utilizar un Suplemento de Medicare (Medigap) en UF Health Shands Hospital?</strong></dt>
+            <dd>Sí, absolutamente. Con un plan Medigap (como Plan G o Plan N), usted puede atenderse con cualquier médico o especialista que acepte Medicare en UF Health Shands, HCA Florida y en cualquier hospital del país, sin restricciones de red ni necesidad de referidos.</dd>
 
-        <h3>¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?</h3>
-        <p>Nuestra sede física se encuentra en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</p>
+            <dt><strong>¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?</strong></dt>
+            <dd>Nuestra sede física se encuentra en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</dd>
 
-        <h3>¿Cobran honorarios por comparar planes o cotizar seguros?</h3>
-        <p>No. Nuestros servicios de consultoría, comparación entre múltiples aseguradoras líderes y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</p>
+            <dt><strong>¿Cobran honorarios por comparar planes o cotizar seguros?</strong></dt>
+            <dd>No. Nuestros servicios de consultoría, comparación entre múltiples aseguradoras líderes y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</dd>
 
-        <h3>¿Ofrecen atención bilingüe en español en Gainesville?</h3>
-        <p>Sí. El corredor Andrés Bozo es completamente bilingüe (español e inglés), facilitando que la comunidad hispana de Gainesville y Alachua County comprenda cada detalle de su póliza con claridad.</p>
-      </section>
+            <dt><strong>¿Ofrecen atención bilingüe en español en Gainesville?</strong></dt>
+            <dd>Sí. El corredor Andrés Bozo es completamente bilingüe (español e inglés), facilitando que la comunidad hispana de Gainesville y Alachua County comprenda cada detalle de su póliza con claridad.</dd>
+          </dl>
+        </section>
 
-      <section>
-        <h2>Solicite una Consulta Gratuita con Andres Bozo en Gainesville (CTA)</h2>
-        <p>Comuníquese hoy mismo al <a href="tel:+13522258389">(352) 225-8389</a> o complete nuestro formulario web para recibir un análisis comparativo personalizado sin costo ni compromiso para Medicare, Gastos Finales, IUL o Anualidades en Gainesville, FL.</p>
-      </section>
-    `;
+        <section>
+          <h2>Solicite una Consulta Gratuita con Andrés Bozo en Gainesville</h2>
+          <p>Comuníquese hoy mismo al <a href="tel:+13522258389">(352) 225-8389</a> para recibir un análisis comparativo personalizado sin costo ni compromiso para Medicare, Gastos Finales, IUL o Anualidades en Gainesville, FL.</p>
+        </section>
+      `;
+    } else {
+      bodyOutline = `
+        <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida</a> &gt; <span>Gainesville FL</span></p></nav>
+        <header>
+          <h1>Gainesville, FL Insurance Broker | Medicare, Life & Annuities</h1>
+          <p>${description}</p>
+          <div class="broker-contact-badge">
+            <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
+            <p><strong>Office Address:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+            <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+          </div>
+        </header>
+
+        <section>
+          <h2>Medicare Gainesville: Coverage & Medigap Supplements in Alachua County</h2>
+          <p>Gainesville is North Central Florida's premier medical hub, anchored by the nationally renowned UF Health Shands Hospital system, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Alachua County seniors on Original Medicare frequently face substantial out-of-pocket liabilities, including the inpatient Part A deductible and the uncapped 20% Part B coinsurance. With a standardized Medicare Supplement (Medigap Plan G or Plan N), you preserve direct access to participating physicians at UF Health Shands and HCA Florida without restrictive HMO provider networks or primary care referral mandates.</p>
+          <ul>
+            <li><strong>Freedom of Specialists:</strong> See any provider nationwide who accepts Medicare, including world-class specialists at UF Health Shands, without network gating.</li>
+            <li><strong>Zero Prior Authorization Hurdles:</strong> Unlike local Medicare Advantage HMOs, Medigap policies eliminate pre-authorization delays for Medicare-covered treatments.</li>
+            <li><strong>Nationwide Portability:</strong> Coverage travels with you anywhere in Florida and throughout the entire United States.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Final Expense Gainesville: Burial & Funeral Insurance</h2>
+          <p>Traditional funeral and cremation costs across Gainesville, Archer, Newberry, and High Springs typically range between $7,200 and $9,800. Because federal Social Security pays only a $255 one-time lump sum to qualifying surviving spouses, a permanent whole life final expense policy guarantees $5,000 to $35,000 in immediate cash death benefits for your loved ones, with locked lifetime rates and simplified-issue underwriting that requires no traditional medical exams.</p>
+          <p>Your beneficiaries maintain complete freedom to coordinate arrangements with respected local Alachua County funeral homes and cemeteries, including Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home, and Prairie Creek Conservation Cemetery.</p>
+        </section>
+
+        <section>
+          <h2>IUL Gainesville: Indexed Universal Life for University & Healthcare Professionals</h2>
+          <p>For faculty and staff at the University of Florida (UF), clinical personnel at UF Health Shands, healthcare workers at the VA Medical Center, and local business owners across Gainesville, an Indexed Universal Life (IUL) policy serves as an efficient vehicle to complement existing 403(b), 401(k), or Florida Retirement System (FRS) pensions.</p>
+          <p>With a contractual 0% floor against market index declines and tax-advantaged policy loan access under IRS Section 7702 while the policy remains active, an IUL protects your family with income-tax-free death benefits while building cash accumulation potential without early withdrawal age penalties.</p>
+        </section>
+
+        <section>
+          <h2>Annuities Gainesville: Fixed & Indexed Guaranteed Retirement Income</h2>
+          <p>For retirees residing in Gainesville's active retirement communities, such as Oak Hammock at UF, The Village, and Haile Plantation, Multi-Year Guarantee Annuities (MYGA) and Fixed Indexed Annuities (FIA) deliver principal preservation backed by insurer statutory reserves and the Florida Life and Health Insurance Guaranty Association (FLAHIGA). Enjoy triple-compounding tax deferral and optional guaranteed lifetime income riders that ensure you cannot outlive your retirement nest egg.</p>
+        </section>
+
+        <section>
+          <h2>Andres Bozo: Your Local Independent Insurance Broker in Alachua County</h2>
+          <p>Andres Bozo (NPN: 21228432) is a licensed independent insurance broker regulated by the Florida Department of Financial Services (DFS). As an independent agency, AHB Insurance Solutions objectively compares products across 80+ top-rated carriers, providing unbiased guidance and zero broker fees to clients.</p>
+        </section>
+
+        <section>
+          <h2>Gainesville Office Location, Hours & Contact Details</h2>
+          <p><strong>Office Location:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe & Butler Plaza, off I-75 Exit 384).</p>
+          <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
+          <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
+          <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">View Map & Driving Directions</a></p>
+        </section>
+
+        <section>
+          <h2>Service Communities Across Alachua County</h2>
+          <p>We consult in person by appointment at our SW Archer Road office, make home visits, and offer virtual consultations across all Alachua County communities:</p>
+          <ul>
+            <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIP codes 32601, 32605, 32607, 32608, 32653).</li>
+            <li><strong>Archer:</strong> ZIP 32618 (minutes away along SW Archer Road).</li>
+            <li><strong>Newberry:</strong> ZIP 32669 (families and retirees in western Alachua County).</li>
+            <li><strong>High Springs:</strong> ZIP 32643 (northern Alachua County).</li>
+            <li><strong>Alachua:</strong> ZIP 32615.</li>
+            <li><strong>Hawthorne (32640), Micanopy (32667), and Waldo (32694).</strong></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Frequently Asked Questions About Gainesville Insurance Services</h2>
+          <dl>
+            <dt><strong>Can I be treated at UF Health Shands Hospital with a Medicare Supplement (Medigap) plan?</strong></dt>
+            <dd>Yes. UF Health Shands Hospital and outpatient facilities accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N), subject to Medicare and Medigap rules, with no network restrictions or referral requirements.</dd>
+
+            <dt><strong>Where is the AHB Insurance Solutions office located in Gainesville?</strong></dt>
+            <dd>Our office is located at 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389.</dd>
+
+            <dt><strong>Do you charge any consultation or broker fees in Gainesville?</strong></dt>
+            <dd>No, never. Our independent brokerage consultations, carrier rate comparisons, and enrollment assistance are 100% free with zero fees to you.</dd>
+
+            <dt><strong>Does broker Andres Bozo provide bilingual consultations in Spanish?</strong></dt>
+            <dd>Yes. Andres Bozo (NPN: 21228432) is a licensed Florida insurance broker who is fluent in both English and Spanish, ensuring clear and transparent policy reviews for Gainesville's Hispanic community.</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Request a Free Consultation with Andres Bozo in Gainesville</h2>
+          <p>Call <a href="tel:+13522258389">(352) 225-8389</a> or submit our online form for a personalized, zero-obligation comparison of Medicare, Final Expense, IUL, or Annuity solutions in Gainesville, FL.</p>
+        </section>
+      `;
+    }
   }
 
   // 8.6 Legal & Compliance Pages
@@ -1176,167 +1883,283 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
         title = isEs
-          ? "Florida Fixed Annuities: MYGA & FIA Income | AHB"
-          : "Florida Fixed Annuities: MYGA & FIA Income | AHB";
+          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance"
+          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
         description = isEs
-          ? "Guía de anualidades fijas en Florida (MYGA y FIA). Tasas garantizadas, crecimiento con impuestos diferidos e ingresos vitalicios con el broker Andrés Bozo."
-          : "Guide to Florida fixed annuities, MYGAs, and FIAs. Guaranteed interest rates, tax-deferred growth, and lifetime income options with broker Andres Bozo.";
-        bodyOutline = `
-          <header>
-            <h1>Florida Fixed Annuities: MYGA, FIA & Retirement Income Options</h1>
-            <p>${description}</p>
-          </header>
-          <main>
-            <section>
-              <h2>What Is a Fixed Annuity?</h2>
-              <p>A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary purpose is to provide principal preservation, tax-deferred growth while funds remain in the annuity (subject to applicable tax rules), and contractual mechanisms to convert accumulated savings into predictable retirement income options, backed by the claims-paying ability of the issuing insurer. Principal and credited interest are supported by the insurer's general account statutory reserves and conservative investment portfolio.</p>
-              <ul>
-                <li><strong>Accumulation Phase:</strong> Your principal earns contractually guaranteed interest or index-linked growth without annual 1099 tax erosion while funds remain in the contract.</li>
-                <li><strong>Distribution Phase:</strong> You choose how to access your assets: via penalty-free withdrawals (where permitted by contract), a lump-sum payout at maturity, or a guaranteed lifetime income stream backed by the insurer.</li>
-              </ul>
-            </section>
+          ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
+          : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
 
-            <section>
-              <h2>Fixed Annuities</h2>
-              <p>Traditional fixed annuities declare an annual interest rate credited to your contract value. Key structural elements include:</p>
-              <ul>
-                <li><strong>Declared Rate:</strong> The insurer announces a competitive interest rate for an initial term (e.g., 1 to 3 years).</li>
-                <li><strong>Guaranteed Minimum Floor:</strong> State insurance regulations and the contract mandate a minimum lifetime rate (typically 1.0% to 3.0%) below which the declared yield cannot fall.</li>
-                <li><strong>Principal Preservation:</strong> Initial deposit and credited interest are protected against market declines, subject to contract terms and insurer claims-paying ability.</li>
-              </ul>
-            </section>
+        if (isEs) {
+          bodyOutline = `
+            <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Anualidades y Retiro Seguro en Florida</span></p></nav>
+            <header>
+              <h1>Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos de Jubilación</h1>
+              <p>${description}</p>
+              <div class="broker-contact-badge">
+                <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
+                <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+              </div>
+            </header>
+            <main>
+              <section>
+                <h2>¿Qué es una Anualidad Fija?</h2>
+                <p>Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. Su propósito primordial es la preservación del capital, el crecimiento con impuestos diferidos mientras los fondos permanezcan dentro del contrato y la provisión de mecanismos contractuales para transformar el patrimonio acumulado en un flujo de ingresos predecible e inagotable durante la jubilación. El capital y los intereses acreditados están respaldados por las reservas estatutarias de la cuenta general de la aseguradora y por la Asociación de Garantía de Seguros de Vida y Salud de Florida (FLAHIGA).</p>
+                <ul>
+                  <li><strong>Fase de Acumulación:</strong> Su dinero crece protegido de la volatilidad del mercado bursátil y devenga intereses compuestos sin sufrir la deducción anual de impuestos sobre ganancias (sin formularios 1099 anuales mientras no retire).</li>
+                  <li><strong>Fase de Distribución:</strong> Usted determina cómo acceder a su capital: retiros parciales libres de penalización (según contrato), cobro íntegro al vencimiento o una pensión vitalicia mensual garantizada de por vida.</li>
+                </ul>
+              </section>
 
-            <section>
-              <h2>MYGA</h2>
-              <p>A Multi-Year Guarantee Annuity (MYGA) is a fixed annuity offering a guaranteed interest rate for a specified period (such as 3, 5, 7, or 10 years). The insurer contractually guarantees a fixed annual interest rate for the duration of that term, subject to contract terms.</p>
-              <ul>
-                <li><strong>Predictable Crediting:</strong> The crediting rate is contractually set for the duration of the guarantee period, subject to contract terms.</li>
-                <li><strong>Flexible Maturity Options:</strong> At term end, you can withdraw your funds, renew at available rates, or complete a qualifying IRS Section 1035 exchange into a new contract.</li>
-                <li><strong>Compounding Power:</strong> Earnings remain in the contract and compound on a tax-deferred basis, subject to applicable tax rules.</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Modalidades de Anualidades en Florida: Tradicionales, MYGA, FIA y SPIA</h2>
+                <article>
+                  <h3>1. Anualidades Fijas Tradicionales</h3>
+                  <p>Declaran una tasa de interés periódica revisable anualmente con un piso mínimo garantizado por ley estatal (generalmente 1% a 3%) por debajo del cual el rendimiento nunca puede caer.</p>
+                </article>
+                <article>
+                  <h3>2. Anualidades de Garantía Multianual (MYGA)</h3>
+                  <p>Bloquean una tasa de interés fija exacta durante un período multianual pactado (3, 5, 7 o 10 años). Funcionan de manera similar a un certificado bancario pero con crecimiento con impuestos diferidos y respaldo de aseguradora.</p>
+                </article>
+                <article>
+                  <h3>3. Anualidades Fijas Indexadas (FIA)</h3>
+                  <p>Vinculan su potencial de crecimiento al desempeño de un índice financiero externo (como el S&P 500) a través de topes (Cap Rates) o tasas de participación, con un piso contractual estricto del 0% que blinda su capital contra cualquier caída bursátil.</p>
+                </article>
+                <article>
+                  <h3>4. Anualidades Inmediatas de Prima Única (SPIA)</h3>
+                  <p>Diseñadas para personas que necesitan un flujo de ingresos inmediato. Se aporta un pago único y la aseguradora comienza a desembolsar pagos mensuales garantizados de por vida a los 30 días.</p>
+                </article>
+              </section>
 
-            <section>
-              <h2>Fixed Indexed Annuities</h2>
-              <p>A Fixed Indexed Annuity (FIA) offers interest crediting potential linked to an external financial benchmark (such as the S&P 500), combined with protection against index declines.</p>
-              <ul>
-                <li><strong>Contractual 0% Floor:</strong> A fixed indexed annuity may credit 0% rather than a negative index return during a crediting period, subject to the contract’s terms, charges and crediting method.</li>
-                <li><strong>Annual Reset Feature:</strong> Depending on the contract, index gains may be locked in at anniversary dates and become part of your contract value for future periods.</li>
-                <li><strong>Growth Levers:</strong> Returns are governed by contractual crediting formulas such as cap rates, participation rates, or spreads.</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Ingresos Vitalicios Garantizados: Cláusula GLWB vs. Anuitización</h2>
+                <p>El riesgo de longevidad (sobrevivir a sus propios ahorros) es la mayor preocupación de los jubilados modernos en Florida. Las anualidades resuelven este desafío mediante dos estructuras:</p>
+                <ul>
+                  <li><strong>Cláusula de Retiro Vitalicio Garantizado (GLWB / Income Rider):</strong> Calcula una Base de Ingresos contractual que crece anualmente a una tasa de roll-up garantizada. Al activarla, garantiza cheques mensuales de por vida sin perder el control de su saldo en efectivo.</li>
+                  <li><strong>Anuitización Tradicional:</strong> Conversión irrevocable del saldo en un flujo mensual garantizado calculado actuarialmente (Vida Única o Mancomunada con Cónyuge).</li>
+                </ul>
+              </section>
 
-            <section>
-              <h2>SPIA</h2>
-              <p>A Single Premium Immediate Annuity (SPIA) is designed for individuals requiring immediate guaranteed cash flow. You deposit a single lump sum, and the insurer begins paying guaranteed monthly or annual checks immediately (typically within 30 days to 12 months).</p>
-              <ul>
-                <li><strong>Immediate Cash Flow:</strong> Designed for retirees seeking immediate, predictable retirement disbursements.</li>
-                <li><strong>Exclusion Ratio Advantage:</strong> For non-qualified contracts, a portion of each payout represents a tax-free return of principal, subject to tax rules.</li>
-                <li><strong>Irrevocable Conversion:</strong> In exchange for guaranteed lifetime payments, the lump sum is annuitized and cannot typically be surrendered.</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Mecánica de Liquidez y Retiros Libres de Penalización</h2>
+                <p>Las anualidades modernas en Florida no son contratos rígidos. Incluyen provisiones de liquidez estructuradas:</p>
+                <ul>
+                  <li><strong>Retiros Libres de Penalización:</strong> La mayoría de los contratos permiten retirar hasta un 10% del saldo acumulado cada año a partir del segundo año sin ningún cargo por rescate.</li>
+                  <li><strong>Acceso a Intereses Devengados:</strong> Múltiples productos permiten retirar mensualmente los intereses ganados para complementar el ingreso corriente.</li>
+                  <li><strong>Exenciones por Convalecencia o Enfermedad Terminal:</strong> Cláusulas que liberan hasta el 100% del capital sin penalizaciones si el titular es ingresado en un centro de enfermería especializada o diagnosticado con una condición terminal.</li>
+                </ul>
+              </section>
 
-            <section>
-              <h2>Lifetime Income</h2>
-              <p>Longevity risk—outliving one's savings—is an important financial consideration in retirement. Fixed annuities address this through distinct lifetime income structures:</p>
-              <ul>
-                <li><strong>Guaranteed Lifetime Withdrawal Benefit (GLWB):</strong> An optional living benefit rider that calculates an Income Base to provide lifetime withdrawals, subject to rider terms and fees.</li>
-                <li><strong>Traditional Annuitization:</strong> Irrevocably converting contract balance into a guaranteed income stream based on life expectancy (Single Life, Joint & Survivor, or Period Certain).</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Comparativa: Anualidad MYGA vs. Certificado de Depósito Bancario (CD)</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Factor</th>
+                      <th>Anualidad MYGA</th>
+                      <th>Certificado de Depósito (CD) Bancario</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tratamiento Fiscal</td>
+                      <td>Impuestos diferidos (Sin 1099 anual)</td>
+                      <td>Tributa anualmente como ingreso ordinario (1099-INT)</td>
+                    </tr>
+                    <tr>
+                      <td>Mecanismo de Respaldo</td>
+                      <td>Reservas estatutarias de aseguradora y FLAHIGA</td>
+                      <td>Asegurado por la FDIC hasta $250,000 por banco</td>
+                    </tr>
+                    <tr>
+                      <td>Liquidez Anual</td>
+                      <td>Hasta 10% anual libre de penalización (según contrato)</td>
+                      <td>Penalidad severa de intereses por retiro anticipado</td>
+                    </tr>
+                    <tr>
+                      <td>Conversión a Pensión</td>
+                      <td>Opción de cheques garantizados de por vida</td>
+                      <td>No ofrece opciones de ingresos vitalicios</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
 
-            <section>
-              <h2>Interest Crediting</h2>
-              <p>Understanding how insurers credit interest is essential for selecting the right contract:</p>
-              <ul>
-                <li><strong>Fixed Declared Rate:</strong> A clear, contractual percentage credited as specified by the policy.</li>
-                <li><strong>Cap Rate:</strong> The maximum percentage gain credited over a measurement period.</li>
-                <li><strong>Participation Rate:</strong> The percentage of index gains credited according to contract formula.</li>
-                <li><strong>Annual Reset:</strong> Protects previously credited gains from subsequent index downturns, subject to contract provisions.</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Ventajas Fiscales e Intercambios Calificados bajo Sección 1035 del IRS</h2>
+                <p>El Código IRS Sección 1035 permite transferir fondos directamente de una anualidad antigua (o valor en efectivo de un seguro de vida) hacia una nueva anualidad sin desencadenar un evento fiscal inmediato. Esto le permite modernizar pólizas antiguas con tasas deprimidas hacia contratos contemporáneos con rendimientos sustancialmente superiores.</p>
+              </section>
 
-            <section>
-              <h2>Liquidity</h2>
-              <p>Modern Florida fixed annuities provide structured liquidity provisions, subject to contract terms:</p>
-              <ul>
-                <li><strong>Penalty-Free Withdrawal Provisions:</strong> Some contracts provide a penalty-free withdrawal provision, often up to a stated percentage (such as 10% annually), subject to contract terms.</li>
-                <li><strong>Earned Interest Access:</strong> Many contracts permit withdrawal of credited interest without surrender charges.</li>
-                <li><strong>RMD Provisions:</strong> Some contracts may waive surrender charges for certain required minimum distributions, subject to contract provisions.</li>
-                <li><strong>Confinement & Illness Provisions:</strong> Certain contracts may provide surrender-charge waivers under specified qualifying conditions, such as skilled nursing confinement or terminal illness, subject to state availability and contract provisions.</li>
-              </ul>
-            </section>
+              <section>
+                <h2>Preguntas Frecuentes sobre Anualidades en Florida</h2>
+                <dl>
+                  <dt><strong>¿Qué es una anualidad fija y cómo protege el capital en Florida?</strong></dt>
+                  <dd>Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. A diferencia de las inversiones en bolsa, el capital está respaldado por las reservas estatutarias y la cartera de bonos de grado de inversión de la aseguradora. El contrato ofrece un crecimiento de intereses compuesto con diferimiento fiscal y un piso contractual que protege su saldo contra pérdidas directas del mercado.</dd>
 
-            <section>
-              <h2>Surrender Charges</h2>
-              <p>Annuities are designed as medium- to long-term wealth preservation contracts. Withdrawing funds beyond penalty-free limits during the surrender period triggers specific charges:</p>
-              <ul>
-                <li><strong>Declining Surrender Schedule:</strong> Typically starts between 7% and 10% in Year 1 and decreases over time until reaching 0%.</li>
-                <li><strong>Market Value Adjustment (MVA):</strong> An adjustment reflecting interest rate movements since contract inception, applied only to early excess withdrawals.</li>
-                <li><strong>IRS 10% Premature Distribution Penalty:</strong> Taxable earnings withdrawn before age 59½ may be subject to a 10% federal IRS tax penalty.</li>
-              </ul>
-            </section>
+                  <dt><strong>¿Cuál es la diferencia exacta entre una anualidad tradicional, una MYGA y una FIA?</strong></dt>
+                  <dd>Una anualidad fija tradicional declara una tasa periódica revisable anualmente con una tasa mínima garantizada. Una MYGA (Multi-Year Guarantee Annuity) bloquea una tasa de interés fija exacta durante un período multianual pactado (por ejemplo, 3, 5, 7 o 10 años). Una Anualidad Indexada Fija (FIA) ofrece un rendimiento vinculado al desempeño de un índice bursátil externo (como el S&P 500) manteniendo siempre un piso garantizado del 0% para evitar pérdidas de capital.</dd>
 
-            <section>
-              <h2>Tax Considerations</h2>
-              <p>Fixed annuities offer tax-deferred growth characteristics:</p>
-              <ul>
-                <li><strong>Tax-Deferred Growth:</strong> Tax-deferred growth while funds remain in the annuity, subject to applicable tax rules, enabling earnings to compound without annual tax drag.</li>
-                <li><strong>LIFO Tax Treatment:</strong> Non-qualified withdrawals are taxed on a Last-In, First-Out basis (earnings are withdrawn and taxed first as ordinary income).</li>
-                <li><strong>Qualifying IRS Section 1035 Exchanges:</strong> Allows qualifying transfer of funds from an existing annuity into a new annuity without immediate income taxation.</li>
-              </ul>
-            </section>
+                  <dt><strong>¿Cómo funciona el diferimiento fiscal (Tax Deferral) en las anualidades?</strong></dt>
+                  <dd>En una anualidad, usted no recibe formularios 1099-INT anuales sobre los intereses ganados mientras los fondos permanezcan dentro del contrato. El dinero que habría pagado en impuestos cada año permanece dentro de la cuenta devengando intereses sobre intereses (interés compuesto triple). Los impuestos sobre las ganancias solo se pagan cuando se realizan retiros.</dd>
 
-            <section>
-              <h2>Annuity vs CD</h2>
-              <p>Comparing Fixed Annuities (MYGAs) and Bank Certificates of Deposit:</p>
-              <ul>
-                <li><strong>Tax Treatment:</strong> Bank CD interest is taxed annually as ordinary income (Form 1099-INT). MYGAs offer tax-deferred growth while funds remain in the contract, subject to applicable tax rules.</li>
-                <li><strong>Backing & Guarantees:</strong> Bank CDs are backed by the FDIC up to $250,000 per institution. Annuities are backed by insurer general account reserves and state guaranty associations (FLAHIGA in Florida).</li>
-                <li><strong>Liquidity Provisions:</strong> Bank CDs generally assess interest penalties for early withdrawal. Some annuity contracts provide penalty-free withdrawal provisions, often up to 10% annually, subject to contract terms.</li>
-                <li><strong>Income Conversion:</strong> CDs cannot guarantee income for life; annuities offer guaranteed lifetime income options.</li>
-              </ul>
-            </section>
+                  <dt><strong>¿Qué liquidez tengo disponible si necesito dinero de emergencia?</strong></dt>
+                  <dd>La gran mayoría de los contratos modernos de anualidades en Florida incluyen una provisión de liquidez anual libre de penalización (penalty-free withdrawal), que suele permitir retirar hasta un 10% del saldo acumulado cada año tras el primer aniversario de la póliza. Asimismo, muchos contratos incluyen cláusulas de exención por internamiento en hogares de ancianos o enfermedades terminales que liberan hasta el 100% del capital sin cargos por rescate.</dd>
 
-            <section>
-              <h2>Who May Consider an Annuity?</h2>
-              <p>Fixed annuities are especially well-suited for:</p>
-              <ul>
-                <li><strong>Pre-Retirees (Ages 50-65):</strong> Seeking to protect their nest egg from market volatility as they near retirement.</li>
-                <li><strong>Conservative CD Savers:</strong> Looking for higher yields and relief from annual income taxes on interest.</li>
-                <li><strong>Retirees Without Corporate Pensions:</strong> Wanting to create a personal, guaranteed monthly pension paycheck for life.</li>
-                <li><strong>401(k) / IRA Rollover Candidates:</strong> Moving employer plan balances into safe, principal-protected vehicles.</li>
-              </ul>
-            </section>
+                  <dt><strong>¿Qué sucede al vencer el plazo de una anualidad MYGA?</strong></dt>
+                  <dd>Al término del plazo contractual, se abre una ventana de gracia de 30 días con tres alternativas: 1) Retirar la totalidad de su capital y ganancias en un pago único; 2) Realizar un intercambio calificado bajo la Sección 1035 del IRS hacia una nueva anualidad con mejores tasas; o 3) Permitir que la póliza se renueve bajo la tasa vigente de la aseguradora.</dd>
 
-            <section>
-              <h2>Important Considerations</h2>
-              <p>Before purchasing an annuity, carefully review these suitability factors:</p>
-              <ul>
-                <li><strong>Time Horizon:</strong> Commit only funds you do not require for short-term emergency expenses.</li>
-                <li><strong>Insurer Financial Strength:</strong> Select carriers rated A- or higher by independent rating agencies like A.M. Best.</li>
-                <li><strong>Rider Fees:</strong> Optional income riders (GLWB) typically carry an annual fee (e.g., 0.95% to 1.25%) deducted from contract value.</li>
-              </ul>
-            </section>
+                  <dt><strong>¿Cómo se comparan las anualidades con los Certificados de Depósito (CD) bancarios?</strong></dt>
+                  <dd>Los CD bancarios están respaldados por la FDIC y generan impuestos anuales ordinarios (Formulario 1099-INT). Las anualidades MYGA ofrecen diferimiento fiscal, están respaldadas por las reservas de la aseguradora y por FLAHIGA, permiten retiros parciales anuales y pueden convertirse en ingresos vitalicios garantizados que no se agotan.</dd>
 
-            <section>
-              <h2>FAQ</h2>
-              <h3>What is the minimum deposit required to open a Florida fixed annuity?</h3>
-              <p>Most fixed and indexed annuities require a minimum initial deposit between $10,000 and $25,000, depending on the carrier and product.</p>
+                  <dt><strong>¿Qué es un intercambio calificado según la Sección 1035 del IRS?</strong></dt>
+                  <dd>La Sección 1035 del Código de Rentas Internas permite transferir fondos directamente de una anualidad existente a una nueva anualidad como un intercambio libre de impuestos, preservando su base de costo sin tributar en ese momento.</dd>
 
-              <h3>Can I fund an annuity with an existing traditional IRA or 401(k)?</h3>
-              <p>Yes. You can complete a direct, tax-free trustee-to-trustee rollover from an employer 401(k), 403(b), or traditional IRA into a qualified fixed annuity without taxes or penalties.</p>
+                  <dt><strong>¿Cómo garantiza una anualidad un flujo de ingresos de por vida (Lifetime Income)?</strong></dt>
+                  <dd>Mediante una Cláusula de Retiro Vitalicio Garantizado (GLWB / Income Rider). La aseguradora le paga un porcentaje anual garantizado por el resto de su vida, incluso si el valor de la cuenta en efectivo llega a cero debido a una larga longevidad.</dd>
+                </dl>
+              </section>
 
-              <h3>What happens to my annuity balance when I pass away?</h3>
-              <p>Annuities feature a designated beneficiary designation that bypasses probate. Your named beneficiaries receive the remaining contract value directly without court delays.</p>
-            </section>
+              <section>
+                <h2>Solicite una Comparación de Tasas de Anualidades en Florida</h2>
+                <p>Hable con el corredor independiente Andrés Bozo (NPN: 21228432) al <a href="tel:+13522258389">(352) 225-8389</a> para comparar las tasas de anualidades fijas más altas disponibles hoy en Florida sin comisiones ni cargos de intermediación.</p>
+              </section>
+            </main>
+          `;
+        } else {
+          bodyOutline = `
+            <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Florida Fixed Annuities</span></p></nav>
+            <header>
+              <h1>Florida Fixed Annuities: MYGA, FIA & Retirement Income Options</h1>
+              <p>${description}</p>
+              <div class="broker-contact-badge">
+                <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
+                <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
+              </div>
+            </header>
+            <main>
+              <section>
+                <h2>What Is a Fixed Annuity?</h2>
+                <p>A fixed annuity is a legally binding contract between an individual and a state-licensed life insurance company. Its primary purpose is to provide principal preservation, tax-deferred growth while funds remain in the annuity (subject to applicable tax rules), and contractual mechanisms to convert accumulated savings into predictable retirement income options, backed by the claims-paying ability of the issuing insurer. Principal and credited interest are supported by the insurer's general account statutory reserves and conservative investment portfolio, alongside state guaranty protections from the Florida Life and Health Insurance Guaranty Association (FLAHIGA).</p>
+                <ul>
+                  <li><strong>Accumulation Phase:</strong> Your principal earns contractually guaranteed interest or index-linked growth without annual 1099 tax erosion while funds remain in the contract.</li>
+                  <li><strong>Distribution Phase:</strong> You choose how to access your assets: via penalty-free withdrawals (where permitted by contract), a lump-sum payout at maturity, or a guaranteed lifetime income stream backed by the insurer.</li>
+                </ul>
+              </section>
 
-            <section>
-              <h2>CTA</h2>
-              <p>Speak directly with independent licensed broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">(352) 225-8389</a> or request a personalized Florida annuity comparison with zero fees.</p>
-            </section>
-          </main>
-        `;
+              <section>
+                <h2>Core Florida Annuity Categories: Traditional, MYGA, FIA & SPIA</h2>
+                <article>
+                  <h3>1. Traditional Fixed Annuities</h3>
+                  <p>Traditional fixed annuities declare an annual interest rate credited to your contract value. Key structural elements include an initial declared rate for 1 to 3 years and a contractual minimum lifetime floor (typically 1.0% to 3.0%) mandated by state regulation below which the yield cannot fall.</p>
+                </article>
+                <article>
+                  <h3>2. Multi-Year Guarantee Annuities (MYGA)</h3>
+                  <p>A Multi-Year Guarantee Annuity (MYGA) locks in a fixed, guaranteed annual interest rate for a dedicated term (such as 3, 5, 7, or 10 years). The insurer contractually guarantees that fixed yield for the duration of the guarantee period, delivering certainty and triple compounding without market exposure.</p>
+                </article>
+                <article>
+                  <h3>3. Fixed Indexed Annuities (FIA)</h3>
+                  <p>A Fixed Indexed Annuity (FIA) offers interest crediting potential linked to an external financial benchmark (such as the S&P 500), combined with protection against index declines. With a strict contractual 0% floor, market index downturns never reduce your credited principal.</p>
+                </article>
+                <article>
+                  <h3>4. Single Premium Immediate Annuities (SPIA)</h3>
+                  <p>Designed for individuals requiring immediate guaranteed cash flow. You deposit a single lump sum, and the insurer begins paying guaranteed monthly checks immediately (typically within 30 days).</p>
+                </article>
+              </section>
+
+              <section>
+                <h2>Guaranteed Lifetime Retirement Income: GLWB vs. Annuitization</h2>
+                <p>Longevity risk—outliving one's accumulated assets—is a premier concern for Florida retirees. Fixed annuities address this through two distinct structures:</p>
+                <ul>
+                  <li><strong>Guaranteed Lifetime Withdrawal Benefit (GLWB):</strong> An optional living benefit rider that tracks a contractual Income Base compounding at a guaranteed roll-up rate. When activated, the insurer disburses a lifetime payout percentage every year, even if cash surrender value reaches zero.</li>
+                  <li><strong>Traditional Annuitization:</strong> Irrevocably converting contract balance into a guaranteed income stream based on life expectancy (Single Life or Joint & Survivor).</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Liquidity Provisions & Penalty-Free Withdrawals</h2>
+                <p>Modern Florida fixed annuities provide structured liquidity provisions, subject to contract terms:</p>
+                <ul>
+                  <li><strong>Penalty-Free Withdrawal Provisions:</strong> Most contracts permit withdrawals of up to 10% of accumulated contract value each year starting after Year 1 without surrender charges.</li>
+                  <li><strong>Earned Interest Access:</strong> Many contracts allow systematic monthly withdrawal of credited interest to generate current cash flow.</li>
+                  <li><strong>Confinement & Terminal Illness Waiver Riders:</strong> Surrender charges are typically waived if you require skilled nursing home care or receive a terminal diagnosis.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Comparing Fixed Annuities (MYGAs) and Bank Certificates of Deposit (CDs)</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Factor</th>
+                      <th>Fixed Annuity (MYGA)</th>
+                      <th>Bank Certificate of Deposit (CD)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Tax Treatment</td>
+                      <td>Tax-deferred growth (No annual 1099-INT)</td>
+                      <td>Taxed annually as ordinary income (Form 1099-INT)</td>
+                    </tr>
+                    <tr>
+                      <td>Backing & Guarantees</td>
+                      <td>Insurer statutory reserves & FLAHIGA</td>
+                      <td>FDIC insured up to $250,000 per depositor</td>
+                    </tr>
+                    <tr>
+                      <td>Annual Liquidity</td>
+                      <td>Up to 10% penalty-free withdrawals (per contract)</td>
+                      <td>Severe interest penalties on early withdrawal</td>
+                    </tr>
+                    <tr>
+                      <td>Lifetime Income Conversion</td>
+                      <td>Can convert into guaranteed lifetime pension</td>
+                      <td>No lifetime income options available</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+
+              <section>
+                <h2>Tax Advantages & IRS Section 1035 Exchanges</h2>
+                <p>Section 1035 of the Internal Revenue Code permits direct, tax-free rollover of funds from an existing annuity (or cash value life policy) into a new annuity. This enables Florida savers to upgrade older, low-yielding contracts into modern annuities offering higher yields and superior lifetime benefits without triggering current income taxes.</p>
+              </section>
+
+              <section>
+                <h2>Frequently Asked Questions About Florida Fixed Annuities</h2>
+                <dl>
+                  <dt><strong>What is a fixed annuity and how does it protect retirement principal in Florida?</strong></dt>
+                  <dd>A fixed annuity is a legally binding contract issued by a state-licensed life insurance company. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio. The contract provides tax-deferred compound interest growth and a contractual guarantee that protects your balance against direct market downturns.</dd>
+
+                  <dt><strong>What is the exact difference between a traditional fixed annuity, a MYGA, and an FIA?</strong></dt>
+                  <dd>A traditional fixed annuity declares an annual interest rate with a contractual minimum floor. A Multi-Year Guarantee Annuity (MYGA) locks in an exact, guaranteed fixed yield for a committed term (such as 3, 5, 7, or 10 years). A Fixed Indexed Annuity (FIA) links growth potential to an external market benchmark (like the S&P 500) via caps or participation rates, while maintaining a strict 0% contractual floor to ensure you never lose principal during market downturns.</dd>
+
+                  <dt><strong>How does tax deferral work in fixed annuities?</strong></dt>
+                  <dd>With an annuity, tax is deferred while funds remain within the contract, subject to applicable tax rules. Money that would otherwise go toward annual income taxes stays in your account, generating triple compounding (interest on principal, interest on interest, and interest on tax savings). Income taxes are only paid when distributions are withdrawn.</dd>
+
+                  <dt><strong>What liquidity options are available if I face an unexpected financial emergency?</strong></dt>
+                  <dd>Most modern Florida annuity contracts feature an annual penalty-free withdrawal provision, typically permitting withdrawals of up to 10% of your accumulated account value each year after year one. Furthermore, many contracts include waiver riders for nursing home confinement or terminal illness that provide complete surrender-charge waivers under qualifying conditions.</dd>
+
+                  <dt><strong>What happens when a MYGA contract term matures?</strong></dt>
+                  <dd>When your contractual term ends, a 30-day window opens. You have three primary choices: 1) Take a full lump-sum distribution of your principal and earnings; 2) Execute a qualifying IRS Section 1035 exchange into a new annuity offering top market rates at that time; or 3) Allow the contract to automatically renew under the carrier's prevailing renewal rate.</dd>
+
+                  <dt><strong>How do fixed annuities compare to bank Certificates of Deposit (CDs)?</strong></dt>
+                  <dd>Bank CDs are FDIC-insured up to $250,000 per depositor and generate taxable income annually reported on Form 1099-INT. Annuities grow tax-deferred subject to applicable tax rules, are backed by insurer statutory reserves and the Florida Life and Health Insurance Guaranty Association (FLAHIGA), typically offer 10% penalty-free withdrawal provisions, and provide the option to convert funds into guaranteed lifetime retirement income that you cannot outlive.</dd>
+
+                  <dt><strong>What is a qualifying IRS Section 1035 exchange?</strong></dt>
+                  <dd>Section 1035 of the Internal Revenue Code allows you to roll over funds directly from an existing annuity contract (or the cash value of a permanent life policy) into a new annuity as a qualifying tax-free exchange, subject to tax rules.</dd>
+
+                  <dt><strong>How does an annuity establish guaranteed lifetime income?</strong></dt>
+                  <dd>Through a Guaranteed Lifetime Withdrawal Benefit (GLWB) income rider. A GLWB tracks a contractual 'Income Base' that compounds at a contractual roll-up rate. When activated, the insurer disburses a guaranteed payout percentage every year for life, even if your underlying cash surrender value reaches zero.</dd>
+                </dl>
+              </section>
+
+              <section>
+                <h2>Compare Top Florida Annuity Rates with Broker Andres Bozo</h2>
+                <p>Speak directly with independent licensed broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">(352) 225-8389</a> to receive a multi-carrier comparison of the highest guaranteed fixed annuity yields in Florida with zero broker fees.</p>
+              </section>
+            </main>
+          `;
+        }
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {
         title = "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
         description = "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.";

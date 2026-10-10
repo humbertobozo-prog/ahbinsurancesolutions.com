@@ -431,6 +431,12 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     "/about-us/": "/about-andres-bozo",
     "/es/nosotros": "/es/sobre-andres-bozo",
     "/es/nosotros/": "/es/sobre-andres-bozo",
+    "/es/localidades/gainesville-fl": "/es/locations/gainesville-fl",
+    "/es/localidades/gainesville-fl/": "/es/locations/gainesville-fl",
+    "/gainesville-fl-insurance": "/locations/gainesville-fl",
+    "/gainesville-fl-insurance/": "/locations/gainesville-fl",
+    "/es/seguros-gainesville-fl": "/es/locations/gainesville-fl",
+    "/es/seguros-gainesville-fl/": "/es/locations/gainesville-fl",
   };
 
   app.use((req, res, next) => {
