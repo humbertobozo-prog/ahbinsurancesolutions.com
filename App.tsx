@@ -268,6 +268,10 @@ const App: React.FC = () => {
                     enUrl={`${baseUrl}/`}
                     esUrl={`${baseUrl}/es`}
                     language={language}
+                    ogImage={`${baseUrl}/og-image.png`}
+                    ogImageAlt={isEs ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists"}
+                    datePublished="2024-01-15"
+                    dateModified="2026-10-10"
                     schema={homeBreadcrumbSchema}
                 />
                 <Hero content={content.hero} />

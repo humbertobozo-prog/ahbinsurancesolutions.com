@@ -13,6 +13,10 @@ export interface SeoMetaData {
   bodyOutline: string;
   is404?: boolean;
   robots?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  datePublished?: string;
+  dateModified?: string;
 }
 
 const baseUrl = "https://www.ahbinsurancesolutions.com";
@@ -140,6 +144,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       enUrl: `${baseUrl}/404`,
       esUrl: `${baseUrl}/404`,
       ogType: "website",
+      ogImage: `${baseUrl}/og-image.png`,
+      ogImageAlt: isEs ? "404 - Página no encontrada | AHB Insurance Solutions" : "404 - Page Not Found | AHB Insurance Solutions",
+      datePublished: "2024-01-15",
+      dateModified: "2026-10-10",
       is404: true,
       robots: "noindex, nofollow",
       bodyOutline: isEs ? `
@@ -285,6 +293,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
   let ogType = "website";
   let bodyOutline = "";
+  let ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+  let ogImageAlt = isEs 
+    ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" 
+    : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists";
+  let datePublished = "2024-01-15";
+  let dateModified = "2026-10-10";
 
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
@@ -429,6 +443,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Guía de Medicare en Florida 2026. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
       : "Compare Florida Medicare Supplement Plan G & N rates, Advantage, and Part D. Expert independent broker guidance from Andres Bozo (NPN 21228432). Free quote!";
+    ogImage = "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+    ogImageAlt = isEs 
+      ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
+      : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
     
     if (isEs) {
       bodyOutline = `
@@ -741,6 +761,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Proteja a su familia con cobertura de $5,000 a $35,000 en Florida. Tarifas fijas de por vida. Emisión simplificada sin examen médico. ¡Cotice hoy sin costo!" 
       : "Secure $5,000 to $35,000 in Florida burial protection. Locked lifetime rates. Simplified-issue whole life policies without medical exam. Get a free quote!";
+    ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+    ogImageAlt = isEs 
+      ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" 
+      : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     if (isEs) {
       bodyOutline = `
@@ -1003,6 +1029,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos con ventajas fiscales bajo el Código IRS 7702 en Florida." 
       : "Discover how Indexed Universal Life (IUL) provides index-linked crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.";
+    ogImage = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+    ogImageAlt = isEs 
+      ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" 
+      : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     if (isEs) {
       bodyOutline = `
@@ -1261,6 +1293,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         title = isEs ? `${post.title.es} | AHB Insurance` : `${post.title.en} | AHB Insurance`;
         description = isEs ? post.excerpt.es : post.excerpt.en;
         ogType = "article";
+        ogImage = post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`;
+        ogImageAlt = isEs ? post.title.es : post.title.en;
+        datePublished = post.date;
+        dateModified = post.date;
         
         const authorName = post.author.name;
         const authorTitle = post.author.title;
@@ -1289,6 +1325,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       description = isEs 
         ? "Artículos educativos, guías de inscripción abierta de Medicare, seguros de gastos finales e IUL por el broker licenciado Andrés H. Bozo." 
         : "Educational guides on Florida Medicare enrollment, burial insurance, and tax-free IUL retirement by licensed broker Andres H. Bozo.";
+      ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+      ogImageAlt = isEs 
+        ? "Blog de Seguros en Florida - Guías de Medicare, Gastos Finales y Retiro IUL" 
+        : "Florida Insurance Knowledge Hub - Medicare, Final Expense and IUL Insights";
+      datePublished = "2024-01-15";
+      dateModified = "2026-10-10";
 
       const postsList = BLOG_POSTS.map(post => {
         const pTitle = isEs ? post.title.es : post.title.en;
@@ -1326,6 +1368,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Respuestas completas a más de 30 dudas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, Seguro de Vida, IUL y Anualidades en Florida con el broker Andrés H. Bozo." 
       : "Comprehensive answers to 30+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, Life Insurance, IUL, and Annuities with licensed broker Andres H. Bozo.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+    ogImageAlt = isEs 
+      ? "Preguntas Frecuentes sobre Medicare, Gastos Finales e IUL en Florida" 
+      : "Frequently Asked Questions about Florida Medicare, Final Expense, and IUL";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     const activeFaqs = isEs ? faqsEs : faqsEn;
     const categoryTitles: Record<string, { en: string; es: string }> = {
@@ -1376,6 +1424,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con aseguradoras de primer nivel." 
       : "Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing top national carriers.";
+    ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
+    ogImageAlt = isEs 
+      ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" 
+      : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     if (isEs) {
       bodyOutline = `
@@ -1444,6 +1498,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Solicite su cotización gratuita de Medicare, Gastos Finales e IUL. Hable directamente con el corredor Andrés H. Bozo al (352) 225-8389." 
       : "Request your free quote for Medicare, Final Expense, or IUL. Speak directly with broker Andres Bozo at (352) 225-8389.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+    ogImageAlt = isEs 
+      ? "Contacto y Cotizaciones de Seguros en Florida - AHB Insurance Solutions" 
+      : "Contact AHB Insurance Solutions - Licensed Florida Insurance Consultations";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     bodyOutline = `
       <header>
@@ -1472,6 +1532,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs
       ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
       : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
+    ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
+    ogImageAlt = isEs 
+      ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" 
+      : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida";
+    datePublished = "2024-01-15";
+    dateModified = "2026-10-10";
 
     if (isEs) {
       bodyOutline = `
@@ -1816,6 +1882,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Seguro de vida entera para gastos finales y entierro en Miami y Miami-Dade. Cobertura de $5,000 a $35,000 con tarifas fijas. Cotización gratis." 
           : "Permanent whole life burial insurance in Miami & Miami-Dade County. $5,000 to $35,000 cash benefits & locked rates. Free broker quote: (352) 225-8389.";
+        ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImageAlt = isEs ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" : "Miami, FL Final Expense & Burial Insurance | AHB";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
         
         bodyOutline = `
           <header>
@@ -1834,6 +1904,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Seguro de entierro y funeral en Tampa y Condado de Hillsborough. Cobertura de $5,000 a $35,000 para adultos mayores. Compare precios con Andrés Bozo." 
           : "Burial & funeral expense insurance in Tampa & Hillsborough County. $5,000 to $35,000 level benefits for seniors. Compare top rates with Andres Bozo.";
+        ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImageAlt = isEs ? "Seguro de Entierro y Gastos Finales en Tampa, FL | AHB" : "Tampa, FL Burial & Final Expense Insurance | AHB";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
 
         bodyOutline = `
           <header>
@@ -1852,6 +1926,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Descubra el seguro de Vida Universal Indexada (IUL) en Tampa y el Condado de Hillsborough. Piso del 0% y préstamos exentos de impuestos. Consulta gratis." 
           : "Discover Indexed Universal Life (IUL) insurance in Tampa & Hillsborough County. 0% market floor & tax-free policy loans. Free broker quote: (352) 225-8389.";
+        ogImage = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImageAlt = isEs ? "Guía de Seguro IUL y Jubilación en Tampa, FL | AHB" : "Tampa, FL IUL & Retirement Insurance Guide | AHB";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
 
         bodyOutline = `
           <header>
@@ -1870,6 +1948,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Asesoría bilingüe de seguros en Orlando y Condado de Orange. Medicare Suplementario, Gastos Finales e IUL con el broker Andrés Bozo (NPN 21228432)." 
           : "Bilingual insurance brokerage services in Orlando & Orange County. Medicare Supplement, Final Expense, and IUL guidance from Andres Bozo NPN 21228432.";
+        ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
+        ogImageAlt = isEs ? "Seguros de Vida y Medicare en Orlando, FL | AHB" : "Orlando Spanish Insurance Services | AHB Solutions";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
 
         bodyOutline = `
           <header>
@@ -1888,6 +1970,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs
           ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
           : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
+        ogImage = "https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImageAlt = isEs 
+          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance" 
+          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
 
         if (isEs) {
           bodyOutline = `
@@ -2161,8 +2249,18 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           `;
         }
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {
-        title = "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
-        description = "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.";
+        title = isEs
+          ? "Seguro Dental, Visión y Audición para Adultos Mayores en Florida | AHB"
+          : "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
+        description = isEs
+          ? "Seguro completo de dental y visión para adultos mayores y familias en Florida. Cobertura de limpiezas, implantes, dentaduras y lentes sin períodos de espera."
+          : "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.";
+        ogImage = "https://images.pexels.com/photos/4069335/pexels-photo-4069335.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImageAlt = isEs 
+          ? "Seguro Dental, Visión y Audición para Adultos Mayores en Florida" 
+          : "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
+        datePublished = "2024-01-15";
+        dateModified = "2026-10-10";
         bodyOutline = `
           <header>
             <h1>${title}</h1>
@@ -2198,6 +2296,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     esUrl,
     ogType,
     bodyOutline,
+    ogImage,
+    ogImageAlt,
+    datePublished,
+    dateModified,
   };
 }
 
@@ -2216,7 +2318,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "inLanguage": ["en-US", "es-US"]
   };
 
-  const webpageSchema = {
+  const webpageSchema: Record<string, unknown> = {
     "@type": "WebPage",
     "@id": `${canonical}#webpage`,
     "url": canonical,
@@ -2226,6 +2328,19 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "about": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
     "inLanguage": metadata.htmlLang
   };
+
+  if (metadata.datePublished) {
+    webpageSchema.datePublished = metadata.datePublished;
+  }
+  if (metadata.dateModified) {
+    webpageSchema.dateModified = metadata.dateModified;
+  }
+  if (metadata.ogImage) {
+    webpageSchema.primaryImageOfPage = {
+      "@type": "ImageObject",
+      "url": metadata.ogImage
+    };
+  }
 
   const organizationSchema = {
     "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
@@ -2622,10 +2737,60 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
   rewritten = rewritten.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${escapeHtml(metadata.description)}">`);
   rewritten = rewritten.replace(/<meta property="og:locale" content="[^"]*"\s*\/?>/, `<meta property="og:locale" content="${metadata.htmlLang.replace("-", "_")}">`);
 
+  const ogImage = metadata.ogImage || "https://www.ahbinsurancesolutions.com/og-image.png";
+  const ogImageAlt = metadata.ogImageAlt || (metadata.htmlLang.startsWith("es") 
+    ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" 
+    : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists");
+
+  // Replace or inject og:image
+  const ogImageRegex = /<meta (?:property|name)="og:image" content="[^"]*"\s*\/?>/;
+  if (ogImageRegex.test(rewritten)) {
+    rewritten = rewritten.replace(ogImageRegex, `<meta property="og:image" content="${ogImage}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta property="og:image" content="${ogImage}">\n</head>`);
+  }
+
+  // Replace or inject og:image:secure_url
+  const ogSecureRegex = /<meta (?:property|name)="og:image:secure_url" content="[^"]*"\s*\/?>/;
+  if (ogSecureRegex.test(rewritten)) {
+    rewritten = rewritten.replace(ogSecureRegex, `<meta property="og:image:secure_url" content="${ogImage}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta property="og:image:secure_url" content="${ogImage}">\n</head>`);
+  }
+
+  // Replace or inject og:image:alt
+  const ogAltRegex = /<meta (?:property|name)="og:image:alt" content="[^"]*"\s*\/?>/;
+  if (ogAltRegex.test(rewritten)) {
+    rewritten = rewritten.replace(ogAltRegex, `<meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta property="og:image:alt" content="${escapeHtml(ogImageAlt)}">\n</head>`);
+  }
+
+  // Set og:image:type
+  const imgType = ogImage.endsWith(".webp") ? "image/webp" : ogImage.endsWith(".jpg") || ogImage.endsWith(".jpeg") ? "image/jpeg" : "image/png";
+  const ogTypeRegex = /<meta (?:property|name)="og:image:type" content="[^"]*"\s*\/?>/;
+  if (ogTypeRegex.test(rewritten)) {
+    rewritten = rewritten.replace(ogTypeRegex, `<meta property="og:image:type" content="${imgType}">`);
+  }
+
   // 6b. Update Twitter Card fields
-  rewritten = rewritten.replace(/<meta property="twitter:url" content="[^"]*"\s*\/?>/, `<meta property="twitter:url" content="${metadata.canonicalUrl}">`);
-  rewritten = rewritten.replace(/<meta property="twitter:title" content="[^"]*"\s*\/?>/, `<meta property="twitter:title" content="${escapeHtml(metadata.title)}">`);
-  rewritten = rewritten.replace(/<meta property="twitter:description" content="[^"]*"\s*\/?>/, `<meta property="twitter:description" content="${escapeHtml(metadata.description)}">`);
+  rewritten = rewritten.replace(/<meta (?:property|name)="twitter:url" content="[^"]*"\s*\/?>/, `<meta property="twitter:url" content="${metadata.canonicalUrl}">`);
+  rewritten = rewritten.replace(/<meta (?:property|name)="twitter:title" content="[^"]*"\s*\/?>/, `<meta property="twitter:title" content="${escapeHtml(metadata.title)}">`);
+  rewritten = rewritten.replace(/<meta (?:property|name)="twitter:description" content="[^"]*"\s*\/?>/, `<meta property="twitter:description" content="${escapeHtml(metadata.description)}">`);
+
+  const twImageRegex = /<meta (?:property|name)="twitter:image" content="[^"]*"\s*\/?>/;
+  if (twImageRegex.test(rewritten)) {
+    rewritten = rewritten.replace(twImageRegex, `<meta property="twitter:image" content="${ogImage}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta property="twitter:image" content="${ogImage}">\n</head>`);
+  }
+
+  const twAltRegex = /<meta (?:property|name)="twitter:image:alt" content="[^"]*"\s*\/?>/;
+  if (twAltRegex.test(rewritten)) {
+    rewritten = rewritten.replace(twAltRegex, `<meta property="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">`);
+  } else {
+    rewritten = rewritten.replace("</head>", `    <meta property="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">\n</head>`);
+  }
 
   // 7. Inject Route-Accurate JSON-LD Schema
   const jsonLdData = generateJsonLd(metadata);

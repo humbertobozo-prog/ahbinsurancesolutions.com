@@ -160,6 +160,10 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImageAlt={isEs ? "Anualidades Fijas e Indexadas en Florida (MYGA, FIA y Retiro Vitalicio)" : "Florida Fixed & Indexed Annuities (MYGA, FIA and Guaranteed Lifetime Income)"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 

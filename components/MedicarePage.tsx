@@ -167,6 +167,10 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 

@@ -10,6 +10,9 @@ interface SEOHeadProps {
     language: Language;
     type?: string;
     ogImage?: string;
+    ogImageAlt?: string;
+    datePublished?: string;
+    dateModified?: string;
     schema?: object | object[];
     noindex?: boolean;
 }
@@ -23,6 +26,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     language,
     type = 'website',
     ogImage = 'https://www.ahbinsurancesolutions.com/og-image.png',
+    ogImageAlt,
+    datePublished,
+    dateModified,
     schema,
     noindex = false
 }) => {
@@ -92,14 +98,20 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         setMetaProp('og:url', canonicalUrl);
         setMetaProp('og:type', type);
         setMetaProp('og:image', ogImage);
+        setMetaProp('og:image:secure_url', ogImage);
         setMetaProp('og:image:width', '1200');
         setMetaProp('og:image:height', '630');
+        const effectiveAlt = ogImageAlt || (language === 'es' 
+            ? 'AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida' 
+            : 'AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists');
+        setMetaProp('og:image:alt', effectiveAlt);
         setMetaProp('og:locale', language === 'es' ? 'es_US' : 'en_US');
         setMetaProp('og:locale:alternate', language === 'es' ? 'en_US' : 'es_US');
         setMetaProp('twitter:card', 'summary_large_image');
         setMetaProp('twitter:title', title);
         setMetaProp('twitter:description', description);
         setMetaProp('twitter:image', ogImage);
+        setMetaProp('twitter:image:alt', effectiveAlt);
 
         // 7. Update Unified JSON-LD Schema
         let script = (document.getElementById('app-ld-json') || document.querySelector('script[type="application/ld+json"]')) as HTMLScriptElement;
@@ -130,7 +142,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "inLanguage": ["en-US", "es-US"]
         };
 
-        const webpageSchema = {
+        const webpageSchema: Record<string, unknown> = {
             "@type": "WebPage",
             "@id": `${canonicalUrl}#webpage`,
             "url": canonicalUrl,
@@ -140,6 +152,14 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "about": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
             "inLanguage": langTag
         };
+        if (datePublished) webpageSchema.datePublished = datePublished;
+        if (dateModified) webpageSchema.dateModified = dateModified;
+        if (ogImage) {
+            webpageSchema.primaryImageOfPage = {
+                "@type": "ImageObject",
+                "url": ogImage
+            };
+        }
 
         const organizationSchema = {
             "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
@@ -334,7 +354,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "@graph": fullGraph
         }, null, 2);
 
-    }, [title, description, canonicalUrl, enUrl, esUrl, language, type, ogImage, schema, noindex]);
+    }, [title, description, canonicalUrl, enUrl, esUrl, language, type, ogImage, ogImageAlt, datePublished, dateModified, schema, noindex]);
 
     return null;
 };

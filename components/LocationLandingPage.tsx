@@ -225,6 +225,17 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={activeLang}
+                ogImage={path.includes('miami') || path.includes('burial') || path.includes('gastos-finales')
+                    ? "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                    : path.includes('iul')
+                    ? "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                    : path.includes('orlando')
+                    ? "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+                    : "https://www.ahbinsurancesolutions.com/og-image.png"
+                }
+                ogImageAlt={details.title}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[localBusinessSchema, breadcrumbSchema]}
             />
             {/* Header / Sub Nav */}

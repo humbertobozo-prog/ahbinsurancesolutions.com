@@ -148,6 +148,10 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImageAlt={isEs ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 

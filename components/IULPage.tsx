@@ -168,6 +168,10 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 

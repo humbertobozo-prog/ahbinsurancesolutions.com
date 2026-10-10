@@ -24,6 +24,10 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ language }) => {
         enUrl={`${baseUrl}/404`}
         esUrl={`${baseUrl}/404`}
         language={language}
+        ogImage={`${baseUrl}/og-image.png`}
+        ogImageAlt={isEs ? '404 - Página no encontrada | AHB Insurance Solutions' : '404 - Page Not Found | AHB Insurance Solutions'}
+        datePublished="2024-01-15"
+        dateModified="2026-10-10"
         noindex={true}
       />
 

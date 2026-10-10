@@ -167,6 +167,10 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         enUrl={enUrl}
         esUrl={esUrl}
         language={language}
+        ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+        ogImageAlt={isEs ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida"}
+        datePublished="2024-01-15"
+        dateModified="2026-10-10"
         schema={[serviceSchema, breadcrumbSchema, faqSchema]}
       />
 

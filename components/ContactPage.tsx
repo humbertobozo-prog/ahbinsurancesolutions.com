@@ -83,6 +83,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImageAlt={isEs ? "Contacto y Asesoría de Seguros en Florida - AHB Insurance Solutions" : "Contact AHB Insurance Solutions - Licensed Florida Insurance Consultations"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[contactSchema, breadcrumbSchema]}
             />
 

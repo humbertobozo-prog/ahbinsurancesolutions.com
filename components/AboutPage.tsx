@@ -244,6 +244,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+                ogImageAlt={isEs ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[personSchema, aboutPageSchema, breadcrumbSchema]}
             />
 

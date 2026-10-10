@@ -54,6 +54,10 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImageAlt={`${doc.title} | AHB Insurance Solutions Florida`}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
             />
             <Header content={content.header} currentLang={language} setLanguage={setLanguage} />
 

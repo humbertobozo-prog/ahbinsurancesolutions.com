@@ -83,6 +83,10 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
         enUrl={enUrl}
         esUrl={esUrl}
         language={language}
+        ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+        ogImageAlt={isEs ? `Seguros Medicare, Gastos Finales e IUL en ${activeCity.cityName}, Florida` : `Medicare, Medigap & Life Insurance in ${activeCity.cityName}, FL`}
+        datePublished="2024-01-15"
+        dateModified="2026-10-10"
       />
 
       {/* Header Banner */}

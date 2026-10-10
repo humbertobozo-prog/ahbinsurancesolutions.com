@@ -104,6 +104,9 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                     language={language}
                     type="article"
                     ogImage={currentPost.image}
+                    ogImageAlt={postTitle}
+                    datePublished={currentPost.date}
+                    dateModified={currentPost.date}
                     schema={[articleSchema, breadcrumbSchema]}
                 />
 
@@ -250,6 +253,10 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImageAlt={isEs ? "Blog y Artículos sobre Seguros en Florida - AHB Insurance" : "Florida Insurance Blog & Articles - AHB Insurance"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={blogBreadcrumbSchema}
             />
 

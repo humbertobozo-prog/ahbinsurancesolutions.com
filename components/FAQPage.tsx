@@ -88,6 +88,10 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
+                ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImageAlt={isEs ? "Preguntas Frecuentes sobre Seguros en Florida - AHB Insurance Solutions" : "Frequently Asked Questions about Florida Insurance - AHB Insurance Solutions"}
+                datePublished="2024-01-15"
+                dateModified="2026-10-10"
                 schema={[faqSchema, breadcrumbSchema]}
             />
 
