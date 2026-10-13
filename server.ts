@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
+import compression from "compression";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
@@ -12,6 +13,7 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  app.use(compression());
   app.use(express.json({ limit: "5mb" }));
 
   // Global Security Headers Middleware
@@ -487,8 +489,18 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
   } else {
     const distPath = path.join(process.cwd(), "dist");
     
-    // Serve static assets, disabling automatic serving of index.html for root or directories
-    app.use(express.static(distPath, { index: false }));
+    // Serve static assets with caching and compression headers
+    app.use(express.static(distPath, {
+      index: false,
+      maxAge: '1y',
+      setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.html')) {
+          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else if (filePath.match(/\.(js|css|woff2?|ico|png|webp|svg)$/)) {
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      }
+    }));
     
     let indexHtmlContent = "";
     
