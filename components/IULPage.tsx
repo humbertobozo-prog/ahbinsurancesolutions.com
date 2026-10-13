@@ -189,52 +189,85 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
             {/* Hero */}
             <section className="bg-primary text-white py-12 md:py-20 relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="max-w-3xl">
-                        <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-                            {isEs ? 'Planificación Financiera Avanzada | Código IRS 7702' : 'Advanced Financial Planning | IRS Code 7702'}
-                        </span>
-                        <h1 className="text-3xl md:text-5xl font-black font-heading mb-6 leading-tight">
-                            {isEs 
-                                ? 'Seguros de Vida Universal Indexada (IUL) en Florida' 
-                                : 'Indexed Universal Life (IUL) Insurance Policies'}
-                        </h1>
-                        <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
-                            {isEs ? (
-                                <>
-                                    Combine potencial de crecimiento ligado a índices como el S&P 500, un piso contractual del 0% en la acreditación indexada y estrategias de préstamos sobre póliza con ventajas fiscales potenciales
-                                    <InfoTooltip 
-                                        text="Los préstamos y retiros sobre póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal favorable si la póliza no es un MEC, se mantiene activa y cumple con los requisitos del IRS. Los cargos del seguro y costos contractuales afectan el valor en efectivo." 
-                                        label="Aviso sobre ventajas fiscales y mantenimiento de la póliza"
-                                    />
-                                    {' '}(sujeto a la adecuada estructura, fondeo, términos contractuales y mantenimiento de la póliza).
-                                </>
-                            ) : (
-                                <>
-                                    Combine index-linked growth potential, a contractual 0% floor on index crediting, and policy loan strategies with potentially favorable federal tax treatment
-                                    <InfoTooltip 
-                                        text="Policy loans and withdrawals may provide access to cash value with potentially favorable federal tax treatment when the policy is not a MEC, remains in force, and applicable tax requirements are satisfied. Policy charges, COI, and loans affect cash value. Consult a qualified tax professional." 
-                                        label="Tax-advantaged retirement notice"
-                                    />
-                                    {' '}(subject to proper funding, contract terms, and ongoing policy maintenance).
-                                </>
-                            )}
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button
-                                onClick={onOpenQuote}
-                                className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
-                            >
-                                {isEs ? 'Solicitar una Revisión de IUL ➔' : 'Request an IUL Review ➔'}
-                            </button>
-                            <a
-                                href="tel:+13522258389"
-                                className="bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-4 rounded-xl border border-white/20 transition-all text-center flex items-center justify-center gap-2"
-                            >
-                                <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
-                                {isEs ? 'Hablar con Andrés (+1 352-225-8389)' : 'Talk With Andres (+1 352-225-8389)'}
-                            </a>
+                    <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                        <div className="w-full md:w-7/12">
+                            <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+                                {isEs ? 'Planificación Financiera Avanzada | Código IRS 7702' : 'Advanced Financial Planning | IRS Code 7702'}
+                            </span>
+                            <h1 className="text-3xl md:text-5xl font-black font-heading mb-6 leading-tight">
+                                {isEs 
+                                    ? 'Seguros de Vida Universal Indexada (IUL) en Florida' 
+                                    : 'Indexed Universal Life (IUL) Insurance Policies'}
+                            </h1>
+                            <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
+                                {isEs ? (
+                                    <>
+                                        Combine potencial de crecimiento ligado a índices como el S&P 500, un piso contractual del 0% en la acreditación indexada y estrategias de préstamos sobre póliza con ventajas fiscales potenciales
+                                        <InfoTooltip 
+                                            text="Los préstamos y retiros sobre póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal favorable si la póliza no es un MEC, se mantiene activa y cumple con los requisitos del IRS. Los cargos del seguro y costos contractuales afectan el valor en efectivo." 
+                                            label="Aviso sobre ventajas fiscales y mantenimiento de la póliza"
+                                        />
+                                        {' '}(sujeto a la adecuada estructura, fondeo, términos contractuales y mantenimiento de la póliza).
+                                    </>
+                                ) : (
+                                    <>
+                                        Combine index-linked growth potential, a contractual 0% floor on index crediting, and policy loan strategies with potentially favorable federal tax treatment
+                                        <InfoTooltip 
+                                            text="Policy loans and withdrawals may provide access to cash value with potentially favorable federal tax treatment when the policy is not a MEC, remains in force, and applicable tax requirements are satisfied. Policy charges, COI, and loans affect cash value. Consult a qualified tax professional." 
+                                            label="Tax-advantaged retirement notice"
+                                        />
+                                        {' '}(subject to proper funding, contract terms, and ongoing policy maintenance).
+                                    </>
+                                )}
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <button
+                                    onClick={onOpenQuote}
+                                    className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
+                                >
+                                    {isEs ? 'Solicitar una Revisión de IUL ➔' : 'Request an IUL Review ➔'}
+                                </button>
+                                <a
+                                    href="tel:+13522258389"
+                                    className="bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-4 rounded-xl border border-white/20 transition-all text-center flex items-center justify-center gap-2"
+                                >
+                                    <svg className="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    {isEs ? 'Hablar con Andrés (+1 352-225-8389)' : 'Talk With Andres (+1 352-225-8389)'}
+                                </a>
+                            </div>
+                        </div>
+                        <div className="w-full md:w-5/12">
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/25 aspect-[4/3] bg-gray-800">
+                                {(() => {
+                                    const imageBase = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp";
+                                    const image480 = `${imageBase}&w=480`;
+                                    const image800 = `${imageBase}&w=800`;
+                                    const image1200 = `${imageBase}&w=1200`;
+                                    return (
+                                        <picture>
+                                            <source 
+                                                type="image/webp" 
+                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
+                                                sizes="(max-width: 767px) 95vw, 450px"
+                                            />
+                                            <img
+                                                src={image800}
+                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
+                                                sizes="(max-width: 767px) 95vw, 450px"
+                                                alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
+                                                className="w-full h-full object-cover"
+                                                width="800"
+                                                height="600"
+                                                loading="eager"
+                                                fetchPriority="high"
+                                                decoding="async"
+                                            />
+                                        </picture>
+                                    );
+                                })()}
+                            </div>
                         </div>
                     </div>
                 </div>
