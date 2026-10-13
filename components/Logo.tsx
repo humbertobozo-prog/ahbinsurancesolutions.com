@@ -19,6 +19,8 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'primary', className = '',
         <svg
             className={`${className} w-[160px] md:w-[225px] h-auto`}
             viewBox="0 0 225 40"
+            width="225"
+            height="40"
             xmlns="http://www.w3.org/2000/svg"
             {...(ariaHidden ? { 'aria-hidden': true } : { 'aria-labelledby': `${titleId} ${descId}` })}
         >

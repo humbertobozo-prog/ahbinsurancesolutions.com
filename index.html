@@ -49,17 +49,51 @@
     <meta name="theme-color" content="#002855" />
     <meta name="google-site-verification" content="cK88T1AJ1i4ljtEceJEG44tQA_EflbbGB2s_VvHZIVA" />
 
-    <!-- Google Fonts Optimized (Preconnect & Stylesheet) -->
+    <!-- Preconnect to external LCP image origin -->
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.pexels.com">
+
+    <!-- Google Fonts Optimized (Asynchronous Non-Render-Blocking Loading) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
-      rel="stylesheet" 
+      rel="preload" 
+      as="style" 
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
+      />
+    </noscript>
 
-    <!-- Google Analytics (GA4) Integration -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G84T1W2Z2V"></script>
-    <script defer src="/ga.js"></script>
+    <!-- Google Analytics (GA4) Integration - Non-blocking for mobile Core Web Vitals (TBT/LCP) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G84T1W2Z2V', { send_page_view: true });
+
+      function loadAnalytics() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G84T1W2Z2V';
+        s.async = true;
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        window.addEventListener('load', function() {
+          requestIdleCallback(loadAnalytics, { timeout: 3500 });
+        });
+      } else {
+        window.addEventListener('load', function() {
+          setTimeout(loadAnalytics, 1500);
+        });
+      }
+    </script>
     
     <!-- LCP Responsive Image Preload -->
     <link 
