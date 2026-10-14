@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
+import { Image } from './Image';
 
 interface GainesvilleLocationPageProps {
   language: Language;
@@ -864,10 +865,14 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
             
             <div className="md:col-span-4 text-center">
               <div className="relative inline-block mx-auto mb-4">
-                <img 
+                <Image 
                   src="/andresbozoofi.webp" 
                   alt="Andres Bozo - Gainesville FL Insurance Broker"
-                  className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-2xl border-4 border-amber-400 shadow-2xl mx-auto"
+                  className="w-full h-full object-cover"
+                  containerClassName="w-48 h-48 md:w-56 md:h-56 rounded-2xl border-4 border-amber-400 shadow-2xl mx-auto overflow-hidden"
+                  loading="lazy"
+                  width="224"
+                  height="224"
                 />
                 <span className="absolute bottom-2 right-2 bg-emerald-600 text-white p-1.5 rounded-full shadow-lg" title="Active FL DFS License">
                   <Award className="w-5 h-5" />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { RelatedServices } from './RelatedServices';
+import { Image } from './Image';
 
 interface MedicarePageProps {
     language: Language;
@@ -229,25 +230,22 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         </div>
                         <div className="w-full md:w-5/12">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-[4/3] bg-gray-800">
-                                <picture>
-                                    <source 
-                                        type="image/webp" 
-                                        srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
-                                        sizes="(max-width: 767px) 95vw, 450px"
-                                    />
-                                    <img
-                                        src={image800}
-                                        srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
-                                        sizes="(max-width: 767px) 95vw, 450px"
-                                        alt={isEs ? "Asesoría de Medicare en Florida - Andrés Bozo" : "Florida Medicare Guidance - Andres Bozo"}
-                                        className="w-full h-full object-cover"
-                                        width="800"
-                                        height="600"
-                                        loading="eager"
-                                        fetchPriority="high"
-                                        decoding="async"
-                                    />
-                                </picture>
+                                <Image
+                                    src={image800}
+                                    srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
+                                    sizes="(max-width: 767px) 95vw, 450px"
+                                    alt={isEs ? "Asesoría de Medicare en Florida - Andrés Bozo" : "Florida Medicare Guidance - Andres Bozo"}
+                                    className="w-full h-full object-cover"
+                                    containerClassName="w-full h-full"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    sources={[{
+                                        type: "image/webp",
+                                        srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`,
+                                        sizes: "(max-width: 767px) 95vw, 450px"
+                                    }]}
+                                />
                             </div>
                         </div>
                     </div>

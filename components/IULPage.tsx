@@ -3,6 +3,7 @@ import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { RelatedServices } from './RelatedServices';
 import { InfoTooltip } from './InfoTooltip';
+import { Image } from './Image';
 
 interface IULPageProps {
     language: Language;
@@ -246,25 +247,22 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                     const image800 = `${imageBase}&w=800`;
                                     const image1200 = `${imageBase}&w=1200`;
                                     return (
-                                        <picture>
-                                            <source 
-                                                type="image/webp" 
-                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
-                                                sizes="(max-width: 767px) 95vw, 450px"
-                                            />
-                                            <img
-                                                src={image800}
-                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
-                                                sizes="(max-width: 767px) 95vw, 450px"
-                                                alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
-                                                className="w-full h-full object-cover"
-                                                width="800"
-                                                height="600"
-                                                loading="eager"
-                                                fetchPriority="high"
-                                                decoding="async"
-                                            />
-                                        </picture>
+                                        <Image
+                                            src={image800}
+                                            srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
+                                            sizes="(max-width: 767px) 95vw, 450px"
+                                            alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
+                                            className="w-full h-full object-cover"
+                                            containerClassName="w-full h-full"
+                                            width="800"
+                                            height="600"
+                                            loading="lazy"
+                                            sources={[{
+                                                type: "image/webp",
+                                                srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w`,
+                                                sizes: "(max-width: 767px) 95vw, 450px"
+                                            }]}
+                                        />
                                     );
                                 })()}
                             </div>

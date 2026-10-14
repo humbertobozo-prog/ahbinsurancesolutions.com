@@ -155,6 +155,7 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
 export function generateSitemapXml(): string {
   const routes = getAllSitemapRoutes();
   const urlBlocks: string[] = [];
+  const seenLocs = new Set<string>();
 
   for (const entry of routes) {
     const enFullUrl = `${BASE_URL}${entry.enPath === '/' ? '/' : entry.enPath}`;
@@ -163,7 +164,9 @@ export function generateSitemapXml(): string {
 
     if (entry.enPath === entry.esPath) {
       // Single language or combined URL
-      urlBlocks.push(`  <url>
+      if (!seenLocs.has(enFullUrl)) {
+        seenLocs.add(enFullUrl);
+        urlBlocks.push(`  <url>
     <loc>${enFullUrl}</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="${enFullUrl}" />
     <xhtml:link rel="alternate" hreflang="es-US" href="${esFullUrl}" />
@@ -171,9 +174,12 @@ export function generateSitemapXml(): string {
 ${lastmodTag}    <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(2)}</priority>
   </url>`);
+      }
     } else {
       // English URL block
-      urlBlocks.push(`  <url>
+      if (!seenLocs.has(enFullUrl)) {
+        seenLocs.add(enFullUrl);
+        urlBlocks.push(`  <url>
     <loc>${enFullUrl}</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="${enFullUrl}" />
     <xhtml:link rel="alternate" hreflang="es-US" href="${esFullUrl}" />
@@ -181,9 +187,12 @@ ${lastmodTag}    <changefreq>${entry.changefreq}</changefreq>
 ${lastmodTag}    <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(2)}</priority>
   </url>`);
+      }
 
       // Spanish URL block
-      urlBlocks.push(`  <url>
+      if (!seenLocs.has(esFullUrl)) {
+        seenLocs.add(esFullUrl);
+        urlBlocks.push(`  <url>
     <loc>${esFullUrl}</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="${enFullUrl}" />
     <xhtml:link rel="alternate" hreflang="es-US" href="${esFullUrl}" />
@@ -191,6 +200,7 @@ ${lastmodTag}    <changefreq>${entry.changefreq}</changefreq>
 ${lastmodTag}    <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority.toFixed(2)}</priority>
   </url>`);
+      }
     }
   }
 

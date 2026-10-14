@@ -180,19 +180,35 @@ export const FLORIDA_CITIES: CityData[] = [
     finalExpenseOverviewEs:
       'Las pólizas de gastos finales en Tampa ofrecen primas niveladas de vida entera para ayudar a cubrir servicios en funerarias de Hillsborough y Pinellas.',
     iulOverviewEn:
-      'IUL wealth accumulation policies are widely structured in Tampa Bay to build cash value and family legacy protection under tax-advantaged life insurance guidelines.',
+      'In the rapidly expanding Tampa Bay economy—including healthcare executives in Westshore, technology entrepreneurs in downtown Tampa, and business owners in St. Petersburg—Indexed Universal Life (IUL) insurance serves as a premier vehicle for tax-advantaged retirement wealth building. Policies feature contractual 0% index crediting floors to protect accumulated cash value against stock market drawdowns, paired with tax-free policy loans under IRS Section 7702.',
     iulOverviewEs:
-      'Las pólizas de acumulación IUL son utilizadas en Tampa Bay para construir valor en efectivo y protección patrimonial familiar con ventajas fiscales.',
+      'En la próspera economía de Tampa Bay—que incluye ejecutivos médicos en Westshore, empresarios de tecnología en el centro de Tampa y dueños de negocios en St. Petersburg—el seguro de Vida Universal Indexada (IUL) es un vehículo de referencia para la acumulación de patrimonio de jubilación libre de impuestos. Las pólizas cuentan con un piso contractual del 0% que blinda el capital contra caídas del mercado y permiten préstamos de póliza libres de impuestos bajo el Código IRS Sección 7702.',
     faqsEn: [
       {
         question: 'Does Moffitt Cancer Center accept Medigap plans in Tampa?',
-        answer: 'Yes, Moffitt Cancer Center accepts Original Medicare and Medicare Supplement (Medigap) plans, allowing you to see top cancer specialists.',
+        answer: 'Yes, Moffitt Cancer Center accepts Original Medicare and Medicare Supplement (Medigap) plans, allowing you to see top cancer specialists without network restrictions.',
+      },
+      {
+        question: 'How does Indexed Universal Life (IUL) work for retirement in Tampa?',
+        answer: 'An IUL policy in Tampa Bay links cash value growth to market index performance (like the S&P 500) with a guaranteed 0% annual floor against negative returns. When properly funded, accumulated cash value can be accessed tax-free in retirement through policy loans under IRS Section 7702, providing a private pension alternative.',
+      },
+      {
+        question: 'Who benefits most from an IUL policy in Hillsborough and Pinellas counties?',
+        answer: 'High earners who have maxed out traditional 401(k) or IRA contribution limits, self-employed professionals seeking creditor protection under Florida law (FS 222.14), and families seeking tax-free wealth transfer alongside permanent death benefits.',
       },
     ],
     faqsEs: [
       {
         question: '¿Acepta Moffitt Cancer Center planes Medigap en Tampa?',
-        answer: 'Sí, Moffitt Cancer Center acepta Medicare Original y Suplementos de Medicare (Medigap), permitiéndole consultar con especialistas líderes.',
+        answer: 'Sí, Moffitt Cancer Center acepta Medicare Original y Suplementos de Medicare (Medigap), permitiéndole consultar con especialistas líderes sin restricciones de red.',
+      },
+      {
+        question: '¿Cómo funciona el seguro de Vida Universal Indexada (IUL) para el retiro en Tampa?',
+        answer: 'Una póliza IUL en Tampa Bay vincula el crecimiento del valor en efectivo al rendimiento de índices bursátiles (como el S&P 500) con un piso garantizado del 0% frente a caídas. Con fondos suficientes, el valor acumulado puede retirarse libre de impuestos durante la jubilación mediante préstamos de póliza bajo el Código IRS 7702.',
+      },
+      {
+        question: '¿Quiénes se benefician más de un plan IUL en los condados de Hillsborough y Pinellas?',
+        answer: 'Profesionales y empresarios que alcanzaron el tope de sus 401(k) o IRA, profesionales independientes que buscan la protección legal contra acreedores en Florida (Estatuto FS 222.14) y familias que desean transferir patrimonio exento de impuestos junto a un beneficio por fallecimiento permanente.',
       },
     ],
   },
@@ -305,3 +321,44 @@ export const FLORIDA_CITIES: CityData[] = [
     ],
   },
 ];
+
+export interface LocationPageMetadata {
+  path: string;
+  enUrl: string;
+  esUrl: string;
+  titleEn: string;
+  titleEs: string;
+  descriptionEn: string;
+  descriptionEs: string;
+  headingEn: string;
+  headingEs: string;
+  subheadingEn: string;
+  subheadingEs: string;
+  highlightsEn: Array<{ title: string; desc: string }>;
+  highlightsEs: Array<{ title: string; desc: string }>;
+}
+
+export const TAMPA_IUL_METADATA: LocationPageMetadata = {
+  path: '/iul-retirement-tampa',
+  enUrl: 'https://www.ahbinsurancesolutions.com/iul-retirement-tampa',
+  esUrl: 'https://www.ahbinsurancesolutions.com/es/iul-jubilacion-tampa',
+  titleEn: 'Tampa IUL & Indexed Universal Life Insurance | Retirement Planning FL',
+  titleEs: 'Seguro de Vida IUL y Jubilación en Tampa, FL | Retiro Libre de Impuestos',
+  descriptionEn: 'Expert Indexed Universal Life (IUL) strategies in Tampa, St. Petersburg & Hillsborough County. Contractual 0% floor & tax-free retirement loan growth.',
+  descriptionEs: 'Estrategias de Vida Universal Indexada (IUL) en Tampa, St. Petersburg y Condado de Hillsborough. Piso del 0% y crecimiento exento de impuestos para jubilación.',
+  headingEn: 'Indexed Universal Life (IUL) in Tampa & Hillsborough County',
+  headingEs: 'Seguro de Vida Universal Indexada (IUL) en Tampa y St. Petersburg',
+  subheadingEn: 'Structure permanent tax-advantaged retirement growth with zero market downside risk for Tampa Bay professionals and families.',
+  subheadingEs: 'Estructure crecimiento patrimonial para su jubilación con ventajas fiscales y piso contractual del 0% para familias en Tampa Bay.',
+  highlightsEn: [
+    { title: "Tax-Free Retirement Income", desc: "Access cash value via policy loans with zero federal tax liability under IRS Code Section 7702." },
+    { title: "Contractual 0% Market Floor", desc: "Your cash value crediting never participates in S&P 500 losses during stock market downturns." },
+    { title: "Tampa Bay Estate Protection", desc: "Guaranteed death benefit shield combined with living benefits for chronic illness and long-term care." }
+  ],
+  highlightsEs: [
+    { title: "Ingreso de Jubilación Exento de Impuestos", desc: "Acceda a su valor en efectivo mediante préstamos de póliza sin carga impositiva federal bajo el Código IRS 7702." },
+    { title: "Piso Contractual del 0%", desc: "Su acreditación indexada nunca sufre pérdidas durante caídas del S&P 500 o de los mercados financieros." },
+    { title: "Protección Patrimonial en Tampa Bay", desc: "Beneficio por fallecimiento garantizado y beneficios en vida para enfermedades crónicas o cuidados prolongados." }
+  ]
+};
+

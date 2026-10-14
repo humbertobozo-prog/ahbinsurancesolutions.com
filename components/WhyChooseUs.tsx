@@ -1,6 +1,7 @@
 
 import React from 'react';
 import type { TranslationContent } from '../types';
+import { Image } from './Image';
 
 interface WhyChooseUsProps {
     content: TranslationContent['whyChooseUs'];
@@ -15,12 +16,13 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ content }) => {
         <section id="why-us" className="py-16 md:py-20 bg-white" aria-labelledby="why-us-heading">
             <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div className="md:w-1/2">
-                    <img 
+                    <Image 
                         src={imageMedium}
                         srcSet={`${imageSmall} 480w, ${imageMedium} 800w`}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         alt="A diverse, multicultural group of smiling seniors" 
-                        className="rounded-lg shadow-2xl w-full h-auto" 
+                        className="w-full h-auto object-cover" 
+                        containerClassName="rounded-lg shadow-2xl overflow-hidden w-full"
                         loading="lazy"
                         width="800"
                         height="533"

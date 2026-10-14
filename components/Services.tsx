@@ -82,6 +82,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, hig
                 <a
                     href={targetUrl}
                     onClick={handleClick}
+                    aria-label={`${ctaText.replace(/➔|->/g, '').trim()} - ${title} (AHB Insurance Solutions)`}
                     className="inline-block w-full bg-primary hover:bg-secondary text-white font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow-sm hover:shadow transition-all text-center cursor-pointer"
                 >
                     {ctaText}

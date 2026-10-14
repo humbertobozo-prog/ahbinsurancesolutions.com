@@ -3,6 +3,7 @@ import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { WhyChooseUs } from './WhyChooseUs';
 import { translations } from '../constants/translations';
+import { Image } from './Image';
 
 interface AboutPageProps {
     language: Language;
@@ -274,25 +275,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                 <div className="absolute -inset-2 bg-gradient-to-tr from-accent via-secondary to-blue-400 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition duration-700"></div>
                                 <div className="relative bg-white rounded-2xl p-2.5 shadow-2xl overflow-hidden border border-white/20">
                                     <div className="aspect-[4/5] rounded-xl overflow-hidden bg-gray-100 relative">
-                                        <picture>
-                                            <source 
-                                                type="image/webp" 
-                                                srcSet={`${imageSm} 480w, ${imageSrc} 1000w`} 
-                                                sizes="(max-width: 640px) 92vw, 400px"
-                                            />
-                                            <img 
-                                                src={imageSrc} 
-                                                srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
-                                                sizes="(max-width: 640px) 92vw, 400px"
-                                                alt={isEs ? "Andrés H. Bozo, broker de seguros licenciado en Florida NPN 21228432" : "Andres H. Bozo, licensed Florida insurance broker NPN 21228432"}
-                                                width="400"
-                                                height="500"
-                                                className="w-full h-full object-cover"
-                                                style={{ objectPosition: '50% 20%' }}
-                                                loading="eager"
-                                                fetchPriority="high"
-                                            />
-                                        </picture>
+                                        <Image 
+                                            src={imageSrc} 
+                                            srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
+                                            sizes="(max-width: 640px) 92vw, 400px"
+                                            alt={isEs ? "Andrés H. Bozo, broker de seguros licenciado en Florida NPN 21228432" : "Andres H. Bozo, licensed Florida insurance broker NPN 21228432"}
+                                            width="400"
+                                            height="500"
+                                            className="w-full h-full object-cover"
+                                            containerClassName="w-full h-full"
+                                            style={{ objectPosition: '50% 20%' }}
+                                            loading="lazy"
+                                            sources={[{
+                                                type: "image/webp",
+                                                srcSet: `${imageSm} 480w, ${imageSrc} 1000w`,
+                                                sizes: "(max-width: 640px) 92vw, 400px"
+                                            }]}
+                                        />
                                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent p-4 text-center">
                                             <span className="inline-block bg-accent text-primary text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
                                                 NPN: 21228432

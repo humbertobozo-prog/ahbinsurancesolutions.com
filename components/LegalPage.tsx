@@ -15,7 +15,7 @@ interface LegalPageProps {
 export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguage }) => {
     // Determine tab based on state override or path
     const [userTab, setUserTab] = useState<'terms' | 'privacy' | null>(null);
-    const activeTab: 'terms' | 'privacy' = userTab ?? ((path === '/privacy' || path === '/privacidad') ? 'privacy' : 'terms');
+    const activeTab: 'terms' | 'privacy' = userTab ?? ((path === '/privacy' || path === '/privacidad' || path === '/es/privacidad') ? 'privacy' : 'terms');
 
     const doc = legalContent[language][activeTab];
     const content = translations[language];
@@ -108,7 +108,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
                         <button
                             onClick={() => {
                                 setUserTab('terms');
-                                window.history.pushState({}, '', language === 'es' ? '/terminos' : '/terms');
+                                window.history.pushState({}, '', language === 'es' ? '/es/terminos' : '/terms');
                             }}
                             className={`flex-1 min-w-[200px] py-3 px-6 rounded-xl text-sm md:text-base font-black transition-all uppercase tracking-wider ${
                                 activeTab === 'terms'
@@ -121,7 +121,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
                         <button
                             onClick={() => {
                                 setUserTab('privacy');
-                                window.history.pushState({}, '', language === 'es' ? '/privacidad' : '/privacy');
+                                window.history.pushState({}, '', language === 'es' ? '/es/privacidad' : '/privacy');
                             }}
                             className={`flex-1 min-w-[200px] py-3 px-6 rounded-xl text-sm md:text-base font-black transition-all uppercase tracking-wider ${
                                 activeTab === 'privacy'

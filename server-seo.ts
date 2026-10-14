@@ -60,8 +60,6 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/es/terminos",
   "/privacy",
   "/es/privacidad",
-  "/terminos",
-  "/privacidad",
   "/city-guides",
   "/es/guias-ciudades",
   "/final-expense-miami",
@@ -124,9 +122,7 @@ function escapeHtml(text: string): string {
 export function getSeoMetadata(requestPath: string): SeoMetaData {
   const cleanPath = requestPath.endsWith("/") && requestPath.length > 1 ? requestPath.slice(0, -1) : requestPath;
   const isEs = cleanPath.startsWith("/es") || 
-               cleanPath === "/spanish-insurance-orlando" || 
-               cleanPath === "/terminos" || 
-               cleanPath === "/privacidad";
+               cleanPath === "/spanish-insurance-orlando";
   const htmlLang = isEs ? "es-US" : "en-US";
 
   // Check if the requested route is known or an explicit 404
@@ -1722,10 +1718,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   else if (
     cleanPath === "/terms" || 
     cleanPath === "/es/terminos" || 
-    cleanPath === "/terminos" ||
     cleanPath === "/privacy" || 
-    cleanPath === "/es/privacidad" || 
-    cleanPath === "/privacidad"
+    cleanPath === "/es/privacidad"
   ) {
     const isTerms = cleanPath.includes("term");
     if (isTerms) {

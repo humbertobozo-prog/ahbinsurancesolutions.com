@@ -79,14 +79,18 @@ const App: React.FC = () => {
             } else if (currentPath === '/es/anualidades' || currentPath === '/es/anualidades/') {
                 window.history.replaceState({}, '', '/es/anualidades-florida');
                 currentPath = '/es/anualidades-florida';
+            } else if (currentPath === '/terminos' || currentPath === '/terminos/') {
+                window.history.replaceState({}, '', '/es/terminos');
+                currentPath = '/es/terminos';
+            } else if (currentPath === '/privacidad' || currentPath === '/privacidad/') {
+                window.history.replaceState({}, '', '/es/privacidad');
+                currentPath = '/es/privacidad';
             }
 
             setPath(currentPath);
 
             const isSpanishPath = currentPath.startsWith('/es') || 
-                currentPath === '/spanish-insurance-orlando' || 
-                currentPath === '/terminos' || 
-                currentPath === '/privacidad';
+                currentPath === '/spanish-insurance-orlando';
 
             setLanguage(isSpanishPath ? 'es' : 'en');
         };
@@ -108,12 +112,14 @@ const App: React.FC = () => {
         '/es/seguro-gastos-finales-tampa',
         '/es/seguro-gastos-finales-florida',
         '/iul-retirement-tampa',
+        '/es/iul-jubilacion-tampa',
+        '/orlando-spanish-insurance',
         '/spanish-insurance-orlando',
         '/dental-vision-florida',
         '/es/dental-vision-florida'
     ];
 
-    const legalPaths = ['/terms', '/privacy', '/terminos', '/privacidad', '/es/terminos', '/es/privacidad'];
+    const legalPaths = ['/terms', '/privacy', '/es/terminos', '/es/privacidad'];
 
     // Legal Pages
     if (legalPaths.includes(cleanPath)) {
@@ -177,8 +183,6 @@ const App: React.FC = () => {
     } else if (
         cleanPath === '/iul-retirement' || 
         cleanPath === '/es/iul-jubilacion' ||
-        cleanPath === '/iul-retirement-tampa' ||
-        cleanPath === '/es/iul-jubilacion-tampa' ||
         cleanPath === '/iul' ||
         cleanPath === '/es/iul' ||
         cleanPath === '/iul-florida' ||

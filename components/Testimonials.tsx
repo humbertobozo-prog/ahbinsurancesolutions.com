@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import type { TranslationContent } from '../types';
+import { Image } from './Image';
 
 interface TestimonialsProps {
     content: TranslationContent['testimonials'];
@@ -12,10 +13,11 @@ const TestimonialCard: React.FC<{ quote: string; author: string; location: strin
             <div className="flex flex-col items-center">
                 <div className="relative mb-6">
                     <div className="absolute -inset-2 bg-gradient-to-tr from-accent to-secondary rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                    <img 
+                    <Image 
                         src={imageUrl} 
                         alt={`${author} - Cliente de seguros en ${location}`} 
-                        className="relative w-24 h-24 rounded-full object-cover border-4 border-white shadow-md aspect-square" 
+                        className="w-full h-full object-cover" 
+                        containerClassName="relative w-24 h-24 rounded-full border-4 border-white shadow-md aspect-square overflow-hidden"
                         loading="lazy" 
                         width="96"
                         height="96"
@@ -32,7 +34,7 @@ const TestimonialCard: React.FC<{ quote: string; author: string; location: strin
                 <p className="text-gray-700 italic mb-6 leading-relaxed text-base md:text-lg">"{quote}"</p>
             </div>
             <div className="mt-auto">
-                <div className="font-black text-primary font-heading uppercase text-base tracking-wide">{author}</div>
+                <h3 className="font-black text-primary font-heading uppercase text-base tracking-wide">{author}</h3>
                 <div className="text-xs font-black text-primary uppercase tracking-[0.25em] mt-2 bg-secondary/5 px-3 py-1 rounded-full">{location}</div>
             </div>
         </div>

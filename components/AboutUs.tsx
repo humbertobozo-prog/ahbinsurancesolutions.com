@@ -1,5 +1,6 @@
 import React from 'react';
 import type { TranslationContent } from '../types';
+import { Image } from './Image';
 
 interface AboutUsProps {
     content: TranslationContent['aboutUs'];
@@ -81,28 +82,27 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, common, priority = fa
                             
                             <div className="relative bg-white rounded-[2.3rem] p-3 shadow-2xl overflow-hidden border border-gray-100">
                                 <div className="overflow-hidden rounded-[1.8rem] bg-gray-100 aspect-[4/5] relative shadow-inner">
-                                    <picture>
-                                        <source 
-                                            type="image/webp" 
-                                            srcSet={`${imageSm} 480w, ${imageSrc} 1000w`} 
-                                            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
-                                        />
-                                        <img 
-                                            src={imageSrc}
-                                            srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
-                                            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
-                                            alt={content.imageAlt} 
-                                            width="500"
-                                            height="625"
-                                            decoding="async"
-                                            className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
-                                            style={{ 
-                                                objectPosition: '50% 20%' 
-                                            }}
-                                            loading={priority ? "eager" : "lazy"}
-                                            fetchPriority={priority ? "high" : "auto"}
-                                        />
-                                    </picture>
+                                    <Image 
+                                        src={imageSrc}
+                                        srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
+                                        sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
+                                        alt={content.imageAlt} 
+                                        width="500"
+                                        height="625"
+                                        decoding="async"
+                                        className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
+                                        containerClassName="w-full h-full"
+                                        style={{ 
+                                            objectPosition: '50% 20%' 
+                                        }}
+                                        loading={priority ? "eager" : "lazy"}
+                                        fetchPriority={priority ? "high" : "auto"}
+                                        sources={[{
+                                            type: "image/webp",
+                                            srcSet: `${imageSm} 480w, ${imageSrc} 1000w`,
+                                            sizes: "(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
+                                        }]}
+                                    />
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent opacity-60" aria-hidden="true"></div>
                                 </div>
                                 

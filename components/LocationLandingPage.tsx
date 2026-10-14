@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import type { Language, TranslationContent } from '../types';
 import { translations } from '../constants/translations';
+import { TAMPA_IUL_METADATA } from '../data/cityGuidesData';
 import { SEOHead } from './SEOHead';
 import { BackToTopButton } from './BackToTopButton';
 import { Footer } from './Footer';
@@ -117,28 +118,36 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                     ]
                 };
             case '/iul-retirement-tampa':
+            case '/es/iul-jubilacion-tampa':
                 return {
-                    title: "Indexed Universal Life Tampa | Tax-Advantaged Planning Florida",
-                    description: "Explore Indexed Universal Life (IUL) policies in Tampa, FL with a contractual 0% index floor and potential tax-advantaged retirement policy loan strategies.",
-                    heading: "Indexed Universal Life (IUL) in Tampa",
-                    subheading: "Structure permanent life insurance coverage with index-linked cash value accumulation and potential tax advantages for your Tampa family.",
-                    highlights: [
-                        { title: "Tax-Advantaged Growth", desc: "Cash value accumulates on a tax-deferred basis under IRS Section 7702." },
-                        { title: "Contractual 0% Floor", desc: "The index-crediting component has a contractual 0% floor against negative market index returns." },
-                        { title: "Retirement Policy Loans", desc: "Access cash value via policy loans with potentially favorable federal tax treatment when properly maintained." }
-                    ]
+                    title: activeLang === 'es' ? TAMPA_IUL_METADATA.titleEs : TAMPA_IUL_METADATA.titleEn,
+                    description: activeLang === 'es' ? TAMPA_IUL_METADATA.descriptionEs : TAMPA_IUL_METADATA.descriptionEn,
+                    heading: activeLang === 'es' ? TAMPA_IUL_METADATA.headingEs : TAMPA_IUL_METADATA.headingEn,
+                    subheading: activeLang === 'es' ? TAMPA_IUL_METADATA.subheadingEs : TAMPA_IUL_METADATA.subheadingEn,
+                    highlights: activeLang === 'es' ? TAMPA_IUL_METADATA.highlightsEs : TAMPA_IUL_METADATA.highlightsEn
                 };
+            case '/orlando-spanish-insurance':
             case '/spanish-insurance-orlando':
             default:
                 return {
-                    title: "Seguros de Vida y Medicare en Orlando | Broker de Seguros Florida",
-                    description: "Especialista en Seguros de Medicare y Gastos Finales de Entierro en Orlando. Obtenga asesoría profesional bilingüe gratuita con Andres Bozo NPN 21228432.",
-                    heading: "Seguros de Vida y Medicare en Orlando",
-                    subheading: "Asesoría profesional en español para familias de Florida Central. Comparamos más de 80 compañías para que pague menos.",
-                    highlights: [
+                    title: activeLang === 'es' 
+                        ? "Seguros de Vida y Medicare en Orlando | Broker de Seguros Florida" 
+                        : "Orlando Medicare & Life Insurance Broker | Bilingual Florida Specialists",
+                    description: activeLang === 'es' 
+                        ? "Especialista en Seguros de Medicare y Gastos Finales de Entierro en Orlando. Obtenga asesoría profesional bilingüe gratuita con Andres Bozo NPN 21228432." 
+                        : "Bilingual Medicare Supplement, Final Expense & Life Insurance brokerage in Orlando, Kissimmee & Orange County. Free quote from licensed broker Andres Bozo.",
+                    heading: activeLang === 'es' ? "Seguros de Vida y Medicare en Orlando" : "Medicare & Life Insurance in Orlando, FL",
+                    subheading: activeLang === 'es' 
+                        ? "Asesoría profesional en español para familias de Florida Central. Comparamos más de 80 compañías para que pague menos." 
+                        : "Independent brokerage comparing 80+ top carriers for Central Florida families in English and Spanish.",
+                    highlights: activeLang === 'es' ? [
                         { title: "Planes de Medicare 2026", desc: "Partes A, B, C y D simplificadas para hispanohablantes en Orlando y Kissimmee." },
                         { title: "Gastos Finales de Entierro", desc: "Garantice la tranquilidad de su familia y cubra todos los costos de funeral." },
                         { title: "Atención 100% en Español", desc: "Hable directamente con Andres Bozo en su propio idioma sin intermediarios." }
+                    ] : [
+                        { title: "2026 Medicare Plans", desc: "Parts A, B, C & D comparison for Central Florida retirees and seniors." },
+                        { title: "Final Expense Burial Plans", desc: "Locked-in whole life funeral coverage protecting family finances." },
+                        { title: "100% Bilingual Brokerage", desc: "Direct consultations in English & Spanish with licensed broker Andres Bozo." }
                     ]
                 };
         }
@@ -162,8 +171,10 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
         '/es/anualidades-florida': { en: '/annuities-florida', es: '/es/anualidades-florida' },
         '/dental-vision-florida': { en: '/dental-vision-florida', es: '/es/dental-vision-florida' },
         '/es/dental-vision-florida': { en: '/dental-vision-florida', es: '/es/dental-vision-florida' },
-        '/iul-retirement-tampa': { en: '/iul-retirement-tampa', es: '/es/iul-jubilacion' },
-        '/spanish-insurance-orlando': { en: '/', es: '/spanish-insurance-orlando' }
+        '/iul-retirement-tampa': { en: '/iul-retirement-tampa', es: '/es/iul-jubilacion-tampa' },
+        '/es/iul-jubilacion-tampa': { en: '/iul-retirement-tampa', es: '/es/iul-jubilacion-tampa' },
+        '/orlando-spanish-insurance': { en: '/orlando-spanish-insurance', es: '/spanish-insurance-orlando' },
+        '/spanish-insurance-orlando': { en: '/orlando-spanish-insurance', es: '/spanish-insurance-orlando' }
     };
 
     const paired = PAIR_MAP[path] || { en: path, es: `/es${path}` };

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import type { TranslationContent } from '../types';
+import { Image } from './Image';
 
 interface HeroProps {
     content: TranslationContent['hero'];
@@ -68,6 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <a 
                             href="#contact"
                             onClick={(e) => handleNavClick(e, 'contact')}
+                            aria-label={`${content.cta.replace(/➔|->|▯/g, '').trim()} - Medicare, Final Expense & IUL Florida`}
                             className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/10 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-6 md:px-8 lg:px-10 py-3.5 md:py-4 rounded-xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl transition-all duration-300 active:scale-95 group" 
                         >
                             <span>{content.cta.replace(/➔|->|▯/g, '').trim()}</span>
@@ -75,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         </a>
                     </div>
 
-                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-2">
+                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-2 min-h-[36px]">
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[
                                 { bg: 'bg-primary text-white', label: 'FL' },
@@ -96,27 +98,25 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                 <div className="w-full md:w-1/2 hero-img-container">
                     <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group aspect-[4/3]">
                         <div className="w-full h-full overflow-hidden">
-                            <picture>
-                                <source 
-                                    type="image/webp" 
-                                    srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
-                                    sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
-                                />
-                                <img
-                                    ref={imgRef}
-                                    src={image800}
-                                    srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
-                                    sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
-                                    alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
-                                    className="w-full h-full object-cover transition-transform duration-100 ease-out"
-                                    style={{ willChange: 'transform' }}
-                                    fetchPriority="high"
-                                    width="800"
-                                    height="600"
-                                    loading="eager"
-                                    decoding="async"
-                                />
-                            </picture>
+                            <Image
+                                ref={imgRef}
+                                src={image800}
+                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
+                                sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
+                                alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
+                                className="w-full h-full object-cover transition-transform duration-100 ease-out"
+                                containerClassName="w-full h-full"
+                                style={{ willChange: 'transform' }}
+                                width="800"
+                                height="600"
+                                loading="eager"
+                                fetchPriority="high"
+                                sources={[{
+                                    type: "image/webp",
+                                    srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`,
+                                    sizes: "(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
+                                }]}
+                            />
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
                     </div>

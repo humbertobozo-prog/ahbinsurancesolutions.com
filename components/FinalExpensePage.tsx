@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { Language } from '../types';
 import { SEOHead } from './SEOHead';
 import { RelatedServices } from './RelatedServices';
+import { Image } from './Image';
 
 interface FinalExpensePageProps {
     language: Language;
@@ -212,25 +213,22 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                     const image800 = `${imageBase}&w=800`;
                                     const image1200 = `${imageBase}&w=1200`;
                                     return (
-                                        <picture>
-                                            <source 
-                                                type="image/webp" 
-                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
-                                                sizes="(max-width: 767px) 95vw, 450px"
-                                            />
-                                            <img
-                                                src={image800}
-                                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
-                                                sizes="(max-width: 767px) 95vw, 450px"
-                                                alt={isEs ? "Seguro de Gastos Finales y Protección Familiar en Florida" : "Florida Final Expense & Family Protection"}
-                                                className="w-full h-full object-cover"
-                                                width="800"
-                                                height="600"
-                                                loading="eager"
-                                                fetchPriority="high"
-                                                decoding="async"
-                                            />
-                                        </picture>
+                                        <Image
+                                            src={image800}
+                                            srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
+                                            sizes="(max-width: 767px) 95vw, 450px"
+                                            alt={isEs ? "Seguro de Gastos Finales y Protección Familiar en Florida" : "Florida Final Expense & Family Protection"}
+                                            className="w-full h-full object-cover"
+                                            containerClassName="w-full h-full"
+                                            width="800"
+                                            height="600"
+                                            loading="lazy"
+                                            sources={[{
+                                                type: "image/webp",
+                                                srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w`,
+                                                sizes: "(max-width: 767px) 95vw, 450px"
+                                            }]}
+                                        />
                                     );
                                 })()}
                             </div>

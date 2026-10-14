@@ -136,7 +136,13 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                         <h3 className="font-heading font-bold text-lg mb-4 text-white uppercase tracking-wider">{content.contactTitle}</h3>
                         <ul className="space-y-3 text-gray-200">
                             <li>
-                                <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="flex items-start hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors">
+                                <a 
+                                    href={GOOGLE_MAPS_URL} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    aria-label="Ver ubicación de oficina de AHB Insurance Solutions en Google Maps (Gainesville, Florida)"
+                                    className="flex items-start hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors"
+                                >
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-1 flex-shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -148,7 +154,11 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                 </a>
                             </li>
                             <li>
-                                <a href={`tel:${content.phone.replace(/-/g, '')}`} className="hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center">
+                                <a 
+                                    href={`tel:${content.phone.replace(/-/g, '')}`} 
+                                    aria-label={`Llamar a Andrés Bozo agente de seguros al ${content.phone}`}
+                                    className="hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center"
+                                >
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 flex-shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
@@ -156,7 +166,11 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                 </a>
                             </li>
                             <li>
-                                <a href={`mailto:${content.email}`} className="hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center">
+                                <a 
+                                    href={`mailto:${content.email}`} 
+                                    aria-label={`Enviar correo electrónico a Andrés Bozo a ${content.email}`}
+                                    className="hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center"
+                                >
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 flex-shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
@@ -169,7 +183,13 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                         <h3 className="font-bold font-heading text-lg mb-4 text-white uppercase tracking-wider">{content.followUsTitle}</h3>
                         <ul className="space-y-3">
                             <li>
-                                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center">
+                                <a 
+                                    href={WHATSAPP_URL} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    aria-label="Abrir conversación de WhatsApp con Andrés Bozo de AHB Insurance Solutions"
+                                    className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center"
+                                >
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.651 4.383 1.905 6.344l-1.225 4.485 4.635-1.218z" />
                                     </svg>
@@ -177,7 +197,13 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                 </a>
                             </li>
                              <li>
-                                <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center">
+                                <a 
+                                    href={FACEBOOK_URL} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    aria-label="Visitar la página oficial de AHB Insurance Solutions en Facebook"
+                                    className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center"
+                                >
                                     <svg aria-hidden="true" className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                                     </svg>
@@ -185,7 +211,13 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                 </a>
                             </li>
                             <li>
-                                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center">
+                                <a 
+                                    href={INSTAGRAM_URL} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    aria-label="Seguir a AHB Insurance Solutions en Instagram"
+                                    className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors flex items-center"
+                                >
                                     <svg aria-hidden="true" className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z"></path>
                                     </svg>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { Language } from '../types';
 import { BLOG_POSTS } from '../constants/blogPosts';
 import { SEOHead } from './SEOHead';
+import { Image } from './Image';
 
 interface BlogHubPageProps {
     language: Language;
@@ -135,7 +136,15 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                         </h1>
                         <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 pb-6 border-b border-gray-200">
                             <div className="flex items-center gap-2">
-                                <img src={currentPost.author.image} alt={currentPost.author.name} className="w-8 h-8 rounded-full border border-gray-300" />
+                                <Image 
+                                    src={currentPost.author.image} 
+                                    alt={currentPost.author.name} 
+                                    className="w-full h-full object-cover" 
+                                    containerClassName="w-8 h-8 rounded-full border border-gray-300 overflow-hidden flex-shrink-0"
+                                    loading="lazy"
+                                    width="32"
+                                    height="32"
+                                />
                                 <div>
                                     <p className="font-bold text-gray-800">{currentPost.author.name}</p>
                                     <p className="text-[10px] text-primary">Broker NPN: {currentPost.author.npn}</p>
@@ -148,17 +157,22 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                         </div>
                     </div>
 
-                    <img 
-                        src={currentPost.image} 
-                        {...getResponsiveImageProps(currentPost.image, true)}
-                        alt={postTitle} 
-                        width="800"
-                        height="450"
-                        fetchPriority="high"
-                        loading="eager"
-                        decoding="async"
-                        className="w-full h-64 sm:h-96 object-cover rounded-2xl shadow-md mb-8"
-                    />
+                    {(() => {
+                        const responsiveProps = getResponsiveImageProps(currentPost.image, true);
+                        return (
+                            <Image 
+                                src={currentPost.image} 
+                                srcSet={responsiveProps.srcSet}
+                                sizes={responsiveProps.sizes}
+                                alt={postTitle} 
+                                width="800"
+                                height="450"
+                                loading="lazy"
+                                containerClassName="w-full h-64 sm:h-96 rounded-2xl shadow-md mb-8 overflow-hidden"
+                                className="w-full h-full object-cover"
+                            />
+                        );
+                    })()}
 
                     <div className="prose prose-lg max-w-none text-gray-800 space-y-6 leading-relaxed font-normal">
                         {postContent.split('\n\n').map((paragraph, idx) => {
@@ -181,7 +195,15 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
 
                     {/* Author Box */}
                     <div className="mt-12 p-6 bg-light-gray rounded-2xl border border-gray-200 flex flex-col sm:flex-row items-center gap-6">
-                        <img src={currentPost.author.image} alt={currentPost.author.name} className="w-20 h-20 rounded-full border-2 border-primary object-cover" />
+                        <Image 
+                            src={currentPost.author.image} 
+                            alt={currentPost.author.name} 
+                            className="w-full h-full object-cover" 
+                            containerClassName="w-20 h-20 rounded-full border-2 border-primary overflow-hidden flex-shrink-0"
+                            loading="lazy"
+                            width="80"
+                            height="80"
+                        />
                         <div className="text-center sm:text-left flex-grow">
                             <h3 className="font-black text-primary text-lg">{currentPost.author.name}</h3>
                             <p className="text-xs text-accent-dark font-bold uppercase tracking-wider mb-2">{currentPost.author.title} | NPN: {currentPost.author.npn}</p>
@@ -339,17 +361,23 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                                 className="group bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col"
                             >
                                 <div className="h-48 overflow-hidden relative">
-                                    <img 
-                                        src={post.image} 
-                                        {...getResponsiveImageProps(post.image, false)}
-                                        alt={postTitle} 
-                                        width="400"
-                                        height="225"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                    <span className="absolute top-3 left-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded">
+                                    {(() => {
+                                        const responsiveProps = getResponsiveImageProps(post.image, false);
+                                        return (
+                                            <Image 
+                                                src={post.image} 
+                                                srcSet={responsiveProps.srcSet}
+                                                sizes={responsiveProps.sizes}
+                                                alt={postTitle} 
+                                                width="400"
+                                                height="225"
+                                                loading="lazy"
+                                                containerClassName="w-full h-full"
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            />
+                                        );
+                                    })()}
+                                    <span className="absolute top-3 left-3 bg-primary text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded z-20">
                                         {post.category}
                                     </span>
                                 </div>
