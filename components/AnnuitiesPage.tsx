@@ -96,7 +96,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": ["Service", "FinancialProduct"],
+        "@type": "FinancialProduct",
         "name": isEs ? "Asesoría en Anualidades y Jubilación en Florida" : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Solutions",
         "serviceType": "Fixed Annuity & Retirement Financial Product Brokerage",
         "category": "RetirementPlanning",

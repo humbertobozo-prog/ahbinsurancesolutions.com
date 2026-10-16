@@ -80,7 +80,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": ["Service", "FinancialProduct"],
+        "@type": "FinancialProduct",
         "name": isEs ? "Seguro de Gastos Finales y Funeral en Florida" : "Final Expense & Burial Life Insurance in Florida",
         "serviceType": "Final Expense Whole Life Insurance",
         "category": "LifeInsurance",

@@ -73,7 +73,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": ["Service", "FinancialProduct"],
+        "@type": "FinancialProduct",
         "name": isEs ? "Vida Universal Indexada (IUL) y Estrategias de Retiro en Florida" : "Indexed Universal Life (IUL) & Retirement Strategy Planning in Florida",
         "serviceType": "Indexed Universal Life Insurance & Retirement Wealth Structuring",
         "category": "LifeInsurance",

@@ -72,7 +72,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
 
     const serviceSchema = {
         "@context": "https://schema.org",
-        "@type": ["Service", "FinancialProduct"],
+        "@type": "Service",
         "name": isEs ? "Planes y Suplementos de Medicare en Florida" : "Medicare Plans & Supplements in Florida",
         "serviceType": "Medicare Insurance Brokerage",
         "category": "HealthInsurance",

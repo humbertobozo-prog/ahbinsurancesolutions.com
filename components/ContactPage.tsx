@@ -39,7 +39,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
         "name": title,
         "description": description,
         "mainEntity": {
-            "@type": ["Organization", "LocalBusiness", "InsuranceAgency"],
+            "@type": "InsuranceAgency",
             "name": "AHB Insurance Solutions",
             "url": baseUrl,
             "telephone": "+1-352-225-8389",

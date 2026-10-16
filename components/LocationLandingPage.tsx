@@ -183,7 +183,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
 
     const localBusinessSchema = {
         "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "InsuranceAgency", "Organization"],
+        "@type": "InsuranceAgency",
         "name": "AHB Insurance Solutions",
         "url": canonical,
         "telephone": "+1-352-225-8389",

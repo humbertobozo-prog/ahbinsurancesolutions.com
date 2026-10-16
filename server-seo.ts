@@ -2337,7 +2337,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
   }
 
   const organizationSchema = {
-    "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
+    "@type": "InsuranceAgency",
     "@id": "https://www.ahbinsurancesolutions.com/#organization",
     "name": "AHB Insurance Solutions",
     "legalName": "AHB Insurance Solutions LLC",
@@ -2629,7 +2629,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     cleanPath === "/es/anualidades"
   ) {
     graph.push({
-      "@type": ["Service", "FinancialProduct"],
+      "@type": "FinancialProduct",
       "name": isEs ? "Anualidades Fijas e Indexadas en Florida (FIA & MYGA)" : "Florida Fixed & Indexed Annuities (FIA & MYGA)",
       "serviceType": "Retirement Annuity Planning & Wealth Preservation",
       "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },

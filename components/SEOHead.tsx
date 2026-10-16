@@ -162,7 +162,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         }
 
         const organizationSchema = {
-            "@type": ["Organization", "InsuranceAgency", "LocalBusiness"],
+            "@type": "InsuranceAgency",
             "@id": "https://www.ahbinsurancesolutions.com/#organization",
             "name": "AHB Insurance Solutions",
             "legalName": "AHB Insurance Solutions LLC",

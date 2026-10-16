@@ -77,7 +77,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             "value": "21228432"
         },
         "worksFor": {
-            "@type": ["Organization", "LocalBusiness", "InsuranceAgency"],
+            "@type": "InsuranceAgency",
             "@id": `${baseUrl}/#organization`,
             "name": "AHB Insurance Solutions",
             "url": baseUrl,
