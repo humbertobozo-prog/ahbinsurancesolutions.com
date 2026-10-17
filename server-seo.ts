@@ -439,7 +439,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Guía de Medicare en Florida 2026. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
       : "Compare Florida Medicare Supplement Plan G & N rates, Advantage, and Part D. Expert independent broker guidance from Andres Bozo (NPN 21228432). Free quote!";
-    ogImage = "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+    ogImage = "https://www.ahbinsurancesolutions.com/hero-seniors-medicare-lg.webp";
     ogImageAlt = isEs 
       ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
       : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo";

@@ -278,7 +278,7 @@ const App: React.FC = () => {
                     dateModified="2026-10-10"
                     schema={homeBreadcrumbSchema}
                 />
-                <Hero content={content.hero} />
+                <Hero content={content.hero} language={language} />
                 <KeyTakeaways content={content.keyTakeaways} />
                 
                 <ErrorBoundary componentName="Services">

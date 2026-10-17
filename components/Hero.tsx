@@ -5,9 +5,10 @@ import { Image } from './Image';
 
 interface HeroProps {
     content: TranslationContent['hero'];
+    language?: 'en' | 'es';
 }
 
-export const Hero: React.FC<HeroProps> = ({ content }) => {
+export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
     const imgRef = React.useRef<HTMLImageElement>(null);
 
     useEffect(() => {
@@ -46,12 +47,14 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
         }
     };
 
-    // Responsive Image Optimization with Pexels parameters
-    const imageBase = "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp";
-    const image480 = `${imageBase}&w=480`;
-    const image800 = `${imageBase}&w=800`;
-    const image1200 = `${imageBase}&w=1200`;
-    const image1600 = `${imageBase}&w=1600`;
+    // High-performance self-hosted responsive WebP images
+    const imageSm = "/hero-seniors-medicare-sm.webp";
+    const imageMd = "/hero-seniors-medicare.webp";
+    const imageLg = "/hero-seniors-medicare-lg.webp";
+
+    const heroAlt = language === 'es'
+        ? "Andrés Bozo asesorando en seguros de Medicare y vida en Florida"
+        : "Licensed Florida insurance broker Andres Bozo guiding seniors on Medicare";
 
     return (
         <section id="home" className="bg-light-gray relative overflow-hidden" aria-labelledby="hero-heading">
@@ -100,10 +103,10 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                         <div className="w-full h-full overflow-hidden">
                             <Image
                                 ref={imgRef}
-                                src={image800}
-                                srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
+                                src={imageMd}
+                                srcSet={`${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`}
                                 sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
-                                alt="Andres Bozo licensed Florida insurance broker helping seniors with Medicare Supplement Plan G Plan N and final expense burial plans"
+                                alt={heroAlt}
                                 className="w-full h-full object-cover transition-transform duration-100 ease-out"
                                 containerClassName="w-full h-full"
                                 style={{ willChange: 'transform' }}
@@ -113,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                                 fetchPriority="high"
                                 sources={[{
                                     type: "image/webp",
-                                    srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`,
+                                    srcSet: `${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`,
                                     sizes: "(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
                                 }]}
                             />

@@ -159,11 +159,9 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         ]
     };
 
-    const imageBase = "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp";
-    const image480 = `${imageBase}&w=480`;
-    const image800 = `${imageBase}&w=800`;
-    const image1200 = `${imageBase}&w=1200`;
-    const image1600 = `${imageBase}&w=1600`;
+    const imageSm = "/hero-seniors-medicare-sm.webp";
+    const imageMd = "/hero-seniors-medicare.webp";
+    const imageLg = "/hero-seniors-medicare-lg.webp";
 
     return (
         <div className="bg-white min-h-screen text-dark-gray font-sans">
@@ -174,7 +172,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                 enUrl={enUrl}
                 esUrl={esUrl}
                 language={language}
-                ogImage="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImage="https://www.ahbinsurancesolutions.com/hero-seniors-medicare.webp"
                 ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}
                 datePublished="2024-01-15"
                 dateModified="2026-10-10"
@@ -231,8 +229,8 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                         <div className="w-full md:w-5/12">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-[4/3] bg-gray-800">
                                 <Image
-                                    src={image800}
-                                    srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`}
+                                    src={imageMd}
+                                    srcSet={`${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`}
                                     sizes="(max-width: 767px) 95vw, 450px"
                                     alt={isEs ? "Asesoría de Medicare en Florida - Andrés Bozo" : "Florida Medicare Guidance - Andres Bozo"}
                                     className="w-full h-full object-cover"
@@ -242,7 +240,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                                     loading="lazy"
                                     sources={[{
                                         type: "image/webp",
-                                        srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w, ${image1600} 1600w`,
+                                        srcSet: `${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`,
                                         sizes: "(max-width: 767px) 95vw, 450px"
                                     }]}
                                 />

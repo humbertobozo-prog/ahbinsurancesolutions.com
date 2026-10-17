@@ -53,7 +53,7 @@ export const BLOG_POSTS: BlogPost[] = [
             npn: '21228432',
             image: '/andresbozoofi.webp'
         },
-        image: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/hero-seniors-medicare.webp',
         tags: ['Medicare', 'Florida', 'Medigap', 'Medicare Advantage'],
         content: {
             en: `

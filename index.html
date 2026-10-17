@@ -50,9 +50,6 @@
     <meta name="theme-color" content="#002855" />
     <meta name="google-site-verification" content="cK88T1AJ1i4ljtEceJEG44tQA_EflbbGB2s_VvHZIVA" />
 
-    <!-- Preconnect to external LCP image origin -->
-    <link rel="preconnect" href="https://images.pexels.com" crossorigin>
-    <link rel="dns-prefetch" href="https://images.pexels.com">
 
     <!-- Locally Hosted Fonts Preload (Roboto Regular & Montserrat Bold for Instant Render & 0 FOUT) -->
     <link rel="preload" href="/fonts/roboto-400-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -84,12 +81,13 @@
       }
     </script>
     
-    <!-- LCP Responsive Image Preload -->
+    <!-- LCP Responsive Image Preload (Self-hosted WebP for Instant LCP & 0 Network Chain) -->
     <link 
       rel="preload" 
       as="image" 
-      href="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=800"
-      imagesrcset="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=480 480w, https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=800 800w, https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=1200 1200w, https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp&w=1600 1600w"
+      type="image/webp"
+      href="/hero-seniors-medicare.webp"
+      imagesrcset="/hero-seniors-medicare-sm.webp 480w, /hero-seniors-medicare.webp 800w, /hero-seniors-medicare-lg.webp 1200w"
       imagesizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
       fetchpriority="high"
     />
