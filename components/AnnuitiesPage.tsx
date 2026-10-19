@@ -10,7 +10,7 @@ interface AnnuitiesPageProps {
 }
 
 export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQuote }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${isEs ? '/es/anualidades-florida' : '/annuities-florida'}`;
     const enUrl = `${baseUrl}/annuities-florida`;

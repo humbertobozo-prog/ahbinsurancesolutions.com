@@ -10,7 +10,7 @@ interface MedicarePageProps {
 }
 
 export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${isEs ? '/es/seguro-medicare-florida' : '/medicare-florida'}`;
     const enUrl = `${baseUrl}/medicare-florida`;

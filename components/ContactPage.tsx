@@ -9,7 +9,7 @@ interface ContactPageProps {
 }
 
 export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${isEs ? '/es/contacto' : '/contact'}`;
     const enUrl = `${baseUrl}/contact`;

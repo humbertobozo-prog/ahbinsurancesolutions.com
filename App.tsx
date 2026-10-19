@@ -39,9 +39,15 @@ const TrustBadges = React.lazy(() => import('./components/TrustBadges').then(mod
 const ComplianceLinks = React.lazy(() => import('./components/ComplianceLinks').then(module => ({ default: module.ComplianceLinks })));
 const ContactForm = React.lazy(() => import('./components/ContactForm').then(module => ({ default: module.ContactForm })));
 
+const getInitialLanguage = (): Language => {
+    if (typeof window === 'undefined') return 'en';
+    const p = window.location.pathname;
+    return (p.startsWith('/es') || p === '/spanish-insurance-orlando') ? 'es' : 'en';
+};
+
 const App: React.FC = () => {
-    const [language, setLanguage] = useState<Language>('en');
-    const [path, setPath] = useState(window.location.pathname);
+    const [language, setLanguage] = useState<Language>(getInitialLanguage);
+    const [path, setPath] = useState(() => (typeof window !== 'undefined' ? window.location.pathname : '/'));
     const [legalModalOpen, setLegalModalOpen] = useState(false);
     const [legalModalTab, setLegalModalTab] = useState<'terms' | 'privacy'>('terms');
 

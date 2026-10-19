@@ -10,7 +10,7 @@ interface FinalExpensePageProps {
 }
 
 export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, onOpenQuote }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${isEs ? '/es/gastos-finales' : '/final-expense'}`;
     const enUrl = `${baseUrl}/final-expense`;

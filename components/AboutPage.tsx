@@ -11,7 +11,7 @@ interface AboutPageProps {
 }
 
 export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
     const canonical = `${baseUrl}${isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo'}`;
     const enUrl = `${baseUrl}/about-andres-bozo`;

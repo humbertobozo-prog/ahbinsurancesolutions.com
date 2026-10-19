@@ -9,7 +9,7 @@ interface FAQPageProps {
 }
 
 export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
-    const isEs = language === 'es';
+    const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
     const [openIndex, setOpenIndex] = useState<number | null>(0);
