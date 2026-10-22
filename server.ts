@@ -25,6 +25,9 @@ async function startServer() {
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
 
+    res.setHeader("Vary", "Accept-Encoding");
+    res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
+
     if (!isDev) {
       res.setHeader("X-Frame-Options", "SAMEORIGIN");
       res.setHeader("Strict-Transport-Security", "max-age=63072000; includeSubDomains; preload");

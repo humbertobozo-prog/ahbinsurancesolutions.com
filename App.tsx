@@ -5,15 +5,34 @@ import { KeyTakeaways } from './components/KeyTakeaways';
 const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
-import { BLOG_POSTS } from './constants/blogPosts';
-import { FLORIDA_CITIES } from './data/cityGuidesData';
 import type { Language } from './types';
 import { Spinner } from './components/Spinner';
 import { BackToTopButton } from './components/BackToTopButton';
 import { TapToCallButton } from './components/TapToCallButton';
-import { TermsAndPrivacyModal } from './components/TermsAndPrivacyModal';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { SEOHead } from './components/SEOHead';
+
+// Slugs for fast routing without bundling hundreds of KB of data into the main chunk
+const VALID_BLOG_SLUGS = new Set([
+    'medicare-open-enrollment-florida-2026',
+    'medicare-inscripcion-abierta-florida-2026',
+    'final-expense-burial-costs-florida',
+    'costos-funerales-gastos-finales-florida',
+    'iul-vs-401k-tax-free-retirement',
+    'iul-vs-401k-jubilacion-libre-de-impuestos'
+]);
+
+const VALID_CITY_SLUGS = new Set([
+    'miami',
+    'orlando',
+    'tampa',
+    'jacksonville',
+    'st-petersburg',
+    'hialeah',
+    'tallahassee'
+]);
+
+const TermsAndPrivacyModal = React.lazy(() => import('./components/TermsAndPrivacyModal').then(m => ({ default: m.TermsAndPrivacyModal })));
 
 // Dedicated Lazy Page Imports
 const MedicarePage = React.lazy(() => import('./components/MedicarePage').then(m => ({ default: m.MedicarePage })));
@@ -200,7 +219,7 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AnnuitiesPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/blog' || cleanPath === '/es/blog' || cleanPath.startsWith('/blog/') || cleanPath.startsWith('/es/blog/')) {
         const slug = cleanPath.startsWith('/blog/') ? cleanPath.replace('/blog/', '') : (cleanPath.startsWith('/es/blog/') ? cleanPath.replace('/es/blog/', '') : undefined);
-        const postExists = !slug || BLOG_POSTS.some(p => p.slug.en === slug || p.slug.es === slug);
+        const postExists = !slug || VALID_BLOG_SLUGS.has(slug);
         if (!postExists) {
             mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><NotFoundPage language={language} /></Suspense>;
         } else {
@@ -210,7 +229,7 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogGenerator language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/city-guides' || cleanPath === '/es/guias-ciudades' || cleanPath.startsWith('/cities/') || cleanPath.startsWith('/es/ciudades/')) {
         const citySlug = cleanPath.startsWith('/cities/') ? cleanPath.replace('/cities/', '') : (cleanPath.startsWith('/es/ciudades/') ? cleanPath.replace('/es/ciudades/', '') : undefined);
-        const cityExists = !citySlug || FLORIDA_CITIES.some(c => c.slug === citySlug);
+        const cityExists = !citySlug || VALID_CITY_SLUGS.has(citySlug);
         if (!cityExists) {
             mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><NotFoundPage language={language} /></Suspense>;
         } else {
@@ -358,12 +377,16 @@ const App: React.FC = () => {
             <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} language={language} />
             <BackToTopButton />
             <TapToCallButton label={content.tapToCallButton?.label || (isEs ? 'Llamar al Broker' : 'Call Licensed Broker')} phone={content.tapToCallButton?.phone || '+13522258389'} />
-            <TermsAndPrivacyModal 
-                isOpen={legalModalOpen} 
-                onClose={() => setLegalModalOpen(false)} 
-                initialTab={legalModalTab} 
-                language={language} 
-            />
+            {legalModalOpen && (
+                <Suspense fallback={null}>
+                    <TermsAndPrivacyModal 
+                        isOpen={legalModalOpen} 
+                        onClose={() => setLegalModalOpen(false)} 
+                        initialTab={legalModalTab} 
+                        language={language} 
+                    />
+                </Suspense>
+            )}
         </div>
     );
 };

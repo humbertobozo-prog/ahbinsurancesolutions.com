@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import type { Language, TranslationContent } from '../types';
 import { Logo } from './Logo';
-import { BLOG_POSTS } from '../constants/blogPosts';
+
+// Lightweight slug mapping for language toggle without bundling full blog articles into Header
+const BLOG_SLUG_PAIRS: Record<string, { en: string; es: string }> = {
+    'medicare-open-enrollment-florida-2026': { en: 'medicare-open-enrollment-florida-2026', es: 'medicare-inscripcion-abierta-florida-2026' },
+    'medicare-inscripcion-abierta-florida-2026': { en: 'medicare-open-enrollment-florida-2026', es: 'medicare-inscripcion-abierta-florida-2026' },
+    'final-expense-burial-costs-florida': { en: 'final-expense-burial-costs-florida', es: 'costos-funerales-gastos-finales-florida' },
+    'costos-funerales-gastos-finales-florida': { en: 'final-expense-burial-costs-florida', es: 'costos-funerales-gastos-finales-florida' },
+    'iul-vs-401k-tax-free-retirement': { en: 'iul-vs-401k-tax-free-retirement', es: 'iul-vs-401k-jubilacion-libre-de-impuestos' },
+    'iul-vs-401k-jubilacion-libre-de-impuestos': { en: 'iul-vs-401k-tax-free-retirement', es: 'iul-vs-401k-jubilacion-libre-de-impuestos' }
+};
 
 interface HeaderProps {
     content: TranslationContent['header'];
@@ -61,8 +70,8 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             }
             else if (currentPath.startsWith('/blog/')) {
                 const slug = currentPath.replace('/blog/', '');
-                const post = BLOG_POSTS.find(p => p.slug.en === slug);
-                nextPath = post ? `/es/blog/${post.slug.es}` : '/es/blog';
+                const pair = BLOG_SLUG_PAIRS[slug];
+                nextPath = pair ? `/es/blog/${pair.es}` : '/es/blog';
             }
             else if (currentPath === '/annuities-florida' || currentPath === '/annuities') nextPath = '/es/anualidades-florida';
             else if (currentPath === '/dental-vision-florida') nextPath = '/es/dental-vision-florida';
@@ -86,8 +95,8 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             }
             else if (currentPath.startsWith('/es/blog/')) {
                 const slug = currentPath.replace('/es/blog/', '');
-                const post = BLOG_POSTS.find(p => p.slug.es === slug);
-                nextPath = post ? `/blog/${post.slug.en}` : '/blog';
+                const pair = BLOG_SLUG_PAIRS[slug];
+                nextPath = pair ? `/blog/${pair.en}` : '/blog';
             }
             else if (currentPath === '/es/anualidades-florida' || currentPath === '/es/anualidades') nextPath = '/annuities-florida';
             else if (currentPath === '/es/dental-vision-florida') nextPath = '/dental-vision-florida';
