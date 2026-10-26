@@ -6,6 +6,11 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
 import { generateSitemapXml } from "./scripts/generate-sitemap";
+import {
+  isMarkdownRequest,
+  generatePageMarkdown,
+  estimateMarkdownTokens,
+} from "./markdown-agent";
 
 const BOT_REGEX = /googlebot|bingbot|yandex|duckduckbot|slurp|baiduspider|facebot|facebookexternalhit|twitterbot|linkedinbot|embedly|quora link preview|pinterest|whatsapp|telegrambot|slackbot|applebot/i;
 
@@ -25,7 +30,7 @@ async function startServer() {
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
 
-    res.setHeader("Vary", "Accept-Encoding");
+    res.setHeader("Vary", "Accept, Accept-Encoding");
     res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
     res.setHeader("Link", '</llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"');
 
@@ -466,28 +471,47 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
       appType: "custom",
     });
 
-    // Handle HTML pre-rendering BEFORE vite middlewares intercept requests
+    // Handle HTML & Markdown pre-rendering BEFORE vite middlewares intercept requests
     app.get("*all", async (req, res, next) => {
       try {
+        const isMdPath = req.path.endsWith(".md");
+        const wantsMarkdown = isMdPath || isMarkdownRequest(req);
+
         // Skip serving HTML for static files, assets, or Vite internal scripts like /@vite/client
         if (
-          req.path.includes(".") ||
+          (!isMdPath && req.path.includes(".")) ||
           req.path.startsWith("/api/") ||
           req.path.startsWith("/@") ||
           req.path.includes("node_modules")
         ) {
           return next();
         }
+
+        const cleanRoutePath = isMdPath
+          ? req.path.replace(/\.md$/, "") || "/"
+          : req.path;
+        const metadata = getSeoMetadata(cleanRoutePath);
+        const statusCode = metadata.is404 ? 404 : 200;
+
+        // Content Negotiation: Return Markdown when agents request it via Accept: text/markdown
+        if (wantsMarkdown) {
+          const markdown = generatePageMarkdown(cleanRoutePath, metadata);
+          const tokens = estimateMarkdownTokens(markdown);
+
+          res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+          res.setHeader("x-markdown-tokens", tokens.toString());
+          res.setHeader("Vary", "Accept, Accept-Encoding");
+          return res.status(statusCode).send(markdown);
+        }
         
         let template = fs.readFileSync(path.join(process.cwd(), "index.html"), "utf-8");
         template = await vite.transformIndexHtml(req.url, template);
         
-        const metadata = getSeoMetadata(req.path);
         const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
         const seoHtml = rewriteHtmlForSeo(template, metadata, isBot);
-        const statusCode = metadata.is404 ? 404 : 200;
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.setHeader("Vary", "Accept, Accept-Encoding");
         res.status(statusCode).send(seoHtml);
       } catch (error) {
         console.error("Vite SEO Pre-render failed, falling back to next():", error);
@@ -506,6 +530,10 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
       setHeaders: (res, filePath) => {
         if (filePath.endsWith('.html')) {
           res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else if (filePath.endsWith('.md')) {
+          res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+          res.setHeader('Vary', 'Accept, Accept-Encoding');
         } else if (filePath.match(/\.(js|css|woff2?|ico|png|webp|svg)$/)) {
           res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
         }
@@ -516,21 +544,40 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
     
     app.get("*all", (req, res) => {
       try {
+        const isMdPath = req.path.endsWith(".md");
+        const wantsMarkdown = isMdPath || isMarkdownRequest(req);
+
         // Skip serving HTML for static files / assets, let other routes/static handle or return 404
-        if (req.path.includes(".") || req.path.startsWith("/api/")) {
+        if ((!isMdPath && req.path.includes(".")) || req.path.startsWith("/api/")) {
           return res.status(404).send("Not found");
+        }
+
+        const cleanRoutePath = isMdPath
+          ? req.path.replace(/\.md$/, "") || "/"
+          : req.path;
+        const metadata = getSeoMetadata(cleanRoutePath);
+        const statusCode = metadata.is404 ? 404 : 200;
+
+        // Content Negotiation: Return Markdown when agents request it via Accept: text/markdown
+        if (wantsMarkdown) {
+          const markdown = generatePageMarkdown(cleanRoutePath, metadata);
+          const tokens = estimateMarkdownTokens(markdown);
+
+          res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+          res.setHeader("x-markdown-tokens", tokens.toString());
+          res.setHeader("Vary", "Accept, Accept-Encoding");
+          return res.status(statusCode).send(markdown);
         }
         
         if (!indexHtmlContent) {
           indexHtmlContent = fs.readFileSync(path.join(distPath, "index.html"), "utf-8");
         }
         
-        const metadata = getSeoMetadata(req.path);
         const isBot = BOT_REGEX.test(req.headers["user-agent"] || "");
         const seoHtml = rewriteHtmlForSeo(indexHtmlContent, metadata, isBot);
-        const statusCode = metadata.is404 ? 404 : 200;
         
         res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.setHeader("Vary", "Accept, Accept-Encoding");
         res.status(statusCode).send(seoHtml);
       } catch (error) {
         console.error("SEO Pre-render/Rewrite failed, falling back to standard index.html:", error);
