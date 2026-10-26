@@ -38,7 +38,7 @@
         },
         {
           "key": "Link",
-          "value": "</.well-known/oauth-authorization-server>; rel=\"oauth2-authorization-server\", </.well-known/openid-configuration>; rel=\"indieauth-metadata\", </.well-known/api-catalog>; rel=\"api-catalog\", </llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\""
+          "value": "</auth.md>; rel=\"agent-auth\", </.well-known/oauth-protected-resource>; rel=\"oauth2-protected-resource\", </.well-known/oauth-authorization-server>; rel=\"oauth2-authorization-server\", </.well-known/openid-configuration>; rel=\"indieauth-metadata\", </.well-known/api-catalog>; rel=\"api-catalog\", </llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\""
         },
         {
           "key": "Content-Security-Policy",

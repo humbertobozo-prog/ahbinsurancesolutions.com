@@ -2,6 +2,8 @@
   "issuer": "https://www.ahbinsurancesolutions.com",
   "authorization_endpoint": "https://www.ahbinsurancesolutions.com/oauth/authorize",
   "token_endpoint": "https://www.ahbinsurancesolutions.com/oauth/token",
+  "registration_endpoint": "https://www.ahbinsurancesolutions.com/oauth/register",
+  "revocation_endpoint": "https://www.ahbinsurancesolutions.com/oauth/revoke",
   "jwks_uri": "https://www.ahbinsurancesolutions.com/.well-known/jwks.json",
   "response_types_supported": [
     "code",
@@ -26,5 +28,22 @@
     "S256",
     "plain"
   ],
-  "service_documentation": "https://www.ahbinsurancesolutions.com/llms.txt"
+  "service_documentation": "https://www.ahbinsurancesolutions.com/auth.md",
+  "agent_auth": {
+    "register_uri": "https://www.ahbinsurancesolutions.com/oauth/register",
+    "documentation_uri": "https://www.ahbinsurancesolutions.com/auth.md",
+    "supported_identity_types": [
+      "agent",
+      "service_account",
+      "application"
+    ],
+    "supported_credential_types": [
+      "bearer_token",
+      "client_secret",
+      "api_key"
+    ],
+    "claim_uri": "https://www.ahbinsurancesolutions.com/oauth/claim",
+    "revocation_uri": "https://www.ahbinsurancesolutions.com/oauth/revoke",
+    "token_uri": "https://www.ahbinsurancesolutions.com/oauth/token"
+  }
 }

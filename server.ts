@@ -34,7 +34,7 @@ async function startServer() {
     res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
     res.setHeader(
       "Link",
-      '</.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
+      '</auth.md>; rel="agent-auth", </.well-known/oauth-protected-resource>; rel="oauth2-protected-resource", </.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
     );
 
     if (!isDev) {
@@ -92,10 +92,22 @@ async function startServer() {
   });
 
   // OAuth 2.0 & OIDC Discovery Metadata Endpoints (RFC 8414 & OpenID Connect Discovery)
+  const agentAuthBlock = {
+    register_uri: "https://www.ahbinsurancesolutions.com/oauth/register",
+    documentation_uri: "https://www.ahbinsurancesolutions.com/auth.md",
+    supported_identity_types: ["agent", "service_account", "application"],
+    supported_credential_types: ["bearer_token", "client_secret", "api_key"],
+    claim_uri: "https://www.ahbinsurancesolutions.com/oauth/claim",
+    revocation_uri: "https://www.ahbinsurancesolutions.com/oauth/revoke",
+    token_uri: "https://www.ahbinsurancesolutions.com/oauth/token",
+  };
+
   const oidcMetadata = {
     issuer: "https://www.ahbinsurancesolutions.com",
     authorization_endpoint: "https://www.ahbinsurancesolutions.com/oauth/authorize",
     token_endpoint: "https://www.ahbinsurancesolutions.com/oauth/token",
+    registration_endpoint: "https://www.ahbinsurancesolutions.com/oauth/register",
+    revocation_endpoint: "https://www.ahbinsurancesolutions.com/oauth/revoke",
     jwks_uri: "https://www.ahbinsurancesolutions.com/.well-known/jwks.json",
     response_types_supported: ["code", "token", "id_token"],
     grant_types_supported: ["client_credentials", "authorization_code", "refresh_token"],
@@ -105,20 +117,32 @@ async function startServer() {
     scopes_supported: ["openid", "profile", "email", "api:read", "api:write", "blog:generate"],
     claims_supported: ["sub", "iss", "aud", "exp", "iat", "email", "name"],
     code_challenge_methods_supported: ["S256", "plain"],
-    service_documentation: "https://www.ahbinsurancesolutions.com/llms.txt",
+    service_documentation: "https://www.ahbinsurancesolutions.com/auth.md",
+    agent_auth: agentAuthBlock,
   };
 
   const oauthMetadata = {
     issuer: "https://www.ahbinsurancesolutions.com",
     authorization_endpoint: "https://www.ahbinsurancesolutions.com/oauth/authorize",
     token_endpoint: "https://www.ahbinsurancesolutions.com/oauth/token",
+    registration_endpoint: "https://www.ahbinsurancesolutions.com/oauth/register",
+    revocation_endpoint: "https://www.ahbinsurancesolutions.com/oauth/revoke",
     jwks_uri: "https://www.ahbinsurancesolutions.com/.well-known/jwks.json",
     response_types_supported: ["code", "token"],
     grant_types_supported: ["client_credentials", "authorization_code", "refresh_token"],
     token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "bearer"],
     scopes_supported: ["api:read", "api:write", "blog:generate"],
     code_challenge_methods_supported: ["S256", "plain"],
-    service_documentation: "https://www.ahbinsurancesolutions.com/llms.txt",
+    service_documentation: "https://www.ahbinsurancesolutions.com/auth.md",
+    agent_auth: agentAuthBlock,
+  };
+
+  const protectedResourceMetadata = {
+    resource: "https://www.ahbinsurancesolutions.com",
+    authorization_servers: ["https://www.ahbinsurancesolutions.com"],
+    scopes_supported: ["api:read", "api:write", "blog:generate"],
+    bearer_methods_supported: ["header"],
+    resource_documentation: "https://www.ahbinsurancesolutions.com/auth.md",
   };
 
   const jwksData = {
@@ -158,6 +182,20 @@ async function startServer() {
     ],
   };
 
+  // Auth.md Agent Documentation Route
+  app.get("/auth.md", (_req, res) => {
+    const authMdPath = fs.existsSync(path.join(process.cwd(), "public", "auth.md"))
+      ? path.join(process.cwd(), "public", "auth.md")
+      : path.join(process.cwd(), "dist", "auth.md");
+    const content = fs.readFileSync(authMdPath, "utf-8");
+    const tokens = estimateMarkdownTokens(content);
+    res.setHeader("Content-Type", "text/markdown; charset=utf-8");
+    res.setHeader("x-markdown-tokens", tokens.toString());
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.setHeader("Vary", "Accept, Accept-Encoding");
+    res.send(content);
+  });
+
   app.get("/.well-known/openid-configuration", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
@@ -170,6 +208,12 @@ async function startServer() {
     res.json(oauthMetadata);
   });
 
+  app.get("/.well-known/oauth-protected-resource", (_req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.json(protectedResourceMetadata);
+  });
+
   app.get("/.well-known/jwks.json", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
@@ -180,6 +224,32 @@ async function startServer() {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(apiCatalogData);
+  });
+
+  // Dynamic Agent Client Registration Endpoint (RFC 7591)
+  app.post("/oauth/register", (req, res) => {
+    const { client_name = "ai_agent_client", scope = "api:read api:write" } = req.body || {};
+    const clientId = "ahb_agent_" + Math.random().toString(36).slice(2, 10);
+    const clientSecret = "ahb_sec_" + Buffer.from(Date.now().toString()).toString("base64");
+    res.status(201).json({
+      client_id: clientId,
+      client_secret: clientSecret,
+      client_name,
+      grant_types: ["client_credentials"],
+      scope,
+      token_endpoint: "https://www.ahbinsurancesolutions.com/oauth/token",
+      registration_client_uri: "https://www.ahbinsurancesolutions.com/oauth/register",
+    });
+  });
+
+  // OAuth 2.0 Token Revocation Endpoint (RFC 7009)
+  app.post("/oauth/revoke", (_req, res) => {
+    res.status(200).json({ status: "revoked" });
+  });
+
+  // Agent Identity Claim Endpoint
+  app.post("/oauth/claim", (req, res) => {
+    res.status(200).json({ status: "verified", client_id: req.body?.client_id || "agent" });
   });
 
   // OAuth 2.0 Token Endpoint

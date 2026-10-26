@@ -1,0 +1,15 @@
+{
+  "resource": "https://www.ahbinsurancesolutions.com",
+  "authorization_servers": [
+    "https://www.ahbinsurancesolutions.com"
+  ],
+  "scopes_supported": [
+    "api:read",
+    "api:write",
+    "blog:generate"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "resource_documentation": "https://www.ahbinsurancesolutions.com/auth.md"
+}
