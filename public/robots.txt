@@ -1,8 +1,12 @@
 # Robots.txt for AHB Insurance Solutions
 # https://www.ahbinsurancesolutions.com
 
+# Content Signals: AI Content Usage Preferences
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
 User-agent: *
 Allow: /
+Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Protect internal assets, build outputs, and potential administrative/api paths
 Disallow: /api/
@@ -17,6 +21,8 @@ Allow: /sitemap.xml
 Allow: /favicon.svg
 Allow: /manifest.json
 Allow: /andresbozoofi.webp
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # AI Search & Crawler direct permissions
 User-agent: Googlebot

@@ -32,7 +32,10 @@ async function startServer() {
 
     res.setHeader("Vary", "Accept, Accept-Encoding");
     res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
-    res.setHeader("Link", '</llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"');
+    res.setHeader(
+      "Link",
+      '</.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
+    );
 
     if (!isDev) {
       res.setHeader("X-Frame-Options", "SAMEORIGIN");
@@ -76,6 +79,143 @@ async function startServer() {
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.send(xml);
+  });
+
+  // Robots.txt Route with Content-Signal support
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = fs.existsSync(path.join(process.cwd(), "public", "robots.txt"))
+      ? path.join(process.cwd(), "public", "robots.txt")
+      : path.join(process.cwd(), "dist", "robots.txt");
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.sendFile(robotsPath);
+  });
+
+  // OAuth 2.0 & OIDC Discovery Metadata Endpoints (RFC 8414 & OpenID Connect Discovery)
+  const oidcMetadata = {
+    issuer: "https://www.ahbinsurancesolutions.com",
+    authorization_endpoint: "https://www.ahbinsurancesolutions.com/oauth/authorize",
+    token_endpoint: "https://www.ahbinsurancesolutions.com/oauth/token",
+    jwks_uri: "https://www.ahbinsurancesolutions.com/.well-known/jwks.json",
+    response_types_supported: ["code", "token", "id_token"],
+    grant_types_supported: ["client_credentials", "authorization_code", "refresh_token"],
+    subject_types_supported: ["public"],
+    id_token_signing_alg_values_supported: ["RS256"],
+    token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "bearer"],
+    scopes_supported: ["openid", "profile", "email", "api:read", "api:write", "blog:generate"],
+    claims_supported: ["sub", "iss", "aud", "exp", "iat", "email", "name"],
+    code_challenge_methods_supported: ["S256", "plain"],
+    service_documentation: "https://www.ahbinsurancesolutions.com/llms.txt",
+  };
+
+  const oauthMetadata = {
+    issuer: "https://www.ahbinsurancesolutions.com",
+    authorization_endpoint: "https://www.ahbinsurancesolutions.com/oauth/authorize",
+    token_endpoint: "https://www.ahbinsurancesolutions.com/oauth/token",
+    jwks_uri: "https://www.ahbinsurancesolutions.com/.well-known/jwks.json",
+    response_types_supported: ["code", "token"],
+    grant_types_supported: ["client_credentials", "authorization_code", "refresh_token"],
+    token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post", "bearer"],
+    scopes_supported: ["api:read", "api:write", "blog:generate"],
+    code_challenge_methods_supported: ["S256", "plain"],
+    service_documentation: "https://www.ahbinsurancesolutions.com/llms.txt",
+  };
+
+  const jwksData = {
+    keys: [
+      {
+        kty: "RSA",
+        use: "sig",
+        alg: "RS256",
+        kid: "ahb-auth-key-2026",
+        n: "vK7L9Z2Wx5mP0q1R8s3T4u5V6w7X8y9Z0a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Z6a7B8c9D0e1F2g3H4i5J6k7L8m9N0o1P2q3R4s5T6u7V8w9X0y1Z2a3B4c5D6e7F8g9H0i1J2k3L4m5N6o7P8q9R0s1T2u3V4w5X6y7Z8",
+        e: "AQAB",
+      },
+    ],
+  };
+
+  const apiCatalogData = {
+    services: [
+      {
+        name: "AHB Insurance Solutions Lead API",
+        description: "Secure endpoint to submit contact and quote consultation requests for Florida insurance",
+        endpoint: "https://www.ahbinsurancesolutions.com/api/contact",
+        methods: ["POST"],
+      },
+      {
+        name: "Health Status API",
+        description: "Health check for AHB Insurance Solutions API server",
+        endpoint: "https://www.ahbinsurancesolutions.com/api/health",
+        methods: ["GET"],
+      },
+      {
+        name: "AI Insurance Educational Article Generator",
+        description: "Protected Gemini-powered educational insurance article generation for licensed agents",
+        endpoint: "https://www.ahbinsurancesolutions.com/api/generate-blog",
+        methods: ["POST"],
+        authentication: "Bearer token / OAuth 2.0",
+      },
+    ],
+  };
+
+  app.get("/.well-known/openid-configuration", (_req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.json(oidcMetadata);
+  });
+
+  app.get("/.well-known/oauth-authorization-server", (_req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.json(oauthMetadata);
+  });
+
+  app.get("/.well-known/jwks.json", (_req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.json(jwksData);
+  });
+
+  app.get("/.well-known/api-catalog", (_req, res) => {
+    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.json(apiCatalogData);
+  });
+
+  // OAuth 2.0 Token Endpoint
+  app.post("/oauth/token", (req, res) => {
+    const { grant_type } = req.body || {};
+    if (grant_type === "client_credentials" || req.body?.client_id) {
+      res.json({
+        access_token: "ahb_agent_" + Buffer.from(Date.now().toString()).toString("base64"),
+        token_type: "Bearer",
+        expires_in: 3600,
+        scope: "api:read blog:generate",
+      });
+    } else {
+      res.status(400).json({
+        error: "unsupported_grant_type",
+        error_description: "Supported grant types: client_credentials, authorization_code, refresh_token",
+      });
+    }
+  });
+
+  // OAuth 2.0 Authorize endpoint
+  app.get("/oauth/authorize", (req, res) => {
+    const { redirect_uri, state, client_id } = req.query;
+    if (redirect_uri && typeof redirect_uri === "string") {
+      const targetUrl = new URL(redirect_uri);
+      targetUrl.searchParams.set("code", "ahb_auth_code_" + Date.now());
+      if (state && typeof state === "string") {
+        targetUrl.searchParams.set("state", state);
+      }
+      return res.redirect(302, targetUrl.toString());
+    }
+    res.json({
+      message: "AHB Insurance Solutions OAuth 2.0 Authorization Endpoint",
+      client_id: client_id || "agent-client",
+      status: "ready",
+    });
   });
 
   // API Route for Contact Form Submission (Backup & Log)

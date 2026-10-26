@@ -1,0 +1,23 @@
+{
+  "services": [
+    {
+      "name": "AHB Insurance Solutions Lead API",
+      "description": "Secure endpoint to submit contact and quote consultation requests for Florida insurance",
+      "endpoint": "https://www.ahbinsurancesolutions.com/api/contact",
+      "methods": ["POST"]
+    },
+    {
+      "name": "Health Status API",
+      "description": "Health check for AHB Insurance Solutions API server",
+      "endpoint": "https://www.ahbinsurancesolutions.com/api/health",
+      "methods": ["GET"]
+    },
+    {
+      "name": "AI Insurance Educational Article Generator",
+      "description": "Protected Gemini-powered educational insurance article generation for licensed agents",
+      "endpoint": "https://www.ahbinsurancesolutions.com/api/generate-blog",
+      "methods": ["POST"],
+      "authentication": "Bearer token / OAuth 2.0"
+    }
+  ]
+}

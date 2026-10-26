@@ -38,11 +38,28 @@
         },
         {
           "key": "Link",
-          "value": "</llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\""
+          "value": "</.well-known/oauth-authorization-server>; rel=\"oauth2-authorization-server\", </.well-known/openid-configuration>; rel=\"indieauth-metadata\", </.well-known/api-catalog>; rel=\"api-catalog\", </llms.txt>; rel=\"service-doc\", </sitemap.xml>; rel=\"sitemap\""
         },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://images.pexels.com https://i.pravatar.cc https://www.ahbinsurancesolutions.com https://www.google-analytics.com; connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://api.emailjs.com; upgrade-insecure-requests;"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate"
         }
       ]
     },
