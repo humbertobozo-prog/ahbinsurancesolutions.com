@@ -27,6 +27,7 @@ async function startServer() {
 
     res.setHeader("Vary", "Accept-Encoding");
     res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
+    res.setHeader("Link", '</llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"');
 
     if (!isDev) {
       res.setHeader("X-Frame-Options", "SAMEORIGIN");

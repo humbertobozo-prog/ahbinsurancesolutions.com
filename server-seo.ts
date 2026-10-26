@@ -267,6 +267,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     }
   };
 
+  for (const city of FLORIDA_CITIES) {
+    ROUTE_PAIRS[`/cities/${city.slug}`] = { en: `/cities/${city.slug}`, es: `/es/ciudades/${city.slug}` };
+    ROUTE_PAIRS[`/es/ciudades/${city.slug}`] = { en: `/cities/${city.slug}`, es: `/es/ciudades/${city.slug}` };
+  }
+
   let enUrl: string;
   let esUrl: string;
 

@@ -62,9 +62,15 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
   };
 
   const baseUrl = 'https://www.ahbinsurancesolutions.com';
-  const canonical = `${baseUrl}${isEs ? '/es/guias-ciudades' : '/city-guides'}`;
-  const enUrl = `${baseUrl}/city-guides`;
-  const esUrl = `${baseUrl}/es/guias-ciudades`;
+  const canonical = `${baseUrl}${isEs ? `/es/ciudades/${activeCity.slug}` : `/cities/${activeCity.slug}`}`;
+  const enUrl = `${baseUrl}/cities/${activeCity.slug}`;
+  const esUrl = `${baseUrl}/es/ciudades/${activeCity.slug}`;
+
+  const handleSelectCity = (slug: string) => {
+    setActiveSlug(slug);
+    const newPath = isEs ? `/es/ciudades/${slug}` : `/cities/${slug}`;
+    window.history.pushState({}, '', newPath);
+  };
 
   return (
     <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
@@ -137,7 +143,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
               return (
                 <button
                   key={city.slug}
-                  onClick={() => setActiveSlug(city.slug)}
+                  onClick={() => handleSelectCity(city.slug)}
                   className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm ${
                     isActive
                       ? 'bg-primary text-white shadow-md ring-2 ring-primary/20 scale-105'
