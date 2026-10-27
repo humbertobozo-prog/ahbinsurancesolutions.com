@@ -55,9 +55,11 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
     "name": isEs ? "Broker de Seguros en Gainesville, FL" : "Gainesville, FL Insurance Broker Services",
     "serviceType": "Independent Insurance Brokerage",
     "provider": {
+      "@type": "InsuranceAgency",
       "@id": "https://www.ahbinsurancesolutions.com/#organization"
     },
     "broker": {
+      "@type": "Person",
       "@id": "https://www.ahbinsurancesolutions.com/#person"
     },
     "areaServed": [

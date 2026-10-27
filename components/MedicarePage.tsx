@@ -78,9 +78,11 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         "category": "HealthInsurance",
         "description": description,
         "provider": {
+            "@type": "InsuranceAgency",
             "@id": "https://www.ahbinsurancesolutions.com/#organization"
         },
         "broker": {
+            "@type": "Person",
             "@id": "https://www.ahbinsurancesolutions.com/#person"
         },
         "areaServed": {

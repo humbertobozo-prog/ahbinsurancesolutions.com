@@ -201,7 +201,14 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             "@type": "PropertyValue",
             "name": "NPN",
             "value": "21228432"
-        }
+        },
+        "sameAs": [
+            "https://www.facebook.com/ahbinsurancesolutions",
+            "https://www.instagram.com/ahbinsurancesolutions",
+            "https://www.linkedin.com/in/andres-bozo-npn-21228432",
+            "https://licenseesearch.fldfs.com/",
+            "https://nipr.com/"
+        ]
     };
 
     const breadcrumbSchema = {

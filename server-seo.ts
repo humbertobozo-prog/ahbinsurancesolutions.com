@@ -2313,7 +2313,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "url": "https://www.ahbinsurancesolutions.com/",
     "name": "AHB Insurance Solutions",
     "description": "Licensed Medicare and Life Insurance Brokerage",
-    "publisher": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+    "publisher": {
+      "@type": "InsuranceAgency",
+      "@id": "https://www.ahbinsurancesolutions.com/#organization"
+    },
     "inLanguage": ["en-US", "es-US"]
   };
 
@@ -2323,8 +2326,14 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "url": canonical,
     "name": metadata.title,
     "description": metadata.description,
-    "isPartOf": { "@id": "https://www.ahbinsurancesolutions.com/#website" },
-    "about": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://www.ahbinsurancesolutions.com/#website"
+    },
+    "about": {
+      "@type": "InsuranceAgency",
+      "@id": "https://www.ahbinsurancesolutions.com/#organization"
+    },
     "inLanguage": metadata.htmlLang
   };
 
@@ -2463,10 +2472,12 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     "sameAs": [
       "https://www.facebook.com/ahbinsurancesolutions",
       "https://www.instagram.com/ahbinsurancesolutions",
+      "https://www.linkedin.com/in/andres-bozo-npn-21228432",
       "https://licenseesearch.fldfs.com/",
       "https://nipr.com/"
     ],
     "founder": {
+      "@type": "Person",
       "@id": "https://www.ahbinsurancesolutions.com/#person"
     }
   };
@@ -2481,6 +2492,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       ? "Broker independiente de seguros en Florida especializado en Medicare, Seguro de Gastos Finales, Vida Universal Indexada (IUL) y Anualidades. NPN: 21228432."
       : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
     "worksFor": {
+      "@type": "InsuranceAgency",
       "@id": "https://www.ahbinsurancesolutions.com/#organization"
     },
     "telephone": "+1-352-225-8389",
@@ -2514,6 +2526,9 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "value": "21228432"
     },
     "sameAs": [
+      "https://www.linkedin.com/in/andres-bozo-npn-21228432",
+      "https://www.facebook.com/ahbinsurancesolutions",
+      "https://www.instagram.com/ahbinsurancesolutions",
       "https://licenseesearch.fldfs.com/",
       "https://nipr.com/"
     ]
@@ -2550,7 +2565,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "@type": "Service",
       "name": isEs ? "Planes Suplementarios y de Ventaja de Medicare en Florida" : "Florida Medicare Supplement & Advantage Plans",
       "serviceType": "Health Insurance Brokerage",
-      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "provider": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.ahbinsurancesolutions.com/#organization"
+      },
       "areaServed": { "@type": "State", "name": "Florida" },
       "description": metadata.description,
       "hasOfferCatalog": {
@@ -2586,7 +2604,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "@type": "Service",
       "name": isEs ? "Seguro de Gastos Finales y Entierro en Florida" : "Florida Final Expense & Burial Life Insurance",
       "serviceType": "Whole Life Insurance",
-      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "provider": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.ahbinsurancesolutions.com/#organization"
+      },
       "areaServed": { "@type": "State", "name": "Florida" },
       "description": metadata.description
     });
@@ -2603,7 +2624,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "@type": "Service",
       "name": isEs ? "Seguro de Vida Universal Indexada (IUL) para Jubilación" : "Indexed Universal Life (IUL) Insurance",
       "serviceType": "Permanent Life Insurance & Retirement Planning",
-      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "provider": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.ahbinsurancesolutions.com/#organization"
+      },
       "areaServed": { "@type": "State", "name": "Florida" },
       "description": metadata.description
     });
@@ -2617,7 +2641,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "@type": "Service",
       "name": isEs ? "Gainesville, FL Insurance Broker" : "Gainesville, FL Insurance Broker",
       "serviceType": "Independent Insurance Brokerage",
-      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "provider": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.ahbinsurancesolutions.com/#organization"
+      },
       "areaServed": [
         { "@type": "City", "name": "Gainesville" },
         { "@type": "AdministrativeArea", "name": "Alachua County" },
@@ -2637,7 +2664,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
       "@type": "FinancialProduct",
       "name": isEs ? "Anualidades Fijas e Indexadas en Florida (FIA & MYGA)" : "Florida Fixed & Indexed Annuities (FIA & MYGA)",
       "serviceType": "Retirement Annuity Planning & Wealth Preservation",
-      "provider": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+      "provider": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.ahbinsurancesolutions.com/#organization"
+      },
       "areaServed": { "@type": "State", "name": "Florida" },
       "description": metadata.description
     });
@@ -2675,7 +2705,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
           "jobTitle": post.author.title,
           "url": "https://www.ahbinsurancesolutions.com/#person"
         },
-        "publisher": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+        "publisher": {
+          "@type": "InsuranceAgency",
+          "@id": "https://www.ahbinsurancesolutions.com/#organization"
+        },
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": canonical
@@ -2791,6 +2824,16 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     rewritten = rewritten.replace("</head>", `    <meta property="twitter:image:alt" content="${escapeHtml(ogImageAlt)}">\n</head>`);
   }
 
+  // 6c. Ensure Social Media Profile Links (rel="me") exist in <head>
+  if (!rewritten.includes('rel="me" href="https://www.facebook.com/ahbinsurancesolutions"')) {
+    const socialMeLinks = [
+      '    <link rel="me" href="https://www.facebook.com/ahbinsurancesolutions">',
+      '    <link rel="me" href="https://www.instagram.com/ahbinsurancesolutions">',
+      '    <link rel="me" href="https://www.linkedin.com/in/andres-bozo-npn-21228432">'
+    ].join('\n');
+    rewritten = rewritten.replace("</head>", `${socialMeLinks}\n</head>`);
+  }
+
   // 7. Inject Route-Accurate JSON-LD Schema
   const jsonLdData = generateJsonLd(metadata);
   const jsonLdString = JSON.stringify(jsonLdData, null, 2);
@@ -2803,12 +2846,24 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTag}\n</head>`);
   }
 
-  // 8. Inject crawler-friendly body outline inside `<noscript>` ONLY to prevent unstyled text flashing on load
+  // 8. Inject crawler-friendly body outline and social links inside `<noscript>` ONLY
   if (includeBodyOutline) {
-    const rootDiv = '<div id="root">';
-    if (rewritten.includes(rootDiv)) {
-      const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n      </div>\n    </noscript>\n    <div id="root">`;
-      rewritten = rewritten.replace(rootDiv, replacement);
+    const socialNav = `
+        <nav aria-label="Official Social Media Profiles">
+          <p>Connect with AHB Insurance Solutions on Social Media:</p>
+          <ul>
+            <li><a rel="me noopener noreferrer" href="https://www.facebook.com/ahbinsurancesolutions" target="_blank">Facebook Profile</a></li>
+            <li><a rel="me noopener noreferrer" href="https://www.instagram.com/ahbinsurancesolutions" target="_blank">Instagram Profile</a></li>
+            <li><a rel="me noopener noreferrer" href="https://www.linkedin.com/in/andres-bozo-npn-21228432" target="_blank">LinkedIn Profile</a></li>
+          </ul>
+        </nav>`;
+
+    const noscriptRegex = /<noscript>[\s\S]*?<\/noscript>\s*<div id="root">/;
+    const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n${socialNav}\n      </div>\n    </noscript>\n    <div id="root">`;
+    if (noscriptRegex.test(rewritten)) {
+      rewritten = rewritten.replace(noscriptRegex, replacement);
+    } else if (rewritten.includes('<div id="root">')) {
+      rewritten = rewritten.replace('<div id="root">', replacement);
     }
   }
 

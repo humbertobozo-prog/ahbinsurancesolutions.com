@@ -138,7 +138,10 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "url": "https://www.ahbinsurancesolutions.com/",
             "name": "AHB Insurance Solutions",
             "description": "Licensed Medicare and Life Insurance Brokerage",
-            "publisher": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+            "publisher": {
+                "@type": "InsuranceAgency",
+                "@id": "https://www.ahbinsurancesolutions.com/#organization"
+            },
             "inLanguage": ["en-US", "es-US"]
         };
 
@@ -148,8 +151,14 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "url": canonicalUrl,
             "name": title,
             "description": description,
-            "isPartOf": { "@id": "https://www.ahbinsurancesolutions.com/#website" },
-            "about": { "@id": "https://www.ahbinsurancesolutions.com/#organization" },
+            "isPartOf": {
+                "@type": "WebSite",
+                "@id": "https://www.ahbinsurancesolutions.com/#website"
+            },
+            "about": {
+                "@type": "InsuranceAgency",
+                "@id": "https://www.ahbinsurancesolutions.com/#organization"
+            },
             "inLanguage": langTag
         };
         if (datePublished) webpageSchema.datePublished = datePublished;
@@ -283,10 +292,12 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "sameAs": [
                 "https://www.facebook.com/ahbinsurancesolutions",
                 "https://www.instagram.com/ahbinsurancesolutions",
+                "https://www.linkedin.com/in/andres-bozo-npn-21228432",
                 "https://licenseesearch.fldfs.com/",
                 "https://nipr.com/"
             ],
             "founder": {
+                "@type": "Person",
                 "@id": "https://www.ahbinsurancesolutions.com/#person"
             }
         };
@@ -301,6 +312,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 ? "Broker independiente de seguros en Florida especializado en Medicare, Seguro de Gastos Finales, Vida Universal Indexada (IUL) y Anualidades. NPN: 21228432."
                 : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
             "worksFor": {
+                "@type": "InsuranceAgency",
                 "@id": "https://www.ahbinsurancesolutions.com/#organization"
             },
             "telephone": "+1-352-225-8389",
@@ -326,6 +338,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "value": "21228432"
             },
             "sameAs": [
+                "https://www.linkedin.com/in/andres-bozo-npn-21228432",
+                "https://www.facebook.com/ahbinsurancesolutions",
+                "https://www.instagram.com/ahbinsurancesolutions",
                 "https://licenseesearch.fldfs.com/",
                 "https://nipr.com/"
             ]

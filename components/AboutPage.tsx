@@ -96,6 +96,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             }
         },
         "sameAs": [
+            "https://www.linkedin.com/in/andres-bozo-npn-21228432",
+            "https://www.facebook.com/ahbinsurancesolutions",
+            "https://www.instagram.com/ahbinsurancesolutions",
             "https://licenseesearch.fldfs.com/",
             "https://nipr.com/"
         ]
@@ -109,6 +112,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         "description": description,
         "url": canonical,
         "mainEntity": {
+            "@type": "Person",
             "@id": `${baseUrl}/#person`
         }
     };

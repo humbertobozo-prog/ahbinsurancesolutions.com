@@ -102,9 +102,11 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         "category": "RetirementPlanning",
         "description": description,
         "provider": {
+            "@type": "InsuranceAgency",
             "@id": "https://www.ahbinsurancesolutions.com/#organization"
         },
         "broker": {
+            "@type": "Person",
             "@id": "https://www.ahbinsurancesolutions.com/#person"
         },
         "areaServed": {
