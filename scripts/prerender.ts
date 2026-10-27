@@ -73,7 +73,14 @@ export function prerenderAllPages(): void {
   // Generate and write dynamic sitemap.xml to dist/ and public/
   writeSitemapFiles();
 
-  console.log(`[SSG] Successfully pre-rendered ${count} pages + 404.html + sitemap.xml in dist/!`);
+  // Ensure robots.txt is copied to dist/ to maintain consistency even if build cache is cleared
+  const robotsSrc = path.join(process.cwd(), 'public', 'robots.txt');
+  const robotsDest = path.join(distDir, 'robots.txt');
+  if (fs.existsSync(robotsSrc)) {
+    fs.copyFileSync(robotsSrc, robotsDest);
+  }
+
+  console.log(`[SSG] Successfully pre-rendered ${count} pages + 404.html + sitemap.xml + robots.txt in dist/!`);
 }
 
 // Run SSG generator

@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import compression from "compression";
+import expressStaticGzip from "express-static-gzip";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import { getSeoMetadata, rewriteHtmlForSeo } from "./server-seo";
@@ -18,10 +19,19 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  app.use(compression());
+  // Use compression middleware for dynamic content (Gzip/Deflate)
+  app.use(compression({ 
+    threshold: 1, // Compress everything including small JSON/Markdown
+    level: 6,
+    filter: (req, res) => {
+      if (req.headers['x-no-compression']) return false;
+      return compression.filter(req, res);
+    }
+  }));
+
   app.use(express.json({ limit: "5mb" }));
 
-  // Global Security Headers Middleware
+  // Global Security & Performance Headers Middleware
   app.use((_req, res, next) => {
     const isDev = process.env.NODE_ENV !== "production";
 
@@ -29,9 +39,10 @@ async function startServer() {
     res.setHeader("X-XSS-Protection", "1; mode=block");
     res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
     res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+    res.setHeader("X-DNS-Prefetch-Control", "on");
 
     res.setHeader("Vary", "Accept, Accept-Encoding");
-    res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
+    res.setHeader("Alt-Svc", 'h3=":443"; ma=86400, h3-29=":443"; ma=86400');
     res.setHeader(
       "Link",
       '</auth.md>; rel="agent-auth", </.well-known/oauth-protected-resource>; rel="oauth2-protected-resource", </.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </.well-known/agent-skills/index.json>; rel="agent-skills", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
@@ -856,19 +867,22 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
   } else {
     const distPath = path.join(process.cwd(), "dist");
     
-    // Serve static assets with caching and compression headers
-    app.use(express.static(distPath, {
-      index: false,
-      maxAge: '1y',
-      setHeaders: (res, filePath) => {
-        if (filePath.endsWith('.html')) {
-          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
-        } else if (filePath.endsWith('.md')) {
-          res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
-          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
-          res.setHeader('Vary', 'Accept, Accept-Encoding');
-        } else if (filePath.match(/\.(js|css|woff2?|ico|png|webp|svg)$/)) {
-          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    // Serve static assets with pre-compressed Brotli/Gzip support and optimal caching
+    app.use("/", expressStaticGzip(distPath, {
+      enableBrotli: true,
+      orderPreference: ['br', 'gz'],
+      serveStatic: {
+        maxAge: '1y',
+        setHeaders: (res, filePath) => {
+          if (filePath.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+          } else if (filePath.endsWith('.md')) {
+            res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
+            res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+            res.setHeader('Vary', 'Accept, Accept-Encoding');
+          } else if (filePath.match(/\.(js|css|woff2?|ico|png|webp|svg)$/)) {
+            res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+          }
         }
       }
     }));

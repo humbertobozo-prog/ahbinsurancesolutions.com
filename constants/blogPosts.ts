@@ -311,5 +311,143 @@ Todo consumidor responsable debe comprender los siguientes riesgos y reglas oper
 > **Solicite una Asesoría:** ¿Desea evaluar una ilustración de IUL realista, transparente y personalizada a su edad y capacidad de ahorro? Contacte hoy al corredor licenciado Andrés H. Bozo en AHB Insurance Solutions.
             `
         }
+    },
+    {
+        id: '4',
+        slug: {
+            en: 'medicare-part-d-formulary-changes-florida-2026',
+            es: 'cambios-formulario-medicare-parte-d-florida-2026'
+        },
+        title: {
+            en: 'Medicare Part D: 2026 Formulary Changes in Florida',
+            es: 'Medicare Parte D: Cambios en Formularios Florida 2026'
+        },
+        excerpt: {
+            en: 'Understand how the $2,000 out-of-pocket cap and formulary shifts affect Florida seniors in 2026. Review your drug list with broker Andres Bozo.',
+            es: 'Entienda cómo el tope de $2,000 y los cambios en formularios afectan a los beneficiarios en Florida en 2026. Revise su lista de medicinas con el broker Andrés Bozo.'
+        },
+        category: 'medicare',
+        date: '2026-09-10',
+        readTime: '5 min read',
+        author: {
+            name: 'Andres H. Bozo',
+            title: 'Licensed Insurance Broker',
+            npn: '21228432',
+            image: '/andresbozoofi.webp'
+        },
+        image: 'https://images.pexels.com/photos/5928391/pexels-photo-5928391.jpeg?auto=compress&cs=tinysrgb&w=800',
+        tags: ['Medicare Part D', 'Prescription Drugs', 'Florida Seniors', 'Inflation Reduction Act'],
+        content: {
+            en: `
+## Medicare Part D in 2026: The New $2,000 Out-of-Pocket Cap
+
+For 2026, the Medicare landscape in Florida is undergoing one of its most significant transformations in decades due to the full implementation of the Inflation Reduction Act provisions.
+
+### The $2,000 Annual Out-of-Pocket Maximum
+Starting in 2026, all Medicare beneficiaries in Florida with Part D coverage will benefit from a **$2,000 annual out-of-pocket cap** on covered prescription drugs. This replaces the previous complex "donut hole" or "coverage gap" phase. Once you spend $2,000 on your covered medications, you pay $0 for the remainder of the calendar year.
+
+### Why You MUST Review Your Formulary in 2026
+While the $2,000 cap is excellent news for high-cost drug users, it is causing insurance carriers to restructure their **formularies** (lists of covered drugs). 
+* **Tier Shifts:** Medications may move from lower tiers to higher tiers, increasing your initial copay.
+* **Prior Authorization:** Carriers may implement stricter rules for certain expensive brand-name medications.
+* **Network Changes:** Pharmacy networks in Florida may shift, meaning your preferred local pharmacy might no longer be "preferred" or in-network.
+
+### Medicare Prescription Payment Plan (M3P)
+Florida seniors can also opt into a new "smoothing" program that allows you to pay your out-of-pocket drug costs in monthly installments rather than all at once at the pharmacy counter.
+
+> **Get a Free Medication Review:** As an independent broker, I use specialized tools to compare every Part D and Medicare Advantage plan in Florida against your exact medication list. Call **+1 (352) 225-8389** today.
+            `,
+            es: `
+## Medicare Parte D en 2026: El Nuevo Tope de $2,000 de Bolsillo
+
+Para el 2026, el panorama de Medicare en Florida está experimentando una de sus transformaciones más significativas en décadas debido a la implementación total de la Ley de Reducción de la Inflación.
+
+### El Máximo de Gasto de Bolsillo de $2,000
+A partir de 2026, todos los beneficiarios de Medicare en Florida con cobertura de la Parte D se beneficiarán de un **tope anual de $2,000 de su bolsillo** en medicamentos recetados cubiertos. Esto elimina definitivamente el complejo "período sin cobertura" o "donut hole". Una vez que gaste $2,000 en sus medicamentos cubiertos, pagará $0 por el resto del año calendario.
+
+### Por Qué DEBE Revisar su Formulario en 2026
+Aunque el tope de $2,000 es una excelente noticia para quienes usan medicamentos costosos, está provocando que las aseguradoras reestructuren sus **formularios** (listas de medicinas cubiertas).
+* **Cambios de Niveles (Tiers):** Las medicinas pueden pasar de niveles bajos a niveles más altos, aumentando su copago inicial.
+* **Autorización Previa:** Las compañías pueden implementar reglas más estrictas para ciertos medicamentos de marca costosos.
+* **Cambios en Redes:** Las redes de farmacias en Florida pueden cambiar, lo que significa que su farmacia local preferida podría dejar de ser "preferida" o estar fuera de la red.
+
+### Plan de Pago de Medicamentos de Medicare (M3P)
+Los adultos mayores en Florida también pueden optar por un nuevo programa de "suavizado" que permite pagar los costos de medicamentos en cuotas mensuales en lugar de todo de una vez en el mostrador de la farmacia.
+
+> **Obtenga una Revisión Gratuita de Medicinas:** Como corredor independiente, utilizo herramientas especializadas para comparar cada plan de la Parte D y Medicare Advantage en Florida con su lista exacta de medicamentos. Llame al **+1 (352) 225-8389** hoy mismo.
+            `
+        }
+    },
+    {
+        id: '5',
+        slug: {
+            en: 'iul-retirement-planning-tax-efficiency-florida',
+            es: 'planificacion-retiro-iul-eficiencia-fiscal-florida'
+        },
+        title: {
+            en: 'IUL Retirement Planning: Achieving Tax Efficiency',
+            es: 'Retiro con IUL: Logrando Eficiencia Fiscal en Florida'
+        },
+        excerpt: {
+            en: 'Strategizing for a tax-efficient retirement in Florida using Indexed Universal Life (IUL). Learn about accumulation, distribution, and asset protection.',
+            es: 'Estrategias para un retiro eficiente en impuestos en Florida usando IUL. Aprenda sobre acumulación, distribución y protección de activos.'
+        },
+        category: 'iul',
+        date: '2026-10-05',
+        readTime: '6 min read',
+        author: {
+            name: 'Andres H. Bozo',
+            title: 'Licensed Insurance Broker',
+            npn: '21228432',
+            image: '/andresbozoofi.webp'
+        },
+        image: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=800',
+        tags: ['IUL', 'Tax Efficiency', 'Florida Retirement', 'Financial Protection'],
+        content: {
+            en: `
+## Maximizing Your Florida Retirement with IUL Tax Efficiency
+
+Florida is a tax-friendly state with no state income tax, but federal taxes can still take a significant bite out of your retirement savings if they are entirely in "tax-deferred" accounts like a 401(k) or IRA.
+
+### The Tax Triangle Strategy
+A balanced retirement plan should diversify across three "tax buckets":
+1. **Taxable:** Savings, brokerage accounts (taxed annually).
+2. **Tax-Deferred:** 401(k), IRA (taxed at withdrawal).
+3. **Tax-Free:** Roth IRA, Health Savings Account (HSA), and **Life Insurance (IUL)**.
+
+### Why IUL for High-Earners?
+For those who exceed Roth IRA income limits or want to save beyond 401(k) contribution caps, an IUL policy provides a "super-funded" vehicle for tax-advantaged growth.
+* **No Contribution Limits:** Unlike IRAs, you can put significant capital into an IUL, subject to the policy's face amount and MEC limits.
+* **Tax-Free Death Benefit:** Your heirs receive the death benefit excludable from gross income under IRC §101(a).
+* **Market Protection:** The 0% floor protects your accumulated cash value during market crashes, which is critical for those approaching retirement.
+
+### Distribution Phase Efficiency
+By taking policy loans instead of taxable withdrawals in retirement, you can generate cash flow that doesn't increase your taxable income, potentially keeping you in a lower tax bracket and reducing taxes on Social Security benefits.
+
+> **Plan Your Tax-Efficient Future:** Contact Andres H. Bozo at AHB Insurance Solutions for a comprehensive analysis of how IUL can fit into your Florida retirement strategy. Call **+1 (352) 225-8389**.
+            `,
+            es: `
+## Maximizando su Retiro en Florida con la Eficiencia Fiscal del IUL
+
+Florida es un estado favorable para los impuestos sin impuesto sobre la renta estatal, pero los impuestos federales pueden reducir significativamente sus ahorros de jubilación si están totalmente en cuentas "con impuestos diferidos" como un 401(k) o IRA.
+
+### La Estrategia del Triángulo Fiscal
+Un plan de retiro equilibrado debe diversificarse en tres "cubetas de impuestos":
+1. **Gravable:** Ahorros, cuentas de corretaje (tributan anualmente).
+2. **Impuestos Diferidos:** 401(k), IRA (tributan al retirar).
+3. **Libre de Impuestos:** Roth IRA, Cuenta de Ahorros de Salud (HSA) y **Seguro de Vida (IUL)**.
+
+### ¿Por qué IUL para quienes tienen altos ingresos?
+Para quienes superan los límites de ingresos del Roth IRA o desean ahorrar más allá de los topes de contribución del 401(k), una póliza IUL ofrece un vehículo de crecimiento con ventajas fiscales.
+* **Sin Límites de Contribución:** A diferencia de los IRA, puede aportar capital significativo a un IUL, sujeto al monto nominal de la póliza y los límites MEC.
+* **Beneficio por Fallecimiento Libre de Impuestos:** Sus herederos reciben el beneficio exento de impuestos según la sección IRC §101(a).
+* **Protección de Mercado:** El piso del 0% protege su valor en efectivo durante caídas del mercado, lo cual es crítico para quienes se acercan al retiro.
+
+### Eficiencia en la Fase de Distribución
+Al tomar préstamos sobre la póliza en lugar de retiros gravables en la jubilación, puede generar flujo de caja que no aumenta sus ingresos imponibles, manteniéndolo potencialmente en un tramo impositivo más bajo y reduciendo los impuestos sobre los beneficios del Seguro Social.
+
+> **Planifique su Futuro con Eficiencia Fiscal:** Contacte a Andrés Bozo en AHB Insurance Solutions para un análisis integral de cómo el IUL puede encajar en su estrategia de retiro en Florida. Llame al **+1 (352) 225-8389**.
+            `
+        }
     }
 ];

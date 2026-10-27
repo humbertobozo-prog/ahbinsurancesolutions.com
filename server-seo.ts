@@ -264,6 +264,22 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos": {
       en: "/blog/iul-vs-401k-tax-free-retirement",
       es: "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos"
+    },
+    "/blog/medicare-part-d-formulary-changes-florida-2026": {
+      en: "/blog/medicare-part-d-formulary-changes-florida-2026",
+      es: "/es/blog/cambios-formulario-medicare-parte-d-florida-2026"
+    },
+    "/es/blog/cambios-formulario-medicare-parte-d-florida-2026": {
+      en: "/blog/medicare-part-d-formulary-changes-florida-2026",
+      es: "/es/blog/cambios-formulario-medicare-parte-d-florida-2026"
+    },
+    "/blog/iul-retirement-planning-tax-efficiency-florida": {
+      en: "/blog/iul-retirement-planning-tax-efficiency-florida",
+      es: "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida"
+    },
+    "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida": {
+      en: "/blog/iul-retirement-planning-tax-efficiency-florida",
+      es: "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida"
     }
   };
 
@@ -2687,7 +2703,30 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     });
   }
 
-  // 3. BlogPosting for blog articles
+  // 4. FAQPage for City Guides
+  if (cleanPath.startsWith("/cities/") || cleanPath.startsWith("/es/ciudades/")) {
+    const citySlug = cleanPath.startsWith("/cities/") ? cleanPath.replace("/cities/", "") : cleanPath.replace("/es/ciudades/", "");
+    const city = FLORIDA_CITIES.find(c => c.slug === citySlug);
+    if (city) {
+      const activeFaqs = isEs ? city.faqsEs : city.faqsEn;
+      if (activeFaqs && activeFaqs.length > 0) {
+        graph.push({
+          "@type": "FAQPage",
+          "@id": `${canonical}#faq`,
+          "mainEntity": activeFaqs.map(f => ({
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": f.answer
+            }
+          }))
+        });
+      }
+    }
+  }
+
+  // 5. BlogPosting and optional FAQPage for blog articles
   if (cleanPath.startsWith("/blog/") || cleanPath.startsWith("/es/blog/")) {
     const slugValue = cleanPath.startsWith("/blog/") ? cleanPath.replace("/blog/", "") : cleanPath.replace("/es/blog/", "");
     const post = BLOG_POSTS.find(p => p.slug.en === slugValue || p.slug.es === slugValue);
@@ -2714,6 +2753,13 @@ export function generateJsonLd(metadata: SeoMetaData): object {
           "@id": canonical
         }
       });
+
+      // Add FAQPage if the blog post has FAQs in its content (detecting common patterns)
+      if (post.content[isEs ? 'es' : 'en'].includes('### FAQ') || post.content[isEs ? 'es' : 'en'].includes('## Frequently Asked Questions')) {
+        // Simple extraction logic or manual FAQ data from constants if available
+        // For now, we skip auto-extraction to avoid fragile regex, 
+        // but we ensure the BlogPosting itself is robust.
+      }
     }
   }
 
