@@ -61,11 +61,6 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     setTimeout(() => setCopiedSchema(false), 2500);
   };
 
-  const baseUrl = 'https://www.ahbinsurancesolutions.com';
-  const canonical = `${baseUrl}${isEs ? `/es/ciudades/${activeCity.slug}` : `/cities/${activeCity.slug}`}`;
-  const enUrl = `${baseUrl}/cities/${activeCity.slug}`;
-  const esUrl = `${baseUrl}/es/ciudades/${activeCity.slug}`;
-
   const handleSelectCity = (slug: string) => {
     setActiveSlug(slug);
     const newPath = isEs ? `/es/ciudades/${slug}` : `/cities/${slug}`;
@@ -85,9 +80,6 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
             ? `Asesoría de seguros en ${activeCity.cityName} (${activeCity.county}). Compare Suplementos de Medicare, entierro y planes IUL con el broker Andrés Bozo (NPN 21228432).`
             : `Local insurance broker guide for ${activeCity.cityName}, FL. Compare Medicare Supplement Plan G/N, Final Expense burial coverage, and IUL with broker Andres Bozo.`
         }
-        canonicalUrl={canonical}
-        enUrl={enUrl}
-        esUrl={esUrl}
         language={language}
         ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
         ogImageAlt={isEs ? `Seguros Medicare, Gastos Finales e IUL en ${activeCity.cityName}, Florida` : `Medicare, Medigap & Life Insurance in ${activeCity.cityName}, FL`}

@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import type { Language } from '../types';
+import { getRoutePairs } from '../utils/routePairs';
 
 interface SEOHeadProps {
     title: string;
     description: string;
-    canonicalUrl: string;
-    enUrl: string;
-    esUrl: string;
+    canonicalUrl?: string;
+    enUrl?: string;
+    esUrl?: string;
+    pathname?: string;
     language: Language;
     type?: string;
     ogImage?: string;
@@ -20,9 +22,10 @@ interface SEOHeadProps {
 export const SEOHead: React.FC<SEOHeadProps> = ({
     title,
     description,
-    canonicalUrl,
-    enUrl,
-    esUrl,
+    canonicalUrl: manualCanonical,
+    enUrl: manualEnUrl,
+    esUrl: manualEsUrl,
+    pathname,
     language,
     type = 'website',
     ogImage = 'https://www.ahbinsurancesolutions.com/og-image.png',
@@ -32,6 +35,24 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
     schema,
     noindex = false
 }) => {
+    const baseUrl = 'https://www.ahbinsurancesolutions.com';
+    
+    // Determine effective URLs
+    let effectiveEnUrl = manualEnUrl || '';
+    let effectiveEsUrl = manualEsUrl || '';
+    let effectiveCanonical = manualCanonical || '';
+
+    const currentPath = pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
+
+    if (currentPath && (!manualEnUrl || !manualEsUrl || !manualCanonical)) {
+        const pairs = getRoutePairs(currentPath);
+        if (!manualEnUrl) effectiveEnUrl = `${baseUrl}${pairs.en === '/' ? '/' : pairs.en}`;
+        if (!manualEsUrl) effectiveEsUrl = `${baseUrl}${pairs.es}`;
+        if (!manualCanonical) {
+            effectiveCanonical = language === 'es' ? effectiveEsUrl : effectiveEnUrl;
+        }
+    }
+
     useEffect(() => {
         // 1. Update HTML lang
         document.documentElement.lang = language === 'es' ? 'es-US' : 'en-US';
@@ -64,7 +85,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             canonicalLink.id = 'canonical-link';
             document.head.appendChild(canonicalLink);
         }
-        canonicalLink.href = canonicalUrl;
+        canonicalLink.href = effectiveCanonical;
 
         // 5. Update Hreflangs (Unify en-US, es-US, x-default)
         const updateHreflang = (lang: string, href: string) => {
@@ -78,9 +99,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             link.href = href;
         };
 
-        updateHreflang('en-US', enUrl);
-        updateHreflang('es-US', esUrl);
-        updateHreflang('x-default', enUrl);
+        updateHreflang('en-US', effectiveEnUrl);
+        updateHreflang('es-US', effectiveEsUrl);
+        updateHreflang('x-default', effectiveEnUrl);
 
         // 6. Update Open Graph
         const setMetaProp = (property: string, content: string) => {
@@ -95,7 +116,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
         setMetaProp('og:title', title);
         setMetaProp('og:description', description);
-        setMetaProp('og:url', canonicalUrl);
+        setMetaProp('og:url', effectiveCanonical);
         setMetaProp('og:type', type);
         setMetaProp('og:image', ogImage);
         setMetaProp('og:image:secure_url', ogImage);
@@ -147,8 +168,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 
         const webpageSchema: Record<string, unknown> = {
             "@type": "WebPage",
-            "@id": `${canonicalUrl}#webpage`,
-            "url": canonicalUrl,
+            "@id": `${effectiveCanonical}#webpage`,
+            "url": effectiveCanonical,
             "name": title,
             "description": description,
             "isPartOf": {
@@ -369,7 +390,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "@graph": fullGraph
         }, null, 2);
 
-    }, [title, description, canonicalUrl, enUrl, esUrl, language, type, ogImage, ogImageAlt, datePublished, dateModified, schema, noindex]);
+    }, [title, description, effectiveCanonical, effectiveEnUrl, effectiveEsUrl, language, type, ogImage, ogImageAlt, datePublished, dateModified, schema, noindex]);
 
     return null;
 };

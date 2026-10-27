@@ -12,9 +12,6 @@ interface FinalExpensePageProps {
 export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/gastos-finales' : '/final-expense'}`;
-    const enUrl = `${baseUrl}/final-expense`;
-    const esUrl = `${baseUrl}/es/gastos-finales`;
 
     const title = isEs 
         ? 'Seguro de Gastos Finales y Funeral en Florida 2026 | AHB Insurance' 
@@ -137,7 +134,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Seguro de Gastos Finales en Florida" : "Final Expense & Burial Insurance",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/gastos-finales' : '/final-expense'}`
             }
         ]
     };
@@ -147,9 +144,6 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
                 ogImageAlt={isEs ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage"}

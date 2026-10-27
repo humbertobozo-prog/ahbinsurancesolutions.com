@@ -12,9 +12,6 @@ interface MedicarePageProps {
 export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/seguro-medicare-florida' : '/medicare-florida'}`;
-    const enUrl = `${baseUrl}/medicare-florida`;
-    const esUrl = `${baseUrl}/es/seguro-medicare-florida`;
 
     const title = isEs 
         ? 'Medicare Suplementario (Medigap) Florida | AHB Insurance' 
@@ -156,7 +153,7 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Medicare en Florida" : "Medicare in Florida",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/seguro-medicare-florida' : '/medicare-florida'}`
             }
         ]
     };
@@ -170,9 +167,6 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/hero-seniors-medicare.webp"
                 ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}

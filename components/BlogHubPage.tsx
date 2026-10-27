@@ -40,10 +40,6 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
 
     if (currentPost) {
         // Single Article View
-        const postSlug = isEs ? currentPost.slug.es : currentPost.slug.en;
-        const canonical = `${baseUrl}${isEs ? '/es/blog/' : '/blog/'}${postSlug}`;
-        const enUrl = `${baseUrl}/blog/${currentPost.slug.en}`;
-        const esUrl = `${baseUrl}/es/blog/${currentPost.slug.es}`;
 
         const postTitle = isEs ? currentPost.title.es : currentPost.title.en;
         const postExcerpt = isEs ? currentPost.excerpt.es : currentPost.excerpt.en;
@@ -89,7 +85,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                     "@type": "ListItem",
                     "position": 3,
                     "name": postTitle,
-                    "item": canonical
+                    "item": `${baseUrl}${isEs ? '/es/blog/' : '/blog/'}${isEs ? currentPost.slug.es : currentPost.slug.en}`
                 }
             ]
         };
@@ -99,9 +95,6 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                 <SEOHead 
                     title={`${postTitle} | AHB Insurance`}
                     description={postExcerpt}
-                    canonicalUrl={canonical}
-                    enUrl={enUrl}
-                    esUrl={esUrl}
                     language={language}
                     type="article"
                     ogImage={currentPost.image}
@@ -226,10 +219,6 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
     }
 
     // Blog Hub List View
-    const canonical = `${baseUrl}${isEs ? '/es/blog' : '/blog'}`;
-    const enUrl = `${baseUrl}/blog`;
-    const esUrl = `${baseUrl}/es/blog`;
-
     const title = isEs 
         ? 'Centro de Conocimiento sobre Medicare y Seguros en Florida | AHB Insurance' 
         : 'Florida Medicare & Insurance Knowledge Hub | AHB Insurance';
@@ -271,9 +260,6 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Blog y Artículos sobre Seguros en Florida - AHB Insurance" : "Florida Insurance Blog & Articles - AHB Insurance"}

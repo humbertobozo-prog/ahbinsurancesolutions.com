@@ -13,9 +13,6 @@ interface IULPageProps {
 export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/iul-jubilacion' : '/iul-retirement'}`;
-    const enUrl = `${baseUrl}/iul-retirement`;
-    const esUrl = `${baseUrl}/es/iul-jubilacion`;
 
     const title = isEs 
         ? 'Guía Completa de Vida Universal Indexada (IUL) en Florida 2026 | AHB Insurance' 
@@ -157,7 +154,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Vida Universal Indexada (IUL)" : "Indexed Universal Life (IUL)",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/iul-jubilacion' : '/iul-retirement'}`
             }
         ]
     };
@@ -167,9 +164,6 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
                 ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning"}

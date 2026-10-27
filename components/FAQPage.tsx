@@ -15,9 +15,6 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/preguntas-frecuentes' : '/faq'}`;
-    const enUrl = `${baseUrl}/faq`;
-    const esUrl = `${baseUrl}/es/preguntas-frecuentes`;
 
     const title = isEs 
         ? 'Preguntas Frecuentes sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades | AHB' 
@@ -74,7 +71,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? 'Preguntas Frecuentes' : 'Frequently Asked Questions',
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/preguntas-frecuentes' : '/faq'}`
             }
         ]
     };
@@ -84,9 +81,6 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Preguntas Frecuentes sobre Seguros en Florida - AHB Insurance Solutions" : "Frequently Asked Questions about Florida Insurance - AHB Insurance Solutions"}

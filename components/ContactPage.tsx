@@ -11,9 +11,6 @@ interface ContactPageProps {
 export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/contacto' : '/contact'}`;
-    const enUrl = `${baseUrl}/contact`;
-    const esUrl = `${baseUrl}/es/contacto`;
 
     const title = isEs 
         ? 'Contacto y Cotización Gratis | AHB Insurance Solutions Florida' 
@@ -69,7 +66,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Contacto" : "Contact Us",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/contacto' : '/contact'}`
             }
         ]
     };
@@ -79,9 +76,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Contacto y Asesoría de Seguros en Florida - AHB Insurance Solutions" : "Contact AHB Insurance Solutions - Licensed Florida Insurance Consultations"}

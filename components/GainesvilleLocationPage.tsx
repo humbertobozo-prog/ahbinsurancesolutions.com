@@ -37,9 +37,6 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
   const [activeTab, setActiveTab] = useState<'medicare' | 'final-expense' | 'iul' | 'annuities'>('medicare');
 
   const baseUrl = 'https://www.ahbinsurancesolutions.com';
-  const canonicalUrl = `${baseUrl}${isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl'}`;
-  const enUrl = `${baseUrl}/locations/gainesville-fl`;
-  const esUrl = `${baseUrl}/es/locations/gainesville-fl`;
 
   const pageTitle = isEs
     ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville | AHB Insurance Solutions"
@@ -97,7 +94,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         "@type": "ListItem",
         "position": 3,
         "name": "Gainesville, FL Insurance Broker",
-        "item": canonicalUrl
+        "item": `${baseUrl}${isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl'}`
       }
     ]
   };
@@ -166,9 +163,6 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
       <SEOHead 
         title={pageTitle}
         description={pageDescription}
-        canonicalUrl={canonicalUrl}
-        enUrl={enUrl}
-        esUrl={esUrl}
         language={language}
         ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
         ogImageAlt={isEs ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida"}

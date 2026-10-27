@@ -1,6 +1,7 @@
 import { BLOG_POSTS } from "./constants/blogPosts";
 import { faqsEs, faqsEn } from "./constants/faqData";
 import { FLORIDA_CITIES } from "./data/cityGuidesData";
+import { getRoutePairs } from "./utils/routePairs";
 
 export interface SeoMetaData {
   title: string;
@@ -184,129 +185,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
   let description = "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!";
 
-  // Complete Hreflang Canonical Route Pairs to prevent 308 redirects and trailing slashes
-  const ROUTE_PAIRS: Record<string, { en: string; es: string }> = {
-    "": { en: "/", es: "/es" },
-    "/": { en: "/", es: "/es" },
-    "/es": { en: "/", es: "/es" },
-    "/medicare": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/es/medicare": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/final-expense": { en: "/final-expense", es: "/es/gastos-finales" },
-    "/es/gastos-finales": { en: "/final-expense", es: "/es/gastos-finales" },
-    "/iul-retirement": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/es/iul-jubilacion": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/iul": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/es/iul": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/iul-florida": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/es/iul-florida": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/iul-jubilacion": { en: "/iul-retirement", es: "/es/iul-jubilacion" },
-    "/blog": { en: "/blog", es: "/es/blog" },
-    "/es/blog": { en: "/blog", es: "/es/blog" },
-    "/faq": { en: "/faq", es: "/es/preguntas-frecuentes" },
-    "/es/preguntas-frecuentes": { en: "/faq", es: "/es/preguntas-frecuentes" },
-    "/about-us": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
-    "/es/nosotros": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
-    "/about-andres-bozo": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
-    "/es/sobre-andres-bozo": { en: "/about-andres-bozo", es: "/es/sobre-andres-bozo" },
-    "/contact": { en: "/contact", es: "/es/contacto" },
-    "/es/contacto": { en: "/contact", es: "/es/contacto" },
-    "/terms": { en: "/terms", es: "/es/terminos" },
-    "/es/terminos": { en: "/terms", es: "/es/terminos" },
-    "/privacy": { en: "/privacy", es: "/es/privacidad" },
-    "/es/privacidad": { en: "/privacy", es: "/es/privacidad" },
-    "/city-guides": { en: "/city-guides", es: "/es/guias-ciudades" },
-    "/es/guias-ciudades": { en: "/city-guides", es: "/es/guias-ciudades" },
-    "/medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/es/seguro-medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/medicare-supplement-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/es/suplemento-medicare-florida": { en: "/medicare-florida", es: "/es/seguro-medicare-florida" },
-    "/final-expense-miami": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
-    "/es/seguro-gastos-finales-florida": { en: "/final-expense-miami", es: "/es/seguro-gastos-finales-florida" },
-    "/burial-insurance-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
-    "/es/seguro-gastos-finales-tampa": { en: "/burial-insurance-tampa", es: "/es/seguro-gastos-finales-tampa" },
-    "/iul-retirement-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion-tampa" },
-    "/es/iul-jubilacion-tampa": { en: "/iul-retirement-tampa", es: "/es/iul-jubilacion-tampa" },
-    "/annuities-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
-    "/es/anualidades-florida": { en: "/annuities-florida", es: "/es/anualidades-florida" },
-    "/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
-    "/es/dental-vision-florida": { en: "/dental-vision-florida", es: "/es/dental-vision-florida" },
-    "/orlando-spanish-insurance": { en: "/orlando-spanish-insurance", es: "/spanish-insurance-orlando" },
-    "/spanish-insurance-orlando": { en: "/orlando-spanish-insurance", es: "/spanish-insurance-orlando" },
-    "/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
-    "/es/locations/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
-    "/es/localidades/gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
-    "/gainesville-fl-insurance": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
-    "/es/seguros-gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
-    "/blog/medicare-open-enrollment-florida-2026": {
-      en: "/blog/medicare-open-enrollment-florida-2026",
-      es: "/es/blog/medicare-inscripcion-abierta-florida-2026"
-    },
-    "/es/blog/medicare-inscripcion-abierta-florida-2026": {
-      en: "/blog/medicare-open-enrollment-florida-2026",
-      es: "/es/blog/medicare-inscripcion-abierta-florida-2026"
-    },
-    "/blog/final-expense-burial-costs-florida": {
-      en: "/blog/final-expense-burial-costs-florida",
-      es: "/es/blog/costos-funerales-gastos-finales-florida"
-    },
-    "/blog/burial-insurance-funeral-costs-florida": {
-      en: "/blog/burial-insurance-funeral-costs-florida",
-      es: "/es/blog/costos-funerales-gastos-finales-florida"
-    },
-    "/es/blog/costos-funerales-gastos-finales-florida": {
-      en: "/blog/final-expense-burial-costs-florida",
-      es: "/es/blog/costos-funerales-gastos-finales-florida"
-    },
-    "/blog/iul-vs-401k-tax-free-retirement": {
-      en: "/blog/iul-vs-401k-tax-free-retirement",
-      es: "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos"
-    },
-    "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos": {
-      en: "/blog/iul-vs-401k-tax-free-retirement",
-      es: "/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos"
-    },
-    "/blog/medicare-part-d-formulary-changes-florida-2026": {
-      en: "/blog/medicare-part-d-formulary-changes-florida-2026",
-      es: "/es/blog/cambios-formulario-medicare-parte-d-florida-2026"
-    },
-    "/es/blog/cambios-formulario-medicare-parte-d-florida-2026": {
-      en: "/blog/medicare-part-d-formulary-changes-florida-2026",
-      es: "/es/blog/cambios-formulario-medicare-parte-d-florida-2026"
-    },
-    "/blog/iul-retirement-planning-tax-efficiency-florida": {
-      en: "/blog/iul-retirement-planning-tax-efficiency-florida",
-      es: "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida"
-    },
-    "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida": {
-      en: "/blog/iul-retirement-planning-tax-efficiency-florida",
-      es: "/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida"
-    }
-  };
-
-  for (const city of FLORIDA_CITIES) {
-    ROUTE_PAIRS[`/cities/${city.slug}`] = { en: `/cities/${city.slug}`, es: `/es/ciudades/${city.slug}` };
-    ROUTE_PAIRS[`/es/ciudades/${city.slug}`] = { en: `/cities/${city.slug}`, es: `/es/ciudades/${city.slug}` };
-  }
-
-  let enUrl: string;
-  let esUrl: string;
-
-  if (ROUTE_PAIRS[cleanPath]) {
-    enUrl = `${baseUrl}${ROUTE_PAIRS[cleanPath].en === "/" ? "/" : ROUTE_PAIRS[cleanPath].en}`;
-    esUrl = `${baseUrl}${ROUTE_PAIRS[cleanPath].es}`;
-  } else if (cleanPath.startsWith("/es")) {
-    esUrl = `${baseUrl}${cleanPath}`;
-    const enSub = cleanPath.replace(/^\/es/, "");
-    enUrl = `${baseUrl}${enSub === "" ? "/" : enSub}`;
-  } else {
-    enUrl = `${baseUrl}${cleanPath === "" ? "/" : cleanPath}`;
-    const esSub = cleanPath === "/" ? "" : cleanPath;
-    esUrl = `${baseUrl}/es${esSub}`;
-  }
-
-  const canonicalUrl = ROUTE_PAIRS[cleanPath] 
-    ? (isEs ? esUrl : enUrl) 
-    : `${baseUrl}${cleanPath === "" || cleanPath === "/" ? "/" : cleanPath}`;
+  // Get paired routes using shared utility
+  const pairs = getRoutePairs(cleanPath);
+  const enUrl = `${baseUrl}${pairs.en === "/" ? "/" : pairs.en}`;
+  const esUrl = `${baseUrl}${pairs.es}`;
+  const canonicalUrl = isEs ? esUrl : enUrl;
 
   let ogType = "website";
   let bodyOutline = "";

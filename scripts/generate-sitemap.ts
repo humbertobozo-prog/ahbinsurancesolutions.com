@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { BLOG_POSTS } from '../constants/blogPosts';
 import { FLORIDA_CITIES } from '../data/cityGuidesData';
+import { getRoutePairs } from '../utils/routePairs';
 
 const BASE_URL = 'https://www.ahbinsurancesolutions.com';
 
@@ -19,117 +20,56 @@ export interface SitemapRouteEntry {
  * to ensure 100% crawl efficiency and 0 redirect errors in Google Search Console.
  */
 export function getAllSitemapRoutes(): SitemapRouteEntry[] {
-  const routes: SitemapRouteEntry[] = [
-    // 1. Core Pillar & Primary Service Pages
-    {
-      enPath: '/',
-      esPath: '/es',
-      changefreq: 'weekly',
-      priority: 1.0,
-    },
-    {
-      enPath: '/medicare-florida',
-      esPath: '/es/seguro-medicare-florida',
-      changefreq: 'weekly',
-      priority: 0.95,
-    },
-    {
-      enPath: '/final-expense',
-      esPath: '/es/gastos-finales',
-      changefreq: 'weekly',
-      priority: 0.9,
-    },
-    {
-      enPath: '/iul-retirement',
-      esPath: '/es/iul-jubilacion',
-      changefreq: 'weekly',
-      priority: 0.9,
-    },
-    {
-      enPath: '/annuities-florida',
-      esPath: '/es/anualidades-florida',
-      changefreq: 'weekly',
-      priority: 0.9,
-    },
-    {
-      enPath: '/dental-vision-florida',
-      esPath: '/es/dental-vision-florida',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-
-    // 2. Hub Pages
-    {
-      enPath: '/blog',
-      esPath: '/es/blog',
-      changefreq: 'daily',
-      priority: 0.85,
-    },
-    {
-      enPath: '/city-guides',
-      esPath: '/es/guias-ciudades',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-
-    // 3. Location-Specific Landing Pages
-    {
-      enPath: '/locations/gainesville-fl',
-      esPath: '/es/locations/gainesville-fl',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-    {
-      enPath: '/final-expense-miami',
-      esPath: '/es/seguro-gastos-finales-florida',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-    {
-      enPath: '/burial-insurance-tampa',
-      esPath: '/es/seguro-gastos-finales-tampa',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-    {
-      enPath: '/iul-retirement-tampa',
-      esPath: '/es/iul-jubilacion-tampa',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-    {
-      enPath: '/orlando-spanish-insurance',
-      esPath: '/spanish-insurance-orlando',
-      changefreq: 'weekly',
-      priority: 0.85,
-    },
-
-    // 4. Informational & Contact Pages
-    {
-      enPath: '/faq',
-      esPath: '/es/preguntas-frecuentes',
-      changefreq: 'monthly',
-      priority: 0.8,
-    },
-    {
-      enPath: '/about-andres-bozo',
-      esPath: '/es/sobre-andres-bozo',
-      changefreq: 'monthly',
-      priority: 0.8,
-    },
-    {
-      enPath: '/contact',
-      esPath: '/es/contacto',
-      changefreq: 'monthly',
-      priority: 0.8,
-    },
+  const corePaths = [
+    '/',
+    '/medicare-florida',
+    '/final-expense',
+    '/iul-retirement',
+    '/annuities-florida',
+    '/dental-vision-florida',
+    '/blog',
+    '/city-guides',
+    '/locations/gainesville-fl',
+    '/final-expense-miami',
+    '/burial-insurance-tampa',
+    '/iul-retirement-tampa',
+    '/orlando-spanish-insurance',
+    '/faq',
+    '/about-andres-bozo',
+    '/contact',
+    '/terms',
+    '/privacy',
+    '/blog-generator'
   ];
+
+  const routes: SitemapRouteEntry[] = corePaths.map(p => {
+    const pairs = getRoutePairs(p);
+    let priority = 0.8;
+    let changefreq: SitemapRouteEntry['changefreq'] = 'weekly';
+
+    if (p === '/') {
+      priority = 1.0;
+    } else if (['/medicare-florida', '/final-expense', '/iul-retirement', '/annuities-florida'].includes(p)) {
+      priority = 0.95;
+    } else if (p === '/blog') {
+      priority = 0.85;
+      changefreq = 'daily';
+    }
+
+    return {
+      enPath: pairs.en,
+      esPath: pairs.es,
+      changefreq,
+      priority
+    };
+  });
 
   // 5. Dynamic City Guides from FLORIDA_CITIES
   for (const city of FLORIDA_CITIES) {
+    const pairs = getRoutePairs(`/cities/${city.slug}`);
     routes.push({
-      enPath: `/cities/${city.slug}`,
-      esPath: `/es/ciudades/${city.slug}`,
+      enPath: pairs.en,
+      esPath: pairs.es,
       changefreq: 'weekly',
       priority: 0.8,
     });
@@ -137,9 +77,10 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
 
   // 6. Dynamic Blog Posts from BLOG_POSTS
   for (const post of BLOG_POSTS) {
+    const pairs = getRoutePairs(`/blog/${post.slug.en}`);
     routes.push({
-      enPath: `/blog/${post.slug.en}`,
-      esPath: `/es/blog/${post.slug.es}`,
+      enPath: pairs.en,
+      esPath: pairs.es,
       lastmod: post.date,
       changefreq: 'monthly',
       priority: 0.75,

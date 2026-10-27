@@ -20,14 +20,6 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
     const doc = legalContent[language][activeTab];
     const content = translations[language];
 
-    const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const isEs = language === 'es';
-    const isTerms = activeTab === 'terms';
-
-    const enUrl = `${baseUrl}/${isTerms ? 'terms' : 'privacy'}`;
-    const esUrl = `${baseUrl}/es/${isTerms ? 'terminos' : 'privacidad'}`;
-    const canonical = isEs ? esUrl : enUrl;
-
     useEffect(() => {
         document.documentElement.lang = language;
         document.title = `${doc.title} | AHB Insurance Solutions Florida`;
@@ -49,10 +41,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
         <div className="bg-white text-dark-gray font-sans flex flex-col min-h-screen">
             <SEOHead 
                 title={`${doc.title} | AHB Insurance Solutions Florida`}
-                description={isTerms ? 'Terms of Service for AHB Insurance Solutions.' : 'Privacy Policy for AHB Insurance Solutions.'}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
+                description={activeTab === 'terms' ? 'Terms of Service for AHB Insurance Solutions.' : 'Privacy Policy for AHB Insurance Solutions.'}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={`${doc.title} | AHB Insurance Solutions Florida`}

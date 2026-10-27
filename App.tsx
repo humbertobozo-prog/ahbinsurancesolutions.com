@@ -293,9 +293,7 @@ const App: React.FC = () => {
                 <SEOHead 
                     title={content.meta.title}
                     description={content.meta.description}
-                    canonicalUrl={isEs ? `${baseUrl}/es` : `${baseUrl}/`}
-                    enUrl={`${baseUrl}/`}
-                    esUrl={`${baseUrl}/es`}
+                    pathname={path}
                     language={language}
                     ogImage={`${baseUrl}/og-image.png`}
                     ogImageAlt={isEs ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists"}

@@ -12,9 +12,6 @@ interface AnnuitiesPageProps {
 export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/anualidades-florida' : '/annuities-florida'}`;
-    const enUrl = `${baseUrl}/annuities-florida`;
-    const esUrl = `${baseUrl}/es/anualidades-florida`;
 
     const title = isEs 
         ? 'Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance' 
@@ -149,7 +146,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Anualidades Fijas en Florida" : "Florida Fixed Annuities",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/anualidades-florida' : '/annuities-florida'}`
             }
         ]
     };
@@ -159,9 +156,6 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
                 ogImageAlt={isEs ? "Anualidades Fijas e Indexadas en Florida (MYGA, FIA y Retiro Vitalicio)" : "Florida Fixed & Indexed Annuities (MYGA, FIA and Guaranteed Lifetime Income)"}

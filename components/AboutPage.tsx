@@ -4,6 +4,7 @@ import { SEOHead } from './SEOHead';
 import { WhyChooseUs } from './WhyChooseUs';
 import { translations } from '../constants/translations';
 import { Image } from './Image';
+import { getRoutePairs } from '../utils/routePairs';
 
 interface AboutPageProps {
     language: Language;
@@ -13,9 +14,8 @@ interface AboutPageProps {
 export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
-    const canonical = `${baseUrl}${isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo'}`;
-    const enUrl = `${baseUrl}/about-andres-bozo`;
-    const esUrl = `${baseUrl}/es/sobre-andres-bozo`;
+    const pairs = getRoutePairs(typeof window !== 'undefined' ? window.location.pathname : (isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo'));
+    const canonical = `${baseUrl}${language === 'es' ? pairs.es : pairs.en}`;
 
     const title = isEs 
         ? 'Sobre Andrés H. Bozo | Broker de Seguros Licenciado en Florida (NPN 21228432)' 
@@ -131,7 +131,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 "@type": "ListItem",
                 "position": 2,
                 "name": isEs ? "Sobre Andrés Bozo (NPN 21228432)" : "About Andres Bozo (NPN 21228432)",
-                "item": canonical
+                "item": `${baseUrl}${isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo'}`
             }
         ]
     };
@@ -245,9 +245,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             <SEOHead 
                 title={title}
                 description={description}
-                canonicalUrl={canonical}
-                enUrl={enUrl}
-                esUrl={esUrl}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
                 ogImageAlt={isEs ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)"}
