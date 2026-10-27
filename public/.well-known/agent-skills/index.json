@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "florida-medicare-advisor",
+      "type": "skill-md",
+      "description": "Florida Medicare Supplement (Medigap Plan G and Plan N) advisory guidelines, deductible analysis, and doctor network verification.",
+      "url": "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/medicare-advisor/SKILL.md",
+      "sha256": "098b30d71721db61cbb74d04789dbd8c8e6564762f555000f28da441f491499e",
+      "digest": "sha256:098b30d71721db61cbb74d04789dbd8c8e6564762f555000f28da441f491499e"
+    },
+    {
+      "name": "florida-city-insurance-lookup",
+      "type": "skill-md",
+      "description": "Regional healthcare provider network, senior demographics, and funeral expense lookup for Florida metropolitan areas.",
+      "url": "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/city-insurance-lookup/SKILL.md",
+      "sha256": "53335783693bf66ce81f3e116f2d5c6932f9199bdd902372bb5ce8cf923bc090",
+      "digest": "sha256:53335783693bf66ce81f3e116f2d5c6932f9199bdd902372bb5ce8cf923bc090"
+    },
+    {
+      "name": "final-expense-burial-quotes",
+      "type": "skill-md",
+      "description": "Senior whole life burial insurance qualification, level benefit calculation, and carrier rate guidelines in Florida.",
+      "url": "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/final-expense-quotes/SKILL.md",
+      "sha256": "c69f8e2405028b9474d8abdd71b2918854c9956e1dbe61699bd4a0d7da3280b5",
+      "digest": "sha256:c69f8e2405028b9474d8abdd71b2918854c9956e1dbe61699bd4a0d7da3280b5"
+    },
+    {
+      "name": "ahb-openapi-specification",
+      "type": "openapi",
+      "description": "OpenAPI 3.1.0 specification for AHB Insurance Solutions contact leads, Gemini article generation, and OAuth 2.0 authentication endpoints.",
+      "url": "https://www.ahbinsurancesolutions.com/api/openapi.json",
+      "sha256": "5d67c29d8acc3fce68ec3bc4ebadcbf710b32cd85041f32486633214b6f53442",
+      "digest": "sha256:5d67c29d8acc3fce68ec3bc4ebadcbf710b32cd85041f32486633214b6f53442"
+    }
+  ]
+}

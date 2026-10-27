@@ -34,7 +34,7 @@ async function startServer() {
     res.setHeader("Alt-Svc", 'h3=":443"; ma=86400');
     res.setHeader(
       "Link",
-      '</auth.md>; rel="agent-auth", </.well-known/oauth-protected-resource>; rel="oauth2-protected-resource", </.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
+      '</auth.md>; rel="agent-auth", </.well-known/oauth-protected-resource>; rel="oauth2-protected-resource", </.well-known/oauth-authorization-server>; rel="oauth2-authorization-server", </.well-known/openid-configuration>; rel="indieauth-metadata", </.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json", </.well-known/agent-skills/index.json>; rel="agent-skills", </llms.txt>; rel="service-doc", </sitemap.xml>; rel="sitemap"'
     );
 
     if (!isDev) {
@@ -158,26 +158,114 @@ async function startServer() {
     ],
   };
 
+  // RFC 9727 & RFC 9264 Linkset API Catalog
   const apiCatalogData = {
-    services: [
+    linkset: [
       {
-        name: "AHB Insurance Solutions Lead API",
-        description: "Secure endpoint to submit contact and quote consultation requests for Florida insurance",
-        endpoint: "https://www.ahbinsurancesolutions.com/api/contact",
-        methods: ["POST"],
+        anchor: "https://www.ahbinsurancesolutions.com/api",
+        "service-desc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/openapi.json",
+            type: "application/vnd.oai.openapi+json",
+          },
+        ],
+        "service-doc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/auth.md",
+            type: "text/markdown",
+          },
+          {
+            href: "https://www.ahbinsurancesolutions.com/llms.txt",
+            type: "text/plain",
+          },
+        ],
+        status: [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/health",
+            type: "application/json",
+          },
+        ],
       },
       {
-        name: "Health Status API",
-        description: "Health check for AHB Insurance Solutions API server",
-        endpoint: "https://www.ahbinsurancesolutions.com/api/health",
-        methods: ["GET"],
+        anchor: "https://www.ahbinsurancesolutions.com/api/contact",
+        "service-desc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/openapi.json",
+            type: "application/vnd.oai.openapi+json",
+          },
+        ],
+        "service-doc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/auth.md",
+            type: "text/markdown",
+          },
+        ],
+        status: [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/health",
+            type: "application/json",
+          },
+        ],
       },
       {
-        name: "AI Insurance Educational Article Generator",
-        description: "Protected Gemini-powered educational insurance article generation for licensed agents",
-        endpoint: "https://www.ahbinsurancesolutions.com/api/generate-blog",
-        methods: ["POST"],
-        authentication: "Bearer token / OAuth 2.0",
+        anchor: "https://www.ahbinsurancesolutions.com/api/generate-blog",
+        "service-desc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/openapi.json",
+            type: "application/vnd.oai.openapi+json",
+          },
+        ],
+        "service-doc": [
+          {
+            href: "https://www.ahbinsurancesolutions.com/auth.md",
+            type: "text/markdown",
+          },
+        ],
+        status: [
+          {
+            href: "https://www.ahbinsurancesolutions.com/api/health",
+            type: "application/json",
+          },
+        ],
+      },
+    ],
+  };
+
+  // Agent Skills Discovery Index (RFC v0.2.0)
+  const agentSkillsData = {
+    $schema: "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+    skills: [
+      {
+        name: "florida-medicare-advisor",
+        type: "skill-md",
+        description: "Florida Medicare Supplement (Medigap Plan G and Plan N) advisory guidelines, deductible analysis, and doctor network verification.",
+        url: "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/medicare-advisor/SKILL.md",
+        sha256: "098b30d71721db61cbb74d04789dbd8c8e6564762f555000f28da441f491499e",
+        digest: "sha256:098b30d71721db61cbb74d04789dbd8c8e6564762f555000f28da441f491499e",
+      },
+      {
+        name: "florida-city-insurance-lookup",
+        type: "skill-md",
+        description: "Regional healthcare provider network, senior demographics, and funeral expense lookup for Florida metropolitan areas.",
+        url: "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/city-insurance-lookup/SKILL.md",
+        sha256: "53335783693bf66ce81f3e116f2d5c6932f9199bdd902372bb5ce8cf923bc090",
+        digest: "sha256:53335783693bf66ce81f3e116f2d5c6932f9199bdd902372bb5ce8cf923bc090",
+      },
+      {
+        name: "final-expense-burial-quotes",
+        type: "skill-md",
+        description: "Senior whole life burial insurance qualification, level benefit calculation, and carrier rate guidelines in Florida.",
+        url: "https://www.ahbinsurancesolutions.com/.well-known/agent-skills/final-expense-quotes/SKILL.md",
+        sha256: "c69f8e2405028b9474d8abdd71b2918854c9956e1dbe61699bd4a0d7da3280b5",
+        digest: "sha256:c69f8e2405028b9474d8abdd71b2918854c9956e1dbe61699bd4a0d7da3280b5",
+      },
+      {
+        name: "ahb-openapi-specification",
+        type: "openapi",
+        description: "OpenAPI 3.1.0 specification for AHB Insurance Solutions contact leads, Gemini article generation, and OAuth 2.0 authentication endpoints.",
+        url: "https://www.ahbinsurancesolutions.com/api/openapi.json",
+        sha256: "5d67c29d8acc3fce68ec3bc4ebadcbf710b32cd85041f32486633214b6f53442",
+        digest: "sha256:5d67c29d8acc3fce68ec3bc4ebadcbf710b32cd85041f32486633214b6f53442",
       },
     ],
   };
@@ -198,32 +286,67 @@ async function startServer() {
 
   app.get("/.well-known/openid-configuration", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(oidcMetadata);
   });
 
   app.get("/.well-known/oauth-authorization-server", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(oauthMetadata);
   });
 
   app.get("/.well-known/oauth-protected-resource", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(protectedResourceMetadata);
   });
 
   app.get("/.well-known/jwks.json", (_req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(jwksData);
   });
 
+  // RFC 9727 / RFC 9264 API Catalog Route
   app.get("/.well-known/api-catalog", (_req, res) => {
-    res.setHeader("Content-Type", "application/json; charset=utf-8");
+    res.setHeader("Content-Type", "application/linkset+json; charset=utf-8");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
     res.json(apiCatalogData);
+  });
+
+  // Agent Skills Discovery RFC v0.2.0 Index (supports direct and directory endpoints)
+  app.get(
+    [
+      "/.well-known/agent-skills/index.json",
+      "/.well-known/agent-skills",
+      "/.well-known/agent-skills/",
+      "/.well-known/skills/index.json",
+      "/.well-known/skills",
+    ],
+    (_req, res) => {
+      res.setHeader("Content-Type", "application/json; charset=utf-8");
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Access-Control-Allow-Methods", "GET, HEAD, OPTIONS");
+      res.setHeader("Access-Control-Allow-Headers", "*");
+      res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+      res.json(agentSkillsData);
+    }
+  );
+
+  // OpenAPI 3.1.0 Specification Endpoint
+  app.get("/api/openapi.json", (_req, res) => {
+    const openApiPath = fs.existsSync(path.join(process.cwd(), "public", "api", "openapi.json"))
+      ? path.join(process.cwd(), "public", "api", "openapi.json")
+      : path.join(process.cwd(), "dist", "api", "openapi.json");
+    res.setHeader("Content-Type", "application/vnd.oai.openapi+json; charset=utf-8");
+    res.setHeader("Cache-Control", "public, max-age=86400, stale-while-revalidate");
+    res.sendFile(openApiPath);
   });
 
   // Dynamic Agent Client Registration Endpoint (RFC 7591)

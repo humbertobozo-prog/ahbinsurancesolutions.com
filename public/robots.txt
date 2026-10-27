@@ -9,20 +9,24 @@ Allow: /
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
 # Protect internal assets, build outputs, and potential administrative/api paths
-Disallow: /api/
 Disallow: /admin/
 Disallow: /_app/
 Disallow: /private/
-Disallow: /*.json$
 Disallow: /*.zip$
 
-# Allow specific public resources needed for rich snippets and crawlers
+# Allow specific public resources needed for rich snippets, agents, and crawlers
 Allow: /sitemap.xml
 Allow: /favicon.svg
 Allow: /manifest.json
 Allow: /andresbozoofi.webp
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /auth.md
+Allow: /.well-known/
+Allow: /.well-known/*
+Allow: /.well-known/agent-skills/index.json
+Allow: /api/openapi.json
+Allow: /api/health
 
 # AI Search & Crawler direct permissions
 User-agent: Googlebot
