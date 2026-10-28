@@ -38,7 +38,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/gastos-finales" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/final-expense" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/gastos-finales</loc>
@@ -46,7 +46,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/gastos-finales" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/final-expense" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/iul-retirement</loc>
@@ -54,7 +54,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/iul-jubilacion" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/iul-retirement" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/iul-jubilacion</loc>
@@ -62,7 +62,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/iul-jubilacion" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/iul-retirement" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/annuities-florida</loc>
@@ -70,7 +70,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/anualidades-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/annuities-florida" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/anualidades-florida</loc>
@@ -78,7 +78,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/anualidades-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/annuities-florida" />
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/dental-vision-florida</loc>
@@ -86,7 +86,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/dental-vision-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/dental-vision-florida" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/dental-vision-florida</loc>
@@ -94,7 +94,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/dental-vision-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/dental-vision-florida" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/blog</loc>
@@ -118,7 +118,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/guias-ciudades" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/city-guides" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/guias-ciudades</loc>
@@ -126,7 +126,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/guias-ciudades" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/city-guides" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/locations/gainesville-fl</loc>
@@ -134,7 +134,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/locations/gainesville-fl" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl</loc>
@@ -142,7 +142,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/locations/gainesville-fl" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/locations/gainesville-fl" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/final-expense-miami</loc>
@@ -150,7 +150,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/final-expense-miami" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-florida</loc>
@@ -158,7 +158,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-florida" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/final-expense-miami" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/burial-insurance-tampa</loc>
@@ -166,7 +166,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-tampa" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/burial-insurance-tampa" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-tampa</loc>
@@ -174,7 +174,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/seguro-gastos-finales-tampa" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/burial-insurance-tampa" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/iul-retirement-tampa</loc>
@@ -182,7 +182,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/iul-jubilacion-tampa" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/iul-retirement-tampa" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/es/iul-jubilacion-tampa</loc>
@@ -190,7 +190,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/iul-jubilacion-tampa" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/iul-retirement-tampa" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/orlando-spanish-insurance</loc>
@@ -198,7 +198,7 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/spanish-insurance-orlando" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/orlando-spanish-insurance" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/spanish-insurance-orlando</loc>
@@ -206,14 +206,14 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/spanish-insurance-orlando" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/orlando-spanish-insurance" />
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.ahbinsurancesolutions.com/faq</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/faq" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/preguntas-frecuentes" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/faq" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -221,7 +221,7 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/faq" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/preguntas-frecuentes" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/faq" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -229,7 +229,7 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -237,7 +237,7 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/about-andres-bozo" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -245,7 +245,7 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/contact" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/contacto" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/contact" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -253,7 +253,71 @@
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/contact" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/contacto" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/contact" />
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/terms" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/terms" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/terminos</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/terms" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/terminos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/terms" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/privacy" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/privacy" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/blog-generator</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog-generator" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/generador-blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog-generator" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/generador-blog</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog-generator" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/generador-blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog-generator" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/editorial-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/politica-editorial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/editorial-policy" />
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/politica-editorial</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/editorial-policy" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/politica-editorial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/editorial-policy" />
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
@@ -419,6 +483,42 @@
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/blog/iul-vs-401k-jubilacion-libre-de-impuestos" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog/iul-vs-401k-tax-free-retirement" />
     <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/blog/medicare-part-d-formulary-changes-florida-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog/medicare-part-d-formulary-changes-florida-2026" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/blog/cambios-formulario-medicare-parte-d-florida-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog/medicare-part-d-formulary-changes-florida-2026" />
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/blog/cambios-formulario-medicare-parte-d-florida-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog/medicare-part-d-formulary-changes-florida-2026" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/blog/cambios-formulario-medicare-parte-d-florida-2026" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog/medicare-part-d-formulary-changes-florida-2026" />
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/blog/iul-retirement-planning-tax-efficiency-florida</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog/iul-retirement-planning-tax-efficiency-florida" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog/iul-retirement-planning-tax-efficiency-florida" />
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.ahbinsurancesolutions.com/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog/iul-retirement-planning-tax-efficiency-florida" />
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/blog/planificacion-retiro-iul-eficiencia-fiscal-florida" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog/iul-retirement-planning-tax-efficiency-florida" />
+    <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

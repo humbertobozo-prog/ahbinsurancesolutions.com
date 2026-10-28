@@ -817,18 +817,20 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
       appType: "custom",
     });
 
+    app.use(vite.middlewares);
+
     // Handle HTML & Markdown pre-rendering BEFORE vite middlewares intercept requests
     app.get("*all", async (req, res, next) => {
       try {
         const isMdPath = req.path.endsWith(".md");
         const wantsMarkdown = isMdPath || isMarkdownRequest(req);
 
-        // Skip serving HTML for static files, assets, or Vite internal scripts like /@vite/client
+        // Skip pre-rendering for API requests, internal Vite paths, or assets handled by Vite
         if (
-          (!isMdPath && req.path.includes(".")) ||
           req.path.startsWith("/api/") ||
           req.path.startsWith("/@") ||
-          req.path.includes("node_modules")
+          req.path.includes("node_modules") ||
+          req.path.match(/\.(jpg|png|webp|svg|css|js|woff2|ico)$/)
         ) {
           return next();
         }
@@ -897,7 +899,7 @@ Ensure semantic depth with LSI keywords related to Florida Medicare, Medigap, IU
         const wantsMarkdown = isMdPath || isMarkdownRequest(req);
 
         // Skip serving HTML for static files / assets, let other routes/static handle or return 404
-        if ((!isMdPath && req.path.includes(".")) || req.path.startsWith("/api/")) {
+        if (req.path.match(/\.(jpg|png|webp|svg)$/) || req.path.startsWith("/api/")) {
           return res.status(404).send("Not found");
         }
 
