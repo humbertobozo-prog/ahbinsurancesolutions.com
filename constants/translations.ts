@@ -223,6 +223,14 @@ export const translations: Record<Language, TranslationContent> = {
       backButton: "Back",
       stepLabel: "Step"
     },
+    editorialPolicy: {
+      title: "Editorial Policy",
+      commitmentTitle: "Our Commitment to Accuracy",
+      commitmentText: "All content is reviewed by licensed insurance professionals to ensure it adheres to current regulations, including CMS guidelines. We strive to provide up-to-date information that helps our clients make informed decisions about their financial and health security.",
+      independenceTitle: "Independence",
+      independenceText: "We are an independent insurance agency. Our recommendations are based on client needs, eligibility, and objective comparisons of available carriers, not on corporate pressure or sales quotas.",
+      intro: "At AHB Insurance Solutions, we are committed to providing transparent, accurate, and expert-driven information regarding Medicare, Final Expense, and life insurance."
+    },
     footer: {
         companyName: "AHB Insurance Solutions LLC",
         description: "Your independent partner for a secure and dignified retirement.",
@@ -478,6 +486,14 @@ export const translations: Record<Language, TranslationContent> = {
       errorMessage: "Error de envío. Por favor intente de nuevo o llámenos directamente.",
       backButton: "Atrás",
       stepLabel: "Paso"
+    },
+    editorialPolicy: {
+      title: "Política Editorial",
+      commitmentTitle: "Nuestro Compromiso con la Exactitud",
+      commitmentText: "Todo el contenido es revisado por profesionales de seguros licenciados para asegurar que cumpla con las regulaciones vigentes, incluyendo las guías de CMS. Nos esforzamos por proporcionar información actualizada que ayude a nuestros clientes a tomar decisiones informadas sobre su seguridad financiera y de salud.",
+      independenceTitle: "Independencia",
+      independenceText: "Somos una agencia de seguros independiente. Nuestras recomendaciones se basan en las necesidades del cliente, elegibilidad y comparaciones objetivas de las aseguradoras disponibles, no en presiones corporativas o cuotas de venta.",
+      intro: "En AHB Insurance Solutions, estamos comprometidos a brindar información transparente, precisa y orientada por expertos sobre Medicare, Gastos Finales y seguros de vida."
     },
     footer: {
         companyName: "AHB Insurance Solutions LLC",

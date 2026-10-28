@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         <span>+1 (352) 225-8389</span>
                     </a>
                     <a 
-                        href={contactPath} 
+                        href="/contact" 
                         onClick={(e) => navigateTo(e, contactPath)} 
                         className="bg-accent text-primary px-3.5 py-2 lg:px-4 lg:py-2 rounded-xl font-black uppercase tracking-widest text-[11px] lg:text-xs hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none transition-all shadow-md ml-1"
                     >

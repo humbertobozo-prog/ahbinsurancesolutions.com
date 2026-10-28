@@ -313,9 +313,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "sameAs": [
                 "https://www.facebook.com/ahbinsurancesolutions",
                 "https://www.instagram.com/ahbinsurancesolutions",
-                "https://www.linkedin.com/in/andres-bozo-npn-21228432",
-                "https://licenseesearch.fldfs.com/",
-                "https://nipr.com/"
+                "https://www.linkedin.com/in/andres-bozo-npn-21228432"
             ],
             "founder": {
                 "@type": "Person",

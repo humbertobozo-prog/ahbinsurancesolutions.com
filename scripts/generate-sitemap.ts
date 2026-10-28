@@ -39,7 +39,8 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     '/contact',
     '/terms',
     '/privacy',
-    '/blog-generator'
+    '/blog-generator',
+    '/editorial-policy'
   ];
 
   const routes: SitemapRouteEntry[] = corePaths.map(p => {

@@ -1,17 +1,14 @@
 import React from 'react';
 import type { TranslationContent } from '../types';
-import { Image } from './Image';
+import { Author } from './Author';
 
 interface AboutUsProps {
     content: TranslationContent['aboutUs'];
-    common: TranslationContent['common'];
+    common?: TranslationContent['common'];
     priority?: boolean;
 }
 
-export const AboutUs: React.FC<AboutUsProps> = ({ content, common, priority = false }) => {
-    // Rutas de las imágenes locales.
-    const imageSrc = "/andresbozoofi.webp"; 
-    const imageSm = "/andresbozoofi-sm.webp"; 
+export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) => {
 
     return (
         <section id="about-us" className="py-6 md:py-10 bg-white overflow-hidden" aria-labelledby="about-heading">
@@ -71,63 +68,12 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, common, priority = fa
                     </div>
 
                     {/* Columna de Imagen - order-2 en móvil */}
-                    <div className="w-full lg:w-5/12 relative order-2 lg:order-1 mt-4 lg:mt-0">
-                        {/* Decoraciones de fondo */}
-                        <div className="absolute -top-12 -left-12 w-72 h-72 bg-accent/15 rounded-full blur-3xl -z-10 animate-pulse" aria-hidden="true"></div>
-                        <div className="absolute -bottom-12 -right-12 w-56 h-56 bg-secondary/15 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true"></div>
-                        
-                        <div className="relative group">
-                            {/* Marco decorativo */}
-                            <div className="absolute -inset-2 bg-gradient-to-tr from-primary via-accent to-secondary rounded-[2.5rem] blur-md opacity-25 group-hover:opacity-40 transition duration-1000" aria-hidden="true"></div>
-                            
-                            <div className="relative bg-white rounded-[2.3rem] p-3 shadow-2xl overflow-hidden border border-gray-100">
-                                <div className="overflow-hidden rounded-[1.8rem] bg-gray-100 aspect-[4/5] relative shadow-inner">
-                                    <Image 
-                                        src={imageSrc}
-                                        srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}
-                                        sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
-                                        alt={content.imageAlt} 
-                                        width="500"
-                                        height="625"
-                                        decoding="async"
-                                        className="w-full h-full object-cover transition-transform duration-[5s] ease-out group-hover:scale-105" 
-                                        containerClassName="w-full h-full"
-                                        style={{ 
-                                            objectPosition: '50% 20%' 
-                                        }}
-                                        loading={priority ? "eager" : "lazy"}
-                                        fetchPriority={priority ? "high" : "auto"}
-                                        sources={[{
-                                            type: "image/webp",
-                                            srcSet: `${imageSm} 480w, ${imageSrc} 1000w`,
-                                            sizes: "(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 500px"
-                                        }]}
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent opacity-60" aria-hidden="true"></div>
-                                </div>
-                                
-                                {/* Etiqueta de Identidad */}
-                                <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
-                                    <div className="bg-white/95 backdrop-blur-xl px-6 py-4 sm:px-8 sm:py-6 rounded-2xl border-l-4 border-accent shadow-[0_20px_50px_-15px_rgba(0,51,102,0.4)] transform translate-y-1 group-hover:translate-y-0 transition-all duration-500 border border-white/20">
-                                        <div className="flex flex-col">
-                                            <span className="text-primary font-heading font-black text-xl sm:text-2xl tracking-tight leading-none mb-2">Andres H. Bozo</span>
-                                            <div className="flex items-center">
-                                                <div className="h-[2px] w-6 sm:w-8 bg-accent mr-3" aria-hidden="true"></div>
-                                                <div className="group/npn relative focus-within:ring-2 focus-within:ring-accent outline-none rounded p-0.5" tabIndex={0}>
-                                                    <span className="text-secondary text-[9px] sm:text-[11px] font-black uppercase tracking-[0.2em] sm:tracking-[0.25em] cursor-help">
-                                                        {content.identityBadge}
-                                                    </span>
-                                                    <div className="absolute bottom-full left-0 mb-2 hidden group-hover/npn:block group-focus/npn:block w-48 p-2 bg-dark-gray text-white text-[10px] rounded shadow-xl z-50 animate-fade-in-up normal-case tracking-normal font-medium">
-                                                        {common.npnTooltip}
-                                                        <div className="absolute top-full left-4 border-8 border-transparent border-t-dark-gray" aria-hidden="true"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div className="w-full lg:w-5/12 order-2 lg:order-1 mt-4 lg:mt-0">
+                        <Author 
+                            variant="card" 
+                            language={content.badge === "TRUSTED ADVISOR" ? "en" : "es"} 
+                            priority={priority} 
+                        />
                     </div>
                 </div>
             </div>

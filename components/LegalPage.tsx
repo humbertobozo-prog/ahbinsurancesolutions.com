@@ -225,7 +225,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
                 </div>
             </main>
 
-            <Footer content={content.footer} common={content.common} />
+            <Footer content={content.footer} common={content.common} language={language} />
         </div>
     );
 };

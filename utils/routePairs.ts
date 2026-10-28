@@ -59,7 +59,9 @@ const STATIC_ROUTE_PAIRS: Record<string, RoutePair> = {
   "/gainesville-fl-insurance": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
   "/es/seguros-gainesville-fl": { en: "/locations/gainesville-fl", es: "/es/locations/gainesville-fl" },
   "/blog-generator": { en: "/blog-generator", es: "/es/generador-blog" },
-  "/es/generador-blog": { en: "/blog-generator", es: "/es/generador-blog" }
+  "/es/generador-blog": { en: "/blog-generator", es: "/es/generador-blog" },
+  "/editorial-policy": { en: "/editorial-policy", es: "/es/politica-editorial" },
+  "/es/politica-editorial": { en: "/editorial-policy", es: "/es/politica-editorial" }
 };
 
 export function getRoutePairs(pathname: string): RoutePair {

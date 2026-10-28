@@ -48,6 +48,7 @@ const LocationLandingPage = React.lazy(() => import('./components/LocationLandin
 const GainesvilleLocationPage = React.lazy(() => import('./components/GainesvilleLocationPage').then(m => ({ default: m.GainesvilleLocationPage })));
 const LegalPage = React.lazy(() => import('./components/LegalPage').then(m => ({ default: m.LegalPage })));
 const CityGuides = React.lazy(() => import('./components/CityGuides').then(m => ({ default: m.CityGuides })));
+const EditorialPolicyPage = React.lazy(() => import('./components/EditorialPolicyPage').then(m => ({ default: m.EditorialPolicyPage })));
 const NotFoundPage = React.lazy(() => import('./components/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
 
 const Services = React.lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
@@ -110,6 +111,9 @@ const App: React.FC = () => {
             } else if (currentPath === '/privacidad' || currentPath === '/privacidad/') {
                 window.history.replaceState({}, '', '/es/privacidad');
                 currentPath = '/es/privacidad';
+            } else if (currentPath === '/politica-editorial' || currentPath === '/es/politica-editorial' || currentPath === '/es/politica-editorial/') {
+                window.history.replaceState({}, '', '/es/politica-editorial');
+                currentPath = '/es/politica-editorial';
             }
 
             setPath(currentPath);
@@ -273,6 +277,8 @@ const App: React.FC = () => {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><AboutPage language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/contact' || cleanPath === '/es/contacto') {
         mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><ContactPage language={language} /></Suspense>;
+    } else if (cleanPath === '/editorial-policy' || cleanPath === '/es/politica-editorial') {
+        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><EditorialPolicyPage language={language} setLanguage={setLanguage} /></Suspense>;
     } else if (cleanPath === '/' || cleanPath === '/es' || cleanPath === '') {
         // Main Home View
         const homeBreadcrumbSchema = {
@@ -370,7 +376,7 @@ const App: React.FC = () => {
                 {mainContentComponent}
             </main>
             <Suspense fallback={<div className="h-[400px]" />}>
-                <Footer content={content.footer} common={content.common} onOpenLegalModal={handleOpenLegalModal} />
+                <Footer content={content.footer} common={content.common} language={language} onOpenLegalModal={handleOpenLegalModal} />
             </Suspense>
             <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} language={language} />
             <BackToTopButton />

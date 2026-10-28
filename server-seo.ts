@@ -77,7 +77,9 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/gainesville-fl-insurance",
   "/es/seguros-gainesville-fl",
   "/blog-generator",
-  "/es/generador-blog"
+  "/es/generador-blog",
+  "/editorial-policy",
+  "/es/politica-editorial"
 ]);
 
 export function isKnownRoute(requestPath: string): boolean {
@@ -1751,6 +1753,39 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
       `;
     }
+  }
+
+  // 8.5 Editorial Policy
+  else if (cleanPath === "/editorial-policy" || cleanPath === "/es/politica-editorial") {
+    title = isEs 
+      ? "Política Editorial | AHB Insurance Solutions" 
+      : "Editorial Policy | AHB Insurance Solutions";
+    description = isEs
+      ? "Lea nuestra política editorial sobre cómo revisamos y proporcionamos información precisa sobre seguros Medicare y de vida en Florida."
+      : "Read our editorial policy on how we review and provide accurate Medicare and life insurance information in Florida.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+    ogImageAlt = title;
+    datePublished = "2024-10-20";
+    dateModified = "2026-10-27";
+    bodyOutline = isEs ? `
+      <header>
+        <h1>Política Editorial de AHB Insurance Solutions</h1>
+        <p>${description}</p>
+      </header>
+      <section>
+        <h2>Compromiso con la Verdad y la Transparencia</h2>
+        <p>Nuestro contenido es creado y verificado por agentes de seguros licenciados en Florida para cumplir con las normativas de CMS y del Departamento de Servicios Financieros de Florida.</p>
+      </section>
+    ` : `
+      <header>
+        <h1>AHB Insurance Solutions Editorial Policy</h1>
+        <p>${description}</p>
+      </header>
+      <section>
+        <h2>Commitment to Accuracy</h2>
+        <p>Our content is authored and vetted by licensed Florida insurance professionals to ensure compliance with CMS and Florida Department of Financial Services regulations.</p>
+      </section>
+    `;
   }
 
   // 9. Localized Landing Pages (final-expense-miami, burial-insurance-tampa, iul-retirement-tampa, etc.)

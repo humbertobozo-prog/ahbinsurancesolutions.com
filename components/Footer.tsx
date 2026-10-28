@@ -1,10 +1,12 @@
 import React from 'react';
 import type { TranslationContent } from '../types';
 import { Logo } from './Logo';
+import { Author } from './Author';
 
 interface FooterProps {
     content: TranslationContent['footer'];
     common: TranslationContent['common'];
+    language?: 'en' | 'es';
     onOpenLegalModal?: (tab: 'terms' | 'privacy') => void;
 }
 
@@ -14,13 +16,22 @@ const INSTAGRAM_URL = "https://www.instagram.com/ahbinsurancesolutions";
 const LINKEDIN_URL = "https://www.linkedin.com/in/andres-bozo-npn-21228432";
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA";
 
-export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModal }) => {
+export const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpenLegalModal }) => {
+    const isEs = language === 'es';
     return (
         <footer className="bg-primary text-white pt-16 pb-8 min-h-[400px]" aria-label="Main Footer">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
                     <div className="lg:col-span-4">
-                        <Logo variant="light" className="mb-4" aria-hidden="true" />
+                        <Logo variant="light" className="mb-6" aria-hidden="true" />
+                        
+                        <Author 
+                            variant="compact" 
+                            theme="dark" 
+                            language={language} 
+                            className="mb-6" 
+                        />
+
                         <p className="text-gray-200 mb-4 leading-relaxed">{content.description}</p>
                         
                         <div className="group relative border-t border-white/20 pt-2 inline-block focus-within:ring-2 focus-within:ring-accent rounded p-1 outline-none" tabIndex={0}>
@@ -86,6 +97,15 @@ export const Footer: React.FC<FooterProps> = ({ content, common, onOpenLegalModa
                                     className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block"
                                 >
                                     {content.links.terms}
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href={isEs ? '/es/politica-editorial' : '/editorial-policy'} 
+                                    onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', isEs ? '/es/politica-editorial' : '/editorial-policy'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }}
+                                    className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block"
+                                >
+                                    {isEs ? 'Política Editorial' : 'Editorial Policy'}
                                 </a>
                             </li>
                         </ul>

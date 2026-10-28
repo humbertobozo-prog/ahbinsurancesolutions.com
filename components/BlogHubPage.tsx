@@ -127,26 +127,36 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                         <h1 className="text-2xl sm:text-4xl md:text-5xl font-black font-heading text-primary leading-tight mb-4">
                             {postTitle}
                         </h1>
-                        <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 pb-6 border-b border-gray-200">
-                            <div className="flex items-center gap-2">
+                        <div className="flex flex-wrap items-center gap-6 text-sm text-gray-700 pb-8 border-b border-gray-200">
+                            <div className="flex items-center gap-3">
                                 <Image 
                                     src={currentPost.author.image} 
                                     alt={currentPost.author.name} 
                                     className="w-full h-full object-cover" 
-                                    containerClassName="w-8 h-8 rounded-full border border-gray-300 overflow-hidden flex-shrink-0"
+                                    containerClassName="w-12 h-12 rounded-full border-2 border-primary overflow-hidden flex-shrink-0"
                                     loading="lazy"
-                                    width="32"
-                                    height="32"
+                                    width="48"
+                                    height="48"
                                 />
                                 <div>
-                                    <p className="font-bold text-gray-800">{currentPost.author.name}</p>
-                                    <p className="text-[10px] text-primary">Broker NPN: {currentPost.author.npn}</p>
+                                    <p className="font-bold text-gray-900">
+                                        <span className="text-gray-500 font-normal">Written by </span> 
+                                        {currentPost.author.name}
+                                    </p>
+                                    <p className="text-xs text-primary font-bold uppercase tracking-wider">
+                                        {currentPost.author.title} | NPN: {currentPost.author.npn}
+                                    </p>
                                 </div>
                             </div>
-                            <span>•</span>
-                            <span>{currentPost.date}</span>
-                            <span>•</span>
-                            <span>{currentPost.readTime}</span>
+                            <div className="h-8 w-px bg-gray-300 hidden sm:block"></div>
+                            <div className="text-gray-600">
+                                <p className="text-[10px] uppercase font-bold text-gray-400">Published</p>
+                                <p className="font-medium">{currentPost.date}</p>
+                            </div>
+                            <div className="text-gray-600">
+                                <p className="text-[10px] uppercase font-bold text-gray-400">Read Time</p>
+                                <p className="font-medium">{currentPost.readTime}</p>
+                            </div>
                         </div>
                     </div>
 

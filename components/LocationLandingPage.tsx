@@ -356,7 +356,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             </main>
 
             {/* Structured Local NAP Footer */}
-            <Footer content={content.footer} common={content.common} onOpenLegalModal={onOpenLegalModal} />
+            <Footer content={content.footer} common={content.common} language={activeLang} onOpenLegalModal={onOpenLegalModal} />
             <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} />
             <BackToTopButton />
             <TapToCallButton label={content.tapToCallButton.label} phone={content.tapToCallButton.phone} />
