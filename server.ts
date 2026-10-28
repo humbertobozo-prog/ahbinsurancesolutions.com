@@ -25,6 +25,8 @@ async function startServer() {
     level: 6,
     filter: (req, res) => {
       if (req.headers['x-no-compression']) return false;
+      const path = req.path;
+      if (path.match(/\.(js|css|png|jpg|jpeg|gif|webp|svg|woff2?|ico)$/)) return false;
       return compression.filter(req, res);
     }
   }));
