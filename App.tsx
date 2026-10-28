@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-const KeyTakeaways = lazy(() => import('./components/KeyTakeaways').then(m => ({ default: m.KeyTakeaways })));
+import { KeyTakeaways } from './components/KeyTakeaways';
 const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
@@ -307,9 +307,8 @@ const App: React.FC = () => {
                     dateModified="2026-10-10"
                     schema={homeBreadcrumbSchema}
                 />
-                <Suspense fallback={<div className="h-20 bg-gray-100 animate-pulse" />}>
-                    <KeyTakeaways content={content.keyTakeaways} />
-                </Suspense>
+                <Hero content={content.hero} language={language} />
+                <KeyTakeaways content={content.keyTakeaways} />
                 
                 <ErrorBoundary componentName="Services">
                     <Suspense fallback={<Spinner height="py-32" />}>

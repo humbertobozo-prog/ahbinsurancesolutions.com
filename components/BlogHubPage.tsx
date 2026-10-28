@@ -246,6 +246,8 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
         return matchesCategory && matchesSearch;
     });
 
+    const canonical = `${baseUrl}${isEs ? '/es/blog' : '/blog'}`;
+
     const blogBreadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
