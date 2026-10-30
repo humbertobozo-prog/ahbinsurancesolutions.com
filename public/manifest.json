@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "short_name": "AHB Insurance",
   "name": "AHB Insurance Solutions | Medicare, Final Expense & IUL",
   "icons": [
@@ -6,9 +7,22 @@
       "src": "/favicon.svg",
       "type": "image/svg+xml",
       "sizes": "48x48 72x72 96x96 128x128 256x256 512x512"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": "/",
+  "scope": "/",
   "background_color": "#FFFFFF",
   "theme_color": "#002855",
   "display": "standalone",

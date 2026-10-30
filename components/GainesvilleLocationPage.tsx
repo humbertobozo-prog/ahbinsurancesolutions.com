@@ -94,7 +94,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         "@type": "ListItem",
         "position": 3,
         "name": "Gainesville, FL Insurance Broker",
-        "item": `${baseUrl}${isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl'}`
+        "item": `${baseUrl}${isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl'}`
       }
     ]
   };
@@ -198,7 +198,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
             onClick={() => {
               const newLang = isEs ? 'en' : 'es';
               setLanguage(newLang);
-              const newPath = newLang === 'es' ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl';
+              const newPath = newLang === 'es' ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl';
               window.history.pushState({}, '', newPath);
               window.dispatchEvent(new Event('popstate'));
             }}

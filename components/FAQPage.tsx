@@ -102,7 +102,7 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                         </span>
                     </div>
                     <span className="text-xs text-gray-500 font-semibold hidden sm:inline">
-                        {isEs ? 'Actualizado para Florida 2026' : 'Updated for Florida 2026'}
+                        {isEs ? 'Actualizado para Florida 2026–2027 (AEP Activo)' : 'Updated for Florida 2026–2027 (Active AEP)'}
                     </span>
                 </div>
             </nav>

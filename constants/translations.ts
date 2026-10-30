@@ -27,7 +27,7 @@ export const translations: Record<Language, TranslationContent> = {
     hero: {
       heading: "Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida",
       subheading: "At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare available options from multiple insurance carriers to find the perfect plan for your unique needs. With Medigap, you can generally see any healthcare provider nationwide who accepts Medicare, subject to Medicare and Medigap rules. Our Final Expense options include permanent whole life policies from $5,000 to $35,000, including policies that may offer level premiums subject to contract terms. We also offer fixed and fixed indexed annuity strategies designed to provide contract-based interest-crediting and income options without directly investing premiums in the stock market.",
-      cta: "Check 2026 Florida Eligibility ➔",
+      cta: "Check 2027 Florida Eligibility ➔",
       trustText: "🔒 Licensed Professional | NPN: 21228432 | Florida Licensed Broker"
     },
     cta: {
@@ -133,7 +133,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     testimonials: {
       title: "What Our Clients Say",
-      label: "Real Experiences",
+      label: "Client Reviews",
       items: [
         {
           quote: "Andres made the Medicare maze so easy to understand. I finally have the coverage I need without the stress!",
@@ -178,7 +178,7 @@ export const translations: Record<Language, TranslationContent> = {
         ]
     },
     contactForm: {
-      mainTitle: "Check Your 2026 Eligibility. Answer 3 quick questions to see your rates.",
+      mainTitle: "Check Your 2027 Eligibility. Answer 3 quick questions to see your rates.",
       licenseInfo: "Licensed Broker | NPN: 21228432",
       secureConnection: "Secured by Advanced CDN",
       steps: {
@@ -291,7 +291,7 @@ export const translations: Record<Language, TranslationContent> = {
     hero: {
       heading: "Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida",
       subheading: "En AHB Insurance Solutions representamos sus intereses, no a las aseguradoras. Como corredores independientes licenciados en Florida, comparamos opciones disponibles entre múltiples compañías aseguradoras líderes para encontrar el plan idóneo para sus necesidades. Con Medigap, generalmente puede consultar a cualquier proveedor de salud a nivel nacional que acepte Medicare, conforme a las normas de Medicare y Medigap. Nuestras opciones de Gastos Finales incluyen pólizas permanentes de vida entera de $5,000 a $35,000, incluyendo pólizas que pueden ofrecer primas niveladas sujetas a los términos del contrato. También ofrecemos estrategias de anualidades fijas e indexadas diseñadas para brindar acreditación de intereses y opciones de ingresos basadas en contrato sin invertir directamente sus primas en el mercado de valores.",
-      cta: "Verificar Elegibilidad en Florida 2026 ➔",
+      cta: "Verificar Elegibilidad en Florida 2027 ➔",
       trustText: "🔒 Broker Bilingüe Licenciado | NPN: 21228432 | Asesoría Sin Costo"
     },
     cta: {
@@ -397,7 +397,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     testimonials: {
       title: "Lo Que Dicen Nuestros Clientes",
-      label: "Experiencias Reales",
+      label: "Opiniones de Clientes",
       items: [
         {
           quote: "Andres hizo que el laberinto de Medicare fuera fácil de entender. ¡Finalmente tengo la cobertura que necesito!",
@@ -442,7 +442,7 @@ export const translations: Record<Language, TranslationContent> = {
         ]
     },
     contactForm: {
-      mainTitle: "Verifique su Elegibilidad 2026. Responda 3 preguntas para ver sus tarifas.",
+      mainTitle: "Verifique su Elegibilidad 2027. Responda 3 preguntas para ver sus tarifas.",
       licenseInfo: "Broker Licenciado | NPN: 21228432",
       secureConnection: "Asegurado por Red de Entrega de Contenido (CDN)",
       steps: {

@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             }
             else if (currentPath === '/annuities-florida' || currentPath === '/annuities') nextPath = '/es/anualidades-florida';
             else if (currentPath === '/dental-vision-florida') nextPath = '/es/dental-vision-florida';
-            else if (currentPath === '/locations/gainesville-fl' || currentPath === '/gainesville-fl-insurance') nextPath = '/es/locations/gainesville-fl';
+            else if (currentPath === '/locations/gainesville-fl' || currentPath === '/gainesville-fl-insurance') nextPath = '/es/localidades/gainesville-fl';
             else if (currentPath === '/faq') nextPath = '/es/preguntas-frecuentes';
             else if (currentPath === '/about-us' || currentPath === '/about-andres-bozo') nextPath = '/es/sobre-andres-bozo';
             else if (currentPath === '/contact') nextPath = '/es/contacto';
@@ -157,7 +157,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     <a href={cityGuidesPath} onClick={(e) => navigateTo(e, cityGuidesPath)} className={linkClass}>
                         {isEs ? 'CIUDADES' : 'CITIES'}
                     </a>
-                    <a href={isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl'} onClick={(e) => navigateTo(e, isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl')} className="text-amber-300 font-black hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none transition-colors px-2 py-1 rounded text-xs lg:text-sm uppercase tracking-wider">
+                    <a href={isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl'} onClick={(e) => navigateTo(e, isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl')} className="text-amber-300 font-black hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none transition-colors px-2 py-1 rounded text-xs lg:text-sm uppercase tracking-wider">
                         {isEs ? '📍 GAINESVILLE' : '📍 GAINESVILLE'}
                     </a>
                     <a href={faqPath} onClick={(e) => navigateTo(e, faqPath)} className={linkClass}>
@@ -252,7 +252,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         <a href={cityGuidesPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, cityGuidesPath)}>
                             {isEs ? 'Guía por Ciudades' : 'City Guides'}
                         </a>
-                        <a href={isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl'} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 text-amber-400 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, isEs ? '/es/locations/gainesville-fl' : '/locations/gainesville-fl')}>
+                        <a href={isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl'} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 text-amber-400 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl')}>
                             📍 Gainesville FL Office
                         </a>
                         <a href={faqPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, faqPath)}>

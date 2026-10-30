@@ -2,11 +2,11 @@
 # https://www.ahbinsurancesolutions.com
 
 # Content Signals: AI Content Usage Preferences
-Content-Signal: ai-train=no, search=yes, ai-input=no
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 User-agent: *
 Allow: /
-Content-Signal: ai-train=no, search=yes, ai-input=no
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 # Protect internal assets, build outputs, and potential administrative/api paths
 Disallow: /admin/
@@ -21,10 +21,6 @@ Allow: /manifest.json
 Allow: /andresbozoofi.webp
 Allow: /llms.txt
 Allow: /llms-full.txt
-Allow: /auth.md
-Allow: /.well-known/
-Allow: /.well-known/*
-Allow: /.well-known/agent-skills/index.json
 Allow: /api/openapi.json
 Allow: /api/health
 

@@ -61,6 +61,10 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
             <div id="main-content" className="container mx-auto px-4 md:px-6 pt-4 pb-8 md:pt-8 md:pb-12 lg:pt-10 lg:pb-16 flex flex-col md:flex-row items-center gap-6 md:gap-10">
                 
                 <div className="w-full md:w-1/2 z-10 text-center md:text-left">
+                    <div className="inline-flex items-center gap-2 bg-primary text-accent px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-3 shadow-sm border border-accent/30">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+                        <span>{language === 'es' ? 'Período Abierto de Inscripción Medicare 2027 (15 Oct – 7 Dic)' : 'Active: 2027 Medicare Open Enrollment (Oct 15 – Dec 7)'}</span>
+                    </div>
                     <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-heading text-primary mb-3 md:mb-4 leading-[1.15] md:leading-tight">
                         {content.heading}
                     </h1>

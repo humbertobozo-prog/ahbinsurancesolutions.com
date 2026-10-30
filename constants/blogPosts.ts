@@ -141,7 +141,7 @@ Consulte nuestra guía completa sobre [planes suplementarios de Medicare (Mediga
             npn: '21228432',
             image: '/andresbozoofi.webp'
         },
-        image: 'https://images.pexels.com/photos/7551608/pexels-photo-7551608.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/images/blog-burial-costs.webp',
         tags: ['Final Expense', 'Burial Insurance', 'Florida Seniors', 'Whole Life'],
         content: {
             en: `
@@ -219,7 +219,7 @@ Para personas con condiciones médicas preexistentes graves, existen pólizas de
             npn: '21228432',
             image: '/andresbozoofi.webp'
         },
-        image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/images/blog-iul-retirement.webp',
         tags: ['IUL', 'Retirement Planning', 'Policy Loans', 'Life Insurance Compliance'],
         content: {
             en: `
@@ -335,7 +335,7 @@ Todo consumidor responsable debe comprender los siguientes riesgos y reglas oper
             npn: '21228432',
             image: '/andresbozoofi.webp'
         },
-        image: 'https://images.pexels.com/photos/5928391/pexels-photo-5928391.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/images/blog-part-d-drugs.webp',
         tags: ['Medicare Part D', 'Prescription Drugs', 'Florida Seniors', 'Inflation Reduction Act'],
         content: {
             en: `
@@ -401,7 +401,7 @@ Los adultos mayores en Florida también pueden optar por un nuevo programa de "s
             npn: '21228432',
             image: '/andresbozoofi.webp'
         },
-        image: 'https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=800',
+        image: '/images/blog-annuities-seniors.webp',
         tags: ['IUL', 'Tax Efficiency', 'Florida Retirement', 'Financial Protection'],
         content: {
             en: `

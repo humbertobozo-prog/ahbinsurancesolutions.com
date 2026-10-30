@@ -19,6 +19,15 @@ const INDEX_HTML_PATH = path.resolve(DIST_PATH, 'index.html');
 const isProd = process.env.NODE_ENV === 'production' || (fs.existsSync(INDEX_HTML_PATH) && process.env.npm_lifecycle_event !== 'dev');
 
 // 1. API Endpoints
+app.get('/api/health', (_req: Request, res: Response) => {
+  res.status(200).json({
+    status: 'ok',
+    service: 'AHB Insurance Solutions API',
+    broker: 'Andres H. Bozo (NPN 21228432)',
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.post('/api/contact', (req: Request, res: Response) => {
   console.log('Lead submission received:', req.body?.name, req.body?.phone);
   res.status(200).json({ success: true, message: 'Lead received successfully' });
@@ -52,7 +61,8 @@ async function startServer() {
 
         const metadata = getSeoMetadata(req.path);
         const rendered = rewriteHtmlForSeo(template, metadata, false);
-        res.status(200).set({ 'Content-Type': 'text/html' }).end(rendered);
+        const status = metadata.is404 ? 404 : 200;
+        res.status(status).set({ 'Content-Type': 'text/html' }).end(rendered);
       } catch (e) {
         vite.ssrFixStacktrace(e as Error);
         next(e);

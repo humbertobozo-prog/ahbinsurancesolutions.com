@@ -341,8 +341,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Medicare Suplementario (Medigap) Florida | AHB Insurance" 
       : "Medicare Supplement (Medigap) Florida | AHB Insurance";
     description = isEs 
-      ? "Guía de Medicare en Florida 2026. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
-      : "Compare Florida Medicare Supplement Plan G & N rates, Advantage, and Part D. Expert independent broker guidance from Andres Bozo (NPN 21228432). Free quote!";
+      ? "Inscripción Abierta Medicare Florida 2026–2027. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
+      : "Florida Medicare 2026–2027 Open Enrollment Guide. Compare Medigap Plan G & N rates, Advantage, and Part D with independent broker Andres Bozo (NPN 21228432).";
     ogImage = "https://www.ahbinsurancesolutions.com/hero-seniors-medicare-lg.webp";
     ogImageAlt = isEs 
       ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
@@ -2808,7 +2808,7 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTag}\n</head>`);
   }
 
-  // 8. Inject crawler-friendly body outline and social links inside `<noscript>` ONLY
+  // 8. Inject crawler-friendly semantic HTML inside <div id="root"> and <noscript> for AI bots & search engines
   if (includeBodyOutline) {
     const socialNav = `
         <nav aria-label="Official Social Media Profiles">
@@ -2820,12 +2820,19 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
           </ul>
         </nav>`;
 
-    const noscriptRegex = /<noscript>[\s\S]*?<\/noscript>\s*<div id="root">/;
-    const replacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n${socialNav}\n      </div>\n    </noscript>\n    <div id="root">`;
-    if (noscriptRegex.test(rewritten)) {
-      rewritten = rewritten.replace(noscriptRegex, replacement);
+    const rootRegex = /<div id="root"><\/div>|<div id="root">\s*<\/div>/;
+    const semanticRoot = `<div id="root">\n      <main class="ssr-prerender-content" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">\n        ${metadata.bodyOutline}\n${socialNav}\n      </main>\n    </div>`;
+
+    if (rootRegex.test(rewritten)) {
+      rewritten = rewritten.replace(rootRegex, semanticRoot);
     } else if (rewritten.includes('<div id="root">')) {
-      rewritten = rewritten.replace('<div id="root">', replacement);
+      rewritten = rewritten.replace('<div id="root">', semanticRoot);
+    }
+
+    const noscriptRegex = /<noscript>[\s\S]*?<\/noscript>/;
+    const noscriptReplacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n${socialNav}\n      </div>\n    </noscript>`;
+    if (noscriptRegex.test(rewritten)) {
+      rewritten = rewritten.replace(noscriptRegex, noscriptReplacement);
     }
   }
 

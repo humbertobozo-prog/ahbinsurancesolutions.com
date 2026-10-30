@@ -57,6 +57,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                     ]
                 };
             case '/final-expense-miami':
+            case '/es/seguro-gastos-finales-miami':
             case '/burial-insurance-tampa':
             case '/es/seguro-gastos-finales-tampa':
             case '/es/seguro-gastos-finales-florida':
@@ -127,6 +128,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                     highlights: activeLang === 'es' ? TAMPA_IUL_METADATA.highlightsEs : TAMPA_IUL_METADATA.highlightsEn
                 };
             case '/orlando-spanish-insurance':
+            case '/es/seguros-orlando':
             case '/spanish-insurance-orlando':
             default:
                 return {
@@ -218,9 +220,9 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 pathname={path}
                 language={activeLang}
                 ogImage={path.includes('miami') || path.includes('burial') || path.includes('gastos-finales')
-                    ? "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                    ? "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp"
                     : path.includes('iul')
-                    ? "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                    ? "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp"
                     : path.includes('orlando')
                     ? "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
                     : "https://www.ahbinsurancesolutions.com/og-image.png"

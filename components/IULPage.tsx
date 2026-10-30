@@ -165,7 +165,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop"
+                ogImage="https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp"
                 ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning"}
                 datePublished="2024-01-15"
                 dateModified="2026-10-10"
@@ -237,16 +237,9 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         </div>
                         <div className="w-full md:w-5/12">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/25 aspect-[4/3] bg-gray-800">
-                                {(() => {
-                                    const imageBase = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&fit=crop&q=80&fm=webp";
-                                    const image480 = `${imageBase}&w=480`;
-                                    const image800 = `${imageBase}&w=800`;
-                                    const image1200 = `${imageBase}&w=1200`;
                                     return (
                                         <Image
-                                            src={image800}
-                                            srcSet={`${image480} 480w, ${image800} 800w, ${image1200} 1200w`}
-                                            sizes="(max-width: 767px) 95vw, 450px"
+                                            src="/images/iul-wealth-retirement.webp"
                                             alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
                                             className="w-full h-full object-cover"
                                             containerClassName="w-full h-full"

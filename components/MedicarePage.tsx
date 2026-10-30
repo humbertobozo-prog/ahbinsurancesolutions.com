@@ -192,7 +192,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                         <div className="w-full md:w-7/12">
                             <span className="inline-block bg-accent text-primary font-black text-xs uppercase tracking-widest px-3 py-1 rounded-full mb-4">
-                                {isEs ? 'Guía de Autoridad 2026 | Asesoría Licenciada en Florida' : '2026 Master Guide | Licensed Florida Broker'}
+                                {isEs ? '⚡ Período Abierto de Inscripción 2027 | Asesoría Licenciada en Florida' : '⚡ 2027 Open Enrollment Active | Licensed Florida Broker'}
                             </span>
                             <h1 className="text-3xl md:text-5xl font-black font-heading mb-6 leading-tight">
                                 {isEs 

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AHB Insurance Solutions API",
-    "description": "Public and protected APIs for AHB Insurance Solutions - Independent Florida Insurance Brokerage led by Andres H. Bozo (NPN: 21228432).",
+    "description": "Public APIs for AHB Insurance Solutions - Independent Florida Insurance Brokerage led by Andres H. Bozo (NPN: 21228432).",
     "version": "1.0.0",
     "contact": {
       "name": "Andres H. Bozo",
@@ -82,101 +82,6 @@
             }
           }
         }
-      }
-    },
-    "/api/generate-blog": {
-      "post": {
-        "summary": "Generate Insurance Educational Article",
-        "description": "Protected endpoint powered by Gemini for generating comprehensive, SEO-optimized educational articles for licensed Florida insurance brokers.",
-        "operationId": "generateBlogArticle",
-        "security": [
-          { "BearerAuth": [] }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "topic": { "type": "string", "example": "Medicare Medigap Plan G vs Plan N in Florida 2026" },
-                  "language": { "type": "string", "enum": ["en", "es"], "default": "en" },
-                  "targetAudience": { "type": "string", "example": "Florida seniors turning 65" },
-                  "wordCountGoal": { "type": "integer", "default": 1400 }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Article generated successfully",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": { "type": "boolean" },
-                    "article": { "type": "object" }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized - Missing or invalid Bearer token"
-          }
-        }
-      }
-    },
-    "/oauth/token": {
-      "post": {
-        "summary": "OAuth 2.0 Token Endpoint",
-        "description": "Issues access tokens using client_credentials grant for automated agents.",
-        "operationId": "issueOAuthToken",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "required": ["grant_type"],
-                "properties": {
-                  "grant_type": { "type": "string", "example": "client_credentials" },
-                  "client_id": { "type": "string" },
-                  "client_secret": { "type": "string" }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Token issued",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "access_token": { "type": "string" },
-                    "token_type": { "type": "string", "example": "Bearer" },
-                    "expires_in": { "type": "integer", "example": 3600 },
-                    "scope": { "type": "string" }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "securitySchemes": {
-      "BearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
       }
     }
   }

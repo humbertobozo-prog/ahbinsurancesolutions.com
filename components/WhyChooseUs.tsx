@@ -8,18 +8,12 @@ interface WhyChooseUsProps {
 }
 
 export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ content }) => {
-    const imageBaseUrl = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg";
-    const imageSmall = `${imageBaseUrl}?auto=compress&cs=tinysrgb&w=480&q=65&fm=webp`;
-    const imageMedium = `${imageBaseUrl}?auto=compress&cs=tinysrgb&w=800&q=65&fm=webp`;
-
     return (
         <section id="why-us" className="py-16 md:py-20 bg-white" aria-labelledby="why-us-heading">
             <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <div className="md:w-1/2">
                     <Image 
-                        src={imageMedium}
-                        srcSet={`${imageSmall} 480w, ${imageMedium} 800w`}
-                        sizes="(max-width: 768px) 100vw, 50vw"
+                        src="/images/final-expense-family.webp"
                         alt="A diverse, multicultural group of smiling seniors" 
                         className="w-full h-auto object-cover" 
                         containerClassName="rounded-lg shadow-2xl overflow-hidden w-full"

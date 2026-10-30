@@ -113,6 +113,12 @@ const App: React.FC = () => {
             } else if (currentPath === '/politica-editorial' || currentPath === '/es/politica-editorial' || currentPath === '/es/politica-editorial/') {
                 window.history.replaceState({}, '', '/es/politica-editorial');
                 currentPath = '/es/politica-editorial';
+            } else if (currentPath === '/spanish-insurance-orlando' || currentPath === '/spanish-insurance-orlando/') {
+                window.history.replaceState({}, '', '/es/seguros-orlando');
+                currentPath = '/es/seguros-orlando';
+            } else if (currentPath === '/es/locations/gainesville-fl' || currentPath === '/es/locations/gainesville-fl/') {
+                window.history.replaceState({}, '', '/es/localidades/gainesville-fl');
+                currentPath = '/es/localidades/gainesville-fl';
             }
 
             setPath(currentPath);
@@ -136,12 +142,14 @@ const App: React.FC = () => {
 
     const landingPaths = [
         '/final-expense-miami',
+        '/es/seguro-gastos-finales-miami',
         '/burial-insurance-tampa',
         '/es/seguro-gastos-finales-tampa',
         '/es/seguro-gastos-finales-florida',
         '/iul-retirement-tampa',
         '/es/iul-jubilacion-tampa',
         '/orlando-spanish-insurance',
+        '/es/seguros-orlando',
         '/spanish-insurance-orlando',
         '/dental-vision-florida',
         '/es/dental-vision-florida'
@@ -330,7 +338,7 @@ const App: React.FC = () => {
 
                 <ErrorBoundary componentName="Testimonials">
                     <Suspense fallback={<Spinner height="py-32" />}>
-                        <Testimonials content={content.testimonials} />
+                        <Testimonials content={content.testimonials} language={language} />
                     </Suspense>
                 </ErrorBoundary>
 

@@ -36,6 +36,11 @@ export const faqsEs: FaqItem[] = [
     q: '¿Qué cubre la Parte D de Medicare para medicamentos recetados?',
     a: 'La Parte D es un seguro independiente administrado por aseguradoras privadas aprobado por Medicare para cubrir medicamentos recetados en farmacias. Cada plan cuenta con un formulario específico, niveles de medicamentos (tiers) y fases de cobertura (deducible, inicial, brecha y catastrophic).'
   },
+  {
+    category: 'medicare',
+    q: '¿Qué es el Período Anual de Inscripción Abierta (AEP) de Medicare (15 oct – 7 dic)?',
+    a: 'El Período Anual de Inscripción de Medicare (AEP) se celebra del 15 de octubre al 7 de diciembre. Durante este período, los beneficiarios en Florida pueden inscribirse o cambiarse de plan Medicare Advantage (Parte C) o de medicamentos (Parte D) para el año de beneficios 2027. Además, puede consultar con el corredor Andrés Bozo en cualquier momento del año para evaluar suplementos Medigap.'
+  },
 
   // Final Expense (6)
   {
@@ -209,6 +214,11 @@ export const faqsEn: FaqItem[] = [
     category: 'medicare',
     q: 'What does Medicare Part D cover for prescription drugs?',
     a: 'Part D is standalone prescription drug coverage offered by private insurance companies approved by Medicare. Each plan has a specific formulary, drug tiers, and cost-sharing phases (deductible, initial coverage, coverage gap, and catastrophic).'
+  },
+  {
+    category: 'medicare',
+    q: 'What is the Medicare Annual Enrollment Period (AEP, Oct 15 – Dec 7)?',
+    a: 'The Medicare Annual Enrollment Period (AEP) runs from October 15 through December 7. During this crucial window, Florida beneficiaries can join, switch, or drop Medicare Advantage (Part C) and Part D drug plans for coverage starting January 1, 2027. Independent broker Andres Bozo is also available year-round to evaluate Medigap supplement policies.'
   },
 
   // Final Expense (6)
