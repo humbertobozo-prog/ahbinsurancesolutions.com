@@ -289,22 +289,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.ahbinsurancesolutions.com/blog-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog-generator" />
-    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/generador-blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog-generator" />
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ahbinsurancesolutions.com/es/generador-blog</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/blog-generator" />
-    <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/generador-blog" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ahbinsurancesolutions.com/blog-generator" />
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.ahbinsurancesolutions.com/editorial-policy</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.ahbinsurancesolutions.com/editorial-policy" />
     <xhtml:link rel="alternate" hreflang="es-US" href="https://www.ahbinsurancesolutions.com/es/politica-editorial" />

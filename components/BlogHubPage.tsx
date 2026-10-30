@@ -303,14 +303,6 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                             ? 'Guías detalladas para ayudar a la comunidad de Florida a tomar decisiones informadas sobre Medicare, gastos finales e IUL.' 
                             : 'In-depth guides designed to help Florida retirees and families navigate Medicare, burial insurance, and tax-advantaged retirement planning.'}
                     </p>
-                    <div>
-                        <a 
-                            href={isEs ? '/es/generador-blog' : '/blog-generator'}
-                            className="bg-accent text-primary font-black text-xs uppercase tracking-widest px-5 py-3 rounded-xl hover:bg-[#FFB81C] transition-all inline-flex items-center gap-2 shadow-md"
-                        >
-                            <span>✨ {isEs ? 'Generador de Artículos IA (SEO Drafts)' : 'AI Article Generator (SEO Drafts)'}</span>
-                        </a>
-                    </div>
                 </div>
             </section>
 
@@ -405,3 +397,5 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
         </div>
     );
 };
+
+export default BlogHubPage;

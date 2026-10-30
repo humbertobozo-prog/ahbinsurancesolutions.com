@@ -886,3 +886,5 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         </div>
     );
 };
+
+export default AnnuitiesPage;

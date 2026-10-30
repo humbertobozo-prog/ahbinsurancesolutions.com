@@ -285,3 +285,5 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
         </div>
     );
 };
+
+export default FAQPage;

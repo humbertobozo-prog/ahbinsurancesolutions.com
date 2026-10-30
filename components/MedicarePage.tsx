@@ -9,7 +9,7 @@ interface MedicarePageProps {
     onOpenQuote: () => void;
 }
 
-export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) => {
+const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) => {
     const isEs = language === 'es' || (typeof window !== 'undefined' && window.location.pathname.startsWith('/es'));
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
@@ -714,4 +714,5 @@ export const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuot
         </div>
     );
 };
+export default MedicarePage;
 

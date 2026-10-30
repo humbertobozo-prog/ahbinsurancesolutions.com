@@ -327,3 +327,5 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     </div>
   );
 };
+
+export default CityGuides;

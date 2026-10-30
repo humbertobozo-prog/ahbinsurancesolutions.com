@@ -5,7 +5,7 @@ import { translations } from '../constants/translations';
 import { TAMPA_IUL_METADATA } from '../data/cityGuidesData';
 import { SEOHead } from './SEOHead';
 import { BackToTopButton } from './BackToTopButton';
-import { Footer } from './Footer';
+import Footer from './Footer';
 import { TapToCallButton } from './TapToCallButton';
 import { WhatsAppButton } from './WhatsAppButton';
 
@@ -363,3 +363,5 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
         </div>
     );
 };
+
+export default LocationLandingPage;

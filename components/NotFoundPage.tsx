@@ -71,3 +71,5 @@ export const NotFoundPage: React.FC<NotFoundPageProps> = ({ language }) => {
     </div>
   );
 };
+
+export default NotFoundPage;

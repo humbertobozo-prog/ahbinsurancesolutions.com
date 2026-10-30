@@ -18,8 +18,6 @@ routeSet.add('/terms');
 routeSet.add('/privacy');
 routeSet.add('/es/terminos');
 routeSet.add('/es/privacidad');
-routeSet.add('/blog-generator');
-routeSet.add('/es/generador-blog');
 
 export const ALL_ROUTES: string[] = Array.from(routeSet);
 

@@ -56,3 +56,6 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content }) => 
         </section>
     );
 };
+
+export default ComplianceLinks;
+

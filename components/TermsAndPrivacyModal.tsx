@@ -9,7 +9,7 @@ interface TermsAndPrivacyModalProps {
     language: Language;
 }
 
-export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
+const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
     isOpen,
     onClose,
     initialTab = 'terms',
@@ -224,3 +224,4 @@ export const TermsAndPrivacyModal: React.FC<TermsAndPrivacyModalProps> = ({
         </div>
     );
 };
+export default TermsAndPrivacyModal;

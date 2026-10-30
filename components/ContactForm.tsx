@@ -758,3 +758,5 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         </section>
     );
 };
+
+export default ContactForm;

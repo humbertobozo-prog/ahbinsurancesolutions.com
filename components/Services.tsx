@@ -119,3 +119,5 @@ export const Services: React.FC<ServicesProps> = ({ content, language = 'en' }) 
         </section>
     );
 };
+
+export default Services;

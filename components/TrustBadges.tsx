@@ -35,3 +35,6 @@ export const TrustBadges: React.FC<TrustBadgesProps> = ({ content }) => {
         </section>
     );
 };
+
+export default TrustBadges;
+

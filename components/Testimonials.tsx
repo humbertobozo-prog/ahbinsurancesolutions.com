@@ -156,3 +156,6 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content }) => {
         </section>
     );
 };
+
+export default Testimonials;
+

@@ -764,3 +764,5 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
         </div>
     );
 };
+
+export default FinalExpensePage;

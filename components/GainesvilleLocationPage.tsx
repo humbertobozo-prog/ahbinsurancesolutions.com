@@ -1075,3 +1075,5 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
     </div>
   );
 };
+
+export default GainesvilleLocationPage;

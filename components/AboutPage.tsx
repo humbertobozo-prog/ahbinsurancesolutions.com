@@ -657,3 +657,5 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         </div>
     );
 };
+
+export default AboutPage;

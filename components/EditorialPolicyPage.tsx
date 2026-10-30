@@ -2,7 +2,7 @@ import React from 'react';
 import type { Language } from '../types';
 import { translations } from '../constants/translations';
 import { Header } from './Header';
-import { Footer } from './Footer';
+import Footer from './Footer';
 import { SEOHead } from './SEOHead';
 
 interface EditorialPolicyPageProps {
@@ -54,3 +54,5 @@ export const EditorialPolicyPage: React.FC<EditorialPolicyPageProps> = ({ langua
         </div>
     );
 };
+
+export default EditorialPolicyPage;

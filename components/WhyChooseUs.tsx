@@ -50,3 +50,5 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ content }) => {
         </section>
     );
 };
+
+export default WhyChooseUs;

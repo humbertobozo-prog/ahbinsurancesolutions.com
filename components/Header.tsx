@@ -62,7 +62,6 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             else if (currentPath === '/final-expense') nextPath = '/es/gastos-finales';
             else if (currentPath === '/iul-retirement') nextPath = '/es/iul-jubilacion';
             else if (currentPath === '/blog') nextPath = '/es/blog';
-            else if (currentPath === '/blog-generator') nextPath = '/es/generador-blog';
             else if (currentPath === '/city-guides') nextPath = '/es/guias-ciudades';
             else if (currentPath.startsWith('/cities/')) {
                 const citySlug = currentPath.replace('/cities/', '');
@@ -87,7 +86,6 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
             else if (currentPath === '/es/gastos-finales') nextPath = '/final-expense';
             else if (currentPath === '/es/iul-jubilacion') nextPath = '/iul-retirement';
             else if (currentPath === '/es/blog') nextPath = '/blog';
-            else if (currentPath === '/es/generador-blog') nextPath = '/blog-generator';
             else if (currentPath === '/es/guias-ciudades') nextPath = '/city-guides';
             else if (currentPath.startsWith('/es/ciudades/')) {
                 const citySlug = currentPath.replace('/es/ciudades/', '');

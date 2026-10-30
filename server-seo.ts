@@ -76,8 +76,6 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/es/localidades/gainesville-fl",
   "/gainesville-fl-insurance",
   "/es/seguros-gainesville-fl",
-  "/blog-generator",
-  "/es/generador-blog",
   "/editorial-policy",
   "/es/politica-editorial"
 ]);

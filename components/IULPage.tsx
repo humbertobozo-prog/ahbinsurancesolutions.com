@@ -630,3 +630,5 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
     );
 };
 
+export default IULPage;
+

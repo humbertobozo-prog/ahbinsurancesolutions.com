@@ -80,3 +80,5 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
         </section>
     );
 };
+
+export default AboutUs;

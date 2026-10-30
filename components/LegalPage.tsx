@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import type { Language } from '../types';
 import { legalContent } from '../constants/legalContent';
 import { Header } from './Header';
-import { Footer } from './Footer';
+import Footer from './Footer';
 import { translations } from '../constants/translations';
 import { SEOHead } from './SEOHead';
 
@@ -229,3 +229,5 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
         </div>
     );
 };
+
+export default LegalPage;

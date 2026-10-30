@@ -16,7 +16,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/ahbinsurancesolutions";
 const LINKEDIN_URL = "https://www.linkedin.com/in/andres-bozo-npn-21228432";
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA";
 
-export const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpenLegalModal }) => {
+const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpenLegalModal }) => {
     const isEs = language === 'es';
     return (
         <footer className="bg-primary text-white pt-16 pb-8 min-h-[400px]" aria-label="Main Footer">
@@ -274,3 +274,4 @@ export const Footer: React.FC<FooterProps> = ({ content, common, language = 'en'
         </footer>
     );
 };
+export default Footer;

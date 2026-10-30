@@ -39,7 +39,6 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     '/contact',
     '/terms',
     '/privacy',
-    '/blog-generator',
     '/editorial-policy'
   ];
 

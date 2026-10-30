@@ -304,11 +304,13 @@ export function initWebVitals(customHandler?: ReportHandler) {
         const color = metric.rating === 'good' ? '#10B981' : metric.rating === 'needs-improvement' ? '#F59E0B' : '#EF4444';
         const unit = metric.name === 'CLS' ? '' : 'ms';
         
-        console.log(
-            `%c[AHB Web Vitals] %c${metric.name}: ${metric.value}${unit} (${metric.rating.toUpperCase()})`,
-            'color: #002855; font-weight: bold;',
-            `color: ${color}; font-weight: bold;`
-        );
+        if (import.meta.env?.DEV) {
+            console.log(
+                `%c[AHB Web Vitals] %c${metric.name}: ${metric.value}${unit} (${metric.rating.toUpperCase()})`,
+                'color: #002855; font-weight: bold;',
+                `color: ${color}; font-weight: bold;`
+            );
+        }
 
         // Dispatch browser event for custom analytics integration if needed
         window.dispatchEvent(new CustomEvent('ahb-web-vitals', { detail: metric }));

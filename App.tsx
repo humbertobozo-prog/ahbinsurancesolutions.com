@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { KeyTakeaways } from './components/KeyTakeaways';
-const Footer = React.lazy(() => import('./components/Footer').then(module => ({ default: module.Footer })));
+const Footer = React.lazy(() => import('./components/Footer'));
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
 import type { Language } from './types';
@@ -32,32 +32,31 @@ const VALID_CITY_SLUGS = new Set([
     'tallahassee'
 ]);
 
-const TermsAndPrivacyModal = React.lazy(() => import('./components/TermsAndPrivacyModal').then(m => ({ default: m.TermsAndPrivacyModal })));
+const TermsAndPrivacyModal = React.lazy(() => import('./components/TermsAndPrivacyModal'));
 
 // Dedicated Lazy Page Imports
-const MedicarePage = React.lazy(() => import('./components/MedicarePage').then(m => ({ default: m.MedicarePage })));
-const FinalExpensePage = React.lazy(() => import('./components/FinalExpensePage').then(m => ({ default: m.FinalExpensePage })));
-const IULPage = React.lazy(() => import('./components/IULPage').then(m => ({ default: m.IULPage })));
-const AnnuitiesPage = React.lazy(() => import('./components/AnnuitiesPage').then(m => ({ default: m.AnnuitiesPage })));
-const BlogHubPage = React.lazy(() => import('./components/BlogHubPage').then(m => ({ default: m.BlogHubPage })));
-const BlogGenerator = React.lazy(() => import('./components/BlogGenerator').then(m => ({ default: m.BlogGenerator })));
-const FAQPage = React.lazy(() => import('./components/FAQPage').then(m => ({ default: m.FAQPage })));
-const AboutPage = React.lazy(() => import('./components/AboutPage').then(m => ({ default: m.AboutPage })));
-const ContactPage = React.lazy(() => import('./components/ContactPage').then(m => ({ default: m.ContactPage })));
-const LocationLandingPage = React.lazy(() => import('./components/LocationLandingPage').then(m => ({ default: m.LocationLandingPage })));
-const GainesvilleLocationPage = React.lazy(() => import('./components/GainesvilleLocationPage').then(m => ({ default: m.GainesvilleLocationPage })));
-const LegalPage = React.lazy(() => import('./components/LegalPage').then(m => ({ default: m.LegalPage })));
-const CityGuides = React.lazy(() => import('./components/CityGuides').then(m => ({ default: m.CityGuides })));
-const EditorialPolicyPage = React.lazy(() => import('./components/EditorialPolicyPage').then(m => ({ default: m.EditorialPolicyPage })));
-const NotFoundPage = React.lazy(() => import('./components/NotFoundPage').then(m => ({ default: m.NotFoundPage })));
+const MedicarePage = React.lazy(() => import('./components/MedicarePage'));
+const FinalExpensePage = React.lazy(() => import('./components/FinalExpensePage'));
+const IULPage = React.lazy(() => import('./components/IULPage'));
+const AnnuitiesPage = React.lazy(() => import('./components/AnnuitiesPage'));
+const BlogHubPage = React.lazy(() => import('./components/BlogHubPage'));
+const FAQPage = React.lazy(() => import('./components/FAQPage'));
+const AboutPage = React.lazy(() => import('./components/AboutPage'));
+const ContactPage = React.lazy(() => import('./components/ContactPage'));
+const LocationLandingPage = React.lazy(() => import('./components/LocationLandingPage'));
+const GainesvilleLocationPage = React.lazy(() => import('./components/GainesvilleLocationPage'));
+const LegalPage = React.lazy(() => import('./components/LegalPage'));
+const CityGuides = React.lazy(() => import('./components/CityGuides'));
+const EditorialPolicyPage = React.lazy(() => import('./components/EditorialPolicyPage'));
+const NotFoundPage = React.lazy(() => import('./components/NotFoundPage'));
 
-const Services = React.lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
-const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs').then(module => ({ default: module.WhyChooseUs })));
-const AboutUs = React.lazy(() => import('./components/AboutUs').then(module => ({ default: module.AboutUs })));
-const Testimonials = React.lazy(() => import('./components/Testimonials').then(module => ({ default: module.Testimonials })));
-const TrustBadges = React.lazy(() => import('./components/TrustBadges').then(module => ({ default: module.TrustBadges })));
-const ComplianceLinks = React.lazy(() => import('./components/ComplianceLinks').then(module => ({ default: module.ComplianceLinks })));
-const ContactForm = React.lazy(() => import('./components/ContactForm').then(module => ({ default: module.ContactForm })));
+const Services = React.lazy(() => import('./components/Services'));
+const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs'));
+const AboutUs = React.lazy(() => import('./components/AboutUs'));
+const Testimonials = React.lazy(() => import('./components/Testimonials'));
+const TrustBadges = React.lazy(() => import('./components/TrustBadges'));
+const ComplianceLinks = React.lazy(() => import('./components/ComplianceLinks'));
+const ContactForm = React.lazy(() => import('./components/ContactForm'));
 
 const getInitialLanguage = (): Language => {
     if (typeof window === 'undefined') return 'en';
@@ -229,8 +228,6 @@ const App: React.FC = () => {
         } else {
             mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogHubPage language={language} slug={slug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
         }
-    } else if (cleanPath === '/blog-generator' || cleanPath === '/es/generador-blog') {
-        mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><BlogGenerator language={language} onOpenQuote={handleNavigateToQuote} /></Suspense>;
     } else if (cleanPath === '/city-guides' || cleanPath === '/es/guias-ciudades' || cleanPath.startsWith('/cities/') || cleanPath.startsWith('/es/ciudades/')) {
         const citySlug = cleanPath.startsWith('/cities/') ? cleanPath.replace('/cities/', '') : (cleanPath.startsWith('/es/ciudades/') ? cleanPath.replace('/es/ciudades/', '') : undefined);
         const cityExists = !citySlug || VALID_CITY_SLUGS.has(citySlug);
