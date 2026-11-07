@@ -153,9 +153,21 @@
 
 @layer components {
   .hero-img-container { 
-    min-height: 300px; 
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    min-height: 280px; 
     background: #f3f4f6; 
-    contain: paint; 
+    contain: paint layout; 
+  }
+  @media (min-width: 768px) {
+    .hero-img-container { 
+      min-height: 400px; 
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero-img-container { 
+      min-height: 460px; 
+    }
   }
   
   .glass-card { 

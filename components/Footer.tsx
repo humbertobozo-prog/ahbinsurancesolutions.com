@@ -263,6 +263,11 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                     </div>
                 </div>
                 <div className="border-t border-white/10 pt-6 text-center text-gray-400 text-xs space-y-3">
+                    <p className="text-gray-200 font-semibold tracking-wide">
+                        {isEs 
+                            ? 'AHB Insurance Solutions LLC · Corredor Licenciado en Florida · Licencia Florida DFS / NPN: 21228432' 
+                            : 'AHB Insurance Solutions LLC · Licensed Florida Broker · Florida DFS License / NPN: 21228432'}
+                    </p>
                     <p>{content.copyright}</p>
                     {content.cmsDisclaimer && (
                         <p className="max-w-4xl mx-auto text-[11px] leading-relaxed text-gray-300 bg-white/5 p-3 rounded-lg border border-white/10">

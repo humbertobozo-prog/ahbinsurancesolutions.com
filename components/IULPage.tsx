@@ -237,23 +237,15 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         </div>
                         <div className="w-full md:w-5/12">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/25 aspect-[4/3] bg-gray-800">
-                                    return (
-                                        <Image
-                                            src="/images/iul-wealth-retirement.webp"
-                                            alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
-                                            className="w-full h-full object-cover"
-                                            containerClassName="w-full h-full"
-                                            width="800"
-                                            height="600"
-                                            loading="lazy"
-                                            sources={[{
-                                                type: "image/webp",
-                                                srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w`,
-                                                sizes: "(max-width: 767px) 95vw, 450px"
-                                            }]}
-                                        />
-                                    );
-                                })()}
+                                <Image
+                                    src="/images/iul-wealth-retirement.webp"
+                                    alt={isEs ? "Vida Universal Indexada (IUL) en Florida - Andrés Bozo" : "Florida Indexed Universal Life (IUL) - Andres Bozo"}
+                                    className="w-full h-full object-cover"
+                                    containerClassName="w-full h-full"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </div>

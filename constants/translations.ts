@@ -3,8 +3,8 @@ import type { TranslationContent, Language } from '../types';
 export const translations: Record<Language, TranslationContent> = {
   en: {
     meta: {
-      title: "Medicare, Final Expense & IUL in Florida | AHB Solutions",
-      description: "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!"
+      title: "Florida Medicare, Burial Insurance & IUL Life | AHB Solutions",
+      description: "Expert Florida insurance guidance: Burial Insurance ($5K–$35K), Medicare Supplement & IUL. Compare top rates with licensed broker Andres Bozo (NPN 21228432). Free quote!"
     },
     common: {
       npnTooltip: "National Producer Number - A unique NAIC identifier for licensed insurance professionals."
@@ -179,7 +179,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     contactForm: {
       mainTitle: "Check Your 2027 Eligibility. Answer 3 quick questions to see your rates.",
-      licenseInfo: "Licensed Broker | NPN: 21228432",
+      licenseInfo: "Licensed Florida Broker | Florida DFS License / NPN: 21228432",
       secureConnection: "Secured by Advanced CDN",
       steps: {
         1: {
@@ -234,7 +234,7 @@ export const translations: Record<Language, TranslationContent> = {
     footer: {
         companyName: "AHB Insurance Solutions LLC",
         description: "Your independent partner for a secure and dignified retirement.",
-        licenseInfo: "Licensed Broker | NPN: 21228432",
+        licenseInfo: "Licensed Florida Broker | Florida DFS License / NPN: 21228432",
         linksTitle: "Quick Links",
         links: {
             services: "Services",
@@ -267,8 +267,8 @@ export const translations: Record<Language, TranslationContent> = {
   },
   es: {
     meta: {
-        title: "Seguro Medicare Florida y Gastos Finales | Broker de Seguros Bilingüe AHB",
-        description: "Compare opciones de Seguro Medicare en Florida y Pólizas de Seguro de Gastos Finales de emisión simplificada. Comparamos múltiples aseguradoras líderes para la comunidad hispana. Broker Licenciado NPN 21228432."
+        title: "Seguro Medicare Florida, Seguro de Entierro e IUL | Broker Bilingüe AHB",
+        description: "Asesoría de seguros en Florida: Seguro de Entierro y Gastos Finales ($5K–$35K), Suplementos de Medicare e IUL. Cotice gratis con el broker licenciado Andrés Bozo (NPN 21228432)."
     },
     common: {
       npnTooltip: "Número de Productor Nacional - Un identificador único de la NAIC para profesionales de seguros licenciados."
@@ -443,7 +443,7 @@ export const translations: Record<Language, TranslationContent> = {
     },
     contactForm: {
       mainTitle: "Verifique su Elegibilidad 2027. Responda 3 preguntas para ver sus tarifas.",
-      licenseInfo: "Broker Licenciado | NPN: 21228432",
+      licenseInfo: "Corredor Licenciado en Florida | Licencia Florida DFS / NPN: 21228432",
       secureConnection: "Asegurado por Red de Entrega de Contenido (CDN)",
       steps: {
         1: {
@@ -498,7 +498,7 @@ export const translations: Record<Language, TranslationContent> = {
     footer: {
         companyName: "AHB Insurance Solutions LLC",
         description: "Su socio independiente para una jubilación segura y digna.",
-        licenseInfo: "Broker Licenciado | NPN: 21228432",
+        licenseInfo: "Corredor Licenciado en Florida | Licencia Florida DFS / NPN: 21228432",
         linksTitle: "Enlaces Rápidos",
         links: {
             services: "Servicios",

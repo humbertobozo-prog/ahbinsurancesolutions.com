@@ -100,6 +100,19 @@ Following the `frontend-design` constitution and landing page design guidelines:
 - Execute `npm run lint` and `npm run build` (including Vite build, SSG prerendering of 58 pages, and sitemap generation).
 - Verify rendering across desktop, tablet, and mobile viewports.
 
+### Phase 5: Query Intent & CTR Optimization (Completed)
+- **Top Search Query (`burial insurance florida`, 76 impressions, pos 17.03)**:
+  - Tightened `<title>` and `meta description` in `components/FinalExpensePage.tsx` and `server-seo.ts` to prominently lead with `Burial Insurance Florida | $5K–$35K Senior Funeral Coverage & Rates 2026–2027`.
+  - Added on-page sample monthly rate comparison table ($5,000 to $25,000 coverage across ages 50 to 80) and updated realistic Florida funeral cost ranges ($9,500 – $14,000+ burial, $4,000 – $7,500 cremation).
+  - Explicitly surfaced Florida DFS license # / NPN: 21228432 and "Licensed Florida Broker" in `AboutUs.tsx`, `Footer.tsx`, and `Author.tsx`.
+- **Supporting Search Queries**:
+  - `vision insurance florida`: Optimized `/dental-vision-florida` title and meta snippet in `server-seo.ts`.
+  - `medicare broker gainesville fl` & `gainesville fl life insurance`: Updated title, meta description, and route pairings in `components/GainesvilleLocationPage.tsx` and `server-seo.ts`.
+- **Asset Migration & Security**:
+  - Migrated all remaining external images to local `/images/*.webp` assets.
+  - Removed external image CDNs from CSP in `vercel.json`.
+  - Removed `bun.lock` for clean single-package-manager builds.
+
 ---
 
 ## 5. Risk Analysis & Mitigation Strategy

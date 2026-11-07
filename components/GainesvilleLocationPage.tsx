@@ -39,12 +39,12 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
   const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
   const pageTitle = isEs
-    ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville | AHB Insurance Solutions"
-    : "Gainesville, FL Insurance Broker | Medicare, Life & Annuities | AHB Insurance Solutions";
+    ? "Broker de Medicare y Seguros de Vida en Gainesville, FL | AHB Insurance Solutions"
+    : "Medicare Broker Gainesville FL & Life Insurance | AHB Insurance Solutions";
 
   const pageDescription = isEs
-    ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
-    : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
+    ? "Corredor de Medicare y seguros de vida en Gainesville, FL: Andrés Bozo (NPN: 21228432). Asesoría en Medigap, UF Health Shands, gastos finales e IUL en Alachua County. Llame al (352) 225-8389."
+    : "Top-rated Medicare broker & life insurance advisor in Gainesville, FL (NPN: 21228432). Compare Medigap, UF Health Shands network plans, final expense & IUL. Free quote: (352) 225-8389.";
 
   const serviceSchema = {
     "@context": "https://schema.org",

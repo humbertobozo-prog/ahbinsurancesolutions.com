@@ -58,17 +58,17 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
 
     return (
         <section id="home" className="bg-light-gray relative overflow-hidden" aria-labelledby="hero-heading">
-            <div id="main-content" className="container mx-auto px-4 md:px-6 pt-4 pb-8 md:pt-8 md:pb-12 lg:pt-10 lg:pb-16 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div id="main-content" className="container mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
                 
                 <div className="w-full md:w-1/2 z-10 text-center md:text-left">
-                    <div className="inline-flex items-center gap-2 bg-primary text-accent px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-3 shadow-sm border border-accent/30">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+                    <div className="inline-flex items-center gap-2 bg-primary text-accent px-4 py-2 rounded-full text-xs md:text-sm font-black uppercase tracking-wider mb-4 md:mb-6 shadow-xs border border-accent/40">
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
                         <span>{language === 'es' ? 'Período Abierto de Inscripción Medicare 2027 (15 Oct – 7 Dic)' : 'Active: 2027 Medicare Open Enrollment (Oct 15 – Dec 7)'}</span>
                     </div>
-                    <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-heading text-primary mb-3 md:mb-4 leading-[1.15] md:leading-tight">
+                    <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black font-heading text-primary mb-4 md:mb-6 leading-[1.18] md:leading-[1.12] tracking-tight">
                         {content.heading}
                     </h1>
-                    <p className="text-sm md:text-base lg:text-lg text-dark-gray/90 mb-4 md:mb-6 leading-relaxed font-medium">
+                    <p className="text-base md:text-lg lg:text-xl text-slate-700 mb-6 md:mb-8 leading-relaxed font-normal md:font-medium max-w-2xl">
                         {content.subheading}
                     </p>
                     
@@ -77,56 +77,103 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                             href="#contact"
                             onClick={(e) => handleNavClick(e, 'contact')}
                             aria-label={`${content.cta.replace(/➔|->|▯/g, '').trim()} - Medicare, Final Expense & IUL Florida`}
-                            className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/10 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-6 md:px-8 lg:px-10 py-3.5 md:py-4 rounded-xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl transition-all duration-300 active:scale-95 group" 
+                            className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/20 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-7 sm:px-9 lg:px-12 py-4 md:py-5 rounded-2xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all duration-300 active:scale-95 group" 
                         >
                             <span>{content.cta.replace(/➔|->|▯/g, '').trim()}</span>
                             <ArrowRight className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                         </a>
                     </div>
 
-                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-2 min-h-[36px]">
+                    <div className="mt-6 md:mt-8 flex items-center justify-center md:justify-start gap-3 min-h-[40px] md:min-h-[44px]">
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[
                                 { bg: 'bg-primary text-white', label: 'FL' },
                                 { bg: 'bg-secondary text-white', label: '65+' },
                                 { bg: 'bg-accent text-primary', label: '★' },
                             ].map((badge, idx) => (
-                                <div key={idx} className={`w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white ${badge.bg} flex items-center justify-center text-[10px] md:text-xs font-black shadow-sm`}>
+                                <div key={idx} className={`w-8 h-8 md:w-9 md:h-9 rounded-full border-2 border-white ${badge.bg} flex items-center justify-center text-[10px] md:text-xs font-black shadow-sm`}>
                                     <span>{badge.label}</span>
                                 </div>
                             ))}
                         </div>
-                        <p className="text-[10px] md:text-xs text-dark-gray font-black uppercase tracking-widest">
+                        <p className="text-xs md:text-sm text-dark-gray font-black uppercase tracking-wider">
                             {content.trustText}
                         </p>
                     </div>
+
+                    {/* Desktop & Tablet Quick Coverage Routing - Matches High Impression Queries */}
+                    <div className="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                        <span className="text-xs md:text-sm font-black uppercase tracking-wider text-slate-500 mr-1">
+                            {language === 'es' ? 'Acceso Directo:' : 'Explore Solutions:'}
+                        </span>
+                        <a 
+                            href={language === 'es' ? '/es/gastos-finales' : '/final-expense'}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const target = language === 'es' ? '/es/gastos-finales' : '/final-expense';
+                                window.history.pushState({}, '', target);
+                                window.dispatchEvent(new Event('popstate'));
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="inline-flex items-center gap-1.5 bg-white hover:bg-amber-50 text-primary border border-slate-200 hover:border-accent px-3.5 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all shadow-xs"
+                        >
+                            <span aria-hidden="true">🕊️</span>
+                            <span>{language === 'es' ? 'Seguro de Entierro ($5K–$35K)' : 'Burial Insurance ($5K–$35K)'}</span>
+                        </a>
+                        <a 
+                            href={language === 'es' ? '/es/seguro-medicare-florida' : '/medicare-florida'}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const target = language === 'es' ? '/es/seguro-medicare-florida' : '/medicare-florida';
+                                window.history.pushState({}, '', target);
+                                window.dispatchEvent(new Event('popstate'));
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="inline-flex items-center gap-1.5 bg-white hover:bg-blue-50 text-primary border border-slate-200 hover:border-primary px-3.5 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all shadow-xs"
+                        >
+                            <span aria-hidden="true">🏥</span>
+                            <span>{language === 'es' ? 'Planes Medicare Florida' : 'Florida Medicare Plans'}</span>
+                        </a>
+                        <a 
+                            href={language === 'es' ? '/es/iul-jubilacion' : '/iul-retirement'}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const target = language === 'es' ? '/es/iul-jubilacion' : '/iul-retirement';
+                                window.history.pushState({}, '', target);
+                                window.dispatchEvent(new Event('popstate'));
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            className="inline-flex items-center gap-1.5 bg-white hover:bg-emerald-50 text-primary border border-slate-200 hover:border-emerald-600 px-3.5 py-2 md:px-4 md:py-2.5 rounded-xl text-xs md:text-sm font-bold transition-all shadow-xs"
+                        >
+                            <span aria-hidden="true">📈</span>
+                            <span>{language === 'es' ? 'IUL y Retiro' : 'IUL & Retirement'}</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div className="w-full md:w-1/2 hero-img-container">
-                    <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white group aspect-[4/3]">
-                        <div className="w-full h-full overflow-hidden">
-                            <Image
-                                ref={imgRef}
-                                src={imageMd}
-                                srcSet={`${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`}
-                                sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
-                                alt={heroAlt}
-                                className="w-full h-full object-cover transition-transform duration-100 ease-out"
-                                containerClassName="w-full h-full"
-                                style={{ willChange: 'transform' }}
-                                width="800"
-                                height="600"
-                                loading="eager"
-                                fetchPriority="high"
-                                sources={[{
-                                    type: "image/webp",
-                                    srcSet: `${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`,
-                                    sizes: "(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
-                                }]}
-                            />
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                <div className="w-full md:w-1/2 hero-img-container aspect-[4/3] min-h-[280px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[460px] xl:min-h-[500px] relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
+                    <div className="w-full h-full overflow-hidden">
+                        <Image
+                            ref={imgRef}
+                            src={imageMd}
+                            srcSet={`${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`}
+                            sizes="(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
+                            alt={heroAlt}
+                            className="w-full h-full object-cover transition-transform duration-100 ease-out"
+                            containerClassName="w-full h-full"
+                            style={{ willChange: 'transform', transform: 'scale(1.03)' }}
+                            width="800"
+                            height="600"
+                            loading="eager"
+                            fetchPriority="high"
+                            sources={[{
+                                type: "image/webp",
+                                srcSet: `${imageSm} 480w, ${imageMd} 800w, ${imageLg} 1200w`,
+                                sizes: "(max-width: 767px) 95vw, (max-width: 1200px) 50vw, 600px"
+                            }]}
+                        />
                     </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
                 </div>
             </div>
             

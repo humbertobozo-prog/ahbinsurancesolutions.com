@@ -21,13 +21,13 @@ export const Author: React.FC<AuthorProps> = ({
     
     const content = {
         name: "Andres H. Bozo",
-        license: isEn ? "Licensed Broker" : "Corredor Licenciado",
+        license: isEn ? "Licensed Florida Broker" : "Corredor Licenciado en Florida",
         npn: "21228432",
-        npnLabel: "NPN",
+        npnLabel: isEn ? "FL DFS / NPN" : "Licencia DFS / NPN",
         tagline: isEn ? "10+ Years Guiding Florida Seniors & Families" : "10+ Años Asesorando a Familias en Florida",
         bio: isEn 
-            ? "Andres H. Bozo is an independent, state-licensed insurance broker (NPN: 21228432) with over 10 years of dedicated experience guiding Florida families through Medicare, Final Expense, and Indexed Universal Life insurance."
-            : "Andrés H. Bozo es un corredor de seguros independiente licenciado en Florida (NPN: 21228432) con más de 10 años de experiencia asesorando a familias y personas mayores en Medicare, Gastos Finales y Vida Universal Indexada (IUL).",
+            ? "Andres H. Bozo is an independent, Florida DFS-licensed insurance broker (NPN: 21228432) with over 10 years of dedicated experience guiding Florida families through Medicare, Final Expense, and Indexed Universal Life insurance."
+            : "Andrés H. Bozo es un corredor de seguros independiente licenciado por el DFS de Florida (NPN: 21228432) con más de 10 años de experiencia asesorando a familias y personas mayores en Medicare, Gastos Finales y Vida Universal Indexada (IUL).",
         verified: isEn ? "Verified License" : "Licencia Verificada",
         npnTooltip: isEn 
             ? "National Producer Number - A unique NAIC identifier for licensed insurance professionals."
@@ -104,7 +104,7 @@ export const Author: React.FC<AuthorProps> = ({
     return (
         <div className={`group relative bg-white rounded-3xl border border-slate-200/80 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300 ${className}`}>
             <div className="flex flex-col sm:flex-row items-stretch">
-                <div className="w-full sm:w-2/5 relative aspect-[4/5] sm:aspect-auto">
+                <div className="w-full sm:w-2/5 relative aspect-[4/5] sm:aspect-auto sm:min-h-[260px]">
                     <Image 
                         src={imageSrc}
                         srcSet={`${imageSm} 480w, ${imageSrc} 1000w`}

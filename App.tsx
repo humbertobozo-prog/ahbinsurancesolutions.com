@@ -50,13 +50,13 @@ const CityGuides = React.lazy(() => import('./components/CityGuides'));
 const EditorialPolicyPage = React.lazy(() => import('./components/EditorialPolicyPage'));
 const NotFoundPage = React.lazy(() => import('./components/NotFoundPage'));
 
-const Services = React.lazy(() => import('./components/Services'));
-const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs'));
-const AboutUs = React.lazy(() => import('./components/AboutUs'));
-const Testimonials = React.lazy(() => import('./components/Testimonials'));
-const TrustBadges = React.lazy(() => import('./components/TrustBadges'));
-const ComplianceLinks = React.lazy(() => import('./components/ComplianceLinks'));
-const ContactForm = React.lazy(() => import('./components/ContactForm'));
+import { Services } from './components/Services';
+import { WhyChooseUs } from './components/WhyChooseUs';
+import { AboutUs } from './components/AboutUs';
+import { Testimonials } from './components/Testimonials';
+import { TrustBadges } from './components/TrustBadges';
+import { ComplianceLinks } from './components/ComplianceLinks';
+import { ContactForm } from './components/ContactForm';
 
 const getInitialLanguage = (): Language => {
     if (typeof window === 'undefined') return 'en';
@@ -258,12 +258,10 @@ const App: React.FC = () => {
                     setLanguage={setLanguage}
                     renderContactForm={() => (
                         <ErrorBoundary componentName="ContactForm">
-                            <Suspense fallback={<Spinner height="py-48" />}>
-                                <ContactForm 
-                                    content={translations[language].contactForm} 
-                                    onOpenLegalModal={handleOpenLegalModal}
-                                />
-                            </Suspense>
+                            <ContactForm 
+                                content={translations[language].contactForm} 
+                                onOpenLegalModal={handleOpenLegalModal}
+                            />
                         </ErrorBoundary>
                     )}
                     onOpenLegalModal={handleOpenLegalModal}
@@ -316,48 +314,34 @@ const App: React.FC = () => {
                 <KeyTakeaways content={content.keyTakeaways} />
                 
                 <ErrorBoundary componentName="Services">
-                    <Suspense fallback={<Spinner height="py-32" />}>
-                        <Services 
-                            content={content.services} 
-                            language={language} 
-                        />
-                    </Suspense>
+                    <Services 
+                        content={content.services} 
+                        language={language} 
+                    />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="AboutUs">
-                    <Suspense fallback={<Spinner height="py-40" />}>
-                        <AboutUs content={content.aboutUs} common={content.common} priority={true} />
-                    </Suspense>
+                    <AboutUs content={content.aboutUs} common={content.common} priority={true} />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="WhyChooseUs">
-                    <Suspense fallback={<Spinner height="py-24" />}>
-                        <WhyChooseUs content={content.whyChooseUs} />
-                    </Suspense>
+                    <WhyChooseUs content={content.whyChooseUs} />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="Testimonials">
-                    <Suspense fallback={<Spinner height="py-32" />}>
-                        <Testimonials content={content.testimonials} language={language} />
-                    </Suspense>
+                    <Testimonials content={content.testimonials} language={language} />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="TrustBadges">
-                    <Suspense fallback={<Spinner height="py-24" />}>
-                        <TrustBadges content={content.trustBadges} />
-                    </Suspense>
+                    <TrustBadges content={content.trustBadges} />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="ContactForm">
-                    <Suspense fallback={<Spinner height="py-48" />}>
-                        <ContactForm content={content.contactForm} language={language} onOpenLegalModal={handleOpenLegalModal} />
-                    </Suspense>
+                    <ContactForm content={content.contactForm} language={language} onOpenLegalModal={handleOpenLegalModal} />
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="ComplianceLinks">
-                    <Suspense fallback={<Spinner height="py-20" />}>
-                        <ComplianceLinks content={content.authoritativeLinks} />
-                    </Suspense>
+                    <ComplianceLinks content={content.authoritativeLinks} />
                 </ErrorBoundary>
             </>
         );

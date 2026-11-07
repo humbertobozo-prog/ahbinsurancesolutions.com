@@ -182,8 +182,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   }
 
   // Default Fallbacks (Home English)
-  let title = "Medicare, Final Expense & IUL in Florida | AHB Solutions";
-  let description = "Expert FL insurance guidance: Medicare Supplement, Final Expense & IUL. Secure your family's future today. Licensed Broker NPN: 21228432. Get your free quote!";
+  let title = "Florida Medicare, Burial Insurance & IUL Life | AHB Solutions";
+  let description = "Expert Florida insurance guidance: Burial Insurance ($5K–$35K), Medicare Supplement & IUL. Compare top rates with licensed broker Andres Bozo (NPN 21228432). Free quote!";
 
   // Get paired routes using shared utility
   const pairs = getRoutePairs(cleanPath);
@@ -203,8 +203,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
     if (isEs) {
-      title = "Medicare, Gastos Finales e IUL en Florida | AHB Solutions";
-      description = "Asesoría experta en Florida: Suplementos de Medicare, Gastos Finales y seguro IUL. Andrés Bozo (NPN 21228432) compara las mejores opciones. ¡Cotice gratis!";
+      title = "Seguro Medicare Florida, Seguro de Entierro e IUL | Broker Bilingüe AHB";
+      description = "Asesoría de seguros en Florida: Seguro de Entierro y Gastos Finales ($5K–$35K), Suplementos de Medicare e IUL. Cotice gratis con el broker licenciado Andrés Bozo (NPN 21228432).";
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
@@ -656,23 +656,23 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 3. Final Expense Service Page
   else if (cleanPath === "/final-expense" || cleanPath === "/es/gastos-finales") {
     title = isEs 
-      ? "Seguro de Gastos Finales y Funeral Florida 2026 | AHB" 
-      : "Final Expense & Burial Insurance Florida 2026 | AHB";
+      ? "Seguro de Entierro y Gastos Finales en Florida 2026–2027 | Tarifas y Cobertura" 
+      : "Burial Insurance Florida | $5K–$35K Senior Funeral Coverage & Rates 2026–2027";
     description = isEs 
-      ? "Proteja a su familia con cobertura de $5,000 a $35,000 en Florida. Tarifas fijas de por vida. Emisión simplificada sin examen médico. ¡Cotice hoy sin costo!" 
-      : "Secure $5,000 to $35,000 in Florida burial protection. Locked lifetime rates. Simplified-issue whole life policies without medical exam. Get a free quote!";
-    ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+      ? "Compare pólizas de seguro de entierro y gastos finales en Florida con el broker licenciado Andrés Bozo (NPN: 21228432). Tarifas fijas de $5,000 a $35,000 sin examen médico." 
+      : "Compare top Florida burial insurance & final expense plans with licensed broker Andres Bozo (NPN: 21228432). $5,000–$35,000 locked lifetime rates, no medical exam. Free quote!";
+    ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
     ogImageAlt = isEs 
-      ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" 
-      : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage";
+      ? "Seguro de Entierro y Gastos Finales en Florida - Cobertura Permanente de Vida Entera" 
+      : "Florida Burial Insurance & Final Expense Life Insurance - Permanent Whole Life Coverage";
     datePublished = "2024-01-15";
     dateModified = "2026-10-10";
 
     if (isEs) {
       bodyOutline = `
-        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Gastos Finales y Funeral</span></p></nav>
+        <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Entierro y Gastos Finales</span></p></nav>
         <header>
-          <h1>Seguro de Gastos Finales y Funeral en Florida 2026</h1>
+          <h1>Seguro de Entierro y Gastos Finales en Florida 2026–2027</h1>
           <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida, Andrés Bozo (NPN: 21228432) compara las tarifas más competitivas entre más de 15 aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
         </header>
 
@@ -793,7 +793,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Final Expense & Burial Insurance</span></p></nav>
         <header>
-          <h1>Final Expense & Burial Insurance in Florida 2026</h1>
+          <h1>Burial Insurance & Final Expense in Florida 2026–2027</h1>
           <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432) compares rates across top carriers to secure the best policy for your family.</p>
         </header>
 
@@ -929,7 +929,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     description = isEs 
       ? "Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos con ventajas fiscales bajo el Código IRS 7702 en Florida." 
       : "Discover how Indexed Universal Life (IUL) provides index-linked crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.";
-    ogImage = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+    ogImage = "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp";
     ogImageAlt = isEs 
       ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" 
       : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning";
@@ -1423,15 +1423,16 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   else if (
     cleanPath === "/locations/gainesville-fl" || 
     cleanPath === "/es/locations/gainesville-fl" ||
+    cleanPath === "/es/localidades/gainesville-fl" ||
     cleanPath === "/gainesville-fl-insurance" ||
     cleanPath === "/es/seguros-gainesville-fl"
   ) {
     title = isEs
-      ? "Gainesville, FL Insurance Broker | Broker de Seguros en Gainesville | AHB Insurance Solutions"
-      : "Gainesville, FL Insurance Broker | Medicare, Life & Annuities | AHB Insurance Solutions";
+      ? "Broker de Medicare y Seguros de Vida en Gainesville, FL | AHB Insurance Solutions"
+      : "Medicare Broker Gainesville FL & Life Insurance | AHB Insurance Solutions";
     description = isEs
-      ? "Gainesville, FL Insurance Broker: Andrés Bozo (NPN: 21228432). Asesoría independiente en Medicare Medigap (UF Health Shands), Gastos Finales, IUL y Anualidades en el Condado de Alachua (5500 SW Archer Rd). Cotización gratuita: (352) 225-8389."
-      : "Gainesville, FL Insurance Broker: Andres Bozo (NPN: 21228432). Independent Medicare Medigap (UF Health Shands), Final Expense, IUL & Annuity advisory across Alachua County (5500 SW Archer Rd). Free quote: (352) 225-8389.";
+      ? "Corredor de Medicare y seguros de vida en Gainesville, FL: Andrés Bozo (NPN: 21228432). Asesoría en Medigap, UF Health Shands, gastos finales e IUL en Alachua County. Llame al (352) 225-8389."
+      : "Top-rated Medicare broker & life insurance advisor in Gainesville, FL (NPN: 21228432). Compare Medigap, UF Health Shands network plans, final expense & IUL. Free quote: (352) 225-8389.";
     ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
     ogImageAlt = isEs 
       ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" 
@@ -1813,7 +1814,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Seguro de vida entera para gastos finales y entierro en Miami y Miami-Dade. Cobertura de $5,000 a $35,000 con tarifas fijas. Cotización gratis." 
           : "Permanent whole life burial insurance in Miami & Miami-Dade County. $5,000 to $35,000 cash benefits & locked rates. Free broker quote: (352) 225-8389.";
-        ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
         ogImageAlt = isEs ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" : "Miami, FL Final Expense & Burial Insurance | AHB";
         datePublished = "2024-01-15";
         dateModified = "2026-10-10";
@@ -1835,7 +1836,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Seguro de entierro y funeral en Tampa y Condado de Hillsborough. Cobertura de $5,000 a $35,000 para adultos mayores. Compare precios con Andrés Bozo." 
           : "Burial & funeral expense insurance in Tampa & Hillsborough County. $5,000 to $35,000 level benefits for seniors. Compare top rates with Andres Bozo.";
-        ogImage = "https://images.pexels.com/photos/7551619/pexels-photo-7551619.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
         ogImageAlt = isEs ? "Seguro de Entierro y Gastos Finales en Tampa, FL | AHB" : "Tampa, FL Burial & Final Expense Insurance | AHB";
         datePublished = "2024-01-15";
         dateModified = "2026-10-10";
@@ -1857,7 +1858,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs 
           ? "Descubra el seguro de Vida Universal Indexada (IUL) en Tampa y el Condado de Hillsborough. Piso del 0% y préstamos exentos de impuestos. Consulta gratis." 
           : "Discover Indexed Universal Life (IUL) insurance in Tampa & Hillsborough County. 0% market floor & tax-free policy loans. Free broker quote: (352) 225-8389.";
-        ogImage = "https://images.pexels.com/photos/5905920/pexels-photo-5905920.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImage = "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp";
         ogImageAlt = isEs ? "Guía de Seguro IUL y Jubilación en Tampa, FL | AHB" : "Tampa, FL IUL & Retirement Insurance Guide | AHB";
         datePublished = "2024-01-15";
         dateModified = "2026-10-10";
@@ -1901,7 +1902,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         description = isEs
           ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
           : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
-        ogImage = "https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+        ogImage = "https://www.ahbinsurancesolutions.com/images/annuities-growth.webp";
         ogImageAlt = isEs 
           ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance" 
           : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
@@ -2181,12 +2182,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         }
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {
         title = isEs
-          ? "Seguro Dental, Visión y Audición para Adultos Mayores en Florida | AHB"
-          : "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
+          ? "Seguro de Visión y Dental en Florida 2026–2027 | Cobertura para Adultos Mayores"
+          : "Vision & Dental Insurance Florida 2026–2027 | Senior Eyecare & Dental Plans";
         description = isEs
-          ? "Seguro completo de dental y visión para adultos mayores y familias en Florida. Cobertura de limpiezas, implantes, dentaduras y lentes sin períodos de espera."
-          : "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.";
-        ogImage = "https://images.pexels.com/photos/4069335/pexels-photo-4069335.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop";
+          ? "Compare seguros de visión y dental en Florida con el broker licenciado Andrés Bozo. Exámenes de la vista, lentes, armazones, implantes y dentaduras sin períodos de espera."
+          : "Compare vision and dental insurance in Florida with licensed broker Andres Bozo. Affordable senior coverage for eye exams, glasses, cleanings, and implants.";
+        ogImage = "https://www.ahbinsurancesolutions.com/images/dental-vision-senior.webp";
         ogImageAlt = isEs 
           ? "Seguro Dental, Visión y Audición para Adultos Mayores en Florida" 
           : "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
@@ -2566,6 +2567,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
   } else if (
     cleanPath === "/locations/gainesville-fl" || 
     cleanPath === "/es/locations/gainesville-fl" ||
+    cleanPath === "/es/localidades/gainesville-fl" ||
     cleanPath === "/gainesville-fl-insurance" ||
     cleanPath === "/es/seguros-gainesville-fl"
   ) {

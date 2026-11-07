@@ -14,12 +14,12 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Seguro de Gastos Finales y Funeral en Florida 2026 | AHB Insurance' 
-        : 'Final Expense & Burial Insurance in Florida 2026 | AHB Insurance';
+        ? 'Seguro de Entierro y Gastos Finales en Florida 2026–2027 | Tarifas y Cobertura' 
+        : 'Burial Insurance Florida | $5K–$35K Senior Funeral Coverage & Rates 2026–2027';
 
     const description = isEs 
-        ? 'Guía completa de seguro de gastos finales en Florida. Coberturas de $5,000 a $35,000. Muchas pólizas ofrecen primas niveladas sujetas a términos del contrato. Asesoría con Andrés Bozo (NPN 21228432).' 
-        : 'Complete Florida guide to Final Expense & Burial Insurance. $5,000 to $35,000 permanent coverage. Many policies offer level premiums subject to contract terms, with simplified issue options available with broker Andres Bozo (NPN 21228432).';
+        ? 'Compare pólizas de seguro de entierro y gastos finales en Florida con el broker licenciado Andrés Bozo (NPN: 21228432). Tarifas fijas de $5,000 a $35,000 sin examen médico.' 
+        : 'Compare top Florida burial insurance & final expense plans with licensed broker Andres Bozo (NPN: 21228432). $5,000–$35,000 locked lifetime rates, no medical exam. Free quote!';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -78,8 +78,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "FinancialProduct",
-        "name": isEs ? "Seguro de Gastos Finales y Funeral en Florida" : "Final Expense & Burial Life Insurance in Florida",
-        "serviceType": "Final Expense Whole Life Insurance",
+        "name": isEs ? "Seguro de Entierro y Gastos Finales en Florida" : "Burial Insurance & Final Expense Life Insurance in Florida",
+        "serviceType": "Final Expense & Burial Whole Life Insurance",
         "category": "LifeInsurance",
         "description": description,
         "provider": {
@@ -133,7 +133,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
             {
                 "@type": "ListItem",
                 "position": 2,
-                "name": isEs ? "Seguro de Gastos Finales en Florida" : "Final Expense & Burial Insurance",
+                "name": isEs ? "Seguro de Entierro y Gastos Finales en Florida" : "Burial Insurance Florida",
                 "item": `${baseUrl}${isEs ? '/es/gastos-finales' : '/final-expense'}`
             }
         ]
@@ -160,7 +160,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                     </a>
                     <span>/</span>
                     <span className="text-primary font-bold">
-                        {isEs ? 'Seguro de Gastos Finales en Florida' : 'Final Expense & Burial Insurance'}
+                        {isEs ? 'Seguro de Entierro y Gastos Finales en Florida' : 'Burial Insurance Florida'}
                     </span>
                 </div>
             </nav>
@@ -175,8 +175,8 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             </span>
                             <h1 className="text-3xl md:text-5xl font-black font-heading mb-5 leading-tight">
                                 {isEs 
-                                    ? 'Seguro de Gastos Finales y Funeral en Florida' 
-                                    : 'Final Expense & Burial Insurance in Florida'}
+                                    ? 'Seguro de Entierro y Gastos Finales en Florida' 
+                                    : 'Burial Insurance & Final Expense in Florida'}
                             </h1>
                             <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                                 {isEs
@@ -188,7 +188,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                     onClick={onOpenQuote}
                                     className="bg-accent text-primary hover:bg-[#FFB81C] font-black uppercase tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg transition-all text-center cursor-pointer"
                                 >
-                                    {isEs ? 'Obtener cotización ➔' : 'Get Final Expense Quote ➔'}
+                                    {isEs ? 'Obtener cotización ➔' : 'Get Burial Insurance Quote ➔'}
                                 </button>
                                 <a
                                     href="tel:+13522258389"
@@ -203,23 +203,15 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </div>
                         <div className="w-full md:w-5/12">
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/25 aspect-[4/3] bg-gray-800">
-                                    return (
-                                        <Image
-                                            src="/images/final-expense-family.webp"
-                                            alt={isEs ? "Seguro de Gastos Finales y Protección Familiar en Florida" : "Florida Final Expense & Family Protection"}
-                                            className="w-full h-full object-cover"
-                                            containerClassName="w-full h-full"
-                                            width="800"
-                                            height="600"
-                                            loading="lazy"
-                                            sources={[{
-                                                type: "image/webp",
-                                                srcSet: `${image480} 480w, ${image800} 800w, ${image1200} 1200w`,
-                                                sizes: "(max-width: 767px) 95vw, 450px"
-                                            }]}
-                                        />
-                                    );
-                                })()}
+                                <Image
+                                    src="/images/final-expense-family.webp"
+                                    alt={isEs ? "Seguro de Gastos Finales y Protección Familiar en Florida" : "Florida Final Expense & Family Protection"}
+                                    className="w-full h-full object-cover"
+                                    containerClassName="w-full h-full"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </div>
@@ -322,7 +314,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 <h3 className="text-accent font-bold text-sm uppercase tracking-wide">
                                     {isEs ? 'Funeral Tradicional con Sepelio' : 'Traditional Funeral & Burial'}
                                 </h3>
-                                <p className="text-3xl font-black text-white">$Varies</p>
+                                <p className="text-3xl font-black text-white">$9,500 – $14,000+</p>
                                 <p className="text-xs text-gray-300 leading-relaxed">
                                     {isEs 
                                         ? 'Recomendamos una cobertura de $15,000 a $25,000 para cubrir ataúd, bóveda, honorarios funerarios, parcela de cementerio, lástima y gastos médicos.' 
@@ -333,13 +325,74 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                 <h3 className="text-accent font-bold text-sm uppercase tracking-wide">
                                     {isEs ? 'Cremación con Ceremonia Memorial' : 'Cremation & Memorial Service'}
                                 </h3>
-                                <p className="text-3xl font-black text-white">$Varies</p>
+                                <p className="text-3xl font-black text-white">$4,000 – $7,500</p>
                                 <p className="text-xs text-gray-300 leading-relaxed">
                                     {isEs 
                                         ? 'Recomendamos una póliza de $5,000 a $10,000 para cubrir la cremación, urna, permisos del condado, misa o reunión familiar y pequeñas deudas.' 
                                         : 'We recommend a $5,000 to $10,000 policy to cover cremation fees, urn, county permits, memorial chapel ceremony, and personal expenses.'}
                                 </p>
                             </div>
+                        </div>
+
+                        {/* Sample Florida Burial Insurance Rates Table */}
+                        <div className="bg-white/10 rounded-2xl p-5 border border-white/15">
+                            <h3 className="text-white font-bold text-base mb-2 flex items-center justify-between flex-wrap gap-2">
+                                <span>{isEs ? 'Tarifas Mensuales Estimadas de Seguro de Entierro en Florida' : 'Florida Burial Insurance Sample Monthly Rates (2026–2027)'}</span>
+                                <span className="text-[11px] font-normal text-amber-300 uppercase tracking-wider">{isEs ? 'Primas Fijas Niveladas' : 'Level Whole Life Rates'}</span>
+                            </h3>
+                            <p className="text-xs text-gray-300 mb-4">
+                                {isEs 
+                                    ? 'Estimados promedio para pólizas de vida entera con emisión simplificada. Las primas quedan congeladas de por vida desde la emisión.' 
+                                    : 'Estimated monthly averages for simplified-issue whole life policies. Premiums lock in for life upon approval and never increase.'}
+                            </p>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left text-xs text-white">
+                                    <thead>
+                                        <tr className="border-b border-white/20 text-accent font-bold uppercase tracking-wider">
+                                            <th className="py-2.5 pr-3">{isEs ? 'Edad' : 'Issue Age'}</th>
+                                            <th className="py-2.5 px-3">$5,000</th>
+                                            <th className="py-2.5 px-3">$10,000</th>
+                                            <th className="py-2.5 px-3">$15,000</th>
+                                            <th className="py-2.5 pl-3">$25,000</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-white/10 text-gray-200">
+                                        <tr>
+                                            <td className="py-2.5 pr-3 font-bold text-white">50 - 55</td>
+                                            <td className="py-2.5 px-3">$14 – $19/mo</td>
+                                            <td className="py-2.5 px-3">$25 – $35/mo</td>
+                                            <td className="py-2.5 px-3">$37 – $49/mo</td>
+                                            <td className="py-2.5 pl-3">$58 – $78/mo</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="py-2.5 pr-3 font-bold text-white">60 - 65</td>
+                                            <td className="py-2.5 px-3">$21 – $28/mo</td>
+                                            <td className="py-2.5 px-3">$38 – $49/mo</td>
+                                            <td className="py-2.5 px-3">$55 – $72/mo</td>
+                                            <td className="py-2.5 pl-3">$89 – $118/mo</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="py-2.5 pr-3 font-bold text-white">70 - 75</td>
+                                            <td className="py-2.5 px-3">$34 – $47/mo</td>
+                                            <td className="py-2.5 px-3">$65 – $85/mo</td>
+                                            <td className="py-2.5 px-3">$94 – $125/mo</td>
+                                            <td className="py-2.5 pl-3">$155 – $205/mo</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="py-2.5 pr-3 font-bold text-white">76 - 80</td>
+                                            <td className="py-2.5 px-3">$52 – $75/mo</td>
+                                            <td className="py-2.5 px-3">$98 – $142/mo</td>
+                                            <td className="py-2.5 px-3">$145 – $210/mo</td>
+                                            <td className="py-2.5 pl-3">$235 – $345/mo</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="text-[10px] text-gray-400 mt-3 italic">
+                                {isEs 
+                                    ? '* Tarifas ilustrativas para no fumadores en Florida. Las primas exactas dependen de la edad exacta, sexo, historial de salud y la aseguradora elegida. Su cotización personalizada es 100% gratuita y sin compromiso.' 
+                                    : '* Illustrative sample rates for Florida non-tobacco applicants. Exact premiums depend on exact age, gender, medical history, and chosen carrier. Custom quotes are 100% free with no obligation.'}
+                            </p>
                         </div>
 
                         {/* Social Security 255 callout */}

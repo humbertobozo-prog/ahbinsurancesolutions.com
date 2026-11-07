@@ -146,7 +146,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         MEDICARE
                     </a>
                     <a href={finalExpensePath} onClick={(e) => navigateTo(e, finalExpensePath)} className={linkClass}>
-                        {isEs ? 'GASTOS FINALES' : 'FINAL EXPENSE'}
+                        {isEs ? 'GASTOS FINALES' : 'BURIAL & FINAL EXPENSE'}
                     </a>
                     <a href={iulPath} onClick={(e) => navigateTo(e, iulPath)} className={linkClass}>
                         IUL

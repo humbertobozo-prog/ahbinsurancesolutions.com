@@ -26,6 +26,20 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
                                 {content.title}
                             </h2>
                             <div className="w-20 h-1.5 bg-accent mt-4 rounded-full shadow-sm" aria-hidden="true"></div>
+
+                            {/* E-E-A-T Verified Broker License Credential */}
+                            <div className="mt-5 inline-flex items-center gap-2.5 bg-slate-50 border border-slate-200/90 rounded-xl px-4 py-2 text-xs font-semibold text-slate-800 shadow-xs">
+                                <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20" aria-hidden="true"></span>
+                                <span className="flex items-center gap-1.5 flex-wrap">
+                                    <strong className="text-primary font-bold">
+                                        {content.badge === "TRUSTED ADVISOR" ? "Licensed Florida Broker" : "Corredor Licenciado en Florida"}
+                                    </strong>
+                                    <span className="text-slate-300" aria-hidden="true">|</span>
+                                    <span className="text-slate-600">
+                                        {content.badge === "TRUSTED ADVISOR" ? "Florida DFS License / NPN: 21228432" : "Licencia Florida DFS / NPN: 21228432"}
+                                    </span>
+                                </span>
+                            </div>
                         </div>
                         
                         <div className="space-y-6 text-dark-gray text-base md:text-lg leading-relaxed max-w-2xl">
