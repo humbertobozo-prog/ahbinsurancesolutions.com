@@ -81,7 +81,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "8. Contacto Legal y Consultas",
                     content: [
                         "Si tiene preguntas sobre estos Términos de Servicio o desea presentar una solicitud legal, comuníquese con nosotros a través de los siguientes medios oficiales:",
-                        "• Dirección Postal: 5500 SW Archer Road, Apt H103, Gainesville, FL 32607, EE. UU.",
+                        "• Dirección Postal: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, EE. UU.",
                         "• Correo Electrónico: info@ahbinsurancesolutions.com",
                         "• Teléfono Directo: +1 (352) 225-8389"
                     ]
@@ -218,7 +218,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "8. Legal Contact Information",
                     content: [
                         "For legal inquiries, compliance questions, or notices regarding these Terms, please contact us:",
-                        "• Mailing Address: 5500 SW Archer Road, Apt H103, Gainesville, FL 32607, USA",
+                        "• Mailing Address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, USA",
                         "• Email: info@ahbinsurancesolutions.com",
                         "• Phone: +1 (352) 225-8389"
                     ]

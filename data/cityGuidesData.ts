@@ -50,7 +50,7 @@ export const FLORIDA_CITIES: CityData[] = [
       },
       {
         question: 'Where is AHB Insurance Solutions located in Gainesville?',
-        answer: 'Our local office is located at 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Independent broker Andres Bozo provides in-person and phone consultations across Alachua County.',
+        answer: 'Our local office is located at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Independent broker Andres Bozo provides in-person and phone consultations across Alachua County.',
       },
       {
         question: 'Do you serve Archer, Newberry, and High Springs?',
@@ -64,7 +64,7 @@ export const FLORIDA_CITIES: CityData[] = [
       },
       {
         question: '¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?',
-        answer: 'Nuestra oficina local está ubicada en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. El broker Andrés Bozo atiende de forma presencial y telefónica en todo el Condado de Alachua.',
+        answer: 'Nuestra oficina local está ubicada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. El broker Andrés Bozo atiende de forma presencial y telefónica en todo el Condado de Alachua.',
       },
       {
         question: '¿Brindan servicio en Archer, Newberry y High Springs?',

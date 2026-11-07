@@ -84,7 +84,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             "telephone": "+1-352-225-8389",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "streetAddress": "5500 SW Archer Road, Ste H103",
                 "addressLocality": "Gainesville",
                 "addressRegion": "FL",
                 "postalCode": "32607",
@@ -505,7 +505,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                 </p>
                                 <p className="flex items-center gap-2">
                                     <span className="text-accent font-bold">📍</span>
-                                    <span>5500 SW Archer Road, Apt H103, Gainesville, FL 32607</span>
+                                    <span>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</span>
                                 </p>
                             </div>
                         </div>

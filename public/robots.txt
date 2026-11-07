@@ -18,6 +18,10 @@ Disallow: /*.zip$
 Allow: /sitemap.xml
 Allow: /favicon.svg
 Allow: /manifest.json
+Allow: /manifest.webmanifest
+Allow: /pwa-192x192.png
+Allow: /pwa-512x512.png
+Allow: /apple-touch-icon.png
 Allow: /andresbozoofi.webp
 Allow: /llms.txt
 Allow: /llms-full.txt

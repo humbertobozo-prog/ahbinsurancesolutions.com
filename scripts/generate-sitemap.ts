@@ -98,10 +98,12 @@ export function generateSitemapXml(): string {
   const urlBlocks: string[] = [];
   const seenLocs = new Set<string>();
 
+  const defaultDate = new Date().toISOString().split('T')[0];
   for (const entry of routes) {
     const enFullUrl = `${BASE_URL}${entry.enPath === '/' ? '/' : entry.enPath}`;
     const esFullUrl = `${BASE_URL}${entry.esPath}`;
-    const lastmodTag = entry.lastmod ? `    <lastmod>${entry.lastmod}</lastmod>\n` : '';
+    const effectiveLastmod = entry.lastmod || defaultDate;
+    const lastmodTag = `    <lastmod>${effectiveLastmod}</lastmod>\n`;
 
     if (entry.enPath === entry.esPath) {
       // Single language or combined URL

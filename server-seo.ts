@@ -1414,7 +1414,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <h2>Get in Touch Directly</h2>
         <p><strong>Phone Call / WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
         <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-        <p><strong>Address:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+        <p><strong>Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
       </section>
     `;
   }
@@ -1448,7 +1448,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
           <div class="broker-contact-badge">
             <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
-            <p><strong>Dirección:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+            <p><strong>Dirección:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
             <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
           </div>
         </header>
@@ -1487,7 +1487,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Dirección, Teléfono y Ubicación de Nuestra Oficina en Gainesville</h2>
-          <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la autopista I-75).</p>
+          <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la autopista I-75).</p>
           <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
@@ -1513,7 +1513,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Sí, absolutamente. Con un plan Medigap (como Plan G o Plan N), usted puede atenderse con cualquier médico o especialista que acepte Medicare en UF Health Shands, HCA Florida y en cualquier hospital del país, sin restricciones de red ni necesidad de referidos.</dd>
 
             <dt><strong>¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?</strong></dt>
-            <dd>Nuestra sede física se encuentra en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</dd>
+            <dd>Nuestra sede física se encuentra en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</dd>
 
             <dt><strong>¿Cobran honorarios por comparar planes o cotizar seguros?</strong></dt>
             <dd>No. Nuestros servicios de consultoría, comparación entre múltiples aseguradoras líderes y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</dd>
@@ -1536,7 +1536,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${description}</p>
           <div class="broker-contact-badge">
             <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
-            <p><strong>Office Address:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607</p>
+            <p><strong>Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
             <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
           </div>
         </header>
@@ -1575,7 +1575,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Gainesville Office Location, Hours & Contact Details</h2>
-          <p><strong>Office Location:</strong> 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe & Butler Plaza, off I-75 Exit 384).</p>
+          <p><strong>Office Location:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe & Butler Plaza, off I-75 Exit 384).</p>
           <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">View Map & Driving Directions</a></p>
@@ -1601,7 +1601,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Yes. UF Health Shands Hospital and outpatient facilities accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N), subject to Medicare and Medigap rules, with no network restrictions or referral requirements.</dd>
 
             <dt><strong>Where is the AHB Insurance Solutions office located in Gainesville?</strong></dt>
-            <dd>Our office is located at 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389.</dd>
+            <dd>Our office is located at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389.</dd>
 
             <dt><strong>Do you charge any consultation or broker fees in Gainesville?</strong></dt>
             <dd>No, never. Our independent brokerage consultations, carrier rate comparisons, and enrollment assistance are 100% free with zero fees to you.</dd>
@@ -2330,7 +2330,7 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     ],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "5500 SW Archer Road, Apt H103",
+      "streetAddress": "5500 SW Archer Road, Ste H103",
       "addressLocality": "Gainesville",
       "addressRegion": "FL",
       "postalCode": "32607",

@@ -123,8 +123,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         "acceptedAnswer": {
           "@type": "Answer",
           "text": isEs 
-            ? "Nuestra oficina está ubicada en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza). Atendemos con cita previa o al teléfono (352) 225-8389."
-            : "Our office is located at 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389."
+            ? "Nuestra oficina está ubicada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza). Atendemos con cita previa o al teléfono (352) 225-8389."
+            : "Our office is located at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389."
         }
       },
       {
@@ -217,7 +217,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
             {/* Local Agency Badge */}
             <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs md:text-sm font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-6">
               <MapPin className="w-4 h-4 text-amber-400" />
-              <span>5500 SW Archer Rd, Apt H103, Gainesville, FL 32607</span>
+              <span>5500 SW Archer Rd, Ste H103, Gainesville, FL 32607</span>
             </div>
 
             {/* H1 Title explicitly: Gainesville, FL Insurance Broker */}
@@ -310,7 +310,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                     <MapPin className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold text-white block">{isEs ? "Dirección Física:" : "Physical Address:"}</span>
-                      <span>5500 SW Archer Road, Apt H103<br />Gainesville, FL 32607</span>
+                      <span>5500 SW Archer Road, Ste H103<br />Gainesville, FL 32607</span>
                     </div>
                   </div>
 
@@ -974,8 +974,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed pl-7">
                 {isEs 
-                  ? "Nuestra oficina está ubicada en 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la I-75). Atendemos presencialmente con cita previa o por teléfono directo al (352) 225-8389." 
-                  : "Our physical address is 5500 SW Archer Road, Apt H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza, off I-75 Exit 384). We consult in person by appointment, or via direct phone at (352) 225-8389."}
+                  ? "Nuestra oficina está ubicada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la I-75). Atendemos presencialmente con cita previa o por teléfono directo al (352) 225-8389." 
+                  : "Our physical address is 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza, off I-75 Exit 384). We consult in person by appointment, or via direct phone at (352) 225-8389."}
               </p>
             </div>
 

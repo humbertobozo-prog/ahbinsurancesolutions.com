@@ -125,7 +125,7 @@ function getAgencyFooter(isEs: boolean): string {
 - **Teléfono Directo:** [+1 (352) 225-8389](tel:+13522258389)
 - **WhatsApp:** [+1 (352) 225-8389](https://wa.me/13522258389)
 - **Correo Electrónico:** andreshbozo@ahbinsurancesolutions.com
-- **Dirección de Oficina:** 5500 SW Archer Road, Apt H103, Gainesville, FL 32607
+- **Dirección de Oficina:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
 - **Área de Cobertura:** Todo el estado de Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua y los 67 condados)
 - **Aseguradoras Representadas:** Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge y más de 80 compañías de primer nivel.
 - **Manifiesto de Agentes de IA:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)
@@ -142,7 +142,7 @@ function getAgencyFooter(isEs: boolean): string {
 - **Direct Phone:** [+1 (352) 225-8389](tel:+13522258389)
 - **WhatsApp:** [+1 (352) 225-8389](https://wa.me/13522258389)
 - **Email:** andreshbozo@ahbinsurancesolutions.com
-- **Office Address:** 5500 SW Archer Road, Apt H103, Gainesville, FL 32607
+- **Office Address:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
 - **Service Area:** Statewide across Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua, and all 67 counties)
 - **Carriers Represented:** Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge, and 80+ top-rated insurers.
 - **LLM / AI Agent Manifest:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)

@@ -169,7 +169,7 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                     <span className="whitespace-pre-line leading-relaxed">
-                                        5500 SW Archer Road, Apt H103{"\n"}
+                                        5500 SW Archer Road, Ste H103{"\n"}
                                         Gainesville, FL 32607, USA
                                     </span>
                                 </a>

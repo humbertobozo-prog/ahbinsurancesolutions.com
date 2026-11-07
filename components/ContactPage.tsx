@@ -43,7 +43,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
             "email": "andreshbozo@ahbinsurancesolutions.com",
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Apt H103",
+                "streetAddress": "5500 SW Archer Road, Ste H103",
                 "addressLocality": "Gainesville",
                 "addressRegion": "FL",
                 "postalCode": "32607",
