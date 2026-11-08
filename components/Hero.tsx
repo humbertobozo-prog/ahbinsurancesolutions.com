@@ -58,17 +58,17 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
 
     return (
         <section id="home" className="bg-light-gray relative overflow-hidden" aria-labelledby="hero-heading">
-            <div id="main-content" className="container mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
+            <div id="main-content" className="container mx-auto px-4 sm:px-6 md:px-8 pt-3 pb-6 sm:pt-4 sm:pb-8 md:pt-6 md:pb-10 lg:pt-6 lg:pb-12 xl:pt-8 xl:pb-14 flex flex-col md:flex-row items-center gap-6 md:gap-8 lg:gap-12">
                 
                 <div className="w-full md:w-1/2 z-10 text-center md:text-left">
-                    <div className="inline-flex items-center gap-2 bg-primary text-accent px-4 py-2 rounded-full text-xs md:text-sm font-black uppercase tracking-wider mb-4 md:mb-6 shadow-xs border border-accent/40">
+                    <div className="inline-flex items-center gap-2 bg-primary text-accent px-3.5 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-black uppercase tracking-wider mb-3 md:mb-4 shadow-xs border border-accent/40">
                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
                         <span>{language === 'es' ? 'Período Abierto de Inscripción Medicare 2027 (15 Oct – 7 Dic)' : 'Active: 2027 Medicare Open Enrollment (Oct 15 – Dec 7)'}</span>
                     </div>
-                    <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black font-heading text-primary mb-4 md:mb-6 leading-[1.18] md:leading-[1.12] tracking-tight">
+                    <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-black font-heading text-primary mb-3 md:mb-4 leading-[1.18] md:leading-[1.12] tracking-tight">
                         {content.heading}
                     </h1>
-                    <p className="text-base md:text-lg lg:text-xl text-slate-700 mb-6 md:mb-8 leading-relaxed font-normal md:font-medium max-w-2xl">
+                    <p className="text-base md:text-lg lg:text-xl text-slate-700 mb-4 md:mb-6 leading-relaxed font-normal md:font-medium max-w-2xl">
                         {content.subheading}
                     </p>
                     
@@ -77,14 +77,14 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                             href="#contact"
                             onClick={(e) => handleNavClick(e, 'contact')}
                             aria-label={`${content.cta.replace(/➔|->|▯/g, '').trim()} - Medicare, Final Expense & IUL Florida`}
-                            className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/20 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-7 sm:px-9 lg:px-12 py-4 md:py-5 rounded-2xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all duration-300 active:scale-95 group" 
+                            className="inline-flex items-center justify-center bg-accent text-primary border-b-4 border-primary/20 hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none px-7 sm:px-9 lg:px-12 py-3.5 md:py-4.5 rounded-2xl font-black text-base sm:text-lg md:text-xl uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all duration-300 active:scale-95 group" 
                         >
                             <span>{content.cta.replace(/➔|->|▯/g, '').trim()}</span>
                             <ArrowRight className="w-5 h-5 ml-2.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                         </a>
                     </div>
 
-                    <div className="mt-6 md:mt-8 flex items-center justify-center md:justify-start gap-3 min-h-[40px] md:min-h-[44px]">
+                    <div className="mt-4 md:mt-5 flex items-center justify-center md:justify-start gap-3 min-h-[36px] md:min-h-[40px]">
                         <div className="flex -space-x-2" aria-hidden="true">
                             {[
                                 { bg: 'bg-primary text-white', label: 'FL' },
@@ -102,7 +102,7 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                     </div>
 
                     {/* Desktop & Tablet Quick Coverage Routing - Matches High Impression Queries */}
-                    <div className="mt-6 md:mt-8 pt-5 md:pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                    <div className="mt-4 md:mt-5 pt-3.5 md:pt-4 border-t border-slate-200/90 flex flex-wrap items-center justify-center md:justify-start gap-2.5">
                         <span className="text-xs md:text-sm font-black uppercase tracking-wider text-slate-500 mr-1">
                             {language === 'es' ? 'Acceso Directo:' : 'Explore Solutions:'}
                         </span>

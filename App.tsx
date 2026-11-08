@@ -311,7 +311,9 @@ const App: React.FC = () => {
                     schema={homeBreadcrumbSchema}
                 />
                 <Hero content={content.hero} language={language} />
-                <KeyTakeaways content={content.keyTakeaways} />
+                <div className="post-hero-container relative z-20">
+                    <KeyTakeaways content={content.keyTakeaways} />
+                </div>
                 
                 <ErrorBoundary componentName="Services">
                     <Services 

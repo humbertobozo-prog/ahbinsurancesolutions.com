@@ -7,10 +7,10 @@ interface KeyTakeawaysProps {
 
 export const KeyTakeaways: React.FC<KeyTakeawaysProps> = ({ content }) => {
     return (
-        <section className="bg-white py-8 md:py-12 border-b border-gray-100" aria-labelledby="takeaways-heading">
-            <div className="container mx-auto px-6">
+        <section className="bg-white pt-1 pb-4 sm:pt-2 sm:pb-6 md:pt-2 md:pb-6 lg:pt-2 lg:pb-7 border-b border-gray-100" aria-labelledby="takeaways-heading">
+            <div className="container mx-auto px-4 sm:px-6">
                 <h2 id="takeaways-heading" className="sr-only">{content.title}</h2>
-                <div className="bg-primary/5 rounded-3xl p-6 md:p-10 border border-primary/10 shadow-sm overflow-hidden relative group">
+                <div className="bg-primary/5 rounded-3xl p-4 sm:p-5 md:p-6 lg:p-7 border border-primary/10 shadow-sm overflow-hidden relative group">
                     {/* Decorative accent background */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:scale-110 transition-transform duration-700"></div>
                     

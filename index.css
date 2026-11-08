@@ -214,5 +214,22 @@
     margin: 0 auto;
     line-height: 1.6;
   }
+
+  /* Post-Hero Container Optimization: Tightens spacing after Hero while preserving accessibility */
+  .post-hero-container {
+    padding-top: 0.25rem;
+  }
+  @media (min-width: 768px) {
+    .post-hero-container {
+      padding-top: 0.25rem;
+      margin-top: -0.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .post-hero-container {
+      padding-top: 0.25rem;
+      margin-top: -1rem;
+    }
+  }
 }
 
