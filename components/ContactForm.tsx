@@ -736,18 +736,40 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                         </button>
                                     </div>
 
-                                    {/* Direct Phone Alternative for seniors */}
+                                    {/* Direct Phone Alternative for seniors & Link to About Andres Bozo */}
                                     <div className="text-center pt-2">
-                                        <p className="text-xs text-gray-500 mb-1">
+                                        <p className="text-xs text-gray-500 mb-2">
                                             {isSpanish ? '¿Prefiere hablar directamente con Andrés H. Bozo?' : 'Prefer to talk directly with Andres H. Bozo?'}
                                         </p>
-                                        <a 
-                                            href="tel:+13522258389" 
-                                            className="inline-flex items-center gap-1.5 text-xs font-black text-primary hover:text-secondary transition-colors"
-                                        >
-                                            <span>📞 (352) 225-8389</span>
-                                            <span className="text-[10px] bg-accent/30 text-primary px-1.5 py-0.5 rounded font-bold">FL BROKER</span>
-                                        </a>
+                                        <div className="flex flex-wrap items-center justify-center gap-3">
+                                            <a 
+                                                href={isSpanish ? '/es/sobre-andres-bozo' : '/about-andres-bozo'}
+                                                onClick={(e) => {
+                                                    e.preventDefault();
+                                                    const target = isSpanish ? '/es/sobre-andres-bozo' : '/about-andres-bozo';
+                                                    window.history.pushState({}, '', target);
+                                                    window.dispatchEvent(new Event('popstate'));
+                                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                }}
+                                                title={isSpanish ? "Acerca de Andrés H. Bozo" : "About Andres H. Bozo"}
+                                                className="group inline-flex items-center gap-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-accent px-3 py-1.5 rounded-xl transition-all shadow-2xs cursor-pointer"
+                                            >
+                                                <div className="w-6 h-6 rounded-full overflow-hidden border border-accent shrink-0">
+                                                    <img src="/andresbozoofi-sm.webp" alt="Andres H. Bozo" className="w-full h-full object-cover" width="24" height="24" />
+                                                </div>
+                                                <span className="text-xs font-black text-primary group-hover:text-secondary transition-colors">
+                                                    {isSpanish ? 'Acerca de Andrés Bozo ➔' : 'About Andres Bozo ➔'}
+                                                </span>
+                                            </a>
+
+                                            <a 
+                                                href="tel:+13522258389" 
+                                                className="inline-flex items-center gap-1.5 text-xs font-black text-primary hover:text-secondary transition-colors bg-accent/20 hover:bg-accent/30 px-3 py-1.5 rounded-xl border border-accent/40"
+                                            >
+                                                <span>📞 (352) 225-8389</span>
+                                                <span className="text-[10px] bg-primary text-accent px-1.5 py-0.5 rounded font-bold">FL BROKER</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             )}

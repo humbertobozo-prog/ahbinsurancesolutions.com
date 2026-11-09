@@ -110,6 +110,44 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                     <p className="text-gray-200 text-xs md:text-sm font-medium max-w-xl mx-auto">
                         {isEs ? 'Complete sus datos para recibir una comparación objetiva sin costo ni compromiso.' : 'Fill out the simple form to receive a free multi-carrier rate comparison.'}
                     </p>
+
+                    {/* Broker Profile Trust Badge with Direct Link to About Andres Bozo */}
+                    <div className="mt-4 flex justify-center">
+                        <a 
+                            href={isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo'}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const target = isEs ? '/es/sobre-andres-bozo' : '/about-andres-bozo';
+                                window.history.pushState({}, '', target);
+                                window.dispatchEvent(new Event('popstate'));
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                            title={isEs ? "Ver perfil y biografía de Andrés H. Bozo" : "View profile & bio of Andres H. Bozo"}
+                            className="group inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-accent/60 rounded-2xl p-2.5 pr-4 transition-all shadow-md active:scale-95 cursor-pointer"
+                        >
+                            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shrink-0 group-hover:scale-105 transition-transform bg-slate-100">
+                                <img 
+                                    src="/andresbozoofi-sm.webp" 
+                                    alt="Andres H. Bozo" 
+                                    className="w-full h-full object-cover" 
+                                    width="48" 
+                                    height="48" 
+                                />
+                            </div>
+                            <div className="text-left">
+                                <div className="text-sm font-black text-white group-hover:text-accent transition-colors flex items-center gap-1">
+                                    <span>Andres H. Bozo</span>
+                                    <span className="text-xs text-accent">➔</span>
+                                </div>
+                                <div className="text-[11px] font-bold text-gray-300">
+                                    {isEs ? 'Corredor Licenciado Florida · NPN: 21228432' : 'Licensed Florida Broker · NPN: 21228432'}
+                                </div>
+                                <div className="text-[10px] text-amber-300 font-black uppercase tracking-wider">
+                                    {isEs ? 'Conocer más acerca de Andrés Bozo' : 'Learn more about Andres Bozo'}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
 
