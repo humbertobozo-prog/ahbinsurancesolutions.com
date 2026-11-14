@@ -65,6 +65,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     setActiveSlug(slug);
     const newPath = isEs ? `/es/ciudades/${slug}` : `/cities/${slug}`;
     window.history.pushState({}, '', newPath);
+    window.dispatchEvent(new Event('popstate'));
   };
 
   return (

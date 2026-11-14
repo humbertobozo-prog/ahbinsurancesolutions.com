@@ -64,12 +64,14 @@ export const KNOWN_STATIC_ROUTES = new Set([
   "/city-guides",
   "/es/guias-ciudades",
   "/final-expense-miami",
+  "/es/seguro-gastos-finales-miami",
   "/burial-insurance-tampa",
   "/es/seguro-gastos-finales-tampa",
   "/es/seguro-gastos-finales-florida",
   "/iul-retirement-tampa",
   "/es/iul-jubilacion-tampa",
   "/orlando-spanish-insurance",
+  "/es/seguros-orlando",
   "/spanish-insurance-orlando",
   "/locations/gainesville-fl",
   "/es/locations/gainesville-fl",
@@ -1390,28 +1392,28 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     }
   }
 
-  // 8. Contact Page
+  // 8. Contact / Talk With Andres Page
   else if (cleanPath === "/contact" || cleanPath === "/es/contacto") {
     title = isEs 
-      ? "Contacto y Cotización Gratis | AHB Insurance Solutions Florida" 
-      : "Contact Us & Free Quote | AHB Insurance Solutions Florida";
+      ? "Hable con Andrés H. Bozo | Mensaje Directo y Cotización Gratis | AHB Insurance" 
+      : "Talk With Andres H. Bozo | Direct Message & Free Quote | AHB Insurance";
     description = isEs 
-      ? "Solicite su cotización gratuita de Medicare, Gastos Finales e IUL. Hable directamente con el corredor Andrés H. Bozo al (352) 225-8389." 
-      : "Request your free quote for Medicare, Final Expense, or IUL. Speak directly with broker Andres Bozo at (352) 225-8389.";
+      ? "Envíe un mensaje directo a Andrés H. Bozo (NPN 21228432) o solicite su cotización gratuita de Medicare, Gastos Finales e IUL en Florida al (352) 225-8389." 
+      : "Send a direct message to licensed Florida broker Andres H. Bozo (NPN 21228432) or request a free Medicare, Final Expense, or IUL consultation at (352) 225-8389.";
     ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
     ogImageAlt = isEs 
-      ? "Contacto y Cotizaciones de Seguros en Florida - AHB Insurance Solutions" 
-      : "Contact AHB Insurance Solutions - Licensed Florida Insurance Consultations";
+      ? "Hable directamente con Andrés H. Bozo - AHB Insurance Solutions" 
+      : "Talk Directly With Andres H. Bozo - AHB Insurance Solutions";
     datePublished = "2024-01-15";
     dateModified = "2026-10-10";
 
     bodyOutline = `
       <header>
-        <h1>${title}</h1>
+        <h1>${isEs ? "Hable Directamente con Andrés H. Bozo" : "Talk Directly With Andres H. Bozo"}</h1>
         <p>${description}</p>
       </header>
       <section>
-        <h2>Get in Touch Directly</h2>
+        <h2>${isEs ? "Contacto Directo y Mensaje a Andrés Bozo" : "Send a Direct Message to Andres"}</h2>
         <p><strong>Phone Call / WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
         <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
         <p><strong>Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
@@ -1791,12 +1793,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   else {
     const landingPaths = [
       "/final-expense-miami",
+      "/es/seguro-gastos-finales-miami",
       "/burial-insurance-tampa",
       "/es/seguro-gastos-finales-tampa",
       "/es/seguro-gastos-finales-florida",
       "/iul-retirement-tampa",
       "/es/iul-jubilacion-tampa",
       "/orlando-spanish-insurance",
+      "/es/seguros-orlando",
       "/spanish-insurance-orlando",
       "/annuities-florida",
       "/es/anualidades-florida",
@@ -1807,7 +1811,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ];
 
     if (landingPaths.includes(cleanPath)) {
-      if (cleanPath === "/final-expense-miami" || cleanPath === "/es/seguro-gastos-finales-florida") {
+      if (cleanPath === "/final-expense-miami" || cleanPath === "/es/seguro-gastos-finales-miami" || cleanPath === "/es/seguro-gastos-finales-florida") {
         title = isEs 
           ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" 
           : "Miami, FL Final Expense & Burial Insurance | AHB";
@@ -1873,7 +1877,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <p>Learn how Indexed Universal Life (IUL) insurance helps professionals and business owners in Tampa accumulation cash value with a contractual 0% floor against market index drops and tax-free policy loan options under IRS Section 7702.</p>
           </section>
         `;
-      } else if (cleanPath === "/orlando-spanish-insurance" || cleanPath === "/spanish-insurance-orlando") {
+      } else if (cleanPath === "/orlando-spanish-insurance" || cleanPath === "/es/seguros-orlando" || cleanPath === "/spanish-insurance-orlando") {
         title = isEs 
           ? "Seguros de Vida y Medicare en Orlando, FL | AHB" 
           : "Orlando Spanish Insurance Services | AHB Solutions";

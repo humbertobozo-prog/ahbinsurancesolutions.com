@@ -235,7 +235,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             {/* Header / Sub Nav */}
             <header className="sticky top-0 bg-primary z-50 text-white border-b border-white/5 shadow-md">
                 <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-                    <a href="/" className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-accent">
+                    <a href={activeLang === 'es' ? '/es' : '/'} className="flex items-center gap-3 group focus-visible:outline-2 focus-visible:outline-accent">
                         <div className="bg-accent text-primary p-2.5 rounded-xl font-black text-xl tracking-tight shadow-lg hover:scale-105 active:scale-95 transition-all">
                             AHB
                         </div>

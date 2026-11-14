@@ -29,7 +29,13 @@ app.get('/api/health', (_req: Request, res: Response) => {
 });
 
 app.post('/api/contact', (req: Request, res: Response) => {
-  console.log('Lead submission received:', req.body?.name, req.body?.phone);
+  console.log(
+    'Lead submission received:',
+    req.body?.name,
+    req.body?.phone,
+    req.body?.topic ? `[${req.body.topic}]` : '',
+    req.body?.message ? '(with message)' : ''
+  );
   res.status(200).json({ success: true, message: 'Lead received successfully' });
 });
 

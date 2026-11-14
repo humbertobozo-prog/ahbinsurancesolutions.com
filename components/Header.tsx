@@ -9,7 +9,11 @@ const BLOG_SLUG_PAIRS: Record<string, { en: string; es: string }> = {
     'final-expense-burial-costs-florida': { en: 'final-expense-burial-costs-florida', es: 'costos-funerales-gastos-finales-florida' },
     'costos-funerales-gastos-finales-florida': { en: 'final-expense-burial-costs-florida', es: 'costos-funerales-gastos-finales-florida' },
     'iul-vs-401k-tax-free-retirement': { en: 'iul-vs-401k-tax-free-retirement', es: 'iul-vs-401k-jubilacion-libre-de-impuestos' },
-    'iul-vs-401k-jubilacion-libre-de-impuestos': { en: 'iul-vs-401k-tax-free-retirement', es: 'iul-vs-401k-jubilacion-libre-de-impuestos' }
+    'iul-vs-401k-jubilacion-libre-de-impuestos': { en: 'iul-vs-401k-tax-free-retirement', es: 'iul-vs-401k-jubilacion-libre-de-impuestos' },
+    'medicare-part-d-formulary-changes-florida-2026': { en: 'medicare-part-d-formulary-changes-florida-2026', es: 'cambios-formulario-medicare-parte-d-florida-2026' },
+    'cambios-formulario-medicare-parte-d-florida-2026': { en: 'medicare-part-d-formulary-changes-florida-2026', es: 'cambios-formulario-medicare-parte-d-florida-2026' },
+    'iul-retirement-planning-tax-efficiency-florida': { en: 'iul-retirement-planning-tax-efficiency-florida', es: 'planificacion-retiro-iul-eficiencia-fiscal-florida' },
+    'planificacion-retiro-iul-eficiencia-fiscal-florida': { en: 'iul-retirement-planning-tax-efficiency-florida', es: 'planificacion-retiro-iul-eficiencia-fiscal-florida' }
 };
 
 interface HeaderProps {
@@ -177,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         <span>+1 (352) 225-8389</span>
                     </a>
                     <a 
-                        href="/contact" 
+                        href={contactPath} 
                         onClick={(e) => navigateTo(e, contactPath)} 
                         className="bg-accent text-primary px-3.5 py-2 lg:px-4 lg:py-2 rounded-xl font-black uppercase tracking-widest text-[11px] lg:text-xs hover:bg-[#FFB81C] focus-visible:ring-4 focus-visible:ring-accent outline-none transition-all shadow-md ml-1"
                     >

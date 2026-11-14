@@ -19,17 +19,21 @@ const VALID_BLOG_SLUGS = new Set([
     'final-expense-burial-costs-florida',
     'costos-funerales-gastos-finales-florida',
     'iul-vs-401k-tax-free-retirement',
-    'iul-vs-401k-jubilacion-libre-de-impuestos'
+    'iul-vs-401k-jubilacion-libre-de-impuestos',
+    'medicare-part-d-formulary-changes-florida-2026',
+    'cambios-formulario-medicare-parte-d-florida-2026',
+    'iul-retirement-planning-tax-efficiency-florida',
+    'planificacion-retiro-iul-eficiencia-fiscal-florida'
 ]);
 
 const VALID_CITY_SLUGS = new Set([
+    'gainesville',
     'miami',
     'orlando',
     'tampa',
     'jacksonville',
-    'st-petersburg',
-    'hialeah',
-    'tallahassee'
+    'fort-lauderdale',
+    'west-palm-beach'
 ]);
 
 const TermsAndPrivacyModal = React.lazy(() => import('./components/TermsAndPrivacyModal'));
@@ -186,6 +190,7 @@ const App: React.FC = () => {
                             <Suspense fallback={<Spinner height="py-48" />}>
                                 <ContactForm 
                                     content={translations[cleanPath === '/spanish-insurance-orlando' ? 'es' : language].contactForm} 
+                                    language={cleanPath === '/spanish-insurance-orlando' ? 'es' : language}
                                     onOpenLegalModal={handleOpenLegalModal}
                                 />
                             </Suspense>
@@ -242,7 +247,7 @@ const App: React.FC = () => {
         if (!cityExists) {
             mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><NotFoundPage language={language} /></Suspense>;
         } else {
-            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
+            mainContentComponent = <Suspense fallback={<Spinner height="py-48" />}><CityGuides key={citySlug || 'hub'} language={language} initialCitySlug={citySlug} onOpenQuote={handleNavigateToQuote} /></Suspense>;
         }
     } else if (
         cleanPath === '/locations/gainesville-fl' || 
@@ -260,6 +265,7 @@ const App: React.FC = () => {
                         <ErrorBoundary componentName="ContactForm">
                             <ContactForm 
                                 content={translations[language].contactForm} 
+                                language={language}
                                 onOpenLegalModal={handleOpenLegalModal}
                             />
                         </ErrorBoundary>
@@ -292,7 +298,7 @@ const App: React.FC = () => {
                     "@type": "ListItem",
                     "position": 1,
                     "name": isEs ? "Inicio" : "Home",
-                    "item": `${baseUrl}${isEs ? '/es' : ''}`
+                    "item": `${baseUrl}${isEs ? '/es' : '/'}`
                 }
             ]
         };

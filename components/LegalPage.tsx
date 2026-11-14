@@ -56,7 +56,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
                     <div className="container mx-auto px-6 relative z-10 max-w-5xl">
                         <div className="flex items-center gap-3 mb-4">
                             <a 
-                                href="/" 
+                                href={language === 'es' ? '/es' : '/'} 
                                 className="inline-flex items-center text-xs font-bold bg-white/10 hover:bg-white/20 text-accent px-3 py-1.5 rounded-full border border-white/20 transition-all"
                             >
                                 ← {language === 'es' ? 'Volver al Inicio' : 'Back to Home'}

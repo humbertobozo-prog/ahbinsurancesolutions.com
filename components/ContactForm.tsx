@@ -5,6 +5,7 @@ import { validateFloridaZip, validateBirthYear, ZipValidationResult } from '../u
 interface ContactFormProps {
     content: TranslationContent['contactForm'];
     language?: Language;
+    selectedService?: string | null;
     onOpenLegalModal?: (tab: 'terms' | 'privacy') => void;
 }
 
@@ -16,6 +17,7 @@ interface FormData {
     name: string;
     email: string;
     phone: string;
+    message: string;
     fax_number: string; // Honeypot para spam
 }
 
@@ -41,7 +43,7 @@ const POPULAR_FL_CITIES = [
     { name: 'Jacksonville', zip: '32202' },
 ];
 
-export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onOpenLegalModal }) => {
+export const ContactForm: React.FC<ContactFormProps> = ({ content, language, selectedService, onOpenLegalModal }) => {
     const sectionRef = useRef<HTMLElement>(null);
     const isSpanish = language === 'es' || content.backButton === 'Atrás' || content.stepLabel === 'Paso' || content.mainTitle.includes('Elegibilidad');
 
@@ -53,6 +55,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         name: '',
         email: '',
         phone: '',
+        message: '',
         fax_number: '',
     });
     const [errors, setErrors] = useState<FormErrors>({});
@@ -122,7 +125,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         }
     };
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         if (name === 'zipCode') {
             handleZipChange(value);
@@ -139,7 +142,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
         }
     };
 
-    const handleInputBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const handleInputBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setTouched(prev => ({ ...prev, [name]: true }));
         const fieldError = validateField(name, value);
@@ -194,6 +197,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
             name: '',
             email: '',
             phone: '',
+            message: '',
             fax_number: '',
         });
         setCurrentStep(1);
@@ -233,6 +237,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
 
         setStatus('loading');
 
+        const eligibilitySummary = [
+            yearValidation.eligibilityText || 'Standard Florida Quote',
+            selectedService ? `Topic: ${selectedService}` : '',
+            formData.message.trim() ? `Message: ${formData.message.trim()}` : ''
+        ].filter(Boolean).join(' | ');
+
         const templateParams = {
             to_email: DESTINATION_EMAIL,
             to_name: "Andres H. Bozo",
@@ -243,7 +253,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
             florida_region: zipValidation.region || 'Florida Resident',
             birth_year: formData.birthYear,
             estimated_age: yearValidation.age ? `~${yearValidation.age} years old` : 'Not specified',
-            coverage_eligibility: yearValidation.eligibilityText || 'Standard Florida Quote',
+            coverage_eligibility: eligibilitySummary,
+            message: formData.message.trim() || (selectedService ? `Topic: ${selectedService}` : 'Quote request'),
             submission_date: new Date().toLocaleString()
         };
 
@@ -260,7 +271,9 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                     birthYear: formData.birthYear,
                     region: zipValidation.region || 'Florida Resident',
                     age: yearValidation.age,
-                    eligibility: yearValidation.eligibilityText,
+                    topic: selectedService || undefined,
+                    message: formData.message.trim() || undefined,
+                    eligibility: eligibilitySummary,
                 })
             }).catch(err => console.warn('Server contact backup ping failed:', err));
 
@@ -707,6 +720,30 @@ export const ContactForm: React.FC<ContactFormProps> = ({ content, language, onO
                                             {touched.email && errors.email && <p className="mt-1 text-xs text-red-500 font-bold uppercase">{errors.email}</p>}
                                         </div>
                                     </div>
+
+                                    <div>
+                                        <label htmlFor="quote-message" className="block text-xs md:text-sm font-black text-primary uppercase tracking-[0.1em] mb-1.5 ml-1">
+                                            {isSpanish ? 'Mensaje o Pregunta para Andrés (Opcional)' : 'Message or Question for Andres (Optional)'}
+                                        </label>
+                                        <textarea
+                                            id="quote-message"
+                                            name="message"
+                                            rows={3}
+                                            value={formData.message}
+                                            onChange={handleInputChange}
+                                            onBlur={handleInputBlur}
+                                            placeholder={isSpanish
+                                                ? 'Cuéntele a Andrés qué plan o cobertura busca, medicamentos actuales o mejor horario para llamarle...'
+                                                : 'Share any questions for Andres, preferred callback time, or plans you want compared...'}
+                                            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-accent bg-gray-50/50 outline-none transition-all text-sm font-medium text-gray-900 resize-y"
+                                        />
+                                    </div>
+
+                                    {status === 'error' && (
+                                        <div role="alert" className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-bold text-center">
+                                            {content.errorMessage}
+                                        </div>
+                                    )}
 
                                     {/* Legal & Consent Notice */}
                                     <div className="pt-2 text-[11px] text-gray-500 leading-relaxed bg-gray-50 p-3 rounded-xl border border-gray-200">

@@ -165,8 +165,8 @@
       "permanent": true
     },
     {
-      "source": "/es/localidades/gainesville-fl",
-      "destination": "/es/locations/gainesville-fl",
+      "source": "/es/locations/gainesville-fl",
+      "destination": "/es/localidades/gainesville-fl",
       "permanent": true
     },
     {
@@ -176,7 +176,12 @@
     },
     {
       "source": "/es/seguros-gainesville-fl",
-      "destination": "/es/locations/gainesville-fl",
+      "destination": "/es/localidades/gainesville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/politica-editorial",
+      "destination": "/es/politica-editorial",
       "permanent": true
     },
     {
