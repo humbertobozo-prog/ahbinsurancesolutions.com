@@ -1,16 +1,79 @@
 
 import React from 'react';
-import type { TranslationContent } from '../types';
+import type { Language, TranslationContent } from '../types';
 
 interface ComplianceLinksProps {
     content: TranslationContent['authoritativeLinks'];
+    language?: Language;
 }
 
-export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content }) => {
+export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, language = 'en' }) => {
+    const isEs = language === 'es';
+
     return (
         <section className="bg-white py-12 border-t border-gray-100" aria-labelledby="compliance-heading">
             <div className="container mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto space-y-10">
+                    {/* Clear, senior-friendly Coverage Guide to improve clarity and text ratio */}
+                    <div className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-200/80">
+                        <h2 className="text-2xl font-black font-heading text-primary mb-2">
+                            {isEs
+                                ? 'Guía Rápida para Familias y Adultos Mayores'
+                                : 'Simple Answers About Medicare, Burial & Life Coverage'}
+                        </h2>
+                        <p className="text-sm text-slate-600 mb-6">
+                            {isEs
+                                ? 'Escrito por Andrés H. Bozo (NPN 21228432) · Revisado en noviembre de 2026'
+                                : 'Plain-language guide written by licensed broker Andres H. Bozo (NPN 21228432). Updated November 16, 2026.'}
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700 leading-relaxed">
+                            <article>
+                                <h3 className="font-bold text-primary text-base mb-1.5">
+                                    {isEs ? '¿Cómo ayuda Medigap Plan G o Plan N?' : 'How does Medigap Plan G or Plan N protect you?'}
+                                </h3>
+                                <p>
+                                    {isEs
+                                        ? 'Medicare Original cubre el 80% de las visitas médicas. Usted paga el 20% restante sin límite anual. Un suplemento Medigap cubre ese 20% y los copagos hospitalarios. Puede visitar a cualquier médico del país que acepte Medicare.'
+                                        : 'Original Medicare pays 80% of approved medical visits, leaving a 20% share with no yearly limit. Medigap Plan G or Plan N steps in to pay those remaining bills. You keep freedom to visit any doctor nationwide who takes Medicare.'}
+                                </p>
+                            </article>
+
+                            <article>
+                                <h3 className="font-bold text-primary text-base mb-1.5">
+                                    {isEs ? '¿Quién califica para Gastos Finales?' : 'Who qualifies for Final Expense protection?'}
+                                </h3>
+                                <p>
+                                    {isEs
+                                        ? 'Las pólizas de gastos finales ofrecen montos de $5,000 a $35,000 para cubrir funeral, cremación o deudas médicas. La mayoría solo pide preguntas simples de salud, sin exámenes de sangre. También existen planes garantizados si tuvo condiciones previas.'
+                                        : 'Final expense policies offer $5,000 to $35,000 in whole life protection for funeral, cremation, and final bills. Most applicants answer simple health questions with no medical exam. Guaranteed options remain available for chronic health histories.'}
+                                </p>
+                            </article>
+
+                            <article>
+                                <h3 className="font-bold text-primary text-base mb-1.5">
+                                    {isEs ? '¿Cómo funciona una póliza IUL para retiro?' : 'How does an IUL policy build retirement value?'}
+                                </h3>
+                                <p>
+                                    {isEs
+                                        ? 'Una póliza IUL brinda protección de vida y ahorro ligado a un índice bursátil con un piso contractual del 0%. Cuando la bolsa baja, su estrategia indexada no pierde por caídas del mercado. Los préstamos bajo la regla IRS 7702 requieren mantener la póliza activa.'
+                                        : 'An Indexed Universal Life policy pairs lifelong protection with cash accumulation linked to a market index. A contractual 0% floor shields credited index gains when stocks drop. Policy loans under IRS Code 7702 require keeping the contract properly funded.'}
+                                </p>
+                            </article>
+
+                            <article>
+                                <h3 className="font-bold text-primary text-base mb-1.5">
+                                    {isEs ? '¿Por qué trabajar con un corredor independiente?' : 'Why work with an independent licensed broker?'}
+                                </h3>
+                                <p>
+                                    {isEs
+                                        ? 'Un agente exclusivo solo vende una marca. Como corredor independiente, Andrés Bozo compara más de 80 compañías para ajustar el plan a sus médicos, medicinas y presupuesto. Nuestras citas y comparativas son 100% gratuitas.'
+                                        : 'A captive agent can only show one company. As an independent advisor, Andres Bozo shops rates across 80+ top-rated carriers to match your doctors, prescriptions, and budget. You pay zero brokerage fees for personal help.'}
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+
                     <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                         <div className="md:w-1/3 text-center md:text-left">
                             <div className="inline-flex p-3 bg-secondary/5 rounded-2xl mb-4 border border-secondary/10">
@@ -35,7 +98,7 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content }) => 
                                 >
                                     <div className="flex justify-between items-center mb-2">
                                         <span className="text-primary font-black text-sm uppercase tracking-wider group-hover:text-secondary">{item.label}</span>
-                                        <svg aria-hidden="true" className="w-4 h-4 text-gray-400 group-hover:text-accent transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <svg aria-hidden="true" className="w-4 h-4 text-gray-500 group-hover:text-accent transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                         </svg>
                                     </div>
@@ -43,11 +106,16 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content }) => 
                                 </a>
                             ))}
                             
-                            {/* Extra informational block */}
-                            <div className="sm:col-span-2 p-4 bg-accent/5 rounded-2xl border border-accent/10 flex items-center">
-                                <span className="text-[10px] text-primary font-bold uppercase tracking-widest text-center w-full">
-                                    As independent brokers, we strictly follow CMS and State Department of Financial Services guidelines.
-                                </span>
+                            {/* Visible CMS & Financial Disclaimers */}
+                            <div className="sm:col-span-2 p-4 bg-accent/10 rounded-2xl border border-accent/25 text-xs text-slate-700 leading-relaxed">
+                                <p className="font-bold text-primary mb-1">
+                                    {isEs ? 'Aviso Legal de Medicare y Cumplimiento' : 'Important Medicare & Policy Disclaimers'}
+                                </p>
+                                <p>
+                                    {isEs
+                                        ? 'No ofrecemos todos los planes disponibles en su área. Comuníquese con Medicare.gov o llame al 1-800-MEDICARE para ver todas sus opciones. Los detalles, primas y aprobaciones dependen de la suscripción de cada compañía y leyes estatales. Este sitio ofrece educación general y no constituye asesoría legal o fiscal.'
+                                        : 'Disclaimer: We do not offer every plan available in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options. Policy availability, premiums, and approval depend on underwriting and contract terms. Information here is educational and not tax or legal advice.'}
+                                </p>
                             </div>
                         </div>
                     </div>

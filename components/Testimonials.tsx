@@ -131,18 +131,22 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content, language })
                     </div>
 
                     <button 
+                        type="button"
                         onClick={prevSlide}
                         className="absolute top-1/2 -left-4 md:-left-8 lg:-left-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-primary transition-all duration-300 z-20 hidden md:block active:scale-90"
-                        aria-label="Previous testimonial"
+                        aria-label={isEs ? "Testimonio anterior" : "Previous testimonial"}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path></svg>
+                        <span className="sr-only">{isEs ? "Testimonio anterior" : "Previous testimonial"}</span>
+                        <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path></svg>
                     </button>
                     <button 
+                        type="button"
                         onClick={nextSlide}
                         className="absolute top-1/2 -right-4 md:-right-8 lg:-right-12 -translate-y-1/2 bg-white/80 backdrop-blur-md p-4 rounded-full shadow-lg border border-gray-100 text-primary hover:bg-accent hover:text-primary transition-all duration-300 z-20 hidden md:block active:scale-90"
-                        aria-label="Next testimonial"
+                        aria-label={isEs ? "Siguiente testimonio" : "Next testimonial"}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path></svg>
+                        <span className="sr-only">{isEs ? "Siguiente testimonio" : "Next testimonial"}</span>
+                        <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                 </div>
 
@@ -150,19 +154,22 @@ export const Testimonials: React.FC<TestimonialsProps> = ({ content, language })
                     {Array.from({ length: maxIndex + 1 }).map((_, i) => (
                         <button
                             key={i}
+                            type="button"
                             onClick={() => setCurrentIndex(i)}
-                            className="group p-2 focus:outline-none"
-                            aria-label={`Go to slide ${i + 1}`}
+                            className="group p-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full"
+                            aria-label={isEs ? `Ir a la diapositiva ${i + 1}` : `Go to slide ${i + 1}`}
                         >
-                            <div 
-                                className={`h-3 transition-all duration-500 rounded-full ${currentIndex === i ? 'w-10 bg-accent' : 'w-3 bg-gray-300 group-hover:bg-gray-400'}`}
+                            <span className="sr-only">{isEs ? `Ir a la diapositiva ${i + 1}` : `Go to slide ${i + 1}`}</span>
+                            <span 
+                                aria-hidden="true"
+                                className={`block h-3 transition-all duration-500 rounded-full ${currentIndex === i ? 'w-10 bg-accent' : 'w-3 bg-gray-400 group-hover:bg-gray-500'}`}
                             />
                         </button>
                     ))}
                 </div>
 
                 {/* FTC / CMS Compliance Disclaimer */}
-                <div className="max-w-3xl mx-auto mt-10 text-center text-xs text-gray-500 leading-relaxed border-t border-gray-200/60 pt-4">
+                <div className="max-w-3xl mx-auto mt-10 text-center text-xs text-gray-600 leading-relaxed border-t border-gray-200/60 pt-4">
                     <p>
                         {isEs
                             ? 'Nota de conformidad: Comentarios y testimonios representativos de clientes asesorados en Florida. Se utilizan iniciales para proteger la privacidad individual según las directrices de confidencialidad del sector. Las primas, beneficios y aprobaciones finales dependen de la edad, salud, elegibilidad y criterios de suscripción de cada aseguradora.'

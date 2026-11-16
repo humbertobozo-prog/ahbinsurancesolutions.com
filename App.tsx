@@ -2,7 +2,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { KeyTakeaways } from './components/KeyTakeaways';
-const Footer = React.lazy(() => import('./components/Footer'));
+import Footer from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { translations } from './constants/translations';
 import type { Language } from './types';
@@ -313,7 +313,7 @@ const App: React.FC = () => {
                     ogImage={`${baseUrl}/og-image.png`}
                     ogImageAlt={isEs ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists"}
                     datePublished="2024-01-15"
-                    dateModified="2026-10-10"
+                    dateModified="2026-11-16"
                     schema={homeBreadcrumbSchema}
                 />
                 <Hero content={content.hero} language={language} />
@@ -349,7 +349,7 @@ const App: React.FC = () => {
                 </ErrorBoundary>
 
                 <ErrorBoundary componentName="ComplianceLinks">
-                    <ComplianceLinks content={content.authoritativeLinks} />
+                    <ComplianceLinks content={content.authoritativeLinks} language={language} />
                 </ErrorBoundary>
             </>
         );
@@ -372,9 +372,7 @@ const App: React.FC = () => {
             <main className="flex-grow">
                 {mainContentComponent}
             </main>
-            <Suspense fallback={<div className="h-[400px]" />}>
-                <Footer content={content.footer} common={content.common} language={language} onOpenLegalModal={handleOpenLegalModal} />
-            </Suspense>
+            <Footer content={content.footer} common={content.common} language={language} onOpenLegalModal={handleOpenLegalModal} />
             <WhatsAppButton ariaLabel={content.whatsappButton.ariaLabel} language={language} />
             <BackToTopButton />
             <TapToCallButton label={content.tapToCallButton?.label || (isEs ? 'Llamar al Broker' : 'Call Licensed Broker')} phone={content.tapToCallButton?.phone || '+13522258389'} />

@@ -34,15 +34,15 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
 
                         <p className="text-gray-200 mb-4 leading-relaxed">{content.description}</p>
                         
-                        <div className="group relative border-t border-white/20 pt-2 inline-block focus-within:ring-2 focus-within:ring-accent rounded p-1 outline-none" tabIndex={0}>
-                            <p className="text-white text-sm font-bold cursor-help transition-colors hover:text-accent group-focus:text-accent">
+                        <button type="button" className="group relative border-t border-white/20 pt-2 inline-block text-left focus-visible:ring-2 focus-visible:ring-accent rounded p-1 outline-none" aria-label={`${content.licenseInfo}. ${common.npnTooltip}`}>
+                            <span className="block text-white text-sm font-bold cursor-help transition-colors hover:text-accent group-focus:text-accent">
                                 {content.licenseInfo}
-                            </p>
-                            <div className="absolute bottom-full left-0 mb-2 hidden group-hover:block group-focus:block w-56 p-2 bg-dark-gray text-white text-[10px] rounded shadow-xl z-50 animate-fade-in-up font-medium normal-case tracking-normal">
+                            </span>
+                            <span className="absolute bottom-full left-0 mb-2 hidden group-hover:block group-focus:block w-56 p-2 bg-dark-gray text-white text-[10px] rounded shadow-xl z-50 animate-fade-in-up font-medium normal-case tracking-normal">
                                 {common.npnTooltip}
-                                <div className="absolute top-full left-4 border-8 border-transparent border-t-dark-gray" aria-hidden="true"></div>
-                            </div>
-                        </div>
+                                <span className="absolute top-full left-4 border-8 border-transparent border-t-dark-gray" aria-hidden="true"></span>
+                            </span>
+                        </button>
                         
                         {/* Enhanced SSL Badge */}
                         <div className="mt-6 flex items-center bg-white/5 p-4 rounded-xl border border-white/10 w-fit">
@@ -168,10 +168,10 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    <span className="whitespace-pre-line leading-relaxed text-xs sm:text-sm">
+                                    <address className="not-italic whitespace-pre-line leading-relaxed text-xs sm:text-sm">
                                         5500 SW Archer Road, Ste H103{"\n"}
                                         Gainesville, FL 32607, USA
-                                    </span>
+                                    </address>
                                 </a>
                             </li>
                             <li>

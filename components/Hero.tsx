@@ -171,7 +171,7 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
 
                     {/* Quick Coverage Routing Bar with Legible Text */}
                     <div className="mt-3.5 pt-3 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5 w-full">
-                        <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-500 mr-1">
+                        <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-600 mr-1">
                             {language === 'es' ? 'Acceso Directo:' : 'Explore Solutions:'}
                         </span>
                         <a 

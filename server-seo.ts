@@ -184,8 +184,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   }
 
   // Default Fallbacks (Home English)
-  let title = "Florida Medicare, Burial Insurance & IUL Life | AHB Solutions";
-  let description = "Expert Florida insurance guidance: Burial Insurance ($5K–$35K), Medicare Supplement & IUL. Compare top rates with licensed broker Andres Bozo (NPN 21228432). Free quote!";
+  let title = "Florida Medicare, Burial & IUL Insurance | AHB Solutions";
+  let description = "Compare Florida Medicare Supplement, Burial ($5K-$35K) & IUL plans with licensed broker Andres Bozo (NPN 21228432). Free quote!";
 
   // Get paired routes using shared utility
   const pairs = getRoutePairs(cleanPath);
@@ -200,13 +200,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" 
     : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists";
   let datePublished = "2024-01-15";
-  let dateModified = "2026-10-10";
+  let dateModified = "2026-11-16";
 
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
     if (isEs) {
-      title = "Seguro Medicare Florida, Seguro de Entierro e IUL | Broker Bilingüe AHB";
-      description = "Asesoría de seguros en Florida: Seguro de Entierro y Gastos Finales ($5K–$35K), Suplementos de Medicare e IUL. Cotice gratis con el broker licenciado Andrés Bozo (NPN 21228432).";
+      title = "Seguro Medicare, Entierro e IUL Florida | AHB Broker";
+      description = "Compare planes de Medicare, Gastos Finales ($5K-$35K) e IUL en Florida con el broker licenciado Andrés Bozo (NPN 21228432). Cotice gratis.";
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
@@ -2239,7 +2239,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   };
 }
 
-export function generateJsonLd(metadata: SeoMetaData): object {
+export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[] {
   const isEs = metadata.htmlLang.startsWith("es");
   const canonical = metadata.canonicalUrl;
   const cleanPath = canonical.replace("https://www.ahbinsurancesolutions.com", "") || "/";
@@ -2685,10 +2685,10 @@ export function generateJsonLd(metadata: SeoMetaData): object {
     }
   }
 
-  return {
+  return graph.map((node) => ({
     "@context": "https://schema.org",
-    "@graph": graph
-  };
+    ...node
+  }));
 }
 
 export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, includeBodyOutline: boolean = true): string {
@@ -2802,19 +2802,30 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     rewritten = rewritten.replace("</head>", `${socialMeLinks}\n</head>`);
   }
 
-  // 7. Inject Route-Accurate JSON-LD Schema
-  const jsonLdData = generateJsonLd(metadata);
-  const jsonLdString = JSON.stringify(jsonLdData, null, 2);
-  const jsonLdScriptTag = `<script type="application/ld+json" id="app-ld-json">\n${jsonLdString}\n    </script>`;
+  // 7. Inject Route-Accurate JSON-LD Schema (individual typed blocks so every block has top-level @type)
+  const jsonLdNodes = generateJsonLd(metadata);
+  const jsonLdScriptTags = jsonLdNodes
+    .map((node, index) => {
+      const idAttr = index === 0 ? ' id="app-ld-json"' : '';
+      return `<script type="application/ld+json" data-seo-ld="true"${idAttr}>${JSON.stringify(node)}</script>`;
+    })
+    .join('\n    ');
 
-  const ldJsonRegex = /<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/;
+  const ldJsonRegex = /<script type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/g;
   if (ldJsonRegex.test(rewritten)) {
-    rewritten = rewritten.replace(ldJsonRegex, jsonLdScriptTag);
+    let replacedFirst = false;
+    rewritten = rewritten.replace(ldJsonRegex, () => {
+      if (!replacedFirst) {
+        replacedFirst = true;
+        return jsonLdScriptTags;
+      }
+      return '';
+    });
   } else {
-    rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTag}\n</head>`);
+    rewritten = rewritten.replace("</head>", `    ${jsonLdScriptTags}\n</head>`);
   }
 
-  // 8. Inject crawler-friendly semantic HTML inside <div id="root"> and <noscript> for AI bots & search engines
+  // 8. Inject crawler-friendly semantic HTML inside <div id="root"> and concise <noscript> fallback
   if (includeBodyOutline) {
     const socialNav = `
         <nav aria-label="Official Social Media Profiles">
@@ -2836,9 +2847,9 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     }
 
     const noscriptRegex = /<noscript>[\s\S]*?<\/noscript>/;
-    const noscriptReplacement = `<noscript>\n      <div class="noscript-content">\n        ${metadata.bodyOutline}\n${socialNav}\n      </div>\n    </noscript>`;
+    const noscriptSummary = `<noscript>\n      <div class="noscript-content">\n        <p><strong>${escapeHtml(metadata.title)}</strong></p>\n        <p>${escapeHtml(metadata.description)}</p>\n        <p>AHB Insurance Solutions LLC · 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · NPN: 21228432 · <a href="tel:+13522258389">+1 (352) 225-8389</a></p>\n        <nav aria-label="Primary Links"><a href="/medicare-florida">Medicare</a> | <a href="/final-expense">Final Expense</a> | <a href="/iul-retirement">IUL</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a> | <a href="/editorial-policy">Editorial Policy</a></nav>\n      </div>\n    </noscript>`;
     if (noscriptRegex.test(rewritten)) {
-      rewritten = rewritten.replace(noscriptRegex, noscriptReplacement);
+      rewritten = rewritten.replace(noscriptRegex, noscriptSummary);
     }
   }
 

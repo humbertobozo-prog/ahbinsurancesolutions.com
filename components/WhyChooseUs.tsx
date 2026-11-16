@@ -17,7 +17,7 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ content }) => {
                         alt="A diverse, multicultural group of smiling seniors" 
                         className="w-full h-auto object-cover" 
                         containerClassName="rounded-lg shadow-2xl overflow-hidden w-full"
-                        loading="lazy"
+                        loading="eager"
                         width="800"
                         height="533"
                     />

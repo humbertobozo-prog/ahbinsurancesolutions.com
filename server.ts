@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import fs from 'fs';
 import compression from 'compression';
+import expressStaticGzip from 'express-static-gzip';
 import { getSeoMetadata, rewriteHtmlForSeo } from './server-seo';
 
 const app = express();
@@ -75,7 +76,15 @@ async function startServer() {
       }
     });
   } else {
-    // PRODUCTION: Serve pre-rendered static assets and dynamic fallback
+    // PRODUCTION: Serve pre-rendered static assets (Brotli/Gzip first) and dynamic fallback
+    app.use(expressStaticGzip(DIST_PATH, {
+      enableBrotli: true,
+      orderPreference: ['br', 'gz'],
+      serveStatic: {
+        index: 'index.html',
+        maxAge: '1y'
+      }
+    }));
     app.use(express.static(DIST_PATH, { 
       index: 'index.html',
       maxAge: '1y'

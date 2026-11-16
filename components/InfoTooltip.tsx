@@ -68,6 +68,7 @@ export const InfoTooltip: React.FC<InfoTooltipProps> = ({
                 aria-label={label || "Policy maintenance and tax disclosure"}
                 aria-expanded={isOpen}
             >
+                <span className="sr-only">{label || "Policy maintenance and tax disclosure"}</span>
                 <svg 
                     className="w-2.5 h-2.5" 
                     fill="currentColor" 
@@ -104,7 +105,8 @@ export const InfoTooltip: React.FC<InfoTooltipProps> = ({
                             className="text-gray-400 hover:text-white p-0.5"
                             aria-label="Close tooltip"
                         >
-                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <span className="sr-only">Close tooltip</span>
+                            <svg aria-hidden="true" className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>

@@ -89,23 +89,10 @@ export const Author: React.FC<AuthorProps> = ({
                             {content.license} {content.npnLabel}: {content.npn}
                         </span>
                     </div>
-                    <p className={`text-xs ${theme === 'dark' ? 'text-slate-400' : 'text-slate-600'} line-clamp-1`}>
+                    <p className={`text-xs ${theme === 'dark' ? 'text-slate-300' : 'text-slate-600'} line-clamp-1`}>
                         {content.tagline}
                     </p>
                 </div>
-                
-                {/* Structured Data for Search Engines */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Person",
-                        "name": content.name,
-                        "jobTitle": "Licensed Insurance Broker",
-                        "identifier": content.npn,
-                        "description": content.bio,
-                        "image": `https://www.ahbinsurancesolutions.com${imageSrc}`
-                    })}
-                </script>
             </div>
         );
     }
@@ -157,7 +144,7 @@ export const Author: React.FC<AuthorProps> = ({
                         height="500"
                         className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
                         loading={priority ? "eager" : "lazy"}
-                        fetchPriority={priority ? "high" : "auto"}
+                        fetchPriority="auto"
                         style={{ objectPosition: '50% 20%' }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
@@ -173,7 +160,7 @@ export const Author: React.FC<AuthorProps> = ({
                             </span>
                             <span aria-hidden="true" className="text-slate-300">·</span>
                             <div className="group/npn relative">
-                                <span className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-500 cursor-help border-b border-dotted border-slate-300">
+                                <span className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-600 cursor-help border-b border-dotted border-slate-400">
                                     {content.npnLabel}: {content.npn}
                                 </span>
                                 <div className="absolute bottom-full left-0 mb-2 hidden group-hover/npn:block w-48 p-2 bg-slate-900 text-white text-[10px] rounded shadow-xl z-50 normal-case tracking-normal font-medium leading-tight">
@@ -205,36 +192,19 @@ export const Author: React.FC<AuthorProps> = ({
                     <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
                         <div className="flex items-center gap-1.5">
                             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true"></div>
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">
                                 {content.verified}
                             </span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <div className="w-1.5 h-1.5 rounded-full bg-amber-500" aria-hidden="true"></div>
-                            <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">
+                            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">
                                 {isEn ? "Independent" : "Independiente"}
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            {/* Person Structured Data */}
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Person",
-                    "name": content.name,
-                    "jobTitle": "Licensed Insurance Broker",
-                    "identifier": content.npn,
-                    "description": content.bio,
-                    "image": `https://www.ahbinsurancesolutions.com${imageSrc}`,
-                    "sameAs": [
-                        "https://www.facebook.com/ahbinsurancesolutions",
-                        "https://www.instagram.com/ahbinsurancesolutions"
-                    ]
-                })}
-            </script>
         </div>
     );
 };

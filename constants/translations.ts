@@ -3,8 +3,8 @@ import type { TranslationContent, Language } from '../types';
 export const translations: Record<Language, TranslationContent> = {
   en: {
     meta: {
-      title: "Florida Medicare, Burial Insurance & IUL Life | AHB Solutions",
-      description: "Expert Florida insurance guidance: Burial Insurance ($5K–$35K), Medicare Supplement & IUL. Compare top rates with licensed broker Andres Bozo (NPN 21228432). Free quote!"
+      title: "Florida Medicare, Burial & IUL Insurance | AHB Solutions",
+      description: "Compare Florida Medicare Supplement, Burial ($5K-$35K) & IUL plans with licensed broker Andres Bozo (NPN 21228432). Free quote!"
     },
     common: {
       npnTooltip: "National Producer Number - A unique NAIC identifier for licensed insurance professionals."
@@ -51,15 +51,15 @@ export const translations: Record<Language, TranslationContent> = {
       items: [
         {
           icon: "M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z",
-          title: "Medicare Supplement Plans in Florida",
-          description: "Confused by Medicare parts A, B, C, and D? We simplify your options to help you maximize your benefits and minimize unpredictable out-of-pocket expenses.",
-          highlight: "Florida Medigap Quotes available for instant comparisons today.",
+          title: "Medicare Supplement Plans",
+          description: "Confused by Medicare Parts A, B, C, and D? We break down your options clearly. You get maximum health benefits with lower out-of-pocket bills.",
+          highlight: "Compare statewide Medigap quotes in minutes.",
         },
         {
           icon: "M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z",
-          title: "Burial Insurance Florida Seniors",
-          description: "Protect your family from the financial burden of funeral costs. Compare competitive final expense options in Tampa, Miami, Orlando, and statewide Florida.",
-          highlight: "Guaranteed acceptance programs — even if you've been denied coverage previously.",
+          title: "Senior Burial Coverage",
+          description: "Protect your loved ones from high funeral bills. Compare affordable final expense policies across Tampa, Miami, Orlando, and nearby counties.",
+          highlight: "Guaranteed acceptance options — even with past health issues.",
         },
         {
           icon: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z",
@@ -267,8 +267,8 @@ export const translations: Record<Language, TranslationContent> = {
   },
   es: {
     meta: {
-        title: "Seguro Medicare Florida, Seguro de Entierro e IUL | Broker Bilingüe AHB",
-        description: "Asesoría de seguros en Florida: Seguro de Entierro y Gastos Finales ($5K–$35K), Suplementos de Medicare e IUL. Cotice gratis con el broker licenciado Andrés Bozo (NPN 21228432)."
+        title: "Seguro Medicare, Entierro e IUL Florida | AHB Broker",
+        description: "Compare planes de Medicare, Gastos Finales ($5K-$35K) e IUL en Florida con el broker licenciado Andrés Bozo (NPN 21228432). Cotice gratis."
     },
     common: {
       npnTooltip: "Número de Productor Nacional - Un identificador único de la NAIC para profesionales de seguros licenciados."

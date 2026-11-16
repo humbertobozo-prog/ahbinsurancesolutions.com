@@ -134,22 +134,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
         setMetaProp('twitter:image', ogImage);
         setMetaProp('twitter:image:alt', effectiveAlt);
 
-        // 7. Update Unified JSON-LD Schema
-        let script = (document.getElementById('app-ld-json') || document.querySelector('script[type="application/ld+json"]')) as HTMLScriptElement;
-        if (!script) {
-            script = document.createElement('script');
-            script.id = 'app-ld-json';
-            script.type = 'application/ld+json';
-            document.head.appendChild(script);
-        } else {
-            script.id = 'app-ld-json';
-        }
-
-        // Clean up legacy dynamic script if it exists
-        const legacyDynamicScript = document.getElementById('dynamic-page-schema');
-        if (legacyDynamicScript && legacyDynamicScript !== script) {
-            legacyDynamicScript.remove();
-        }
+        // 7. Update Unified JSON-LD Schema (individual typed blocks so every block carries top-level @type)
+        const existingLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
+        existingLdScripts.forEach((el) => el.remove());
 
         const langTag = language === 'es' ? 'es-US' : 'en-US';
 
@@ -383,10 +370,17 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             }
         }
 
-        script.text = JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": fullGraph
-        }, null, 2);
+        fullGraph.forEach((node, index) => {
+            const ldScript = document.createElement('script');
+            ldScript.type = 'application/ld+json';
+            ldScript.setAttribute('data-seo-ld', 'true');
+            if (index === 0) ldScript.id = 'app-ld-json';
+            ldScript.text = JSON.stringify({
+                "@context": "https://schema.org",
+                ...node
+            });
+            document.head.appendChild(ldScript);
+        });
 
     }, [title, description, effectiveCanonical, effectiveEnUrl, effectiveEsUrl, language, type, ogImage, ogImageAlt, datePublished, dateModified, schema, noindex]);
 

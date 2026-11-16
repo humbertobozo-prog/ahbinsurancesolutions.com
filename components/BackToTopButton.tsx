@@ -44,11 +44,14 @@ export const BackToTopButton: React.FC = () => {
         <>
             {isVisible && (
                 <button
+                    type="button"
                     onClick={scrollToTop}
                     aria-label="Go to top"
                     className="md:hidden fixed bottom-36 right-6 bg-secondary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                 >
+                    <span className="sr-only">Go to top</span>
                     <svg
+                        aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-7 w-7"
                         fill="none"

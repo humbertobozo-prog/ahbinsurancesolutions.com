@@ -190,6 +190,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     
                     <div className="flex items-center bg-white/10 rounded-full p-1 border border-white/10 ml-1">
                          <button 
+                            type="button"
                             onClick={() => handleLanguageSwitch('en')} 
                             className={`flex items-center px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent outline-none ${currentLang === 'en' ? 'bg-accent text-primary shadow-sm' : 'text-white hover:bg-white/10'}`}
                             aria-label="Switch to English"
@@ -198,6 +199,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                             EN
                         </button>
                         <button 
+                            type="button"
                             onClick={() => handleLanguageSwitch('es')} 
                             className={`flex items-center px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter transition-all duration-300 focus-visible:ring-2 focus-visible:ring-accent outline-none ${currentLang === 'es' ? 'bg-accent text-primary shadow-sm' : 'text-white hover:bg-white/10'}`}
                             aria-label="Cambiar a Español"
@@ -221,13 +223,15 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                     </a>
 
                     <button 
+                        type="button"
                         onClick={() => setIsOpen(!isOpen)} 
                         className="w-12 h-12 flex items-center justify-center text-white focus-visible:ring-2 focus-visible:ring-accent outline-none rounded-lg"
                         aria-label={isOpen ? "Close menu" : "Open menu"}
                         aria-expanded={isOpen}
                         aria-controls="mobile-menu"
                     >
-                        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <span className="sr-only">{isOpen ? "Close menu" : "Open menu"}</span>
+                        <svg aria-hidden="true" className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
                         </svg>
                     </button>
@@ -274,6 +278,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                         
                         <div className="flex items-center gap-4 pt-6">
                             <button 
+                                type="button"
                                 onClick={() => handleLanguageSwitch('en')} 
                                 className={`flex-1 py-4 rounded-xl font-black uppercase tracking-widest text-xs shadow-sm transition-all focus-visible:ring-4 focus-visible:ring-accent outline-none border-2 ${currentLang === 'en' ? 'bg-accent text-primary border-accent' : 'bg-white/5 text-white border-white/10'}`}
                                 aria-pressed={currentLang === 'en'}
@@ -281,6 +286,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                                 English
                             </button>
                             <button 
+                                type="button"
                                 onClick={() => handleLanguageSwitch('es')} 
                                 className={`flex-1 py-4 rounded-xl font-black uppercase tracking-widest text-xs shadow-sm transition-all focus-visible:ring-4 focus-visible:ring-accent outline-none border-2 ${currentLang === 'es' ? 'bg-accent text-primary border-accent' : 'bg-white/5 text-white border-white/10'}`}
                                 aria-pressed={currentLang === 'es'}

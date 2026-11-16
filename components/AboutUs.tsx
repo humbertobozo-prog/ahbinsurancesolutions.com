@@ -40,6 +40,53 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
                                     </span>
                                 </span>
                             </div>
+
+                            {/* Visible Author Byline & Content Update Date */}
+                            <p className="mt-3 text-xs sm:text-sm text-slate-600 font-medium">
+                                {content.badge === "TRUSTED ADVISOR" ? (
+                                    <>
+                                        Written &amp; reviewed by{' '}
+                                        <a
+                                            href="/about-andres-bozo"
+                                            rel="author"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                window.history.pushState({}, '', '/about-andres-bozo');
+                                                window.dispatchEvent(new Event('popstate'));
+                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                            }}
+                                            className="font-bold text-primary hover:text-secondary underline underline-offset-2"
+                                        >
+                                            Andres H. Bozo, Licensed Broker
+                                        </a>
+                                        {' · '}Last updated:{' '}
+                                        <time dateTime="2026-11-16" className="font-semibold text-slate-700">
+                                            November 16, 2026
+                                        </time>
+                                    </>
+                                ) : (
+                                    <>
+                                        Redactado y revisado por{' '}
+                                        <a
+                                            href="/es/sobre-andres-bozo"
+                                            rel="author"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                window.history.pushState({}, '', '/es/sobre-andres-bozo');
+                                                window.dispatchEvent(new Event('popstate'));
+                                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                            }}
+                                            className="font-bold text-primary hover:text-secondary underline underline-offset-2"
+                                        >
+                                            Andrés H. Bozo, Corredor Licenciado
+                                        </a>
+                                        {' · '}Actualizado:{' '}
+                                        <time dateTime="2026-11-16" className="font-semibold text-slate-700">
+                                            16 de noviembre de 2026
+                                        </time>
+                                    </>
+                                )}
+                            </p>
                         </div>
                         
                         <div className="space-y-6 text-dark-gray text-base md:text-lg leading-relaxed max-w-2xl">
