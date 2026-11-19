@@ -14,12 +14,12 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Seguro de Entierro y Gastos Finales en Florida 2026–2027 | Tarifas y Cobertura' 
-        : 'Burial Insurance Florida | $5K–$35K Senior Funeral Coverage & Rates 2026–2027';
+        ? 'Seguro de Entierro y Gastos Finales FL | AHB Insurance' 
+        : 'Florida Burial & Final Expense Insurance | AHB Insurance';
 
     const description = isEs 
-        ? 'Compare pólizas de seguro de entierro y gastos finales en Florida con el broker licenciado Andrés Bozo (NPN: 21228432). Tarifas fijas de $5,000 a $35,000 sin examen médico.' 
-        : 'Compare top Florida burial insurance & final expense plans with licensed broker Andres Bozo (NPN: 21228432). $5,000–$35,000 locked lifetime rates, no medical exam. Free quote!';
+        ? 'Compare pólizas de entierro y gastos finales en Florida ($5K–$35K) con el broker Andrés Bozo (NPN 21228432). Cotice sin costo hoy.' 
+        : 'Compare Florida burial & final expense whole life plans ($5K–$35K) with licensed broker Andres Bozo (NPN 21228432). Free quote today.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -145,22 +145,27 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/images/final-expense-family.webp"
+                ogImage="https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg"
                 ogImageAlt={isEs ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">
-                        {isEs ? 'Seguro de Entierro y Gastos Finales en Florida' : 'Burial Insurance Florida'}
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">
+                            {isEs ? 'Seguro de Entierro y Gastos Finales en Florida' : 'Burial Insurance Florida'}
+                        </span>
+                    </div>
+                    <span className="text-[11px] text-gray-600 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
                     </span>
                 </div>
             </nav>
@@ -663,7 +668,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
                                 <span className="w-8 h-8 rounded-lg bg-accent text-primary font-black flex items-center justify-center text-sm mb-3">2</span>
-                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Comparación de 15+ Aseguradoras' : 'Multi-Carrier Quote'}</h4>
+                                <h4 className="font-bold text-primary text-sm mb-1">{isEs ? 'Comparación Multi-Aseguradora' : 'Multi-Carrier Quote'}</h4>
                                 <p className="text-xs text-gray-600 leading-relaxed">{isEs ? 'Comparamos diversas aseguradoras con licencia estatal según su presupuesto y objetivos.' : 'We compare available Final Expense options from multiple state-licensed insurance carriers based on your budget and goals.'}</p>
                             </div>
                             <div className="p-4 bg-white rounded-xl border border-gray-200">
@@ -697,43 +702,49 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                     : 'As a state-licensed independent Florida insurance broker, I represent you, not an insurance conglomerate. My objective is to shop the entire marketplace to identify the highest coverage at the lowest locked-in rate, backed by lifelong personal support and independent expertise.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
-                                {isEs ? '📍 Residencia y Agencia: Gainesville, Florida | Servicio a todo el estado' : '📍 Based in Gainesville, Florida | Serving families statewide'}
+                                {isEs ? '📍 Sede en Gainesville, FL (5500 SW Archer Road, Ste H103) | Servicio en toda Florida' : '📍 Office in Gainesville, FL (5500 SW Archer Road, Ste H103) | Serving all of Florida'}
                             </p>
                         </div>
                     </section>
 
-                    {/* 13. REVIEWS & TESTIMONIALS */}
-                    <section id="reviews" className="space-y-4">
+                    {/* 13. CLIENT SERVICE & UNDERWRITING STANDARDS */}
+                    <section id="service-standards" className="space-y-4">
                         <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
-                            {isEs ? 'Opiniones y Testimonios de Familias en Florida' : 'Client Reviews & Community Testimonials'}
+                            {isEs ? 'Estándares de Servicio y Suscripción de AHB' : 'AHB Underwriting & Client Service Standards'}
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div className="p-5 bg-light-gray rounded-xl border border-gray-200">
-                                <div className="text-amber-500 font-bold text-sm mb-2">★★★★★</div>
-                                <p className="text-xs text-gray-700 italic leading-relaxed mb-3">
+                                <span className="text-xs font-black uppercase tracking-wider text-secondary block mb-2">
+                                    {isEs ? 'Estándar 01 · Evaluación Rx' : 'Standard 01 · Pre-Screen'}
+                                </span>
+                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
                                     {isEs 
-                                        ? '“Tengo diabetes y me preocupaba que me rechazaran. Andrés comparó varias opciones y me consiguió una póliza de $15,000 con Mutual of Omaha que me cubrió desde el primer día.”' 
-                                        : '“I have diabetes and was worried I would be rejected. Andres checked several carriers and found me a $15,000 policy with immediate Day-One coverage. Wonderful service!”'}
+                                        ? 'Antes de enviar una solicitud, comparamos su historial médico y medicamentos con las reglas de suscripción de múltiples aseguradoras para buscar elegibilidad Día 1 siempre que califique.' 
+                                        : 'Before submitting an application, we review your prescriptions and medical history against multiple carriers’ underwriting rules to identify Day-One Level Benefit eligibility when available.'}
                                 </p>
-                                <span className="text-xs font-bold text-primary block">— Carmen M., Orlando, FL</span>
+                                <span className="text-xs font-bold text-primary block">{isEs ? 'Claridad antes de aplicar' : 'Clarity before you apply'}</span>
                             </div>
                             <div className="p-5 bg-light-gray rounded-xl border border-gray-200">
-                                <div className="text-amber-500 font-bold text-sm mb-2">★★★★★</div>
-                                <p className="text-xs text-gray-700 italic leading-relaxed mb-3">
+                                <span className="text-xs font-black uppercase tracking-wider text-secondary block mb-2">
+                                    {isEs ? 'Estándar 02 · Reglas Claras' : 'Standard 02 · Policy Terms'}
+                                </span>
+                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
                                     {isEs 
-                                        ? '“Queríamos evitar que nuestros hijos tuvieran que pagar de su bolsillo cuando faltáramos. El proceso fue por teléfono en 20 minutos, muy respetuoso y claro.”' 
-                                        : '“We wanted to ensure our children would never face funeral debt. The application took 20 minutes over the phone. Clear, respectful, and truly honest advice.”'}
+                                        ? 'Explicamos en español o inglés si una póliza es de Beneficio Nivelado o Emisión Garantizada con período de espera de 24 meses, además de primas fijas y designación de beneficiarios.' 
+                                        : 'We clearly explain in English or Spanish whether a policy is Level Benefit or Guaranteed Issue (with a graded 24-month waiting period), along with fixed premium rules and beneficiary setup.'}
                                 </p>
-                                <span className="text-xs font-bold text-primary block">— Roberto & Elena S., Miami, FL</span>
+                                <span className="text-xs font-bold text-primary block">{isEs ? 'Cero letra pequeña oculta' : 'Zero hidden fine print'}</span>
                             </div>
                             <div className="p-5 bg-light-gray rounded-xl border border-gray-200">
-                                <div className="text-amber-500 font-bold text-sm mb-2">★★★★★</div>
-                                <p className="text-xs text-gray-700 italic leading-relaxed mb-3">
+                                <span className="text-xs font-black uppercase tracking-wider text-secondary block mb-2">
+                                    {isEs ? 'Estándar 03 · Soporte Real' : 'Standard 03 · Ongoing Help'}
+                                </span>
+                                <p className="text-xs text-gray-700 leading-relaxed mb-3">
                                     {isEs 
-                                        ? '“Tenía una póliza de término que subió de precio al cumplir 70. Andrés me ayudó a cambiar a gastos finales de por vida con una cuota fija que nunca aumentará.”' 
-                                        : '“My 20-year term expired at age 70 with an unaffordable renewal price. Andres helped me transition to a locked-rate whole life plan that fits my retirement budget.”'}
+                                        ? 'Las familias conservan el teléfono directo de Andrés H. Bozo para actualizar beneficiarios, métodos de pago o resolver cualquier duda futura con la compañía aseguradora.' 
+                                        : 'Families keep Andres H. Bozo’s direct line for future beneficiary updates, billing questions, and ongoing policy assistance—never a generic call center.'}
                                 </p>
-                                <span className="text-xs font-bold text-primary block">— David T., Tampa, FL</span>
+                                <span className="text-xs font-bold text-primary block">{isEs ? 'Atención directa NPN 21228432' : 'Direct broker NPN 21228432'}</span>
                             </div>
                         </div>
                     </section>

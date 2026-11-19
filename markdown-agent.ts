@@ -127,7 +127,7 @@ function getAgencyFooter(isEs: boolean): string {
 - **Correo Electrónico:** andreshbozo@ahbinsurancesolutions.com
 - **Dirección de Oficina:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
 - **Área de Cobertura:** Todo el estado de Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua y los 67 condados)
-- **Aseguradoras Representadas:** Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge y más de 80 compañías de primer nivel.
+- **Aseguradoras Representadas:** Múltiples aseguradoras líderes con licencia estatal, incluyendo Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge.
 - **Manifiesto de Agentes de IA:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)
 `;
   }
@@ -144,7 +144,7 @@ function getAgencyFooter(isEs: boolean): string {
 - **Email:** andreshbozo@ahbinsurancesolutions.com
 - **Office Address:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
 - **Service Area:** Statewide across Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua, and all 67 counties)
-- **Carriers Represented:** Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, Corebridge, and 80+ top-rated insurers.
+- **Carriers Represented:** Multiple top-rated state-licensed insurers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge.
 - **LLM / AI Agent Manifest:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)
 `;
 }
@@ -322,7 +322,7 @@ ${getAgencyFooter(false)}`;
 > **Description:** ${metadata.description}  
 > **Canonical URL:** ${metadata.canonicalUrl}  
 > **Language:** ${metadata.htmlLang}  
-> **Published:** ${metadata.datePublished || "2024-01-15"} | **Updated:** ${metadata.dateModified || "2026-10-10"}
+> **Published:** ${metadata.datePublished || "2024-01-15"} | **Updated:** ${metadata.dateModified || "2026-11-16"}
 `;
 
   return `${headerBlock}\n\n${parsedOutline}\n\n${getAgencyFooter(isEs)}`;

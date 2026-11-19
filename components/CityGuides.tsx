@@ -19,6 +19,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [copiedSchema, setCopiedSchema] = useState<boolean>(false);
 
+  const isHub = typeof window !== 'undefined' && (window.location.pathname === '/city-guides' || window.location.pathname === '/es/guias-ciudades');
   const activeCity = FLORIDA_CITIES.find((c) => c.slug === activeSlug) || FLORIDA_CITIES[0];
 
   const filteredCities = FLORIDA_CITIES.filter((c) =>
@@ -72,20 +73,26 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
       <SEOHead
         title={
-          isEs
-            ? `Seguros Medicare, Gastos Finales e IUL en ${activeCity.cityName}, Florida | AHB Insurance`
-            : `Medicare, Medigap & Life Insurance in ${activeCity.cityName}, FL | AHB Insurance`
+          isHub
+            ? (isEs ? 'Guías de Seguros por Ciudad FL | AHB Insurance' : 'Florida City Insurance Guides | AHB Insurance')
+            : (isEs
+              ? `Medicare y Vida en ${activeCity.cityName}, FL | AHB Insurance`
+              : `Medicare & Life in ${activeCity.cityName}, FL | AHB Insurance`)
         }
         description={
-          isEs
-            ? `Asesoría de seguros en ${activeCity.cityName} (${activeCity.county}). Compare Suplementos de Medicare, entierro y planes IUL con el broker Andrés Bozo (NPN 21228432).`
-            : `Local insurance broker guide for ${activeCity.cityName}, FL. Compare Medicare Supplement Plan G/N, Final Expense burial coverage, and IUL with broker Andres Bozo.`
+          isHub
+            ? (isEs
+              ? 'Explore guías locales de Medicare, Medigap, Gastos Finales e IUL en Miami, Tampa, Orlando, Jacksonville y Gainesville con Andrés Bozo.'
+              : 'Explore Florida county Medicare, Medigap, Final Expense & IUL insurance guides for Miami, Tampa, Orlando, Jacksonville & Gainesville with AHB.')
+            : (isEs
+              ? `Guía en ${activeCity.cityName} (${activeCity.county}): Medigap Plan G y N, Gastos Finales e IUL con el broker Andrés Bozo (NPN 21228432).`
+              : `${activeCity.cityName}, FL (${activeCity.county}) guide: Medigap Plan G/N, Final Expense & IUL strategies with broker Andres Bozo (NPN 21228432).`)
         }
         language={language}
         ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
         ogImageAlt={isEs ? `Seguros Medicare, Gastos Finales e IUL en ${activeCity.cityName}, Florida` : `Medicare, Medigap & Life Insurance in ${activeCity.cityName}, FL`}
         datePublished="2024-01-15"
-        dateModified="2026-10-10"
+        dateModified="2026-11-16"
       />
 
       {/* Header Banner */}
@@ -100,8 +107,11 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
               ? `Seguro de Medicare y Vida en ${activeCity.cityName}, Florida`
               : `Medicare & Life Insurance Solutions in ${activeCity.cityName}, FL`}
           </h1>
-          <p className="text-gray-200 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+          <p className="text-gray-200 text-sm md:text-base max-w-3xl mx-auto leading-relaxed mb-3">
             {isEs ? activeCity.taglineEs : activeCity.taglineEn}
+          </p>
+          <p className="text-xs text-amber-300 font-semibold">
+            {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
           </p>
         </div>
       </div>
@@ -229,7 +239,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
                   <h3 className="text-xl font-bold font-heading text-primary">
                     {isEs ? `3. Planificación IUL e Ingresos de Jubilación en ${activeCity.cityName}` : `3. IUL Retirement & Wealth Growth in ${activeCity.cityName}`}
                   </h3>
-                  <p className="text-xs text-gray-500 font-medium">{isEs ? 'Estrategia fiscal con piso garantizado del 0%' : 'Tax-advantaged cash accumulation'}</p>
+                  <p className="text-xs text-gray-500 font-medium">{isEs ? 'Estrategia con piso contractual del 0% en acreditación' : 'Contractual 0% index crediting floor (policy charges apply)'}</p>
                 </div>
               </div>
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed font-normal">

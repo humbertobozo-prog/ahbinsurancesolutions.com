@@ -17,12 +17,12 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Preguntas Frecuentes sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades | AHB' 
-        : 'Medicare, Final Expense, Life Insurance, IUL & Annuities FAQ | AHB Solutions';
+        ? 'Preguntas Frecuentes de Seguros FL | AHB Solutions' 
+        : 'Medicare, Burial & IUL Insurance FAQ | AHB Solutions';
 
     const description = isEs 
-        ? 'Respuestas detalladas a más de 30 preguntas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, Seguro de Vida, IUL y Anualidades en Florida con el broker Andrés H. Bozo.' 
-        : 'Comprehensive answers to 30+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, Life Insurance, IUL, and Annuities with licensed broker Andres H. Bozo.';
+        ? 'Respuestas a más de 30 preguntas sobre Medigap Plan G y N, Gastos Finales, Vida, IUL y Anualidades en Florida con el broker Andrés Bozo (NPN 21228432).' 
+        : 'Answers to 30+ questions on Florida Medigap Plan G & N, Final Expense, Life Insurance, IUL & Annuities with broker Andres H. Bozo (NPN 21228432).';
 
     const categories = [
         { id: 'all', labelEn: 'All Topics', labelEs: 'Todos los Temas' },
@@ -85,13 +85,13 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Preguntas Frecuentes sobre Seguros en Florida - AHB Insurance Solutions" : "Frequently Asked Questions about Florida Insurance - AHB Insurance Solutions"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[faqSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between">
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex flex-wrap items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                         <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
                             {isEs ? 'Inicio' : 'Home'}
@@ -101,8 +101,8 @@ export const FAQPage: React.FC<FAQPageProps> = ({ language, onOpenQuote }) => {
                             {isEs ? 'Preguntas Frecuentes' : 'FAQ'}
                         </span>
                     </div>
-                    <span className="text-xs text-gray-500 font-semibold hidden sm:inline">
-                        {isEs ? 'Actualizado para Florida 2026–2027 (AEP Activo)' : 'Updated for Florida 2026–2027 (Active AEP)'}
+                    <span className="text-xs text-gray-500 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado 2026–2027 (AEP Activo)' : 'By Andres H. Bozo (NPN 21228432) · Updated 2026–2027 (Active AEP)'}
                     </span>
                 </div>
             </nav>

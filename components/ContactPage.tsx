@@ -34,12 +34,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Hable con Andrés H. Bozo | Mensaje Directo y Cotización Gratis | AHB Insurance' 
-        : 'Talk With Andres H. Bozo | Direct Message & Free Quote | AHB Insurance';
+        ? 'Hable con Andrés H. Bozo | Cotización | AHB' 
+        : 'Talk With Andres H. Bozo | Free Quote | AHB';
 
     const description = isEs 
         ? 'Envíe un mensaje directo a Andrés H. Bozo (NPN 21228432) o solicite su cotización gratuita de Medicare, Gastos Finales e IUL en Florida al (352) 225-8389.' 
-        : 'Send a direct message to licensed Florida broker Andres H. Bozo (NPN 21228432) or request a free Medicare, Final Expense, or IUL consultation at (352) 225-8389.';
+        : 'Direct message licensed Florida broker Andres H. Bozo (NPN 21228432) or request a free Medicare, Final Expense, or IUL consultation at (352) 225-8389.';
 
     const content = translations[language];
     const [selectedService, setSelectedService] = useState<string>('medicare');
@@ -200,20 +200,25 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
                 ogImageAlt={isEs ? "Hable directamente con Andrés H. Bozo - AHB Insurance Solutions" : "Talk Directly With Andres H. Bozo - AHB Insurance Solutions"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[contactSchema, breadcrumbSchema]}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-2">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Hablar con Andrés Bozo' : 'Talk With Andres Bozo'}</span>
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">{isEs ? 'Hablar con Andrés Bozo' : 'Talk With Andres Bozo'}</span>
+                    </div>
+                    <span className="text-gray-500 font-semibold">
+                        {isEs ? 'Andrés H. Bozo · NPN 21228432 · Actualizado: 16 Nov 2026' : 'Andres H. Bozo · NPN 21228432 · Updated: Nov 16, 2026'}
+                    </span>
                 </div>
             </div>
 
@@ -523,6 +528,75 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                     ) : (
                         <ContactForm content={content.contactForm} language={language} selectedService={selectedServiceLabel} />
                     )}
+                </div>
+            </section>
+
+            {/* Gainesville Office & Consultation Standards */}
+            <section className="bg-light-gray border-t border-gray-200 py-10 mt-6">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+                            <h3 className="font-black text-primary uppercase tracking-wider text-xs mb-2">
+                                {isEs ? 'Oficina en Gainesville, Florida' : 'Gainesville, Florida Office'}
+                            </h3>
+                            <p className="text-xs leading-relaxed">
+                                5500 SW Archer Road, Ste H103<br />
+                                Gainesville, FL 32607<br />
+                                {isEs ? 'Citas presenciales en Alachua y atención remota en todo Florida.' : 'In-person appointments in Alachua County and statewide video or phone consultations.'}
+                            </p>
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+                            <h3 className="font-black text-primary uppercase tracking-wider text-xs mb-2">
+                                {isEs ? 'Licencia y Transparencia' : 'Licensing & Transparency'}
+                            </h3>
+                            <p className="text-xs leading-relaxed">
+                                {isEs
+                                    ? 'Andrés H. Bozo es un corredor independiente licenciado por el Departamento de Servicios Financieros de Florida (NPN 21228432). Sin honorarios de corretaje.'
+                                    : 'Andres H. Bozo is an independent broker licensed by the Florida Department of Financial Services (NPN 21228432). Zero broker consultation fees.'}
+                            </p>
+                        </div>
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+                            <h3 className="font-black text-primary uppercase tracking-wider text-xs mb-2">
+                                {isEs ? 'Horario de Respuesta Directa' : 'Direct Response Hours'}
+                            </h3>
+                            <p className="text-xs leading-relaxed">
+                                {isEs
+                                    ? 'Lunes a Sábado de 8:00 AM a 8:00 PM EST. Llame al (352) 225-8389 o escriba directamente a andreshbozo@ahbinsurancesolutions.com.'
+                                    : 'Monday through Saturday, 8:00 AM – 8:00 PM EST. Call (352) 225-8389 or email andreshbozo@ahbinsurancesolutions.com directly.'}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="bg-white p-6 md:p-8 rounded-2xl border border-gray-200 shadow-xs space-y-4 text-sm text-gray-700 leading-relaxed">
+                        <h2 className="text-xl font-black font-heading text-primary">
+                            {isEs ? '¿Cómo Funciona su Consulta Gratuita y Qué Tener a la Mano?' : 'How Your Free Florida Consultation Works & What to Prepare'}
+                        </h2>
+                        <p>
+                            {isEs
+                                ? 'Ya sea que compare planes de Medicare 2026–2027 antes del cierre de AEP el 7 de diciembre, evalúe pólizas de Gastos Finales ($5,000 a $35,000) o revise ilustraciones de Vida Universal Indexada (IUL) y anualidades fijas, cada análisis se prepara de forma individual según su condado en Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval o Alachua).'
+                                : 'Whether you are comparing 2026–2027 Medicare plans ahead of the December 7 Annual Enrollment Period deadline, evaluating Final Expense whole life policies ($5,000–$35,000), or reviewing Indexed Universal Life (IUL) and fixed annuity illustrations, every consultation is tailored to your Florida county, budget, and health profile.'}
+                        </p>
+                        <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm">
+                            <li>
+                                <strong>{isEs ? 'Medicare y Parte D:' : 'Medicare & Part D Comparisons:'}</strong>{' '}
+                                {isEs
+                                    ? 'Tenga a la mano su código postal, lista de medicamentos actuales y médicos u hospitales preferidos (por ejemplo UF Health, Baptist Health, AdventHealth o Moffitt) para verificar formularios bajo el tope de Parte D ($2,100 en 2026; $2,400 en 2027) y opciones Medigap Plan G o N.'
+                                    : 'Keep your ZIP code, prescription list, and preferred physicians or hospital systems handy so we can check formulary tiers under the $2,100 (2026) and $2,400 (2027) Part D caps alongside Medigap Plan G and Plan N rates.'}
+                            </li>
+                            <li>
+                                <strong>{isEs ? 'Gastos Finales e IUL:' : 'Final Expense & IUL Reviews:'}</strong>{' '}
+                                {isEs
+                                    ? 'Indique su edad aproximada y monto de protección deseado; explicamos claramente requisitos de suscripción, cargos de póliza aplicables y opciones de emisión simplificada o garantizada antes de enviar cualquier solicitud.'
+                                    : 'Share your approximate age and coverage target so we can explain carrier underwriting, simplified-issue availability, and all applicable policy charges before any application is started.'}
+                            </li>
+                            <li>
+                                <strong>{isEs ? 'Privacidad y Cero Costos:' : 'Strict Privacy & Zero Service Fees:'}</strong>{' '}
+                                {isEs
+                                    ? 'Nunca vendemos ni compartimos sus datos con terceros. Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para consultar todas las opciones.'
+                                    : 'We never sell or share your personal details with third-party lead lists. CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE to obtain information on all of your options.'}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

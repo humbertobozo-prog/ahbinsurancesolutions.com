@@ -15,12 +15,12 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Guía Completa de Vida Universal Indexada (IUL) en Florida 2026 | AHB Insurance' 
-        : 'Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance';
+        ? 'Guía IUL y Jubilación en Florida 2026 | AHB Insurance' 
+        : 'Florida IUL Insurance Guide 2026–2027 | AHB Insurance';
 
     const description = isEs 
-        ? 'Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos sobre póliza con ventajas fiscales bajo el Código IRS 7702.' 
-        : 'Discover how Indexed Universal Life (IUL) provides index-crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.';
+        ? 'Aprenda cómo el IUL ofrece acreditación indexada con piso contractual del 0% y préstamos sobre póliza según el Código IRS 7702 en Florida.' 
+        : 'Learn how Indexed Universal Life (IUL) offers index-linked crediting with a 0% contractual floor & policy loan rules under IRS Section 7702.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -165,21 +165,26 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp"
-                ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning"}
+                ogImage="https://www.ahbinsurancesolutions.com/og/iul-og.jpg"
+                ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Retirement Planning"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb */}
             <div className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Vida Universal Indexada (IUL)' : 'Indexed Universal Life (IUL)'}</span>
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">{isEs ? 'Vida Universal Indexada (IUL)' : 'Indexed Universal Life (IUL)'}</span>
+                    </div>
+                    <span className="text-[11px] text-gray-600 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                    </span>
                 </div>
             </div>
 

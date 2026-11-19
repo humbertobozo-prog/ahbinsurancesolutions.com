@@ -39,12 +39,12 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
   const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
   const pageTitle = isEs
-    ? "Broker de Medicare y Seguros de Vida en Gainesville, FL | AHB Insurance Solutions"
-    : "Medicare Broker Gainesville FL & Life Insurance | AHB Insurance Solutions";
+    ? "Broker de Seguros en Gainesville, FL | AHB Insurance"
+    : "Gainesville, FL Medicare & Life Broker | AHB Insurance";
 
   const pageDescription = isEs
-    ? "Corredor de Medicare y seguros de vida en Gainesville, FL: Andrés Bozo (NPN: 21228432). Asesoría en Medigap, UF Health Shands, gastos finales e IUL en Alachua County. Llame al (352) 225-8389."
-    : "Top-rated Medicare broker & life insurance advisor in Gainesville, FL (NPN: 21228432). Compare Medigap, UF Health Shands network plans, final expense & IUL. Free quote: (352) 225-8389.";
+    ? "Broker de Medicare y vida en Gainesville, FL (NPN 21228432). Medigap, UF Health Shands, gastos finales e IUL en Alachua County: (352) 225-8389."
+    : "Medicare & life insurance broker in Gainesville, FL (NPN 21228432). Compare Medigap, UF Health Shands, final expense & IUL. Call (352) 225-8389.";
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -135,7 +135,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         "acceptedAnswer": {
           "@type": "Answer",
           "text": isEs 
-            ? "No, absolutamente nada. Nuestros servicios de consultoría, cotización entre más de 80 aseguradoras y trámite de pólizas son 100% gratuitos para usted."
+            ? "No, absolutamente nada. Nuestros servicios de consultoría, cotización comparativa entre múltiples aseguradoras nacionales calificadas y trámite de pólizas son 100% gratuitos para usted."
             : "No, never. Our independent brokerage consultations, carrier rate comparisons, and enrollment assistance are 100% free with zero fees."
         }
       },
@@ -164,10 +164,10 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         title={pageTitle}
         description={pageDescription}
         language={language}
-        ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+        ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
         ogImageAlt={isEs ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida"}
         datePublished="2024-01-15"
-        dateModified="2026-10-10"
+        dateModified="2026-11-16"
         schema={[serviceSchema, breadcrumbSchema, faqSchema]}
       />
 
@@ -194,18 +194,23 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
             <span className="text-amber-400 font-bold">Gainesville, FL (Alachua County)</span>
           </div>
 
-          <button
-            onClick={() => {
-              const newLang = isEs ? 'en' : 'es';
-              setLanguage(newLang);
-              const newPath = newLang === 'es' ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl';
-              window.history.pushState({}, '', newPath);
-              window.dispatchEvent(new Event('popstate'));
-            }}
-            className="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 px-3 py-1 rounded-md text-xs font-bold border border-slate-700 transition-colors cursor-pointer"
-          >
-            <span>{isEs ? "🇺🇸 English" : "🇪🇸 Español"}</span>
-          </button>
+          <div className="flex items-center gap-3">
+            <span className="hidden md:inline text-slate-400">
+              {isEs ? "Andrés Bozo (NPN 21228432) · Act: 16 Nov 2026" : "Andres Bozo (NPN 21228432) · Updated: Nov 16, 2026"}
+            </span>
+            <button
+              onClick={() => {
+                const newLang = isEs ? 'en' : 'es';
+                setLanguage(newLang);
+                const newPath = newLang === 'es' ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl';
+                window.history.pushState({}, '', newPath);
+                window.dispatchEvent(new Event('popstate'));
+              }}
+              className="inline-flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 px-3 py-1 rounded-md text-xs font-bold border border-slate-700 transition-colors cursor-pointer"
+            >
+              <span>{isEs ? "🇺🇸 English" : "🇪🇸 Español"}</span>
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -217,7 +222,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
             {/* Local Agency Badge */}
             <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs md:text-sm font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-6">
               <MapPin className="w-4 h-4 text-amber-400" />
-              <span>5500 SW Archer Rd, Ste H103, Gainesville, FL 32607</span>
+              <span>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</span>
             </div>
 
             {/* H1 Title explicitly: Gainesville, FL Insurance Broker */}
@@ -352,7 +357,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" 
+                  href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs md:text-sm py-3 px-4 rounded-xl transition-all"
@@ -377,7 +382,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                 <div className="p-4 bg-slate-100 border-b border-slate-200 flex items-center justify-between text-xs text-slate-600 font-semibold">
                   <div className="flex items-center gap-2">
                     <Compass className="w-4 h-4 text-amber-600" />
-                    <span>{isEs ? "Mapa de Ubicación: 5500 SW Archer Rd, Gainesville, FL 32607" : "Location Map: 5500 SW Archer Rd, Gainesville, FL 32607"}</span>
+                    <span>{isEs ? "Mapa de Ubicación: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607" : "Location Map: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607"}</span>
                   </div>
                   <span className="hidden sm:inline-block text-slate-500">Alachua County, FL</span>
                 </div>
@@ -645,8 +650,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
                     </h4>
                     <p className="text-sm text-slate-600">
                       {isEs 
-                        ? "El componente de acreditación indexada cuenta con un piso del 0%, lo que garantiza que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. (Los costos de seguro y cargos de póliza afectan el valor en efectivo total)."
-                        : "The index-crediting component features a contractual 0% floor, meaning the chosen index strategy is not credited with a negative return during stock market downturns. (Policy charges and insurance costs affect cash value)."}
+                        ? "El componente de acreditación indexada puede contar con un piso contractual del 0%, de modo que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado (los costos de seguro y cargos de póliza siguen aplicando al valor en efectivo)."
+                        : "The index-crediting component may feature a contractual 0% floor, meaning the chosen index strategy is not credited with a negative return during market downturns (internal policy charges and insurance costs still affect cash value)."}
                     </p>
                   </div>
 
@@ -1038,8 +1043,8 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed pl-7">
                 {isEs 
-                  ? "Una póliza IUL (Indexed Universal Life) complementa las cuentas de jubilación tradicionales 403(b), 401(k) o el Florida FRS. Ofrece acumulación con piso contractual del 0% contra caídas del mercado y préstamos de póliza libres de impuestos sobre la renta bajo el Código IRS 7702." 
-                  : "An IUL complements traditional 403(b), 401(k), and Florida FRS plans. It provides permanent life protection, a 0% floor against market losses, and access to tax-advantaged loans under IRS Section 7702."}
+                  ? "Una póliza IUL (Indexed Universal Life) complementa las cuentas de jubilación tradicionales 403(b), 401(k) o el Florida FRS. Ofrece protección de vida permanente, un piso contractual del 0% en la acreditación indexada (cargos internos de póliza aún aplican) y préstamos de póliza con tratamiento fiscal potencialmente favorable bajo el Código IRS 7702 si se estructura adecuadamente." 
+                  : "An IUL complements traditional 403(b), 401(k), and Florida FRS plans. It provides permanent life protection, a contractual 0% index crediting floor (internal policy charges still apply), and access to policy loans under IRS Section 7702 when structured properly and maintained in force."}
               </p>
             </div>
 

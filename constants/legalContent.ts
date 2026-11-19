@@ -22,7 +22,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "1. Identificación del Corredor y Licenciamiento",
                     content: [
                         "AHB Insurance Solutions opera como una agencia de seguros independiente autorizada y con licencia oficial en el Estado de Florida (EE. UU.), liderada por el agente registrado Andres Bozo (Número Nacional de Productor - NPN: 21228432).",
-                        "Como corredores independientes, representamos a los clientes y consumidores ante más de 80 compañías aseguradoras líderes en el mercado de Medicare, Seguro de Gastos Finales de Entierro, Vida Universal Indexada (IUL) y Seguros de Vida Términos y Entero.",
+                        "Como corredores independientes, representamos a los clientes y consumidores ante múltiples compañías aseguradoras autorizadas y líderes en el mercado de Medicare, Seguro de Gastos Finales de Entierro, Vida Universal Indexada (IUL) y Seguros de Vida a Término y Vida Entera.",
                         "Nuestros servicios de consultoría, cotización y orientación para la selección de pólizas son 100% gratuitos para el consumidor. No cobramos tarifas de servicio directas por la solicitud de pólizas."
                     ]
                 },
@@ -108,7 +108,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "2. Uso de la Información",
                     content: [
                         "La información recopilada se utiliza exclusivamente para las siguientes finalidades legítimas de intermediación de seguros:",
-                        "• Evaluar sus necesidades de seguro y comparar planes entre nuestras 80+ aseguradoras asociadas.",
+                        "• Evaluar sus necesidades de seguro y comparar planes entre múltiples aseguradoras asociadas.",
                         "• Contactarlo a través de un agente licenciado de AHB Insurance Solutions para brindarle la asesoría solicitada.",
                         "• Asistirle en el proceso de llenado e ingreso de la solicitud de póliza formal.",
                         "• Cumplir con los requisitos legales y reglamentarios exigidos por el Departamento de Servicios Financieros de Florida y el CMS."
@@ -159,7 +159,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "1. Broker Identification & Licensing",
                     content: [
                         "AHB Insurance Solutions operates as an independent licensed insurance brokerage in the State of Florida (USA), led by licensed agent Andres Bozo (National Producer Number - NPN: 21228432).",
-                        "As independent brokers, we represent consumers before 80+ top-rated insurance carriers across Medicare Supplement (Medigap), Final Expense Burial Insurance, Indexed Universal Life (IUL), and Term/Whole Life Insurance.",
+                        "As independent brokers, we represent consumers before multiple Florida-licensed, top-rated insurance carriers across Medicare Supplement (Medigap), Final Expense Burial Insurance, Indexed Universal Life (IUL), and Term/Whole Life Insurance.",
                         "Our consulting, quoting, and plan comparison services are 100% free of charge to consumers. We do not charge direct consumer service fees for policy applications."
                     ]
                 },
@@ -245,7 +245,7 @@ export const legalContent: Record<Language, { terms: LegalDocument; privacy: Leg
                     heading: "2. How We Use Your Information",
                     content: [
                         "Your information is used strictly for legitimate insurance brokerage operations:",
-                        "• Comparing plans across 80+ top insurance carriers to find your optimal rates.",
+                        "• Comparing plans across multiple state-licensed insurance carriers to find appropriate options.",
                         "• Connecting you with a licensed AHB Insurance Solutions broker for requested advice.",
                         "• Assisting in completing formal policy applications.",
                         "• Maintaining regulatory compliance with Florida DFS and CMS guidelines."

@@ -2,7 +2,7 @@
 
 > Complete knowledge base for AI agents, LLM assistants, and WebMCP crawlers describing AHB Insurance Solutions, products, services, compliance rules, and state coverage in Florida.
 
-AHB Insurance Solutions is an independent insurance brokerage operating statewide in Florida. Led by licensed insurance broker Andres H. Bozo (NPN 21228432), AHB Insurance Solutions works with more than 80 top-rated and state-licensed national insurance companies (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, AIG, Transamerica, and Corebridge Financial).
+AHB Insurance Solutions is an independent insurance brokerage operating statewide in Florida. Led by licensed insurance broker Andres H. Bozo (NPN 21228432), AHB Insurance Solutions represents multiple state-licensed national insurance companies (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Transamerica, and Corebridge Financial).
 
 ---
 
@@ -14,9 +14,9 @@ Spanish URL: /es/seguro-medicare-florida
 Medicare in Florida consists of Original Medicare (Part A for hospital coverage, Part B for medical provider coverage), Part C (Medicare Advantage HMO/PPO), and Part D (Prescription Drug coverage).
 
 ### Medicare Supplement (Medigap) vs. Medicare Advantage
-- **Medigap Plan G**: The most popular supplement plan for new enrollees. Covers 100% of out-of-pocket costs after the small annual Part B deductible ($240/yr in 2024). Allows policyholders to visit any doctor or hospital in the USA that accepts Medicare without network restrictions, referrals, or prior authorizations.
+- **Medigap Plan G**: The most popular supplement plan for new enrollees. Covers 100% of out-of-pocket costs after the annual Part B deductible ($283 in 2026; check CMS.gov for final 2027 figures). Allows policyholders to visit any doctor or hospital in the USA that accepts Medicare without network restrictions, referrals, or prior authorizations.
 - **Medigap Plan N**: Lower monthly premium option where policyholders pay up to a $20 copay for office visits and $50 for ER visits, plus Part B excess charges.
-- **Medicare Advantage (Part C)**: Managed care plans (HMO/PPO) combining Part A, Part B, and usually Part D into one plan. Often offers extra benefits like dental/vision allowances, but enforces regional networks, specialist referrals, and out-of-pocket maximums up to $8,850/year.
+- **Medicare Advantage (Part C)**: Managed care plans (HMO/PPO) combining Part A, Part B, and usually Part D into one plan. Often offers extra benefits like dental/vision allowances, but enforces regional networks, specialist referrals, and annual in-network out-of-pocket maximums capped federally at $9,250 in 2026 ($9,850 in 2027). Part D covered Rx out-of-pocket cap is $2,100 in 2026 ($2,400 confirmed by CMS for 2027).
 
 ---
 

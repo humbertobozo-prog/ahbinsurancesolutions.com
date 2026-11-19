@@ -113,8 +113,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
                             </div>
                             <div className="group cursor-default">
                                 <div className="flex items-baseline">
-                                    <span className="text-4xl font-black text-primary group-hover:text-accent transition-all duration-300">80</span>
-                                    <span className="text-2xl font-black text-[#8A6000] ml-1">+</span>
+                                    <span className="text-2xl font-black text-[#8A6000] mr-0.5">$</span>
+                                    <span className="text-4xl font-black text-primary group-hover:text-accent transition-all duration-300">0</span>
                                 </div>
                                 <p className="text-[10px] sm:text-[11px] text-gray-700 font-black uppercase tracking-[0.2em] mt-2">{content.statsCompanies}</p>
                             </div>

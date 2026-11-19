@@ -26,6 +26,28 @@ const getResponsiveImageProps = (url: string, isHero: boolean = false) => {
     return {};
 };
 
+const renderInlineMarkdown = (text: string): React.ReactNode[] => {
+    const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+    return tokens.map((token, idx) => {
+        if (token.startsWith('**') && token.endsWith('**')) {
+            return <strong key={idx} className="font-bold text-gray-900">{token.slice(2, -2)}</strong>;
+        }
+        const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+            return (
+                <a
+                    key={idx}
+                    href={linkMatch[2]}
+                    className="text-primary font-bold underline decoration-accent decoration-2 underline-offset-2 hover:text-secondary transition-colors"
+                >
+                    {linkMatch[1]}
+                </a>
+            );
+        }
+        return <React.Fragment key={idx}>{token}</React.Fragment>;
+    });
+};
+
 export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpenQuote }) => {
     const isEs = language === 'es';
     const [searchTerm, setSearchTerm] = useState('');
@@ -45,13 +67,16 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
         const postExcerpt = isEs ? currentPost.excerpt.es : currentPost.excerpt.en;
         const postContent = isEs ? currentPost.content.es : currentPost.content.en;
 
+        const postOgImage = `${baseUrl}${currentPost.ogImage}`;
+
         const articleSchema = {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": postTitle,
             "description": postExcerpt,
-            "image": currentPost.image,
+            "image": postOgImage,
             "datePublished": currentPost.date,
+            "dateModified": currentPost.date,
             "author": {
                 "@type": "Person",
                 "name": currentPost.author.name,
@@ -93,11 +118,11 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
         return (
             <div className="bg-white min-h-screen text-dark-gray font-sans pb-16">
                 <SEOHead 
-                    title={`${postTitle} | AHB Insurance`}
+                    title={`${postTitle} | AHB`}
                     description={postExcerpt}
                     language={language}
                     type="article"
-                    ogImage={currentPost.image}
+                    ogImage={postOgImage}
                     ogImageAlt={postTitle}
                     datePublished={currentPost.date}
                     dateModified={currentPost.date}
@@ -178,21 +203,71 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                     })()}
 
                     <div className="prose prose-lg max-w-none text-gray-800 space-y-6 leading-relaxed font-normal">
-                        {postContent.split('\n\n').map((paragraph, idx) => {
-                            if (paragraph.startsWith('## ')) {
-                                return <h2 key={idx} className="text-2xl font-black font-heading text-primary mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
+                        {postContent.trim().split('\n\n').map((rawBlock, idx) => {
+                            const block = rawBlock.trim();
+                            if (!block) return null;
+                            if (block.startsWith('#### ')) {
+                                return <h4 key={idx} className="text-lg font-bold font-heading text-primary mt-5 mb-2">{renderInlineMarkdown(block.slice(5))}</h4>;
                             }
-                            if (paragraph.startsWith('### ')) {
-                                return <h3 key={idx} className="text-xl font-bold font-heading text-primary mt-6 mb-3">{paragraph.replace('### ', '')}</h3>;
+                            if (block.startsWith('### ')) {
+                                return <h3 key={idx} className="text-xl font-bold font-heading text-primary mt-6 mb-3">{renderInlineMarkdown(block.slice(4))}</h3>;
                             }
-                            if (paragraph.startsWith('> ')) {
+                            if (block.startsWith('## ')) {
+                                return <h2 key={idx} className="text-2xl font-black font-heading text-primary mt-8 mb-4">{renderInlineMarkdown(block.slice(3))}</h2>;
+                            }
+                            if (block.startsWith('> ')) {
                                 return (
                                     <blockquote key={idx} className="bg-amber-50 border-l-4 border-accent p-4 rounded-r-xl italic text-primary font-medium my-6">
-                                        {paragraph.replace('> ', '')}
+                                        {renderInlineMarkdown(block.slice(2))}
                                     </blockquote>
                                 );
                             }
-                            return <p key={idx}>{paragraph}</p>;
+                            const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+                            if (lines.every(l => /^\d+\.\s+/.test(l))) {
+                                return (
+                                    <ol key={idx} className="list-decimal pl-6 space-y-2.5 text-gray-800">
+                                        {lines.map((line, li) => (
+                                            <li key={li}>{renderInlineMarkdown(line.replace(/^\d+\.\s+/, ''))}</li>
+                                        ))}
+                                    </ol>
+                                );
+                            }
+                            if (lines.every(l => /^[-*]\s+/.test(l))) {
+                                return (
+                                    <ul key={idx} className="list-disc pl-6 space-y-2 text-gray-800">
+                                        {lines.map((line, li) => (
+                                            <li key={li}>{renderInlineMarkdown(line.replace(/^[-*]\s+/, ''))}</li>
+                                        ))}
+                                    </ul>
+                                );
+                            }
+                            if (lines.length >= 2 && lines[0].startsWith('|') && lines[1].startsWith('|')) {
+                                const headerCells = lines[0].split('|').slice(1, -1).map(c => c.trim());
+                                const bodyRows = lines.slice(2).map(row => row.split('|').slice(1, -1).map(c => c.trim()));
+                                return (
+                                    <div key={idx} className="overflow-x-auto my-6 rounded-xl border border-gray-200">
+                                        <table className="w-full text-left text-sm border-collapse">
+                                            <thead className="bg-primary text-white">
+                                                <tr>
+                                                    {headerCells.map((cell, ci) => (
+                                                        <th key={ci} className="px-4 py-3 font-bold">{cell}</th>
+                                                    ))}
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y divide-gray-200">
+                                                {bodyRows.map((row, ri) => (
+                                                    <tr key={ri} className="bg-white odd:bg-light-gray/60">
+                                                        {row.map((cell, ci) => (
+                                                            <td key={ci} className="px-4 py-3">{renderInlineMarkdown(cell)}</td>
+                                                        ))}
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                );
+                            }
+                            return <p key={idx}>{renderInlineMarkdown(block)}</p>;
                         })}
                     </div>
 
@@ -230,12 +305,12 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
 
     // Blog Hub List View
     const title = isEs 
-        ? 'Centro de Conocimiento sobre Medicare y Seguros en Florida | AHB Insurance' 
-        : 'Florida Medicare & Insurance Knowledge Hub | AHB Insurance';
+        ? 'Blog de Medicare y Seguros en Florida | AHB Insurance' 
+        : 'Florida Medicare & Insurance Blog | AHB Insurance';
 
     const description = isEs 
-        ? 'Artículos educativos, guías de inscripción abierta de Medicare, seguros de gastos finales e IUL por el broker licenciado Andrés H. Bozo.' 
-        : 'Educational guides on Florida Medicare enrollment, burial insurance, and tax-advantaged IUL retirement planning by licensed broker Andres H. Bozo.';
+        ? 'Guías educativas sobre Medicare AEP en Florida, Medigap, gastos finales e IUL por el broker licenciado Andrés H. Bozo (NPN 21228432).' 
+        : 'Educational guides on Florida Medicare AEP, Medigap, burial costs, and IUL planning by licensed broker Andres H. Bozo (NPN 21228432).';
 
     const filteredPosts = BLOG_POSTS.filter(post => {
         const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
@@ -276,17 +351,22 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Blog y Artículos sobre Seguros en Florida - AHB Insurance" : "Florida Insurance Blog & Articles - AHB Insurance"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={blogBreadcrumbSchema}
             />
 
             <div className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Blog y Artículos' : 'Blog & Articles'}</span>
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">{isEs ? 'Blog y Artículos' : 'Blog & Articles'}</span>
+                    </div>
+                    <span className="text-gray-500 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                    </span>
                 </div>
             </div>
 

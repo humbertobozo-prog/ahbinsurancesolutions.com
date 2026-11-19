@@ -14,12 +14,12 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
     const baseUrl = 'https://www.ahbinsurancesolutions.com';
 
     const title = isEs 
-        ? 'Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance' 
-        : 'Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance';
+        ? 'Anualidades Fijas en Florida: MYGA y FIA | AHB Insurance' 
+        : 'Florida Fixed Annuities: MYGA & FIA | AHB Insurance';
 
     const description = isEs 
-        ? 'Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas de interés garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo.' 
-        : 'Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.';
+        ? 'Compare anualidades fijas, MYGA y FIA en Florida, reglas de liquidez e ingresos vitalicios con el broker licenciado Andrés H. Bozo (NPN 21228432).' 
+        : 'Compare Florida fixed annuities, MYGA & FIA options, liquidity rules, and retirement income riders with licensed broker Andres H. Bozo (NPN 21228432).';
 
     const [openFaq, setOpenFaq] = useState<number | null>(0);
 
@@ -30,7 +30,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         },
         {
             q: "¿Cuál es la diferencia exacta entre una anualidad tradicional, una MYGA y una FIA?",
-            a: "Una anualidad fija tradicional declara una tasa periódica revisable anualmente con una tasa mínima garantizada. Una MYGA (Multi-Year Guarantee Annuity) bloquea una tasa de interés fija exacta durante un período multianual pactado (por ejemplo, 3, 5, 7 o 10 años). Una Anualidad Indexada Fija (FIA) ofrece un rendimiento vinculado al desempeño de un índice bursátil externo (como el S&P 500) mediante topes (caps) o tasas de participación, manteniendo siempre un piso garantizado del 0% para evitar rendimientos negativos."
+            a: "Una anualidad fija tradicional declara una tasa periódica revisable anualmente con una tasa mínima garantizada. Una MYGA (Multi-Year Guarantee Annuity) bloquea una tasa de interés fija exacta durante un período multianual pactado (por ejemplo, 3, 5, 7 o 10 años). Una Anualidad Indexada Fija (FIA) vincula la acreditación de intereses a un índice bursátil externo (como el S&P 500) mediante topes (caps) o tasas de participación, con un piso contractual del 0% en el componente indexado (sujeto a términos del contrato, tarifas de cláusulas adicionales y cargos por rescate si aplican)."
         },
         {
             q: "¿Cómo funciona el diferimiento fiscal (Tax Deferral) en las anualidades?",
@@ -63,7 +63,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
         },
         {
             q: "What is the exact difference between a traditional fixed annuity, a MYGA, and an FIA?",
-            a: "A traditional fixed annuity declares an annual interest rate with a contractual minimum floor. A Multi-Year Guarantee Annuity (MYGA) locks in an exact, guaranteed fixed yield for a committed term (such as 3, 5, 7, or 10 years). A Fixed Indexed Annuity (FIA) links growth potential to an external market benchmark (like the S&P 500) via caps or participation rates, while maintaining a strict 0% contractual floor to ensure you never lose principal during market downturns."
+            a: "A traditional fixed annuity declares an annual interest rate with a contractual minimum floor. A Multi-Year Guarantee Annuity (MYGA) locks in an exact, guaranteed fixed yield for a committed term (such as 3, 5, 7, or 10 years). A Fixed Indexed Annuity (FIA) links interest crediting to an external market benchmark (like the S&P 500) via caps or participation rates, with a contractual 0% floor on the index component so negative index years do not reduce credited index value (subject to contract terms, rider fees, and surrender charges)."
         },
         {
             q: "How does tax deferral work in fixed annuities?",
@@ -157,16 +157,16 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/images/annuities-growth.webp"
+                ogImage="https://www.ahbinsurancesolutions.com/og/annuities-og.jpg"
                 ogImageAlt={isEs ? "Anualidades Fijas e Indexadas en Florida (MYGA, FIA y Retiro Vitalicio)" : "Florida Fixed & Indexed Annuities (MYGA, FIA and Guaranteed Lifetime Income)"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb" className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between">
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between flex-wrap gap-2">
                     <div className="flex items-center gap-2">
                         <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
                             {isEs ? 'Inicio' : 'Home'}
@@ -176,8 +176,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             {isEs ? 'Anualidades en Florida' : 'Florida Fixed Annuities'}
                         </span>
                     </div>
-                    <span className="text-xs text-gray-500 font-semibold hidden sm:inline">
-                        {isEs ? 'Broker Independiente Licenciado NPN 21228432' : 'Licensed Independent Florida Broker NPN 21228432'}
+                    <span className="text-[11px] text-gray-600 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
                     </span>
                 </div>
             </nav>
@@ -790,8 +790,8 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                             </h3>
                             <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                                 {isEs 
-                                    ? 'Como corredor independiente con licencia en Florida, realizo comparativas neutrales entre más de 80 compañías líderes. Le ayudo a evaluar tasas fijas, estrategias de indexación, liquidez y opciones de pensión vitalicia sin costo alguno para usted.' 
-                                    : 'As an independent licensed Florida insurance broker, I provide impartial multi-carrier comparisons across 80+ top carriers. I help you evaluate fixed yields, index crediting, liquidity provisions, and lifetime income options at zero cost to you.'}
+                                    ? 'Como corredor independiente con licencia en Florida, realizo comparativas neutrales entre múltiples aseguradoras líderes autorizadas en el estado. Le ayudo a evaluar tasas fijas, estrategias de indexación, liquidez y opciones de pensión vitalicia sin costo alguno para usted.' 
+                                    : 'As an independent licensed Florida insurance broker, I provide impartial multi-carrier comparisons across multiple top state-licensed carriers. I help you evaluate fixed yields, index crediting, liquidity provisions, and lifetime income options at zero cost to you.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
                                 {isEs ? '📍 Sede en Gainesville, Florida | Servicio a residentes en todos los condados de Florida' : '📍 Based in Gainesville, FL | Serving clients across all 67 Florida counties'}

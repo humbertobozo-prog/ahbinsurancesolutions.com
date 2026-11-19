@@ -18,8 +18,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         : 'Medicare Supplement (Medigap) Florida | AHB Insurance';
 
     const description = isEs 
-        ? 'Guía autorizada sobre Medicare en Florida 2026. Compare precios de Medigap Plan G y N, Medicare Advantage y Parte D. Asesoría independiente sin costo con Andrés Bozo (NPN 21228432).' 
-        : 'Authoritative guide to Florida Medicare 2026. Compare Medigap Plan G & N rates, Medicare Advantage, and Part D coverage. Free broker guidance from Andres Bozo (NPN 21228432).';
+        ? 'Guía de Medicare Florida 2026–2027. Compare Medigap Plan G y N, Advantage y Parte D con el broker Andrés Bozo (NPN 21228432). Asesoría sin costo.' 
+        : '2026–2027 Florida Medicare guide. Compare Medigap Plan G & N, Advantage & Part D ($2,100 cap 2026; $2,400 in 2027). Free help: Andres Bozo NPN 21228432.';
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -168,21 +168,26 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/hero-seniors-medicare.webp"
+                ogImage="https://www.ahbinsurancesolutions.com/og/medicare-og.jpg"
                 ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb */}
             <div className="bg-light-gray border-b border-gray-200 py-3">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Medicare en Florida' : 'Medicare in Florida'}</span>
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between flex-wrap gap-2">
+                    <div className="flex items-center gap-2">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">{isEs ? 'Medicare en Florida' : 'Medicare in Florida'}</span>
+                    </div>
+                    <span className="text-[11px] text-gray-600 font-semibold">
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                    </span>
                 </div>
             </div>
 
@@ -201,8 +206,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             </h1>
                             <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                                 {isEs
-                                    ? 'Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida, le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de más de 80 aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita hoy.'
-                                    : 'If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.'}
+                                    ? 'Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida, le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de múltiples aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita hoy.'
+                                    : 'If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F across multiple top carriers to shield retirement savings. Get expert, zero-cost broker guidance today.'}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
@@ -278,8 +283,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 <h3 className="font-bold text-amber-900 mb-1 text-sm">{isEs ? 'Deducibles de Hospital Elevados' : 'High Hospital Deductibles'}</h3>
                                 <p className="text-xs text-amber-800 leading-relaxed">
                                     {isEs 
-                                        ? 'En 2026, el deducible de hospitalización de la Parte A supera los $1,600 por cada período de beneficio de 60 días, no por año lectivo.' 
-                                        : 'The Part A inpatient hospital deductible exceeds $1,600 per benefit period, which can occur multiple times in a single calendar year.'}
+                                        ? 'En 2026, el deducible oficial de hospitalización de la Parte A es de $1,736 por cada período de beneficio de 60 días (puede repetirse varias veces al año; confirme las cifras de 2027 en CMS.gov).' 
+                                        : 'In 2026, the official CMS Part A inpatient hospital deductible is $1,736 per 60-day benefit period, which can occur multiple times in a year (verify 2027 figures on CMS.gov).'}
                                 </p>
                             </div>
                         </div>
@@ -393,8 +398,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     </h3>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                         {isEs 
-                                            ? 'La Parte D cubre farmacia ambulatoria (con tope federal de $2,000 en 2026). Por su parte, los "Derechos de Emisión Garantizada" (Guaranteed Issue Rights) le otorgan el derecho legal de contratar cualquier plan Medigap sin cuestionarios médicos durante su ventana de 6 meses al cumplir 65 y activar la Parte B, o ante eventos especiales como pérdida involuntaria de cobertura laboral.'
-                                            : 'Part D covers outpatient prescriptions (capped at $2,000 federally in 2026). Meanwhile, "Guaranteed Issue Rights" grant you the legal right to purchase any Medigap plan without medical underwriting during your 6-month window upon turning 65 and activating Part B, or during qualifying life events like involuntary loss of employer group coverage.'}
+                                            ? 'La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por CMS para cobertura 2027; los planes Advantage en red tienen tope federal MOOP de $9,250 en 2026 y $9,850 en 2027). Además, los "Derechos de Emisión Garantizada" le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.'
+                                            : 'Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 CMS-confirmed cap for 2027 coverage; MA in-network MOOP ceiling is $9,250 in 2026 / $9,850 in 2027). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.'}
                                     </p>
                                 </div>
                                 <span className="text-[11px] font-bold text-emerald-700 block pt-3 border-t border-gray-200">
@@ -414,7 +419,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible de Hospital Parte A' : 'Part A Hospital Deductible'}</td>
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible de Hospital Parte A ($1,736 en 2026)' : 'Part A Hospital Deductible ($1,736 in 2026)'}</td>
                                         <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
                                         <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
                                     </tr>
@@ -424,7 +429,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         <td className="p-4 text-amber-700 font-medium">{isEs ? 'Copago hasta $20 por consulta / $50 en ER' : 'Up to $20 copay / $50 ER copay'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible Anual Parte B (~$257)' : 'Part B Annual Deductible (~$257)'}</td>
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible Anual Parte B ($283 en 2026; ver CMS.gov para 2027)' : 'Part B Annual Deductible ($283 in 2026; check CMS.gov for 2027)'}</td>
                                         <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
                                         <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
                                     </tr>

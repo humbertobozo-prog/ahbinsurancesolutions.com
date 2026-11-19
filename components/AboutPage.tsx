@@ -18,17 +18,17 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
     const canonical = `${baseUrl}${language === 'es' ? pairs.es : pairs.en}`;
 
     const title = isEs 
-        ? 'Sobre Andrés H. Bozo | Broker de Seguros Licenciado en Florida (NPN 21228432)' 
-        : 'About Andres H. Bozo | Licensed Florida Insurance Broker (NPN 21228432)';
+        ? 'Andrés H. Bozo | Broker Florida NPN 21228432' 
+        : 'Andres H. Bozo | Licensed FL Broker NPN 21228432';
 
     const description = isEs 
-        ? 'Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con más de 80 aseguradoras.' 
-        : 'Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing 80+ top carriers.';
+        ? 'Conozca a Andrés H. Bozo (NPN 21228432), broker independiente en Florida. Asesoría bilingüe en Medicare, Gastos Finales, IUL y Anualidades.' 
+        : 'Meet Andres H. Bozo (NPN 21228432), independent Florida broker. Bilingual Medicare, Final Expense, IUL & Annuity guidance across multiple top carriers.';
 
     const content = translations[language];
 
-    // Local image paths (exclusive new portrait for About page)
-    const imageSrc = "/andrebozoofi.webp";
+    // Local image paths (portrait)
+    const imageSrc = "/andresbozoofi.webp";
     const imageSm = "/andresbozoofi-sm.webp";
 
     const personSchema = {
@@ -43,7 +43,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             : "Independent Florida insurance broker specializing in Medicare, Final Expense Burial Insurance, Indexed Universal Life (IUL), and Annuities. NPN: 21228432.",
         "telephone": "+1-352-225-8389",
         "email": "andreshbozo@ahbinsurancesolutions.com",
-        "image": `${baseUrl}/andresbozo-portrait-new.jpg`,
+        "image": `${baseUrl}/og/andres-bozo-og.jpg`,
         "url": canonical,
         "knowsLanguage": [
             { "@type": "Language", "name": "English" },
@@ -198,8 +198,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         },
         {
             step: "02",
-            title: "Comparación Multi-Compañía entre 80+ Aseguradoras",
-            desc: "Como broker independiente, evaluamos las tarifas reguladas y guías de suscripción médica de más de 80 compañías líderes autorizadas en Florida para encontrar la póliza más conveniente."
+            title: "Comparación Multi-Compañía Independiente",
+            desc: "Como broker independiente, evaluamos las tarifas reguladas y guías de suscripción médica de múltiples compañías líderes autorizadas en Florida para encontrar la póliza más conveniente."
         },
         {
             step: "03",
@@ -220,7 +220,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
         {
             step: "02",
             title: "Comparison of Available Options Across Multiple Carriers",
-            desc: "As an independent broker, we compare state-regulated rates and medical underwriting guidelines across 80+ top Florida carriers to identify your most cost-effective solution."
+            desc: "As an independent broker, we compare state-regulated rates and medical underwriting guidelines across multiple top Florida carriers to identify your most cost-effective solution."
         },
         {
             step: "03",
@@ -246,10 +246,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 title={title}
                 description={description}
                 language={language}
-                ogImage="https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+                ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
                 ogImageAlt={isEs ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)"}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[personSchema, aboutPageSchema, breadcrumbSchema]}
             />
 
@@ -324,8 +324,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             </h1>
                             <p className="text-base sm:text-lg text-gray-200 font-medium leading-relaxed max-w-2xl mb-6">
                                 {isEs 
-                                    ? 'Corredor de seguros independiente certificado en Florida (NPN: 21228432) y fundador de AHB Insurance Solutions. Especialista en Medicare, Gastos Finales, IUL y Anualidades con representación directa ante más de 80 aseguradoras.' 
-                                    : 'Florida-licensed independent insurance broker (NPN: 21228432) and founder of AHB Insurance Solutions. Specializing in Medicare, Final Expense Burial Insurance, IUL, and Annuities with direct broker representation across 80+ top-rated carriers.'}
+                                    ? 'Corredor de seguros independiente certificado en Florida (NPN: 21228432) y fundador de AHB Insurance Solutions. Especialista en Medicare, Gastos Finales, IUL y Anualidades con representación independiente ante múltiples aseguradoras líderes.' 
+                                    : 'Florida-licensed independent insurance broker (NPN: 21228432) and founder of AHB Insurance Solutions. Specializing in Medicare, Final Expense Burial Insurance, IUL, and Annuities with independent representation across multiple top carriers.'}
                             </p>
 
                             {/* Quick Credentials Grid */}
@@ -393,7 +393,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         </div>
                         <div className="flex items-center gap-3 flex-wrap">
                             <span className="bg-gray-200 text-gray-700 text-[11px] font-bold px-3 py-1 rounded-full">
-                                {isEs ? 'Actualizado: Septiembre 2026' : 'Updated: September 2026'}
+                                {isEs ? 'Actualizado: Noviembre 2026' : 'Updated: November 2026'}
                             </span>
                             <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-lg text-emerald-800 text-xs font-bold">
                                 <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
@@ -450,8 +450,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
 
                         <p className="text-gray-700">
                             {isEs 
-                                ? 'Como corredor independiente (Broker), Andrés no representa a una compañía aseguradora; representa exclusivamente los intereses de sus clientes. Al tener contratos directos con más de 80 compañías de primer nivel nacional, puede analizar de forma objetiva las primas reguladas y los criterios de aceptación médica para recomendar la opción que realmente se adapta a la salud y presupuesto de cada persona.' 
-                                : 'As an independent broker, Andres does not work for an insurance carrier; he works directly for his clients. By maintaining direct contracts with over 80 A-rated national insurance carriers, Andres objectively scans state-regulated rates and underwriting criteria to find the optimal plan tailored to each client’s medical history and financial goals.'}
+                                ? 'Como corredor independiente (Broker), Andrés no representa a una compañía aseguradora; representa exclusivamente los intereses de sus clientes. Al comparar múltiples aseguradoras autorizadas en Florida, puede analizar de forma objetiva las primas reguladas y los criterios de aceptación médica para recomendar la opción que realmente se adapta a la salud y presupuesto de cada persona.' 
+                                : 'As an independent broker, Andres does not work for an insurance carrier; he works directly for his clients. By comparing multiple A-rated Florida-licensed carriers, Andres objectively scans state-regulated rates and underwriting criteria to find the optimal plan tailored to each client’s medical history and financial goals.'}
                         </p>
 
                         <div className="bg-light-gray p-5 rounded-xl border-l-4 border-accent shadow-sm my-4">
@@ -477,7 +477,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                 </li>
                                 <li className="flex items-start gap-2.5">
                                     <span className="text-emerald-600 font-bold text-base leading-none">✓</span>
-                                    <span><strong>{isEs ? '80+ Compañías Aseguradoras:' : '80+ Carrier Options:'}</strong> {isEs ? 'No estamos atados a ninguna marca en particular. Buscamos el mejor precio real.' : 'No captive brand bias. We match you with the strongest market value.'}</span>
+                                    <span><strong>{isEs ? 'Múltiples Aseguradoras:' : 'Multi-Carrier Options:'}</strong> {isEs ? 'No estamos atados a ninguna marca en particular. Buscamos el mejor precio real.' : 'No captive brand bias. We match you with the strongest market value.'}</span>
                                 </li>
                                 <li className="flex items-start gap-2.5">
                                     <span className="text-emerald-600 font-bold text-base leading-none">✓</span>
@@ -587,15 +587,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             <section className="bg-primary text-white py-14">
                 <div className="container mx-auto px-4 md:px-6 max-w-6xl text-center">
                     <span className="text-accent text-xs font-black uppercase tracking-widest block mb-2">
-                        {isEs ? 'Más de 80 Aseguradoras Contratadas' : '80+ Top-Rated Insurance Carriers'}
+                        {isEs ? 'Aseguradoras Líderes en Florida' : 'Top-Rated Insurance Carriers'}
                     </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-heading mb-4">
-                        {isEs ? 'Representamos al Mercado Completo de Florida' : 'Direct Broker Representation Across Top Carriers'}
+                        {isEs ? 'Comparamos Opciones de Múltiples Aseguradoras' : 'Independent Multi-Carrier Representation'}
                     </h2>
                     <p className="text-gray-200 text-xs sm:text-sm md:text-base max-w-3xl mx-auto font-medium mb-8 leading-relaxed">
                         {isEs 
-                            ? 'Mantenemos contratos directos con las compañías aseguradoras más sólidas y prestigiosas del país para ofrecerle siempre la mejor relación costo-beneficio.' 
-                            : 'We maintain direct broker appointments with the nation’s most financially stable insurance companies to compare all viable options.'}
+                            ? 'Trabajamos con compañías aseguradoras sólidas y licenciadas en Florida para comparar alternativas acordes a su salud y presupuesto.' 
+                            : 'We work with financially strong, Florida-licensed insurance companies to compare viable coverage options for your needs.'}
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 max-w-4xl mx-auto">
@@ -604,9 +604,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                 {c}
                             </span>
                         ))}
-                        <span className="bg-accent text-primary px-3.5 py-1.5 rounded-full text-xs font-black">
-                            {isEs ? '+ Más de 65 Compañías Adicionales' : '+ 65 More Top Carriers'}
-                        </span>
                     </div>
                 </div>
             </section>

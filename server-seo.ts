@@ -1,6 +1,6 @@
 import { BLOG_POSTS } from "./constants/blogPosts";
 import { faqsEs, faqsEn } from "./constants/faqData";
-import { FLORIDA_CITIES } from "./data/cityGuidesData";
+import { FLORIDA_CITIES, TAMPA_IUL_METADATA } from "./data/cityGuidesData";
 import { getRoutePairs } from "./utils/routePairs";
 
 export interface SeoMetaData {
@@ -210,13 +210,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Bajo el liderazgo del corredor licenciado Andrés Bozo (NPN: 21228432), nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Con oficina en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
           <article>
             <h3>1. Planes Suplementarios de Medicare (Medigap) en Florida</h3>
-            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Un plan de Suplemento de Medicare (Medigap) en Florida generalmente le permite consultar a cualquier médico, especialista o centro de salud en Florida y a nivel nacional que acepte la asignación de Medicare, sin restricciones de redes de proveedores ni requisitos de referidos de especialistas, sujeto a las normas de Medicare y Medigap.</p>
+            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A ($1,736 en 2026) y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Un plan de Suplemento de Medicare (Medigap) en Florida generalmente le permite consultar a cualquier médico, especialista o centro de salud en Florida y a nivel nacional que acepte la asignación de Medicare, sin restricciones de redes de proveedores ni requisitos de referidos de especialistas, sujeto a las normas de Medicare y Medigap.</p>
           </article>
           <article>
             <h3>2. Seguro de Gastos Finales y Entierro para Adultos Mayores</h3>
@@ -228,14 +229,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>4. Anualidades Fijas y Pólizas Dentales, de Visión y Audición</h3>
-            <p>Proteja sus ahorros de jubilación con anualidades fijas e indexadas que ofrecen preservación de capital frente a caídas del mercado, crecimiento con impuestos diferidos mientras los fondos permanezcan en la anualidad y opciones de ingresos de por vida respaldadas por la solvencia financiera de aseguradoras autorizadas, además de seguros dentales, de visión y audición.</p>
+            <p>Proteja sus ahorros de jubilación con anualidades fijas e indexadas que ofrecen preservación contractual de capital frente a caídas del índice, crecimiento con impuestos diferidos mientras los fondos permanezcan en la anualidad y opciones de ingresos de por vida respaldadas por la solvencia financiera de aseguradoras autorizadas, además de seguros dentales, de visión y audición.</p>
           </article>
         </section>
         <section>
           <h2>¿Por Qué Elegir a AHB Insurance Solutions?</h2>
           <ul>
             <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos aseguradoras de primer nivel para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
-            <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), San Petersburgo, Fort Myers y todas las zonas de Florida.</li>
+            <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), Gainesville (Alachua), San Petersburgo, Fort Myers y todos los condados de Florida.</li>
             <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para evaluar que su cobertura se mantenga alineada con sus metas y presupuesto.</li>
           </ul>
         </section>
@@ -245,11 +246,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>El momento más favorable es durante su Período de Inscripción Abierta de Medigap de 6 meses, que inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante esta ventana tiene Derechos de Emisión Garantizada, lo que impide que las aseguradoras rechacen su cobertura o aumenten su precio por antecedentes de salud.</p>
           <h3>¿Puedo calificar para seguro de entierro si tengo enfermedades previas?</h3>
           <p>Sí. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante. Incluso adultos mayores con historial de condiciones preexistentes pueden calificar para cobertura de nivel inmediato o con beneficios graduados.</p>
-          <h3>¿Cómo protege una póliza IUL mi dinero de las crisis bursátiles?</h3>
-          <p>Las pólizas IUL poseen una cláusula de piso del 0%. En los períodos en que el índice bursátil de referencia registra pérdidas, su rendimiento indexado no baja de cero (el valor en efectivo no está invertido directamente en la bolsa y está sujeto a los costos administrativos de la póliza y a la solidez financiera de la aseguradora emisora).</p>
+          <h3>¿Cómo funciona el piso del 0% en la acreditación indexada de un IUL?</h3>
+          <p>El componente de acreditación indexada de una póliza IUL puede incluir una cláusula de piso contractual del 0%. En los períodos en que el índice bursátil de referencia registra pérdidas, a la estrategia de índice seleccionada no se le acredita un rendimiento negativo; sin embargo, el valor en efectivo no está invertido directamente en la bolsa y continúa sujeto a los costos internos del seguro (COI), cargos administrativos de la póliza y a la solvencia financiera de la aseguradora emisora.</p>
         </section>
         <section>
-          <h2>Servicios en Español y Enlaces Principales</h2>
+          <h2>Oficina en Gainesville, Servicios en Español y Enlaces Principales</h2>
+          <p><strong>Dirección de la Agencia:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Correo:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <nav aria-label="Enlaces en Español">
             <ul>
               <li><a href="/es">Inicio: Seguros en Florida</a></li>
@@ -260,6 +262,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/es/dental-vision-florida">Seguro Dental, Visión y Audición Senior</a></li>
               <li><a href="/es/preguntas-frecuentes">Preguntas Frecuentes sobre Seguros</a></li>
               <li><a href="/es/sobre-andres-bozo">Conozca al Broker Andrés Bozo</a></li>
+              <li><a href="/es/politica-editorial">Política Editorial</a></li>
               <li><a href="/es/contacto">Cotización Gratuita sin Compromiso</a></li>
             </ul>
           </nav>
@@ -271,7 +274,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p>Welcome to AHB Insurance Solutions. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout Florida. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p>Welcome to AHB Insurance Solutions, located at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout all 67 Florida counties. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
           <h2>Our Specialized Florida Insurance Solutions</h2>
@@ -310,7 +314,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return when markets drop. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value.</p>
         </section>
         <section>
-          <h2>Explore Coverage Options & Bilingual Assistance</h2>
+          <h2>Explore Coverage Options, Office Address & Bilingual Assistance</h2>
+          <p><strong>Agency Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <nav aria-label="Insurance Solutions">
             <ul>
               <li><a href="/medicare-florida">Medicare Supplement Plans (Medigap)</a></li>
@@ -320,6 +325,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <li><a href="/dental-vision-florida">Senior Dental, Vision & Hearing Coverage</a></li>
               <li><a href="/faq">Frequently Asked Questions</a></li>
               <li><a href="/about-andres-bozo">About Broker Andres Bozo</a></li>
+              <li><a href="/editorial-policy">Editorial Policy</a></li>
               <li><a href="/contact">Free Insurance Quote</a></li>
             </ul>
           </nav>
@@ -343,21 +349,22 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Medicare Suplementario (Medigap) Florida | AHB Insurance" 
       : "Medicare Supplement (Medigap) Florida | AHB Insurance";
     description = isEs 
-      ? "Inscripción Abierta Medicare Florida 2026–2027. Compare Medigap Plan G y N, Advantage y Parte D. Asesoría independiente sin costo con el broker Andrés Bozo (NPN 21228432)." 
-      : "Florida Medicare 2026–2027 Open Enrollment Guide. Compare Medigap Plan G & N rates, Advantage, and Part D with independent broker Andres Bozo (NPN 21228432).";
-    ogImage = "https://www.ahbinsurancesolutions.com/hero-seniors-medicare-lg.webp";
+      ? "Guía de Medicare Florida 2026–2027. Compare Medigap Plan G y N, Advantage y Parte D con el broker Andrés Bozo (NPN 21228432). Asesoría sin costo." 
+      : "2026–2027 Florida Medicare guide. Compare Medigap Plan G & N, Advantage & Part D ($2,100 cap 2026; $2,400 in 2027). Free help: Andres Bozo NPN 21228432.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/medicare-og.jpg";
     ogImageAlt = isEs 
       ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
       : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
     
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Medicare Suplementario Medigap</span></p></nav>
         <header>
           <h1>Planes de Medicare Suplementario (Medigap) en Florida 2026–2027</h1>
-          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de más de 80 aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita y personalizada hoy.</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre múltiples aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita y personalizada hoy desde nuestra oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
         </header>
 
         <section>
@@ -365,7 +372,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos que pueden poner en riesgo los ahorros acumulados durante toda una vida de trabajo:</p>
           <ul>
             <li><strong>Sin Límite Anual de Gastos (No MOOP):</strong> En Medicare Original no existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de quimioterapia y diálisis, sin tope alguno en dólares.</li>
-            <li><strong>Deducibles de Hospital Elevados:</strong> En 2026, el deducible de hospitalización de la Parte A supera los $1,600 por cada período de beneficio de 60 días, no por año calendario, pudiendo repetirse varias veces en un mismo año.</li>
+            <li><strong>Deducibles de Hospital Elevados:</strong> En 2026, el deducible oficial de hospitalización de la Parte A es de $1,736 por cada período de beneficio de 60 días (verifique las cifras definitivas de Parte A y Parte B para 2027 directamente en CMS.gov al publicarse), pudiendo repetirse varias veces en un mismo año.</li>
           </ul>
         </section>
 
@@ -375,7 +382,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ol>
             <li><strong>Paso 1: Identificar su Período Inicial de Inscripción (IEP):</strong> Su IEP dura 7 meses: inicia 3 meses antes de cumplir 65 años, incluye el mes de su cumpleaños y finaliza 3 meses después. Es la ventana para solicitar las Partes A y B en SSA.gov.</li>
             <li><strong>Paso 2: Activar la Ventana Protegida de Medigap (MOEP):</strong> Al activar la Parte B, arranca su ventana de 6 meses de Medigap. Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
-            <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico. De lo contrario, se acumulará una penalidad permanente del 1% mensual por cada mes sin cobertura acreditable.</li>
+            <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico para evitar la penalidad permanente del 1% mensual y acceder al tope federal de gasto de bolsillo de $2,100 en 2026 ($2,400 confirmado para la cobertura de 2027).</li>
           </ol>
         </section>
 
@@ -383,7 +390,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Análisis Detallado de Planes Medigap en Florida: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medigap Plan G: La Opción Más Completa</h3>
-            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B (~$257 en 2026). Cubre el 100% del deducible de la Parte A, el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
+            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 oficial en 2026; confirme la cifra de 2027 en CMS.gov). Cubre el 100% del deducible de la Parte A ($1,736 en 2026), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
           </article>
           <article>
             <h3>Medigap Plan N: El Equilibrio entre Costo y Cobertura</h3>
@@ -441,7 +448,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Predecibilidad Financiera</td>
                 <td>Máxima (Sin facturas sorpresa)</td>
                 <td>Muy Alta (Copagos menores)</td>
-                <td>Variable según uso médico (MOOP hasta $8,850+)</td>
+                <td>Variable según uso médico (MOOP en red hasta $9,250 en 2026; $9,850 en 2027)</td>
               </tr>
             </tbody>
           </table>
@@ -507,7 +514,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Medicare Supplement (Medigap) Plans</span></p></nav>
         <header>
           <h1>Medicare Supplement (Medigap) Plans in Florida 2026–2027</h1>
-          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F from 80+ top carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across multiple top-rated carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.</p>
         </header>
 
         <section>
@@ -515,7 +523,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps that can expose your retirement savings to unexpected medical liabilities:</p>
           <ul>
             <li><strong>No Annual Maximum Out-of-Pocket (No MOOP):</strong> Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, specialty treatments, and imaging.</li>
-            <li><strong>High Hospital Deductibles:</strong> In 2026, the Part A inpatient hospital deductible exceeds $1,600 per benefit period, which can occur multiple times in a single calendar year.</li>
+            <li><strong>High Hospital Deductibles:</strong> In 2026, the Part A inpatient hospital deductible is $1,736 per benefit period (verify final 2027 Part A & B deductibles directly on CMS.gov upon release), which can occur multiple times in a single calendar year.</li>
           </ul>
         </section>
 
@@ -525,7 +533,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ol>
             <li><strong>Step 1: Identify Your Initial Enrollment Period (IEP):</strong> Your IEP spans 7 months: starts 3 months before your 65th birthday month, includes your birthday month, and ends 3 months after. Use SSA.gov to apply for Parts A and B.</li>
             <li><strong>Step 2: Activate Your Medigap Open Enrollment Window (MOEP):</strong> Activating Part B triggers your 6-month Medigap window. During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
-            <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,000 out-of-pocket cap.</li>
+            <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,100 annual cap in 2026 ($2,400 confirmed for 2027 coverage).</li>
           </ol>
         </section>
 
@@ -533,7 +541,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Detailed Analysis of Florida Medigap Plans: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medicare Supplement Plan G: Most Comprehensive Coverage</h3>
-            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible (~$257 in 2026). It covers 100% of the Part A hospital deductible, the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
+            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026 per CMS; verify 2027 figure at CMS.gov). It covers 100% of the Part A hospital deductible ($1,736 in 2026), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
           </article>
           <article>
             <h3>Medicare Supplement Plan N: Balancing Cost and Coverage</h3>
@@ -591,7 +599,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Financial Predictability</td>
                 <td>Maximum (No surprise bills)</td>
                 <td>Very High (Small copays only)</td>
-                <td>Variable based on utilization (MOOP up to $8,850+)</td>
+                <td>Variable based on utilization (In-network MOOP up to $9,250 in 2026; $9,850 in 2027)</td>
               </tr>
             </tbody>
           </table>
@@ -658,24 +666,25 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 3. Final Expense Service Page
   else if (cleanPath === "/final-expense" || cleanPath === "/es/gastos-finales") {
     title = isEs 
-      ? "Seguro de Entierro y Gastos Finales en Florida 2026–2027 | Tarifas y Cobertura" 
-      : "Burial Insurance Florida | $5K–$35K Senior Funeral Coverage & Rates 2026–2027";
+      ? "Seguro de Entierro y Gastos Finales FL | AHB Insurance" 
+      : "Florida Burial & Final Expense Insurance | AHB Insurance";
     description = isEs 
-      ? "Compare pólizas de seguro de entierro y gastos finales en Florida con el broker licenciado Andrés Bozo (NPN: 21228432). Tarifas fijas de $5,000 a $35,000 sin examen médico." 
-      : "Compare top Florida burial insurance & final expense plans with licensed broker Andres Bozo (NPN: 21228432). $5,000–$35,000 locked lifetime rates, no medical exam. Free quote!";
-    ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
+      ? "Compare pólizas de entierro y gastos finales en Florida ($5K–$35K) con el broker Andrés Bozo (NPN 21228432). Cotice sin costo hoy." 
+      : "Compare Florida burial & final expense whole life plans ($5K–$35K) with licensed broker Andres Bozo (NPN 21228432). Free quote today.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg";
     ogImageAlt = isEs 
       ? "Seguro de Entierro y Gastos Finales en Florida - Cobertura Permanente de Vida Entera" 
       : "Florida Burial Insurance & Final Expense Life Insurance - Permanent Whole Life Coverage";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Seguro de Entierro y Gastos Finales</span></p></nav>
         <header>
           <h1>Seguro de Entierro y Gastos Finales en Florida 2026–2027</h1>
-          <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida, Andrés Bozo (NPN: 21228432) compara las tarifas más competitivas entre más de 15 aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+          <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida con oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andrés Bozo (NPN: 21228432) compara las tarifas más competitivas entre múltiples aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
         </header>
 
         <section>
@@ -796,7 +805,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Final Expense & Burial Insurance</span></p></nav>
         <header>
           <h1>Burial Insurance & Final Expense in Florida 2026–2027</h1>
-          <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432) compares rates across top carriers to secure the best policy for your family.</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+          <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) compares rates across top carriers to secure the best policy for your family.</p>
         </header>
 
         <section>
@@ -926,24 +936,25 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     cleanPath === "/iul-jubilacion"
   ) {
     title = isEs 
-      ? "Guía Completa de Vida Universal Indexada (IUL) en Florida 2026 | AHB Insurance" 
-      : "Indexed Universal Life (IUL) Insurance Master Guide Florida 2026 | AHB Insurance";
+      ? "Guía IUL y Jubilación en Florida 2026 | AHB Insurance" 
+      : "Florida IUL Insurance Guide 2026–2027 | AHB Insurance";
     description = isEs 
-      ? "Aprenda cómo el IUL ofrece crecimiento indexado con piso contractual del 0% y estrategias de préstamos con ventajas fiscales bajo el Código IRS 7702 en Florida." 
-      : "Discover how Indexed Universal Life (IUL) provides index-linked crediting with a contractual 0% floor and tax-advantaged retirement policy loans under IRS Section 7702 in Florida.";
-    ogImage = "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp";
+      ? "Aprenda cómo el IUL ofrece acreditación indexada con piso contractual del 0% y préstamos sobre póliza según el Código IRS 7702 en Florida." 
+      : "Learn how Indexed Universal Life (IUL) offers index-linked crediting with a 0% contractual floor & policy loan rules under IRS Section 7702.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/iul-og.jpg";
     ogImageAlt = isEs 
       ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" 
       : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Vida Universal Indexada (IUL)</span></p></nav>
         <header>
           <h1>Seguro de Vida Universal Indexada (IUL) y Estrategias de Retiro en Florida 2026</h1>
-          <p>Descubra cómo el seguro de Vida Universal Indexada (IUL) combina protección permanente para su familia con acumulación de valor en efectivo indexado a índices bursátiles como el S&P 500, un piso contractual del 0% en la acreditación indexada y estrategias de préstamos sobre póliza con ventajas fiscales potenciales bajo el Código IRS 7702. Asesoría experta y transparente con el broker independiente licenciado en Florida Andrés Bozo (NPN: 21228432).</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+          <p>Descubra cómo el seguro de Vida Universal Indexada (IUL) combina protección permanente para su familia con acumulación de valor en efectivo indexado a índices bursátiles como el S&P 500, un piso contractual del 0% en la acreditación indexada (sujeto a costos internos y cargos de la póliza) y estrategias de préstamos sobre póliza con ventajas fiscales potenciales bajo el Código IRS 7702. Asesoría transparente en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 con Andrés Bozo (NPN: 21228432).</p>
         </header>
 
         <section>
@@ -1064,14 +1075,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Indexed Universal Life (IUL)</span></p></nav>
         <header>
           <h1>Indexed Universal Life (IUL) Insurance Master Guide Florida 2026</h1>
-          <p>Discover how Indexed Universal Life (IUL) insurance combines permanent death benefit protection for your family with index-linked cash value growth (such as the S&P 500), a contractual 0% floor against market declines, and tax-advantaged policy loan strategies under IRS Code Section 7702. Independent Florida broker Andres Bozo (NPN: 21228432) provides unbiased illustrations and personalized structuring.</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+          <p>Discover how Indexed Universal Life (IUL) insurance combines permanent death benefit protection for your family with index-linked cash value growth (such as the S&P 500), a contractual 0% floor on the index-crediting component (policy charges still apply), and policy loan strategies under IRS Code Section 7702. Independent Florida broker Andres Bozo (NPN: 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) provides transparent policy illustrations.</p>
         </header>
 
         <section>
           <h2>How the Index-Crediting Mechanism Works in an IUL Policy</h2>
           <p>In an Indexed Universal Life insurance policy, your cash value is never directly invested in equity markets or volatile mutual funds. Instead, interest crediting is linked to an underlying financial benchmark (such as the S&P 500) based on clear contractual mechanisms:</p>
           <ol>
-            <li><strong>Contractual 0% Crediting Floor:</strong> The index-crediting component has a contractual 0% floor, meaning your cash value is never credited with negative returns during market downturns. However, internal policy charges, administrative fees, and monthly Cost of Insurance (COI) deductions still apply.</li>
+            <li><strong>Contractual 0% Crediting Floor:</strong> The index-crediting component has a contractual 0% floor, meaning the chosen index strategy is not credited with a negative index return during market downturns. However, internal policy charges, administrative fees, and monthly Cost of Insurance (COI) deductions still apply and affect overall cash value.</li>
             <li><strong>Market Upside Participation:</strong> When financial indexes perform well, your account receives interest up to an annual Cap Rate (typically 8% to 12%) or according to contractual Participation Rates.</li>
             <li><strong>Tax-Deferred Compound Growth:</strong> Under IRS Code Section 7702, credited cash value accumulates on a tax-deferred basis, enabling your funds to compound year over year without annual 1099 capital gains erosion.</li>
           </ol>
@@ -1192,10 +1204,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       const post = BLOG_POSTS.find(p => p.slug.en === slugValue || p.slug.es === slugValue);
       
       if (post) {
-        title = isEs ? `${post.title.es} | AHB Insurance` : `${post.title.en} | AHB Insurance`;
+        title = isEs ? `${post.title.es} | AHB` : `${post.title.en} | AHB`;
         description = isEs ? post.excerpt.es : post.excerpt.en;
         ogType = "article";
-        ogImage = post.image.startsWith("http") ? post.image : `${baseUrl}${post.image}`;
+        ogImage = post.ogImage
+          ? (post.ogImage.startsWith("http") ? post.ogImage : `${baseUrl}${post.ogImage}`)
+          : `${baseUrl}/og-image.png`;
         ogImageAlt = isEs ? post.title.es : post.title.en;
         datePublished = post.date;
         dateModified = post.date;
@@ -1210,29 +1224,29 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <header>
               <h1>${escapeHtml(isEs ? post.title.es : post.title.en)}</h1>
               <p><em>${escapeHtml(isEs ? post.excerpt.es : post.excerpt.en)}</em></p>
-              <p>Published on: ${publishDate} | Category: ${post.category} | Author: ${authorName} (${authorTitle})</p>
+              <p><strong>${isEs ? "Publicado:" : "Published:"}</strong> ${publishDate} | <strong>${isEs ? "Categoría:" : "Category:"}</strong> ${post.category} | <strong>${isEs ? "Autor:" : "Author:"}</strong> ${authorName} (${authorTitle}, NPN ${post.author.npn})</p>
             </header>
-            <main>
+            <section>
               <div class="article-body">
                 ${articleContent.split("\n\n").map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("\n")}
               </div>
-            </main>
+            </section>
           </article>
         `;
       }
     } else {
       title = isEs 
-        ? "Centro de Conocimiento sobre Medicare y Seguros en Florida | AHB Insurance" 
-        : "Florida Medicare & Insurance Knowledge Hub | AHB Insurance";
+        ? "Blog de Medicare y Seguros en Florida | AHB Insurance" 
+        : "Florida Medicare & Insurance Blog | AHB Insurance";
       description = isEs 
-        ? "Artículos educativos, guías de inscripción abierta de Medicare, seguros de gastos finales e IUL por el broker licenciado Andrés H. Bozo." 
-        : "Educational guides on Florida Medicare enrollment, burial insurance, and tax-free IUL retirement by licensed broker Andres H. Bozo.";
+        ? "Guías educativas sobre Medicare AEP en Florida, Medigap, gastos finales e IUL por el broker licenciado Andrés H. Bozo (NPN 21228432)." 
+        : "Educational guides on Florida Medicare AEP, Medigap, burial costs, and IUL planning by licensed broker Andres H. Bozo (NPN 21228432).";
       ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
       ogImageAlt = isEs 
-        ? "Blog de Seguros en Florida - Guías de Medicare, Gastos Finales y Retiro IUL" 
-        : "Florida Insurance Knowledge Hub - Medicare, Final Expense and IUL Insights";
+        ? "Blog y Artículos sobre Seguros en Florida - AHB Insurance" 
+        : "Florida Insurance Blog & Articles - AHB Insurance";
       datePublished = "2024-01-15";
-      dateModified = "2026-10-10";
+      dateModified = "2026-11-16";
 
       const postsList = BLOG_POSTS.map(post => {
         const pTitle = isEs ? post.title.es : post.title.en;
@@ -1242,22 +1256,62 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         return `
           <li>
             <h3><a href="${pLink}">${escapeHtml(pTitle)}</a></h3>
+            <p><small>${isEs ? "Publicado:" : "Published:"} ${post.date} · ${escapeHtml(post.author.name)} (NPN ${post.author.npn})</small></p>
             <p>${escapeHtml(pExcerpt)}</p>
           </li>
         `;
       }).join("\n");
 
-      bodyOutline = `
+      bodyOutline = isEs ? `
         <header>
-          <h1>${title}</h1>
-          <p>${description}</p>
+          <h1>${escapeHtml(title)}</h1>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+          <p>${escapeHtml(description)}</p>
         </header>
-        <main>
+        <section>
+          <h2>Temas Principales y Guías Verificadas para Residentes de Florida</h2>
+          <p>Cada artículo publicado en nuestro centro educativo es redactado y revisado bajo criterios de cumplimiento normativo de CMS, IRS y el Departamento de Servicios Financieros de Florida (DFS) por el corredor independiente Andrés H. Bozo desde nuestra sede en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
+          <ul>
+            <li><strong>Medicare Inscripción Anual (AEP Oct 15 – Dic 7):</strong> Preparación para cambios de cobertura 2027, deducible oficial Parte A ($1,736 en 2026) y Parte B ($283 en 2026), además del tope federal Parte D ($2,100 en 2026 y $2,400 confirmado en 2027).</li>
+            <li><strong>Seguro de Entierro y Gastos Finales:</strong> Cómo comparar pólizas permanentes de vida entera de $5,000 a $35,000 para cubrir costos funerarios promedio en Florida sin dejar cargas financieras a la familia.</li>
+            <li><strong>Planificación IUL y Anualidades Fijas:</strong> Explicaciones objetivas del piso contractual del 0% en acreditación indexada, los cargos internos de póliza (COI) y la Sección 7702 del Código Tributario IRS.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Artículos Recientes</h2>
+          <ul>
+            ${postsList}
+          </ul>
+        </section>
+        <section>
+          <h2>¿Tiene Preguntas Específicas sobre su Cobertura en Florida?</h2>
+          <p>Llame al <a href="tel:+13522258389">+1 (352) 225-8389</a> o visite nuestra página de <a href="/es/contacto">Contacto Directo</a> para revisar planes en su código postal sin costo.</p>
+        </section>
+      ` : `
+        <header>
+          <h1>${escapeHtml(title)}</h1>
+          <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p>${escapeHtml(description)}</p>
+        </header>
+        <section>
+          <h2>Verified Topic Clusters for Florida Seniors & Families</h2>
+          <p>Every guide published in the AHB Insurance Solutions Knowledge Hub is authored and reviewed for regulatory clarity against CMS, IRS, and Florida Department of Financial Services (DFS) standards by independent broker Andres H. Bozo at our Gainesville office (5500 SW Archer Road, Ste H103, Gainesville, FL 32607).</p>
+          <ul>
+            <li><strong>Medicare Annual Enrollment (Oct 15 – Dec 7):</strong> Clear preparation checklists ahead of the December 7 deadline, covering official 2026 deductibles ($1,736 Part A, $283 Part B) alongside Part D prescription drug caps ($2,100 in 2026; $2,400 confirmed for 2027).</li>
+            <li><strong>Final Expense & Burial Insurance:</strong> Comparing permanent $5,000 to $35,000 whole life policies against real Florida burial and cremation invoices without unexpected family debt.</li>
+            <li><strong>IUL & Fixed Annuities:</strong> Unbiased breakdowns of how a contractual 0% index crediting floor interacts with internal policy charges, alongside IRS Section 7702 policy loan rules.</li>
+          </ul>
+        </section>
+        <section>
           <h2>Recent Educational Articles</h2>
           <ul>
             ${postsList}
           </ul>
-        </main>
+        </section>
+        <section>
+          <h2>Need County-Specific Rate Comparisons?</h2>
+          <p>Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit our <a href="/contact">Contact Page</a> to review plans available in your Florida ZIP code with zero broker fees.</p>
+        </section>
       `;
     }
   }
@@ -1265,17 +1319,17 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 6. FAQ Page
   else if (cleanPath === "/faq" || cleanPath === "/es/preguntas-frecuentes") {
     title = isEs 
-      ? "Preguntas Frecuentes sobre Medicare, Gastos Finales, Seguro de Vida, IUL y Anualidades | AHB" 
-      : "Medicare, Final Expense, Life Insurance, IUL & Annuities FAQ | AHB Solutions";
+      ? "Preguntas Frecuentes de Seguros FL | AHB Solutions" 
+      : "Medicare, Burial & IUL Insurance FAQ | AHB Solutions";
     description = isEs 
-      ? "Respuestas completas a más de 30 dudas clave sobre Medicare Suplementario Plan G y N, Gastos Finales, Seguro de Vida, IUL y Anualidades en Florida con el broker Andrés H. Bozo." 
-      : "Comprehensive answers to 30+ essential questions regarding Florida Medicare Supplement Plan G & N, Final Expense, Life Insurance, IUL, and Annuities with licensed broker Andres H. Bozo.";
+      ? "Respuestas a más de 30 preguntas sobre Medigap Plan G y N, Gastos Finales, Vida, IUL y Anualidades en Florida con el broker Andrés Bozo (NPN 21228432)." 
+      : "Answers to 30+ questions on Florida Medigap Plan G & N, Final Expense, Life Insurance, IUL & Annuities with broker Andres H. Bozo (NPN 21228432).";
     ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
     ogImageAlt = isEs 
       ? "Preguntas Frecuentes sobre Medicare, Gastos Finales e IUL en Florida" 
       : "Frequently Asked Questions about Florida Medicare, Final Expense, and IUL";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
     const activeFaqs = isEs ? faqsEs : faqsEn;
     const categoryTitles: Record<string, { en: string; es: string }> = {
@@ -1310,83 +1364,90 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     bodyOutline = `
       <header style="margin-bottom: 2rem;">
         <h1 style="font-size: 2rem; font-weight: 900; color: #0f172a; margin-bottom: 0.75rem;">${escapeHtml(title)}</h1>
+        <p><strong>${isEs ? "Revisado por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026" : "Reviewed by Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026"}</strong></p>
         <p style="font-size: 1.1rem; color: #475569; line-height: 1.6;">${escapeHtml(description)}</p>
       </header>
-      <main>
+      <div>
         ${faqSectionsHtml}
-      </main>
+      </div>
     `;
   }
 
   // 7. About Us & Broker Andres Bozo Page
   else if (cleanPath === "/about-us" || cleanPath === "/es/nosotros" || cleanPath === "/about-andres-bozo" || cleanPath === "/es/sobre-andres-bozo") {
     title = isEs 
-      ? "Sobre Andrés H. Bozo | Broker de Seguros Licenciado en Florida (NPN 21228432)" 
-      : "About Andres H. Bozo | Licensed Florida Insurance Broker (NPN 21228432)";
+      ? "Andrés H. Bozo | Broker Florida NPN 21228432" 
+      : "Andres H. Bozo | Licensed FL Broker NPN 21228432";
     description = isEs 
-      ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente de seguros en Florida. Asesoría experta y bilingüe en Medicare, Gastos Finales, IUL y Anualidades con aseguradoras de primer nivel." 
-      : "Meet Andres H. Bozo (NPN 21228432), independent Florida insurance broker. Expert bilingual guidance across Medicare, Final Expense, IUL, and Annuities representing top national carriers.";
-    ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
+      ? "Conozca a Andrés H. Bozo (NPN 21228432), broker independiente en Florida. Asesoría bilingüe en Medicare, Gastos Finales, IUL y Anualidades." 
+      : "Meet Andres H. Bozo (NPN 21228432), independent Florida broker. Bilingual Medicare, Final Expense, IUL & Annuity guidance across multiple top carriers.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg";
     ogImageAlt = isEs 
       ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" 
       : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
     if (isEs) {
       bodyOutline = `
         <header>
-          <h1>${title}</h1>
-          <p>${description}</p>
+          <h1>${escapeHtml(title)}</h1>
+          <p><strong>Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026 · Licencia Activa Florida DFS / NPN: 21228432</strong></p>
+          <p>${escapeHtml(description)}</p>
         </header>
         <section>
-          <h2>Broker Independiente Andrés H. Bozo — NPN 21228432</h2>
-          <p>Andrés H. Bozo es corredor de seguros independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) y fundador de AHB Insurance Solutions. Brinda asesoría bilingüe de seguros para personas mayores y familias en todo el estado de Florida, con contratos directos con aseguradoras de primer nivel nacional.</p>
+          <h2>Broker Independiente Andrés H. Bozo — Fundador de AHB Insurance Solutions</h2>
+          <p>Andrés H. Bozo es corredor de seguros residente independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) en las líneas de Vida, Salud y Anualidades Variables. Desde su oficina principal ubicada en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, brinda asesoría bilingüe directa en español e inglés a jubilados, familias y profesionales independientes en todos los condados de Florida.</p>
+          <p>A diferencia de un agente cautivo que únicamente puede ofrecer los productos de una sola compañía, Andrés opera bajo un modelo fiduciario de corretaje independiente comparando pólizas disponibles de múltiples aseguradoras nacionales de sólida solvencia financiera como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial y Corebridge Financial.</p>
           <h3>Áreas de Especialización en Florida</h3>
           <ul>
-            <li><strong>Medicare Suplementario (Medigap Plan G y N) y Medicare Advantage (Parte C)</strong></li>
-            <li><strong>Seguro de Gastos Finales y Protección Funeraria para Mayores</strong></li>
-            <li><strong>Vida Universal Indexada (IUL) y Estrategias de Retiro (IRC 7702)</strong></li>
-            <li><strong>Anualidades Fijas Indexadas (FIA) con Ingresos de por Vida</strong></li>
-            <li><strong>Planes Dentales, Visión y Audición para Adultos Mayores</strong></li>
+            <li><strong>Medicare Suplementario (Medigap Plan G y N), Medicare Advantage (Parte C) y Parte D:</strong> Revisión de médicos, formularios de medicamentos y fechas de inscripción como AEP (15 Oct – 7 Dic).</li>
+            <li><strong>Seguro de Gastos Finales y Protección Funeraria para Mayores:</strong> Pólizas permanentes de vida entera ($5,000 a $35,000) con primas niveladas sujetas a términos del contrato.</li>
+            <li><strong>Vida Universal Indexada (IUL) y Estrategias bajo IRS 7702:</strong> Explicación transparente del piso contractual del 0% en acreditación indexada, costos internos de la póliza y cláusulas en vida.</li>
+            <li><strong>Anualidades Fijas e Indexadas (MYGA y FIA):</strong> Preservación contractual de ahorros para el retiro y opciones de ingresos vitalicios.</li>
+            <li><strong>Planes Dentales, de Visión y Audición para Adultos Mayores:</strong> Alternativas accesibles para complementar la cobertura de salud.</li>
           </ul>
         </section>
         <section>
           <h2>Metodología de Asesoría en 4 Pasos</h2>
           <ol>
-            <li>Diagnóstico exhaustivo de salud, recetas y objetivos financieros.</li>
-            <li>Comparación objetiva de tarifas reguladas entre aseguradoras líderes.</li>
-            <li>Asesoría bilingüe y transparente sin presión comercial (100% gratuita).</li>
-            <li>Acompañamiento en reclamos y revisiones anuales de formularios de medicamentos.</li>
+            <li><strong>Diagnóstico de Necesidades y Presupuesto:</strong> Revisión confidencial de su lista de recetas médicas, especialistas preferidos (como UF Health o Baptist Health) y metas familiares.</li>
+            <li><strong>Comparación Objetiva de Tarifas Reguladas:</strong> Análisis lado a lado de múltiples aseguradoras licenciadas en su código postal de Florida sin costos adicionales de corretaje.</li>
+            <li><strong>Orientación Clara y Bilingüe Sin Presión:</strong> Explicación honesta de exclusiones, deducibles, cargos por rescate y períodos de espera antes de solicitar cualquier póliza.</li>
+            <li><strong>Acompañamiento Anual de Largo Plazo:</strong> Revisiones anuales gratuitas durante cada período de inscripción abierta de Medicare y asistencia continua a los beneficiarios.</li>
           </ol>
+          <p>Comuníquese directamente al <a href="tel:+13522258389">+1 (352) 225-8389</a> o envíe un mensaje a <a href="/es/contacto">Contacto Directo</a>.</p>
         </section>
       `;
     } else {
       bodyOutline = `
         <header>
-          <h1>${title}</h1>
-          <p>${description}</p>
+          <h1>${escapeHtml(title)}</h1>
+          <p><strong>Published: Jan 15, 2024 · Updated: Nov 16, 2026 · Florida DFS Resident License / NPN: 21228432</strong></p>
+          <p>${escapeHtml(description)}</p>
         </header>
         <section>
-          <h2>Independent Broker Andres H. Bozo — NPN 21228432</h2>
-          <p>Andres H. Bozo is a licensed independent insurance broker authorized by the Florida Department of Financial Services (DFS) and principal of AHB Insurance Solutions. Delivering client-focused, bilingual advisory across all 67 Florida counties with direct appointments at top-rated national carriers.</p>
-          <h3>Core Practice Areas</h3>
+          <h2>Independent Broker Andres H. Bozo — Principal of AHB Insurance Solutions</h2>
+          <p>Andres H. Bozo is a resident independent insurance broker licensed by the Florida Department of Financial Services (DFS) across Life, Health, and Variable Annuity lines. Operating out of our local office at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, he provides direct bilingual guidance in English and Spanish to seniors, retirees, and working families across all 67 Florida counties.</p>
+          <p>Unlike captive agents restricted to promoting a single insurance carrier, Andres operates strictly as an independent broker comparing plans side-by-side across established, state-licensed national carriers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial, and Corebridge Financial—with zero broker fees or consulting charges.</p>
+          <h3>Core Florida Practice Areas</h3>
           <ul>
-            <li><strong>Florida Medicare Supplement (Medigap Plan G & N) & Medicare Advantage (Part C)</strong></li>
-            <li><strong>Final Expense & Senior Burial Whole Life Insurance</strong></li>
-            <li><strong>Indexed Universal Life (IUL) & Tax-Advantaged Retirement Strategies (IRC 7702)</strong></li>
-            <li><strong>Fixed Indexed Annuities (FIA) for Principal Protection & Lifetime Income</strong></li>
-            <li><strong>Senior Dental, Vision & Hearing Coverage</strong></li>
+            <li><strong>Florida Medicare Supplement (Medigap Plan G & N), Medicare Advantage (Part C) & Part D:</strong> Verifying preferred physicians, prescription formularies, and Annual Enrollment deadlines (Oct 15 – Dec 7).</li>
+            <li><strong>Final Expense & Senior Burial Whole Life Insurance:</strong> Permanent $5,000 to $35,000 coverage options with level premiums subject to policy terms.</li>
+            <li><strong>Indexed Universal Life (IUL) Strategies (IRS Section 7702):</strong> Clear illustrations explaining the contractual 0% index crediting floor, internal policy charges, and living benefit riders.</li>
+            <li><strong>Fixed & Fixed Indexed Annuities (MYGA & FIA):</strong> Contractual retirement principal protection and optional lifetime income planning.</li>
+            <li><strong>Senior Dental, Vision & Hearing Plans:</strong> Supplemental options protecting everyday healthcare budgets.</li>
           </ul>
         </section>
         <section>
           <h2>Our 4-Step Client-First Methodology</h2>
           <ol>
-            <li>Comprehensive Health Background & Rx Needs Discovery.</li>
-            <li>Market-Wide Rate Comparison Across Top-Rated Carriers.</li>
-            <li>Transparent, Bilingual Guidance with Zero Sales Pressure (100% Free).</li>
-            <li>Lifetime Client Advocacy & Annual Medicare Prescription Formularies Reviews.</li>
+            <li><strong>Comprehensive Discovery:</strong> Confidential review of your prescription medications, preferred hospital systems (such as UF Health or Mayo Clinic), and retirement budget.</li>
+            <li><strong>Market-Wide Rate Comparison:</strong> Objective side-by-side premium evaluation across licensed Florida carriers in your exact ZIP code.</li>
+            <li><strong>Transparent, Bilingual Guidance:</strong> Clear explanations of deductibles, waiting periods, underwriting rules, and contract charges with zero sales pressure.</li>
+            <li><strong>Lifelong Client Advocacy:</strong> Annual Medicare Part D and plan reviews plus ongoing beneficiary claims assistance.</li>
           </ol>
+          <p>Speak directly with Andres H. Bozo at <a href="tel:+13522258389">+1 (352) 225-8389</a> or reach out via our <a href="/contact">Contact Page</a>.</p>
         </section>
       `;
     }
@@ -1395,28 +1456,69 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 8. Contact / Talk With Andres Page
   else if (cleanPath === "/contact" || cleanPath === "/es/contacto") {
     title = isEs 
-      ? "Hable con Andrés H. Bozo | Mensaje Directo y Cotización Gratis | AHB Insurance" 
-      : "Talk With Andres H. Bozo | Direct Message & Free Quote | AHB Insurance";
+      ? "Hable con Andrés H. Bozo | Cotización | AHB" 
+      : "Talk With Andres H. Bozo | Free Quote | AHB";
     description = isEs 
       ? "Envíe un mensaje directo a Andrés H. Bozo (NPN 21228432) o solicite su cotización gratuita de Medicare, Gastos Finales e IUL en Florida al (352) 225-8389." 
-      : "Send a direct message to licensed Florida broker Andres H. Bozo (NPN 21228432) or request a free Medicare, Final Expense, or IUL consultation at (352) 225-8389.";
-    ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
+      : "Direct message licensed Florida broker Andres H. Bozo (NPN 21228432) or request a free Medicare, Final Expense, or IUL consultation at (352) 225-8389.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg";
     ogImageAlt = isEs 
       ? "Hable directamente con Andrés H. Bozo - AHB Insurance Solutions" 
       : "Talk Directly With Andres H. Bozo - AHB Insurance Solutions";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
-    bodyOutline = `
+    bodyOutline = isEs ? `
       <header>
-        <h1>${isEs ? "Hable Directamente con Andrés H. Bozo" : "Talk Directly With Andres H. Bozo"}</h1>
-        <p>${description}</p>
+        <h1>Hable Directamente con Andrés H. Bozo</h1>
+        <p><strong>Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+        <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>${isEs ? "Contacto Directo y Mensaje a Andrés Bozo" : "Send a Direct Message to Andres"}</h2>
-        <p><strong>Phone Call / WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
-        <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-        <p><strong>Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
+        <h2>Canales de Atención Directa y Oficina en Gainesville</h2>
+        <p>En AHB Insurance Solutions LLC usted nunca habla con un centro de llamadas anónimo ni compartimos su información con revendedores de datos. Sus consultas llegan directamente al corredor licenciado Andrés H. Bozo para brindarle atención confidencial en español o inglés.</p>
+        <ul>
+          <li><strong>Teléfono Directo y WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></li>
+          <li><strong>Correo Electrónico:</strong> <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a></li>
+          <li><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (citas presenciales en el Condado de Alachua y atención virtual en toda Florida)</li>
+          <li><strong>Horario de Atención:</strong> Lunes a Sábado de 8:00 AM a 8:00 PM EST</li>
+        </ul>
+      </section>
+      <section>
+        <h2>¿Qué Podemos Revisar Durante su Consulta Gratuita?</h2>
+        <ul>
+          <li><strong>Planes Medicare y Parte D (2026–2027):</strong> Comparativa de Medigap Plan G y N, deducibles vigentes y verificación de sus médicos y farmacias en Florida.</li>
+          <li><strong>Seguro de Gastos Finales y Entierro:</strong> Cotizaciones personalizadas de $5,000 a $35,000 sin costo por servicio de corretaje.</li>
+          <li><strong>Vida Universal Indexada (IUL) y Anualidades Fijas:</strong> Revisión de objetivos patrimoniales, tasas vigentes y reglas fiscales aplicables.</li>
+        </ul>
+        <p><strong>Cómo Funciona su Consulta Gratuita en Florida:</strong> Ya sea que revise planes Medicare 2026–2027 antes del cierre de AEP el 7 de diciembre (tope Parte D de $2,100 en 2026 y $2,400 en 2027; Medigap Plan G/N), pólizas de Gastos Finales ($5,000–$35,000) o ilustraciones IUL, cada análisis se adapta a su condado en Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval o Alachua). Tenga a la mano su código postal, lista general de recetas y médicos preferidos (UF Health, Baptist Health, AdventHealth o Moffitt). Nunca vendemos sus datos a terceros ni cobramos honorarios de corretaje.</p>
+        <p><small>Aviso CMS: No ofrecemos todos los planes disponibles en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para conocer todas las opciones.</small></p>
+      </section>
+    ` : `
+      <header>
+        <h1>Talk Directly With Andres H. Bozo</h1>
+        <p><strong>Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+        <p>${escapeHtml(description)}</p>
+      </header>
+      <section>
+        <h2>Direct Contact Channels & Gainesville Office</h2>
+        <p>At AHB Insurance Solutions LLC, you communicate directly with principal licensed broker Andres H. Bozo—never an outsourced call center or lead aggregator. We never sell your personal information to third-party marketing lists, and every quote comparison is 100% free.</p>
+        <ul>
+          <li><strong>Direct Phone & WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></li>
+          <li><strong>Direct Email:</strong> <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a></li>
+          <li><strong>Gainesville Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (In-person appointments by request; virtual & phone guidance across all 67 Florida counties)</li>
+          <li><strong>Business Hours:</strong> Monday through Saturday, 8:00 AM – 8:00 PM EST</li>
+        </ul>
+      </section>
+      <section>
+        <h2>How to Prepare for Your Free Coverage Review</h2>
+        <ul>
+          <li><strong>Medicare & Part D Comparisons (2026–2027):</strong> Have your ZIP code, preferred doctors/hospitals, and prescription list ready to check plan formularies and Medigap Plan G or N rates.</li>
+          <li><strong>Burial & Final Expense Quotes:</strong> Compare level-premium whole life options ($5,000–$35,000) across multiple licensed Florida carriers.</li>
+          <li><strong>IUL & Fixed Annuities:</strong> Request transparent policy illustrations or multi-year fixed yield comparisons tailored to your retirement timeline.</li>
+        </ul>
+        <p><strong>Service Scope & Cost:</strong> Consultations and multi-carrier comparisons carry zero service fees across all 67 Florida counties, including Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, and Alachua County. Whether you prefer bilingual English/Spanish guidance by phone, video conference, or an in-office review in Gainesville ahead of the December 7 Medicare Annual Enrollment Period deadline ($2,100 Part D cap in 2026; $2,400 in 2027), every policy option and underwriting rule is explained step by step prior to enrollment. We never sell or share personal details with lead aggregators.</p>
+        <p><small>CMS Notice: We do not offer every plan available in your area. Please contact Medicare.gov or 1-800-MEDICARE to obtain information on all of your options.</small></p>
       </section>
     `;
   }
@@ -1430,24 +1532,25 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     cleanPath === "/es/seguros-gainesville-fl"
   ) {
     title = isEs
-      ? "Broker de Medicare y Seguros de Vida en Gainesville, FL | AHB Insurance Solutions"
-      : "Medicare Broker Gainesville FL & Life Insurance | AHB Insurance Solutions";
+      ? "Broker de Seguros en Gainesville, FL | AHB Insurance"
+      : "Gainesville, FL Medicare & Life Broker | AHB Insurance";
     description = isEs
-      ? "Corredor de Medicare y seguros de vida en Gainesville, FL: Andrés Bozo (NPN: 21228432). Asesoría en Medigap, UF Health Shands, gastos finales e IUL en Alachua County. Llame al (352) 225-8389."
-      : "Top-rated Medicare broker & life insurance advisor in Gainesville, FL (NPN: 21228432). Compare Medigap, UF Health Shands network plans, final expense & IUL. Free quote: (352) 225-8389.";
-    ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
+      ? "Broker de Medicare y vida en Gainesville, FL (NPN 21228432). Medigap, UF Health Shands, gastos finales e IUL en Alachua County: (352) 225-8389."
+      : "Medicare & life insurance broker in Gainesville, FL (NPN 21228432). Compare Medigap, UF Health Shands, final expense & IUL. Call (352) 225-8389.";
+    ogImage = "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg";
     ogImageAlt = isEs 
       ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" 
       : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida";
     datePublished = "2024-01-15";
-    dateModified = "2026-10-10";
+    dateModified = "2026-11-16";
 
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/guias-ciudades">Florida</a> &gt; <span>Gainesville FL</span></p></nav>
         <header>
           <h1>Broker de Seguros en Gainesville, FL | Medicare, Gastos Finales y Jubilación</h1>
-          <p>${description}</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+          <p>${escapeHtml(description)}</p>
           <div class="broker-contact-badge">
             <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
             <p><strong>Dirección:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
@@ -1492,7 +1595,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la autopista I-75).</p>
           <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-          <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
+          <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
         </section>
 
         <section>
@@ -1535,7 +1638,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida</a> &gt; <span>Gainesville FL</span></p></nav>
         <header>
           <h1>Gainesville, FL Insurance Broker | Medicare, Life & Annuities</h1>
-          <p>${description}</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p>${escapeHtml(description)}</p>
           <div class="broker-contact-badge">
             <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
             <p><strong>Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
@@ -1545,7 +1649,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Medicare Gainesville: Coverage & Medigap Supplements in Alachua County</h2>
-          <p>Gainesville is North Central Florida's premier medical hub, anchored by the nationally renowned UF Health Shands Hospital system, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Alachua County seniors on Original Medicare frequently face substantial out-of-pocket liabilities, including the inpatient Part A deductible and the uncapped 20% Part B coinsurance. With a standardized Medicare Supplement (Medigap Plan G or Plan N), you preserve direct access to participating physicians at UF Health Shands and HCA Florida without restrictive HMO provider networks or primary care referral mandates.</p>
+          <p>Gainesville is North Central Florida's premier medical hub, anchored by the nationally renowned UF Health Shands Hospital system, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Alachua County seniors on Original Medicare frequently face substantial out-of-pocket liabilities, including the inpatient Part A deductible ($1,736 in 2026) and the uncapped 20% Part B coinsurance. With a standardized Medicare Supplement (Medigap Plan G or Plan N), you preserve direct access to participating physicians at UF Health Shands and HCA Florida without restrictive HMO provider networks or primary care referral mandates.</p>
           <ul>
             <li><strong>Freedom of Specialists:</strong> See any provider nationwide who accepts Medicare, including world-class specialists at UF Health Shands, without network gating.</li>
             <li><strong>Zero Prior Authorization Hurdles:</strong> Unlike local Medicare Advantage HMOs, Medigap policies eliminate pre-authorization delays for Medicare-covered treatments.</li>
@@ -1555,24 +1659,24 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Final Expense Gainesville: Burial & Funeral Insurance</h2>
-          <p>Traditional funeral and cremation costs across Gainesville, Archer, Newberry, and High Springs typically range between $7,200 and $9,800. Because federal Social Security pays only a $255 one-time lump sum to qualifying surviving spouses, a permanent whole life final expense policy guarantees $5,000 to $35,000 in immediate cash death benefits for your loved ones, with locked lifetime rates and simplified-issue underwriting that requires no traditional medical exams.</p>
+          <p>Traditional funeral and cremation costs across Gainesville, Archer, Newberry, and High Springs typically range between $7,200 and $9,800. Because federal Social Security pays only a $255 one-time lump sum to qualifying surviving spouses, a permanent whole life final expense policy provides $5,000 to $35,000 in death benefits for your loved ones, with locked level rates (subject to policy terms) and many simplified-issue policies requiring no traditional medical exam, subject to carrier underwriting.</p>
           <p>Your beneficiaries maintain complete freedom to coordinate arrangements with respected local Alachua County funeral homes and cemeteries, including Forest Meadows Funeral Home & Cemetery, Williams-Thomas Funeral Homes, Milam Funeral and Cremation Services, Chestnut Funeral Home, and Prairie Creek Conservation Cemetery.</p>
         </section>
 
         <section>
           <h2>IUL Gainesville: Indexed Universal Life for University & Healthcare Professionals</h2>
           <p>For faculty and staff at the University of Florida (UF), clinical personnel at UF Health Shands, healthcare workers at the VA Medical Center, and local business owners across Gainesville, an Indexed Universal Life (IUL) policy serves as an efficient vehicle to complement existing 403(b), 401(k), or Florida Retirement System (FRS) pensions.</p>
-          <p>With a contractual 0% floor against market index declines and tax-advantaged policy loan access under IRS Section 7702 while the policy remains active, an IUL protects your family with income-tax-free death benefits while building cash accumulation potential without early withdrawal age penalties.</p>
+          <p>With a contractual 0% crediting floor on the index component (internal policy charges and Cost of Insurance deductions still apply) and tax-advantaged policy loan access under IRS Section 7702 while a non-MEC policy remains in force, an IUL provides permanent death benefit protection while building cash value growth potential.</p>
         </section>
 
         <section>
-          <h2>Annuities Gainesville: Fixed & Indexed Guaranteed Retirement Income</h2>
-          <p>For retirees residing in Gainesville's active retirement communities, such as Oak Hammock at UF, The Village, and Haile Plantation, Multi-Year Guarantee Annuities (MYGA) and Fixed Indexed Annuities (FIA) deliver principal preservation backed by insurer statutory reserves and the Florida Life and Health Insurance Guaranty Association (FLAHIGA). Enjoy triple-compounding tax deferral and optional guaranteed lifetime income riders that ensure you cannot outlive your retirement nest egg.</p>
+          <h2>Annuities Gainesville: Fixed & Indexed Retirement Income Options</h2>
+          <p>For retirees residing in Gainesville's active retirement communities, such as Oak Hammock at UF, The Village, and Haile Plantation, Multi-Year Guarantee Annuities (MYGA) and Fixed Indexed Annuities (FIA) deliver contractual principal protection against direct index losses, backed by the claims-paying ability of the issuing insurer and the Florida Life and Health Insurance Guaranty Association (FLAHIGA), alongside optional lifetime income riders per contract terms.</p>
         </section>
 
         <section>
           <h2>Andres Bozo: Your Local Independent Insurance Broker in Alachua County</h2>
-          <p>Andres Bozo (NPN: 21228432) is a licensed independent insurance broker regulated by the Florida Department of Financial Services (DFS). As an independent agency, AHB Insurance Solutions objectively compares products across 80+ top-rated carriers, providing unbiased guidance and zero broker fees to clients.</p>
+          <p>Andres Bozo (NPN: 21228432) is a licensed independent insurance broker regulated by the Florida Department of Financial Services (DFS). As an independent agency, AHB Insurance Solutions objectively compares products across multiple top-rated national carriers, providing unbiased guidance and zero broker fees to clients.</p>
         </section>
 
         <section>
@@ -1580,7 +1684,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p><strong>Office Location:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe & Butler Plaza, off I-75 Exit 384).</p>
           <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-          <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">View Map & Driving Directions</a></p>
+          <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">View Map & Driving Directions</a></p>
         </section>
 
         <section>
@@ -1629,26 +1733,59 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     cleanPath === "/es/privacidad"
   ) {
     const isTerms = cleanPath.includes("term");
+    datePublished = "2024-01-15";
+    dateModified = "2026-01-01";
     if (isTerms) {
-      title = isEs ? "Términos de Servicio | AHB Insurance Solutions" : "Terms of Service | AHB Insurance Solutions";
+      title = isEs ? "Términos de Servicio y Avisos Legales | AHB Insurance" : "Terms of Service & Legal Notices | AHB Insurance";
       description = isEs 
-        ? "Términos y condiciones de uso del portal de AHB Insurance Solutions. Información legal sobre servicios de corretaje de seguros en Florida."
-        : "Terms of service and legal conditions for using AHB Insurance Solutions online portal in Florida.";
+        ? "Términos de Servicio, avisos CMS de Medicare, consentimiento TCPA y normas de corretaje en Florida de AHB Insurance Solutions (NPN 21228432)."
+        : "Official Terms of Service, CMS Medicare disclosures, TCPA consent, and Florida brokerage guidelines for AHB Insurance Solutions (NPN 21228432).";
     } else {
-      title = isEs ? "Política de Privacidad | AHB Insurance Solutions" : "Privacy Policy | AHB Insurance Solutions";
+      title = isEs ? "Política de Privacidad y Protección de Datos | AHB Insurance" : "Privacy Policy & Data Protection | AHB Insurance";
       description = isEs 
-        ? "Política de privacidad y protección de datos personales de AHB Insurance Solutions. Compromiso con la confidencialidad de nuestros clientes en Florida."
-        : "Privacy policy and client data protection commitments for AHB Insurance Solutions in Florida.";
+        ? "Política de Privacidad sobre protección de datos, no venta de información y cumplimiento HIPAA/GLBA de AHB Insurance Solutions en Florida."
+        : "Privacy Policy detailing data security, non-sale of consumer information, HIPAA & GLBA compliance at AHB Insurance Solutions Florida.";
     }
 
-    bodyOutline = `
+    bodyOutline = isEs ? `
       <header>
         <h1>${escapeHtml(title)}</h1>
+        <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Última actualización: 1 Ene 2026</strong></p>
         <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>AHB Insurance Solutions Legal Notices</h2>
-        <p>AHB Insurance Solutions LLC is an independent insurance brokerage licensed by the Florida Department of Financial Services (DFS). Principal Broker Andres H. Bozo (NPN: 21228432).</p>
+        <h2>Identificación del Corredor y Regulación en Florida</h2>
+        <p>AHB Insurance Solutions LLC opera como agencia de seguros independiente autorizada por el Departamento de Servicios Financieros del Estado de Florida (DFS), bajo la dirección de Andrés H. Bozo (NPN: 21228432), con sede en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Nuestros servicios de orientación y comparación de cotizaciones se ofrecen sin cargo adicional para el consumidor.</p>
+      </section>
+      <section>
+        <h2>Cumplimiento Normativo, CMS y Protección de Datos</h2>
+        <ul>
+          <li><strong>Descargo de Responsabilidad CMS de Medicare:</strong> No ofrecemos todos los planes disponibles en su área. Cualquier información proporcionada se limita a los planes que representamos en su condado. Para conocer todas sus opciones, visite Medicare.gov o llame al 1-800-MEDICARE (24/7).</li>
+          <li><strong>No Venta de Información Personal (HIPAA / GLBA):</strong> AHB Insurance Solutions nunca vende, alquila ni comercializa sus datos personales o de salud a revendedores o listas externas. La información compartida se emplea exclusivamente para elaborar cotizaciones o tramitar solicitudes ante aseguradoras autorizadas.</li>
+          <li><strong>Consentimiento de Comunicaciones (TCPA) y Suscripción:</strong> Toda cotización tiene carácter ilustrativo y está sujeta a la evaluación final de suscripción de la aseguradora emisora. Puede cancelar mensajes SMS enviando STOP en cualquier momento o escribiendo a info@ahbinsurancesolutions.com.</li>
+        </ul>
+        <h3>Compensación del Corredor, Solicitudes Electrónicas y Ley Aplicable</h3>
+        <p>La compensación del corredor licenciado es pagada directamente por las compañías aseguradoras representadas según tarifas reguladas en Florida, garantizando tarifas idénticas sin recargos de consultoría al consumidor. Todas las consultas se rigen por las leyes del Estado de Florida y los usuarios pueden solicitar actualización o eliminación de datos de contacto escribiendo a <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> o llamando al <a href="tel:+13522258389">(352) 225-8389</a>.</p>
+      </section>
+    ` : `
+      <header>
+        <h1>${escapeHtml(title)}</h1>
+        <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Last Updated: Jan 1, 2026</strong></p>
+        <p>${escapeHtml(description)}</p>
+      </header>
+      <section>
+        <h2>Broker Identification & Florida DFS Licensing</h2>
+        <p>AHB Insurance Solutions LLC operates as a state-licensed independent insurance brokerage regulated by the Florida Department of Financial Services (DFS), led by principal broker Andres H. Bozo (NPN: 21228432) at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Our brokerage consultations and rate comparisons carry zero fees for consumers.</p>
+      </section>
+      <section>
+        <h2>Regulatory Disclosures, Privacy & Consumer Protections</h2>
+        <ul>
+          <li><strong>Mandatory CMS Medicare Disclaimer:</strong> We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE (TTY users 1-877-486-2048), 24 hours a day / 7 days a week, for information on all your options.</li>
+          <li><strong>Non-Sale of Consumer Data (HIPAA & GLBA):</strong> We maintain strict confidentiality safeguards and never sell, rent, or distribute consumer contact or health information to lead aggregators or third-party telemarketers.</li>
+          <li><strong>Quotes, Underwriting & TCPA Rights:</strong> Rate estimates are informational and subject to formal carrier underwriting approval. Consumers may revoke SMS/electronic contact consent at any time by replying STOP or emailing info@ahbinsurancesolutions.com.</li>
+        </ul>
+        <h3>Broker Compensation, Electronic Submissions & Governing Law</h3>
+        <p>Licensed broker compensation is paid directly by represented insurance carriers according to regulated Florida commission schedules, ensuring consumers pay identical state-approved rates with zero consulting surcharges. Coverage is never bound until formal carrier underwriting review and policy issuance are completed. All disputes or regulatory inquiries fall under Florida statutory insurance oversight, and consumers retain the right to request access, correction, or deletion of stored inquiry records by contacting <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> or calling <a href="tel:+13522258389">+1 (352) 225-8389</a> at our Gainesville headquarters.</p>
       </section>
     `;
   }
@@ -1656,11 +1793,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 8.7 City Guides Hub Page
   else if (cleanPath === "/city-guides" || cleanPath === "/es/guias-ciudades") {
     title = isEs 
-      ? "Guías de Seguros y Medicare por Ciudad en Florida | AHB" 
-      : "Florida City Medicare & Insurance Guides | AHB";
+      ? "Guías de Seguros por Ciudad FL | AHB Insurance" 
+      : "Florida City Insurance Guides | AHB Insurance";
     description = isEs 
-      ? "Directorio de guías locales de Medicare, Gastos Finales e IUL en Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale y Gainesville con Andrés Bozo." 
-      : "Local insurance & healthcare guide directory across Miami, Orlando, Tampa, Jacksonville, Fort Lauderdale, West Palm Beach & Gainesville with Andres Bozo.";
+      ? "Explore guías locales de Medicare, Medigap, Gastos Finales e IUL en Miami, Tampa, Orlando, Jacksonville y Gainesville con Andrés Bozo." 
+      : "Explore Florida county Medicare, Medigap, Final Expense & IUL insurance guides for Miami, Tampa, Orlando, Jacksonville & Gainesville with AHB.";
+    datePublished = "2024-01-15";
+    dateModified = "2026-11-16";
 
     const cityListHtml = FLORIDA_CITIES.map(c => {
       const cTitle = isEs ? c.taglineEs : c.taglineEn;
@@ -1671,7 +1810,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2><a href="${cLink}">${escapeHtml(c.cityName)}, FL Insurance Guide</a></h2>
           <p><strong>${escapeHtml(cTitle)}</strong></p>
           <p>${escapeHtml(cDesc)}</p>
-          <p><em>Hospitals served: ${escapeHtml(c.hospitals.join(", "))}</em></p>
+          <p><em>${isEs ? "Hospitales cubiertos:" : "Hospitals served:"} ${escapeHtml(c.hospitals.join(", "))}</em></p>
         </article>
       `;
     }).join("\n");
@@ -1679,14 +1818,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     bodyOutline = `
       <header>
         <h1>${escapeHtml(title)}</h1>
+        <p><strong>${isEs ? "Por Andrés H. Bozo, Broker Licenciado (NPN: 21228432) · Actualizado: 16 Nov 2026" : "By Andres H. Bozo, Licensed Broker (NPN: 21228432) · Updated: Nov 16, 2026"}</strong></p>
         <p>${escapeHtml(description)}</p>
       </header>
-      <main>
-        <section>
-          <h2>Explore Florida City Guides</h2>
-          ${cityListHtml}
-        </section>
-      </main>
+      <section>
+        <h2>${isEs ? "Explore las Guías por Ciudad y Condado de Florida" : "Explore Florida City Guides"}</h2>
+        ${cityListHtml}
+      </section>
     `;
   }
 
@@ -1697,11 +1835,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
     if (city) {
       title = isEs 
-        ? `Guía de Seguros y Medicare en ${city.cityName}, FL | AHB` 
-        : `${city.cityName}, FL Medicare & Life Insurance Guide | AHB`;
+        ? `Medicare y Vida en ${city.cityName}, FL | AHB Insurance` 
+        : `Medicare & Life in ${city.cityName}, FL | AHB Insurance`;
       description = isEs 
-        ? `Guía local de Suplementos de Medicare, Gastos Finales y seguro IUL en ${city.cityName} y ${city.county}. Compare precios gratis con el broker Andrés Bozo NPN 21228432.` 
-        : `Local Medicare Supplement, Final Expense burial insurance & IUL guide for ${city.cityName} and ${city.county}. Compare top rates with Andres Bozo NPN 21228432.`;
+        ? `Guía en ${city.cityName} (${city.county}): Medigap Plan G y N, Gastos Finales e IUL con el broker Andrés Bozo (NPN 21228432).` 
+        : `${city.cityName}, FL (${city.county}) guide: Medigap Plan G/N, Final Expense & IUL strategies with broker Andres Bozo (NPN 21228432).`;
+      datePublished = "2024-01-15";
+      dateModified = "2026-11-16";
 
       const activeFaqs = isEs ? city.faqsEs : city.faqsEn;
       const faqHtml = activeFaqs.map(f => `
@@ -1714,6 +1854,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>${isEs ? `Guía de Seguros de Medicare, Gastos Finales e IUL en ${city.cityName}, FL` : `${city.cityName}, FL Medicare, Final Expense & IUL Insurance Guide`}</h1>
+          <p><strong>${isEs ? "Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026" : "By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026"}</strong></p>
           <p><strong>${escapeHtml(isEs ? city.taglineEs : city.taglineEn)}</strong></p>
           <p>${escapeHtml(description)}</p>
         </header>
@@ -1733,6 +1874,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>${isEs ? `Seguro de Vida Universal Indexada (IUL) en ${city.cityName}` : `Indexed Universal Life (IUL) Retirement Planning in ${city.cityName}`}</h2>
           <p>${escapeHtml(isEs ? city.iulOverviewEs : city.iulOverviewEn)}</p>
+          <p><small>${isEs ? "Nota: El piso contractual del 0% en un IUL aplica al componente de acreditación indexada; los cargos internos de la póliza y costos del seguro (COI) siguen deduciéndose." : "Note: An IUL contractual 0% floor applies strictly to the index crediting component; internal policy charges and Cost of Insurance (COI) deductions still apply."}</small></p>
         </section>
 
         <section>
@@ -1750,7 +1892,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>${isEs ? `Asesoría Gratuita con el Broker Andrés Bozo en ${city.cityName}` : `Free Insurance Consultation in ${city.cityName} with Andres Bozo`}</h2>
-          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432) directly at +1 (352) 225-8389 for a free rate comparison across top-rated carriers."}</p>
+          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) directly at +1 (352) 225-8389 for a free rate comparison across top-rated carriers."}</p>
         </section>
       `;
     }
@@ -1759,32 +1901,50 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
   // 8.5 Editorial Policy
   else if (cleanPath === "/editorial-policy" || cleanPath === "/es/politica-editorial") {
     title = isEs 
-      ? "Política Editorial | AHB Insurance Solutions" 
-      : "Editorial Policy | AHB Insurance Solutions";
+      ? "Política Editorial | AHB" 
+      : "Editorial Policy | AHB";
     description = isEs
-      ? "Lea nuestra política editorial sobre cómo revisamos y proporcionamos información precisa sobre seguros Medicare y de vida en Florida."
-      : "Read our editorial policy on how we review and provide accurate Medicare and life insurance information in Florida.";
+      ? "Política editorial y revisión independiente de guías de Medicare, Gastos Finales e IUL en Florida por Andrés H. Bozo (NPN 21228432)."
+      : "Editorial review standards and Florida licensing disclosures for Medicare, Final Expense, and IUL guides by Andres H. Bozo (NPN 21228432).";
     ogImage = "https://www.ahbinsurancesolutions.com/og-image.png";
-    ogImageAlt = title;
+    ogImageAlt = isEs ? "Política Editorial | AHB Insurance Solutions" : "Editorial Policy | AHB Insurance Solutions";
     datePublished = "2024-10-20";
     dateModified = "2026-10-27";
     bodyOutline = isEs ? `
       <header>
         <h1>Política Editorial de AHB Insurance Solutions</h1>
-        <p>${description}</p>
+        <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN 21228432) · Publicado: 20 Oct 2024 · Actualizado: 27 Oct 2026</strong></p>
+        <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>Compromiso con la Verdad y la Transparencia</h2>
-        <p>Nuestro contenido es creado y verificado por agentes de seguros licenciados en Florida para cumplir con las normativas de CMS y del Departamento de Servicios Financieros de Florida.</p>
+        <h2>Nuestro Compromiso con la Exactitud y el Cumplimiento</h2>
+        <p>Todo el contenido educativo sobre Medicare, seguros de gastos finales, Vida Universal Indexada (IUL) y anualidades es redactado o revisado por profesionales con licencia activa ante el Departamento de Servicios Financieros de Florida (DFS) para cumplir con las regulaciones vigentes de CMS y el Código de Rentas Internas (IRC).</p>
+        <ul>
+          <li><strong>Fuentes Primarias Verificables:</strong> Los deducibles de Medicare Parte A y B, los límites anuales de la Parte D y los plazos de Inscripción Anual (AEP) se contrastan directamente con publicaciones oficiales de CMS.gov y Medicare.gov antes de actualizar cada guía, diferenciando claramente 2026 de 2027.</li>
+          <li><strong>Divulgación Honesta de Cargos y Límites:</strong> En artículos sobre Vida Universal Indexada (IUL) y anualidades, distinguimos explícitamente entre el piso contractual del 0% en la acreditación del índice y los cargos internos de póliza, costos del seguro (COI) o periodos de rescate aplicables.</li>
+          <li><strong>Independencia Comercial:</strong> Como agencia independiente en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, nuestras explicaciones reflejan la elegibilidad del cliente y comparativas reales de mercado, sin cuotas corporativas de venta.</li>
+          <li><strong>Correcciones y Transparencia:</strong> Cualquier actualización normativa o corrección se fecha visiblemente con atribución al corredor principal Andrés H. Bozo (NPN 21228432). Para reportar observaciones, comuníquese al <a href="tel:+13522258389">(352) 225-8389</a> o <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a>.</li>
+        </ul>
+        <h3>Ciclo de Revisión Anual y Aviso Regulatorio</h3>
+        <p>Cada otoño previo al Periodo Anual de Inscripción de Medicare (AEP, que culmina el 7 de diciembre), auditamos nuestras guías de Florida para actualizar límites federales, normas de suscripción de vida entera y divulgaciones de cumplimiento sin prometer aprobaciones automáticas ni rendimientos garantizados fuera de contrato.</p>
       </section>
     ` : `
       <header>
         <h1>AHB Insurance Solutions Editorial Policy</h1>
-        <p>${description}</p>
+        <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN 21228432) · Published: Oct 20, 2024 · Updated: Oct 27, 2026</strong></p>
+        <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>Commitment to Accuracy</h2>
-        <p>Our content is authored and vetted by licensed Florida insurance professionals to ensure compliance with CMS and Florida Department of Financial Services regulations.</p>
+        <h2>Our Commitment to Accuracy, Independence & Compliance</h2>
+        <p>All educational guides regarding Florida Medicare Supplement (Medigap), Final Expense burial life insurance, Indexed Universal Life (IUL), and fixed annuities are authored or reviewed by Florida Department of Financial Services (DFS) licensed professionals to uphold strict regulatory compliance and consumer clarity.</p>
+        <ul>
+          <li><strong>Primary Regulatory Verification:</strong> Medicare Part A and Part B deductibles, Part D out-of-pocket caps, and Annual Enrollment Period dates are verified against official CMS.gov and Medicare.gov publications and clearly labeled by plan year (2026 vs. 2027).</li>
+          <li><strong>Fair Product & Charge Disclosures:</strong> Educational guides covering Indexed Universal Life (IUL) and fixed annuities explicitly distinguish between contractual 0% index crediting floors and internal policy charges, Cost of Insurance (COI) deductions, or surrender charge schedules.</li>
+          <li><strong>Independent Editorial Integrity:</strong> Operating from 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, our guidance evaluates policy suitability, underwriting requirements, and exclusions honestly rather than following single-carrier quotas.</li>
+          <li><strong>Corrections & Transparency:</strong> Published and last-modified dates alongside author credentials (Andres H. Bozo, NPN 21228432) appear on guides across our site. Direct feedback or correction inquiries may be sent to <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> or <a href="tel:+13522258389">+1 (352) 225-8389</a>.</li>
+        </ul>
+        <h3>Annual Regulatory Review Cadence & Consumer Standards</h3>
+        <p>Prior to each Medicare Annual Enrollment Period (closing December 7), our team audits all Florida insurance guides, county city pages, blog comparisons, and rate tables to verify accurate CMS cost-sharing figures, Florida Department of Financial Services licensing disclosures, and clear underwriting expectations without exaggerated return claims. Every review is signed off by licensed Florida broker Andres H. Bozo (NPN 21228432).</p>
       </section>
     `;
   }
@@ -1813,114 +1973,308 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     if (landingPaths.includes(cleanPath)) {
       if (cleanPath === "/final-expense-miami" || cleanPath === "/es/seguro-gastos-finales-miami" || cleanPath === "/es/seguro-gastos-finales-florida") {
         title = isEs 
-          ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" 
-          : "Miami, FL Final Expense & Burial Insurance | AHB";
+          ? "Gastos Finales y Entierro en Miami | AHB Insurance" 
+          : "Final Expense Insurance Miami, FL | AHB Insurance";
         description = isEs 
-          ? "Seguro de vida entera para gastos finales y entierro en Miami y Miami-Dade. Cobertura de $5,000 a $35,000 con tarifas fijas. Cotización gratis." 
-          : "Permanent whole life burial insurance in Miami & Miami-Dade County. $5,000 to $35,000 cash benefits & locked rates. Free broker quote: (352) 225-8389.";
-        ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
-        ogImageAlt = isEs ? "Seguro de Gastos Finales y Entierro en Miami, FL | AHB" : "Miami, FL Final Expense & Burial Insurance | AHB";
+          ? "Seguro de entierro y gastos finales en Miami-Dade ($5K–$35K). Emisión simplificada con el broker licenciado Andrés Bozo (NPN 21228432)." 
+          : "Miami-Dade burial & final expense life insurance ($5K–$35K). Simplified issue options with licensed broker Andres Bozo (NPN 21228432).";
+        ogImage = "https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg";
+        ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
+        dateModified = "2026-11-16";
         
-        bodyOutline = `
+        bodyOutline = isEs ? `
+          <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/gastos-finales">Gastos Finales</a> &gt; <span>Miami</span></p></nav>
           <header>
-            <h1>${escapeHtml(title)}</h1>
+            <h1>Seguro de Gastos Finales y Entierro en Miami-Dade, FL</h1>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
             <p>${escapeHtml(description)}</p>
           </header>
           <section>
-            <h2>Miami Burial & Final Expense Solutions</h2>
-            <p>Ensure funeral and burial cost protection for your loved ones with whole life cash benefit plans from $5,000 to $35,000 in Miami, Hialeah, Kendall, and Miami-Dade County. Many simplified-issue policies require no traditional medical exam, with level premiums locked for life.</p>
+            <h2>Protección Funeraria de Vida Entera para Familias en Miami, Hialeah y Doral</h2>
+            <p>Los gastos promedio de funeral tradicional y entierro en el Condado de Miami-Dade oscilan entre $8,500 y $12,500+, considerando derechos de cementerio, servicios en capilla, ataúd y traslado. Dado que el pago único por fallecimiento del Seguro Social federal es de apenas $255 para sobrevivientes elegibles, contar con una póliza permanente de gastos finales de $5,000 a $35,000 protege los ahorros de su cónyuge e hijos frente a deudas repentinas.</p>
+            <ul>
+              <li><strong>Primas Niveladas Sujetas al Contrato:</strong> Las tarifas mensuales se fijan según su edad de emisión y no aumentan mientras la póliza se mantenga al día.</li>
+              <li><strong>Opciones de Emisión Simplificada:</strong> Muchas pólizas de emisión simplificada no requieren examen médico tradicional (sin análisis de sangre ni enfermero a domicilio), sujetas a las preguntas médicas y verificación de recetas de la aseguradora elegida.</li>
+              <li><strong>Pago Directo a Beneficiarios:</strong> Los fondos se entregan directamente a los beneficiarios designados conforme a la Sección 101(a) del IRC, permitiendo coordinar servicios con cualquier funeraria de Miami-Dade, Kendall, Homestead, Coral Gables o Hialeah (como Caballero Rivero, Maspons o Van Orsdel).</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Preguntas Frecuentes de Gastos Finales en Miami-Dade</h2>
+            <dl>
+              <dt><strong>¿Qué diferencia hay entre emisión simplificada y emisión garantizada en Miami?</strong></dt>
+              <dd>La emisión simplificada ofrece cobertura nivelada desde el primer día sin examen médico tradicional si responde favorablemente las preguntas de salud e historial farmacéutico. La emisión garantizada acepta condiciones crónicas severas con un período gradual inicial (generalmente de dos años).</dd>
+              <dt><strong>¿Pueden aumentar mis pagos mensuales con la edad?</strong></dt>
+              <dd>No. Las tarifas de vida entera quedan fijadas según su edad de emisión y se mantienen niveladas mientras pague las primas requeridas bajo el contrato.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Asesoría Bilingüe Independiente en el Sur de Florida</h2>
+            <p>Como corredor independiente licenciado por el Departamento de Servicios Financieros de Florida (NPN: 21228432), Andrés H. Bozo compara objetivamente pólizas disponibles de aseguradoras reconocidas sin ningún costo adicional. Oficina central en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; atención telefónica y virtual para todo Miami-Dade al <a href="tel:+13522258389">+1 (352) 225-8389</a> o mediante nuestra página de <a href="/es/contacto">Contacto Directo</a>.</p>
+          </section>
+        ` : `
+          <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/final-expense">Final Expense</a> &gt; <span>Miami, FL</span></p></nav>
+          <header>
+            <h1>Final Expense & Burial Insurance in Miami, FL</h1>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Whole Life Burial Protection for Miami-Dade Families</h2>
+            <p>Across Miami, Hialeah, Doral, Kendall, Coral Gables, and Homestead, average traditional funeral, casket, chapel service, and cemetery burial invoices range from $8,500 to $12,500+. Because the federal Social Security Administration provides only a single $255 death benefit payment to eligible survivors, permanent whole life final expense plans offering $5,000 to $35,000 in cash benefits help protect families from sudden out-of-pocket financial strain.</p>
+            <ul>
+              <li><strong>Locked Issue-Age Premiums:</strong> Monthly rates are locked at issue age and remain level for life provided required premiums continue to be paid.</li>
+              <li><strong>Simplified Issue Options:</strong> Many simplified-issue policies do not require a traditional medical exam (no blood draws or nurse visits), subject to carrier health questions and prescription history underwriting.</li>
+              <li><strong>Unrestricted Beneficiary Payout:</strong> Death benefits are payable directly to designated beneficiaries per policy terms (generally favorable federal income tax treatment under IRC §101(a)) for arrangements at any Miami-Dade funeral home such as Caballero Rivero, Maspons, or Van Orsdel.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Frequently Asked Questions About Miami Burial Insurance</h2>
+            <dl>
+              <dt><strong>How does simplified issue compare with guaranteed issue burial coverage in Miami?</strong></dt>
+              <dd>Simplified-issue plans offer Day-1 level coverage without a traditional medical exam when health and prescription history meet carrier underwriting criteria; guaranteed-issue plans approve applicants regardless of health history with an initial graded waiting period.</dd>
+              <dt><strong>Can premiums increase after my policy is issued in Miami-Dade?</strong></dt>
+              <dd>No. Whole life final expense monthly rates lock at your issue age and never increase as long as required premiums remain current.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Independent Bilingual Brokerage Across South Florida</h2>
+            <p>As an independent broker licensed by the Florida Department of Financial Services (NPN: 21228432), Andres H. Bozo compares available permanent life policies across established national carriers with zero broker fees. Agency headquarters: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit our <a href="/contact">Contact Page</a> to review personalized Miami ZIP code options.</p>
           </section>
         `;
       } else if (cleanPath === "/burial-insurance-tampa" || cleanPath === "/es/seguro-gastos-finales-tampa") {
         title = isEs 
-          ? "Seguro de Entierro y Gastos Finales en Tampa, FL | AHB" 
-          : "Tampa, FL Burial & Final Expense Insurance | AHB";
+          ? "Gastos Finales y Entierro Tampa Bay | AHB Insurance" 
+          : "Burial Insurance Tampa Bay, FL | AHB Insurance";
         description = isEs 
-          ? "Seguro de entierro y funeral en Tampa y Condado de Hillsborough. Cobertura de $5,000 a $35,000 para adultos mayores. Compare precios con Andrés Bozo." 
-          : "Burial & funeral expense insurance in Tampa & Hillsborough County. $5,000 to $35,000 level benefits for seniors. Compare top rates with Andres Bozo.";
-        ogImage = "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp";
-        ogImageAlt = isEs ? "Seguro de Entierro y Gastos Finales en Tampa, FL | AHB" : "Tampa, FL Burial & Final Expense Insurance | AHB";
+          ? "Seguro de entierro y gastos finales en Tampa Bay y Florida ($5K–$35K). Cobertura de vida entera con el broker Andrés Bozo (NPN 21228432)." 
+          : "Tampa Bay & Hillsborough County burial insurance ($5K–$35K). Level-premium whole life options with licensed broker Andres Bozo (NPN 21228432).";
+        ogImage = "https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg";
+        ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
+        dateModified = "2026-11-16";
 
-        bodyOutline = `
+        bodyOutline = isEs ? `
+          <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/gastos-finales">Gastos Finales</a> &gt; <span>Tampa Bay</span></p></nav>
           <header>
-            <h1>${escapeHtml(title)}</h1>
+            <h1>Seguro de Gastos Finales y Entierro en Tampa Bay, FL</h1>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
             <p>${escapeHtml(description)}</p>
           </header>
           <section>
-            <h2>Tampa Senior Burial Insurance Planning</h2>
-            <p>Shield your family in Tampa, St. Petersburg, and Hillsborough County from unexpected funeral costs. Permanent whole life policies with locked rates and $5,000 to $35,000 cash payouts directly to your beneficiaries.</p>
+            <h2>Protección Permanente para Familias en Tampa, St. Petersburg y Clearwater</h2>
+            <p>En el área metropolitana de Tampa Bay y los condados de Hillsborough y Pinellas, los servicios funerarios promedio y cremaciones conmemorativas oscilan entre $7,500 y $11,500+. Con un seguro permanente de vida entera para gastos finales ($5,000 a $35,000), usted protege el presupuesto de su familia para cubrir funeraria, cremación, saldo médico pendiente u otras obligaciones finales sin afectar ahorros de jubilación.</p>
+            <ul>
+              <li><strong>Emisión Simplificada o Garantizada:</strong> Muchas pólizas de emisión simplificada no requieren examen médico tradicional, sujetas a las pautas de suscripción y elegibilidad de la compañía aseguradora.</li>
+              <li><strong>Primas Niveladas de Por Vida:</strong> Sus pagos mensuales se mantienen nivelados desde la emisión siempre que continúe el pago de primas requerido bajo el contrato.</li>
+              <li><strong>Libertad Total de Funerarias:</strong> Sus beneficiarios pueden elegir libremente cualquier proveedor funerario en Tampa, Brandon, Carrollwood, St. Petersburg o Clearwater (como Blount & Curry, Gonzalez Funeral Home o Sylvan Abbey).</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Preguntas Frecuentes de Gastos Finales en Tampa Bay</h2>
+            <dl>
+              <dt><strong>¿Califico en Tampa si tengo diabetes tipo 2 o hipertensión controlada?</strong></dt>
+              <dd>Sí. Muchas aseguradoras nacionales aprueban solicitantes con condiciones controladas mediante emisión simplificada con cobertura nivelada, sujeta a revisión de recetas y cuestionario de salud.</dd>
+              <dt><strong>¿Cuánto tiempo tarda el pago a los beneficiarios?</strong></dt>
+              <dd>La mayoría de las compañías procesan reclamos completos de gastos finales en pocos días hábiles tras recibir el certificado de defunción y formulario de reclamo.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Cotización Comparativa Sin Compromiso en Hillsborough y Pinellas</h2>
+            <p>Consulte gratuitamente con el corredor independiente Andrés H. Bozo (NPN: 21228432), oficina registrada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> para revisar alternativas en su código postal.</p>
+          </section>
+        ` : `
+          <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/final-expense">Final Expense</a> &gt; <span>Tampa Bay, FL</span></p></nav>
+          <header>
+            <h1>Burial & Final Expense Insurance in Tampa Bay, FL</h1>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Permanent Senior Burial Planning Across Hillsborough & Pinellas Counties</h2>
+            <p>Throughout Tampa, Brandon, Riverview, St. Petersburg, and Clearwater, funeral and memorial cremation costs commonly range between $7,500 and $11,500+. Permanent whole life burial insurance from $5,000 to $35,000 helps ensure your spouse or adult children receive timely funds directly under policy terms to cover funeral arrangements, final medical expenses, or remaining bills without depleting family savings.</p>
+            <ul>
+              <li><strong>Simplified & Guaranteed Issue Options:</strong> Many simplified-issue policies do not require a traditional medical exam, subject to carrier health history and prescription underwriting. Guaranteed-issue contracts are available when chronic conditions limit traditional eligibility.</li>
+              <li><strong>Locked Issue-Age Premiums:</strong> Monthly rates are fixed based on age at issue and never increase while required premiums remain paid.</li>
+              <li><strong>Direct Beneficiary Flexibility:</strong> Beneficiaries retain full freedom to use any local funeral home or cremation provider across Tampa Bay rather than being locked into a prepaid contract.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Frequently Asked Questions About Tampa Bay Burial Coverage</h2>
+            <dl>
+              <dt><strong>Can Tampa seniors with well-managed diabetes or hypertension qualify for Day-1 coverage?</strong></dt>
+              <dd>Yes. Many top-rated insurers offer immediate level coverage under simplified underwriting for applicants with controlled chronic conditions, depending on prescription history and carrier criteria.</dd>
+              <dt><strong>How quickly are final expense death benefits paid to beneficiaries?</strong></dt>
+              <dd>Completed claims submitted with a certified death certificate are typically processed within several business days according to carrier policy terms.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Independent Tampa Bay Consultation — Zero Broker Fees</h2>
+            <p>Compare permanent whole life options objectively with licensed broker Andres H. Bozo (NPN: 21228432), headquartered at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 and serving Tampa Bay residents statewide by phone and online. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit <a href="/contact">Contact Us</a> for a personalized comparison.</p>
           </section>
         `;
       } else if (cleanPath === "/iul-retirement-tampa" || cleanPath === "/es/iul-jubilacion-tampa") {
-        title = isEs 
-          ? "Guía de Seguro IUL y Jubilación en Tampa, FL | AHB" 
-          : "Tampa, FL IUL & Retirement Insurance Guide | AHB";
-        description = isEs 
-          ? "Descubra el seguro de Vida Universal Indexada (IUL) en Tampa y el Condado de Hillsborough. Piso del 0% y préstamos exentos de impuestos. Consulta gratis." 
-          : "Discover Indexed Universal Life (IUL) insurance in Tampa & Hillsborough County. 0% market floor & tax-free policy loans. Free broker quote: (352) 225-8389.";
-        ogImage = "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp";
-        ogImageAlt = isEs ? "Guía de Seguro IUL y Jubilación en Tampa, FL | AHB" : "Tampa, FL IUL & Retirement Insurance Guide | AHB";
+        title = isEs ? TAMPA_IUL_METADATA.titleEs : TAMPA_IUL_METADATA.titleEn;
+        description = isEs ? TAMPA_IUL_METADATA.descriptionEs : TAMPA_IUL_METADATA.descriptionEn;
+        ogImage = "https://www.ahbinsurancesolutions.com/og/iul-og.jpg";
+        ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
+        dateModified = "2026-11-16";
 
-        bodyOutline = `
+        bodyOutline = isEs ? `
+          <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/iul-jubilacion">Guía IUL</a> &gt; <span>Tampa Bay</span></p></nav>
           <header>
-            <h1>${escapeHtml(title)}</h1>
-            <p>${escapeHtml(description)}</p>
+            <h1>${escapeHtml(TAMPA_IUL_METADATA.headingEs)}</h1>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+            <p>${escapeHtml(TAMPA_IUL_METADATA.subheadingEs)}</p>
           </header>
           <section>
-            <h2>Tampa Tax-Advantaged Retirement & Life Insurance</h2>
-            <p>Learn how Indexed Universal Life (IUL) insurance helps professionals and business owners in Tampa accumulation cash value with a contractual 0% floor against market index drops and tax-free policy loan options under IRS Section 7702.</p>
+            <h2>Estrategia IUL Transparente para Profesionales y Familias en Hillsborough County</h2>
+            <p>Para ejecutivos, médicos y propietarios de negocios en Tampa, Westshore, Brandon y St. Petersburg, el seguro de Vida Universal Indexada (IUL) combina protección permanente por fallecimiento con acumulación potencial de valor en efectivo vinculada a índices como el S&P 500, sujeto a topes y tasas de participación contractuales.</p>
+            <ul>
+              <li><strong>Piso Contractual del 0% en Acreditación Indexada:</strong> El componente de acreditación indexada puede contar con un piso del 0% frente a caídas del índice; no obstante, los costos internos del seguro (COI), cargos administrativos y tarifas de cláusulas adicionales continúan deduciéndose del valor en efectivo.</li>
+              <li><strong>Préstamos de Póliza bajo IRS Sección 7702:</strong> Cuando la póliza se estructura adecuadamente (sin convertirse en un MEC) y se mantiene en vigor, los préstamos de póliza pueden ofrecer acceso al valor en efectivo con tratamiento fiscal potencialmente favorable (consulte a un asesor tributario calificado).</li>
+              <li><strong>Beneficios en Vida Incluidos:</strong> Cláusulas de aceleración por enfermedades crónicas o terminales según elegibilidad y términos contractuales.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Preguntas Frecuentes sobre IUL en Tampa y St. Petersburg</h2>
+            <dl>
+              <dt><strong>¿Puede disminuir el valor en efectivo de un IUL si el índice marca 0%?</strong></dt>
+              <dd>Sí. El piso contractual del 0% protege únicamente la tasa de acreditación del índice contra rendimientos negativos; los costos internos del seguro (COI), cargos de administración y tarifas de cláusulas adicionales siguen descontándose del valor acumulado.</dd>
+              <dt><strong>¿Ofrece la ley de Florida protección contra acreedores para seguros de vida?</strong></dt>
+              <dd>Bajo el Estatuto de Florida 222.14, el valor en efectivo de rescate y los beneficios por fallecimiento a favor de beneficiarios elegibles cuentan con protecciones estatutarias contra acreedores, sujetas a análisis legal individual.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Ilustración Personalizada IUL en Tampa Bay</h2>
+            <p>Solicite una ilustración clara lado a lado revisando proyecciones conservadoras y estructura de costos con Andrés H. Bozo (NPN: 21228432), oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Llame al <a href="tel:+13522258389">+1 (352) 225-8389</a> o utilice <a href="/es/contacto">Contacto Directo</a>.</p>
+          </section>
+        ` : `
+          <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/iul-retirement">IUL Guide</a> &gt; <span>Tampa Bay, FL</span></p></nav>
+          <header>
+            <h1>${escapeHtml(TAMPA_IUL_METADATA.headingEn)}</h1>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p>${escapeHtml(TAMPA_IUL_METADATA.subheadingEn)}</p>
+          </header>
+          <section>
+            <h2>Transparent IUL Structuring for Tampa Bay Professionals & Families</h2>
+            <p>For physicians, executives, and business owners across Tampa, Westshore, South Tampa, and St. Petersburg, Indexed Universal Life (IUL) combines permanent life insurance protection with cash value growth potential tied to an external benchmark like the S&P 500, subject to contractual cap and participation rates.</p>
+            <ul>
+              <li><strong>Contractual 0% Index Floor:</strong> The index-crediting component may include a contractual 0% floor so negative index years do not trigger negative index crediting; however, internal Cost of Insurance (COI) deductions, administrative fees, and rider charges still apply to policy cash value.</li>
+              <li><strong>IRS Section 7702 Loan Rules:</strong> When properly structured as a non-Modified Endowment Contract (non-MEC) and kept in force, collateralized policy loans may provide supplemental retirement cash flow under potentially favorable federal tax treatment (consult a qualified tax advisor).</li>
+              <li><strong>Living Benefits Protection:</strong> Qualifying terminal and chronic illness accelerated benefit riders subject to policy provisions.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Frequently Asked Questions About Tampa Bay IUL Planning</h2>
+            <dl>
+              <dt><strong>Can an IUL cash value still decline during a 0% index crediting year?</strong></dt>
+              <dd>Yes. The contractual 0% floor applies strictly to the index crediting rate itself; ongoing Cost of Insurance (COI), policy fees, and optional rider deductions still reduce cash value when index crediting equals 0%.</dd>
+              <dt><strong>Does Florida law offer creditor protection on life insurance cash value?</strong></dt>
+              <dd>Under Florida Statute 222.14, cash surrender value and proceeds payable to qualifying beneficiaries receive statutory creditor protections subject to legal review and residency rules.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Request a Personalized Tampa IUL Policy Illustration</h2>
+            <p>Review conservative index modeling and full policy charge disclosures with licensed broker Andres H. Bozo (NPN: 21228432), 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or reach us via <a href="/contact">Contact Page</a>.</p>
           </section>
         `;
       } else if (cleanPath === "/orlando-spanish-insurance" || cleanPath === "/es/seguros-orlando" || cleanPath === "/spanish-insurance-orlando") {
         title = isEs 
-          ? "Seguros de Vida y Medicare en Orlando, FL | AHB" 
-          : "Orlando Spanish Insurance Services | AHB Solutions";
+          ? "Seguros de Vida y Medicare Orlando | AHB Insurance" 
+          : "Orlando Bilingual Insurance Broker | AHB Insurance";
         description = isEs 
-          ? "Asesoría bilingüe de seguros en Orlando y Condado de Orange. Medicare Suplementario, Gastos Finales e IUL con el broker Andrés Bozo (NPN 21228432)." 
-          : "Bilingual insurance brokerage services in Orlando & Orange County. Medicare Supplement, Final Expense, and IUL guidance from Andres Bozo NPN 21228432.";
-        ogImage = "https://www.ahbinsurancesolutions.com/andresbozoofi.webp";
-        ogImageAlt = isEs ? "Seguros de Vida y Medicare en Orlando, FL | AHB" : "Orlando Spanish Insurance Services | AHB Solutions";
+          ? "Broker bilingüe de Medicare, Gastos Finales e IUL en Orlando y Kissimmee. Asesoría gratuita en español con Andrés Bozo (NPN 21228432)." 
+          : "Bilingual Medicare, Final Expense & IUL insurance broker serving Orlando, Kissimmee & Orange County. Free guidance: Andres Bozo NPN 21228432.";
+        ogImage = "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg";
+        ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
+        dateModified = "2026-11-16";
 
-        bodyOutline = `
+        bodyOutline = isEs ? `
+          <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/guias-ciudades">Ciudades</a> &gt; <span>Orlando y Kissimmee</span></p></nav>
           <header>
-            <h1>${escapeHtml(title)}</h1>
+            <h1>Seguros de Vida y Medicare en Orlando y Florida Central</h1>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
             <p>${escapeHtml(description)}</p>
           </header>
           <section>
-            <h2>Bilingual Insurance Advisory in Orlando, FL</h2>
-            <p>Independent insurance brokerage for Medicare, Final Expense burial coverage, and IUL retirement plans in Orlando, Kissimmee, and Orange County with licensed broker Andres Bozo.</p>
+            <h2>Orientación Bilingüe en Orlando, Kissimmee y Condado de Orange</h2>
+            <p>Las familias y adultos mayores de Orlando, Kissimmee, Lake Nona y Winter Park enfrentan decisiones importantes de salud y retiro entre redes hospitalarias locales como AdventHealth Orlando y Orlando Health. Como broker independiente completamente bilingüe (español e inglés), Andrés H. Bozo explica cada término de su cobertura con claridad y sin intermediarios ni costos de corretaje.</p>
+            <ul>
+              <li><strong>Medicare Suplementario y Advantage (2026–2027):</strong> Revisión de Medigap Plan G y Plan N, deducible de Parte B ($283 en 2026), deducible de Parte A ($1,736 en 2026) y tope de medicamentos Parte D ($2,100 en 2026; $2,400 en 2027) antes del cierre del AEP el 7 de diciembre.</li>
+              <li><strong>Seguro de Gastos Finales:</strong> Pólizas permanentes de vida entera ($5,000 a $35,000) con primas niveladas sujetas a contrato y emisión simplificada para muchas solicitudes.</li>
+              <li><strong>Vida Universal Indexada (IUL) y Anualidades Fijas:</strong> Estrategias patrimoniales explicando claramente tanto el piso contractual del 0% como los cargos administrativos aplicables.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Preguntas Frecuentes en Orlando y Kissimmee</h2>
+            <dl>
+              <dt><strong>¿Cuál es la fecha límite clave del periodo AEP de Medicare?</strong></dt>
+              <dd>El Periodo Anual de Inscripción (AEP) culmina el 7 de diciembre cada año para cambios efectivos a partir del 1 de enero del año siguiente, incluyendo cobertura de recetas Parte D (tope de $2,100 en 2026 y $2,400 en 2027) y máximo en red Advantage ($9,250 en 2026 y $9,850 en 2027).</dd>
+              <dt><strong>¿Tiene algún costo hablar en español con Andrés Bozo?</strong></dt>
+              <dd>Ninguno. Nuestra asesoría y comparativa independiente entre aseguradoras licenciadas en Florida es 100% gratuita para usted.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Hable Hoy en Español con Andrés Bozo</h2>
+            <p>Atendemos a toda la comunidad hispana de Orange, Osceola y Seminole County desde nuestra sede en Florida (5500 SW Archer Road, Ste H103, Gainesville, FL 32607). Llame directo al <a href="tel:+13522258389">+1 (352) 225-8389</a> o visite <a href="/es/contacto">Contacto Directo</a>. <em>Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para consultar todas las opciones.</em></p>
+          </section>
+        ` : `
+          <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida Cities</a> &gt; <span>Orlando, FL</span></p></nav>
+          <header>
+            <h1>Medicare & Life Insurance in Orlando, FL — Bilingual Services</h1>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>English & Spanish Brokerage for Orlando, Kissimmee & Orange County</h2>
+            <p>Retirees and bilingual households across Orlando, Kissimmee, Lake Nona, and Winter Park rely on major regional healthcare systems including AdventHealth Orlando and Orlando Health. Independent licensed broker Andres H. Bozo works directly in both English and Spanish—eliminating translation barriers and broker fees so you understand deductibles, networks, and policy provisions before enrolling.</p>
+            <ul>
+              <li><strong>2026–2027 Medicare Plan Reviews:</strong> Side-by-side Medigap Plan G & Plan N comparisons alongside Part D formulary checks covering the $283 Part B deductible (2026), $1,736 Part A deductible (2026), and $2,100 / $2,400 Part D prescription caps ahead of December 7 AEP.</li>
+              <li><strong>Burial & Final Expense Coverage:</strong> Permanent whole life options ($5,000–$35,000) with locked issue-age rates and simplified underwriting where eligible.</li>
+              <li><strong>IUL & Fixed Annuity Guidance:</strong> Clear explanations of contractual 0% index crediting floors, policy charges, and IRS Section 7702 rules.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Orlando & Central Florida Insurance FAQs</h2>
+            <dl>
+              <dt><strong>When does the Medicare Annual Enrollment Period (AEP) end?</strong></dt>
+              <dd>AEP runs through December 7 each year for plan elections taking effect on January 1, including Part D prescription caps ($2,100 in 2026; $2,400 in 2027) and Advantage in-network maximums ($9,250 in 2026; $9,850 in 2027).</dd>
+              <dt><strong>Do I pay higher premiums when working with bilingual broker Andres Bozo?</strong></dt>
+              <dd>No. Florida insurance rates are regulated and identical whether you apply directly or work with our licensed agency at zero broker service fee.</dd>
+            </dl>
+          </section>
+          <section>
+            <h2>Direct Bilingual Consultations Across Central Florida</h2>
+            <p>Serving Orange, Osceola, and Seminole Counties from our Florida brokerage headquarters at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or use our <a href="/contact">Contact Form</a>. <em>CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all options.</em></p>
           </section>
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
         title = isEs
-          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance"
-          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
+          ? "Anualidades Fijas en Florida: MYGA y FIA | AHB Insurance"
+          : "Florida Fixed Annuities: MYGA & FIA | AHB Insurance";
         description = isEs
-          ? "Guía completa sobre anualidades fijas en Florida: tradicionales, MYGA, indexadas (FIA) y SPIA. Tasas garantizadas, acreditación, liquidez, comparativa con CD e ingresos de jubilación con el broker Andrés H. Bozo."
-          : "Comprehensive Florida guide to fixed annuities, MYGAs, Fixed Indexed Annuities (FIA), and SPIAs. Learn interest crediting, liquidity, surrender charges, CD comparison, and lifetime income options with licensed broker Andres H. Bozo.";
-        ogImage = "https://www.ahbinsurancesolutions.com/images/annuities-growth.webp";
+          ? "Compare anualidades fijas, MYGA y FIA en Florida, reglas de liquidez e ingresos vitalicios con el broker licenciado Andrés H. Bozo (NPN 21228432)."
+          : "Compare Florida fixed annuities, MYGA & FIA options, liquidity rules, and retirement income riders with licensed broker Andres H. Bozo (NPN 21228432).";
+        ogImage = "https://www.ahbinsurancesolutions.com/og/annuities-og.jpg";
         ogImageAlt = isEs 
-          ? "Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos | AHB Insurance" 
-          : "Florida Fixed Annuities: MYGA, FIA & Retirement Income Options | AHB Insurance";
+          ? "Anualidades Fijas e Indexadas en Florida (MYGA, FIA y Retiro Vitalicio)" 
+          : "Florida Fixed & Indexed Annuities (MYGA, FIA and Guaranteed Lifetime Income)";
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
+        dateModified = "2026-11-16";
 
         if (isEs) {
           bodyOutline = `
             <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Anualidades y Retiro Seguro en Florida</span></p></nav>
             <header>
               <h1>Anualidades Fijas en Florida: MYGA, FIA y Opciones de Ingresos de Jubilación</h1>
-              <p>${description}</p>
+              <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+              <p>${escapeHtml(description)}</p>
               <div class="broker-contact-badge">
                 <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
+                <p><strong>Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
                 <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
               </div>
             </header>
@@ -1946,7 +2300,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 </article>
                 <article>
                   <h3>3. Anualidades Fijas Indexadas (FIA)</h3>
-                  <p>Vinculan su potencial de crecimiento al desempeño de un índice financiero externo (como el S&P 500) a través de topes (Cap Rates) o tasas de participación, con un piso contractual estricto del 0% que blinda su capital contra cualquier caída bursátil.</p>
+                  <p>Vinculan la acreditación de intereses a un índice financiero externo (como el S&P 500) a través de topes (Cap Rates) o tasas de participación, con un piso contractual del 0% en el componente indexado sujeto a términos del contrato, tarifas de cláusulas adicionales y cargos por rescate si aplican.</p>
                 </article>
                 <article>
                   <h3>4. Anualidades Inmediatas de Prima Única (SPIA)</h3>
@@ -2017,10 +2371,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <h2>Preguntas Frecuentes sobre Anualidades en Florida</h2>
                 <dl>
                   <dt><strong>¿Qué es una anualidad fija y cómo protege el capital en Florida?</strong></dt>
-                  <dd>Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. A diferencia de las inversiones en bolsa, el capital está respaldado por las reservas estatutarias y la cartera de bonos de grado de inversión de la aseguradora. El contrato ofrece un crecimiento de intereses compuesto con diferimiento fiscal y un piso contractual que protege su saldo contra pérdidas directas del mercado.</dd>
+                  <dd>Una anualidad fija es un contrato legalmente vinculante emitido por una compañía de seguros de vida con licencia en Florida. A diferencia de las inversiones en bolsa, el capital está respaldado por las reservas estatutarias y la cartera de bonos de grado de inversión de la aseguradora. El contrato ofrece un crecimiento de intereses compuesto con diferimiento fiscal y un piso contractual que, sujeto a términos, cargos y método de acreditación, puede proteger su saldo frente a pérdidas directas del índice de mercado.</dd>
 
                   <dt><strong>¿Cuál es la diferencia exacta entre una anualidad tradicional, una MYGA y una FIA?</strong></dt>
-                  <dd>Una anualidad fija tradicional declara una tasa periódica revisable anualmente con una tasa mínima garantizada. Una MYGA (Multi-Year Guarantee Annuity) bloquea una tasa de interés fija exacta durante un período multianual pactado (por ejemplo, 3, 5, 7 o 10 años). Una Anualidad Indexada Fija (FIA) ofrece un rendimiento vinculado al desempeño de un índice bursátil externo (como el S&P 500) manteniendo siempre un piso garantizado del 0% para evitar pérdidas de capital.</dd>
+                  <dd>Una anualidad fija tradicional declara una tasa periódica revisable anualmente con una tasa mínima garantizada. Una MYGA (Multi-Year Guarantee Annuity) bloquea una tasa de interés fija exacta durante un período multianual pactado (por ejemplo, 3, 5, 7 o 10 años). Una Anualidad Indexada Fija (FIA) vincula la acreditación de intereses a un índice bursátil externo (como el S&P 500) mediante topes o tasas de participación, con un piso contractual del 0% en el componente indexado (sujeto a términos del contrato, tarifas de cláusulas adicionales y cargos por rescate si aplican).</dd>
 
                   <dt><strong>¿Cómo funciona el diferimiento fiscal (Tax Deferral) en las anualidades?</strong></dt>
                   <dd>En una anualidad, usted no recibe formularios 1099-INT anuales sobre los intereses ganados mientras los fondos permanezcan dentro del contrato. El dinero que habría pagado en impuestos cada año permanece dentro de la cuenta devengando intereses sobre intereses (interés compuesto triple). Los impuestos sobre las ganancias solo se pagan cuando se realizan retiros.</dd>
@@ -2053,9 +2407,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Florida Fixed Annuities</span></p></nav>
             <header>
               <h1>Florida Fixed Annuities: MYGA, FIA & Retirement Income Options</h1>
-              <p>${description}</p>
+              <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+              <p>${escapeHtml(description)}</p>
               <div class="broker-contact-badge">
                 <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
+                <p><strong>Office:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
                 <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
               </div>
             </header>
@@ -2081,7 +2437,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 </article>
                 <article>
                   <h3>3. Fixed Indexed Annuities (FIA)</h3>
-                  <p>A Fixed Indexed Annuity (FIA) offers interest crediting potential linked to an external financial benchmark (such as the S&P 500), combined with protection against index declines. With a strict contractual 0% floor, market index downturns never reduce your credited principal.</p>
+                  <p>A Fixed Indexed Annuity (FIA) links interest crediting to an external market benchmark (such as the S&P 500) via caps or participation rates, with a contractual 0% floor on the index component so negative index years do not trigger negative index crediting (subject to contract terms, optional rider fees, and surrender charges).</p>
                 </article>
                 <article>
                   <h3>4. Single Premium Immediate Annuities (SPIA)</h3>
@@ -2152,10 +2508,10 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <h2>Frequently Asked Questions About Florida Fixed Annuities</h2>
                 <dl>
                   <dt><strong>What is a fixed annuity and how does it protect retirement principal in Florida?</strong></dt>
-                  <dd>A fixed annuity is a legally binding contract issued by a state-licensed life insurance company. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio. The contract provides tax-deferred compound interest growth and a contractual guarantee that protects your balance against direct market downturns.</dd>
+                  <dd>A fixed annuity is a legally binding contract issued by a state-licensed life insurance company. Unlike stock market investments, your principal is backed by the insurer's general account statutory reserves and conservative investment-grade bond portfolio. The contract provides tax-deferred compound interest growth and contractual protection that, subject to contract terms, charges, and crediting method, may shield your balance against direct market index declines.</dd>
 
                   <dt><strong>What is the exact difference between a traditional fixed annuity, a MYGA, and an FIA?</strong></dt>
-                  <dd>A traditional fixed annuity declares an annual interest rate with a contractual minimum floor. A Multi-Year Guarantee Annuity (MYGA) locks in an exact, guaranteed fixed yield for a committed term (such as 3, 5, 7, or 10 years). A Fixed Indexed Annuity (FIA) links growth potential to an external market benchmark (like the S&P 500) via caps or participation rates, while maintaining a strict 0% contractual floor to ensure you never lose principal during market downturns.</dd>
+                  <dd>A traditional fixed annuity declares an annual interest rate with a contractual minimum floor. A Multi-Year Guarantee Annuity (MYGA) locks in an exact, guaranteed fixed yield for a committed term (such as 3, 5, 7, or 10 years). A Fixed Indexed Annuity (FIA) links interest crediting to an external market benchmark (like the S&P 500) via caps or participation rates, with a contractual 0% floor on the index component so negative index years do not reduce credited index value (subject to contract terms, rider fees, and surrender charges).</dd>
 
                   <dt><strong>How does tax deferral work in fixed annuities?</strong></dt>
                   <dd>With an annuity, tax is deferred while funds remain within the contract, subject to applicable tax rules. Money that would otherwise go toward annual income taxes stays in your account, generating triple compounding (interest on principal, interest on interest, and interest on tax savings). Income taxes are only paid when distributions are withdrawn.</dd>
@@ -2186,25 +2542,70 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         }
       } else if (cleanPath.includes("dental") || cleanPath.includes("vision")) {
         title = isEs
-          ? "Seguro de Visión y Dental en Florida 2026–2027 | Cobertura para Adultos Mayores"
-          : "Vision & Dental Insurance Florida 2026–2027 | Senior Eyecare & Dental Plans";
+          ? "Planes Dentales y Visión Florida | AHB Insurance"
+          : "Florida Senior Dental & Vision Plans | AHB Insurance";
         description = isEs
-          ? "Compare seguros de visión y dental en Florida con el broker licenciado Andrés Bozo. Exámenes de la vista, lentes, armazones, implantes y dentaduras sin períodos de espera."
-          : "Compare vision and dental insurance in Florida with licensed broker Andres Bozo. Affordable senior coverage for eye exams, glasses, cleanings, and implants.";
-        ogImage = "https://www.ahbinsurancesolutions.com/images/dental-vision-senior.webp";
-        ogImageAlt = isEs 
-          ? "Seguro Dental, Visión y Audición para Adultos Mayores en Florida" 
-          : "Florida Senior Dental & Vision Insurance | Affordable Plans 2026";
+          ? "Seguros dentales, visión y audición en Florida para mayores de 65. Compare planes para limpiezas, coronas y lentes con Andrés Bozo."
+          : "Dental, vision & hearing insurance for Florida seniors. Compare preventive care, crowns, dentures & eyewear plans with Andres Bozo (NPN 21228432).";
+        ogImage = "https://www.ahbinsurancesolutions.com/og/dental-vision-og.jpg";
+        ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-10-10";
-        bodyOutline = `
+        dateModified = "2026-11-16";
+        bodyOutline = isEs ? `
+          <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Dental, Visión y Audición</span></p></nav>
           <header>
-            <h1>${title}</h1>
-            <p>${description}</p>
+            <h1>Seguros Dentales, de Visión y Audición para Adultos Mayores en Florida</h1>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+            <p>${escapeHtml(description)}</p>
           </header>
           <section>
-            <h2>Senior Dental and Optical Insurance Plans</h2>
-            <p>Immediate dental checkups, implants, eyeglasses, and dentures coverage across elite health networks in Florida.</p>
+            <h2>¿Por Qué Complementar Medicare Original con Cobertura Dental y Óptica?</h2>
+            <p>Medicare Original (Partes A y B) y las pólizas suplementarias Medigap no cubren limpiezas dentales de rutina, empastes, coronas, prótesis dentales, implantes, exámenes visuales anuales para espejuelos ni audífonos medicados. Un plan combinado Dental, Visión y Audición (DVH) ayuda a los adultos mayores en Florida a mantener su bienestar preventivo sin pagar tarifas completas de bolsillo.</p>
+            <ul>
+              <li><strong>Cuidado Preventivo desde el Primer Día:</strong> Muchos planes cubren el 100% de limpiezas de rutina, radiografías y exámenes orales en la red sin períodos de espera.</li>
+              <li><strong>Servicios Básicos y Mayores:</strong> Cobertura gradual para coronas, tratamientos de conducto, puentes, prótesis completas e implantes con máximos anuales crecientes de hasta $1,500–$3,000+ según el plan seleccionado.</li>
+              <li><strong>Visión y Audición Integrados:</strong> Asignaciones anuales para lentes graduados, armazones, exámenes optométricos y descuento o beneficio para aparatos auditivos en Florida.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Cómo Evaluar y Comparar Planes Dentales, Visión y Audición en Florida</h2>
+            <p>Al comparar opciones en Florida conviene verificar tres aspectos fundamentales: 1) si su dentista o cirujano oral actual participa en la red PPO; 2) los períodos de espera aplicables para coronas, puentes y prótesis (habitualmente de 6 a 12 meses, aunque una cobertura dental previa acreditable puede ayudar a reducir esperas en ciertas aseguradoras); y 3) el máximo anual creciente de beneficios de $1,500 a $3,000+.</p>
+            <dl>
+              <dt><strong>¿Cubre Medigap Plan G o Plan N limpiezas dentales o lentes?</strong></dt>
+              <dd>No. Los planes Medigap estandarizados únicamente cubren costos médicos bajo Medicare Original; para atención odontológica, óptica y auditiva se requiere un plan DVH independiente o beneficios incluidos en ciertos planes Medicare Advantage.</dd>
+              <dt><strong>¿Puedo conservar a mi dentista preferido en Florida?</strong></dt>
+              <dd>Sí, muchas pólizas PPO le permiten visitar cualquier dentista licenciado dentro o fuera de la red, ofreciendo mayores descuentos negociados con proveedores participantes en red.</dd>
+            </dl>
+            <h2>Compare Redes Dentales en Todo Florida sin Costo de Corretaje</h2>
+            <p>Atendemos a adultos mayores en Gainesville, Miami, Tampa, Orlando y Jacksonville comparando planes disponibles según sus dentistas preferidos y códigos postales. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> (Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607).</p>
+          </section>
+        ` : `
+          <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <span>Senior Dental, Vision & Hearing</span></p></nav>
+          <header>
+            <h1>Senior Dental, Vision & Hearing Insurance in Florida</h1>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p>${escapeHtml(description)}</p>
+          </header>
+          <section>
+            <h2>Why Pair Medigap or Original Medicare with Standalone DVH Coverage?</h2>
+            <p>Original Medicare (Parts A & B) and standardized Medigap plans do not cover routine dental cleanings, fillings, crowns, root canals, dentures, dental implants, routine eye exams for eyeglasses, or hearing aids. Standalone Dental, Vision & Hearing (DVH) insurance helps Florida seniors budget predictable care across wide statewide provider networks.</p>
+            <ul>
+              <li><strong>Day-One Preventive Care:</strong> Many plans cover preventive cleanings, oral exams, and X-rays with zero waiting period from your effective date.</li>
+              <li><strong>Major Restorative Benefits:</strong> Structured coverage for crowns, bridges, dentures, extractions, and dental implants with increasing calendar-year maximum benefits up to $1,500–$3,000+ depending on policy tier.</li>
+              <li><strong>Optometry & Hearing Allowances:</strong> Built-in annual allowances toward prescription eyeglasses, contact lenses, routine eye exams, and hearing aid fittings across Florida.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>How to Compare Florida DVH Networks & Waiting Periods</h2>
+            <p>When reviewing Dental, Vision & Hearing insurance side by side, check three essential details: 1) whether your current dentist or oral surgeon in Miami, Tampa, Orlando, Jacksonville, or Gainesville participates in the PPO network; 2) initial waiting periods (most policies cover preventive cleanings from Day 1 while applying 6- to 12-month waits on crowns, bridges, and dentures unless prior creditable dental coverage qualifies for a waiver); and 3) annual maximum payouts scaling from $1,500 to $3,000+.</p>
+            <dl>
+              <dt><strong>Does Medigap Plan G or Plan N cover routine dental cleanings or eyeglasses?</strong></dt>
+              <dd>No. Standardized Medigap policies cover Medicare Part A and Part B medical/hospital gaps only; standalone DVH coverage helps bridge dental, optometry, and hearing costs.</dd>
+              <dt><strong>Can I keep my current Florida dentist with a PPO plan?</strong></dt>
+              <dd>Many PPO dental plans allow visits to any licensed dentist inside or outside the network, with stronger negotiated fee discounts inside the carrier network.</dd>
+            </dl>
+            <h2>Free Florida Dental & Vision Comparison</h2>
+            <p>Speak directly with independent broker Andres H. Bozo (NPN: 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) at <a href="tel:+13522258389">+1 (352) 225-8389</a> or via our <a href="/contact">Contact Page</a> to compare premiums across Miami, Tampa, Orlando, Jacksonville, and Gainesville ZIP codes.</p>
           </section>
         `;
       }
@@ -2295,9 +2696,9 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
     "url": "https://www.ahbinsurancesolutions.com/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+      "url": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
     },
-    "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+    "image": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg",
     "description": isEs 
       ? "Agencia de seguros independiente en Florida licenciada y especializada en Suplementos de Medicare (Medigap), Gastos Finales, Seguro de Vida Universal Indexada (IUL) y Anualidades."
       : "Independent licensed insurance brokerage in Florida specializing in Medicare Supplement Plans (Medigap), Final Expense Life Insurance, Indexed Universal Life (IUL), and Annuities.",
@@ -2312,7 +2713,6 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "value": "21228432",
       "url": "https://nipr.com/"
     },
-    "taxID": "NPN-21228432",
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "name": "Florida Resident Insurance Agent License - Life, Health, and Variable Annuity",
@@ -2345,7 +2745,7 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "latitude": 29.6015,
       "longitude": -82.4013
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -2434,7 +2834,7 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
     },
     "telephone": "+1-352-225-8389",
     "email": "andreshbozo@ahbinsurancesolutions.com",
-    "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+    "image": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg",
     "url": isEs ? "https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" : "https://www.ahbinsurancesolutions.com/about-andres-bozo",
     "knowsLanguage": ["English", "Spanish"],
     "knowsAbout": [
@@ -2657,7 +3057,9 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
         "@type": "BlogPosting",
         "headline": isEs ? post.title.es : post.title.en,
         "description": isEs ? post.excerpt.es : post.excerpt.en,
-        "image": post.image,
+        "image": post.ogImage
+          ? (post.ogImage.startsWith("http") ? post.ogImage : `${baseUrl}${post.ogImage}`)
+          : `${baseUrl}/og-image.png`,
         "datePublished": post.date,
         "dateModified": post.date,
         "author": {
@@ -2735,7 +3137,10 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
   rewritten = rewritten.replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${metadata.canonicalUrl}">`);
   rewritten = rewritten.replace(/<meta property="og:title" content="[^"]*"\s*\/?>/, `<meta property="og:title" content="${escapeHtml(metadata.title)}">`);
   rewritten = rewritten.replace(/<meta property="og:description" content="[^"]*"\s*\/?>/, `<meta property="og:description" content="${escapeHtml(metadata.description)}">`);
-  rewritten = rewritten.replace(/<meta property="og:locale" content="[^"]*"\s*\/?>/, `<meta property="og:locale" content="${metadata.htmlLang.replace("-", "_")}">`);
+  const locale = metadata.htmlLang.replace("-", "_");
+  const altLocale = metadata.htmlLang.startsWith("es") ? "en_US" : "es_US";
+  rewritten = rewritten.replace(/<meta property="og:locale" content="[^"]*"\s*\/?>/, `<meta property="og:locale" content="${locale}">`);
+  rewritten = rewritten.replace(/<meta property="og:locale:alternate" content="[^"]*"\s*\/?>/, `<meta property="og:locale:alternate" content="${altLocale}">`);
 
   const ogImage = metadata.ogImage || "https://www.ahbinsurancesolutions.com/og-image.png";
   const ogImageAlt = metadata.ogImageAlt || (metadata.htmlLang.startsWith("es") 

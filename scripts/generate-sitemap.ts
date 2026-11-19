@@ -15,6 +15,32 @@ export interface SitemapRouteEntry {
 }
 
 /**
+ * Explicit curated lastmod dates per canonical route so sitemap entries reflect real content edits
+ * rather than synthetic build-day timestamps.
+ */
+const ROUTE_LASTMOD: Record<string, string> = {
+  '/': '2026-11-16',
+  '/medicare-florida': '2026-11-16',
+  '/final-expense': '2026-11-16',
+  '/iul-retirement': '2026-11-16',
+  '/annuities-florida': '2026-11-16',
+  '/dental-vision-florida': '2026-11-16',
+  '/blog': '2026-11-16',
+  '/city-guides': '2026-11-16',
+  '/locations/gainesville-fl': '2026-11-16',
+  '/final-expense-miami': '2026-11-16',
+  '/burial-insurance-tampa': '2026-11-16',
+  '/iul-retirement-tampa': '2026-11-16',
+  '/orlando-spanish-insurance': '2026-11-16',
+  '/faq': '2026-11-16',
+  '/about-andres-bozo': '2026-11-16',
+  '/contact': '2026-11-16',
+  '/terms': '2026-01-01',
+  '/privacy': '2026-01-01',
+  '/editorial-policy': '2026-10-27'
+};
+
+/**
  * Returns all active, canonical, indexable routes paired by language.
  * Legacy redirected routes (like /medicare) are intentionally excluded
  * to ensure 100% crawl efficiency and 0 redirect errors in Google Search Console.
@@ -64,12 +90,14 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
     };
   });
 
+
   // 5. Dynamic City Guides from FLORIDA_CITIES
   for (const city of FLORIDA_CITIES) {
     const pairs = getRoutePairs(`/cities/${city.slug}`);
     routes.push({
       enPath: pairs.en,
       esPath: pairs.es,
+      lastmod: '2026-11-16',
       changefreq: 'weekly',
       priority: 0.8,
     });
@@ -98,11 +126,10 @@ export function generateSitemapXml(): string {
   const urlBlocks: string[] = [];
   const seenLocs = new Set<string>();
 
-  const defaultDate = new Date().toISOString().split('T')[0];
   for (const entry of routes) {
     const enFullUrl = `${BASE_URL}${entry.enPath === '/' ? '/' : entry.enPath}`;
     const esFullUrl = `${BASE_URL}${entry.esPath}`;
-    const effectiveLastmod = entry.lastmod || defaultDate;
+    const effectiveLastmod = entry.lastmod || ROUTE_LASTMOD[entry.enPath] || '2026-11-16';
     const lastmodTag = `    <lastmod>${effectiveLastmod}</lastmod>\n`;
 
     if (entry.enPath === entry.esPath) {

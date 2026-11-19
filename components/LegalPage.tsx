@@ -20,11 +20,20 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
     const doc = legalContent[language][activeTab];
     const content = translations[language];
 
+    const legalTitle = `${doc.title} | AHB Insurance`;
+    const legalDescription = language === 'es'
+        ? (activeTab === 'terms'
+            ? 'Términos de Servicio, avisos CMS de Medicare, consentimiento TCPA y normas de corretaje en Florida de AHB Insurance Solutions (NPN 21228432).'
+            : 'Política de Privacidad sobre protección de datos, no venta de información y cumplimiento HIPAA/GLBA de AHB Insurance Solutions en Florida.')
+        : (activeTab === 'terms'
+            ? 'Official Terms of Service, CMS Medicare disclosures, TCPA consent, and Florida brokerage guidelines for AHB Insurance Solutions (NPN 21228432).'
+            : 'Privacy Policy detailing data security, non-sale of consumer information, HIPAA & GLBA compliance at AHB Insurance Solutions Florida.');
+
     useEffect(() => {
         document.documentElement.lang = language;
-        document.title = `${doc.title} | AHB Insurance Solutions Florida`;
+        document.title = legalTitle;
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, [language, doc, activeTab]);
+    }, [language, doc, activeTab, legalTitle]);
 
     const scrollToSection = (id: string) => {
         const el = document.getElementById(id);
@@ -40,13 +49,13 @@ export const LegalPage: React.FC<LegalPageProps> = ({ path, language, setLanguag
     return (
         <div className="bg-white text-dark-gray font-sans flex flex-col min-h-screen">
             <SEOHead 
-                title={`${doc.title} | AHB Insurance Solutions Florida`}
-                description={activeTab === 'terms' ? 'Terms of Service for AHB Insurance Solutions.' : 'Privacy Policy for AHB Insurance Solutions.'}
+                title={legalTitle}
+                description={legalDescription}
                 language={language}
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
-                ogImageAlt={`${doc.title} | AHB Insurance Solutions Florida`}
+                ogImageAlt={legalTitle}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-01-01"
             />
             <Header content={content.header} currentLang={language} setLanguage={setLanguage} />
 

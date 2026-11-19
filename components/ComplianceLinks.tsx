@@ -56,8 +56,8 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                                 </h3>
                                 <p>
                                     {isEs
-                                        ? 'Una póliza IUL brinda protección de vida y ahorro ligado a un índice bursátil con un piso contractual del 0%. Cuando la bolsa baja, su estrategia indexada no pierde por caídas del mercado. Los préstamos bajo la regla IRS 7702 requieren mantener la póliza activa.'
-                                        : 'An Indexed Universal Life policy pairs lifelong protection with cash accumulation linked to a market index. A contractual 0% floor shields credited index gains when stocks drop. Policy loans under IRS Code 7702 require keeping the contract properly funded.'}
+                                        ? 'Una póliza IUL brinda protección de vida y acumulación vinculada a un índice bursátil que puede contar con un piso contractual del 0% en la acreditación indexada (los cargos internos de la póliza y el costo del seguro COI siguen aplicando). Los préstamos bajo la regla IRS 7702 requieren mantener la póliza activa.'
+                                        : 'An Indexed Universal Life policy pairs lifelong protection with cash accumulation linked to a market index. A contractual 0% floor on the index-crediting component limits negative index credits (internal policy charges and COI still apply). Policy loans under IRS Code 7702 require keeping the contract properly funded.'}
                                 </p>
                             </article>
 
@@ -67,8 +67,8 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                                 </h3>
                                 <p>
                                     {isEs
-                                        ? 'Un agente exclusivo solo vende una marca. Como corredor independiente, Andrés Bozo compara más de 80 compañías para ajustar el plan a sus médicos, medicinas y presupuesto. Nuestras citas y comparativas son 100% gratuitas.'
-                                        : 'A captive agent can only show one company. As an independent advisor, Andres Bozo shops rates across 80+ top-rated carriers to match your doctors, prescriptions, and budget. You pay zero brokerage fees for personal help.'}
+                                        ? 'Un agente exclusivo solo vende una marca. Como corredor independiente, Andrés Bozo compara opciones entre múltiples compañías aseguradoras líderes para ajustar el plan a sus médicos, medicinas y presupuesto. Nuestras citas y comparativas son 100% gratuitas.'
+                                        : 'A captive agent can only show one company. As an independent advisor, Andres Bozo shops rates across multiple top-rated carriers to match your doctors, prescriptions, and budget. You pay zero brokerage fees for personal help.'}
                                 </p>
                             </article>
                         </div>
@@ -115,6 +115,11 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                                     {isEs
                                         ? 'No ofrecemos todos los planes disponibles en su área. Comuníquese con Medicare.gov o llame al 1-800-MEDICARE para ver todas sus opciones. Los detalles, primas y aprobaciones dependen de la suscripción de cada compañía y leyes estatales. Este sitio ofrece educación general y no constituye asesoría legal o fiscal.'
                                         : 'Disclaimer: We do not offer every plan available in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options. Policy availability, premiums, and approval depend on underwriting and contract terms. Information here is educational and not tax or legal advice.'}
+                                </p>
+                                <p className="mt-2 font-semibold text-primary">
+                                    {isEs
+                                        ? 'Oficina en Florida: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Tel: +1 (352) 225-8389 · NPN: 21228432'
+                                        : 'Florida Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Phone: +1 (352) 225-8389 · NPN: 21228432'}
                                 </p>
                             </div>
                         </div>

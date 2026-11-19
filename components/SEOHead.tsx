@@ -203,7 +203,6 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "value": "21228432",
                 "url": "https://nipr.com/"
             },
-            "taxID": "NPN-21228432",
             "hasCredential": {
                 "@type": "EducationalOccupationalCredential",
                 "name": "Florida Resident Insurance Agent License - Life, Health, and Variable Annuity",
@@ -236,7 +235,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "latitude": 29.6015,
                 "longitude": -82.4013
             },
-            "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA",
+            "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA",
             "openingHoursSpecification": [
                 {
                     "@type": "OpeningHoursSpecification",

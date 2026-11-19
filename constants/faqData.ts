@@ -142,7 +142,7 @@ export const faqsEs: FaqItem[] = [
   {
     category: 'annuities',
     q: '¿Cómo protege el capital el piso contractual del 0% en una anualidad?',
-    a: 'Debido a la estructura de opciones del asegurador, si el índice tiene un rendimiento anual negativo, su rendimiento acreditado es del 0% en lugar de negativo. Todo el capital y las ganancias previamente acreditadas quedan protegidas contra pérdidas de mercado directas.'
+    a: 'Debido a la estructura del contrato emitido por la aseguradora, si el índice tiene un rendimiento anual negativo, el rendimiento acreditado del índice es del 0% en lugar de negativo. Los fondos permanecen protegidos frente a pérdidas directas del mercado, sujeto a los términos del contrato, tarifas de cláusulas adicionales y cargos por rescate si aplican.'
   },
   {
     category: 'annuities',
@@ -321,7 +321,7 @@ export const faqsEn: FaqItem[] = [
   {
     category: 'annuities',
     q: 'How does principal protection work with a 0% floor in annuities?',
-    a: 'Due to the options structure and issuer guarantees, if the linked index experiences a negative return year, your credited interest rate is 0% instead of negative. Your previously credited principal and locked gains are not reduced by market downturns, though contractual charges may apply.'
+    a: 'Due to the insurer contract structure, if the linked index experiences a negative return year, the credited index rate is 0% instead of negative. Principal and previously credited gains are protected from direct market index losses, subject to contract terms, rider fees, and surrender charges if applicable.'
   },
   {
     category: 'annuities',

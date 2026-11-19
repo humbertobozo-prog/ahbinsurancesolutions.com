@@ -35,8 +35,8 @@ export const RelatedServices: React.FC<RelatedServicesProps> = ({ currentService
             id: 'final-expense',
             title: isEs ? 'Seguro de Gastos Finales y Funeral' : 'Final Expense & Burial Life Insurance',
             description: isEs 
-                ? 'Garantice que su familia cuente con $5,000 a $35,000 inmediatos para cubrir costos funerarios sin exámenes médicos.' 
-                : 'Secure $5,000 to $35,000 in immediate cash benefits for funeral costs with guaranteed approval.',
+                ? 'Pólizas permanentes de $5,000 a $35,000 para cubrir costos funerarios, incluyendo opciones simplificadas y de emisión garantizada.' 
+                : 'Secure $5,000 to $35,000 in final expense whole life benefits for funeral costs, including simplified & guaranteed-issue options.',
             link: isEs ? '/es/gastos-finales' : '/final-expense',
             cta: isEs ? 'Ver Cobertura de Gastos Finales ➔' : 'Explore Burial Insurance ➔',
             icon: (
@@ -49,8 +49,8 @@ export const RelatedServices: React.FC<RelatedServicesProps> = ({ currentService
             id: 'iul',
             title: isEs ? 'Vida Universal Indexada (IUL) y Estrategias de Retiro' : 'Indexed Universal Life (IUL) & Retirement Strategies',
             description: isEs 
-                ? 'Estrategia de valor en efectivo con ventajas fiscales y piso del 0% contra caídas del mercado.' 
-                : 'Tax-advantaged cash value growth tied to market index benchmarks with a 0% downside safety floor.',
+                ? 'Crecimiento de valor en efectivo con ventajas fiscales y piso contractual del 0% en acreditación indexada (cargos de póliza aplican).' 
+                : 'Tax-advantaged cash value growth tied to index benchmarks with a contractual 0% crediting floor (policy charges still apply).',
             link: isEs ? '/es/iul-jubilacion' : '/iul-retirement',
             cta: isEs ? 'Ver Estrategias IUL ➔' : 'Explore IUL Retirement Strategies ➔',
             icon: (

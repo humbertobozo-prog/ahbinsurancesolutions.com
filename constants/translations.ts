@@ -100,7 +100,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "80+ Top-Rated Carriers",
+          title: "Top-Rated Carriers",
           description: "We compare available options based on your needs, eligibility, budget and coverage goals.",
         },
         {
@@ -119,8 +119,8 @@ export const translations: Record<Language, TranslationContent> = {
       paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with multiple top-rated nationwide carriers to find the plan that is just right for your budget and your health.",
       imageAlt: "Andres H. Bozo, licensed Florida insurance broker NPN 21228432, providing expert guidance for Medicare, Final Expense, and IUL.",
       statsYears: "Years of Experience",
-      statsCompanies: "Carrier Partners",
-      statsService: "Client Satisfaction"
+      statsCompanies: "Broker Advisory Fee",
+      statsService: "Bilingual Support"
     },
     authoritativeLinks: {
       title: "Authoritative Resources & Compliance",
@@ -132,28 +132,28 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     testimonials: {
-      title: "What Our Clients Say",
-      label: "Client Reviews",
+      title: "Our Client Service Standards",
+      label: "Service Commitment",
       items: [
         {
-          quote: "Andres made the Medicare maze so easy to understand. I finally have the coverage I need without the stress!",
-          author: "Maria G.",
-          location: "Miami, FL",
+          quote: "Every consultation begins with a clear, side-by-side review of plan benefits, out-of-pocket limits, and carrier underwriting rules—with zero broker fees to you.",
+          author: "Unbiased Comparisons",
+          location: "Standard 01 · Transparency",
         },
         {
-          quote: "I was worried about my health history, but Andres found me a Final Expense policy that was affordable and accepted me immediately.",
-          author: "John D.",
-          location: "Jacksonville, FL",
+          quote: "Before recommending any Medicare Advantage or Part D plan, we verify your doctors, preferred pharmacies, and current prescriptions against official plan formularies.",
+          author: "Doctor & Rx Verification",
+          location: "Standard 02 · Precision",
         },
         {
-          quote: "The IUL strategy Andres explained is changing my retirement outlook. Professional and highly knowledgeable.",
-          author: "Carlos R.",
-          location: "Tampa, FL",
+          quote: "We explain every policy provision—including deductibles, waiting periods, policy charges, and surrender schedules—in plain English or Spanish before you apply.",
+          author: "Bilingual Contract Clarity",
+          location: "Standard 03 · Education",
         },
         {
-          quote: "Finding a broker who speaks Spanish fluently and actually cares about the community is a blessing. Highly recommended!",
-          author: "Elena P.",
-          location: "Orlando, FL",
+          quote: "After enrollment, we remain your local point of contact for carrier questions, Annual Enrollment Period (AEP) checks, and ongoing policy adjustments.",
+          author: "Year-Round Local Advocacy",
+          location: "Standard 04 · Continuity",
         },
       ],
     },
@@ -383,8 +383,8 @@ export const translations: Record<Language, TranslationContent> = {
       paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con múltiples aseguradoras líderes a nivel nacional para encontrar el plan adecuado para su presupuesto y salud.",
       imageAlt: "Andres H. Bozo, broker de seguros licenciado en Florida NPN 21228432, asesor especialista en Medicare y Gastos Finales.",
       statsYears: "Años de Experiencia",
-      statsCompanies: "Compañías Aliadas",
-      statsService: "Satisfacción del Cliente"
+      statsCompanies: "Costo de Asesoría",
+      statsService: "Atención Bilingüe"
     },
     authoritativeLinks: {
       title: "Recursos Oficiales y Cumplimiento",
@@ -396,28 +396,28 @@ export const translations: Record<Language, TranslationContent> = {
       ]
     },
     testimonials: {
-      title: "Lo Que Dicen Nuestros Clientes",
-      label: "Opiniones de Clientes",
+      title: "Nuestros Estándares de Servicio",
+      label: "Compromiso con el Cliente",
       items: [
         {
-          quote: "Andres hizo que el laberinto de Medicare fuera fácil de entender. ¡Finalmente tengo la cobertura que necesito!",
-          author: "Maria G.",
-          location: "Miami, FL",
+          quote: "Cada consulta comienza con una comparativa clara y honesta de beneficios, límites de gasto y reglas de suscripción de cada aseguradora, sin cargos por corretaje.",
+          author: "Comparativas Imparciales",
+          location: "Estándar 01 · Transparencia",
         },
         {
-          quote: "Me preocupaba mi salud, pero Andres me encontró una póliza de Gastos Finales asequible que me aceptó de inmediato.",
-          author: "John D.",
-          location: "Jacksonville, FL",
+          quote: "Antes de recomendar un plan Medicare Advantage o Parte D, verificamos sus médicos, farmacias preferidas y lista exacta de recetas en los formularios oficiales.",
+          author: "Verificación Médica y Rx",
+          location: "Estándar 02 · Precisión",
         },
         {
-          quote: "La estrategia de IUL que Andres me explicó cambió mi perspectiva de retiro. Muy profesional.",
-          author: "Carlos R.",
-          location: "Tampa, FL",
+          quote: "Explicamos cada cláusula de su póliza—deducibles, períodos de espera, costos internos o tablas de rescate—en español o inglés claro antes de enviar su solicitud.",
+          author: "Claridad Contractual",
+          location: "Estándar 03 · Educación",
         },
         {
-          quote: "Encontrar un broker que hable español fluido y que realmente se preocupe es una bendición. ¡Muy recomendado!",
-          author: "Elena P.",
-          location: "Orlando, FL",
+          quote: "Después de su inscripción, seguimos siendo su contacto directo en Florida para dudas con la aseguradora, revisiones anuales (AEP) y cambios de cobertura.",
+          author: "Acompañamiento Continuo",
+          location: "Estándar 04 · Servicio",
         },
       ],
     },

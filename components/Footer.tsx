@@ -14,7 +14,7 @@ const WHATSAPP_URL = "https://wa.me/13522258389";
 const FACEBOOK_URL = "https://www.facebook.com/ahbinsurancesolutions";
 const INSTAGRAM_URL = "https://www.instagram.com/ahbinsurancesolutions";
 const LINKEDIN_URL = "https://www.linkedin.com/in/andres-bozo-npn-21228432";
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Apt+H103+Gainesville+FL+32607+USA";
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA";
 
 const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpenLegalModal }) => {
     const isEs = language === 'es';
@@ -149,6 +149,15 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                                     className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block"
                                 >
                                     {content.links.terms}
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href="/es/politica-editorial" 
+                                    onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/politica-editorial'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }}
+                                    className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block"
+                                >
+                                    Política Editorial
                                 </a>
                             </li>
                         </ul>

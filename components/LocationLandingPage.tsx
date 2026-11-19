@@ -37,48 +37,69 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             case '/es/seguro-medicare-florida':
                 return {
                     title: activeLang === 'es' 
-                        ? "Seguro Medicare Florida 2026 | Asesoría y Planes Suplementarios en Español" 
-                        : "Best Florida Medicare Supplement Plans 2026 | Medigap Plan G & N",
+                        ? "Planes Suplementarios Medicare Florida | AHB Insurance" 
+                        : "Florida Medicare Supplement Plans 2026–2027 | AHB",
                     description: activeLang === 'es' 
-                        ? "Consiga el mejor seguro Medicare en Florida. Comparamos planes Suplementarios de Medicare (Medigap) Partes G y N de más de 80 aseguradoras. Asesoría gratuita en español." 
-                        : "Compare Florida Medicare Supplement (Medigap) Plans. Find top Plan G and Plan N rates from 80+ insurers. Guaranteed issue coverage options in FL.",
-                    heading: activeLang === 'es' ? "Seguro Medicare en Florida 2026" : "Medicare Supplement Insurance in Florida",
+                        ? "Compare planes Suplementarios de Medicare (Medigap) Plan G y N en Florida con tarifas competitivas. Asesoría gratuita en español (NPN 21228432)." 
+                        : "Compare Florida Medigap Plan G and Plan N rates side-by-side with nationwide Medicare provider access. Free guidance from Andres Bozo (NPN 21228432).",
+                    heading: activeLang === 'es' ? "Seguro Medicare en Florida 2026–2027" : "Medicare Supplement Insurance in Florida",
                     subheading: activeLang === 'es' 
-                        ? "Asesoría especializada 100% en español para la comunidad hispana de Florida. Comparamos las mejores opciones de Suplementos de Medicare (Medigap Plan G y N) con primas competitivas y flexibilidad de proveedores." 
-                        : "Florida Seniors 50+: Compare monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with nationwide provider flexibility.",
+                        ? "Asesoría especializada 100% en español para la comunidad hispana de Florida. Comparamos opciones de Suplementos de Medicare (Medigap Plan G y N) para cobertura 2026 y la transición AEP 2027." 
+                        : "Florida Seniors: Compare monthly rates for Medicare Supplement (Medigap) Plan G & Plan N with nationwide provider flexibility.",
                     highlights: activeLang === 'es' ? [
                         { title: "Planes Medigap Plan G y Plan N", desc: "Compare coberturas y primas sin sorpresas ni costos ocultos en Florida." },
                         { title: "Flexibilidad de Proveedores", desc: "Atiéndase con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a reglas de Medigap." },
                         { title: "Atención Bilingüe Personalizada", desc: "Hable directamente en español con Andrés Bozo (Broker Licenciado NPN 21228432)." }
                     ] : [
-                        { title: "Medigap Plan G & N Comparison", desc: "Compare Part G and N premiums side-by-side with 100% transparency." },
+                        { title: "Medigap Plan G & N Comparison", desc: "Compare Plan G and Plan N premiums side-by-side across top Florida carriers." },
                         { title: "Nationwide Provider Flexibility", desc: "See any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules." },
-                        { title: "2026 Rate Protection", desc: "Save up to 35% on standard rates by unlocking licensed broker discounts." }
+                        { title: "CMS 2026–2027 Clarity", desc: "Understand the $283 Part B deductible (2026) and $2,400 Part D cap for 2027 before Dec 7." }
                     ]
                 };
             case '/final-expense-miami':
             case '/es/seguro-gastos-finales-miami':
+                return {
+                    title: activeLang === 'es' 
+                        ? "Gastos Finales y Entierro en Miami | AHB Insurance" 
+                        : "Final Expense Insurance Miami, FL | AHB Insurance",
+                    description: activeLang === 'es' 
+                        ? "Seguro de entierro y gastos finales en Miami-Dade ($5K–$35K). Emisión simplificada con el broker licenciado Andrés Bozo (NPN 21228432)." 
+                        : "Miami-Dade burial & final expense life insurance ($5K–$35K). Simplified issue options with licensed broker Andres Bozo (NPN 21228432).",
+                    heading: activeLang === 'es' ? "Seguro de Gastos Finales en Miami-Dade" : "Final Expense & Burial Insurance in Miami, FL",
+                    subheading: activeLang === 'es' 
+                        ? "Ayude a proteger a su familia en Miami, Hialeah y Doral frente a costos de funeral y cremación ($8,500–$12,500+). Pólizas de vida entera con primas niveladas según su edad de emisión." 
+                        : "Help protect your Miami-Dade family from $8,500–$12,500+ funeral and cremation bills. Permanent whole life coverage with locked issue-age premiums.",
+                    highlights: activeLang === 'es' ? [
+                        { title: "Emisión Simplificada en Miami", desc: "Muchas pólizas de emisión simplificada no requieren examen médico tradicional, sujetas a suscripción médica de la aseguradora." },
+                        { title: "Primas Niveladas de Por Vida", desc: "Sus primas quedan fijadas según su edad de emisión y no aumentan mientras mantenga sus pagos al día." },
+                        { title: "Asesoría Directa en Español", desc: "Revise opciones en Miami-Dade y Broward directamente con el broker Andrés H. Bozo (NPN 21228432)." }
+                    ] : [
+                        { title: "Simplified Issue Options", desc: "Many simplified-issue policies do not require a traditional medical exam, subject to carrier underwriting." },
+                        { title: "Direct Beneficiary Payout", desc: "Death benefit funds go directly to beneficiaries per policy terms (generally favorable tax treatment under IRC §101(a))." },
+                        { title: "Locked Issue-Age Rates", desc: "Your monthly rate locks at your issue age and will not increase as long as required premiums are paid." }
+                    ]
+                };
             case '/burial-insurance-tampa':
             case '/es/seguro-gastos-finales-tampa':
             case '/es/seguro-gastos-finales-florida':
                 return {
                     title: activeLang === 'es' 
-                        ? "Seguro de Gastos Finales en Florida 2026 | Entierro y Cobertura Simplificada" 
-                        : "Burial & Final Expense Insurance Florida | Simplified Issue Coverage",
+                        ? "Gastos Finales y Entierro Tampa Bay | AHB Insurance" 
+                        : "Burial Insurance Tampa Bay, FL | AHB Insurance",
                     description: activeLang === 'es' 
-                        ? "Pólizas de seguro de gastos finales de entierro en Florida de $5,000 a $35,000. Tarifas fijas de por vida. Muchas pólizas de emisión simplificada no requieren examen médico tradicional." 
-                        : "Burial Insurance & Funeral Expense Coverage in Florida. $5,000 to $35,000 cash benefits for seniors. Many simplified-issue policies do not require a traditional medical exam.",
-                    heading: activeLang === 'es' ? "Seguro de Gastos Finales y Entierro en Florida" : "Burial & Final Expense Insurance in Florida",
+                        ? "Seguro de entierro y gastos finales en Tampa Bay y Florida ($5K–$35K). Cobertura de vida entera con el broker Andrés Bozo (NPN 21228432)." 
+                        : "Tampa Bay & Hillsborough County burial insurance ($5K–$35K). Level-premium whole life options with licensed broker Andres Bozo (NPN 21228432).",
+                    heading: activeLang === 'es' ? "Seguro de Gastos Finales y Entierro en Tampa Bay" : "Burial & Final Expense Insurance in Tampa Bay, FL",
                     subheading: activeLang === 'es' 
-                        ? "Ayude a proteger a su familia de los costos de funeral y cremación ($7,000–$12,000+). Pólizas de vida entera permanentes con primas niveladas según su edad de emisión mientras se paguen las primas requeridas." 
-                        : "Help protect your family from $7,000–$12,000+ funeral and cremation costs. Permanent whole life coverage with locked rates based on your issue age as long as required premiums are paid.",
+                        ? "Cobertura de vida entera permanente para familias en Tampa, St. Petersburg y Clearwater frente a costos funerarios ($7,500–$11,500+), con primas niveladas mientras se paguen las cuotas requeridas." 
+                        : "Permanent whole life protection for Tampa, St. Petersburg & Clearwater seniors facing $7,500–$11,500+ funeral costs, with locked issue-age rates.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Emisión Simplificada", desc: "Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque la suscripción médica depende de la aseguradora." },
-                        { title: "Primas Niveladas de Por Vida", desc: "Sus primas quedan fijadas según su edad de emisión y no aumentan mientras la póliza se mantenga activa con sus pagos al día." },
-                        { title: "Beneficio por Fallecimiento Directo", desc: "Sus beneficiarios reciben el beneficio por fallecimiento según los términos de la póliza para cubrir gastos funerarios o deudas (generalmente con tratamiento fiscal favorable bajo el Código IRC §101(a))." }
+                        { title: "Emisión Simplificada", desc: "Muchas pólizas de emisión simplificada no requieren examen médico tradicional; la elegibilidad depende de la aseguradora." },
+                        { title: "Primas Niveladas de Por Vida", desc: "Sus primas quedan fijadas según su edad de emisión y no aumentan mientras la póliza se mantenga activa." },
+                        { title: "Beneficio por Fallecimiento Directo", desc: "Sus beneficiarios reciben el beneficio según los términos de la póliza para cubrir funeral o deudas (IRC §101(a))." }
                     ] : [
                         { title: "Simplified Issue Options", desc: "Many simplified-issue policies do not require a traditional medical exam, subject to carrier underwriting requirements." },
-                        { title: "Direct Death Benefit Payout", desc: "Beneficiaries receive death benefit funds according to policy provisions to handle burial, cremation, or debts (generally receiving favorable federal tax treatment under IRC §101(a))." },
+                        { title: "Direct Death Benefit Payout", desc: "Beneficiaries receive death benefit funds per policy provisions to handle burial, cremation, or debts (IRC §101(a))." },
                         { title: "Locked Issue-Age Rates", desc: "Your premium is locked at your issue age and will not increase as long as required premiums are paid." }
                     ]
                 };
@@ -86,36 +107,48 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             case '/es/anualidades-florida':
                 return {
                     title: activeLang === 'es'
-                        ? "Anualidades en Florida 2026 | Fijas, MYGA e Indexadas (FIA)"
-                        : "Florida Fixed Annuities 2026 | MYGA & Fixed Indexed Annuities",
+                        ? "Anualidades Fijas e Indexadas FL | AHB Insurance"
+                        : "Florida Fixed & Indexed Annuities | AHB Insurance",
                     description: activeLang === 'es'
-                        ? "Anualidades en Florida: fijas, MYGA, indexadas (FIA) e inmediatas. Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
-                        : "Florida annuities: Fixed, MYGA, Fixed Indexed (FIA) & Immediate. Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength.",
+                        ? "Compare anualidades fijas, MYGA y FIA en Florida. Términos contractuales de protección del capital con el broker licenciado Andrés H. Bozo."
+                        : "Compare Florida fixed annuities, MYGAs & Fixed Indexed Annuities (FIA). Contractual principal protection terms with licensed broker Andres H. Bozo.",
                     heading: activeLang === 'es' ? "Anualidades Fijas e Indexadas en Florida" : "Fixed & Indexed Annuities in Florida",
                     subheading: activeLang === 'es'
                         ? "Las anualidades fijas pueden brindar términos de interés contractualmente garantizados, sujetos a la solidez financiera de la aseguradora emisora."
                         : "Fixed annuities can provide contractually guaranteed interest terms, subject to the financial strength of the issuing insurer and the specific contract.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Protección del Principal", desc: "Su capital principal acumulado está protegido frente a caídas de la bolsa." },
-                        { title: "Términos Contractuales Garantizados", desc: "Rendimientos respaldados por la solidez y solvencia de la aseguradora emisora." },
-                        { title: "Ingresos de Por Vida", desc: "Opción de convertir su saldo en una pensión mensual vitalicia garantizada." }
+                        { title: "Protección del Principal", desc: "Su capital principal acumulado está protegido frente a caídas de la bolsa según el contrato emitido." },
+                        { title: "Términos Contractuales Claros", desc: "Rendimientos respaldados por la solidez y solvencia de la aseguradora emisora." },
+                        { title: "Ingresos de Retiro Predecibles", desc: "Opción de convertir su saldo en flujo mensual de ingresos sujeto a los términos del contrato." }
                     ] : [
-                        { title: "Principal Protection", desc: "Your accumulated principal balance is insulated against stock market downturns." },
+                        { title: "Principal Protection", desc: "Your accumulated principal balance is contractually shielded from direct stock market index losses." },
                         { title: "Contractual Interest Terms", desc: "Fixed annuities can provide contractually guaranteed interest terms, subject to insurer financial strength." },
-                        { title: "Lifetime Pension Cashflow", desc: "Convert savings into a guaranteed monthly paycheck you can never outlive." }
+                        { title: "Lifetime Income Options", desc: "Optional income riders convert savings into predictable retirement payouts per contract terms." }
                     ]
                 };
             case '/dental-vision-florida':
             case '/es/dental-vision-florida':
                 return {
-                    title: "Florida Senior Dental & Vision Insurance | Affordable Plans 2026",
-                    description: "Complete Dental and Vision insurance for Florida seniors and families. Cover cleanings, implants, dentures & eyewear with no waiting periods.",
-                    heading: "Senior Dental & Vision Insurance in Florida",
-                    subheading: "Don't pay out-of-pocket for dental cleanings, crowns, implants, or glasses. Comprehensive coverage across top Florida provider networks.",
-                    highlights: [
-                        { title: "Immediate Coverage Available", desc: "No waiting periods for preventive cleanings and routine dental care." },
-                        { title: "Implants, Dentures & Crowns", desc: "Substantial savings on major dental procedures and specialty care." },
-                        { title: "Wide Florida Provider Network", desc: "Choose from thousands of top-rated dentists and optometrists statewide." }
+                    title: activeLang === 'es'
+                        ? "Planes Dentales y Visión Florida | AHB Insurance"
+                        : "Florida Senior Dental & Vision Plans | AHB Insurance",
+                    description: activeLang === 'es'
+                        ? "Seguros dentales, visión y audición en Florida para mayores de 65. Compare planes para limpiezas, coronas y lentes con Andrés Bozo."
+                        : "Dental, vision & hearing insurance for Florida seniors. Compare preventive care, crowns, dentures & eyewear plans with Andres Bozo (NPN 21228432).",
+                    heading: activeLang === 'es'
+                        ? "Seguros Dentales, de Visión y Audición en Florida"
+                        : "Senior Dental, Vision & Hearing Insurance in Florida",
+                    subheading: activeLang === 'es'
+                        ? "Complemente Medicare Original o Medigap con cobertura accesible para limpiezas dentales, coronas, prótesis, lentes graduados y exámenes de audición en Florida."
+                        : "Complement Original Medicare or Medigap with affordable coverage for dental cleanings, crowns, dentures, prescription eyewear, and hearing exams across Florida.",
+                    highlights: activeLang === 'es' ? [
+                        { title: "Cobertura Preventiva Inmediata", desc: "Planes disponibles sin períodos de espera para limpiezas de rutina, radiografías y exámenes orales." },
+                        { title: "Coronas, Prótesis e Implantes", desc: "Beneficios anuales crecientes para procedimientos mayores tras los períodos de espera aplicables." },
+                        { title: "Amplia Red Dental y Óptica FL", desc: "Elija entre dentistas y optometristas participantes en todo el estado de Florida." }
+                    ] : [
+                        { title: "Preventive Care Access", desc: "Plans available with zero waiting periods for routine dental cleanings, X-rays, and oral exams." },
+                        { title: "Crowns, Dentures & Implants", desc: "Increasing annual maximums helping lower out-of-pocket costs for major dental services." },
+                        { title: "Wide Florida Provider Network", desc: "Choose from thousands of participating Florida dentists, optometrists, and hearing specialists." }
                     ]
                 };
             case '/iul-retirement-tampa':
@@ -133,22 +166,22 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             default:
                 return {
                     title: activeLang === 'es' 
-                        ? "Seguros de Vida y Medicare en Orlando | Broker de Seguros Florida" 
-                        : "Orlando Medicare & Life Insurance Broker | Bilingual Florida Specialists",
+                        ? "Seguros de Vida y Medicare Orlando | AHB Insurance" 
+                        : "Orlando Bilingual Insurance Broker | AHB Insurance",
                     description: activeLang === 'es' 
-                        ? "Especialista en Seguros de Medicare y Gastos Finales de Entierro en Orlando. Obtenga asesoría profesional bilingüe gratuita con Andres Bozo NPN 21228432." 
-                        : "Bilingual Medicare Supplement, Final Expense & Life Insurance brokerage in Orlando, Kissimmee & Orange County. Free quote from licensed broker Andres Bozo.",
+                        ? "Broker bilingüe de Medicare, Gastos Finales e IUL en Orlando y Kissimmee. Asesoría gratuita en español con Andrés Bozo (NPN 21228432)." 
+                        : "Bilingual Medicare, Final Expense & IUL insurance broker serving Orlando, Kissimmee & Orange County. Free guidance: Andres Bozo NPN 21228432.",
                     heading: activeLang === 'es' ? "Seguros de Vida y Medicare en Orlando" : "Medicare & Life Insurance in Orlando, FL",
                     subheading: activeLang === 'es' 
-                        ? "Asesoría profesional en español para familias de Florida Central. Comparamos más de 80 compañías para que pague menos." 
-                        : "Independent brokerage comparing 80+ top carriers for Central Florida families in English and Spanish.",
+                        ? "Asesoría profesional en español para familias de Florida Central. Comparamos objetivamente pólizas de aseguradoras nacionales calificadas sin costos de corretaje." 
+                        : "Independent bilingual brokerage comparing top-rated carriers for Central Florida families in English and Spanish with zero broker fees.",
                     highlights: activeLang === 'es' ? [
-                        { title: "Planes de Medicare 2026", desc: "Partes A, B, C y D simplificadas para hispanohablantes en Orlando y Kissimmee." },
-                        { title: "Gastos Finales de Entierro", desc: "Garantice la tranquilidad de su familia y cubra todos los costos de funeral." },
-                        { title: "Atención 100% en Español", desc: "Hable directamente con Andres Bozo en su propio idioma sin intermediarios." }
+                        { title: "Planes de Medicare 2026–2027", desc: "Partes A, B, C y D simplificadas para hispanohablantes en Orlando y Kissimmee." },
+                        { title: "Gastos Finales de Entierro", desc: "Pólizas permanentes de vida entera diseñadas para ayudar a su familia a cubrir costos funerarios." },
+                        { title: "Atención 100% en Español", desc: "Hable directamente con Andrés Bozo (NPN 21228432) en su idioma sin intermediarios." }
                     ] : [
-                        { title: "2026 Medicare Plans", desc: "Parts A, B, C & D comparison for Central Florida retirees and seniors." },
-                        { title: "Final Expense Burial Plans", desc: "Locked-in whole life funeral coverage protecting family finances." },
+                        { title: "2026–2027 Medicare Plans", desc: "Parts A, B, C & D comparison for Central Florida retirees and seniors." },
+                        { title: "Final Expense Burial Plans", desc: "Level-premium whole life funeral coverage protecting family finances." },
                         { title: "100% Bilingual Brokerage", desc: "Direct consultations in English & Spanish with licensed broker Andres Bozo." }
                     ]
                 };
@@ -212,6 +245,124 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, [path, activeLang]);
 
+    const getExtendedGuide = () => {
+        if (path.includes('dental') || path.includes('vision')) {
+            return activeLang === 'es' ? {
+                heading: 'Cómo Elegir un Plan Dental, de Visión y Audición (DVH) en Florida',
+                paragraphs: [
+                    'Medicare Original (Partes A y B) y las pólizas suplementarias Medigap no cubren limpiezas dentales de rutina, empastes, coronas, prótesis totales, implantes, lentes graduados ni audífonos medicados. Contar con una póliza combinada Dental, Visión y Audición (DVH) evita pagar facturas odontológicas completas de su propio bolsillo.',
+                    'Al comparar planes DVH en Florida conviene revisar tres factores clave: 1) si su dentista actual en Miami, Tampa, Orlando, Jacksonville o Gainesville participa en la red PPO; 2) los períodos de espera iniciales (muchos contratos cubren prevención desde el día 1 y aplican de 6 a 12 meses para coronas o prótesis, aunque cobertura previa elegible a veces reduce esperas); y 3) el máximo anual creciente de beneficios ($1,500 a $3,000+).'
+                ],
+                faqs: [
+                    { q: '¿Cubre Medigap Plan G o Plan N limpiezas dentales o lentes?', a: 'No. Los planes Medigap estandarizados únicamente cubren costos compartidos médicos bajo Medicare Original; para dentista, optometría y audífonos requiere un plan DVH independiente o beneficios incluidos en ciertos planes Advantage.' },
+                    { q: '¿Puedo mantener a mi dentista en Florida con un plan DVH?', a: 'Muchos planes PPO permiten elegir libremente cualquier dentista licenciado dentro o fuera de la red, logrando mayores descuentos dentro de la red contratada.' }
+                ]
+            } : {
+                heading: 'How to Evaluate Senior Dental, Vision & Hearing (DVH) Coverage in Florida',
+                paragraphs: [
+                    'Original Medicare (Parts A and B) and standardized Medigap plans do not pay for routine dental cleanings, fillings, crowns, root canals, dentures, dental implants, routine eye exams for eyeglasses, or prescription hearing aids. Pairing Original Medicare or Medigap with an affordable standalone DVH policy helps retirees budget predictable care.',
+                    'When comparing Florida DVH plans side by side, check three essential details: 1) whether your current dentist or oral surgeon in Miami, Tampa, Orlando, Jacksonville, or Gainesville participates in the PPO network; 2) initial waiting periods (most policies cover 100% preventive care from Day 1 while applying 6–12 month waits on major crowns, bridges, or dentures unless prior creditable dental coverage applies); and 3) annual maximum payouts ranging from $1,500 to $3,000+.'
+                ],
+                faqs: [
+                    { q: 'Does Medigap Plan G or Plan N cover routine dental cleanings or eyeglasses?', a: 'No. Standardized Medigap policies cover Medicare Part A and Part B hospital/medical gaps only; standalone Dental, Vision & Hearing insurance fills the oral, optical, and hearing care gap.' },
+                    { q: 'Are dental waiting periods ever waived for Florida seniors?', a: 'Some national carriers waive 6- or 12-month major restorative waiting periods if you provide proof of continuous prior creditable dental coverage within the last 60 to 90 days.' }
+                ]
+            };
+        }
+        if (path.includes('miami')) {
+            return activeLang === 'es' ? {
+                heading: 'Costos Funerarios Reales y Suscripción en Miami-Dade County',
+                paragraphs: [
+                    'En Miami, Hialeah, Doral, Kendall, Coral Gables y Homestead, un funeral tradicional completo con servicio en capilla, ataúd y lote en cementerio suele oscilar entre $8,500 y $12,500+. Considerando que el beneficio único por fallecimiento del Seguro Social federal es de apenas $255 para sobrevivientes elegibles, contar con $5,000 a $35,000 de protección permanente de vida entera protege los ahorros de su cónyuge e hijos.',
+                    'Sus beneficiarios mantienen libertad total para utilizar el pago en cualquier funeraria local de Miami-Dade —incluyendo Caballero Rivero, Maspons, Van Orsdel o Memorial Plan— sin quedar atados a planes prepagados rígidos, y las primas se fijan según su edad de emisión mientras se mantengan los pagos requeridos.'
+                ],
+                faqs: [
+                    { q: '¿Qué diferencia hay entre emisión simplificada y emisión garantizada en Miami?', a: 'La emisión simplificada ofrece cobertura inmediata desde el primer día si responde favorablemente las preguntas médicas (sin examen físico tradicional). La emisión garantizada acepta condiciones crónicas severas con un período gradual inicial (generalmente 2 años).' },
+                    { q: '¿El pago de gastos finales llega directamente a mi familia?', a: 'Sí, el beneficio se abona directamente al beneficiario designado conforme a los términos del contrato (generalmente con tratamiento fiscal favorable bajo la Sección 101(a) del IRC).' }
+                ]
+            } : {
+                heading: 'Miami-Dade Funeral Cost Realities & Underwriting Options',
+                paragraphs: [
+                    'Across Miami, Hialeah, Doral, Kendall, Coral Gables, and Homestead, average traditional funeral, chapel service, casket, and burial costs commonly range from $8,500 to $12,500+. Because Social Security provides only a single $255 lump-sum death payment to eligible survivors, permanent whole life final expense plans offering $5,000 to $35,000 protect family savings from sudden financial strain.',
+                    'Beneficiaries keep complete flexibility to coordinate arrangements with any Miami-Dade funeral home or cremation provider rather than locking funds into an inflexible pre-need contract, while locked issue-age monthly premiums stay predictable as long as required premiums remain paid.'
+                ],
+                faqs: [
+                    { q: 'How does simplified issue compare with guaranteed issue burial coverage in Miami?', a: 'Simplified-issue plans offer Day-1 level coverage without a traditional medical exam when health and prescription history meet carrier underwriting rules; guaranteed-issue plans approve applicants regardless of health history but include an initial graded waiting period.' },
+                    { q: 'Do premiums ever go up as I get older in Miami?', a: 'No. Whole life final expense monthly rates lock at your issue age and remain level for life provided required premiums stay current.' }
+                ]
+            };
+        }
+        if (path.includes('burial') || path.includes('gastos-finales-tampa') || path.includes('gastos-finales-florida')) {
+            return activeLang === 'es' ? {
+                heading: 'Planificación Funeraria en Tampa, St. Petersburg y Clearwater',
+                paragraphs: [
+                    'En el área metropolitana de Tampa Bay —abarcando Hillsborough y Pinellas County— los servicios funerarios promedio y cremaciones conmemorativas oscilan entre $7,500 y $11,500+. Una póliza permanente de gastos finales ($5,000 a $35,000) entrega liquidez directa a su familia para cubrir funeraria, saldos médicos pendientes u otros gastos finales sin vender propiedades ni vaciar cuentas de retiro.',
+                    'Sus seres queridos pueden elegir cualquier funeraria local en Tampa, Brandon, Carrollwood, Riverview, St. Petersburg o Clearwater (como Blount & Curry, Gonzalez Funeral Home o Sylvan Abbey) y muchas opciones de emisión simplificada no exigen análisis médicos tradicionales, sujetas a suscripción.'
+                ],
+                faqs: [
+                    { q: '¿Califico en Tampa si tengo diabetes o hipertensión controlada?', a: 'Sí. Muchas aseguradoras nacionales aprueban solicitantes con diabetes tipo 2 o presión arterial controlada mediante emisión simplificada con cobertura nivelada, sujeto a revisión de recetas y cuestionario de salud.' },
+                    { q: '¿Cuánto tardan en pagar los beneficios tras el fallecimiento?', a: 'La mayoría de las aseguradoras procesan reclamaciones completas de gastos finales en pocos días hábiles una vez recibido el certificado de defunción y formulario de reclamo.' }
+                ]
+            } : {
+                heading: 'Tampa Bay Burial Planning Across Hillsborough & Pinellas Counties',
+                paragraphs: [
+                    'Throughout Tampa, Brandon, Riverview, St. Petersburg, and Clearwater, average funeral and memorial cremation bills range between $7,500 and $11,500+. Permanent whole life burial policies offering $5,000 to $35,000 give surviving spouses or adult children direct funds to pay funeral directors, final medical balances, and memorial costs without depleting retirement accounts.',
+                    'Families retain full choice of any funeral provider across Tampa Bay—without pre-need contract restrictions—and many simplified-issue contracts skip blood draws or physical nurse visits, subject to standard carrier underwriting questions and prescription checks.'
+                ],
+                faqs: [
+                    { q: 'Can Tampa seniors with well-managed diabetes or hypertension qualify for Day-1 coverage?', a: 'Yes. Many top-rated insurers offer immediate level coverage under simplified underwriting for applicants with controlled chronic conditions, depending on prescription history and carrier criteria.' },
+                    { q: 'How long do locked issue-age rates stay level?', a: 'Rates lock at your issue age and remain level for life provided required monthly premiums continue to be paid.' }
+                ]
+            };
+        }
+        if (path.includes('iul')) {
+            return activeLang === 'es' ? {
+                heading: 'Cómo Funciona el Piso del 0% y el Código IRS 7702 en Tampa Bay',
+                paragraphs: [
+                    'Profesionales de la salud en Westshore, dueños de empresas en Tampa y familias en St. Petersburg emplean seguros de Vida Universal Indexada (IUL) para combinar protección permanente por fallecimiento con potencial acumulación de valor en efectivo ligada al S&P 500, sujeta a topes y tasas de participación.',
+                    'Es fundamental entender cómo opera la estructura contractual: el componente de acreditación indexada puede contar con un piso contractual del 0% frente a años negativos del índice bursátil; sin embargo, los cargos internos del seguro (COI), costos administrativos y tarifas de cláusulas adicionales continúan deduciéndose del valor en efectivo. Cuando se estructura adecuadamente sin convertirse en un MEC y permanece vigente, los préstamos sobre póliza pueden acceder al efectivo con tratamiento fiscal potencialmente favorable (consulte a su asesor tributario).'
+                ],
+                faqs: [
+                    { q: '¿Qué diferencia a un IUL de un plan 401(k) o Roth IRA para residentes de Tampa?', a: 'A diferencia del 401(k) o Roth IRA, un IUL no tiene límites federales de ingresos para contribuir, ofrece beneficio por fallecimiento y acceso a préstamos antes de los 59½ años cuando la póliza está bien financiada, además de protecciones legales estatutarias en Florida (FS 222.14).' },
+                    { q: '¿El valor en efectivo de un IUL puede bajar aunque el índice tenga piso del 0%?', a: 'Sí. El piso del 0% evita que se acredite un interés negativo por caída del índice, pero el costo mensual del seguro (COI), gastos de póliza y cargos adicionales siguen descontándose del valor acumulado.' }
+                ]
+            } : {
+                heading: 'Understanding Contractual 0% Index Floors & IRS Section 7702 in Tampa',
+                paragraphs: [
+                    'Physicians near Tampa General, Westshore executives, and St. Petersburg business owners use Indexed Universal Life (IUL) policies to pair permanent death benefit protection with supplemental cash value accumulation potential linked to external indices like the S&P 500, subject to contractual cap and participation rates.',
+                    'Clear contract transparency matters: while the index-crediting component may include a contractual 0% floor so negative index years do not trigger negative index crediting, internal Cost of Insurance (COI) deductions, administrative fees, and rider charges still apply to policy cash value. Properly funded non-MEC policies kept in force may access accumulated cash value via policy loans under IRS Section 7702 (consult a qualified tax professional).'
+                ],
+                faqs: [
+                    { q: 'Can an IUL cash value still decline during a 0% index crediting year?', a: 'Yes. The contractual 0% floor applies strictly to the index crediting rate itself; ongoing Cost of Insurance (COI), policy fees, and optional rider deductions still reduce cash value if crediting equals 0%.' },
+                    { q: 'Does Florida law offer creditor protection on life insurance cash value?', a: 'Under Florida Statute 222.14, cash surrender value and proceeds of life insurance policies payable to qualifying beneficiaries receive statutory creditor protections subject to legal review.' }
+                ]
+            };
+        }
+        return activeLang === 'es' ? {
+            heading: 'Asesoría Bilingüe en Florida Central (2026–2027) y Comparativa de Redes',
+            paragraphs: [
+                'En Orlando, Kissimmee, Lake Nona y Winter Park, elegir correctamente entre sistemas como AdventHealth Orlando y Orlando Health depende de revisar redes médicas, deducibles vigentes y formularios de medicamentos antes de inscribirse. Para 2026, Medicare contempla un deducible de Parte B de $283, deducible hospitalario Parte A de $1,736, tope de recetas Parte D de $2,100 y máximo en red Advantage de $9,250; para cobertura 2027, el tope Parte D sube a $2,400 y el máximo Advantage en red es $9,850 (confirme Parte A/B 2027 en CMS.gov).',
+                'Para quienes buscan protección familiar y planificación de retiro, comparamos pólizas permanentes de Gastos Finales ($5,000–$35,000), Dental y Visión, Anualidades Fijas e IUL con explicaciones transparentes de cargos contractuales y sin honorarios de corretaje. Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para conocer todas sus opciones.'
+            ],
+            faqs: [
+                { q: '¿Cuál es la fecha límite clave del periodo AEP de Medicare?', a: 'El Periodo Anual de Inscripción (AEP) cierra el 7 de diciembre cada año para cambios efectivos el 1 de enero del siguiente año calendario.' },
+                { q: '¿Tiene algún costo hablar en español con Andrés Bozo en Orlando o Kissimmee?', a: 'Ninguno. Nuestra asesoría y comparativa independiente entre aseguradoras licenciadas en Florida es 100% gratuita para usted.' }
+            ]
+        } : {
+            heading: 'Central Florida Bilingual Medicare & Life Planning (2026–2027 Guide)',
+            paragraphs: [
+                'Across Orlando, Kissimmee, Lake Nona, and Winter Park, coordinating coverage around AdventHealth Orlando and Orlando Health begins with verifying hospital acceptance, prescription formularies, and out-of-pocket caps before December 7. For 2026, CMS sets the Part B deductible at $283, Part A inpatient deductible at $1,736, Part D Rx out-of-pocket cap at $2,100, and Advantage in-network cap at $9,250; for 2027 coverage, the Part D cap is $2,400 and the Advantage in-network MOOP cap is $9,850 (verify 2027 Part A/B deductibles on CMS.gov).',
+                'Beyond Medicare, bilingual consultations cover permanent Final Expense policies ($5,000–$35,000), Senior Dental & Vision plans, Fixed Annuities, and IUL policies with transparent explanations of policy charges and zero broker fees. CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all your options.'
+            ],
+            faqs: [
+                { q: 'When does the Medicare Annual Enrollment Period (AEP) end?', a: 'AEP runs through December 7 each year for coverage changes taking effect on January 1.' },
+                { q: 'Do I pay higher premiums when working with bilingual broker Andres Bozo?', a: 'No. Florida insurance rates are regulated and identical whether you enroll directly or through our agency at zero service fee.' }
+            ]
+        };
+    };
+
+    const extendedGuide = getExtendedGuide();
+
     return (
         <div className="bg-white text-dark-gray font-sans flex flex-col min-h-screen pb-20 md:pb-0">
             <SEOHead 
@@ -219,17 +370,24 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 description={details.description}
                 pathname={path}
                 language={activeLang}
-                ogImage={path.includes('miami') || path.includes('burial') || path.includes('gastos-finales')
-                    ? "https://www.ahbinsurancesolutions.com/images/final-expense-family.webp"
-                    : path.includes('iul')
-                    ? "https://www.ahbinsurancesolutions.com/images/iul-wealth-retirement.webp"
-                    : path.includes('orlando')
-                    ? "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
-                    : "https://www.ahbinsurancesolutions.com/og-image.png"
+                ogImage={
+                    path.includes('miami') || path.includes('burial') || path.includes('gastos-finales')
+                        ? "https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg"
+                        : path.includes('iul')
+                        ? "https://www.ahbinsurancesolutions.com/og/iul-og.jpg"
+                        : path.includes('medicare')
+                        ? "https://www.ahbinsurancesolutions.com/og/medicare-og.jpg"
+                        : path.includes('annuit') || path.includes('anualidad')
+                        ? "https://www.ahbinsurancesolutions.com/og/annuities-og.jpg"
+                        : path.includes('dental')
+                        ? "https://www.ahbinsurancesolutions.com/og/dental-vision-og.jpg"
+                        : path.includes('orlando')
+                        ? "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
+                        : "https://www.ahbinsurancesolutions.com/og-image.png"
                 }
                 ogImageAlt={details.title}
                 datePublished="2024-01-15"
-                dateModified="2026-10-10"
+                dateModified="2026-11-16"
                 schema={[localBusinessSchema, breadcrumbSchema]}
             />
             {/* Header / Sub Nav */}
@@ -305,8 +463,10 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                                     Call +1 (352) 225-8389
                                 </a>
                             </div>
-                            <p className="text-xs text-gray-400 mt-4 font-mono">
-                                National Producer Number (NPN): 21228432 | Florida License: Andres Bozo
+                            <p className="text-xs text-gray-300 mt-4 font-mono">
+                                {activeLang === 'es'
+                                    ? 'Andrés H. Bozo · Broker Licenciado Florida (NPN: 21228432) · Actualizado: 16 Nov 2026'
+                                    : 'Andres H. Bozo · Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026'}
                             </p>
                         </div>
                     </div>
@@ -349,6 +509,52 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Route-Specific Educational Guide & Local FAQs */}
+                <section className="py-12 bg-white border-b border-gray-100">
+                    <div className="container mx-auto px-4 md:px-6 max-w-4xl space-y-6 text-sm md:text-base text-gray-700 leading-relaxed">
+                        <div className="space-y-4">
+                            <h2 className="text-2xl md:text-3xl font-black font-heading text-primary">
+                                {extendedGuide.heading}
+                            </h2>
+                            {extendedGuide.paragraphs.map((p, idx) => (
+                                <p key={idx}>{p}</p>
+                            ))}
+                        </div>
+
+                        <div className="bg-light-gray rounded-2xl p-6 border border-gray-200 space-y-4">
+                            <h3 className="text-lg font-black font-heading text-primary">
+                                {activeLang === 'es' ? 'Preguntas Frecuentes Clave' : 'Frequently Asked Questions'}
+                            </h3>
+                            <dl className="space-y-3">
+                                {extendedGuide.faqs.map((faq, idx) => (
+                                    <div key={idx} className="bg-white p-4 rounded-xl border border-gray-200">
+                                        <dt className="font-bold text-primary text-sm mb-1">{faq.q}</dt>
+                                        <dd className="text-xs md:text-sm text-gray-700 leading-relaxed">{faq.a}</dd>
+                                    </div>
+                                ))}
+                            </dl>
+                        </div>
+
+                        <div className="pt-4 border-t border-gray-100 space-y-3">
+                            <h2 className="text-xl font-black font-heading text-primary">
+                                {activeLang === 'es'
+                                    ? 'Orientación Independiente y Regulada en Florida'
+                                    : 'Independent Florida Guidance With Consumer Transparency'}
+                            </h2>
+                            <p className="text-sm text-gray-700">
+                                {activeLang === 'es'
+                                    ? 'Al comparar pólizas en Florida —ya sea Suplemento de Medicare (Medigap Plan G y Plan N), Seguro de Gastos Finales de Entierro, Seguro Dental y Visión o Vida Universal Indexada (IUL)— la estructura contractual exacta depende de su condado, código postal, edad y elegibilidad médica.'
+                                    : 'When evaluating coverage across Florida—whether Medicare Supplement (Medigap Plan G and Plan N), Final Expense whole life, Senior Dental and Vision, Fixed Annuities, or Indexed Universal Life (IUL)—contract terms, pricing, and underwriting vary by county, ZIP code, issue age, and health history.'}
+                            </p>
+                            <p className="text-sm text-gray-700">
+                                {activeLang === 'es'
+                                    ? 'Andrés H. Bozo (Licencia Florida DFS / NPN 21228432) brinda asesoría bilingüe en nuestra sede de 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 y de forma remota en Miami, Tampa Bay, Orlando, Jacksonville y todo el estado sin honorarios de corretaje. La inscripción en planes de Medicare, vida o anualidades no es obligatoria y ninguna cobertura entra en vigor sin solicitud formal y aprobación de la aseguradora.'
+                                    : 'Andres H. Bozo (Florida DFS License / NPN 21228432) provides bilingual consultations from 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 and statewide across Miami-Dade, Hillsborough, Orange, Duval, and Broward counties with zero broker fees. Coverage is always subject to carrier underwriting and policy terms.'}
+                            </p>
                         </div>
                     </div>
                 </section>
