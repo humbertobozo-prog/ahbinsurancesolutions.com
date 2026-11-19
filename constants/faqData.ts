@@ -38,8 +38,8 @@ export const faqsEs: FaqItem[] = [
   },
   {
     category: 'medicare',
-    q: '¿Qué es el Período Anual de Inscripción Abierta (AEP) de Medicare (15 oct – 7 dic)?',
-    a: 'El Período Anual de Inscripción de Medicare (AEP) se celebra del 15 de octubre al 7 de diciembre. Durante este período, los beneficiarios en Florida pueden inscribirse o cambiarse de plan Medicare Advantage (Parte C) o de medicamentos (Parte D) para el año de beneficios 2027. Además, puede consultar con el corredor Andrés Bozo en cualquier momento del año para evaluar suplementos Medigap.'
+    q: '¿Qué es el Período Anual de Inscripción Abierta (AEP) de Medicare (15 oct – 7 dic 2026)?',
+    a: 'El Período Anual de Inscripción de Medicare (AEP) se celebra del 15 de octubre al 7 de diciembre de 2026. Durante este período, los beneficiarios en Florida pueden inscribirse o cambiarse de plan Medicare Advantage (Parte C) o de medicamentos (Parte D) para el año de beneficios 2027. Además, puede consultar con el corredor Andrés Bozo en cualquier momento del año para evaluar suplementos Medigap.'
   },
 
   // Final Expense (6)
@@ -105,12 +105,12 @@ export const faqsEs: FaqItem[] = [
   {
     category: 'iul',
     q: '¿Cómo funciona una póliza de Seguro de Vida Universal Indexada (IUL)?',
-    a: 'Combina protección permanente por fallecimiento con valor en efectivo vinculado a un índice externo (como el S&P 500). Cuenta con un piso contractual del 0% frente a pérdidas bursátiles directas y permite acceder a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del Código IRS, siempre que la póliza esté debidamente fondeada, no sea un MEC y se mantenga en vigor.'
+    a: 'Combina protección permanente por fallecimiento con valor en efectivo vinculado a un índice externo (como el S&P 500). Su componente indexado puede contar con un piso contractual del 0% en la acreditación del índice (los cargos internos de la póliza y el costo del seguro COI siguen aplicándose) y permite acceder a préstamos de póliza con ventajas fiscales bajo la Sección 7702 del Código IRS, siempre que la póliza esté debidamente fondeada, no sea un MEC y se mantenga en vigor.'
   },
   {
     category: 'iul',
     q: '¿Puedo perder mi valor en efectivo si la bolsa de valores cae?',
-    a: 'El componente de acreditación indexada cuenta con un piso contractual del 0%, por lo que a la estrategia de índice no se le acreditan rendimientos negativos durante caídas del mercado. No obstante, los costos internos de seguro (COI) y cargos administrativos continúan deduciéndose periódicamente.'
+    a: 'El componente de acreditación indexada puede contar con un piso contractual del 0%, por lo que a la estrategia de índice no se le acreditan rendimientos negativos durante caídas del mercado. No obstante, los costos internos de seguro (COI) y cargos administrativos continúan deduciéndose periódicamente.'
   },
   {
     category: 'iul',
@@ -137,7 +137,7 @@ export const faqsEs: FaqItem[] = [
   {
     category: 'annuities',
     q: '¿Qué es una Anualidad Fija Indexada (FIA)?',
-    a: 'Es un contrato con una aseguradora que ofrece crecimiento de intereses con impuestos diferidos vinculado a un índice externo de mercado (como el S&P 500), con un piso contractual del 0% que protege el saldo contra caídas del índice (sujeto a las condiciones del contrato, gastos y cargos por rescate si aplican).'
+    a: 'Es un contrato con una aseguradora que ofrece crecimiento de intereses con impuestos diferidos vinculado a un índice externo de mercado (como el S&P 500) y puede contar con un piso contractual del 0% en la acreditación del índice en años negativos del mercado; la acreditación indexada no protege el saldo frente a cargos del contrato, tarifas de cláusulas adicionales o cargos por rescate si aplican.'
   },
   {
     category: 'annuities',
@@ -217,8 +217,8 @@ export const faqsEn: FaqItem[] = [
   },
   {
     category: 'medicare',
-    q: 'What is the Medicare Annual Enrollment Period (AEP, Oct 15 – Dec 7)?',
-    a: 'The Medicare Annual Enrollment Period (AEP) runs from October 15 through December 7. During this crucial window, Florida beneficiaries can join, switch, or drop Medicare Advantage (Part C) and Part D drug plans for coverage starting January 1, 2027. Independent broker Andres Bozo is also available year-round to evaluate Medigap supplement policies.'
+    q: 'What is the Medicare Annual Enrollment Period (AEP, Oct 15 – Dec 7, 2026)?',
+    a: 'The Medicare Annual Enrollment Period (AEP) runs from October 15 through December 7, 2026. During this crucial window, Florida beneficiaries can join, switch, or drop Medicare Advantage (Part C) and Part D drug plans for coverage starting January 1, 2027. Independent broker Andres Bozo is also available year-round to evaluate Medigap supplement policies.'
   },
 
   // Final Expense (6)

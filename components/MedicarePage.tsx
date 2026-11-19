@@ -283,8 +283,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 <h3 className="font-bold text-amber-900 mb-1 text-sm">{isEs ? 'Deducibles de Hospital Elevados' : 'High Hospital Deductibles'}</h3>
                                 <p className="text-xs text-amber-800 leading-relaxed">
                                     {isEs 
-                                        ? 'En 2026, el deducible oficial de hospitalización de la Parte A es de $1,736 por cada período de beneficio de 60 días (puede repetirse varias veces al año; confirme las cifras de 2027 en CMS.gov).' 
-                                        : 'In 2026, the official CMS Part A inpatient hospital deductible is $1,736 per 60-day benefit period, which can occur multiple times in a year (verify 2027 figures on CMS.gov).'}
+                                        ? 'El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (puede repetirse varias veces en un mismo año calendario).' 
+                                        : 'The official CMS Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per 60-day benefit period, which can apply multiple times in a calendar year.'}
                                 </p>
                             </div>
                         </div>
@@ -398,8 +398,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     </h3>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                         {isEs 
-                                            ? 'La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por CMS para cobertura 2027; los planes Advantage en red tienen tope federal MOOP de $9,250 en 2026 y $9,850 en 2027). Además, los "Derechos de Emisión Garantizada" le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.'
-                                            : 'Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 CMS-confirmed cap for 2027 coverage; MA in-network MOOP ceiling is $9,250 in 2026 / $9,850 in 2027). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.'}
+                                            ? 'La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por CMS para cobertura 2027; el tope máximo legal en red para Advantage fijado por CMS es de $9,250 en 2026 y $9,850 en 2027, aunque cada plan puede fijar un límite menor). Además, los "Derechos de Emisión Garantizada" le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.'
+                                            : 'Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 CMS-confirmed cap for 2027 coverage; CMS mandatory MA in-network MOOP ceiling is $9,250 in 2026 and $9,850 in 2027, though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.'}
                                     </p>
                                 </div>
                                 <span className="text-[11px] font-bold text-emerald-700 block pt-3 border-t border-gray-200">
@@ -419,7 +419,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible de Hospital Parte A ($1,736 en 2026)' : 'Part A Hospital Deductible ($1,736 in 2026)'}</td>
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible de Hospital Parte A ($1,736 en 2026; $1,776 en 2027)' : 'Part A Hospital Deductible ($1,736 in 2026; $1,776 in 2027)'}</td>
                                         <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
                                         <td className="p-4 text-emerald-700 font-bold">{isEs ? 'Cubierto 100%' : '100% Covered'}</td>
                                     </tr>
@@ -429,7 +429,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         <td className="p-4 text-amber-700 font-medium">{isEs ? 'Copago hasta $20 por consulta / $50 en ER' : 'Up to $20 copay / $50 ER copay'}</td>
                                     </tr>
                                     <tr className="hover:bg-gray-50">
-                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible Anual Parte B ($283 en 2026; ver CMS.gov para 2027)' : 'Part B Annual Deductible ($283 in 2026; check CMS.gov for 2027)'}</td>
+                                        <td className="p-4 font-bold text-primary">{isEs ? 'Deducible Anual Parte B ($283 en 2026; $292 en 2027 · prima estándar 2027: $209.40/mes)' : 'Part B Annual Deductible ($283 in 2026; $292 in 2027 · $209.40/mo 2027 std. premium)'}</td>
                                         <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
                                         <td className="p-4 text-rose-700 font-medium">{isEs ? 'No cubierto (Por Ley)' : 'Not Covered (By Law)'}</td>
                                     </tr>
@@ -638,11 +638,11 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
 
                             <div className="bg-white p-5 rounded-xl border border-gray-200">
                                 <span className="text-primary font-black text-xs uppercase tracking-wider block mb-1">AEP</span>
-                                <h3 className="font-bold text-primary mb-2 text-sm">{isEs ? 'Inscripción Anual (Oct 15 - Dic 7)' : 'Annual Enrollment (Oct 15 - Dec 7)'}</h3>
+                                <h3 className="font-bold text-primary mb-2 text-sm">{isEs ? 'Inscripción Anual (15 Oct – 7 Dic 2026)' : 'Annual Enrollment (Oct 15 – Dec 7, 2026)'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'Período anual para modificar planes de medicamentos Parte D o evaluar opciones de Medicare Advantage para el año siguiente.' 
-                                        : 'Annual period to join, drop, or switch Medicare Advantage and Part D drug plans for the upcoming coverage year.'}
+                                        ? 'Período anual de otoño (15 oct – 7 dic 2026) para modificar planes de medicamentos Parte D o Medicare Advantage con cobertura vigente desde el 1 de enero de 2027.' 
+                                        : 'Annual fall window (Oct 15 – Dec 7, 2026) to join, drop, or switch Medicare Advantage and Part D drug plans effective Jan 1, 2027.'}
                                 </p>
                             </div>
                         </div>

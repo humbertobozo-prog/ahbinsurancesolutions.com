@@ -373,6 +373,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                     </svg>
                                     <span>{isEs ? 'Verificar Licencia en DFS Florida' : 'Verify License on FL DFS'}</span>
                                 </a>
+                                <a
+                                    href="https://nipr.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 text-xs text-gray-300 hover:text-white border border-white/20 hover:border-white/40 px-4 py-3 rounded-xl transition-all"
+                                    title={isEs ? "Verificar NPN 21228432 en el registro nacional NIPR" : "Verify NPN 21228432 in the National Insurance Producer Registry (NIPR)"}
+                                >
+                                    <span>{isEs ? 'Registro Nacional NIPR' : 'Verify NPN on NIPR'}</span>
+                                </a>
                             </div>
                         </div>
                     </div>

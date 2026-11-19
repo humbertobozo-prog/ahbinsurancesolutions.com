@@ -27,7 +27,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
     const faqs = isEs ? [
         {
             q: "¿Cómo funciona la garantía de piso del 0% en un seguro IUL?",
-            a: "El componente de acreditación indexada de un IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total."
+            a: "El componente de acreditación indexada de un IUL puede contar con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total."
         },
         {
             q: "¿Los préstamos para el retiro de una póliza IUL son dinero libre de impuestos garantizado?",
@@ -278,8 +278,8 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                                 <h3 className="font-bold text-primary mb-2 text-base">{isEs ? 'Piso Contractual del 0%' : 'Contractual 0% Crediting Floor'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? 'El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo. Sin embargo, los cargos de la póliza y costos del seguro se siguen deduciendo.' 
-                                        : 'The index-crediting component has a contractual 0% floor, meaning the strategy is not credited with a negative index return. However, policy charges, cost of insurance, and withdrawals still apply.'}
+                                        ? 'El componente de acreditación indexada puede contar con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo. Sin embargo, los cargos de la póliza y costos del seguro se siguen deduciendo.' 
+                                        : 'The index-crediting component may feature a contractual 0% floor, meaning the strategy is not credited with a negative index return. However, policy charges, cost of insurance, and withdrawals still apply.'}
                                 </p>
                             </div>
 

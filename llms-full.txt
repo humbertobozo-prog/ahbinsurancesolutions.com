@@ -14,9 +14,9 @@ Spanish URL: /es/seguro-medicare-florida
 Medicare in Florida consists of Original Medicare (Part A for hospital coverage, Part B for medical provider coverage), Part C (Medicare Advantage HMO/PPO), and Part D (Prescription Drug coverage).
 
 ### Medicare Supplement (Medigap) vs. Medicare Advantage
-- **Medigap Plan G**: The most popular supplement plan for new enrollees. Covers 100% of out-of-pocket costs after the annual Part B deductible ($283 in 2026; check CMS.gov for final 2027 figures). Allows policyholders to visit any doctor or hospital in the USA that accepts Medicare without network restrictions, referrals, or prior authorizations.
+- **Medigap Plan G**: The most popular supplement plan for new enrollees. Covers 100% of out-of-pocket costs after the annual Part B deductible ($283 in 2026; $292 in 2027, with $209.40/mo 2027 standard Part B premium) and also covers the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027). Allows policyholders to visit any doctor or hospital in the USA that accepts Medicare without network restrictions, referrals, or prior authorizations.
 - **Medigap Plan N**: Lower monthly premium option where policyholders pay up to a $20 copay for office visits and $50 for ER visits, plus Part B excess charges.
-- **Medicare Advantage (Part C)**: Managed care plans (HMO/PPO) combining Part A, Part B, and usually Part D into one plan. Often offers extra benefits like dental/vision allowances, but enforces regional networks, specialist referrals, and annual in-network out-of-pocket maximums capped federally at $9,250 in 2026 ($9,850 in 2027). Part D covered Rx out-of-pocket cap is $2,100 in 2026 ($2,400 confirmed by CMS for 2027).
+- **Medicare Advantage (Part C)**: Managed care plans (HMO/PPO) combining Part A, Part B, and usually Part D into one plan. Often offers extra benefits like dental/vision allowances, but enforces regional networks, specialist referrals, and annual in-network out-of-pocket maximums governed by CMS's federal ceiling of $9,250 in 2026 and $9,850 in 2027 (individual plans may set lower limits). Part D covered Rx out-of-pocket cap is $2,100 in 2026 ($2,400 confirmed by CMS for 2027).
 
 ---
 

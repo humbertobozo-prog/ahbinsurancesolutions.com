@@ -53,7 +53,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                     ] : [
                         { title: "Medigap Plan G & N Comparison", desc: "Compare Plan G and Plan N premiums side-by-side across top Florida carriers." },
                         { title: "Nationwide Provider Flexibility", desc: "See any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules." },
-                        { title: "CMS 2026–2027 Clarity", desc: "Understand the $283 Part B deductible (2026) and $2,400 Part D cap for 2027 before Dec 7." }
+                        { title: "CMS 2026–2027 Clarity", desc: "Compare 2026 vs. 2027 Part B ($283/$292) & Part D ($2,100/$2,400) rules before Dec 7, 2026." }
                     ]
                 };
             case '/final-expense-miami':
@@ -341,17 +341,17 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
         return activeLang === 'es' ? {
             heading: 'Asesoría Bilingüe en Florida Central (2026–2027) y Comparativa de Redes',
             paragraphs: [
-                'En Orlando, Kissimmee, Lake Nona y Winter Park, elegir correctamente entre sistemas como AdventHealth Orlando y Orlando Health depende de revisar redes médicas, deducibles vigentes y formularios de medicamentos antes de inscribirse. Para 2026, Medicare contempla un deducible de Parte B de $283, deducible hospitalario Parte A de $1,736, tope de recetas Parte D de $2,100 y máximo en red Advantage de $9,250; para cobertura 2027, el tope Parte D sube a $2,400 y el máximo Advantage en red es $9,850 (confirme Parte A/B 2027 en CMS.gov).',
+                'En Orlando, Kissimmee, Lake Nona y Winter Park, elegir correctamente entre sistemas como AdventHealth Orlando y Orlando Health depende de revisar redes médicas, deducibles vigentes y formularios de medicamentos antes del 7 de diciembre de 2026. Para 2026, Medicare contempla un deducible de Parte B de $283, prima estándar de $202.90/mes, deducible hospitalario Parte A de $1,736, tope Parte D de $2,100 y tope máximo federal Advantage en red de $9,250; para cobertura 2027, CMS estableció un deducible Parte B de $292, prima estándar Parte B de $209.40/mes, deducible Parte A de $1,776, tope Parte D de $2,400 y tope máximo federal Advantage en red de $9,850 (cada plan puede fijar un límite menor).',
                 'Para quienes buscan protección familiar y planificación de retiro, comparamos pólizas permanentes de Gastos Finales ($5,000–$35,000), Dental y Visión, Anualidades Fijas e IUL con explicaciones transparentes de cargos contractuales y sin honorarios de corretaje. Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para conocer todas sus opciones.'
             ],
             faqs: [
-                { q: '¿Cuál es la fecha límite clave del periodo AEP de Medicare?', a: 'El Periodo Anual de Inscripción (AEP) cierra el 7 de diciembre cada año para cambios efectivos el 1 de enero del siguiente año calendario.' },
+                { q: '¿Cuál es la fecha límite clave del periodo AEP de Medicare?', a: 'El Periodo Anual de Inscripción (AEP) culmina el 7 de diciembre de 2026 (y cada año del 15 de octubre al 7 de diciembre) para cambios efectivos el 1 de enero de 2027.' },
                 { q: '¿Tiene algún costo hablar en español con Andrés Bozo en Orlando o Kissimmee?', a: 'Ninguno. Nuestra asesoría y comparativa independiente entre aseguradoras licenciadas en Florida es 100% gratuita para usted.' }
             ]
         } : {
             heading: 'Central Florida Bilingual Medicare & Life Planning (2026–2027 Guide)',
             paragraphs: [
-                'Across Orlando, Kissimmee, Lake Nona, and Winter Park, coordinating coverage around AdventHealth Orlando and Orlando Health begins with verifying hospital acceptance, prescription formularies, and out-of-pocket caps before December 7. For 2026, CMS sets the Part B deductible at $283, Part A inpatient deductible at $1,736, Part D Rx out-of-pocket cap at $2,100, and Advantage in-network cap at $9,250; for 2027 coverage, the Part D cap is $2,400 and the Advantage in-network MOOP cap is $9,850 (verify 2027 Part A/B deductibles on CMS.gov).',
+                'Across Orlando, Kissimmee, Lake Nona, and Winter Park, coordinating coverage around AdventHealth Orlando and Orlando Health begins with verifying hospital acceptance, prescription formularies, and out-of-pocket caps before December 7, 2026. For 2026, CMS sets the Part B deductible at $283 ($202.90/mo standard premium), Part A deductible at $1,736, Part D Rx cap at $2,100, and mandatory Advantage in-network MOOP ceiling at $9,250; for 2027 coverage, CMS finalized a $292 Part B deductible, $209.40/mo Part B standard premium, $1,776 Part A deductible, $2,400 Part D cap, and $9,850 federal Advantage MOOP ceiling (individual plans may set lower limits).',
                 'Beyond Medicare, bilingual consultations cover permanent Final Expense policies ($5,000–$35,000), Senior Dental & Vision plans, Fixed Annuities, and IUL policies with transparent explanations of policy charges and zero broker fees. CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all your options.'
             ],
             faqs: [

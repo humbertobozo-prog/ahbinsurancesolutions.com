@@ -42,11 +42,11 @@ export const BLOG_POSTS: BlogPost[] = [
             es: 'Inscripción Abierta Medicare Florida 2027'
         },
         excerpt: {
-            en: 'Complete guide to Florida Medicare AEP (Oct 15–Dec 7) for 2027 coverage: Medigap Plan G vs N, Part D caps & pre-Dec 7 checklist with Andres Bozo.',
-            es: 'Guía del AEP de Medicare en Florida (15 oct–7 dic) para 2027: Medigap Plan G vs N, topes Parte D y checklist antes del 7 de diciembre con Andrés Bozo.'
+            en: 'Complete guide to Florida Medicare AEP (Oct 15–Dec 7, 2026) for 2027 coverage: Medigap Plan G vs N, Part D caps & checklist with Andres Bozo.',
+            es: 'Guía del AEP de Medicare en Florida (15 oct–7 dic 2026) para 2027: Medigap Plan G vs N, topes Parte D y checklist antes del 7 de diciembre con Andrés Bozo.'
         },
         category: 'medicare',
-        date: '2026-11-16',
+        date: '2026-11-18',
         readTime: '7 min read',
         author: {
             name: 'Andres H. Bozo',
@@ -65,10 +65,10 @@ Enrolling in Medicare can feel overwhelming with dozens of competing insurance c
 
 ### Key CMS Medicare Figures (2026 vs. Confirmed 2027 Rules)
 
-1. **Part A Inpatient Hospital Deductible (2026 CMS):** $1,736 per benefit period (not once per year). Official 2027 Part A/B deductibles are published separately by CMS.gov each fall.
-2. **Part B Medical Deductible & Coinsurance (2026 CMS):** $283 annual deductible, after which Original Medicare covers 80% and leaves 20% coinsurance with no annual cap.
+1. **Part A Inpatient Hospital Deductible:** $1,736 per benefit period in 2026, increasing to **$1,776 per benefit period in 2027** per CMS.
+2. **Part B Medical Deductible, Standard Premium & Coinsurance:** $283 annual deductible ($202.90/mo standard premium) in 2026, shifting to a **$292 annual deductible ($209.40/mo standard premium) in 2027**, after which Original Medicare covers 80% and leaves 20% coinsurance with no annual cap.
 3. **Part D Out-of-Pocket Rx Cap:** $2,100 in 2026, increasing to **$2,400 confirmed by CMS for 2027** covered prescriptions.
-4. **Medicare Advantage In-Network MOOP Cap:** $9,250 federal ceiling in 2026, shifting to **$9,850 federal ceiling in 2027** (actual plan MOOPs vary by county and carrier).
+4. **Medicare Advantage In-Network MOOP Ceiling:** $9,250 federal ceiling in 2026, shifting to **$9,850 federal ceiling in 2027** ($14,800 combined PPO ceiling; individual plans may set lower limits by county and carrier).
 
 ### Original Medicare vs. Medicare Advantage (Part C)
 
@@ -80,12 +80,12 @@ Medicare Advantage replaces Original Medicare with a private managed care networ
 ### Medicare Supplement Plans (Medigap)
 Medigap policies work alongside Original Medicare to pay remaining deductibles, copays, and the 20% coinsurance, allowing you to visit any U.S. provider accepting Medicare without referrals:
 
-1. **Plan G:** Covers 100% of Medicare-approved medical out-of-pocket costs once you satisfy the annual Part B deductible ($283 in 2026).
+1. **Plan G:** Covers 100% of Medicare-approved medical out-of-pocket costs once you satisfy the annual Part B deductible ($283 in 2026; $292 in 2027).
 2. **Plan N:** Offers lower monthly premiums with up to a $20 office copay and $50 ER copay (if not admitted), while not covering Part B excess charges.
 
-### Pre-December 7 AEP Action Checklist (For Coverage Effective Jan 1, 2027)
+### Pre-December 7, 2026 AEP Action Checklist (For Coverage Effective Jan 1, 2027)
 
-1. **Audit Your Annual Notice of Change (ANOC):** Review any premium, copay, or network updates your current Advantage or Part D carrier sent for 2027 before December 7.
+1. **Audit Your Annual Notice of Change (ANOC):** Review any premium, copay, or network updates your current Advantage or Part D carrier sent for 2027 before December 7, 2026.
 2. **Verify All Doctors & Specialists:** Confirm your primary physician, cardiologist, and preferred hospital network (such as UF Health, Baptist, AdventHealth, or Moffitt) remain in-network for 2027.
 3. **Run Your Exact Prescription List:** Check every dosage against the carrier's 2027 formulary, paying attention to drug tiers, prior authorization rules, and the confirmed $2,400 Part D cap.
 4. **Evaluate Medigap Switching Rules Early:** If moving from Medicare Advantage back to Medigap outside a 12-month Trial Right, complete underwriting evaluation before canceling your existing coverage.
@@ -93,12 +93,12 @@ Medigap policies work alongside Original Medicare to pay remaining deductibles, 
 ### Key Enrollment Windows in Florida
 
 1. **Initial Enrollment Period (IEP):** 7-month window starting 3 months before your 65th birthday month.
-2. **Annual Enrollment Period (AEP):** October 15 through December 7 each year for Medicare Advantage and Part D changes taking effect January 1, 2027.
+2. **Annual Enrollment Period (AEP):** October 15 through December 7, 2026 for Medicare Advantage and Part D changes taking effect January 1, 2027.
 3. **Special Enrollment Periods (SEP):** Triggered when moving counties, losing employer coverage, or qualifying for Extra Help.
 
 Read our complete guide on [Medicare Supplement (Medigap) Plans in Florida](/medicare-florida) to compare Plan G, Plan N, and county options.
 
-> Need expert assistance before December 7? Call licensed broker Andres H. Bozo directly at +1 (352) 225-8389 (NPN 21228432) for a free, objective comparison.
+> Need expert assistance before December 7, 2026? Call licensed broker Andres H. Bozo directly at +1 (352) 225-8389 (NPN 21228432) for a free, objective comparison.
             `,
             es: `
 ## Cómo Navegar Medicare en Florida y el AEP para Cobertura 2027
@@ -107,10 +107,10 @@ Inscribirse en Medicare puede resultar abrumador ante tantas compañías promoci
 
 ### Cifras Clave Oficiales de CMS (Comparativa 2026 vs. Confirmadas 2027)
 
-1. **Deducible Hospitalario Parte A (CMS 2026):** $1,736 por cada período de beneficio de 60 días (puede repetirse en el mismo año). Las cifras finales de Parte A y Parte B para 2027 deben confirmarse directamente en CMS.gov al publicarse.
-2. **Deducible Anual y Coseguro Parte B (CMS 2026):** $283 de deducible anual; luego Medicare Original cubre el 80% y usted asume el 20% sin límite anual.
+1. **Deducible Hospitalario Parte A:** $1,736 en 2026 y **$1,776 en 2027** por cada período de beneficio de 60 días según CMS (puede repetirse en el mismo año).
+2. **Deducible Anual, Prima Estándar y Coseguro Parte B:** $283 de deducible anual ($202.90/mes de prima estándar) en 2026, pasando a **$292 de deducible anual ($209.40/mes de prima estándar) en 2027**; luego Medicare Original cubre el 80% y usted asume el 20% sin límite anual.
 3. **Tope Máximo de Medicamentos Parte D:** $2,100 en 2026 y **$2,400 confirmados por CMS para 2027** en recetas cubiertas.
-4. **Límite de Bolsillo Medicare Advantage en Red (MOOP):** Tope federal de $9,250 en 2026, ajustado a **$9,850 en 2027** (cada plan define su máximo específico por condado).
+4. **Tope Federal de Bolsillo Medicare Advantage en Red (MOOP):** Tope legal federal de $9,250 en 2026, ajustado a **$9,850 en 2027** ($14,800 combinado PPO; cada plan define su límite específico igual o menor según condado y aseguradora).
 
 ### Medicare Original vs. Medicare Advantage (Parte C)
 
@@ -122,12 +122,12 @@ Reemplaza al Medicare Original mediante redes privadas (HMO o PPO), integrando h
 ### Planes Suplementarios de Medicare (Medigap)
 Los planes Medigap complementan al Medicare Original y permiten atenderse con cualquier médico en EE.UU. que acepte Medicare sin requerir referidos:
 
-1. **Plan G:** Cubre el 100% de los costos médicos aprobados por Medicare una vez satisfecho el deducible anual de la Parte B ($283 en 2026).
+1. **Plan G:** Cubre el 100% de los costos médicos aprobados por Medicare una vez satisfecho el deducible anual de la Parte B ($283 en 2026; $292 en 2027).
 2. **Plan N:** Ofrece primas mensuales más bajas a cambio de copagos de hasta $20 en consulta médica y $50 en sala de emergencias (si no es hospitalizado), sin cubrir cargos en exceso de la Parte B.
 
-### Qué Hacer Antes del 7 de Diciembre (Cierre del AEP para 2027)
+### Qué Hacer Antes del 7 de Diciembre de 2026 (Cierre del AEP para 2027)
 
-1. **Revise su Carta ANOC (Cambio Anual):** Verifique cambios de prima, deducibles, red de farmacias o copagos que entrarán en vigor el 1 de enero de 2027 antes del cierre el 7 de diciembre.
+1. **Revise su Carta ANOC (Cambio Anual):** Verifique cambios de prima, deducibles, red de farmacias o copagos que entrarán en vigor el 1 de enero de 2027 antes del cierre el 7 de diciembre de 2026.
 2. **Confirme sus Médicos y Hospitales:** Valide si sus especialistas y centros de salud preferidos (como UF Health, Baptist Health, AdventHealth o Moffitt) permanecen en red para 2027.
 3. **Analice su Lista Exacta de Medicamentos:** Revise los niveles (tiers) y autorizaciones previas de cada receta bajo los formularios 2027 y el tope confirmado de $2,400 en la Parte D.
 4. **Planifique Cualquier Cambio a Medigap con Anticipación:** Si evalúa pasar de Medicare Advantage a Medigap fuera del período de prueba de 12 meses, realice la evaluación médica antes de cancelar su póliza actual.
@@ -135,12 +135,12 @@ Los planes Medigap complementan al Medicare Original y permiten atenderse con cu
 ### Fechas Clave de Inscripción en Florida
 
 1. **Período Inicial de Inscripción (IEP):** Ventana de 7 meses alrededor de su cumpleaños número 65.
-2. **Período de Inscripción Anual (AEP):** Del 15 de octubre al 7 de diciembre para cambios de Medicare Advantage y Parte D con inicio el 1 de enero de 2027.
+2. **Período de Inscripción Anual (AEP):** Del 15 de octubre al 7 de diciembre de 2026 para cambios de Medicare Advantage y Parte D con inicio el 1 de enero de 2027.
 3. **Períodos Especiales de Inscripción (SEP):** Al mudarse de condado, perder cobertura laboral o calificar para Extra Help.
 
 Consulte nuestra guía completa sobre [planes suplementarios de Medicare (Medigap) en Florida](/es/seguro-medicare-florida) para comparar tarifas del Plan G y Plan N.
 
-> ¿Necesita revisar su plan antes del 7 de diciembre? Llame directamente a Andrés H. Bozo al +1 (352) 225-8389 (NPN 21228432) para una comparativa objetiva y sin costo.
+> ¿Necesita revisar su plan antes del 7 de diciembre de 2026? Llame directamente a Andrés H. Bozo al +1 (352) 225-8389 (NPN 21228432) para una comparativa objetiva y sin costo.
             `
         }
     },
@@ -373,9 +373,9 @@ Todo consumidor responsable debe comprender los siguientes riesgos y reglas oper
 Medicare Part D prescription drug coverage continues evolving under federal Inflation Reduction Act rules, making annual formulary and pharmacy reviews essential for every Florida beneficiary.
 
 ### Annual Out-of-Pocket Maximum ($2,100 in 2026; $2,400 in 2027)
-For calendar year 2026, all Medicare Part D enrollees benefit from an annual **$2,100 out-of-pocket cap** on covered prescriptions. For coverage beginning January 1, 2027 (enrolled during the Oct 15–Dec 7 AEP), CMS has confirmed the federal Part D out-of-pocket maximum will adjust to **$2,400**. Once your eligible Part D drug spending reaches the annual threshold, you pay $0 for covered formulary medications for the rest of that calendar year.
+For calendar year 2026, all Medicare Part D enrollees benefit from an annual **$2,100 out-of-pocket cap** on covered prescriptions. For coverage beginning January 1, 2027 (enrolled during the Oct 15–Dec 7, 2026 AEP), CMS has confirmed the federal Part D out-of-pocket maximum will adjust to **$2,400**. Once your eligible Part D drug spending reaches the annual threshold, you pay $0 for covered formulary medications for the rest of that calendar year.
 
-### Why You MUST Review Your Formulary Before December 7
+### Why You MUST Review Your Formulary Before December 7, 2026
 Even with federal spending caps in place, carriers restructure their **formularies** and cost-sharing tiers each plan year:
 1. **Tier Shifts:** Medications may move from lower generic tiers to preferred or non-preferred specialty tiers, increasing upfront copays before you reach the cap.
 2. **Prior Authorization & Step Therapy:** Insurers may introduce stricter clinical rules for brand-name inhalers, anticoagulants, or diabetes medications.
@@ -392,9 +392,9 @@ Florida seniors can opt into the Medicare Prescription Payment Plan to spread ou
 La cobertura de medicamentos recetados de Medicare Parte D continúa ajustándose bajo las reglas federales de la Ley de Reducción de la Inflación, por lo que revisar su formulario cada otoño resulta indispensable para los beneficiarios en Florida.
 
 ### Tope Máximo Anual de Bolsillo ($2,100 en 2026; $2,400 en 2027)
-Para el año calendario 2026, todos los afiliados a Medicare Parte D cuentan con un **tope anual de $2,100 de su bolsillo** en medicamentos cubiertos. Para la cobertura que inicia el 1 de enero de 2027 (durante el AEP del 15 de octubre al 7 de diciembre), CMS confirmó que el máximo anual federal de la Parte D será de **$2,400**. Al alcanzar ese umbral en recetas cubiertas, usted paga $0 por medicamentos dentro del formulario el resto de ese año.
+Para el año calendario 2026, todos los afiliados a Medicare Parte D cuentan con un **tope anual de $2,100 de su bolsillo** en medicamentos cubiertos. Para la cobertura que inicia el 1 de enero de 2027 (durante el AEP del 15 de octubre al 7 de diciembre de 2026), CMS confirmó que el máximo anual federal de la Parte D será de **$2,400**. Al alcanzar ese umbral en recetas cubiertas, usted paga $0 por medicamentos dentro del formulario el resto de ese año.
 
-### Por Qué DEBE Revisar su Formulario Antes del 7 de Diciembre
+### Por Qué DEBE Revisar su Formulario Antes del 7 de Diciembre de 2026
 Aunque el tope federal brinda protección ante gastos catastróficos, las aseguradoras reestructuran sus **formularios** y niveles de copago cada año:
 1. **Cambios de Niveles (Tiers):** Un medicamento puede pasar de un nivel genérico a uno de marca o especialidad, elevando su copago inicial.
 2. **Autorización Previa y Terapia Escalonada:** Las aseguradoras pueden exigir aprobaciones adicionales para inhaladores, anticoagulantes o tratamientos crónicos.

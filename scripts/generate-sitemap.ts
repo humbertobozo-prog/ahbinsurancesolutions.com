@@ -15,26 +15,18 @@ export interface SitemapRouteEntry {
 }
 
 /**
- * Explicit curated lastmod dates per canonical route so sitemap entries reflect real content edits
- * rather than synthetic build-day timestamps.
+ * Explicit lastmod dates ONLY for routes with verifiable editorial/legal dates or real edits.
+ * Other static/local pages intentionally omit <lastmod> rather than repeating a blanket date.
  */
 const ROUTE_LASTMOD: Record<string, string> = {
-  '/': '2026-11-16',
-  '/medicare-florida': '2026-11-16',
-  '/final-expense': '2026-11-16',
-  '/iul-retirement': '2026-11-16',
-  '/annuities-florida': '2026-11-16',
-  '/dental-vision-florida': '2026-11-16',
-  '/blog': '2026-11-16',
-  '/city-guides': '2026-11-16',
-  '/locations/gainesville-fl': '2026-11-16',
-  '/final-expense-miami': '2026-11-16',
-  '/burial-insurance-tampa': '2026-11-16',
-  '/iul-retirement-tampa': '2026-11-16',
-  '/orlando-spanish-insurance': '2026-11-16',
-  '/faq': '2026-11-16',
-  '/about-andres-bozo': '2026-11-16',
-  '/contact': '2026-11-16',
+  '/': '2026-11-18',
+  '/medicare-florida': '2026-11-18',
+  '/iul-retirement': '2026-11-18',
+  '/blog': '2026-11-18',
+  '/locations/gainesville-fl': '2026-11-18',
+  '/orlando-spanish-insurance': '2026-11-18',
+  '/faq': '2026-11-18',
+  '/about-andres-bozo': '2026-11-18',
   '/terms': '2026-01-01',
   '/privacy': '2026-01-01',
   '/editorial-policy': '2026-10-27'
@@ -91,13 +83,12 @@ export function getAllSitemapRoutes(): SitemapRouteEntry[] {
   });
 
 
-  // 5. Dynamic City Guides from FLORIDA_CITIES
+  // 5. Dynamic City Guides from FLORIDA_CITIES (omit synthetic lastmod)
   for (const city of FLORIDA_CITIES) {
     const pairs = getRoutePairs(`/cities/${city.slug}`);
     routes.push({
       enPath: pairs.en,
       esPath: pairs.es,
-      lastmod: '2026-11-16',
       changefreq: 'weekly',
       priority: 0.8,
     });
@@ -129,8 +120,8 @@ export function generateSitemapXml(): string {
   for (const entry of routes) {
     const enFullUrl = `${BASE_URL}${entry.enPath === '/' ? '/' : entry.enPath}`;
     const esFullUrl = `${BASE_URL}${entry.esPath}`;
-    const effectiveLastmod = entry.lastmod || ROUTE_LASTMOD[entry.enPath] || '2026-11-16';
-    const lastmodTag = `    <lastmod>${effectiveLastmod}</lastmod>\n`;
+    const effectiveLastmod = entry.lastmod || ROUTE_LASTMOD[entry.enPath];
+    const lastmodTag = effectiveLastmod ? `    <lastmod>${effectiveLastmod}</lastmod>\n` : '';
 
     if (entry.enPath === entry.esPath) {
       // Single language or combined URL

@@ -200,7 +200,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" 
     : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists";
   let datePublished = "2024-01-15";
-  let dateModified = "2026-11-16";
+  let dateModified = "2026-11-18";
 
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
@@ -210,14 +210,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 18 Nov 2026</strong></p>
           <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Con oficina en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
           <article>
             <h3>1. Planes Suplementarios de Medicare (Medigap) en Florida</h3>
-            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible de hospital de la Parte A ($1,736 en 2026) y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Un plan de Suplemento de Medicare (Medigap) en Florida generalmente le permite consultar a cualquier médico, especialista o centro de salud en Florida y a nivel nacional que acepte la asignación de Medicare, sin restricciones de redes de proveedores ni requisitos de referidos de especialistas, sujeto a las normas de Medicare y Medigap.</p>
+            <p>El Medicare Original (Partes A y B) cubre hospitalización y servicios médicos esenciales, pero deja vacíos de costos significativos como el deducible hospitalario de la Parte A ($1,736 en 2026; $1,776 en 2027), el deducible anual de la Parte B ($283 en 2026; $292 en 2027) y el coseguro del 20% sin límite de la Parte B. Un plan Suplementario de Medicare (Medigap), como el Plan G o el Plan N, cubre estos gastos de su bolsillo. Un plan de Suplemento de Medicare (Medigap) en Florida generalmente le permite consultar a cualquier médico, especialista o centro de salud en Florida y a nivel nacional que acepte la asignación de Medicare, sin restricciones de redes de proveedores ni requisitos de referidos de especialistas, sujeto a las normas de Medicare y Medigap.</p>
           </article>
           <article>
             <h3>2. Seguro de Gastos Finales y Entierro para Adultos Mayores</h3>
@@ -225,7 +225,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </article>
           <article>
             <h3>3. Seguro de Vida Universal Indexado (IUL) y Estrategias con Ventajas Fiscales</h3>
-            <p>La Vida Universal Indexada (IUL) combina protección permanente de seguro de vida con un componente de valor en efectivo. El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro y cargos contractuales afectan el valor en efectivo total. Bajo el Código IRS 7702, los préstamos de póliza pueden brindar acceso a capital con tratamiento fiscal potencialmente favorable si la póliza se estructura adecuadamente, no es un MEC y se mantiene en vigor (consulte a un profesional tributario calificado).</p>
+            <p>La Vida Universal Indexada (IUL) combina protección permanente de seguro de vida con un componente de valor en efectivo. El componente de acreditación indexada puede contar con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro y cargos contractuales afectan el valor en efectivo total. Bajo el Código IRS 7702, los préstamos de póliza pueden brindar acceso a capital con tratamiento fiscal potencialmente favorable si la póliza se estructura adecuadamente, no es un MEC y se mantiene en vigor (consulte a un profesional tributario calificado).</p>
           </article>
           <article>
             <h3>4. Anualidades Fijas y Pólizas Dentales, de Visión y Audición</h3>
@@ -274,7 +274,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 18, 2026</strong></p>
           <p>Welcome to AHB Insurance Solutions, located at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout all 67 Florida counties. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
@@ -356,14 +356,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
       : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo";
     datePublished = "2024-01-15";
-    dateModified = "2026-11-16";
+    dateModified = "2026-11-18";
     
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Medicare Suplementario Medigap</span></p></nav>
         <header>
           <h1>Planes de Medicare Suplementario (Medigap) en Florida 2026–2027</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026</strong></p>
           <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre múltiples aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita y personalizada hoy desde nuestra oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
         </header>
 
@@ -372,7 +372,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos que pueden poner en riesgo los ahorros acumulados durante toda una vida de trabajo:</p>
           <ul>
             <li><strong>Sin Límite Anual de Gastos (No MOOP):</strong> En Medicare Original no existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de quimioterapia y diálisis, sin tope alguno en dólares.</li>
-            <li><strong>Deducibles de Hospital Elevados:</strong> En 2026, el deducible oficial de hospitalización de la Parte A es de $1,736 por cada período de beneficio de 60 días (verifique las cifras definitivas de Parte A y Parte B para 2027 directamente en CMS.gov al publicarse), pudiendo repetirse varias veces en un mismo año.</li>
+            <li><strong>Deducibles de Hospital Elevados:</strong> El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días, pudiendo repetirse varias veces en un mismo año.</li>
           </ul>
         </section>
 
@@ -390,7 +390,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Análisis Detallado de Planes Medigap en Florida: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medigap Plan G: La Opción Más Completa</h3>
-            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 oficial en 2026; confirme la cifra de 2027 en CMS.gov). Cubre el 100% del deducible de la Parte A ($1,736 en 2026), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
+            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 en 2026; $292 en 2027 según CMS, con prima estándar 2027 de $209.40/mes frente a $202.90/mes en 2026). Cubre el 100% del deducible de la Parte A ($1,736 en 2026; $1,776 en 2027), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
           </article>
           <article>
             <h3>Medigap Plan N: El Equilibrio entre Costo y Cobertura</h3>
@@ -448,7 +448,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Predecibilidad Financiera</td>
                 <td>Máxima (Sin facturas sorpresa)</td>
                 <td>Muy Alta (Copagos menores)</td>
-                <td>Variable según uso médico (MOOP en red hasta $9,250 en 2026; $9,850 en 2027)</td>
+                <td>Variable según uso médico (tope legal federal CMS en red: $9,250 en 2026 y $9,850 en 2027; cada plan puede fijar un límite menor)</td>
               </tr>
             </tbody>
           </table>
@@ -479,7 +479,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ul>
             <li><strong>IEP (Período Inicial de Inscripción):</strong> Ventana de 7 meses (3 meses antes del mes de cumpleaños 65, el mes del cumpleaños y 3 meses después). Momento para activar Partes A y B.</li>
             <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde la fecha de inicio de su Parte B. Inmunidad total contra cuestionarios médicos de salud. Emisión 100% garantizada por ley federal.</li>
-            <li><strong>AEP (Inscripción Anual - Octubre 15 a Diciembre 7):</strong> Ventana anual para modificar planes de medicamentos Parte D o cambiar coberturas Advantage para el siguiente año calendario.</li>
+            <li><strong>AEP (Inscripción Anual - 15 Oct a 7 Dic 2026):</strong> Ventana anual de otoño para modificar planes de medicamentos Parte D o cambiar coberturas Advantage para el año de beneficios 2027.</li>
           </ul>
         </section>
 
@@ -514,7 +514,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Medicare Supplement (Medigap) Plans</span></p></nav>
         <header>
           <h1>Medicare Supplement (Medigap) Plans in Florida 2026–2027</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 16, 2026</strong></p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 18, 2026</strong></p>
           <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across multiple top-rated carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.</p>
         </header>
 
@@ -523,7 +523,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps that can expose your retirement savings to unexpected medical liabilities:</p>
           <ul>
             <li><strong>No Annual Maximum Out-of-Pocket (No MOOP):</strong> Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, specialty treatments, and imaging.</li>
-            <li><strong>High Hospital Deductibles:</strong> In 2026, the Part A inpatient hospital deductible is $1,736 per benefit period (verify final 2027 Part A & B deductibles directly on CMS.gov upon release), which can occur multiple times in a single calendar year.</li>
+            <li><strong>High Hospital Deductibles:</strong> The official CMS Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per benefit period, which can occur multiple times in a single calendar year.</li>
           </ul>
         </section>
 
@@ -541,7 +541,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Detailed Analysis of Florida Medigap Plans: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medicare Supplement Plan G: Most Comprehensive Coverage</h3>
-            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026 per CMS; verify 2027 figure at CMS.gov). It covers 100% of the Part A hospital deductible ($1,736 in 2026), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
+            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026; $292 in 2027 per CMS, alongside a $209.40/mo 2027 standard Part B premium vs. $202.90/mo in 2026). It covers 100% of the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
           </article>
           <article>
             <h3>Medicare Supplement Plan N: Balancing Cost and Coverage</h3>
@@ -599,7 +599,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Financial Predictability</td>
                 <td>Maximum (No surprise bills)</td>
                 <td>Very High (Small copays only)</td>
-                <td>Variable based on utilization (In-network MOOP up to $9,250 in 2026; $9,850 in 2027)</td>
+                <td>Variable based on utilization (CMS mandatory MOOP ceiling: $9,250 in 2026 and $9,850 in 2027; plans may set lower limits)</td>
               </tr>
             </tbody>
           </table>
@@ -630,7 +630,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <ul>
             <li><strong>IEP (Initial Enrollment Period):</strong> 7-month window spanning 3 months before your 65th birthday month, your birthday month, and 3 months after.</li>
             <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month golden window starting on your Part B effective date with guaranteed acceptance and zero medical underwriting.</li>
-            <li><strong>AEP (Annual Enrollment Period - Oct 15 to Dec 7):</strong> Annual period to join, drop, or switch Medicare Advantage and Part D prescription drug plans for the upcoming coverage year.</li>
+            <li><strong>AEP (Annual Enrollment Period - Oct 15 to Dec 7, 2026):</strong> Annual fall window to join, drop, or switch Medicare Advantage and Part D prescription drug plans for 2027 coverage.</li>
           </ul>
         </section>
 
@@ -946,14 +946,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Seguro de Vida Universal Indexada (IUL) y Jubilación Libre de Impuestos en Florida" 
       : "Florida Indexed Universal Life (IUL) Insurance & Tax-Free Retirement Planning";
     datePublished = "2024-01-15";
-    dateModified = "2026-11-16";
+    dateModified = "2026-11-18";
 
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Vida Universal Indexada (IUL)</span></p></nav>
         <header>
           <h1>Seguro de Vida Universal Indexada (IUL) y Estrategias de Retiro en Florida 2026</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026</strong></p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026</strong></p>
           <p>Descubra cómo el seguro de Vida Universal Indexada (IUL) combina protección permanente para su familia con acumulación de valor en efectivo indexado a índices bursátiles como el S&P 500, un piso contractual del 0% en la acreditación indexada (sujeto a costos internos y cargos de la póliza) y estrategias de préstamos sobre póliza con ventajas fiscales potenciales bajo el Código IRS 7702. Asesoría transparente en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 con Andrés Bozo (NPN: 21228432).</p>
         </header>
 
@@ -961,7 +961,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>¿Cómo Funciona el Mecanismo de Acreditación de un IUL?</h2>
           <p>En una póliza de Vida Universal Indexada, el valor en efectivo no está invertido directamente en acciones o fondos del mercado bursátil. El interés se acredita según el rendimiento del índice de referencia elegido (como el S&P 500) sujeto a reglas contractuales claras:</p>
           <ol>
-            <li><strong>Piso Contractual del 0%:</strong> El componente de acreditación indexada cuenta con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los cargos administrativos de la póliza y los costos internos del seguro (COI) continúan deduciéndose.</li>
+            <li><strong>Piso Contractual del 0%:</strong> El componente de acreditación indexada puede contar con un piso contractual del 0%, lo que significa que a la estrategia no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los cargos administrativos de la póliza y los costos internos del seguro (COI) continúan deduciéndose.</li>
             <li><strong>Participación en Mercados Alcistas:</strong> Cuando los índices suben, usted recibe rendimientos hasta un tope de tasa ("Cap Rate"), típicamente entre el 8% y el 12%, o según tasas de participación definidas contractualmente.</li>
             <li><strong>Crecimiento con Impuestos Diferidos:</strong> El valor en efectivo acumula intereses con diferimiento de impuestos bajo la Sección 7702 del Código de Rentas Internas (IRC), permitiendo que su dinero capitalice año tras año sin erosión tributaria por plusvalías anuales.</li>
           </ol>
@@ -1049,7 +1049,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Preguntas Frecuentes sobre Vida Universal Indexada en Florida</h2>
           <dl>
             <dt><strong>¿Cómo funciona la garantía de piso del 0% en un seguro IUL?</strong></dt>
-            <dd>El componente de acreditación indexada de un IUL cuenta con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total.</dd>
+            <dd>El componente de acreditación indexada de un IUL puede contar con un piso contractual del 0%, lo que significa que a la estrategia de índice seleccionada no se le acredita un rendimiento negativo ante caídas del mercado. Sin embargo, los costos del seguro (COI), cargos administrativos de la póliza, préstamos, retiros y otras disposiciones contractuales pueden afectar el valor en efectivo total.</dd>
 
             <dt><strong>¿Los préstamos para el retiro de una póliza IUL son dinero libre de impuestos garantizado?</strong></dt>
             <dd>Los préstamos sobre la póliza pueden brindar acceso al valor en efectivo con un tratamiento fiscal federal potencialmente favorable cuando la póliza está estructurada adecuadamente, no es un Contrato de Dotación Modificada (MEC), se mantiene en vigor y se cumplen los requisitos fiscales aplicables. Si la póliza caduca (lapse), se entrega o se cancela con un préstamo pendiente superior a la base de primas pagadas, el monto adeudado en exceso se convierte de inmediato en ingreso ordinario gravable. Por ello, una estrategia de IUL requiere monitoreo periódico, un diseño prudente y la consulta con un asesor tributario calificado.</dd>
@@ -1265,14 +1265,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = isEs ? `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 18 Nov 2026</strong></p>
           <p>${escapeHtml(description)}</p>
         </header>
         <section>
           <h2>Temas Principales y Guías Verificadas para Residentes de Florida</h2>
           <p>Cada artículo publicado en nuestro centro educativo es redactado y revisado bajo criterios de cumplimiento normativo de CMS, IRS y el Departamento de Servicios Financieros de Florida (DFS) por el corredor independiente Andrés H. Bozo desde nuestra sede en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
           <ul>
-            <li><strong>Medicare Inscripción Anual (AEP Oct 15 – Dic 7):</strong> Preparación para cambios de cobertura 2027, deducible oficial Parte A ($1,736 en 2026) y Parte B ($283 en 2026), además del tope federal Parte D ($2,100 en 2026 y $2,400 confirmado en 2027).</li>
+            <li><strong>Medicare Inscripción Anual (AEP 15 Oct – 7 Dic 2026):</strong> Preparación para cobertura 2027, deducibles oficiales Parte A ($1,736 en 2026; $1,776 en 2027) y Parte B ($283 en 2026; $292 en 2027 · prima estándar $209.40/mes en 2027), además del tope Parte D ($2,100 en 2026; $2,400 en 2027).</li>
             <li><strong>Seguro de Entierro y Gastos Finales:</strong> Cómo comparar pólizas permanentes de vida entera de $5,000 a $35,000 para cubrir costos funerarios promedio en Florida sin dejar cargas financieras a la familia.</li>
             <li><strong>Planificación IUL y Anualidades Fijas:</strong> Explicaciones objetivas del piso contractual del 0% en acreditación indexada, los cargos internos de póliza (COI) y la Sección 7702 del Código Tributario IRS.</li>
           </ul>
@@ -1290,14 +1290,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ` : `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 18, 2026</strong></p>
           <p>${escapeHtml(description)}</p>
         </header>
         <section>
           <h2>Verified Topic Clusters for Florida Seniors & Families</h2>
           <p>Every guide published in the AHB Insurance Solutions Knowledge Hub is authored and reviewed for regulatory clarity against CMS, IRS, and Florida Department of Financial Services (DFS) standards by independent broker Andres H. Bozo at our Gainesville office (5500 SW Archer Road, Ste H103, Gainesville, FL 32607).</p>
           <ul>
-            <li><strong>Medicare Annual Enrollment (Oct 15 – Dec 7):</strong> Clear preparation checklists ahead of the December 7 deadline, covering official 2026 deductibles ($1,736 Part A, $283 Part B) alongside Part D prescription drug caps ($2,100 in 2026; $2,400 confirmed for 2027).</li>
+            <li><strong>Medicare Annual Enrollment (AEP Oct 15 – Dec 7, 2026):</strong> Clear preparation checklists ahead of December 7, 2026, covering 2026 vs. 2027 deductibles ($1,736/$1,776 Part A; $283/$292 Part B; $209.40/mo 2027 std. premium) alongside Part D prescription drug caps ($2,100 in 2026; $2,400 in 2027).</li>
             <li><strong>Final Expense & Burial Insurance:</strong> Comparing permanent $5,000 to $35,000 whole life policies against real Florida burial and cremation invoices without unexpected family debt.</li>
             <li><strong>IUL & Fixed Annuities:</strong> Unbiased breakdowns of how a contractual 0% index crediting floor interacts with internal policy charges, alongside IRS Section 7702 policy loan rules.</li>
           </ul>
@@ -1364,7 +1364,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     bodyOutline = `
       <header style="margin-bottom: 2rem;">
         <h1 style="font-size: 2rem; font-weight: 900; color: #0f172a; margin-bottom: 0.75rem;">${escapeHtml(title)}</h1>
-        <p><strong>${isEs ? "Revisado por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026" : "Reviewed by Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026"}</strong></p>
+        <p><strong>${isEs ? "Revisado por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026" : "Reviewed by Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026"}</strong></p>
         <p style="font-size: 1.1rem; color: #475569; line-height: 1.6;">${escapeHtml(description)}</p>
       </header>
       <div>
@@ -1386,14 +1386,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" 
       : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)";
     datePublished = "2024-01-15";
-    dateModified = "2026-11-16";
+    dateModified = "2026-11-18";
 
     if (isEs) {
       bodyOutline = `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>Publicado: 15 Ene 2024 · Actualizado: 16 Nov 2026 · Licencia Activa Florida DFS / NPN: 21228432</strong></p>
+          <p><strong>Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026 · Licencia Activa Florida DFS / NPN: 21228432</strong></p>
           <p>${escapeHtml(description)}</p>
+          <p><strong>Verificación Oficial de Licencia:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Consultar Licencia en Florida DFS</a> · <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">Registro Nacional NIPR (NPN 21228432)</a></p>
         </header>
         <section>
           <h2>Broker Independiente Andrés H. Bozo — Fundador de AHB Insurance Solutions</h2>
@@ -1401,7 +1402,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>A diferencia de un agente cautivo que únicamente puede ofrecer los productos de una sola compañía, Andrés opera bajo un modelo fiduciario de corretaje independiente comparando pólizas disponibles de múltiples aseguradoras nacionales de sólida solvencia financiera como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial y Corebridge Financial.</p>
           <h3>Áreas de Especialización en Florida</h3>
           <ul>
-            <li><strong>Medicare Suplementario (Medigap Plan G y N), Medicare Advantage (Parte C) y Parte D:</strong> Revisión de médicos, formularios de medicamentos y fechas de inscripción como AEP (15 Oct – 7 Dic).</li>
+            <li><strong>Medicare Suplementario (Medigap Plan G y N), Medicare Advantage (Parte C) y Parte D:</strong> Revisión de médicos, formularios de medicamentos y fechas de inscripción como AEP (15 Oct – 7 Dic 2026 para cobertura 2027).</li>
             <li><strong>Seguro de Gastos Finales y Protección Funeraria para Mayores:</strong> Pólizas permanentes de vida entera ($5,000 a $35,000) con primas niveladas sujetas a términos del contrato.</li>
             <li><strong>Vida Universal Indexada (IUL) y Estrategias bajo IRS 7702:</strong> Explicación transparente del piso contractual del 0% en acreditación indexada, costos internos de la póliza y cláusulas en vida.</li>
             <li><strong>Anualidades Fijas e Indexadas (MYGA y FIA):</strong> Preservación contractual de ahorros para el retiro y opciones de ingresos vitalicios.</li>
@@ -1416,15 +1417,16 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <li><strong>Orientación Clara y Bilingüe Sin Presión:</strong> Explicación honesta de exclusiones, deducibles, cargos por rescate y períodos de espera antes de solicitar cualquier póliza.</li>
             <li><strong>Acompañamiento Anual de Largo Plazo:</strong> Revisiones anuales gratuitas durante cada período de inscripción abierta de Medicare y asistencia continua a los beneficiarios.</li>
           </ol>
-          <p>Comuníquese directamente al <a href="tel:+13522258389">+1 (352) 225-8389</a> o envíe un mensaje a <a href="/es/contacto">Contacto Directo</a>.</p>
+          <p>Comuníquese directamente al <a href="tel:+13522258389">+1 (352) 225-8389</a>, envíe un mensaje a <a href="/es/contacto">Contacto Directo</a> o verifique la licencia vigente en <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS</a> y <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
         </section>
       `;
     } else {
       bodyOutline = `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>Published: Jan 15, 2024 · Updated: Nov 16, 2026 · Florida DFS Resident License / NPN: 21228432</strong></p>
+          <p><strong>Published: Jan 15, 2024 · Updated: Nov 18, 2026 · Florida DFS Resident License / NPN: 21228432</strong></p>
           <p>${escapeHtml(description)}</p>
+          <p><strong>Official License Verification:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Verify License on Florida DFS</a> · <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">Verify NPN 21228432 on NIPR</a></p>
         </header>
         <section>
           <h2>Independent Broker Andres H. Bozo — Principal of AHB Insurance Solutions</h2>
@@ -1432,7 +1434,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Unlike captive agents restricted to promoting a single insurance carrier, Andres operates strictly as an independent broker comparing plans side-by-side across established, state-licensed national carriers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial, and Corebridge Financial—with zero broker fees or consulting charges.</p>
           <h3>Core Florida Practice Areas</h3>
           <ul>
-            <li><strong>Florida Medicare Supplement (Medigap Plan G & N), Medicare Advantage (Part C) & Part D:</strong> Verifying preferred physicians, prescription formularies, and Annual Enrollment deadlines (Oct 15 – Dec 7).</li>
+            <li><strong>Florida Medicare Supplement (Medigap Plan G & N), Medicare Advantage (Part C) & Part D:</strong> Verifying preferred physicians, prescription formularies, and Annual Enrollment deadlines (Oct 15 – Dec 7, 2026 for 2027 coverage).</li>
             <li><strong>Final Expense & Senior Burial Whole Life Insurance:</strong> Permanent $5,000 to $35,000 coverage options with level premiums subject to policy terms.</li>
             <li><strong>Indexed Universal Life (IUL) Strategies (IRS Section 7702):</strong> Clear illustrations explaining the contractual 0% index crediting floor, internal policy charges, and living benefit riders.</li>
             <li><strong>Fixed & Fixed Indexed Annuities (MYGA & FIA):</strong> Contractual retirement principal protection and optional lifetime income planning.</li>
@@ -1447,7 +1449,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <li><strong>Transparent, Bilingual Guidance:</strong> Clear explanations of deductibles, waiting periods, underwriting rules, and contract charges with zero sales pressure.</li>
             <li><strong>Lifelong Client Advocacy:</strong> Annual Medicare Part D and plan reviews plus ongoing beneficiary claims assistance.</li>
           </ol>
-          <p>Speak directly with Andres H. Bozo at <a href="tel:+13522258389">+1 (352) 225-8389</a> or reach out via our <a href="/contact">Contact Page</a>.</p>
+          <p>Speak directly with Andres H. Bozo at <a href="tel:+13522258389">+1 (352) 225-8389</a>, reach out via our <a href="/contact">Contact Page</a>, or verify credentials directly through <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS Licensee Search</a> and <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
         </section>
       `;
     }
@@ -1638,7 +1640,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida</a> &gt; <span>Gainesville FL</span></p></nav>
         <header>
           <h1>Gainesville, FL Insurance Broker | Medicare, Life & Annuities</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 18, 2026</strong></p>
           <p>${escapeHtml(description)}</p>
           <div class="broker-contact-badge">
             <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
@@ -1649,7 +1651,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Medicare Gainesville: Coverage & Medigap Supplements in Alachua County</h2>
-          <p>Gainesville is North Central Florida's premier medical hub, anchored by the nationally renowned UF Health Shands Hospital system, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Alachua County seniors on Original Medicare frequently face substantial out-of-pocket liabilities, including the inpatient Part A deductible ($1,736 in 2026) and the uncapped 20% Part B coinsurance. With a standardized Medicare Supplement (Medigap Plan G or Plan N), you preserve direct access to participating physicians at UF Health Shands and HCA Florida without restrictive HMO provider networks or primary care referral mandates.</p>
+          <p>Gainesville is North Central Florida's premier medical hub, anchored by the nationally renowned UF Health Shands Hospital system, HCA Florida North Florida Hospital, and the Malcom Randall VA Medical Center. Alachua County seniors on Original Medicare frequently face substantial out-of-pocket liabilities, including the inpatient Part A deductible ($1,736 in 2026; $1,776 in 2027) and the uncapped 20% Part B coinsurance. With a standardized Medicare Supplement (Medigap Plan G or Plan N), you preserve direct access to participating physicians at UF Health Shands and HCA Florida without restrictive HMO provider networks or primary care referral mandates.</p>
           <ul>
             <li><strong>Freedom of Specialists:</strong> See any provider nationwide who accepts Medicare, including world-class specialists at UF Health Shands, without network gating.</li>
             <li><strong>Zero Prior Authorization Hurdles:</strong> Unlike local Medicare Advantage HMOs, Medigap policies eliminate pre-authorization delays for Medicare-covered treatments.</li>
@@ -2190,20 +2192,20 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         ogImage = "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg";
         ogImageAlt = title;
         datePublished = "2024-01-15";
-        dateModified = "2026-11-16";
+        dateModified = "2026-11-18";
 
         bodyOutline = isEs ? `
           <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <a href="/es/guias-ciudades">Ciudades</a> &gt; <span>Orlando y Kissimmee</span></p></nav>
           <header>
             <h1>Seguros de Vida y Medicare en Orlando y Florida Central</h1>
-            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 16 Nov 2026</strong></p>
+            <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 18 Nov 2026</strong></p>
             <p>${escapeHtml(description)}</p>
           </header>
           <section>
             <h2>Orientación Bilingüe en Orlando, Kissimmee y Condado de Orange</h2>
             <p>Las familias y adultos mayores de Orlando, Kissimmee, Lake Nona y Winter Park enfrentan decisiones importantes de salud y retiro entre redes hospitalarias locales como AdventHealth Orlando y Orlando Health. Como broker independiente completamente bilingüe (español e inglés), Andrés H. Bozo explica cada término de su cobertura con claridad y sin intermediarios ni costos de corretaje.</p>
             <ul>
-              <li><strong>Medicare Suplementario y Advantage (2026–2027):</strong> Revisión de Medigap Plan G y Plan N, deducible de Parte B ($283 en 2026), deducible de Parte A ($1,736 en 2026) y tope de medicamentos Parte D ($2,100 en 2026; $2,400 en 2027) antes del cierre del AEP el 7 de diciembre.</li>
+              <li><strong>Medicare Suplementario y Advantage (2026–2027):</strong> Revisión de Medigap Plan G y Plan N, deducible de Parte B ($283 en 2026; $292 en 2027 con prima estándar de $209.40/mes), deducible de Parte A ($1,736 en 2026; $1,776 en 2027) y tope de medicamentos Parte D ($2,100 en 2026; $2,400 en 2027) antes del cierre del AEP el 7 de diciembre de 2026.</li>
               <li><strong>Seguro de Gastos Finales:</strong> Pólizas permanentes de vida entera ($5,000 a $35,000) con primas niveladas sujetas a contrato y emisión simplificada para muchas solicitudes.</li>
               <li><strong>Vida Universal Indexada (IUL) y Anualidades Fijas:</strong> Estrategias patrimoniales explicando claramente tanto el piso contractual del 0% como los cargos administrativos aplicables.</li>
             </ul>
@@ -2212,7 +2214,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <h2>Preguntas Frecuentes en Orlando y Kissimmee</h2>
             <dl>
               <dt><strong>¿Cuál es la fecha límite clave del periodo AEP de Medicare?</strong></dt>
-              <dd>El Periodo Anual de Inscripción (AEP) culmina el 7 de diciembre cada año para cambios efectivos a partir del 1 de enero del año siguiente, incluyendo cobertura de recetas Parte D (tope de $2,100 en 2026 y $2,400 en 2027) y máximo en red Advantage ($9,250 en 2026 y $9,850 en 2027).</dd>
+              <dd>El Periodo Anual de Inscripción (AEP) culmina el 7 de diciembre de 2026 para cambios efectivos a partir del 1 de enero de 2027, incluyendo cobertura de recetas Parte D (tope de $2,100 en 2026 y $2,400 en 2027) y el tope legal federal Advantage en red ($9,250 en 2026 y $9,850 en 2027; cada plan puede fijar un límite menor).</dd>
               <dt><strong>¿Tiene algún costo hablar en español con Andrés Bozo?</strong></dt>
               <dd>Ninguno. Nuestra asesoría y comparativa independiente entre aseguradoras licenciadas en Florida es 100% gratuita para usted.</dd>
             </dl>
@@ -2225,14 +2227,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida Cities</a> &gt; <span>Orlando, FL</span></p></nav>
           <header>
             <h1>Medicare & Life Insurance in Orlando, FL — Bilingual Services</h1>
-            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026</strong></p>
+            <p><strong>By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 18, 2026</strong></p>
             <p>${escapeHtml(description)}</p>
           </header>
           <section>
             <h2>English & Spanish Brokerage for Orlando, Kissimmee & Orange County</h2>
             <p>Retirees and bilingual households across Orlando, Kissimmee, Lake Nona, and Winter Park rely on major regional healthcare systems including AdventHealth Orlando and Orlando Health. Independent licensed broker Andres H. Bozo works directly in both English and Spanish—eliminating translation barriers and broker fees so you understand deductibles, networks, and policy provisions before enrolling.</p>
             <ul>
-              <li><strong>2026–2027 Medicare Plan Reviews:</strong> Side-by-side Medigap Plan G & Plan N comparisons alongside Part D formulary checks covering the $283 Part B deductible (2026), $1,736 Part A deductible (2026), and $2,100 / $2,400 Part D prescription caps ahead of December 7 AEP.</li>
+              <li><strong>2026–2027 Medicare Plan Reviews:</strong> Side-by-side Medigap Plan G & Plan N comparisons alongside Part D formulary checks covering the Part B deductible ($283 in 2026; $292 in 2027 with $209.40/mo 2027 standard premium), Part A deductible ($1,736 in 2026; $1,776 in 2027), and $2,100 / $2,400 Part D prescription caps ahead of December 7, 2026 AEP.</li>
               <li><strong>Burial & Final Expense Coverage:</strong> Permanent whole life options ($5,000–$35,000) with locked issue-age rates and simplified underwriting where eligible.</li>
               <li><strong>IUL & Fixed Annuity Guidance:</strong> Clear explanations of contractual 0% index crediting floors, policy charges, and IRS Section 7702 rules.</li>
             </ul>
@@ -2241,7 +2243,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <h2>Orlando & Central Florida Insurance FAQs</h2>
             <dl>
               <dt><strong>When does the Medicare Annual Enrollment Period (AEP) end?</strong></dt>
-              <dd>AEP runs through December 7 each year for plan elections taking effect on January 1, including Part D prescription caps ($2,100 in 2026; $2,400 in 2027) and Advantage in-network maximums ($9,250 in 2026; $9,850 in 2027).</dd>
+              <dd>AEP runs through December 7, 2026 for plan elections taking effect on January 1, 2027, including Part D prescription caps ($2,100 in 2026; $2,400 in 2027) and CMS mandatory Advantage in-network MOOP ceilings ($9,250 in 2026; $9,850 in 2027; plans may set lower limits).</dd>
               <dt><strong>Do I pay higher premiums when working with bilingual broker Andres Bozo?</strong></dt>
               <dd>No. Florida insurance rates are regulated and identical whether you apply directly or work with our licensed agency at zero broker service fee.</dd>
             </dl>
