@@ -2901,7 +2901,12 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
   }
 
   // 2. Service schemas for Medicare / Final Expense / IUL
-  if (cleanPath === "/medicare" || cleanPath === "/es/medicare") {
+  if (
+    cleanPath === "/medicare-florida" ||
+    cleanPath === "/es/seguro-medicare-florida" ||
+    cleanPath === "/medicare" ||
+    cleanPath === "/es/medicare"
+  ) {
     graph.push({
       "@type": "Service",
       "name": isEs ? "Planes Suplementarios y de Ventaja de Medicare en Florida" : "Florida Medicare Supplement & Advantage Plans",
@@ -3236,7 +3241,16 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
 
   // 8. Inject crawler-friendly semantic HTML inside <div id="root"> and concise <noscript> fallback
   if (includeBodyOutline) {
-    const socialNav = `
+    const isEsPage = metadata.htmlLang.startsWith("es");
+    const socialNav = isEsPage ? `
+        <nav aria-label="Perfiles Oficiales en Redes Sociales">
+          <p>Conecta con AHB Insurance Solutions en Redes Sociales:</p>
+          <ul>
+            <li><a rel="me noopener noreferrer" href="https://www.facebook.com/ahbinsurancesolutions" target="_blank">Perfil de Facebook</a></li>
+            <li><a rel="me noopener noreferrer" href="https://www.instagram.com/ahbinsurancesolutions" target="_blank">Perfil de Instagram</a></li>
+            <li><a rel="me noopener noreferrer" href="https://www.linkedin.com/in/andres-bozo-npn-21228432" target="_blank">Perfil de LinkedIn</a></li>
+          </ul>
+        </nav>` : `
         <nav aria-label="Official Social Media Profiles">
           <p>Connect with AHB Insurance Solutions on Social Media:</p>
           <ul>
@@ -3256,7 +3270,10 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     }
 
     const noscriptRegex = /<noscript>[\s\S]*?<\/noscript>/;
-    const noscriptSummary = `<noscript>\n      <div class="noscript-content">\n        <p>AHB Insurance Solutions LLC · 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · NPN: 21228432 · <a href="tel:+13522258389">+1 (352) 225-8389</a></p>\n        <nav aria-label="Primary Links"><a href="/medicare-florida">Medicare</a> | <a href="/final-expense">Final Expense</a> | <a href="/iul-retirement">IUL</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a> | <a href="/editorial-policy">Editorial Policy</a></nav>\n      </div>\n    </noscript>`;
+    const noscriptNav = isEsPage
+      ? `<nav aria-label="Enlaces Principales"><a href="/es/seguro-medicare-florida">Medicare</a> | <a href="/es/gastos-finales">Gastos Finales</a> | <a href="/es/iul-jubilacion">IUL</a> | <a href="/es/privacidad">Privacidad</a> | <a href="/es/terminos">Términos</a> | <a href="/es/politica-editorial">Política Editorial</a></nav>`
+      : `<nav aria-label="Primary Links"><a href="/medicare-florida">Medicare</a> | <a href="/final-expense">Final Expense</a> | <a href="/iul-retirement">IUL</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a> | <a href="/editorial-policy">Editorial Policy</a></nav>`;
+    const noscriptSummary = `<noscript>\n      <div class="noscript-content">\n        <p>AHB Insurance Solutions LLC · 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · NPN: 21228432 · <a href="tel:+13522258389">+1 (352) 225-8389</a></p>\n        ${noscriptNav}\n      </div>\n    </noscript>`;
     if (noscriptRegex.test(rewritten)) {
       rewritten = rewritten.replace(noscriptRegex, noscriptSummary);
     }
