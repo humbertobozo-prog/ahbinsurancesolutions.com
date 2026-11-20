@@ -34,10 +34,13 @@ const renderInlineMarkdown = (text: string): React.ReactNode[] => {
         }
         const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
         if (linkMatch) {
+            const isExternal = linkMatch[2].startsWith('http');
             return (
                 <a
                     key={idx}
                     href={linkMatch[2]}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
                     className="text-primary font-bold underline decoration-accent decoration-2 underline-offset-2 hover:text-secondary transition-colors"
                 >
                     {linkMatch[1]}
@@ -351,7 +354,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                 ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
                 ogImageAlt={isEs ? "Blog y Artículos sobre Seguros en Florida - AHB Insurance" : "Florida Insurance Blog & Articles - AHB Insurance"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={blogBreadcrumbSchema}
             />
 
@@ -365,7 +368,7 @@ export const BlogHubPage: React.FC<BlogHubPageProps> = ({ language, slug, onOpen
                         <span className="text-primary font-bold">{isEs ? 'Blog y Artículos' : 'Blog & Articles'}</span>
                     </div>
                     <span className="text-gray-500 font-semibold">
-                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
                     </span>
                 </div>
             </div>

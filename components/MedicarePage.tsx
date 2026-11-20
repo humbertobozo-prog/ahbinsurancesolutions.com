@@ -42,7 +42,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "¿Cuánto cuestan las primas de Medigap en Florida en 2026?",
-            a: "“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: Septiembre 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica."
+            a: "“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 18 Nov 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica."
         }
     ] : [
         {
@@ -63,7 +63,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "How much does a Medigap Plan G cost in Florida for 2026?",
-            a: "“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: September 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area."
+            a: "“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 18, 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area."
         }
     ];
 
@@ -171,7 +171,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                 ogImage="https://www.ahbinsurancesolutions.com/og/medicare-og.jpg"
                 ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
@@ -186,7 +186,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                         <span className="text-primary font-bold">{isEs ? 'Medicare en Florida' : 'Medicare in Florida'}</span>
                     </div>
                     <span className="text-[11px] text-gray-600 font-semibold">
-                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
                     </span>
                 </div>
             </div>
@@ -282,9 +282,21 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl">
                                 <h3 className="font-bold text-amber-900 mb-1 text-sm">{isEs ? 'Deducibles de Hospital Elevados' : 'High Hospital Deductibles'}</h3>
                                 <p className="text-xs text-amber-800 leading-relaxed">
-                                    {isEs 
-                                        ? 'El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (puede repetirse varias veces en un mismo año calendario).' 
-                                        : 'The official CMS Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per 60-day benefit period, which can apply multiple times in a calendar year.'}
+                                    {isEs ? (
+                                        <>
+                                            El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (puede repetirse varias veces en un mismo año calendario). Fuente:{' '}
+                                            <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">CMS.gov</a>
+                                            {' / '}
+                                            <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">Medicare.gov</a>.
+                                        </>
+                                    ) : (
+                                        <>
+                                            The official CMS Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per 60-day benefit period, which can apply multiple times in a calendar year. Source:{' '}
+                                            <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">CMS.gov</a>
+                                            {' / '}
+                                            <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">Medicare.gov</a>.
+                                        </>
+                                    )}
                                 </p>
                             </div>
                         </div>
@@ -397,9 +409,23 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         {isEs ? 'Medicamentos (Parte D) y Derechos de Emisión' : 'Part D Rx & Guaranteed Issue Protections'}
                                     </h3>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                        {isEs 
-                                            ? 'La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por CMS para cobertura 2027; el tope máximo legal en red para Advantage fijado por CMS es de $9,250 en 2026 y $9,850 en 2027, aunque cada plan puede fijar un límite menor). Además, los "Derechos de Emisión Garantizada" le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.'
-                                            : 'Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 CMS-confirmed cap for 2027 coverage; CMS mandatory MA in-network MOOP ceiling is $9,250 in 2026 and $9,850 in 2027, though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.'}
+                                        {isEs ? (
+                                            <>
+                                                La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por{' '}
+                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
+                                                {' '}para cobertura 2027; el tope máximo legal en red para Advantage fijado por{' '}
+                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
+                                                {' '}es de $9,250 en 2026 y $9,850 en 2027, aunque cada plan puede fijar un límite menor). Además, los &quot;Derechos de Emisión Garantizada&quot; le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.
+                                            </>
+                                        ) : (
+                                            <>
+                                                Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 cap confirmed by{' '}
+                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
+                                                {' '}for 2027 coverage; mandatory MA in-network MOOP ceiling set by{' '}
+                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
+                                                {' '}is $9,250 in 2026 and $9,850 in 2027, though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.
+                                            </>
+                                        )}
                                     </p>
                                 </div>
                                 <span className="text-[11px] font-bold text-emerald-700 block pt-3 border-t border-gray-200">
@@ -462,6 +488,30 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             </table>
                         </div>
 
+                        {/* Official CMS & Medicare Source Box */}
+                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 my-4 text-xs text-slate-700 leading-relaxed">
+                            <p className="font-bold text-primary mb-1">
+                                {isEs ? 'Fuentes Oficiales de Cifras 2026–2027 (CMS y Medicare):' : 'Official Sources for 2026–2027 Medicare Figures:'}
+                            </p>
+                            <p>
+                                {isEs ? (
+                                    <>
+                                        Deducible Parte A ($1,736 en 2026; $1,776 en 2027), deducible anual Parte B ($283 en 2026; $292 en 2027), prima estándar Parte B ($202.90/mes en 2026; $209.40/mes en 2027), tope Parte D ($2,100 en 2026; $2,400 en 2027) y límite máximo legal Advantage en red ($9,250 en 2026; $9,850 en 2027) verificados en{' '}
+                                        <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>
+                                        {' '}y{' '}
+                                        <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Medicare Costs)</a>.
+                                    </>
+                                ) : (
+                                    <>
+                                        Part A deductible ($1,736 in 2026; $1,776 in 2027), Part B annual deductible ($283 in 2026; $292 in 2027), Part B standard premium ($202.90/mo in 2026; $209.40/mo in 2027), Part D prescription cap ($2,100 in 2026; $2,400 in 2027), and mandatory Advantage in-network MOOP ceiling ($9,250 in 2026; $9,850 in 2027) sourced from{' '}
+                                        <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>
+                                        {' '}and{' '}
+                                        <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Medicare Costs)</a>.
+                                    </>
+                                )}
+                            </p>
+                        </div>
+
                         {/* Medicare Rate Disclosure & Mandatory Pricing Factors */}
                         <div className="bg-amber-50/80 border border-amber-200/90 rounded-xl p-4 md:p-5 my-5 text-xs text-amber-950 shadow-xs">
                             <div className="flex items-start gap-2.5">
@@ -474,7 +524,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                                 : '*Pricing Disclaimer & Medigap Rating Factors in Florida:'}
                                         </h4>
                                         <span className="inline-block px-2 py-0.5 bg-amber-100/90 text-amber-900 text-[11px] font-semibold rounded border border-amber-300/60">
-                                            {isEs ? 'Actualizado: Septiembre 2026' : 'Updated: September 2026'}
+                                            {isEs ? 'Actualizado: 18 Nov 2026' : 'Updated: Nov 18, 2026'}
                                         </span>
                                     </div>
                                     <p className="leading-relaxed text-gray-800 font-medium">
@@ -497,8 +547,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     </p>
                                     <p className="text-gray-600 italic">
                                         {isEs 
-                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros de muestra de aseguradoras para condados seleccionados de Florida Central a fecha de Septiembre 2026 para una persona de 65 años no fumadora, antes de aplicar posibles descuentos de hogar.' 
-                                            : 'Source & Date: The sample figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes as of September 2026 for a 65-year-old non-smoker applicant prior to household discounts.'}
+                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros públicos de muestra de aseguradoras para condados seleccionados de Florida Central (revisión al 18 de noviembre de 2026) para una persona de 65 años no fumadora, antes de aplicar posibles descuentos de hogar.' 
+                                            : 'Source & Date: The sample figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes (reviewed November 18, 2026) for a 65-year-old non-smoker applicant prior to household discounts.'}
                                     </p>
                                     <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-amber-200/70 mt-2">
                                         <p className="font-bold text-primary text-xs md:text-sm">
@@ -707,9 +757,19 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             {isEs ? 'Aviso Legal de Cumplimiento CMS Medicare' : 'Official CMS Medicare Compliance Disclaimer'}
                         </p>
                         <p>
-                            {isEs 
-                                ? 'No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con Medicare.gov, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. AHB Insurance Solutions y el corredor Andrés H. Bozo (NPN 21228432) son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.' 
-                                : 'We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact Medicare.gov, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.'}
+                            {isEs ? (
+                                <>
+                                    No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con{' '}
+                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. Fuente regulatoria:{' '}
+                                    <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>. AHB Insurance Solutions y el corredor Andrés H. Bozo (NPN 21228432) son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.
+                                </>
+                            ) : (
+                                <>
+                                    We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact{' '}
+                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Official cost figures source:{' '}
+                                    <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.
+                                </>
+                            )}
                         </p>
                     </div>
             </section>

@@ -168,7 +168,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                 ogImage="https://www.ahbinsurancesolutions.com/og/iul-og.jpg"
                 ogImageAlt={isEs ? "Seguro de Vida Universal Indexada (IUL) y Jubilación en Florida" : "Florida Indexed Universal Life (IUL) Insurance & Retirement Planning"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
@@ -183,7 +183,7 @@ export const IULPage: React.FC<IULPageProps> = ({ language, onOpenQuote }) => {
                         <span className="text-primary font-bold">{isEs ? 'Vida Universal Indexada (IUL)' : 'Indexed Universal Life (IUL)'}</span>
                     </div>
                     <span className="text-[11px] text-gray-600 font-semibold">
-                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
                     </span>
                 </div>
             </div>

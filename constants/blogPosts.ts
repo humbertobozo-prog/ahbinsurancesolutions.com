@@ -43,7 +43,7 @@ export const BLOG_POSTS: BlogPost[] = [
         },
         excerpt: {
             en: 'Complete guide to Florida Medicare AEP (Oct 15–Dec 7, 2026) for 2027 coverage: Medigap Plan G vs N, Part D caps & checklist with Andres Bozo.',
-            es: 'Guía del AEP de Medicare en Florida (15 oct–7 dic 2026) para 2027: Medigap Plan G vs N, topes Parte D y checklist antes del 7 de diciembre con Andrés Bozo.'
+            es: 'Guía del AEP Medicare Florida (15 oct–7 dic 2026) para 2027: Medigap Plan G vs N, Parte D y checklist antes del 7 de diciembre de 2026 con Andrés Bozo.'
         },
         category: 'medicare',
         date: '2026-11-18',
@@ -65,10 +65,10 @@ Enrolling in Medicare can feel overwhelming with dozens of competing insurance c
 
 ### Key CMS Medicare Figures (2026 vs. Confirmed 2027 Rules)
 
-1. **Part A Inpatient Hospital Deductible:** $1,736 per benefit period in 2026, increasing to **$1,776 per benefit period in 2027** per CMS.
-2. **Part B Medical Deductible, Standard Premium & Coinsurance:** $283 annual deductible ($202.90/mo standard premium) in 2026, shifting to a **$292 annual deductible ($209.40/mo standard premium) in 2027**, after which Original Medicare covers 80% and leaves 20% coinsurance with no annual cap.
-3. **Part D Out-of-Pocket Rx Cap:** $2,100 in 2026, increasing to **$2,400 confirmed by CMS for 2027** covered prescriptions.
-4. **Medicare Advantage In-Network MOOP Ceiling:** $9,250 federal ceiling in 2026, shifting to **$9,850 federal ceiling in 2027** ($14,800 combined PPO ceiling; individual plans may set lower limits by county and carrier).
+1. **Part A Inpatient Hospital Deductible:** $1,736 per benefit period in 2026, increasing to **$1,776 per benefit period in 2027** per [CMS.gov](https://www.cms.gov/).
+2. **Part B Medical Deductible, Standard Premium & Coinsurance:** $283 annual deductible ($202.90/mo standard premium) in 2026, shifting to a **$292 annual deductible ($209.40/mo standard premium) in 2027** per [Medicare.gov](https://www.medicare.gov/basics/costs/medicare-costs), after which Original Medicare covers 80% and leaves 20% coinsurance with no annual cap.
+3. **Part D Out-of-Pocket Rx Cap:** $2,100 in 2026, increasing to **$2,400 confirmed by [CMS.gov](https://www.cms.gov/) for 2027** covered prescriptions.
+4. **Medicare Advantage In-Network MOOP Ceiling:** $9,250 federal ceiling in 2026, shifting to **$9,850 federal ceiling in 2027** per [CMS.gov](https://www.cms.gov/) ($14,800 combined PPO ceiling; individual plans may set lower limits by county and carrier).
 
 ### Original Medicare vs. Medicare Advantage (Part C)
 
@@ -107,10 +107,10 @@ Inscribirse en Medicare puede resultar abrumador ante tantas compañías promoci
 
 ### Cifras Clave Oficiales de CMS (Comparativa 2026 vs. Confirmadas 2027)
 
-1. **Deducible Hospitalario Parte A:** $1,736 en 2026 y **$1,776 en 2027** por cada período de beneficio de 60 días según CMS (puede repetirse en el mismo año).
-2. **Deducible Anual, Prima Estándar y Coseguro Parte B:** $283 de deducible anual ($202.90/mes de prima estándar) en 2026, pasando a **$292 de deducible anual ($209.40/mes de prima estándar) en 2027**; luego Medicare Original cubre el 80% y usted asume el 20% sin límite anual.
-3. **Tope Máximo de Medicamentos Parte D:** $2,100 en 2026 y **$2,400 confirmados por CMS para 2027** en recetas cubiertas.
-4. **Tope Federal de Bolsillo Medicare Advantage en Red (MOOP):** Tope legal federal de $9,250 en 2026, ajustado a **$9,850 en 2027** ($14,800 combinado PPO; cada plan define su límite específico igual o menor según condado y aseguradora).
+1. **Deducible Hospitalario Parte A:** $1,736 en 2026 y **$1,776 en 2027** por cada período de beneficio de 60 días según [CMS.gov](https://www.cms.gov/) (puede repetirse en el mismo año).
+2. **Deducible Anual, Prima Estándar y Coseguro Parte B:** $283 de deducible anual ($202.90/mes de prima estándar) en 2026, pasando a **$292 de deducible anual ($209.40/mes de prima estándar) en 2027** según [Medicare.gov](https://www.medicare.gov/basics/costs/medicare-costs); luego Medicare Original cubre el 80% y usted asume el 20% sin límite anual.
+3. **Tope Máximo de Medicamentos Parte D:** $2,100 en 2026 y **$2,400 confirmados por [CMS.gov](https://www.cms.gov/) para 2027** en recetas cubiertas.
+4. **Tope Federal de Bolsillo Medicare Advantage en Red (MOOP):** Tope legal federal de $9,250 en 2026, ajustado a **$9,850 en 2027** según [CMS.gov](https://www.cms.gov/) ($14,800 combinado PPO; cada plan define su límite específico igual o menor según condado y aseguradora).
 
 ### Medicare Original vs. Medicare Advantage (Parte C)
 
@@ -373,7 +373,7 @@ Todo consumidor responsable debe comprender los siguientes riesgos y reglas oper
 Medicare Part D prescription drug coverage continues evolving under federal Inflation Reduction Act rules, making annual formulary and pharmacy reviews essential for every Florida beneficiary.
 
 ### Annual Out-of-Pocket Maximum ($2,100 in 2026; $2,400 in 2027)
-For calendar year 2026, all Medicare Part D enrollees benefit from an annual **$2,100 out-of-pocket cap** on covered prescriptions. For coverage beginning January 1, 2027 (enrolled during the Oct 15–Dec 7, 2026 AEP), CMS has confirmed the federal Part D out-of-pocket maximum will adjust to **$2,400**. Once your eligible Part D drug spending reaches the annual threshold, you pay $0 for covered formulary medications for the rest of that calendar year.
+For calendar year 2026, all Medicare Part D enrollees benefit from an annual **$2,100 out-of-pocket cap** on covered prescriptions. For coverage beginning January 1, 2027 (enrolled during the Oct 15–Dec 7, 2026 AEP), [CMS.gov](https://www.cms.gov/) has confirmed the federal Part D out-of-pocket maximum will adjust to **$2,400** (see official cost details at [Medicare.gov](https://www.medicare.gov/basics/costs/medicare-costs)). Once your eligible Part D drug spending reaches the annual threshold, you pay $0 for covered formulary medications for the rest of that calendar year.
 
 ### Why You MUST Review Your Formulary Before December 7, 2026
 Even with federal spending caps in place, carriers restructure their **formularies** and cost-sharing tiers each plan year:
@@ -392,7 +392,7 @@ Florida seniors can opt into the Medicare Prescription Payment Plan to spread ou
 La cobertura de medicamentos recetados de Medicare Parte D continúa ajustándose bajo las reglas federales de la Ley de Reducción de la Inflación, por lo que revisar su formulario cada otoño resulta indispensable para los beneficiarios en Florida.
 
 ### Tope Máximo Anual de Bolsillo ($2,100 en 2026; $2,400 en 2027)
-Para el año calendario 2026, todos los afiliados a Medicare Parte D cuentan con un **tope anual de $2,100 de su bolsillo** en medicamentos cubiertos. Para la cobertura que inicia el 1 de enero de 2027 (durante el AEP del 15 de octubre al 7 de diciembre de 2026), CMS confirmó que el máximo anual federal de la Parte D será de **$2,400**. Al alcanzar ese umbral en recetas cubiertas, usted paga $0 por medicamentos dentro del formulario el resto de ese año.
+Para el año calendario 2026, todos los afiliados a Medicare Parte D cuentan con un **tope anual de $2,100 de su bolsillo** en medicamentos cubiertos. Para la cobertura que inicia el 1 de enero de 2027 (durante el AEP del 15 de octubre al 7 de diciembre de 2026), [CMS.gov](https://www.cms.gov/) confirmó que el máximo anual federal de la Parte D será de **$2,400** (consulte costos oficiales en [Medicare.gov](https://www.medicare.gov/basics/costs/medicare-costs)). Al alcanzar ese umbral en recetas cubiertas, usted paga $0 por medicamentos dentro del formulario el resto de ese año.
 
 ### Por Qué DEBE Revisar su Formulario Antes del 7 de Diciembre de 2026
 Aunque el tope federal brinda protección ante gastos catastróficos, las aseguradoras reestructuran sus **formularios** y niveles de copago cada año:

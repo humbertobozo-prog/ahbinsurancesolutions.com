@@ -92,7 +92,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
         ogImage="https://www.ahbinsurancesolutions.com/og-image.png"
         ogImageAlt={isEs ? `Seguros Medicare, Gastos Finales e IUL en ${activeCity.cityName}, Florida` : `Medicare, Medigap & Life Insurance in ${activeCity.cityName}, FL`}
         datePublished="2024-01-15"
-        dateModified="2026-11-16"
+        dateModified="2026-11-18"
       />
 
       {/* Header Banner */}
@@ -111,7 +111,7 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
             {isEs ? activeCity.taglineEs : activeCity.taglineEn}
           </p>
           <p className="text-xs text-amber-300 font-semibold">
-            {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+            {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
           </p>
         </div>
       </div>

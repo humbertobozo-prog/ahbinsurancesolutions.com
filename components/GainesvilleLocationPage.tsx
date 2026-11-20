@@ -167,7 +167,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
         ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
         ogImageAlt={isEs ? "Andrés Bozo - Broker de Seguros en Gainesville y Condado de Alachua, Florida" : "Andres Bozo - Licensed Insurance Broker in Gainesville and Alachua County, Florida"}
         datePublished="2024-01-15"
-        dateModified="2026-11-16"
+        dateModified="2026-11-18"
         schema={[serviceSchema, breadcrumbSchema, faqSchema]}
       />
 
@@ -196,7 +196,7 @@ export const GainesvilleLocationPage: React.FC<GainesvilleLocationPageProps> = (
 
           <div className="flex items-center gap-3">
             <span className="hidden md:inline text-slate-400">
-              {isEs ? "Andrés Bozo (NPN 21228432) · Act: 16 Nov 2026" : "Andres Bozo (NPN 21228432) · Updated: Nov 16, 2026"}
+              {isEs ? "Andrés Bozo (NPN 21228432) · Act: 18 Nov 2026" : "Andres Bozo (NPN 21228432) · Updated: Nov 18, 2026"}
             </span>
             <button
               onClick={() => {

@@ -186,9 +186,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "url": "https://www.ahbinsurancesolutions.com/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp"
+                "url": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
             },
-            "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+            "image": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg",
             "description": language === 'es'
                 ? "Agencia de seguros independiente en Florida licenciada y especializada en Suplementos de Medicare (Medigap), Gastos Finales, Seguro de Vida Universal Indexada (IUL) y Anualidades."
                 : "Independent licensed insurance brokerage in Florida specializing in Medicare Supplement Plans (Medigap), Final Expense Life Insurance, Indexed Universal Life (IUL), and Annuities.",
@@ -322,7 +322,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             },
             "telephone": "+1-352-225-8389",
             "email": "andreshbozo@ahbinsurancesolutions.com",
-            "image": "https://www.ahbinsurancesolutions.com/andresbozoofi.webp",
+            "image": "https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg",
             "url": language === 'es' ? "https://www.ahbinsurancesolutions.com/es/sobre-andres-bozo" : "https://www.ahbinsurancesolutions.com/about-andres-bozo",
             "knowsLanguage": ["English", "Spanish"],
             "knowsAbout": ["Medicare", "Final Expense Insurance", "Life Insurance", "Indexed Universal Life (IUL)", "Burial Insurance", "Annuities"],

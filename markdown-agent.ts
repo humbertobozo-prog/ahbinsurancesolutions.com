@@ -322,7 +322,7 @@ ${getAgencyFooter(false)}`;
 > **Description:** ${metadata.description}  
 > **Canonical URL:** ${metadata.canonicalUrl}  
 > **Language:** ${metadata.htmlLang}  
-> **Published:** ${metadata.datePublished || "2024-01-15"} | **Updated:** ${metadata.dateModified || "2026-11-16"}
+> **Published:** ${metadata.datePublished || "2024-01-15"} | **Updated:** ${metadata.dateModified || "2026-11-18"}
 `;
 
   return `${headerBlock}\n\n${parsedOutline}\n\n${getAgencyFooter(isEs)}`;

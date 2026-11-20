@@ -159,7 +159,7 @@ export const FLORIDA_CITIES: CityData[] = [
         answer: 'Tanto AdventHealth Orlando como Orlando Health aceptan Medicare Original y Suplementos de Medicare (Medigap Plan G y Plan N) sin restricciones de red ni referidos HMO.',
       },
       {
-        question: '¿Qué cifras de Medicare 2026–2027 deben revisar en Orlando antes del 7 de diciembre?',
+        question: '¿Qué cifras de Medicare 2026–2027 deben revisar en Orlando antes del 7 de diciembre de 2026?',
         answer: 'Conviene verificar cómo coordina su plan frente al deducible de Parte B ($283 en 2026), deducible de Parte A ($1,736 en 2026), tope de medicamentos Parte D ($2,100 en 2026 y $2,400 en 2027) y máximo en red Advantage ($9,850 en 2027).',
       },
       {
@@ -250,7 +250,7 @@ export const FLORIDA_CITIES: CityData[] = [
       },
       {
         question: 'How do 2026 and 2027 Part D rules affect Jacksonville retirees?',
-        answer: 'Part D covered prescription out-of-pocket costs are capped at $2,100 in 2026 and increase to $2,400 under CMS rules for 2027. Reviewing your ZIP code formulary before December 7 helps prevent unexpected medication tier jumps.',
+        answer: 'Part D covered prescription out-of-pocket costs are capped at $2,100 in 2026 and increase to $2,400 under CMS rules for 2027. Reviewing your ZIP code formulary before December 7, 2026 helps prevent unexpected medication tier jumps.',
       },
     ],
     faqsEs: [
@@ -260,7 +260,7 @@ export const FLORIDA_CITIES: CityData[] = [
       },
       {
         question: '¿Cómo afectan los topes de Parte D 2026 y 2027 a jubilados en Jacksonville?',
-        answer: 'El límite anual de bolsillo en medicamentos cubiertos de Parte D es de $2,100 en 2026 y pasará a $2,400 en 2027 según CMS. Revisar su formulario local antes del 7 de diciembre evita sobrecostos inesperados.',
+        answer: 'El límite anual de bolsillo en medicamentos cubiertos de Parte D es de $2,100 en 2026 y pasará a $2,400 en 2027 según CMS. Revisar su formulario local antes del 7 de diciembre de 2026 evita sobrecostos inesperados.',
       },
     ],
   },

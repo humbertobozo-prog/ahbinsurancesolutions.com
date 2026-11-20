@@ -249,18 +249,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
                 ogImageAlt={isEs ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[personSchema, aboutPageSchema, breadcrumbSchema]}
             />
 
             {/* Breadcrumb Bar */}
             <div className="bg-white border-b border-gray-200 py-2.5">
-                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center gap-2 flex-wrap">
-                    <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
-                        {isEs ? 'Inicio' : 'Home'}
-                    </a>
-                    <span>/</span>
-                    <span className="text-primary font-bold">{isEs ? 'Andrés H. Bozo (NPN 21228432)' : 'Andres H. Bozo (NPN 21228432)'}</span>
+                <div className="container mx-auto px-4 md:px-6 text-xs text-gray-600 font-medium flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <a href={isEs ? '/es' : '/'} className="hover:text-primary transition-colors">
+                            {isEs ? 'Inicio' : 'Home'}
+                        </a>
+                        <span>/</span>
+                        <span className="text-primary font-bold">{isEs ? 'Andrés H. Bozo (NPN 21228432)' : 'Andres H. Bozo (NPN 21228432)'}</span>
+                    </div>
+                    <span className="text-[11px] text-gray-600 font-semibold">
+                        {isEs
+                            ? 'Por Andrés H. Bozo (NPN 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026'
+                            : 'By Andres H. Bozo (NPN 21228432) · Published: Jan 15, 2024 · Updated: Nov 18, 2026'}
+                    </span>
                 </div>
             </div>
 
@@ -322,10 +329,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading leading-tight mb-4">
                                 {isEs ? 'Andrés H. Bozo' : 'Andres H. Bozo'}
                             </h1>
-                            <p className="text-base sm:text-lg text-gray-200 font-medium leading-relaxed max-w-2xl mb-6">
+                            <p className="text-base sm:text-lg text-gray-200 font-medium leading-relaxed max-w-2xl mb-4">
                                 {isEs 
                                     ? 'Corredor de seguros independiente certificado en Florida (NPN: 21228432) y fundador de AHB Insurance Solutions. Especialista en Medicare, Gastos Finales, IUL y Anualidades con representación independiente ante múltiples aseguradoras líderes.' 
                                     : 'Florida-licensed independent insurance broker (NPN: 21228432) and founder of AHB Insurance Solutions. Specializing in Medicare, Final Expense Burial Insurance, IUL, and Annuities with independent representation across multiple top carriers.'}
+                            </p>
+                            <p className="text-xs sm:text-sm text-amber-200 font-semibold mb-6">
+                                {isEs
+                                    ? 'Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026'
+                                    : 'Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Published: Jan 15, 2024 · Updated: Nov 18, 2026'}
                             </p>
 
                             {/* Quick Credentials Grid */}
@@ -402,7 +414,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         </div>
                         <div className="flex items-center gap-3 flex-wrap">
                             <span className="bg-gray-200 text-gray-700 text-[11px] font-bold px-3 py-1 rounded-full">
-                                {isEs ? 'Actualizado: Noviembre 2026' : 'Updated: November 2026'}
+                                {isEs ? 'Actualizado: 18 Nov 2026' : 'Updated: Nov 18, 2026'}
                             </span>
                             <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-lg text-emerald-800 text-xs font-bold">
                                 <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
@@ -631,8 +643,15 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                     </h3>
                     <p>
                         <strong>{isEs ? 'Aviso de Licencia:' : 'Licensing Disclosure:'}</strong> {isEs 
-                            ? 'Andrés H. Bozo es un corredor de seguros residente licenciado por el Departamento de Servicios Financieros del Estado de Florida (DFS), Número de Productor Nacional (NPN) 21228432. AHB Insurance Solutions opera como una agencia de corretaje independiente.' 
-                            : 'Andres H. Bozo is a licensed resident insurance broker authorized by the Florida Department of Financial Services (DFS), National Producer Number (NPN) 21228432. AHB Insurance Solutions operates as an independent insurance agency.'}
+                            ? 'Andrés H. Bozo es un corredor de seguros residente licenciado por el Departamento de Servicios Financieros del Estado de Florida (DFS), Número de Productor Nacional (NPN) 21228432. AHB Insurance Solutions opera como una agencia de corretaje independiente. ' 
+                            : 'Andres H. Bozo is a licensed resident insurance broker authorized by the Florida Department of Financial Services (DFS), National Producer Number (NPN) 21228432. AHB Insurance Solutions operates as an independent insurance agency. '}
+                        <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline font-bold">
+                            {isEs ? 'Verificar en Florida DFS' : 'Verify on Florida DFS'}
+                        </a>
+                        {' · '}
+                        <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline font-bold">
+                            {isEs ? 'Registro NIPR' : 'NIPR Registry'}
+                        </a>
                     </p>
                     <p>
                         <strong>{isEs ? 'Descargo de Responsabilidad de Medicare (CMS):' : 'CMS Medicare Disclaimer:'}</strong> {isEs 

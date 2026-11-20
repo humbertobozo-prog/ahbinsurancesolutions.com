@@ -203,7 +203,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                 ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
                 ogImageAlt={isEs ? "Hable directamente con Andrés H. Bozo - AHB Insurance Solutions" : "Talk Directly With Andres H. Bozo - AHB Insurance Solutions"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[contactSchema, breadcrumbSchema]}
             />
 
@@ -217,7 +217,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                         <span className="text-primary font-bold">{isEs ? 'Hablar con Andrés Bozo' : 'Talk With Andres Bozo'}</span>
                     </div>
                     <span className="text-gray-500 font-semibold">
-                        {isEs ? 'Andrés H. Bozo · NPN 21228432 · Actualizado: 16 Nov 2026' : 'Andres H. Bozo · NPN 21228432 · Updated: Nov 16, 2026'}
+                        {isEs ? 'Andrés H. Bozo · NPN 21228432 · Actualizado: 18 Nov 2026' : 'Andres H. Bozo · NPN 21228432 · Updated: Nov 18, 2026'}
                     </span>
                 </div>
             </div>
@@ -573,8 +573,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                         </h2>
                         <p>
                             {isEs
-                                ? 'Ya sea que compare planes de Medicare 2026–2027 antes del cierre de AEP el 7 de diciembre, evalúe pólizas de Gastos Finales ($5,000 a $35,000) o revise ilustraciones de Vida Universal Indexada (IUL) y anualidades fijas, cada análisis se prepara de forma individual según su condado en Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval o Alachua).'
-                                : 'Whether you are comparing 2026–2027 Medicare plans ahead of the December 7 Annual Enrollment Period deadline, evaluating Final Expense whole life policies ($5,000–$35,000), or reviewing Indexed Universal Life (IUL) and fixed annuity illustrations, every consultation is tailored to your Florida county, budget, and health profile.'}
+                                ? 'Ya sea que compare planes de Medicare 2026–2027 antes del cierre de AEP el 7 de diciembre de 2026, evalúe pólizas de Gastos Finales ($5,000 a $35,000) o revise ilustraciones de Vida Universal Indexada (IUL) y anualidades fijas, cada análisis se prepara de forma individual según su condado en Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval o Alachua).'
+                                : 'Whether you are comparing 2026–2027 Medicare plans ahead of the December 7, 2026 Annual Enrollment Period deadline, evaluating Final Expense whole life policies ($5,000–$35,000), or reviewing Indexed Universal Life (IUL) and fixed annuity illustrations, every consultation is tailored to your Florida county, budget, and health profile.'}
                         </p>
                         <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm">
                             <li>

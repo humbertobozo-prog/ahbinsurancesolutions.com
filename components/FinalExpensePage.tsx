@@ -148,7 +148,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                 ogImage="https://www.ahbinsurancesolutions.com/og/final-expense-og.jpg"
                 ogImageAlt={isEs ? "Seguro de Gastos Finales y Funeral en Florida - Cobertura Permanente de Vida Entera" : "Florida Final Expense and Burial Life Insurance - Permanent Whole Life Coverage"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
@@ -165,7 +165,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                         </span>
                     </div>
                     <span className="text-[11px] text-gray-600 font-semibold">
-                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 16 nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 16, 2026'}
+                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
                     </span>
                 </div>
             </nav>

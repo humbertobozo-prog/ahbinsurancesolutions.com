@@ -355,7 +355,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 'Beyond Medicare, bilingual consultations cover permanent Final Expense policies ($5,000–$35,000), Senior Dental & Vision plans, Fixed Annuities, and IUL policies with transparent explanations of policy charges and zero broker fees. CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all your options.'
             ],
             faqs: [
-                { q: 'When does the Medicare Annual Enrollment Period (AEP) end?', a: 'AEP runs through December 7 each year for coverage changes taking effect on January 1.' },
+                { q: 'When does the Medicare Annual Enrollment Period (AEP) end?', a: 'AEP runs from October 15 through December 7, 2026 for 2027 coverage changes taking effect on January 1, 2027.' },
                 { q: 'Do I pay higher premiums when working with bilingual broker Andres Bozo?', a: 'No. Florida insurance rates are regulated and identical whether you enroll directly or through our agency at zero service fee.' }
             ]
         };
@@ -387,7 +387,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                 }
                 ogImageAlt={details.title}
                 datePublished="2024-01-15"
-                dateModified="2026-11-16"
+                dateModified="2026-11-18"
                 schema={[localBusinessSchema, breadcrumbSchema]}
             />
             {/* Header / Sub Nav */}
@@ -465,8 +465,8 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                             </div>
                             <p className="text-xs text-gray-300 mt-4 font-mono">
                                 {activeLang === 'es'
-                                    ? 'Andrés H. Bozo · Broker Licenciado Florida (NPN: 21228432) · Actualizado: 16 Nov 2026'
-                                    : 'Andres H. Bozo · Licensed Florida Broker (NPN: 21228432) · Updated: Nov 16, 2026'}
+                                    ? 'Andrés H. Bozo · Broker Licenciado Florida (NPN: 21228432) · Actualizado: 18 Nov 2026'
+                                    : 'Andres H. Bozo · Licensed Florida Broker (NPN: 21228432) · Updated: Nov 18, 2026'}
                             </p>
                         </div>
                     </div>
