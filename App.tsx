@@ -313,7 +313,7 @@ const App: React.FC = () => {
                     ogImage={`${baseUrl}/og-image.png`}
                     ogImageAlt={isEs ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists"}
                     datePublished="2024-01-15"
-                    dateModified="2026-11-18"
+                    dateModified="2026-11-20"
                     schema={homeBreadcrumbSchema}
                 />
                 <Hero content={content.hero} language={language} />

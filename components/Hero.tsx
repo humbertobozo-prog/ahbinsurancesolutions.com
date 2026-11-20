@@ -70,10 +70,15 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                         {content.heading}
                     </h1>
 
-                    <p className="text-base sm:text-lg md:text-lg lg:text-xl text-slate-700 mb-4 leading-relaxed font-normal md:font-medium max-w-2xl">
+                    <p className="text-base sm:text-lg md:text-lg lg:text-xl text-slate-700 mb-2 leading-relaxed font-normal md:font-medium max-w-2xl">
                         {language === 'es' 
                             ? 'Representamos sus intereses, no a las aseguradoras. Como corredores independientes licenciados en Florida, comparamos múltiples aseguradoras autorizadas de primer nivel para encontrar su plan ideal al mejor valor y con asesoría sin costo.' 
                             : 'At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare multiple Florida-licensed, A-rated carriers to find the right plan for your unique needs at zero cost to you.'}
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-600 font-semibold mb-4">
+                        {language === 'es'
+                            ? 'Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 20 Nov 2026'
+                            : 'By Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Updated: Nov 20, 2026'}
                     </p>
 
                     {/* 3 Pillars: Generous & Legible Micro-Grid for Desktop & 15" Displays */}

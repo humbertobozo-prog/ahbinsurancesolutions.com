@@ -200,7 +200,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
     ? "AHB Insurance Solutions - Especialistas en Medicare, Gastos Finales e IUL en Florida" 
     : "AHB Insurance Solutions - Florida Medicare, Final Expense and IUL Specialists";
   let datePublished = "2024-01-15";
-  let dateModified = "2026-11-18";
+  let dateModified = "2026-11-20";
 
   // 1. Home English / Spanish
   if (cleanPath === "" || cleanPath === "/" || cleanPath === "/es") {
@@ -210,7 +210,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 18 Nov 2026</strong></p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 20 Nov 2026</strong></p>
           <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Con oficina en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
         </header>
         <section>
@@ -274,7 +274,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       bodyOutline = `
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 18, 2026</strong></p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 20, 2026</strong></p>
           <p>Welcome to AHB Insurance Solutions, located at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout all 67 Florida counties. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
         </header>
         <section>
@@ -356,15 +356,15 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" 
       : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo";
     datePublished = "2024-01-15";
-    dateModified = "2026-11-18";
+    dateModified = "2026-11-20";
     
     if (isEs) {
       bodyOutline = `
         <nav aria-label="Navegación"><p><a href="/es">Inicio Seguros Florida</a> &gt; <span>Medicare Suplementario Medigap</span></p></nav>
         <header>
           <h1>Planes de Medicare Suplementario (Medigap) en Florida 2026–2027</h1>
-          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026</strong></p>
-          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre múltiples aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita y personalizada hoy desde nuestra oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
+          <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado originalmente: 15 Ene 2024 · Revisado y actualizado: 20 Nov 2026 (con cifras oficiales CMS 2026–2027)</strong></p>
+          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432, oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre aseguradoras autorizadas (entre ellas Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado). Nuestras consultas y comparativas no tienen ningún costo ni recargo para usted: la aseguradora emisora paga la compensación del corredor al emitirse la póliza y las primas reguladas de Medicare son exactamente las mismas ya sea contratando directo o mediante broker.</p>
         </header>
 
         <section>
@@ -372,7 +372,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Muchos residentes de Florida asumen que inscribirse en Medicare Original al cumplir 65 años cubrirá la totalidad de sus gastos médicos. Sin embargo, Medicare Original deja vacíos financieros significativos que pueden poner en riesgo los ahorros acumulados durante toda una vida de trabajo:</p>
           <ul>
             <li><strong>Sin Límite Anual de Gastos (No MOOP):</strong> En Medicare Original no existe un límite máximo de desembolso de bolsillo. Usted es responsable del 20% de todos los servicios ambulatorios, cirugías, tratamientos de quimioterapia y diálisis, sin tope alguno en dólares.</li>
-            <li><strong>Deducibles de Hospital Elevados:</strong> El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (<a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> / <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>), pudiendo repetirse varias veces en un mismo año.</li>
+            <li><strong>Deducibles de Hospital Elevados:</strong> El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (<a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027 Partes A y B</a> / <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>), pudiendo repetirse varias veces en un mismo año.</li>
           </ul>
         </section>
 
@@ -381,8 +381,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Navegar la transición hacia Medicare requiere sincronización precisa. Un descuido en los plazos legales de la Administración del Seguro Social (SSA) puede generar penalidades de por vida o la pérdida de sus derechos de emisión garantizada en seguros suplementarios:</p>
           <ol>
             <li><strong>Paso 1: Identificar su Período Inicial de Inscripción (IEP):</strong> Su IEP dura 7 meses: inicia 3 meses antes de cumplir 65 años, incluye el mes de su cumpleaños y finaliza 3 meses después. Es la ventana para solicitar las Partes A y B en SSA.gov.</li>
-            <li><strong>Paso 2: Activar la Ventana Protegida de Medigap (MOEP):</strong> Al activar la Parte B, arranca su ventana de 6 meses de Medigap. Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
-            <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico para evitar la penalidad permanente del 1% mensual y acceder al tope federal de gasto de bolsillo de $2,100 en 2026 ($2,400 confirmado por <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> para la cobertura de 2027; verifique en <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>).</li>
+            <li><strong>Paso 2: Activar la Ventana Protegida de Medigap (MOEP):</strong> Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+, según <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
+            <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico para evitar la penalidad permanente del 1% mensual y acceder al tope federal anual de gasto de bolsillo de $2,100 en 2026 y $2,400 para la cobertura de 2027 publicado en <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos Parte D)</a>.</li>
           </ol>
         </section>
 
@@ -390,11 +390,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Análisis Detallado de Planes Medigap en Florida: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medigap Plan G: La Opción Más Completa</h3>
-            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 en 2026; $292 en 2027 según <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a>, con prima estándar 2027 de $209.40/mes frente a $202.90/mes en 2026). Cubre el 100% del deducible de la Parte A ($1,736 en 2026; $1,776 en 2027), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
+            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 en 2026; $292 en 2027 según la <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027</a>, con prima estándar 2027 de $209.40/mes frente a $202.90/mes en 2026). Cubre el 100% del deducible de la Parte A ($1,736 en 2026; $1,776 en 2027), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
           </article>
           <article>
             <h3>Medigap Plan N: El Equilibrio entre Costo y Cobertura</h3>
-            <p>El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados: hasta $20 por consulta médica y hasta $50 en visitas a salas de urgencias que no resulten en admisión hospitalaria. El Plan N no cubre los cargos en exceso de la Parte B, pero en Florida la gran mayoría de los médicos aceptan la tarifa asignada por Medicare.</p>
+            <p>El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados: hasta $20 por consulta médica y hasta $50 en visitas a salas de urgencias que no resulten en admisión hospitalaria. El Plan N no cubre los cargos en exceso de la Parte B; antes de seleccionarlo, puede verificar si sus médicos aceptan la tarifa asignada por Medicare en la herramienta oficial <a href="https://www.medicare.gov/care-compare/" target="_blank" rel="noopener noreferrer">Care Compare de Medicare.gov</a>.</p>
           </article>
           <article>
             <h3>Medigap Plan F: Disponibilidad Limitada</h3>
@@ -430,13 +430,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Deducible de Hospital Parte A</td>
                 <td>$0 (100% Cubierto)</td>
                 <td>$0 (100% Cubierto)</td>
-                <td>Copagos diarios ($300-$400/día días 1-5)</td>
+                <td>Copagos diarios por internación según cada plan (verifique en Medicare.gov)</td>
               </tr>
               <tr>
                 <td>Copagos por Visitas Médicas</td>
                 <td>$0 (Tras deducible de Parte B)</td>
                 <td>Hasta $20 por consulta</td>
-                <td>Copagos de $0 a $45+ por visita</td>
+                <td>Copagos variables por visita según el plan</td>
               </tr>
               <tr>
                 <td>Cargos en Exceso Parte B</td>
@@ -448,7 +448,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Predecibilidad Financiera</td>
                 <td>Máxima (Sin facturas sorpresa)</td>
                 <td>Muy Alta (Copagos menores)</td>
-                <td>Variable según uso médico (tope legal federal <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> en red: $9,250 en 2026 y $9,850 en 2027; cada plan puede fijar un límite menor)</td>
+                <td>Variable según uso médico (tope legal federal en red según <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer">Medicare.gov / CMS</a>: $9,250 en 2026 y $9,850 en 2027; cada plan puede fijar un límite menor)</td>
               </tr>
             </tbody>
           </table>
@@ -456,14 +456,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Rangos de Primas Mensuales y Factores de Tarificación en Florida 2026</h2>
-          <p>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 18 Nov 2026).</p>
+          <p>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 20 Nov 2026).</p>
           <p>Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar:</p>
           <ul>
             <li><strong>Medigap Plan G:</strong> Suele oscilar entre $140 y $185 mensuales.</li>
             <li><strong>Medigap Plan N:</strong> Suele oscilar entre $100 y $145 mensuales (ahorro ilustrativo de ~$30-50/mes frente al Plan G).</li>
           </ul>
           <p>Las primas de Medicare Suplementario no constituyen una tarifa general ni uniforme para el estado de Florida. El costo real depende de su código postal (ZIP), edad, método de tarificación actuarial (Attained-Age vs. Issue-Age), compañía aseguradora (carrier), descuentos por convivencia en el hogar (household discounts), evaluación médica (underwriting) y área geográfica.</p>
-          <p><strong>Fuentes Oficiales (2026–2027):</strong> Cifras oficiales de Parte A ($1,736 en 2026; $1,776 en 2027), Parte B ($283 en 2026; $292 y prima estándar de $209.40/mes en 2027), tope Parte D ($2,100 en 2026; $2,400 en 2027) y techo Advantage MOOP ($9,250 en 2026; $9,850 en 2027) publicadas en <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> y <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos de Medicare)</a>.</p>
+          <p><strong>Fuentes Oficiales (2026–2027):</strong> Cifras oficiales de Parte A ($1,736 en 2026; $1,776 en 2027) y Parte B ($283 en 2026; $292 y prima estándar de $209.40/mes en 2027) publicadas en la <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027 (Partes A y B)</a>; tope anual de Parte D ($2,100 en 2026; $2,400 en 2027) en <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos Parte D)</a>; y techo Advantage MOOP ($9,250 en 2026; $9,850 en 2027) en <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos de Medicare)</a>.</p>
         </section>
 
         <section>
@@ -479,7 +479,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Fechas Clave de Inscripción de Medicare en Florida</h2>
           <ul>
             <li><strong>IEP (Período Inicial de Inscripción):</strong> Ventana de 7 meses (3 meses antes del mes de cumpleaños 65, el mes del cumpleaños y 3 meses después). Momento para activar Partes A y B.</li>
-            <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde la fecha de inicio de su Parte B. Inmunidad total contra cuestionarios médicos de salud. Emisión 100% garantizada por ley federal.</li>
+            <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Inmunidad total contra cuestionarios médicos de salud y emisión garantizada por ley federal.</li>
             <li><strong>AEP (Inscripción Anual - 15 Oct a 7 Dic 2026):</strong> Ventana anual de otoño para modificar planes de medicamentos Parte D o cambiar coberturas Advantage para el año de beneficios 2027.</li>
           </ul>
         </section>
@@ -491,23 +491,23 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap. Por el contrario, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado.</dd>
             
             <dt><strong>¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?</strong></dt>
-            <dd>El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses e inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes.</dd>
+            <dd>El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes.</dd>
             
             <dt><strong>¿Puedo cambiarme de Medicare Advantage a un plan Medigap en Florida?</strong></dt>
             <dd>Sí, pero en la mayoría de los casos deberá pasar por un proceso de suscripción médica (underwriting), respondiendo cuestionarios de salud, a menos que califique para un Período de Inscripción Especial o derechos de prueba ('trial rights') dentro de sus primeros 12 meses en Medicare Advantage.</dd>
             
             <dt><strong>¿Qué son los Cargos en Exceso de la Parte B y cómo me afectan en Florida?</strong></dt>
-            <dd>Si un médico o especialista no acepta la asignación de Medicare, la ley le permite cobrar hasta un 15% adicional sobre la tarifa aprobada por Medicare. El Medigap Plan G cubre el 100% de estos cargos en exceso, mientras que el Plan N no los cubre, aunque muchos médicos en Florida aceptan la asignación estándar.</dd>
+            <dd>Si un médico o especialista no acepta la asignación de Medicare, la ley le permite cobrar hasta un 15% adicional sobre la tarifa aprobada por Medicare. El Medigap Plan G cubre el 100% de estos cargos en exceso, mientras que el Plan N no los cubre; puede verificar si su médico acepta la asignación en el directorio oficial Care Compare de Medicare.gov.</dd>
             
             <dt><strong>¿Cuánto cuestan las primas de Medigap en Florida en 2026?</strong></dt>
-            <dd>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 18 Nov 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica.</dd>
+            <dd>“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 20 Nov 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, aseguradora (carrier), método de tarificación actuarial (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica.</dd>
           </dl>
         </section>
 
         <section>
           <h2>Asesoría Licenciada y Aviso Legal de Cumplimiento CMS</h2>
-          <p>Comuníquese hoy mismo con el corredor independiente licenciado Andrés Bozo (NPN: 21228432) al <a href="tel:+13522258389">+1 (352) 225-8389</a> para recibir una comparativa imparcial y personalizada sin costo.</p>
-          <p><small>Aviso Legal de Cumplimiento CMS Medicare: No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer">Medicare.gov</a> (y <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a>), al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. AHB Insurance Solutions y el corredor Andrés H. Bozo son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.</small></p>
+          <p>Comuníquese hoy mismo con el corredor independiente licenciado Andrés Bozo (NPN: 21228432) al <a href="tel:+13522258389">+1 (352) 225-8389</a> para comparar planes entre Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare sin costo por asesoría (la aseguradora emisora paga la compensación del broker tras la inscripción, sin recargo ni variación en su prima regulada).</p>
+          <p><small>Aviso Legal de Cumplimiento CMS Medicare: No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones (incluyendo Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado) que ofrecen productos en su zona. Comuníquese con <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer">Medicare.gov</a>, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. Fuente oficial de cifras 2027: <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027 (Partes A y B)</a>. AHB Insurance Solutions y el corredor Andrés H. Bozo son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.</small></p>
         </section>
       `;
     } else {
@@ -515,8 +515,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <nav aria-label="Breadcrumb"><p><a href="/">Florida Insurance Portal</a> &gt; <span>Medicare Supplement (Medigap) Plans</span></p></nav>
         <header>
           <h1>Medicare Supplement (Medigap) Plans in Florida 2026–2027</h1>
-          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 18, 2026</strong></p>
-          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across multiple top-rated carriers to shield your retirement savings. Get expert, zero-cost broker guidance today.</p>
+          <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Originally published: Jan 15, 2024 · Revised &amp; updated: Nov 20, 2026 (with 2026–2027 CMS Medicare figures)</strong></p>
+          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A &amp; Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across licensed carriers (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability). Broker guidance and rate comparisons carry zero fees or markups to you—licensed brokers are compensated directly by the issuing carrier upon enrollment, and regulated Medicare premiums remain identical whether you enroll directly or through a broker.</p>
         </header>
 
         <section>
@@ -524,7 +524,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Many Florida seniors assume enrolling in Original Medicare at age 65 provides 100% medical coverage. However, Original Medicare leaves major financial gaps that can expose your retirement savings to unexpected medical liabilities:</p>
           <ul>
             <li><strong>No Annual Maximum Out-of-Pocket (No MOOP):</strong> Original Medicare has no cap on your 20% coinsurance liability for outpatient care, surgeries, chemotherapy, specialty treatments, and imaging.</li>
-            <li><strong>High Hospital Deductibles:</strong> The official <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per benefit period (see <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>), which can occur multiple times in a single calendar year.</li>
+            <li><strong>High Hospital Deductibles:</strong> The official <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Parts A &amp; B Fact Sheet</a> Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per benefit period (see <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>), which can occur multiple times in a single calendar year.</li>
           </ul>
         </section>
 
@@ -533,8 +533,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Navigating Medicare requires precise timing. Missing federal Social Security Administration (SSA) deadlines can result in lifelong premium penalties or the loss of guaranteed-issue rights for Medigap supplements:</p>
           <ol>
             <li><strong>Step 1: Identify Your Initial Enrollment Period (IEP):</strong> Your IEP spans 7 months: starts 3 months before your 65th birthday month, includes your birthday month, and ends 3 months after. Use SSA.gov to apply for Parts A and B.</li>
-            <li><strong>Step 2: Activate Your Medigap Open Enrollment Window (MOEP):</strong> Activating Part B triggers your 6-month Medigap window. During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
-            <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,100 annual cap in 2026 ($2,400 confirmed by <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> for 2027 coverage; details on <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov</a>).</li>
+            <li><strong>Step 2: Activate Your Medigap Open Enrollment Window (MOEP):</strong> Your 6-month Medigap window starts automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+, per <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
+            <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,100 annual cap in 2026 and $2,400 annual cap in 2027 published on <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Part D Costs)</a>.</li>
           </ol>
         </section>
 
@@ -542,11 +542,11 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Detailed Analysis of Florida Medigap Plans: Plan G vs Plan N vs Plan F</h2>
           <article>
             <h3>Medicare Supplement Plan G: Most Comprehensive Coverage</h3>
-            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026; $292 in 2027 per <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a>, alongside a $209.40/mo 2027 standard Part B premium vs. $202.90/mo in 2026). It covers 100% of the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
+            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026; $292 in 2027 per the <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Fact Sheet</a>, alongside a $209.40/mo 2027 standard Part B premium vs. $202.90/mo in 2026). It covers 100% of the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
           </article>
           <article>
             <h3>Medicare Supplement Plan N: Balancing Cost and Coverage</h3>
-            <p>Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays: up to $20 for doctor visits and up to $50 for emergency room visits that do not lead to inpatient admission. Plan N does not cover Part B excess charges, but the vast majority of Florida physicians accept Medicare assignment rates.</p>
+            <p>Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays: up to $20 for doctor visits and up to $50 for emergency room visits that do not lead to inpatient admission. Plan N does not cover Part B excess charges; before selecting Plan N, you can verify whether your physicians accept Medicare assignment on <a href="https://www.medicare.gov/care-compare/" target="_blank" rel="noopener noreferrer">Medicare.gov Care Compare</a>.</p>
           </article>
           <article>
             <h3>Medicare Supplement Plan F: Limited Availability</h3>
@@ -567,7 +567,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             </thead>
             <tbody>
               <tr>
-                <td>Doctor & Hospital Network</td>
+                <td>Doctor &amp; Hospital Network</td>
                 <td>Any provider nationwide accepting Medicare</td>
                 <td>Any provider nationwide accepting Medicare</td>
                 <td>Plan restricted network (local HMO / PPO)</td>
@@ -582,13 +582,13 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Part A Hospital Deductible</td>
                 <td>$0 (100% Covered)</td>
                 <td>$0 (100% Covered)</td>
-                <td>Daily copays ($300-$400/day days 1-5)</td>
+                <td>Plan-specific daily inpatient copays (check Summary of Benefits on Medicare.gov)</td>
               </tr>
               <tr>
                 <td>Doctor Office Copays</td>
                 <td>$0 (After Part B deductible)</td>
                 <td>Up to $20 per visit</td>
-                <td>$0 to $45+ copays per visit</td>
+                <td>Plan-specific copays per visit</td>
               </tr>
               <tr>
                 <td>Part B Excess Charges</td>
@@ -600,7 +600,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
                 <td>Financial Predictability</td>
                 <td>Maximum (No surprise bills)</td>
                 <td>Very High (Small copays only)</td>
-                <td>Variable based on utilization (<a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> mandatory MOOP ceiling: $9,250 in 2026 and $9,850 in 2027; plans may set lower limits)</td>
+                <td>Variable based on utilization (mandatory CMS in-network MOOP ceiling per <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer">Medicare.gov</a>: $9,250 in 2026 and $9,850 in 2027; plans may set lower limits)</td>
               </tr>
             </tbody>
           </table>
@@ -608,14 +608,14 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Florida Medigap Plan G & Plan N Pricing Factors 2026</h2>
-          <p>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 18, 2026).</p>
+          <p>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 20, 2026).</p>
           <p>As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts:</p>
           <ul>
             <li><strong>Medigap Plan G:</strong> Typically ranges between $140 and $185 per month.</li>
             <li><strong>Medigap Plan N:</strong> Typically ranges between $100 and $145 per month (illustrative savings of ~$30-50/month compared to Plan G).</li>
           </ul>
           <p>Medicare Supplement (Medigap) premiums do not represent a uniform or statewide general rate across Florida. Actual policy costs vary based on: ZIP code, age, rating method (such as Attained-Age vs. Issue-Age), insurance carrier, household discounts, health underwriting, and geographic area.</p>
-          <p><strong>Official Sources (2026–2027):</strong> Part A deductibles ($1,736 in 2026; $1,776 in 2027), Part B deductibles &amp; premiums ($283 in 2026; $292 and $209.40/mo standard premium in 2027), Part D prescription caps ($2,100 in 2026; $2,400 in 2027), and Advantage MOOP ceilings ($9,250 in 2026; $9,850 in 2027) verified via <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a> and <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov Costs</a>.</p>
+          <p><strong>Official Sources (2026–2027):</strong> Part A deductibles ($1,736 in 2026; $1,776 in 2027) and Part B deductibles &amp; premiums ($283 in 2026; $292 and $209.40/mo standard premium in 2027) verified via the <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Parts A &amp; B Fact Sheet</a>; Part D prescription caps ($2,100 in 2026; $2,400 in 2027) via <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Part D Costs)</a>; and Advantage MOOP ceilings ($9,250 in 2026; $9,850 in 2027) via <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov Costs</a>.</p>
         </section>
 
         <section>
@@ -631,7 +631,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Key Florida Medicare Enrollment Windows</h2>
           <ul>
             <li><strong>IEP (Initial Enrollment Period):</strong> 7-month window spanning 3 months before your 65th birthday month, your birthday month, and 3 months after.</li>
-            <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month golden window starting on your Part B effective date with guaranteed acceptance and zero medical underwriting.</li>
+            <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month window starting automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+), with guaranteed acceptance and zero medical underwriting.</li>
             <li><strong>AEP (Annual Enrollment Period - Oct 15 to Dec 7, 2026):</strong> Annual fall window to join, drop, or switch Medicare Advantage and Part D prescription drug plans for 2027 coverage.</li>
           </ul>
         </section>
@@ -643,23 +643,23 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules. Conversely, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county.</dd>
 
             <dt><strong>What is the importance of the Medigap Open Enrollment Period in Florida?</strong></dt>
-            <dd>Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It begins the month you turn 65 and are enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history.</dd>
+            <dd>Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history.</dd>
 
             <dt><strong>Can I switch from a Medicare Advantage plan back to Medigap in Florida?</strong></dt>
             <dd>Yes, but outside of specific Trial Rights (such as trying Advantage for the first time for under 12 months), you will generally need to pass medical underwriting questions. As an independent broker, we review your health history to identify carriers most likely to approve your Medigap application.</dd>
 
             <dt><strong>What are Part B Excess Charges and does Plan G cover them?</strong></dt>
-            <dd>Part B excess charges occur when a doctor does not accept Medicare's baseline assignment rate and charges up to an additional 15%. Medigap Plan G covers 100% of Part B excess charges, whereas Plan N does not cover them.</dd>
+            <dd>Part B excess charges occur when a doctor does not accept Medicare's baseline assignment rate and charges up to an additional 15%. Medigap Plan G covers 100% of Part B excess charges, whereas Plan N does not cover them. You can verify whether your physicians accept Medicare assignment on Medicare.gov Care Compare.</dd>
 
             <dt><strong>How much does a Medigap Plan G cost in Florida for 2026?</strong></dt>
-            <dd>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 18, 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area.</dd>
+            <dd>“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 20, 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area.</dd>
           </dl>
         </section>
 
         <section>
           <h2>Independent Broker Advisory & CMS Compliance Disclaimer</h2>
-          <p>Contact Florida-licensed independent insurance broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">+1 (352) 225-8389</a> for an unbiased Medicare review with zero broker fees.</p>
-          <p><small>Official CMS Medicare Compliance Disclaimer: We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer">Medicare.gov</a> (or <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer">CMS.gov</a>), 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. AHB Insurance Solutions and broker Andres H. Bozo are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.</small></p>
+          <p>Contact Florida-licensed independent insurance broker Andres Bozo (NPN: 21228432) at <a href="tel:+13522258389">+1 (352) 225-8389</a> to compare plans across Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare with zero consulting fees (licensed brokers are compensated directly by the issuing carrier upon enrollment, and regulated Medicare premiums are identical).</p>
+          <p><small>Official CMS Medicare Compliance Disclaimer: We do not offer every plan available in your area. Currently we represent multiple organizations (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability) which offer products in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer">Medicare.gov</a>, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Official 2027 cost figures source: <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Parts A &amp; B Fact Sheet</a>. AHB Insurance Solutions and broker Andres H. Bozo are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.</small></p>
         </section>
       `;
     }

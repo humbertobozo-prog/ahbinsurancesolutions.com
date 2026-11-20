@@ -60,8 +60,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
                                             Andres H. Bozo, Licensed Broker
                                         </a>
                                         {' · '}Last updated:{' '}
-                                        <time dateTime="2026-11-18" className="font-semibold text-slate-700">
-                                            November 18, 2026
+                                        <time dateTime="2026-11-20" className="font-semibold text-slate-700">
+                                            November 20, 2026
                                         </time>
                                     </>
                                 ) : (
@@ -81,8 +81,8 @@ export const AboutUs: React.FC<AboutUsProps> = ({ content, priority = false }) =
                                             Andrés H. Bozo, Corredor Licenciado
                                         </a>
                                         {' · '}Actualizado:{' '}
-                                        <time dateTime="2026-11-18" className="font-semibold text-slate-700">
-                                            18 de noviembre de 2026
+                                        <time dateTime="2026-11-20" className="font-semibold text-slate-700">
+                                            20 de noviembre de 2026
                                         </time>
                                     </>
                                 )}

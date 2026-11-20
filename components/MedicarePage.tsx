@@ -30,7 +30,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?",
-            a: "El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses e inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes."
+            a: "El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes."
         },
         {
             q: "¿Puedo cambiarme de Medicare Advantage a un plan Medigap en Florida?",
@@ -38,7 +38,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "¿Qué son los Cargos en Exceso de la Parte B y cómo me afectan en Florida?",
-            a: "Si un médico o especialista no acepta la asignación de Medicare, la ley le permite cobrar hasta un 15% adicional sobre la tarifa aprobada por Medicare. El Medigap Plan G cubre el 100% de estos cargos en exceso, mientras que el Plan N no los cubre, aunque muchos médicos en Florida aceptan la asignación estándar."
+            a: "Si un médico o especialista no acepta la asignación de Medicare, la ley le permite cobrar hasta un 15% adicional sobre la tarifa aprobada por Medicare. El Medigap Plan G cubre el 100% de estos cargos en exceso, mientras que el Plan N no los cubre; antes de elegir el Plan N, puede verificar si sus médicos aceptan la asignación de Medicare en el directorio Care Compare de Medicare.gov."
         },
         {
             q: "¿Cuánto cuestan las primas de Medigap en Florida en 2026?",
@@ -51,7 +51,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "What is the importance of the Medigap Open Enrollment Period in Florida?",
-            a: "Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It begins the month you turn 65 and are enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history."
+            a: "Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history."
         },
         {
             q: "Can I switch from a Medicare Advantage plan back to Medigap in Florida?",
@@ -59,7 +59,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "What are Part B Excess Charges and does Plan G cover them?",
-            a: "Part B excess charges occur when a doctor does not accept Medicare's baseline assignment rate and charges up to an additional 15%. Medigap Plan G covers 100% of Part B excess charges, whereas Plan N does not cover them."
+            a: "Part B excess charges occur when a doctor does not accept Medicare's baseline assignment rate and charges up to an additional 15%. Medigap Plan G covers 100% of Part B excess charges, whereas Plan N does not cover them. Before selecting Plan N, you can check whether your physicians accept Medicare assignment on Medicare.gov Care Compare."
         },
         {
             q: "How much does a Medigap Plan G cost in Florida for 2026?",
@@ -171,7 +171,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                 ogImage="https://www.ahbinsurancesolutions.com/og/medicare-og.jpg"
                 ogImageAlt={isEs ? "Planes de Medicare Suplementario Medigap Plan G y Plan N en Florida - Andrés Bozo" : "Florida Medicare Supplement Plans Medigap Plan G and Plan N - Andres Bozo"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-18"
+                dateModified="2026-11-20"
                 schema={[serviceSchema, faqSchema, breadcrumbSchema]}
             />
 
@@ -186,7 +186,9 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                         <span className="text-primary font-bold">{isEs ? 'Medicare en Florida' : 'Medicare in Florida'}</span>
                     </div>
                     <span className="text-[11px] text-gray-600 font-semibold">
-                        {isEs ? 'Por Andrés H. Bozo (NPN 21228432) · Actualizado: 18 Nov 2026' : 'By Andres H. Bozo (NPN 21228432) · Updated: Nov 18, 2026'}
+                        {isEs
+                            ? 'Por Andrés H. Bozo (NPN 21228432) · Publicado originalmente: 15 Ene 2024 · Revisado y actualizado: 20 Nov 2026 (cifras CMS 2026–2027)'
+                            : 'By Andres H. Bozo (NPN 21228432) · Originally published: Jan 15, 2024 · Revised & updated: Nov 20, 2026 (2026–2027 CMS figures)'}
                     </span>
                 </div>
             </div>
@@ -206,8 +208,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             </h1>
                             <p className="text-base md:text-xl text-gray-200 mb-8 leading-relaxed font-medium">
                                 {isEs
-                                    ? 'Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida, le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de múltiples aseguradoras líderes para proteger los ahorros de su jubilación. Obtenga asesoría gratuita hoy.'
-                                    : 'If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F across multiple top carriers to shield retirement savings. Get expert, zero-cost broker guidance today.'}
+                                    ? 'Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida, le ayudo a comparar planes Medigap Plan G, Plan N y Plan F de aseguradoras autorizadas (entre ellas Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado). Nuestras asesorías no tienen cargo adicional para usted: la aseguradora emisora compensa al corredor tras la emisión y las primas reguladas son idénticas.'
+                                    : 'If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A & Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker, I help seniors compare Medigap Plan G, Plan N, and Plan F across licensed carriers (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability). Broker consultations carry no fee or markup to you—licensed brokers are compensated directly by the issuing carrier upon enrollment, and regulated Medicare premiums remain identical.'}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
@@ -285,14 +287,14 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     {isEs ? (
                                         <>
                                             El deducible oficial de hospitalización de la Parte A es de $1,736 en 2026 y $1,776 en 2027 por cada período de beneficio de 60 días (puede repetirse varias veces en un mismo año calendario). Fuente:{' '}
-                                            <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">CMS.gov</a>
+                                            <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">Hoja Informativa CMS 2027 (Partes A y B)</a>
                                             {' / '}
                                             <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">Medicare.gov</a>.
                                         </>
                                     ) : (
                                         <>
                                             The official CMS Part A inpatient hospital deductible is $1,736 in 2026 and $1,776 in 2027 per 60-day benefit period, which can apply multiple times in a calendar year. Source:{' '}
-                                            <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">CMS.gov</a>
+                                            <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">CMS 2027 Parts A &amp; B Fact Sheet</a>
                                             {' / '}
                                             <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-amber-950 hover:text-primary">Medicare.gov</a>.
                                         </>
@@ -330,8 +332,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 2: Activar la Ventana Protegida de Medigap (MOEP)' : 'Step 2: Activate Your Medigap Open Enrollment Window (MOEP)'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'Al activar la Parte B, arranca su ventana de 6 meses de Medigap. Las aseguradoras no pueden evaluar sus historial médico ni negar cobertura por condiciones preexistentes.'
-                                            : 'Activating Part B triggers your 6-month Medigap window. Insurance carriers cannot review medical history or deny coverage for pre-existing conditions.'}
+                                            ? 'Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.'
+                                            : 'Your 6-month Medigap window starts automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, carriers cannot review medical history or deny coverage for pre-existing conditions.'}
                                     </p>
                                 </div>
                             </div>
@@ -365,9 +367,17 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             
                             <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan N: El Equilibrio entre Costo y Cobertura' : 'Medicare Supplement Plan N: Balancing Cost and Coverage'}</h3>
                             <p>
-                                {isEs 
-                                    ? 'El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados en visitas médicas y servicios de urgencias. Es una opción inteligente para quienes buscan protección sólida contra grandes gastos hospitalarios pero desean mantener primas mensuales contenidas.'
-                                    : 'Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays for doctor visits and emergency services. It is a smart option for those seeking robust protection against large hospital expenses while keeping monthly premiums contained.'}
+                                {isEs ? (
+                                    <>
+                                        El Plan N ofrece primas mensuales significativamente más bajas que el Plan G a cambio de copagos estructurados en visitas médicas y servicios de urgencias. No cubre cargos en exceso de la Parte B; puede confirmar si sus médicos aceptan la asignación de Medicare en{' '}
+                                        <a href="https://www.medicare.gov/care-compare/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov Care Compare</a>.
+                                    </>
+                                ) : (
+                                    <>
+                                        Plan N offers significantly lower monthly premiums than Plan G in exchange for structured copays for doctor visits and emergency services. It does not cover Part B excess charges; you can confirm whether your physicians accept Medicare assignment on{' '}
+                                        <a href="https://www.medicare.gov/care-compare/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov Care Compare</a>.
+                                    </>
+                                )}
                             </p>
 
                             <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan F: Disponibilidad Limitada' : 'Medicare Supplement Plan F: Limited Availability'}</h3>
@@ -411,19 +421,21 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
                                         {isEs ? (
                                             <>
-                                                La Parte D cubre farmacia ambulatoria (tope federal de $2,100 en 2026 y $2,400 confirmado por{' '}
-                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
-                                                {' '}para cobertura 2027; el tope máximo legal en red para Advantage fijado por{' '}
-                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
-                                                {' '}es de $9,250 en 2026 y $9,850 en 2027, aunque cada plan puede fijar un límite menor). Además, los &quot;Derechos de Emisión Garantizada&quot; le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante su ventana de 6 meses tras activar la Parte B al cumplir 65 años.
+                                                La Parte D cubre farmacia ambulatoria (tope federal anual de $2,100 en 2026 y $2,400 en 2027 publicado en{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Costos Parte D)</a>
+                                                ; y el límite máximo legal en red para Advantage fijado por CMS es de $9,250 en 2026 y $9,850 en 2027 según{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Planes de Salud)</a>
+                                                , aunque cada plan puede fijar un límite menor). Además, los &quot;Derechos de Emisión Garantizada&quot; le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">su ventana de 6 meses desde el primer día del mes en que cumple 65 años o más con Parte B</a>.
                                             </>
                                         ) : (
                                             <>
-                                                Part D covers outpatient prescriptions ($2,100 federal cap in 2026; $2,400 cap confirmed by{' '}
-                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
-                                                {' '}for 2027 coverage; mandatory MA in-network MOOP ceiling set by{' '}
-                                                <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">CMS.gov</a>
-                                                {' '}is $9,250 in 2026 and $9,850 in 2027, though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during your 6-month Part B window at 65 or qualifying events.
+                                                Part D covers outpatient prescriptions ($2,100 federal annual cap in 2026 and $2,400 in 2027 published on{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Part D Costs)</a>
+                                                ; mandatory CMS MA in-network MOOP ceiling is $9,250 in 2026 and $9,850 in 2027 per{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Health Plans)</a>
+                                                , though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during{' '}
+                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">your 6-month MOEP starting the first day of the month you are 65+ and enrolled in Part B</a>.
                                             </>
                                         )}
                                     </p>
@@ -496,16 +508,20 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             <p>
                                 {isEs ? (
                                     <>
-                                        Deducible Parte A ($1,736 en 2026; $1,776 en 2027), deducible anual Parte B ($283 en 2026; $292 en 2027), prima estándar Parte B ($202.90/mes en 2026; $209.40/mes en 2027), tope Parte D ($2,100 en 2026; $2,400 en 2027) y límite máximo legal Advantage en red ($9,250 en 2026; $9,850 en 2027) verificados en{' '}
-                                        <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>
-                                        {' '}y{' '}
-                                        <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Medicare Costs)</a>.
+                                        Deducible Parte A ($1,736 en 2026; $1,776 en 2027), deducible anual Parte B ($283 en 2026; $292 en 2027) y prima estándar Parte B ($202.90/mes en 2026; $209.40/mes en 2027) verificados en la{' '}
+                                        <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Hoja Informativa CMS 2027 (Partes A y B)</a>
+                                        ; tope anual de Parte D ($2,100 en 2026; $2,400 en 2027) en{' '}
+                                        <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Costos Parte D)</a>
+                                        ; y límite máximo en red Advantage ($9,250 en 2026; $9,850 en 2027) en{' '}
+                                        <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Costos de Medicare)</a>.
                                     </>
                                 ) : (
                                     <>
-                                        Part A deductible ($1,736 in 2026; $1,776 in 2027), Part B annual deductible ($283 in 2026; $292 in 2027), Part B standard premium ($202.90/mo in 2026; $209.40/mo in 2027), Part D prescription cap ($2,100 in 2026; $2,400 in 2027), and mandatory Advantage in-network MOOP ceiling ($9,250 in 2026; $9,850 in 2027) sourced from{' '}
-                                        <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>
-                                        {' '}and{' '}
+                                        Part A deductible ($1,736 in 2026; $1,776 in 2027), Part B annual deductible ($283 in 2026; $292 in 2027), and Part B standard premium ($202.90/mo in 2026; $209.40/mo in 2027) verified via the{' '}
+                                        <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS 2027 Parts A &amp; B Fact Sheet</a>
+                                        ; Part D prescription cap ($2,100 in 2026; $2,400 in 2027) via{' '}
+                                        <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Part D Costs)</a>
+                                        ; and mandatory Advantage in-network MOOP ceiling ($9,250 in 2026; $9,850 in 2027) via{' '}
                                         <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov (Medicare Costs)</a>.
                                     </>
                                 )}
@@ -524,7 +540,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                                 : '*Pricing Disclaimer & Medigap Rating Factors in Florida:'}
                                         </h4>
                                         <span className="inline-block px-2 py-0.5 bg-amber-100/90 text-amber-900 text-[11px] font-semibold rounded border border-amber-300/60">
-                                            {isEs ? 'Actualizado: 18 Nov 2026' : 'Updated: Nov 18, 2026'}
+                                            {isEs ? 'Actualizado: 20 Nov 2026' : 'Updated: Nov 20, 2026'}
                                         </span>
                                     </div>
                                     <p className="leading-relaxed text-gray-800 font-medium">
@@ -547,8 +563,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     </p>
                                     <p className="text-gray-600 italic">
                                         {isEs 
-                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros públicos de muestra de aseguradoras para condados seleccionados de Florida Central (revisión al 18 de noviembre de 2026) para una persona de 65 años no fumadora, antes de aplicar posibles descuentos de hogar.' 
-                                            : 'Source & Date: The sample figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes (reviewed November 18, 2026) for a 65-year-old non-smoker applicant prior to household discounts.'}
+                                            ? 'Fuente y Fecha: Las cifras anteriores ($140–$185/mes para Plan G y $100–$145/mes para Plan N) son únicamente ejemplos ilustrativos referenciales basados en registros públicos de muestra de aseguradoras para condados seleccionados de Florida Central (revisión al 20 de noviembre de 2026) para una persona de 65 años no fumadora, antes de aplicar posibles descuentos de hogar.' 
+                                            : 'Source & Date: The sample figures shown above ($140–$185/mo for Plan G and $100–$145/mo for Plan N) are strictly illustrative examples based on public sample carrier filings across selected Central Florida ZIP codes (reviewed November 20, 2026) for a 65-year-old non-smoker applicant prior to household discounts.'}
                                     </p>
                                     <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-amber-200/70 mt-2">
                                         <p className="font-bold text-primary text-xs md:text-sm">
@@ -635,7 +651,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         <td className="p-3.5 font-bold">{isEs ? 'Deducible de Hospital Parte A' : 'Part A Hospital Deductible'}</td>
                                         <td className="p-3.5 text-emerald-700 font-bold">$0 (100% Cubierto)</td>
                                         <td className="p-3.5 text-emerald-700 font-bold">$0 (100% Cubierto)</td>
-                                        <td className="p-3.5 text-gray-600">Copagos por día</td>
+                                        <td className="p-3.5 text-gray-600">{isEs ? 'Copagos diarios según cada plan' : 'Plan-specific daily copays'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Copago por Visita Médica' : 'Doctor Office Copays'}</td>
@@ -681,8 +697,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 <h3 className="font-bold text-primary mb-2 text-sm">{isEs ? 'Ventana Abierta de Medigap' : 'Medigap Open Enrollment'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? '6 meses dorados desde la fecha de inicio de su Parte B. Inmunidad total contra cuestionarios médicos de salud. Emisión 100% garantizada.' 
-                                        : '6-month golden window starting on your Part B effective date. Guaranteed acceptance with zero medical underwriting.'}
+                                        ? '6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B. Inmunidad total contra cuestionarios médicos de salud y emisión garantizada.' 
+                                        : '6-month window starting on the first day of the month you are 65 or older and enrolled in Part B. Guaranteed acceptance with zero medical underwriting.'}
                                 </p>
                             </div>
 
@@ -739,8 +755,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             </h3>
                             <p className="text-sm text-gray-700">
                                 {isEs 
-                                    ? 'Como corredor independiente licenciado en Florida (NPN 21228432), le guío de forma gratuita y sin presiones comerciales.' 
-                                    : 'As a licensed independent broker in Florida (NPN 21228432), I provide independent carrier analysis at zero cost to you.'}
+                                    ? 'Como corredor independiente licenciado en Florida (NPN 21228432), comparo planes disponibles entre aseguradoras como Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare sin costo para usted (la aseguradora emisora paga la compensación del broker tras la inscripción, sin recargos ni variación en su prima).' 
+                                    : 'As a licensed independent broker in Florida (NPN 21228432), I compare plans across carriers including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare with zero consulting fees (brokers are compensated by the issuing insurer upon enrollment at no extra charge to you, and regulated Medicare premiums remain identical).'}
                             </p>
                         </div>
                         <button
@@ -759,15 +775,15 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                         <p>
                             {isEs ? (
                                 <>
-                                    No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones que ofrecen productos en su zona. Comuníquese con{' '}
-                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. Fuente regulatoria:{' '}
-                                    <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>. AHB Insurance Solutions y el corredor Andrés H. Bozo (NPN 21228432) son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.
+                                    No ofrecemos todos los planes disponibles en su área. Actualmente representamos a múltiples organizaciones (incluyendo Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado) que ofrecen productos en su zona. Comuníquese con{' '}
+                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, al 1-800-MEDICARE o con su Programa Estatal de Asistencia sobre Seguros de Salud (SHIP) local para obtener información sobre todas sus opciones. Fuente oficial de cifras 2027:{' '}
+                                    <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Hoja Informativa CMS 2027 (Partes A y B)</a>. AHB Insurance Solutions y el corredor Andrés H. Bozo (NPN 21228432) son independientes y no están afiliados ni respaldados por el gobierno de los EE. UU. o el programa federal de Medicare.
                                 </>
                             ) : (
                                 <>
-                                    We do not offer every plan available in your area. Currently we represent multiple organizations which offer products in your area. Please contact{' '}
-                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Official cost figures source:{' '}
-                                    <a href="https://www.cms.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS.gov</a>. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.
+                                    We do not offer every plan available in your area. Currently we represent multiple organizations (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability) which offer products in your area. Please contact{' '}
+                                    <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">Medicare.gov</a>, 1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options. Official 2027 cost figures source:{' '}
+                                    <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer" className="underline font-bold text-primary">CMS 2027 Parts A &amp; B Fact Sheet</a>. AHB Insurance Solutions and broker Andres H. Bozo (NPN 21228432) are independent and not connected with or endorsed by the U.S. government or the federal Medicare program.
                                 </>
                             )}
                         </p>
