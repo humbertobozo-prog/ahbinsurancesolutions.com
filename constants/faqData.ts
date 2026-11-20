@@ -19,7 +19,7 @@ export const faqsEs: FaqItem[] = [
   {
     category: 'medicare',
     q: '¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?',
-    a: 'Su Período de Inscripción Abierta de Medigap (MOEP) dura 6 meses e inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante este lapso cuenta con Derechos de Emisión Garantizada, lo que significa que ninguna aseguradora puede rechazarlo ni cobrarle más por condiciones de salud preexistentes.'
+    a: 'Su Período de Inscripción Abierta de Medigap (MOEP) dura 6 meses e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Durante este lapso cuenta con Derechos de Emisión Garantizada, lo que significa que ninguna aseguradora puede rechazarlo ni cobrarle más por condiciones de salud preexistentes.'
   },
   {
     category: 'medicare',
@@ -174,7 +174,7 @@ export const faqsEs: FaqItem[] = [
   {
     category: 'general',
     q: '¿Por qué conviene trabajar con un corredor independiente en Florida?',
-    a: 'Como corredores independientes (NPN: 21228432), no estamos atados a una sola compañía. Comparamos objetivamente pólizas de múltiples aseguradoras líderes nacionales para hallar la que mejor proteja su salud, familia y presupuesto.'
+    a: 'Como corredores independientes (NPN: 21228432), no estamos atados a una sola compañía. Comparamos objetivamente pólizas de múltiples aseguradoras licenciadas en Florida (como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge) para hallar la que mejor proteja su salud, familia y presupuesto.'
   },
   {
     category: 'general',
@@ -198,7 +198,7 @@ export const faqsEn: FaqItem[] = [
   {
     category: 'medicare',
     q: 'When is the best time to enroll in a Florida Medigap plan?',
-    a: 'Your 6-month Medigap Open Enrollment Period (MOEP) begins on the first day of the month you are 65 or older and enrolled in Medicare Part B. During this period, you have Guaranteed Issue Rights, meaning carriers cannot deny coverage or charge higher premiums based on pre-existing health conditions.'
+    a: 'Your 6-month Medigap Open Enrollment Period (MOEP) starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. During this period, you have Guaranteed Issue Rights, meaning carriers cannot deny coverage or charge higher premiums based on pre-existing health conditions.'
   },
   {
     category: 'medicare',
@@ -353,7 +353,7 @@ export const faqsEn: FaqItem[] = [
   {
     category: 'general',
     q: 'Why should I work with an independent insurance broker in Florida?',
-    a: 'As independent brokers (NPN 21228432), we are not tied to any single insurance carrier. We compare policies impartially across multiple top-rated national carriers to match your precise coverage goals and budget.'
+    a: 'As independent brokers (NPN 21228432), we are not tied to any single insurance carrier. We compare policies impartially across multiple Florida-licensed carriers (such as Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge) to match your coverage goals and budget.'
   },
   {
     category: 'general',

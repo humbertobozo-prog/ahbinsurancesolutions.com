@@ -30,7 +30,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?",
-            a: "El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes."
+            a: "El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes."
         },
         {
             q: "¿Puedo cambiarme de Medicare Advantage a un plan Medigap en Florida?",
@@ -42,7 +42,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "¿Cuánto cuestan las primas de Medigap en Florida en 2026?",
-            a: "“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 18 Nov 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica."
+            a: "“Rangos de primas únicamente ilustrativos. Las primas reales varían por código postal, edad, aseguradora, método de tarificación y elegibilidad. Solicite una comparación personalizada.” (Actualizado: 20 Nov 2026). Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar, un Plan G suele oscilar entre $140 y $185 mensuales y un Plan N entre $100 y $145 mensuales. No obstante, las primas reales dependen de su código postal (ZIP), edad, compañía aseguradora (carrier), método de tarificación (Attained-Age vs. Issue-Age), descuentos de convivencia en el hogar, evaluación médica (underwriting) y área geográfica."
         }
     ] : [
         {
@@ -51,7 +51,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "What is the importance of the Medigap Open Enrollment Period in Florida?",
-            a: "Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history."
+            a: "Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history."
         },
         {
             q: "Can I switch from a Medicare Advantage plan back to Medigap in Florida?",
@@ -63,7 +63,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
         },
         {
             q: "How much does a Medigap Plan G cost in Florida for 2026?",
-            a: "“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 18, 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area."
+            a: "“Illustrative premium ranges only. Actual premiums vary by ZIP code, age, carrier, rating method and eligibility. Request a personalized comparison.” (Updated: Nov 20, 2026). As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts, monthly premiums typically range between $140 and $185 for Plan G, and $100 to $145 for Plan N. However, actual premiums depend on your specific ZIP code, age, carrier, rating method (such as Attained-Age vs. Issue-Age), household discounts, underwriting, and geographic area."
         }
     ];
 
@@ -329,11 +329,11 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                             <div className="flex items-start gap-4 bg-white p-4 rounded-xl border border-blue-200">
                                 <span className="bg-primary text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
                                 <div>
-                                    <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 2: Activar la Ventana Protegida de Medigap (MOEP)' : 'Step 2: Activate Your Medigap Open Enrollment Window (MOEP)'}</h3>
+                                    <h3 className="font-bold text-primary text-sm mb-1">{isEs ? 'Paso 2: Período de Inscripción Abierta de Medigap (MOEP)' : 'Step 2: Medigap Open Enrollment Period (MOEP)'}</h3>
                                     <p className="text-xs text-gray-600 leading-relaxed">
                                         {isEs 
-                                            ? 'Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.'
-                                            : 'Your 6-month Medigap window starts automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, carriers cannot review medical history or deny coverage for pre-existing conditions.'}
+                                            ? 'Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.'
+                                            : 'Your 6-month Medigap window starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. During this window, carriers cannot review medical history or deny coverage for pre-existing conditions.'}
                                     </p>
                                 </div>
                             </div>
@@ -358,11 +358,21 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                         </h2>
                         
                         <div className="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
-                            <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan G: La Opción Más Completa' : 'Medicare Supplement Plan G: Most Comprehensive'}</h3>
+                            <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan G: La Opción Estandarizada Más Amplia' : 'Medicare Supplement Plan G: Broadest Standardized Option'}</h3>
                             <p>
-                                {isEs 
-                                    ? 'El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B.'
-                                    : 'Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible.'}
+                                {isEs ? (
+                                    <>
+                                        Para nuevos beneficiarios elegibles a partir del 1 de enero de 2020, el Plan G ofrece la cobertura estandarizada de Medigap más amplia entre los planes disponibles (ver{' '}
+                                        <a href="https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">tabla comparativa oficial de Medigap en Medicare.gov</a>
+                                        ). Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B.
+                                    </>
+                                ) : (
+                                    <>
+                                        For Medicare beneficiaries newly eligible on or after January 1, 2020, Plan G provides the broadest standardized Medigap benefit structure among available plans (see{' '}
+                                        <a href="https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov standardized Medigap chart</a>
+                                        ). It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible.
+                                    </>
+                                )}
                             </p>
                             
                             <h3 className="font-bold text-lg text-primary">{isEs ? 'Medigap Plan N: El Equilibrio entre Costo y Cobertura' : 'Medicare Supplement Plan N: Balancing Cost and Coverage'}</h3>
@@ -419,14 +429,14 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         {isEs ? 'Medicamentos (Parte D) y Derechos de Emisión' : 'Part D Rx & Guaranteed Issue Protections'}
                                     </h3>
                                     <p className="text-xs text-gray-600 leading-relaxed mb-4">
-                                        {isEs ? (
+                                                {isEs ? (
                                             <>
                                                 La Parte D cubre farmacia ambulatoria (tope federal anual de $2,100 en 2026 y $2,400 en 2027 publicado en{' '}
                                                 <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Costos Parte D)</a>
                                                 ; y el límite máximo legal en red para Advantage fijado por CMS es de $9,250 en 2026 y $9,850 en 2027 según{' '}
                                                 <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Planes de Salud)</a>
                                                 , aunque cada plan puede fijar un límite menor). Además, los &quot;Derechos de Emisión Garantizada&quot; le otorgan el derecho legal de contratar Medigap sin cuestionarios médicos durante{' '}
-                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">su ventana de 6 meses desde el primer día del mes en que cumple 65 años o más con Parte B</a>.
+                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">su ventana de 6 meses desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare</a>.
                                             </>
                                         ) : (
                                             <>
@@ -435,7 +445,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                                 ; mandatory CMS MA in-network MOOP ceiling is $9,250 in 2026 and $9,850 in 2027 per{' '}
                                                 <a href="https://www.medicare.gov/health-drug-plans/health-plans" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">Medicare.gov (Health Plans)</a>
                                                 , though individual plans may set lower limits). Meanwhile, Guaranteed Issue Rights grant the legal right to purchase Medigap without medical underwriting during{' '}
-                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">your 6-month MOEP starting the first day of the month you are 65+ and enrolled in Part B</a>.
+                                                <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-primary">your 6-month MOEP starting the first day of the month in which you are age 65 or older and enrolled in Medicare Part B</a>.
                                             </>
                                         )}
                                     </p>
@@ -492,7 +502,7 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                         <td className="p-4 text-emerald-800 font-bold">
                                             <span className="font-semibold text-emerald-900">$100 – $145 / mes*</span>
                                             <span className="block text-[11px] text-emerald-700 mt-0.5 font-normal">
-                                                {isEs ? 'Ahorro ilustrativo ~$30-50/mes vs. Plan G' : 'Illustrative savings ~$30-50/mo vs. Plan G'}
+                                                {isEs ? 'Estimación ilustrativa de diferencia: ~$30–$50/mes menos que el ejemplo de Plan G' : 'Illustrative estimate: ~$30–$50/mo lower than Plan G sample'}
                                             </span>
                                         </td>
                                     </tr>
@@ -643,33 +653,33 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Referidos para Especialistas' : 'Specialist Referrals'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Nunca requeridos</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Nunca requeridos</td>
-                                        <td className="p-3.5 text-gray-600">Frecuente en HMOs</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? 'Nunca requeridos' : 'Never required'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? 'Nunca requeridos' : 'Never required'}</td>
+                                        <td className="p-3.5 text-gray-600">{isEs ? 'Frecuente en HMOs' : 'Often required in HMOs'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Deducible de Hospital Parte A' : 'Part A Hospital Deductible'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">$0 (100% Cubierto)</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">$0 (100% Cubierto)</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? '$0 (100% Cubierto)' : '$0 (100% Covered)'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? '$0 (100% Cubierto)' : '$0 (100% Covered)'}</td>
                                         <td className="p-3.5 text-gray-600">{isEs ? 'Copagos diarios según cada plan' : 'Plan-specific daily copays'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Copago por Visita Médica' : 'Doctor Office Copays'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">$0 (Tras deducible B)</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Hasta $20 por consulta</td>
-                                        <td className="p-3.5 text-gray-600">$0 a $45+ por visita</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? '$0 (Tras deducible B)' : '$0 (After Part B deductible)'}</td>
+                                        <td className="p-3.5 text-amber-700 font-bold">{isEs ? 'Hasta $20 por consulta' : 'Up to $20 per visit'}</td>
+                                        <td className="p-3.5 text-gray-600">{isEs ? 'Copagos variables por visita según el plan' : 'Plan-specific copays per visit'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Cargos en Exceso Parte B' : 'Part B Excess Charges'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">100% Cubierto</td>
-                                        <td className="p-3.5 text-gray-400">No Cubierto</td>
-                                        <td className="p-3.5 text-gray-400">N/A (Sujeto a red)</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? '100% Cubierto' : '100% Covered'}</td>
+                                        <td className="p-3.5 text-gray-500">{isEs ? 'No Cubierto' : 'Not Covered'}</td>
+                                        <td className="p-3.5 text-gray-500">{isEs ? 'N/A (Sujeto a red)' : 'N/A (Subject to plan network)'}</td>
                                     </tr>
                                     <tr>
                                         <td className="p-3.5 font-bold">{isEs ? 'Predecibilidad Financiera' : 'Financial Predictability'}</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Máxima (Sin sorpresas)</td>
-                                        <td className="p-3.5 text-emerald-700 font-bold">Muy Alta</td>
-                                        <td className="p-3.5 text-amber-700 font-bold">Variable según uso</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? 'Máxima (Sin sorpresas)' : 'High (Minimal surprise bills)'}</td>
+                                        <td className="p-3.5 text-emerald-700 font-bold">{isEs ? 'Muy Alta' : 'High (Small copays)'}</td>
+                                        <td className="p-3.5 text-amber-700 font-bold">{isEs ? 'Variable según uso y plan' : 'Variable by plan & usage'}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -697,8 +707,8 @@ const MedicarePage: React.FC<MedicarePageProps> = ({ language, onOpenQuote }) =>
                                 <h3 className="font-bold text-primary mb-2 text-sm">{isEs ? 'Ventana Abierta de Medigap' : 'Medigap Open Enrollment'}</h3>
                                 <p className="text-xs text-gray-600 leading-relaxed">
                                     {isEs 
-                                        ? '6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B. Inmunidad total contra cuestionarios médicos de salud y emisión garantizada.' 
-                                        : '6-month window starting on the first day of the month you are 65 or older and enrolled in Part B. Guaranteed acceptance with zero medical underwriting.'}
+                                        ? '6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Inmunidad total contra cuestionarios médicos de salud y emisión garantizada.' 
+                                        : '6-month window starting on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. Guaranteed acceptance with zero medical underwriting.'}
                                 </p>
                             </div>
 

@@ -235,7 +235,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>¿Por Qué Elegir a AHB Insurance Solutions?</h2>
           <ul>
-            <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos aseguradoras de primer nivel para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
+            <li><strong>Enfoque Independiente y Ético:</strong> Como corredores independientes, trabajamos para usted y no para una aseguradora en particular. Evaluamos aseguradoras autorizadas en Florida para encontrar la alternativa más conveniente según su edad, presupuesto y salud.</li>
             <li><strong>Cobertura en Todo el Estado de Florida:</strong> Brindamos servicio a clientes en Miami-Dade, Broward, Palm Beach, Orlando (Orange), Tampa (Hillsborough), Jacksonville (Duval), Gainesville (Alachua), San Petersburgo, Fort Myers y todos los condados de Florida.</li>
             <li><strong>Atención Personalizada en su Idioma:</strong> Explicaciones claras, honestas y sin tecnicismos difíciles, con el compromiso de acompañarle año tras año para evaluar que su cobertura se mantenga alineada con sus metas y presupuesto.</li>
           </ul>
@@ -243,7 +243,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Preguntas Frecuentes sobre Seguros en Florida</h2>
           <h3>¿Cuándo es el mejor momento para contratar un seguro suplementario Medigap en Florida?</h3>
-          <p>El momento más favorable es durante su Período de Inscripción Abierta de Medigap de 6 meses, que inicia el primer día del mes en que cumple 65 años y se inscribe en la Parte B de Medicare. Durante esta ventana tiene Derechos de Emisión Garantizada, lo que impide que las aseguradoras rechacen su cobertura o aumenten su precio por antecedentes de salud.</p>
+          <p>El momento más favorable es durante su Período de Inscripción Abierta de Medigap de 6 meses, que inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Durante esta ventana tiene Derechos de Emisión Garantizada, lo que impide que las aseguradoras rechacen su cobertura o aumenten su precio por antecedentes de salud.</p>
           <h3>¿Puedo calificar para seguro de entierro si tengo enfermedades previas?</h3>
           <p>Sí. Muchas pólizas de emisión simplificada no requieren un examen médico tradicional, aunque los requisitos de suscripción varían según la compañía aseguradora y el solicitante. Incluso adultos mayores con historial de condiciones preexistentes pueden calificar para cobertura de nivel inmediato o con beneficios graduados.</p>
           <h3>¿Cómo funciona el piso del 0% en la acreditación indexada de un IUL?</h3>
@@ -307,7 +307,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Frequently Asked Questions</h2>
           <h3>What is the best time to purchase a Medigap plan in Florida?</h3>
-          <p>The premier time is during your 6-month Medigap Open Enrollment window, which starts the first day of the month you turn 65 and are enrolled in Medicare Part B. During this period, you have federal Guaranteed Issue rights, meaning insurance companies cannot deny you coverage or increase your premiums based on pre-existing medical conditions.</p>
+          <p>The premier time is during your 6-month Medigap Open Enrollment window, which starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. During this period, you have federal Guaranteed Issue rights, meaning insurance companies cannot deny you coverage or increase your premiums based on pre-existing medical conditions.</p>
           <h3>Can seniors with health challenges qualify for burial insurance?</h3>
           <p>Yes. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Guaranteed issue options are also available for applicants managing serious chronic health conditions.</p>
           <h3>How does the 0% index crediting floor work in an IUL?</h3>
@@ -381,7 +381,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Navegar la transición hacia Medicare requiere sincronización precisa. Un descuido en los plazos legales de la Administración del Seguro Social (SSA) puede generar penalidades de por vida o la pérdida de sus derechos de emisión garantizada en seguros suplementarios:</p>
           <ol>
             <li><strong>Paso 1: Identificar su Período Inicial de Inscripción (IEP):</strong> Su IEP dura 7 meses: inicia 3 meses antes de cumplir 65 años, incluye el mes de su cumpleaños y finaliza 3 meses después. Es la ventana para solicitar las Partes A y B en SSA.gov.</li>
-            <li><strong>Paso 2: Activar la Ventana Protegida de Medigap (MOEP):</strong> Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+, según <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
+            <li><strong>Paso 2: Período de Inscripción Abierta de Medigap (MOEP):</strong> Su ventana de 6 meses inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (ver <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). Durante este período, las aseguradoras no pueden evaluar su historial médico ni negar cobertura por condiciones preexistentes.</li>
             <li><strong>Paso 3: Seleccionar un Plan de Medicamentos Recetados (Parte D):</strong> Aun si no consume medicamentos hoy, debe contratar un plan Parte D básico para evitar la penalidad permanente del 1% mensual y acceder al tope federal anual de gasto de bolsillo de $2,100 en 2026 y $2,400 para la cobertura de 2027 publicado en <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos Parte D)</a>.</li>
           </ol>
         </section>
@@ -389,8 +389,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Análisis Detallado de Planes Medigap en Florida: Plan G vs Plan N vs Plan F</h2>
           <article>
-            <h3>Medigap Plan G: La Opción Más Completa</h3>
-            <p>El Plan G es actualmente la póliza Medigap más popular y recomendada para nuevos beneficiarios de Medicare. Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 en 2026; $292 en 2027 según la <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027</a>, con prima estándar 2027 de $209.40/mes frente a $202.90/mes en 2026). Cubre el 100% del deducible de la Parte A ($1,736 en 2026; $1,776 en 2027), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
+            <h3>Medigap Plan G: La Opción Estandarizada Más Amplia</h3>
+            <p>Para nuevos beneficiarios elegibles a partir del 1 de enero de 2020, el Plan G ofrece la cobertura estandarizada de Medigap más amplia entre los planes disponibles (ver <a href="https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits" target="_blank" rel="noopener noreferrer">tabla comparativa oficial de Medigap en Medicare.gov</a>). Cubre todos los costos de desembolso de bolsillo de Medicare Original, excepto el deducible anual de la Parte B ($283 en 2026; $292 en 2027 según la <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027</a>, con prima estándar 2027 de $209.40/mes frente a $202.90/mes en 2026). Cubre el 100% del deducible de la Parte A ($1,736 en 2026; $1,776 en 2027), el coseguro del 20% y el 100% de los Cargos en Exceso de la Parte B.</p>
           </article>
           <article>
             <h3>Medigap Plan N: El Equilibrio entre Costo y Cobertura</h3>
@@ -460,7 +460,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Como ejemplo de muestra referencial para una persona de 65 años no fumadora en códigos postales seleccionados de Florida Central antes de descuentos de hogar:</p>
           <ul>
             <li><strong>Medigap Plan G:</strong> Suele oscilar entre $140 y $185 mensuales.</li>
-            <li><strong>Medigap Plan N:</strong> Suele oscilar entre $100 y $145 mensuales (ahorro ilustrativo de ~$30-50/mes frente al Plan G).</li>
+            <li><strong>Medigap Plan N:</strong> Suele oscilar entre $100 y $145 mensuales (estimación ilustrativa de ~$30–$50/mes menos basada en los rangos de ejemplo mostrados frente al Plan G).</li>
           </ul>
           <p>Las primas de Medicare Suplementario no constituyen una tarifa general ni uniforme para el estado de Florida. El costo real depende de su código postal (ZIP), edad, método de tarificación actuarial (Attained-Age vs. Issue-Age), compañía aseguradora (carrier), descuentos por convivencia en el hogar (household discounts), evaluación médica (underwriting) y área geográfica.</p>
           <p><strong>Fuentes Oficiales (2026–2027):</strong> Cifras oficiales de Parte A ($1,736 en 2026; $1,776 en 2027) y Parte B ($283 en 2026; $292 y prima estándar de $209.40/mes en 2027) publicadas en la <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">Hoja Informativa CMS 2027 (Partes A y B)</a>; tope anual de Parte D ($2,100 en 2026; $2,400 en 2027) en <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos Parte D)</a>; y techo Advantage MOOP ($9,250 en 2026; $9,850 en 2027) en <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Costos de Medicare)</a>.</p>
@@ -478,8 +478,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Fechas Clave de Inscripción de Medicare en Florida</h2>
           <ul>
-            <li><strong>IEP (Período Inicial de Inscripción):</strong> Ventana de 7 meses (3 meses antes del mes de cumpleaños 65, el mes del cumpleaños y 3 meses después). Momento para activar Partes A y B.</li>
-            <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Inmunidad total contra cuestionarios médicos de salud y emisión garantizada por ley federal.</li>
+            <li><strong>IEP (Período Inicial de Inscripción):</strong> Ventana de 7 meses (3 meses antes del mes de cumpleaños 65, el mes del cumpleaños y 3 meses después) para solicitar Partes A y B.</li>
+            <li><strong>MOEP (Ventana Abierta de Medigap):</strong> 6 meses continuos desde el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Inmunidad total contra cuestionarios médicos de salud y emisión garantizada por ley federal.</li>
             <li><strong>AEP (Inscripción Anual - 15 Oct a 7 Dic 2026):</strong> Ventana anual de otoño para modificar planes de medicamentos Parte D o cambiar coberturas Advantage para el año de beneficios 2027.</li>
           </ul>
         </section>
@@ -491,7 +491,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Las pólizas Medigap ayudan a pagar ciertos costos de desembolso cubiertos por Medicare, según el plan estandarizado que seleccione (como el Plan G o el Plan N). Medigap generalmente le permite atenderse con cualquier proveedor a nivel nacional que acepte la asignación de Medicare, sujeto a las reglas de Medicare y Medigap. Por el contrario, los planes Medicare Advantage (Parte C), ofrecidos por aseguradoras privadas, cuentan con estructuras de redes específicas (como HMO o PPO), términos de costos compartidos y reglas de autorización previa que varían según el plan y el condado.</dd>
             
             <dt><strong>¿Cuándo es el mejor momento para inscribirse en un plan Medigap en Florida?</strong></dt>
-            <dd>El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare (su fecha efectiva de Parte B a los 65+). Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes.</dd>
+            <dd>El período ideal es su Período de Inscripción Abierta de Medigap (MOEP), el cual dura 6 meses continuos e inicia automáticamente el primer día del mes en que tiene 65 años o más y está inscrito en la Parte B de Medicare. Durante este lapso tiene 'Derecho de Emisión Garantizada', lo que significa que las aseguradoras están obligadas por ley a aceptarlo sin evaluaciones de salud, exámenes médicos ni recargos por condiciones preexistentes.</dd>
             
             <dt><strong>¿Puedo cambiarme de Medicare Advantage a un plan Medigap en Florida?</strong></dt>
             <dd>Sí, pero en la mayoría de los casos deberá pasar por un proceso de suscripción médica (underwriting), respondiendo cuestionarios de salud, a menos que califique para un Período de Inscripción Especial o derechos de prueba ('trial rights') dentro de sus primeros 12 meses en Medicare Advantage.</dd>
@@ -533,7 +533,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>Navigating Medicare requires precise timing. Missing federal Social Security Administration (SSA) deadlines can result in lifelong premium penalties or the loss of guaranteed-issue rights for Medigap supplements:</p>
           <ol>
             <li><strong>Step 1: Identify Your Initial Enrollment Period (IEP):</strong> Your IEP spans 7 months: starts 3 months before your 65th birthday month, includes your birthday month, and ends 3 months after. Use SSA.gov to apply for Parts A and B.</li>
-            <li><strong>Step 2: Activate Your Medigap Open Enrollment Window (MOEP):</strong> Your 6-month Medigap window starts automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+, per <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
+            <li><strong>Step 2: Medigap Open Enrollment Period (MOEP):</strong> Your 6-month Medigap window starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B (per <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy" target="_blank" rel="noopener noreferrer">Medicare.gov</a>). During this window, insurance carriers cannot review medical history or deny coverage for pre-existing conditions.</li>
             <li><strong>Step 3: Select a Part D Prescription Drug Plan:</strong> Even if you take zero prescriptions today, enrolling in a standalone Part D plan prevents a permanent 1% per month Part D late enrollment penalty (LEP) while taking advantage of the federal $2,100 annual cap in 2026 and $2,400 annual cap in 2027 published on <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Part D Costs)</a>.</li>
           </ol>
         </section>
@@ -541,8 +541,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <section>
           <h2>Detailed Analysis of Florida Medigap Plans: Plan G vs Plan N vs Plan F</h2>
           <article>
-            <h3>Medicare Supplement Plan G: Most Comprehensive Coverage</h3>
-            <p>Plan G is currently the most popular Medigap policy for new Medicare beneficiaries. It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026; $292 in 2027 per the <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Fact Sheet</a>, alongside a $209.40/mo 2027 standard Part B premium vs. $202.90/mo in 2026). It covers 100% of the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
+            <h3>Medicare Supplement Plan G: Broadest Standardized Coverage</h3>
+            <p>For Medicare beneficiaries newly eligible on or after January 1, 2020, Plan G provides the broadest standardized Medigap benefit structure among available plans (see <a href="https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits" target="_blank" rel="noopener noreferrer">Medicare.gov standardized Medigap chart</a>). It covers all Original Medicare out-of-pocket costs, excluding only the annual Part B deductible ($283 in 2026; $292 in 2027 per the <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Fact Sheet</a>, alongside a $209.40/mo 2027 standard Part B premium vs. $202.90/mo in 2026). It covers 100% of the Part A hospital deductible ($1,736 in 2026; $1,776 in 2027), the 20% Part B coinsurance, skilled nursing facility coinsurance, and 100% of Part B excess charges.</p>
           </article>
           <article>
             <h3>Medicare Supplement Plan N: Balancing Cost and Coverage</h3>
@@ -612,7 +612,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>As a sample illustrative example for a 65-year-old non-smoker in select Central Florida ZIP codes prior to household discounts:</p>
           <ul>
             <li><strong>Medigap Plan G:</strong> Typically ranges between $140 and $185 per month.</li>
-            <li><strong>Medigap Plan N:</strong> Typically ranges between $100 and $145 per month (illustrative savings of ~$30-50/month compared to Plan G).</li>
+            <li><strong>Medigap Plan N:</strong> Typically ranges between $100 and $145 per month (illustrative estimate of ~$30–$50/month lower derived from the sample ranges shown vs. Plan G).</li>
           </ul>
           <p>Medicare Supplement (Medigap) premiums do not represent a uniform or statewide general rate across Florida. Actual policy costs vary based on: ZIP code, age, rating method (such as Attained-Age vs. Issue-Age), insurance carrier, household discounts, health underwriting, and geographic area.</p>
           <p><strong>Official Sources (2026–2027):</strong> Part A deductibles ($1,736 in 2026; $1,776 in 2027) and Part B deductibles &amp; premiums ($283 in 2026; $292 and $209.40/mo standard premium in 2027) verified via the <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-parts-b-premiums-deductibles" target="_blank" rel="noopener noreferrer">CMS 2027 Parts A &amp; B Fact Sheet</a>; Part D prescription caps ($2,100 in 2026; $2,400 in 2027) via <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" target="_blank" rel="noopener noreferrer">Medicare.gov (Part D Costs)</a>; and Advantage MOOP ceilings ($9,250 in 2026; $9,850 in 2027) via <a href="https://www.medicare.gov/basics/costs/medicare-costs" target="_blank" rel="noopener noreferrer">Medicare.gov Costs</a>.</p>
@@ -631,7 +631,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <h2>Key Florida Medicare Enrollment Windows</h2>
           <ul>
             <li><strong>IEP (Initial Enrollment Period):</strong> 7-month window spanning 3 months before your 65th birthday month, your birthday month, and 3 months after.</li>
-            <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month window starting automatically on the first day of the month you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+), with guaranteed acceptance and zero medical underwriting.</li>
+            <li><strong>MOEP (Medigap Open Enrollment Period):</strong> 6-month window starting automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B, with guaranteed acceptance and zero medical underwriting.</li>
             <li><strong>AEP (Annual Enrollment Period - Oct 15 to Dec 7, 2026):</strong> Annual fall window to join, drop, or switch Medicare Advantage and Part D prescription drug plans for 2027 coverage.</li>
           </ul>
         </section>
@@ -643,7 +643,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dd>Medigap policies help pay certain Medicare-covered out-of-pocket costs, depending on the standardized plan you select. Medigap generally allows you to see any provider nationwide who accepts Medicare assignment, subject to Medicare and Medigap rules. Conversely, Medicare Advantage plans (Part C), offered by private insurers, feature specific network structures (such as HMO or PPO), cost-sharing terms, and pre-authorization rules that vary by plan and county.</dd>
 
             <dt><strong>What is the importance of the Medigap Open Enrollment Period in Florida?</strong></dt>
-            <dd>Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B (your Part B effective month at 65+). During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history.</dd>
+            <dd>Your 6-month Medigap Open Enrollment Period (MOEP) is an important opportunity to buy a Medigap policy. It starts automatically on the first day of the month in which you are age 65 or older and enrolled in Medicare Part B. During this window, you have Guaranteed Issue Rights, meaning insurance carriers cannot deny coverage, apply pre-existing condition waiting periods, or charge higher premiums due to your health history.</dd>
 
             <dt><strong>Can I switch from a Medicare Advantage plan back to Medigap in Florida?</strong></dt>
             <dd>Yes, but outside of specific Trial Rights (such as trying Advantage for the first time for under 12 months), you will generally need to pass medical underwriting questions. As an independent broker, we review your health history to identify carriers most likely to approve your Medigap application.</dd>
@@ -1388,20 +1388,20 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" 
       : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)";
     datePublished = "2024-01-15";
-    dateModified = "2026-11-18";
+    dateModified = "2026-11-20";
 
     if (isEs) {
       bodyOutline = `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026 · Licencia Activa Florida DFS / NPN: 21228432</strong></p>
+          <p><strong>Escrito y verificado por: Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 20 Nov 2026</strong></p>
           <p>${escapeHtml(description)}</p>
-          <p><strong>Verificación Oficial de Licencia:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Consultar Licencia en Florida DFS</a> · <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">Registro Nacional NIPR (NPN 21228432)</a></p>
+          <p><strong>Verificación Oficial de Licencia:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Buscar NPN 21228432 en Florida DFS</a> · <a href="https://nipr.com/licensing-center/look-up-a-national-producer-number" target="_blank" rel="noopener noreferrer">Herramienta de Consulta NPN en NIPR</a></p>
         </header>
         <section>
           <h2>Broker Independiente Andrés H. Bozo — Fundador de AHB Insurance Solutions</h2>
           <p>Andrés H. Bozo es corredor de seguros residente independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) en las líneas de Vida, Salud y Anualidades Variables. Desde su oficina principal ubicada en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, brinda asesoría bilingüe directa en español e inglés a jubilados, familias y profesionales independientes en todos los condados de Florida.</p>
-          <p>A diferencia de un agente cautivo que únicamente puede ofrecer los productos de una sola compañía, Andrés opera bajo un modelo fiduciario de corretaje independiente comparando pólizas disponibles de múltiples aseguradoras nacionales de sólida solvencia financiera como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial y Corebridge Financial.</p>
+          <p>A diferencia de un agente cautivo que únicamente puede ofrecer los productos de una sola compañía, Andrés opera como corredor independiente comparando pólizas disponibles de múltiples aseguradoras licenciadas en Florida como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial y Corebridge Financial, sin cargo de asesoría (la aseguradora emisora paga la compensación del corredor tras la emisión).</p>
           <h3>Áreas de Especialización en Florida</h3>
           <ul>
             <li><strong>Medicare Suplementario (Medigap Plan G y N), Medicare Advantage (Parte C) y Parte D:</strong> Revisión de médicos, formularios de medicamentos y fechas de inscripción como AEP (15 Oct – 7 Dic 2026 para cobertura 2027).</li>
@@ -1419,21 +1419,21 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <li><strong>Orientación Clara y Bilingüe Sin Presión:</strong> Explicación honesta de exclusiones, deducibles, cargos por rescate y períodos de espera antes de solicitar cualquier póliza.</li>
             <li><strong>Acompañamiento Anual de Largo Plazo:</strong> Revisiones anuales gratuitas durante cada período de inscripción abierta de Medicare y asistencia continua a los beneficiarios.</li>
           </ol>
-          <p>Comuníquese directamente al <a href="tel:+13522258389">+1 (352) 225-8389</a>, envíe un mensaje a <a href="/es/contacto">Contacto Directo</a> o verifique la licencia vigente en <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS</a> y <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
+          <p>Comuníquese directamente al <a href="tel:+13522258389">+1 (352) 225-8389</a>, envíe un mensaje a <a href="/es/contacto">Contacto Directo</a> o verifique la licencia vigente buscando NPN 21228432 en <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS</a> y en <a href="https://nipr.com/licensing-center/look-up-a-national-producer-number" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
         </section>
       `;
     } else {
       bodyOutline = `
         <header>
           <h1>${escapeHtml(title)}</h1>
-          <p><strong>Published: Jan 15, 2024 · Updated: Nov 18, 2026 · Florida DFS Resident License / NPN: 21228432</strong></p>
+          <p><strong>Written &amp; verified by: Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 20, 2026</strong></p>
           <p>${escapeHtml(description)}</p>
-          <p><strong>Official License Verification:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Verify License on Florida DFS</a> · <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">Verify NPN 21228432 on NIPR</a></p>
+          <p><strong>Official License Verification:</strong> <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Search NPN 21228432 on Florida DFS</a> · <a href="https://nipr.com/licensing-center/look-up-a-national-producer-number" target="_blank" rel="noopener noreferrer">NIPR NPN Lookup Tool</a></p>
         </header>
         <section>
           <h2>Independent Broker Andres H. Bozo — Principal of AHB Insurance Solutions</h2>
           <p>Andres H. Bozo is a resident independent insurance broker licensed by the Florida Department of Financial Services (DFS) across Life, Health, and Variable Annuity lines. Operating out of our local office at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, he provides direct bilingual guidance in English and Spanish to seniors, retirees, and working families across all 67 Florida counties.</p>
-          <p>Unlike captive agents restricted to promoting a single insurance carrier, Andres operates strictly as an independent broker comparing plans side-by-side across established, state-licensed national carriers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial, and Corebridge Financial—with zero broker fees or consulting charges.</p>
+          <p>Unlike captive agents restricted to promoting a single insurance carrier, Andres operates strictly as an independent broker comparing plans side-by-side across established, Florida-licensed national carriers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial, and Corebridge Financial—with zero consulting fees to you (insurers pay broker commissions directly upon enrollment).</p>
           <h3>Core Florida Practice Areas</h3>
           <ul>
             <li><strong>Florida Medicare Supplement (Medigap Plan G & N), Medicare Advantage (Part C) & Part D:</strong> Verifying preferred physicians, prescription formularies, and Annual Enrollment deadlines (Oct 15 – Dec 7, 2026 for 2027 coverage).</li>
@@ -1451,7 +1451,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <li><strong>Transparent, Bilingual Guidance:</strong> Clear explanations of deductibles, waiting periods, underwriting rules, and contract charges with zero sales pressure.</li>
             <li><strong>Lifelong Client Advocacy:</strong> Annual Medicare Part D and plan reviews plus ongoing beneficiary claims assistance.</li>
           </ol>
-          <p>Speak directly with Andres H. Bozo at <a href="tel:+13522258389">+1 (352) 225-8389</a>, reach out via our <a href="/contact">Contact Page</a>, or verify credentials directly through <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS Licensee Search</a> and <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
+          <p>Speak directly with Andres H. Bozo at <a href="tel:+13522258389">+1 (352) 225-8389</a>, reach out via our <a href="/contact">Contact Page</a>, or verify credentials directly by searching NPN 21228432 on <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer">Florida DFS Licensee Search</a> and <a href="https://nipr.com/licensing-center/look-up-a-national-producer-number" target="_blank" rel="noopener noreferrer">NIPR</a>.</p>
         </section>
       `;
     }
@@ -1680,7 +1680,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>Andres Bozo: Your Local Independent Insurance Broker in Alachua County</h2>
-          <p>Andres Bozo (NPN: 21228432) is a licensed independent insurance broker regulated by the Florida Department of Financial Services (DFS). As an independent agency, AHB Insurance Solutions objectively compares products across multiple top-rated national carriers, providing unbiased guidance and zero broker fees to clients.</p>
+          <p>Andres Bozo (NPN: 21228432) is a licensed independent insurance broker regulated by the Florida Department of Financial Services (DFS). As an independent agency, AHB Insurance Solutions objectively compares products across multiple Florida-licensed carriers (such as Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge), with zero consulting fees (insurers pay broker commissions directly upon enrollment).</p>
         </section>
 
         <section>
@@ -1896,7 +1896,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>${isEs ? `Asesoría Gratuita con el Broker Andrés Bozo en ${city.cityName}` : `Free Insurance Consultation in ${city.cityName} with Andres Bozo`}</h2>
-          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) directly at +1 (352) 225-8389 for a free rate comparison across top-rated carriers."}</p>
+          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) directly at +1 (352) 225-8389 for a free rate comparison across Florida-licensed carriers."}</p>
         </section>
       `;
     }
@@ -2107,7 +2107,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <h2>Frequently Asked Questions About Tampa Bay Burial Coverage</h2>
             <dl>
               <dt><strong>Can Tampa seniors with well-managed diabetes or hypertension qualify for Day-1 coverage?</strong></dt>
-              <dd>Yes. Many top-rated insurers offer immediate level coverage under simplified underwriting for applicants with controlled chronic conditions, depending on prescription history and carrier criteria.</dd>
+              <dd>Yes. Many Florida-licensed insurers offer immediate level coverage under simplified underwriting for applicants with controlled chronic conditions, depending on prescription history and carrier criteria.</dd>
               <dt><strong>How quickly are final expense death benefits paid to beneficiaries?</strong></dt>
               <dd>Completed claims submitted with a certified death certificate are typically processed within several business days according to carrier policy terms.</dd>
             </dl>
@@ -2715,7 +2715,7 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "@type": "PropertyValue",
       "name": "National Producer Number (NPN)",
       "value": "21228432",
-      "url": "https://nipr.com/"
+      "url": "https://nipr.com/licensing-center/look-up-a-national-producer-number"
     },
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
@@ -2815,7 +2815,7 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "https://www.instagram.com/ahbinsurancesolutions",
       "https://www.linkedin.com/in/andres-bozo-npn-21228432",
       "https://licenseesearch.fldfs.com/",
-      "https://nipr.com/"
+      "https://nipr.com/licensing-center/look-up-a-national-producer-number"
     ],
     "founder": {
       "@type": "Person",
@@ -2871,7 +2871,7 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "https://www.facebook.com/ahbinsurancesolutions",
       "https://www.instagram.com/ahbinsurancesolutions",
       "https://licenseesearch.fldfs.com/",
-      "https://nipr.com/"
+      "https://nipr.com/licensing-center/look-up-a-national-producer-number"
     ]
   };
 

@@ -100,7 +100,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             "https://www.facebook.com/ahbinsurancesolutions",
             "https://www.instagram.com/ahbinsurancesolutions",
             "https://licenseesearch.fldfs.com/",
-            "https://nipr.com/"
+            "https://nipr.com/licensing-center/look-up-a-national-producer-number"
         ]
     };
 
@@ -249,7 +249,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                 ogImage="https://www.ahbinsurancesolutions.com/og/andres-bozo-og.jpg"
                 ogImageAlt={isEs ? "Andrés H. Bozo - Broker de Seguros Licenciado en Florida (NPN 21228432)" : "Andres H. Bozo - Licensed Florida Insurance Broker (NPN 21228432)"}
                 datePublished="2024-01-15"
-                dateModified="2026-11-18"
+                dateModified="2026-11-20"
                 schema={[personSchema, aboutPageSchema, breadcrumbSchema]}
             />
 
@@ -265,8 +265,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                     </div>
                     <span className="text-[11px] text-gray-600 font-semibold">
                         {isEs
-                            ? 'Por Andrés H. Bozo (NPN 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026'
-                            : 'By Andres H. Bozo (NPN 21228432) · Published: Jan 15, 2024 · Updated: Nov 18, 2026'}
+                            ? 'Escrito por Andrés H. Bozo (NPN 21228432) · Publicado: 15 Ene 2024 · Actualizado: 20 Nov 2026'
+                            : 'Written by Andres H. Bozo (NPN 21228432) · Published: Jan 15, 2024 · Updated: Nov 20, 2026'}
                     </span>
                 </div>
             </div>
@@ -336,8 +336,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             </p>
                             <p className="text-xs sm:text-sm text-amber-200 font-semibold mb-6">
                                 {isEs
-                                    ? 'Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026'
-                                    : 'Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Published: Jan 15, 2024 · Updated: Nov 18, 2026'}
+                                    ? 'Firma de Autor: Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Publicado: 15 Ene 2024 · Actualizado: 20 Nov 2026'
+                                    : 'Author & Broker: Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Published: Jan 15, 2024 · Updated: Nov 20, 2026'}
                             </p>
 
                             {/* Quick Credentials Grid */}
@@ -378,21 +378,21 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 text-xs text-gray-300 hover:text-white border border-white/20 hover:border-white/40 px-4 py-3 rounded-xl transition-all"
-                                    title={isEs ? "Verificar licencia en el portal oficial del estado de Florida" : "Verify agent license on Florida DFS official database"}
+                                    title={isEs ? "Buscar por NPN 21228432 en el portal oficial del estado de Florida" : "Search NPN 21228432 on Florida DFS official database"}
                                 >
                                     <svg className="w-3.5 h-3.5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                                     </svg>
-                                    <span>{isEs ? 'Verificar Licencia en DFS Florida' : 'Verify License on FL DFS'}</span>
+                                    <span>{isEs ? 'Verificar NPN 21228432 en DFS Florida' : 'Verify NPN 21228432 on FL DFS'}</span>
                                 </a>
                                 <a
-                                    href="https://nipr.com/"
+                                    href="https://nipr.com/licensing-center/look-up-a-national-producer-number"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 text-xs text-gray-300 hover:text-white border border-white/20 hover:border-white/40 px-4 py-3 rounded-xl transition-all"
-                                    title={isEs ? "Verificar NPN 21228432 en el registro nacional NIPR" : "Verify NPN 21228432 in the National Insurance Producer Registry (NIPR)"}
+                                    title={isEs ? "Herramienta oficial de consulta NPN de NIPR" : "Official NIPR National Producer Number lookup tool"}
                                 >
-                                    <span>{isEs ? 'Registro Nacional NIPR' : 'Verify NPN on NIPR'}</span>
+                                    <span>{isEs ? 'Consulta NPN en NIPR' : 'NIPR NPN Lookup Tool'}</span>
                                 </a>
                             </div>
                         </div>
@@ -414,7 +414,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         </div>
                         <div className="flex items-center gap-3 flex-wrap">
                             <span className="bg-gray-200 text-gray-700 text-[11px] font-bold px-3 py-1 rounded-full">
-                                {isEs ? 'Actualizado: 18 Nov 2026' : 'Updated: Nov 18, 2026'}
+                                {isEs ? 'Actualizado: 20 Nov 2026' : 'Updated: Nov 20, 2026'}
                             </span>
                             <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-lg text-emerald-800 text-xs font-bold">
                                 <svg className="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
@@ -472,7 +472,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                         <p className="text-gray-700">
                             {isEs 
                                 ? 'Como corredor independiente (Broker), Andrés no representa a una compañía aseguradora; representa exclusivamente los intereses de sus clientes. Al comparar múltiples aseguradoras autorizadas en Florida, puede analizar de forma objetiva las primas reguladas y los criterios de aceptación médica para recomendar la opción que realmente se adapta a la salud y presupuesto de cada persona.' 
-                                : 'As an independent broker, Andres does not work for an insurance carrier; he works directly for his clients. By comparing multiple A-rated Florida-licensed carriers, Andres objectively scans state-regulated rates and underwriting criteria to find the optimal plan tailored to each client’s medical history and financial goals.'}
+                                : 'As an independent broker, Andres does not work for an insurance carrier; he works directly for his clients. By comparing multiple Florida-licensed carriers listed below, Andres objectively scans state-regulated rates and underwriting criteria to find the optimal plan tailored to each client’s medical history and financial goals.'}
                         </p>
 
                         <div className="bg-light-gray p-5 rounded-xl border-l-4 border-accent shadow-sm my-4">
@@ -608,7 +608,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             <section className="bg-primary text-white py-14">
                 <div className="container mx-auto px-4 md:px-6 max-w-6xl text-center">
                     <span className="text-accent text-xs font-black uppercase tracking-widest block mb-2">
-                        {isEs ? 'Aseguradoras Líderes en Florida' : 'Top-Rated Insurance Carriers'}
+                        {isEs ? 'Aseguradoras Licenciadas en Florida' : 'Licensed Florida Carriers'}
                     </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-heading mb-4">
                         {isEs ? 'Comparamos Opciones de Múltiples Aseguradoras' : 'Independent Multi-Carrier Representation'}
@@ -646,11 +646,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             ? 'Andrés H. Bozo es un corredor de seguros residente licenciado por el Departamento de Servicios Financieros del Estado de Florida (DFS), Número de Productor Nacional (NPN) 21228432. AHB Insurance Solutions opera como una agencia de corretaje independiente. ' 
                             : 'Andres H. Bozo is a licensed resident insurance broker authorized by the Florida Department of Financial Services (DFS), National Producer Number (NPN) 21228432. AHB Insurance Solutions operates as an independent insurance agency. '}
                         <a href="https://licenseesearch.fldfs.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline font-bold">
-                            {isEs ? 'Verificar en Florida DFS' : 'Verify on Florida DFS'}
+                            {isEs ? 'Buscar NPN 21228432 en Florida DFS' : 'Search NPN 21228432 on Florida DFS'}
                         </a>
                         {' · '}
-                        <a href="https://nipr.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline font-bold">
-                            {isEs ? 'Registro NIPR' : 'NIPR Registry'}
+                        <a href="https://nipr.com/licensing-center/look-up-a-national-producer-number" target="_blank" rel="noopener noreferrer" className="text-primary underline font-bold">
+                            {isEs ? 'Consulta NPN en NIPR' : 'NIPR NPN Lookup Tool'}
                         </a>
                     </p>
                     <p>

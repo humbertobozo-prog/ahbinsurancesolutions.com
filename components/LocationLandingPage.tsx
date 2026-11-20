@@ -218,7 +218,7 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
             "https://www.instagram.com/ahbinsurancesolutions",
             "https://www.linkedin.com/in/andres-bozo-npn-21228432",
             "https://licenseesearch.fldfs.com/",
-            "https://nipr.com/"
+            "https://nipr.com/licensing-center/look-up-a-national-producer-number"
         ]
     };
 

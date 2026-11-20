@@ -23,8 +23,8 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                         </h2>
                         <p className="text-sm text-slate-600 mb-6">
                             {isEs
-                                ? 'Escrito por Andrés H. Bozo (NPN 21228432) · Revisado en noviembre de 2026'
-                                : 'Plain-language guide written by licensed broker Andres H. Bozo (NPN 21228432). Updated November 16, 2026.'}
+                                ? 'Escrito por Andrés H. Bozo (NPN 21228432) · Actualizado: 20 de noviembre de 2026'
+                                : 'Plain-language guide written by licensed broker Andres H. Bozo (NPN 21228432). Updated November 20, 2026.'}
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-700 leading-relaxed">
@@ -67,8 +67,8 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                                 </h3>
                                 <p>
                                     {isEs
-                                        ? 'Un agente exclusivo solo vende una marca. Como corredor independiente, Andrés Bozo compara opciones entre múltiples compañías aseguradoras líderes para ajustar el plan a sus médicos, medicinas y presupuesto. Nuestras citas y comparativas son 100% gratuitas.'
-                                        : 'A captive agent can only show one company. As an independent advisor, Andres Bozo shops rates across multiple top-rated carriers to match your doctors, prescriptions, and budget. You pay zero brokerage fees for personal help.'}
+                                        ? 'Un agente exclusivo solo vende una marca. Como corredor independiente, Andrés Bozo compara opciones entre múltiples aseguradoras licenciadas en Florida para ajustar el plan a sus médicos, medicinas y presupuesto, sin honorarios adicionales (la aseguradora compensa al corredor tras la emisión).'
+                                        : 'A captive agent can only show one company. As an independent advisor, Andres Bozo compares rates across multiple Florida-licensed carriers to match your doctors, prescriptions, and budget with no consulting fee (insurers compensate the broker directly upon enrollment).'}
                                 </p>
                             </article>
                         </div>

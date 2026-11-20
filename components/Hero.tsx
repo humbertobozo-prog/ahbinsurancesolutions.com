@@ -72,8 +72,8 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
 
                     <p className="text-base sm:text-lg md:text-lg lg:text-xl text-slate-700 mb-2 leading-relaxed font-normal md:font-medium max-w-2xl">
                         {language === 'es' 
-                            ? 'Representamos sus intereses, no a las aseguradoras. Como corredores independientes licenciados en Florida, comparamos múltiples aseguradoras autorizadas de primer nivel para encontrar su plan ideal al mejor valor y con asesoría sin costo.' 
-                            : 'At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare multiple Florida-licensed, A-rated carriers to find the right plan for your unique needs at zero cost to you.'}
+                            ? 'Representamos sus intereses, no a las aseguradoras. Como corredores independientes licenciados en Florida, comparamos planes de múltiples aseguradoras autorizadas (como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge) sin cargo por asesoría (la aseguradora compensa al corredor tras la emisión).' 
+                            : 'At AHB Insurance Solutions, we represent you, not the insurance companies. As independent licensed brokers, we compare plans across Florida-licensed carriers (such as Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge) with no consulting fee (insurers compensate the broker upon enrollment).'}
                     </p>
                     <p className="text-xs sm:text-sm text-slate-600 font-semibold mb-4">
                         {language === 'es'
@@ -258,7 +258,7 @@ export const Hero: React.FC<HeroProps> = ({ content, language = 'en' }) => {
                     <div className="absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-md text-primary px-3.5 py-2.5 rounded-xl border border-white/80 shadow-lg flex items-center justify-between text-xs font-black uppercase tracking-wider">
                         <div className="flex items-center gap-1.5">
                             <span className="text-accent" aria-hidden="true">★</span>
-                            <span>{language === 'es' ? 'Múltiples Aseguradoras' : 'Top-Rated Carriers'}</span>
+                            <span>{language === 'es' ? 'Múltiples Aseguradoras' : 'Licensed Carriers'}</span>
                         </div>
                         <span className="text-slate-300" aria-hidden="true">|</span>
                         <div className="flex items-center gap-1.5">

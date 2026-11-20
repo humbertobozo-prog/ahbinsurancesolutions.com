@@ -43,7 +43,7 @@ export const translations: Record<Language, TranslationContent> = {
         { label: "Medicare Experts", value: "Custom A/B/C/D guidance." },
         { label: "Burial Protection", value: "Simplified issue and guaranteed options." },
         { label: "IUL Growth", value: "Tax-advantaged retirement strategies." },
-        { label: "Top Carriers", value: "We compare available options for your goals." }
+        { label: "Licensed Carriers", value: "We compare available options for your goals." }
       ]
     },
     services: {
@@ -100,7 +100,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "Top-Rated Carriers",
+          title: "Licensed FL Carriers",
           description: "We compare available options based on your needs, eligibility, budget and coverage goals.",
         },
         {
@@ -116,7 +116,7 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Our Mission: Protecting Your Legacy",
       paragraph1: "Founded on the principles of honesty and transparency, AHB Insurance Solutions was established by <strong>Andres H Bozo</strong>, a <strong>Licensed Broker (NPN: 21228432)</strong>. After seeing many seniors struggle with confusing paperwork and rising costs, Andres committed to creating a brokerage that simplifies the process while maximizing protection.",
       paragraph2: "We specialize in the products that matter most to you as you plan for the future. Whether it's finding the right Medicare Advantage plan, securing a Final Expense policy to protect your children from funeral costs, or using an IUL for tax-advantaged retirement wealth strategies, we have the expertise to guide you.",
-      paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with multiple top-rated nationwide carriers to find the plan that is just right for your budget and your health.",
+      paragraph3: "At AHB, you are never just a policy number. You are a neighbor, a friend, and a partner. We work with multiple Florida-licensed carriers (such as Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge) to find the plan that is right for your budget and health.",
       imageAlt: "Andres H. Bozo, licensed Florida insurance broker NPN 21228432, providing expert guidance for Medicare, Final Expense, and IUL.",
       statsYears: "Years of Experience",
       statsCompanies: "Broker Advisory Fee",
@@ -128,7 +128,7 @@ export const translations: Record<Language, TranslationContent> = {
       items: [
         { label: "Medicare.gov", source: "Official U.S. Government Site", url: "https://www.medicare.gov" },
         { label: "Social Security Administration", source: "SSA.gov Official Site", url: "https://www.ssa.gov" },
-        { label: "Florida Dept. of Financial Services", source: "Agent License Verification", url: "https://across.myfloridacfo.com/LicenseSearch" }
+        { label: "Florida Dept. of Financial Services", source: "Search NPN 21228432 License", url: "https://licenseesearch.fldfs.com/" }
       ]
     },
     testimonials: {
@@ -307,7 +307,7 @@ export const translations: Record<Language, TranslationContent> = {
         { label: "Expertos Medicare", value: "Guía personalizada Partes A/B/C/D." },
         { label: "Gastos Finales", value: "Opciones de emisión simplificada y garantizada." },
         { label: "Estrategias IUL", value: "Estrategias de retiro con ventajas fiscales." },
-        { label: "Aseguradoras Líderes", value: "Comparamos opciones líderes para usted." }
+        { label: "Aseguradoras Licenciadas", value: "Comparamos opciones autorizadas en Florida." }
       ]
     },
     services: {
@@ -364,7 +364,7 @@ export const translations: Record<Language, TranslationContent> = {
         },
         {
           icon: "M3.75 21h16.5M4.5 3h15M5.25 3v18M18.75 3v18M9 6.75h6.375M9 12h6.375M9 17.25h6.375M12 21V3",
-          title: "Aseguradoras Líderes",
+          title: "Aseguradoras Licenciadas",
           description: "Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura.",
         },
         {
@@ -380,7 +380,7 @@ export const translations: Record<Language, TranslationContent> = {
       title: "Nuestra Misión: Proteger su Legado",
       paragraph1: "Fundada bajo principios de honestidad y transparencia, AHB Insurance Solutions fue establecida por <strong>Andres H Bozo</strong>, <strong>Broker Licenciado (NPN: 21228432)</strong>. Al ver a muchas personas mayores luchar con trámites confusos y costos crecientes, Andres se comprometió a simplificar el proceso.",
       paragraph2: "Nos especializamos en los productos que más le importan. Ya sea encontrar el plan de Medicare adecuado, asegurar una póliza de Gastos Finales para proteger a sus hijos, o estructurar un IUL con ventajas fiscales para su estrategia de retiro.",
-      paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con múltiples aseguradoras líderes a nivel nacional para encontrar el plan adecuado para su presupuesto y salud.",
+      paragraph3: "En AHB, usted no es solo un número. Es un vecino y un amigo. Trabajamos con múltiples aseguradoras autorizadas en Florida (como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge) para encontrar el plan adecuado para su presupuesto y salud.",
       imageAlt: "Andres H. Bozo, broker de seguros licenciado en Florida NPN 21228432, asesor especialista en Medicare y Gastos Finales.",
       statsYears: "Años de Experiencia",
       statsCompanies: "Costo de Asesoría",
@@ -392,7 +392,7 @@ export const translations: Record<Language, TranslationContent> = {
       items: [
         { label: "Medicare.gov", source: "Sitio Oficial del Gobierno de EE.UU.", url: "https://www.medicare.gov" },
         { label: "Admin. del Seguro Social", source: "Sitio Oficial SSA.gov", url: "https://www.ssa.gov" },
-        { label: "Depto. de Seguros de Florida", source: "Verificación de Licencia de Agente", url: "https://across.myfloridacfo.com/LicenseSearch" }
+        { label: "Depto. de Seguros de Florida", source: "Buscar Licencia NPN 21228432", url: "https://licenseesearch.fldfs.com/" }
       ]
     },
     testimonials: {

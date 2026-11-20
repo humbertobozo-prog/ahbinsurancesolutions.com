@@ -201,7 +201,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "@type": "PropertyValue",
                 "name": "National Producer Number (NPN)",
                 "value": "21228432",
-                "url": "https://nipr.com/"
+                "url": "https://nipr.com/licensing-center/look-up-a-national-producer-number"
             },
             "hasCredential": {
                 "@type": "EducationalOccupationalCredential",
@@ -347,7 +347,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "https://www.facebook.com/ahbinsurancesolutions",
                 "https://www.instagram.com/ahbinsurancesolutions",
                 "https://licenseesearch.fldfs.com/",
-                "https://nipr.com/"
+                "https://nipr.com/licensing-center/look-up-a-national-producer-number"
             ]
         };
 
