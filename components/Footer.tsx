@@ -14,7 +14,6 @@ const WHATSAPP_URL = "https://wa.me/13522258389";
 const FACEBOOK_URL = "https://www.facebook.com/ahbinsurancesolutions";
 const INSTAGRAM_URL = "https://www.instagram.com/ahbinsurancesolutions";
 const LINKEDIN_URL = "https://www.linkedin.com/in/andres-bozo-npn-21228432";
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA";
 
 const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpenLegalModal }) => {
     const isEs = language === 'es';
@@ -67,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                             <li><a href="/dental-vision-florida" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/dental-vision-florida'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Senior Dental & Vision</a></li>
                             <li><a href="/blog" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/blog'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Blog & Knowledge Hub</a></li>
                             <li><a href="/city-guides" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/city-guides'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Florida City Guides</a></li>
-                            <li><a href="/locations/gainesville-fl" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/locations/gainesville-fl'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-amber-400 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors font-black inline-block">📍 Gainesville FL Office</a></li>
+                            <li><a href="/locations/gainesville-fl" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/locations/gainesville-fl'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-amber-400 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors font-black inline-block">📍 Gainesville &amp; Alachua, FL</a></li>
                             <li><a href="/faq" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/faq'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">FAQ / Preguntas</a></li>
                             <li><a href="/about-andres-bozo" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/about-andres-bozo'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">{content.links.about}</a></li>
                             <li><a href="/contact" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/contact'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">{content.links.contact}</a></li>
@@ -166,22 +165,19 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                         <h3 className="font-heading font-bold text-lg mb-4 text-white uppercase tracking-wider">{content.contactTitle}</h3>
                         <ul className="space-y-3 text-gray-200">
                             <li>
-                                <a 
-                                    href={GOOGLE_MAPS_URL} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    aria-label="Ver ubicación de oficina de AHB Insurance Solutions en Google Maps (Gainesville, Florida)"
-                                    className="flex items-start hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none p-1 rounded transition-colors"
-                                >
+                                <div className="flex items-start p-1">
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 mt-1 flex-shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    <address className="not-italic whitespace-pre-line leading-relaxed text-xs sm:text-sm">
-                                        5500 SW Archer Road, Ste H103{"\n"}
+                                    <address className="not-italic leading-relaxed text-xs sm:text-sm">
+                                        <span className="block text-[11px] font-bold text-accent uppercase tracking-wider mb-0.5">
+                                            {isEs ? 'Dirección Postal / Administrativa (Sin atención al público):' : 'Mailing & Administrative Address (No walk-in office):'}
+                                        </span>
+                                        5500 SW Archer Road, Ste H103<br />
                                         Gainesville, FL 32607, USA
                                     </address>
-                                </a>
+                                </div>
                             </li>
                             <li>
                                 <a 

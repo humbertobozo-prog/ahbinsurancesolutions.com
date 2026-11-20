@@ -336,8 +336,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                             </p>
                             <p className="text-xs sm:text-sm text-amber-200 font-semibold mb-6">
                                 {isEs
-                                    ? 'Firma de Autor: Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Publicado: 15 Ene 2024 · Actualizado: 20 Nov 2026'
-                                    : 'Author & Broker: Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Published: Jan 15, 2024 · Updated: Nov 20, 2026'}
+                                    ? 'Firma de Autor: Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Dirección Postal / Administrativa en Gainesville, FL 32607 (sin atención al público) · Publicado: 15 Ene 2024 · Actualizado: 20 Nov 2026'
+                                    : 'Author & Broker: Andres H. Bozo, Licensed Florida Broker (NPN: 21228432) · Gainesville, FL 32607 Mailing Address (no walk-in office) · Published: Jan 15, 2024 · Updated: Nov 20, 2026'}
                             </p>
 
                             {/* Quick Credentials Grid */}
@@ -524,9 +524,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                     <span className="text-accent font-bold">✉️</span>
                                     <a href="mailto:andreshbozo@ahbinsurancesolutions.com" className="hover:text-accent break-all">andreshbozo@ahbinsurancesolutions.com</a>
                                 </p>
-                                <p className="flex items-center gap-2">
+                                <p className="flex items-start gap-2">
                                     <span className="text-accent font-bold">📍</span>
-                                    <span>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</span>
+                                    <span>
+                                        <span className="block text-[10px] font-bold uppercase tracking-wider text-accent">
+                                            {isEs ? 'Dirección Postal / Administrativa (Sin atención al público):' : 'Mailing & Administrative Address (No walk-in office):'}
+                                        </span>
+                                        5500 SW Archer Road, Ste H103, Gainesville, FL 32607
+                                    </span>
                                 </p>
                             </div>
                         </div>

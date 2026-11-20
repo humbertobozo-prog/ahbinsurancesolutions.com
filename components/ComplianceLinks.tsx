@@ -118,8 +118,8 @@ export const ComplianceLinks: React.FC<ComplianceLinksProps> = ({ content, langu
                                 </p>
                                 <p className="mt-2 font-semibold text-primary">
                                     {isEs
-                                        ? 'Oficina en Florida: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Tel: +1 (352) 225-8389 · NPN: 21228432'
-                                        : 'Florida Office: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Phone: +1 (352) 225-8389 · NPN: 21228432'}
+                                        ? 'Dirección Postal / Administrativa (sin atención al público): 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Tel: +1 (352) 225-8389 · NPN: 21228432'
+                                        : 'Mailing & Administrative Address (no walk-in office): 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · Phone: +1 (352) 225-8389 · NPN: 21228432'}
                                 </p>
                             </div>
                         </div>

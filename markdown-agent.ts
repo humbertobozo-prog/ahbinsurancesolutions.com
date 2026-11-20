@@ -125,7 +125,8 @@ function getAgencyFooter(isEs: boolean): string {
 - **Teléfono Directo:** [+1 (352) 225-8389](tel:+13522258389)
 - **WhatsApp:** [+1 (352) 225-8389](https://wa.me/13522258389)
 - **Correo Electrónico:** andreshbozo@ahbinsurancesolutions.com
-- **Dirección de Oficina:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
+- **Dirección Postal / Administrativa (sin atención al público):** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
+- **Modalidad de Atención:** Citas presenciales programadas en Alachua, Marion, Lake y Putnam; asesoría remota por teléfono/videollamada en toda Florida
 - **Área de Cobertura:** Todo el estado de Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua y los 67 condados)
 - **Aseguradoras Representadas:** Múltiples aseguradoras líderes con licencia estatal, incluyendo Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge.
 - **Manifiesto de Agentes de IA:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)
@@ -142,7 +143,8 @@ function getAgencyFooter(isEs: boolean): string {
 - **Direct Phone:** [+1 (352) 225-8389](tel:+13522258389)
 - **WhatsApp:** [+1 (352) 225-8389](https://wa.me/13522258389)
 - **Email:** andreshbozo@ahbinsurancesolutions.com
-- **Office Address:** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
+- **Mailing / Administrative Address (no walk-in office):** 5500 SW Archer Road, Ste H103, Gainesville, FL 32607
+- **Consultation Modes:** Scheduled in-person visits in Alachua, Marion, Lake & Putnam counties; remote phone/video consultations statewide across Florida
 - **Service Area:** Statewide across Florida (Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, Alachua, and all 67 counties)
 - **Carriers Represented:** Multiple top-rated state-licensed insurers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge.
 - **LLM / AI Agent Manifest:** [/llms.txt](https://www.ahbinsurancesolutions.com/llms.txt) | [/llms-full.txt](https://www.ahbinsurancesolutions.com/llms-full.txt)

@@ -49,8 +49,8 @@ export const FLORIDA_CITIES: CityData[] = [
         answer: 'Yes! UF Health Shands Hospital, HCA Florida North Florida Hospital, and all associated outpatient clinics accept Original Medicare and standardized Medigap plans (Plan G and Plan N) with zero network restrictions.',
       },
       {
-        question: 'Where is AHB Insurance Solutions located in Gainesville?',
-        answer: 'Our local office is located at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Independent broker Andres Bozo provides in-person and phone consultations across Alachua County.',
+        question: 'How does AHB Insurance Solutions serve clients in Gainesville, and is there a walk-in office?',
+        answer: 'Our mailing and administrative address is 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, without public walk-in reception. Independent broker Andres Bozo provides scheduled in-person visits across Alachua County as well as phone and video consultations.',
       },
       {
         question: 'Do you serve Archer, Newberry, and High Springs?',
@@ -63,8 +63,8 @@ export const FLORIDA_CITIES: CityData[] = [
         answer: '¡Sí! UF Health Shands Hospital, HCA Florida North Florida Hospital y todas sus clínicas asociadas aceptan Medicare Original y planes Medigap (Plan G y N) sin necesidad de referidos.',
       },
       {
-        question: '¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?',
-        answer: 'Nuestra oficina local está ubicada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. El broker Andrés Bozo atiende de forma presencial y telefónica en todo el Condado de Alachua.',
+        question: '¿Cómo atiende AHB Insurance Solutions en Gainesville y si recibe visitas sin cita?',
+        answer: 'Nuestra dirección postal y administrativa en Gainesville es 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (sin atención presencial al público en esa dirección). El broker Andrés Bozo atiende con cita previa en el Condado de Alachua, además de consultas telefónicas y por videollamada.',
       },
       {
         question: '¿Brindan servicio en Archer, Newberry y High Springs?',

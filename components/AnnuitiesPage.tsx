@@ -794,7 +794,7 @@ export const AnnuitiesPage: React.FC<AnnuitiesPageProps> = ({ language, onOpenQu
                                     : 'As an independent licensed Florida insurance broker, I provide impartial multi-carrier comparisons across multiple top state-licensed carriers. I help you evaluate fixed yields, index crediting, liquidity provisions, and lifetime income options at zero cost to you.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
-                                {isEs ? '📍 Sede en Gainesville, Florida | Servicio a residentes en todos los condados de Florida' : '📍 Based in Gainesville, FL | Serving clients across all 67 Florida counties'}
+                                {isEs ? '📍 Base operativa en Gainesville, Florida | Servicio a residentes en todos los condados de Florida' : '📍 Based in Gainesville, FL | Serving clients across all 67 Florida counties'}
                             </p>
                         </div>
                     </section>

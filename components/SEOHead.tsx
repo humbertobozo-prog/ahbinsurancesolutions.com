@@ -230,12 +230,6 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                 "postalCode": "32607",
                 "addressCountry": "US"
             },
-            "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 29.6015,
-                "longitude": -82.4013
-            },
-            "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA",
             "openingHoursSpecification": [
                 {
                     "@type": "OpeningHoursSpecification",
@@ -247,6 +241,9 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "areaServed": [
                 { "@type": "State", "name": "Florida" },
                 { "@type": "AdministrativeArea", "name": "Alachua County, Florida" },
+                { "@type": "AdministrativeArea", "name": "Marion County, Florida" },
+                { "@type": "AdministrativeArea", "name": "Lake County, Florida" },
+                { "@type": "AdministrativeArea", "name": "Putnam County, Florida" },
                 { "@type": "AdministrativeArea", "name": "Miami-Dade County, Florida" },
                 { "@type": "AdministrativeArea", "name": "Orange County, Florida" },
                 { "@type": "AdministrativeArea", "name": "Hillsborough County, Florida" },

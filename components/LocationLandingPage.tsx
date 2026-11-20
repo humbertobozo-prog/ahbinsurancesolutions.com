@@ -552,8 +552,8 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
                             </p>
                             <p className="text-sm text-gray-700">
                                 {activeLang === 'es'
-                                    ? 'Andrés H. Bozo (Licencia Florida DFS / NPN 21228432) brinda asesoría bilingüe en nuestra sede de 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 y de forma remota en Miami, Tampa Bay, Orlando, Jacksonville y todo el estado sin honorarios de corretaje. La inscripción en planes de Medicare, vida o anualidades no es obligatoria y ninguna cobertura entra en vigor sin solicitud formal y aprobación de la aseguradora.'
-                                    : 'Andres H. Bozo (Florida DFS License / NPN 21228432) provides bilingual consultations from 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 and statewide across Miami-Dade, Hillsborough, Orange, Duval, and Broward counties with zero broker fees. Coverage is always subject to carrier underwriting and policy terms.'}
+                                    ? 'Andrés H. Bozo (Licencia Florida DFS / NPN 21228432) brinda asesoría bilingüe de forma remota por teléfono y videollamada en Miami, Tampa Bay, Orlando, Jacksonville y todo Florida sin honorarios de corretaje (dirección postal y administrativa en Gainesville: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; sin atención presencial al público en dicha dirección). La inscripción en planes de Medicare, vida o anualidades no es obligatoria y ninguna cobertura entra en vigor sin solicitud formal y aprobación de la aseguradora.'
+                                    : 'Andres H. Bozo (Florida DFS License / NPN 21228432) provides remote bilingual phone and video consultations across Miami-Dade, Hillsborough, Orange, Duval, Broward, and all Florida counties with zero broker fees (mailing/administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; no walk-in public office). Coverage is always subject to carrier underwriting and policy terms.'}
                             </p>
                         </div>
                     </div>

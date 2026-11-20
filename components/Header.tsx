@@ -261,7 +261,7 @@ export const Header: React.FC<HeaderProps> = ({ content, currentLang, setLanguag
                             {isEs ? 'Guía por Ciudades' : 'City Guides'}
                         </a>
                         <a href={isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl'} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 text-amber-400 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, isEs ? '/es/localidades/gainesville-fl' : '/locations/gainesville-fl')}>
-                            📍 Gainesville FL Office
+                            📍 Gainesville, FL
                         </a>
                         <a href={faqPath} className="text-lg font-black uppercase tracking-widest border-b border-white/5 py-3 focus-visible:text-accent outline-none" onClick={(e) => navigateTo(e, faqPath)}>
                             FAQ

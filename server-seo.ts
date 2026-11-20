@@ -211,7 +211,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Medicare, Gastos Finales y Seguro de Vida Universal Indexada (IUL) en Florida</h1>
           <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Actualizado: 20 Nov 2026</strong></p>
-          <p>Bienvenido a AHB Insurance Solutions, su agencia independiente de corretaje de seguros en Florida. Con oficina en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, nos dedicamos a proteger el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
+          <p>Bienvenido a AHB Insurance Solutions, correduría independiente de seguros en Florida con base operativa y dirección postal/administrativa en Gainesville, FL (<strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, sin atención al público sin cita). Protegemos el patrimonio familiar, la salud y la tranquilidad de los adultos mayores y familias en todo el estado de Florida mediante citas presenciales programadas en el centro-norte de Florida y asesoría remota por teléfono o videollamada. Comparamos las opciones disponibles según sus necesidades, elegibilidad, presupuesto y objetivos de cobertura entre aseguradoras de sólida trayectoria y debidamente licenciadas por el estado de Florida (Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters y Corebridge), con asesoría bilingüe y sin cargos por servicio de corretaje.</p>
         </header>
         <section>
           <h2>Nuestras Soluciones de Seguros Especializadas en Florida</h2>
@@ -250,8 +250,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>El componente de acreditación indexada de una póliza IUL puede incluir una cláusula de piso contractual del 0%. En los períodos en que el índice bursátil de referencia registra pérdidas, a la estrategia de índice seleccionada no se le acredita un rendimiento negativo; sin embargo, el valor en efectivo no está invertido directamente en la bolsa y continúa sujeto a los costos internos del seguro (COI), cargos administrativos de la póliza y a la solvencia financiera de la aseguradora emisora.</p>
         </section>
         <section>
-          <h2>Oficina en Gainesville, Servicios en Español y Enlaces Principales</h2>
-          <p><strong>Dirección de la Agencia:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Correo:</strong> andreshbozo@ahbinsurancesolutions.com</p>
+          <h2>Base en Gainesville, Servicios en Español y Enlaces Principales</h2>
+          <p><strong>Dirección Postal / Administrativa (sin atención al público):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Correo:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <nav aria-label="Enlaces en Español">
             <ul>
               <li><a href="/es">Inicio: Seguros en Florida</a></li>
@@ -275,7 +275,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Medicare, Final Expense & Indexed Universal Life (IUL) Insurance in Florida</h1>
           <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Updated: Nov 20, 2026</strong></p>
-          <p>Welcome to AHB Insurance Solutions, located at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>. We are an independent, client-first insurance brokerage proudly serving seniors, families, and individuals throughout all 67 Florida counties. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge). We provide independent guidance, personalized rate comparisons, and lifelong local support with zero broker fees.</p>
+          <p>Welcome to AHB Insurance Solutions, an independent, client-first Florida insurance brokerage based in Gainesville, FL (mailing and administrative address: <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>; no walk-in public office). We serve seniors, families, and individuals throughout all 67 Florida counties via scheduled local visits in North Central Florida and statewide phone or video consultations. Guided by licensed broker Andres Bozo (NPN: 21228432), we work with well-established, state-licensed national insurance carriers (including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters, and Corebridge) with zero broker fees.</p>
         </header>
         <section>
           <h2>Our Specialized Florida Insurance Solutions</h2>
@@ -314,8 +314,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>The index-crediting component of an IUL may have a contractual 0% floor, meaning the selected index strategy is not credited with a negative index return when markets drop. However, policy charges, cost of insurance, loans, withdrawals and other contract provisions can affect overall cash value.</p>
         </section>
         <section>
-          <h2>Explore Coverage Options, Office Address & Bilingual Assistance</h2>
-          <p><strong>Agency Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
+          <h2>Explore Coverage Options, Administrative Address &amp; Bilingual Assistance</h2>
+          <p><strong>Mailing / Administrative Address (No walk-in office):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · <strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a> · <strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
           <nav aria-label="Insurance Solutions">
             <ul>
               <li><a href="/medicare-florida">Medicare Supplement Plans (Medigap)</a></li>
@@ -364,7 +364,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Planes de Medicare Suplementario (Medigap) en Florida 2026–2027</h1>
           <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado originalmente: 15 Ene 2024 · Revisado y actualizado: 20 Nov 2026 (con cifras oficiales CMS 2026–2027)</strong></p>
-          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432, oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre aseguradoras autorizadas (entre ellas Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado). Nuestras consultas y comparativas no tienen ningún costo ni recargo para usted: la aseguradora emisora paga la compensación del corredor al emitirse la póliza y las primas reguladas de Medicare son exactamente las mismas ya sea contratando directo o mediante broker.</p>
+          <p>Si está explorando opciones de Medicare en Florida, probablemente sepa que Medicare Original (Partes A y B) deja vacíos de cobertura significativos, incluyendo un coseguro del 20% sin límite. Como corredor independiente licenciado en Florida (Andrés Bozo, NPN: 21228432; dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención presencial al público), le ayudo a comparar planes Medigap Plan G, Plan N y Plan F entre aseguradoras autorizadas (entre ellas Mutual of Omaha, Aetna, Cigna, Humana y UnitedHealthcare, según disponibilidad por condado). Nuestras consultas y comparativas no tienen ningún costo ni recargo para usted: la aseguradora emisora paga la compensación del corredor al emitirse la póliza y las primas reguladas de Medicare son exactamente las mismas ya sea contratando directo o mediante broker.</p>
         </header>
 
         <section>
@@ -516,7 +516,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Medicare Supplement (Medigap) Plans in Florida 2026–2027</h1>
           <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Originally published: Jan 15, 2024 · Revised &amp; updated: Nov 20, 2026 (with 2026–2027 CMS Medicare figures)</strong></p>
-          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A &amp; Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andres Bozo (NPN: 21228432) helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across licensed carriers (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability). Broker guidance and rate comparisons carry zero fees or markups to you—licensed brokers are compensated directly by the issuing carrier upon enrollment, and regulated Medicare premiums remain identical whether you enroll directly or through a broker.</p>
+          <p>If you are navigating Medicare in Florida, you likely know that Original Medicare (Part A &amp; Part B) leaves significant gaps in coverage, including an uncapped 20% coinsurance liability for medical services. As an independent, Florida-licensed insurance broker (Andres Bozo, NPN: 21228432; mailing/administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in public office), he helps Florida seniors compare Medigap Plan G, Plan N, and Plan F across licensed carriers (including Mutual of Omaha, Aetna, Cigna, Humana, and UnitedHealthcare, subject to county availability). Broker guidance and rate comparisons carry zero fees or markups to you—licensed brokers are compensated directly by the issuing carrier upon enrollment, and regulated Medicare premiums remain identical whether you enroll directly or through a broker.</p>
         </header>
 
         <section>
@@ -686,7 +686,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Seguro de Entierro y Gastos Finales en Florida 2026–2027</h1>
           <p><strong>Por Andrés H. Bozo, Broker Licenciado en Florida (NPN: 21228432) · Publicado: 15 Ene 2024 · Actualizado: 18 Nov 2026</strong></p>
-          <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida con oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, Andrés Bozo (NPN: 21228432) compara las tarifas más competitivas entre múltiples aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
+          <p>Evite que sus hijos o cónyuge enfrenten deudas repentinas por costos funerarios. Pólizas de vida entera permanentes de $5,000 a $35,000 con primas niveladas sujetas a los términos del contrato. Como corredor de seguros independiente en Florida (Andrés Bozo, NPN: 21228432; dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público), compara las tarifas más competitivas entre múltiples aseguradoras especializadas para proteger a su familia con opciones de emisión simplificada sin examen médico tradicional.</p>
         </header>
 
         <section>
@@ -808,7 +808,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <header>
           <h1>Burial Insurance & Final Expense in Florida 2026–2027</h1>
           <p><strong>By Andres H. Bozo, Licensed Florida Insurance Broker (NPN: 21228432) · Published: Jan 15, 2024 · Updated: Nov 18, 2026</strong></p>
-          <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) compares rates across top carriers to secure the best policy for your family.</p>
+          <p>Protect your children and spouse from taking on sudden funeral debt. Permanent whole life coverage with level premiums, subject to policy terms and continued payment of premiums. Many simplified-issue policies do not require a traditional medical exam, although underwriting requirements vary by carrier and applicant. Independent broker Andres Bozo (NPN: 21228432; mailing/admin address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in office) compares rates across top carriers to secure the best policy for your family.</p>
         </header>
 
         <section>
@@ -1272,7 +1272,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Temas Principales y Guías Verificadas para Residentes de Florida</h2>
-          <p>Cada artículo publicado en nuestro centro educativo es redactado y revisado bajo criterios de cumplimiento normativo de CMS, IRS y el Departamento de Servicios Financieros de Florida (DFS) por el corredor independiente Andrés H. Bozo desde nuestra sede en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
+          <p>Cada artículo publicado en nuestro centro educativo es redactado y revisado bajo criterios de cumplimiento normativo de CMS, IRS y el Departamento de Servicios Financieros de Florida (DFS) por el corredor independiente Andrés H. Bozo (NPN: 21228432; dirección postal y administrativa en Gainesville, FL 32607).</p>
           <ul>
             <li><strong>Medicare Inscripción Anual (AEP 15 Oct – 7 Dic 2026):</strong> Preparación para cobertura 2027, deducibles oficiales Parte A ($1,736 en 2026; $1,776 en 2027) y Parte B ($283 en 2026; $292 en 2027 · prima estándar $209.40/mes en 2027), además del tope Parte D ($2,100 en 2026; $2,400 en 2027).</li>
             <li><strong>Seguro de Entierro y Gastos Finales:</strong> Cómo comparar pólizas permanentes de vida entera de $5,000 a $35,000 para cubrir costos funerarios promedio en Florida sin dejar cargas financieras a la familia.</li>
@@ -1297,7 +1297,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Verified Topic Clusters for Florida Seniors & Families</h2>
-          <p>Every guide published in the AHB Insurance Solutions Knowledge Hub is authored and reviewed for regulatory clarity against CMS, IRS, and Florida Department of Financial Services (DFS) standards by independent broker Andres H. Bozo at our Gainesville office (5500 SW Archer Road, Ste H103, Gainesville, FL 32607).</p>
+          <p>Every guide published in the AHB Insurance Solutions Knowledge Hub is authored and reviewed for regulatory clarity against CMS, IRS, and Florida Department of Financial Services (DFS) standards by independent broker Andres H. Bozo (NPN: 21228432; Gainesville, FL 32607 mailing/administrative address).</p>
           <ul>
             <li><strong>Medicare Annual Enrollment (AEP Oct 15 – Dec 7, 2026):</strong> Clear preparation checklists ahead of December 7, 2026, covering 2026 vs. 2027 deductibles ($1,736/$1,776 Part A; $283/$292 Part B; $209.40/mo 2027 std. premium) alongside Part D prescription drug caps ($2,100 in 2026; $2,400 in 2027).</li>
             <li><strong>Final Expense & Burial Insurance:</strong> Comparing permanent $5,000 to $35,000 whole life policies against real Florida burial and cremation invoices without unexpected family debt.</li>
@@ -1400,7 +1400,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Broker Independiente Andrés H. Bozo — Fundador de AHB Insurance Solutions</h2>
-          <p>Andrés H. Bozo es corredor de seguros residente independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) en las líneas de Vida, Salud y Anualidades Variables. Desde su oficina principal ubicada en <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, brinda asesoría bilingüe directa en español e inglés a jubilados, familias y profesionales independientes en todos los condados de Florida.</p>
+          <p>Andrés H. Bozo es corredor de seguros residente independiente certificado por el Departamento de Servicios Financieros del Estado de Florida (DFS) en las líneas de Vida, Salud y Anualidades Variables. Con base operativa en Gainesville, FL (dirección postal y administrativa: <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, sin recepción al público sin cita), brinda asesoría bilingüe directa en español e inglés a jubilados, familias y profesionales independientes en todos los condados de Florida.</p>
           <p>A diferencia de un agente cautivo que únicamente puede ofrecer los productos de una sola compañía, Andrés opera como corredor independiente comparando pólizas disponibles de múltiples aseguradoras licenciadas en Florida como Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial y Corebridge Financial, sin cargo de asesoría (la aseguradora emisora paga la compensación del corredor tras la emisión).</p>
           <h3>Áreas de Especialización en Florida</h3>
           <ul>
@@ -1432,7 +1432,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </header>
         <section>
           <h2>Independent Broker Andres H. Bozo — Principal of AHB Insurance Solutions</h2>
-          <p>Andres H. Bozo is a resident independent insurance broker licensed by the Florida Department of Financial Services (DFS) across Life, Health, and Variable Annuity lines. Operating out of our local office at <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>, he provides direct bilingual guidance in English and Spanish to seniors, retirees, and working families across all 67 Florida counties.</p>
+          <p>Andres H. Bozo is a resident independent insurance broker licensed by the Florida Department of Financial Services (DFS) across Life, Health, and Variable Annuity lines. Based in Gainesville, FL (mailing and administrative address: <strong>5500 SW Archer Road, Ste H103, Gainesville, FL 32607</strong>; no walk-in public office), he provides direct bilingual guidance in English and Spanish to seniors, retirees, and working families across all 67 Florida counties.</p>
           <p>Unlike captive agents restricted to promoting a single insurance carrier, Andres operates strictly as an independent broker comparing plans side-by-side across established, Florida-licensed national carriers including Mutual of Omaha, Aetna, Cigna, Humana, UnitedHealthcare, Foresters Financial, and Corebridge Financial—with zero consulting fees to you (insurers pay broker commissions directly upon enrollment).</p>
           <h3>Core Florida Practice Areas</h3>
           <ul>
@@ -1479,12 +1479,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>Canales de Atención Directa y Oficina en Gainesville</h2>
+        <h2>Canales de Atención Directa en Florida</h2>
         <p>En AHB Insurance Solutions LLC usted nunca habla con un centro de llamadas anónimo ni compartimos su información con revendedores de datos. Sus consultas llegan directamente al corredor licenciado Andrés H. Bozo para brindarle atención confidencial en español o inglés.</p>
         <ul>
           <li><strong>Teléfono Directo y WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></li>
           <li><strong>Correo Electrónico:</strong> <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a></li>
-          <li><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (citas presenciales en el Condado de Alachua y atención virtual en toda Florida)</li>
+          <li><strong>Dirección Postal / Administrativa (sin atención al público):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (visitas presenciales programadas en Alachua y alrededores; atención remota en toda Florida)</li>
           <li><strong>Horario de Atención:</strong> Lunes a Sábado de 8:00 AM a 8:00 PM EST</li>
         </ul>
       </section>
@@ -1505,12 +1505,12 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <p>${escapeHtml(description)}</p>
       </header>
       <section>
-        <h2>Direct Contact Channels & Gainesville Office</h2>
+        <h2>Direct Contact Channels &amp; Service Model</h2>
         <p>At AHB Insurance Solutions LLC, you communicate directly with principal licensed broker Andres H. Bozo—never an outsourced call center or lead aggregator. We never sell your personal information to third-party marketing lists, and every quote comparison is 100% free.</p>
         <ul>
           <li><strong>Direct Phone & WhatsApp:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></li>
           <li><strong>Direct Email:</strong> <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a></li>
-          <li><strong>Gainesville Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (In-person appointments by request; virtual & phone guidance across all 67 Florida counties)</li>
+          <li><strong>Mailing / Administrative Address (no walk-in office):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Scheduled local visits in Alachua &amp; nearby counties; virtual &amp; phone guidance across all 67 Florida counties)</li>
           <li><strong>Business Hours:</strong> Monday through Saturday, 8:00 AM – 8:00 PM EST</li>
         </ul>
       </section>
@@ -1521,7 +1521,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <li><strong>Burial & Final Expense Quotes:</strong> Compare level-premium whole life options ($5,000–$35,000) across multiple licensed Florida carriers.</li>
           <li><strong>IUL & Fixed Annuities:</strong> Request transparent policy illustrations or multi-year fixed yield comparisons tailored to your retirement timeline.</li>
         </ul>
-        <p><strong>Service Scope & Cost:</strong> Consultations and multi-carrier comparisons carry zero service fees across all 67 Florida counties, including Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, and Alachua County. Whether you prefer bilingual English/Spanish guidance by phone, video conference, or an in-office review in Gainesville ahead of the December 7, 2026 Medicare Annual Enrollment Period deadline ($2,100 Part D cap in 2026; $2,400 in 2027), every policy option and underwriting rule is explained step by step prior to enrollment. We never sell or share personal details with lead aggregators.</p>
+        <p><strong>Service Scope & Cost:</strong> Consultations and multi-carrier comparisons carry zero service fees across all 67 Florida counties, including Miami-Dade, Broward, Palm Beach, Orange, Hillsborough, Duval, and Alachua County. Whether you prefer bilingual English/Spanish guidance by phone, video conference, or a scheduled local appointment ahead of the December 7, 2026 Medicare Annual Enrollment Period deadline ($2,100 Part D cap in 2026; $2,400 in 2027), every policy option and underwriting rule is explained step by step prior to enrollment. We never sell or share personal details with lead aggregators.</p>
         <p><small>CMS Notice: We do not offer every plan available in your area. Please contact <a href="https://www.medicare.gov/" target="_blank" rel="noopener noreferrer">Medicare.gov</a> or 1-800-MEDICARE to obtain information on all of your options.</small></p>
       </section>
     `;
@@ -1557,7 +1557,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${escapeHtml(description)}</p>
           <div class="broker-contact-badge">
             <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
-            <p><strong>Dirección:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
+            <p><strong>Dirección Postal / Administrativa (sin atención al público):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
             <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
           </div>
         </header>
@@ -1595,19 +1595,19 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
 
         <section>
-          <h2>Dirección, Teléfono y Ubicación de Nuestra Oficina en Gainesville</h2>
-          <p><strong>Dirección de la Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Condado de Alachua, cerca de Celebration Pointe y Butler Plaza, salida 384 de la autopista I-75).</p>
+          <h2>Modalidades de Atención, Teléfono y Dirección Administrativa en Gainesville</h2>
+          <p><strong>Dirección Postal / Administrativa (sin atención presencial al público):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
           <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Correo Electrónico:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-          <p><strong>Mapa en Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">Ver mapa e indicaciones de cómo llegar</a></p>
+          <p><strong>Atención Local y Remota:</strong> Citas presenciales programadas en Gainesville y el Condado de Alachua, o consultas por teléfono y videollamada.</p>
         </section>
 
         <section>
           <h2>Áreas de Servicio en el Condado de Alachua (Alachua County Service Areas)</h2>
-          <p>Atendemos presencialmente con cita previa en nuestra oficina de Archer Road o a domicilio, así como mediante consultas telefónicas y remotas en las siguientes comunidades:</p>
+          <p>Atendemos presencialmente con cita previa en el domicilio del cliente o lugar de encuentro conveniente, así como mediante consultas telefónicas y remotas en las siguientes comunidades:</p>
           <ul>
             <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIPs 32601, 32605, 32607, 32608, 32653).</li>
-            <li><strong>Archer:</strong> ZIP 32618 (a minutos directos por SW Archer Road).</li>
+            <li><strong>Archer:</strong> ZIP 32618 (corredor suroeste del Condado de Alachua).</li>
             <li><strong>Newberry:</strong> ZIP 32669 (familias y jubilados en el oeste de Alachua).</li>
             <li><strong>High Springs:</strong> ZIP 32643 (cobertura integral para el norte del condado).</li>
             <li><strong>Alachua:</strong> ZIP 32615.</li>
@@ -1621,8 +1621,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dt><strong>¿Puedo utilizar un Suplemento de Medicare (Medigap) en UF Health Shands Hospital?</strong></dt>
             <dd>Sí, absolutamente. Con un plan Medigap (como Plan G o Plan N), usted puede atenderse con cualquier médico o especialista que acepte Medicare en UF Health Shands, HCA Florida y en cualquier hospital del país, sin restricciones de red ni necesidad de referidos.</dd>
 
-            <dt><strong>¿Dónde está ubicada la oficina de AHB Insurance Solutions en Gainesville?</strong></dt>
-            <dd>Nuestra sede física se encuentra en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Atendemos a clientes de todo el Condado de Alachua con cita previa, por teléfono al (352) 225-8389 o por videoconferencia.</dd>
+            <dt><strong>¿Cómo atiende AHB Insurance Solutions en Gainesville y reciben visitas sin cita?</strong></dt>
+            <dd>Nuestra dirección postal y administrativa es 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 y no recibe clientes al público sin cita. Atendemos en el Condado de Alachua mediante citas presenciales programadas, por teléfono al (352) 225-8389 o por videoconferencia.</dd>
 
             <dt><strong>¿Cobran honorarios por comparar planes o cotizar seguros?</strong></dt>
             <dd>No. Nuestros servicios de consultoría, comparación entre múltiples aseguradoras líderes y tramitación de pólizas son 100% gratuitos para el consumidor. Las aseguradoras nos compensan directamente bajo tarifas reguladas por el estado de Florida.</dd>
@@ -1646,7 +1646,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <p>${escapeHtml(description)}</p>
           <div class="broker-contact-badge">
             <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
-            <p><strong>Office Address:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
+            <p><strong>Mailing / Administrative Address (no walk-in office):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
             <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
           </div>
         </header>
@@ -1684,19 +1684,19 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         </section>
 
         <section>
-          <h2>Gainesville Office Location, Hours & Contact Details</h2>
-          <p><strong>Office Location:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe & Butler Plaza, off I-75 Exit 384).</p>
+          <h2>Gainesville Service Model, Hours &amp; Administrative Address</h2>
+          <p><strong>Mailing &amp; Administrative Address (No walk-in office):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607.</p>
           <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">(352) 225-8389</a></p>
           <p><strong>Email:</strong> andreshbozo@ahbinsurancesolutions.com</p>
-          <p><strong>Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA" target="_blank" rel="noopener noreferrer">View Map & Driving Directions</a></p>
+          <p><strong>Service Options:</strong> Scheduled in-person visits across Gainesville and Alachua County, or phone and video consultations.</p>
         </section>
 
         <section>
           <h2>Service Communities Across Alachua County</h2>
-          <p>We consult in person by appointment at our SW Archer Road office, make home visits, and offer virtual consultations across all Alachua County communities:</p>
+          <p>We provide scheduled local appointments at your home or convenient community spot, as well as virtual consultations across all Alachua County communities:</p>
           <ul>
             <li><strong>Gainesville:</strong> Haile Plantation, Tioga, Duckpond, Downtown, Suburban Heights, Millhopper (ZIP codes 32601, 32605, 32607, 32608, 32653).</li>
-            <li><strong>Archer:</strong> ZIP 32618 (minutes away along SW Archer Road).</li>
+            <li><strong>Archer:</strong> ZIP 32618 (Southwest Alachua County).</li>
             <li><strong>Newberry:</strong> ZIP 32669 (families and retirees in western Alachua County).</li>
             <li><strong>High Springs:</strong> ZIP 32643 (northern Alachua County).</li>
             <li><strong>Alachua:</strong> ZIP 32615.</li>
@@ -1710,8 +1710,8 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
             <dt><strong>Can I be treated at UF Health Shands Hospital with a Medicare Supplement (Medigap) plan?</strong></dt>
             <dd>Yes. UF Health Shands Hospital and outpatient facilities accept Original Medicare and standardized Medigap policies (such as Plan G and Plan N), subject to Medicare and Medigap rules, with no network restrictions or referral requirements.</dd>
 
-            <dt><strong>Where is the AHB Insurance Solutions office located in Gainesville?</strong></dt>
-            <dd>Our office is located at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 (Alachua County, near Celebration Pointe and Butler Plaza). We consult in person by appointment or by phone at (352) 225-8389.</dd>
+            <dt><strong>How does AHB Insurance Solutions meet with clients in Gainesville, and is there a walk-in office?</strong></dt>
+            <dd>Our mailing and administrative address is 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, without public walk-in reception. We consult with Alachua County clients via scheduled local appointments, or by phone/video at (352) 225-8389.</dd>
 
             <dt><strong>Do you charge any consultation or broker fees in Gainesville?</strong></dt>
             <dd>No, never. Our independent brokerage consultations, carrier rate comparisons, and enrollment assistance are 100% free with zero fees to you.</dd>
@@ -1759,7 +1759,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       </header>
       <section>
         <h2>Identificación del Corredor y Regulación en Florida</h2>
-        <p>AHB Insurance Solutions LLC opera como agencia de seguros independiente autorizada por el Departamento de Servicios Financieros del Estado de Florida (DFS), bajo la dirección de Andrés H. Bozo (NPN: 21228432), con sede en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Nuestros servicios de orientación y comparación de cotizaciones se ofrecen sin cargo adicional para el consumidor.</p>
+        <p>AHB Insurance Solutions LLC opera como agencia de seguros independiente autorizada por el Departamento de Servicios Financieros del Estado de Florida (DFS), bajo la dirección de Andrés H. Bozo (NPN: 21228432; dirección postal y administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención presencial al público). Nuestros servicios de orientación y comparación de cotizaciones se ofrecen sin cargo adicional para el consumidor.</p>
       </section>
       <section>
         <h2>Cumplimiento Normativo, CMS y Protección de Datos</h2>
@@ -1779,7 +1779,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
       </header>
       <section>
         <h2>Broker Identification & Florida DFS Licensing</h2>
-        <p>AHB Insurance Solutions LLC operates as a state-licensed independent insurance brokerage regulated by the Florida Department of Financial Services (DFS), led by principal broker Andres H. Bozo (NPN: 21228432) at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Our brokerage consultations and rate comparisons carry zero fees for consumers.</p>
+        <p>AHB Insurance Solutions LLC operates as a state-licensed independent insurance brokerage regulated by the Florida Department of Financial Services (DFS), led by principal broker Andres H. Bozo (NPN: 21228432; mailing and administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in public office). Our brokerage consultations and rate comparisons carry zero fees for consumers.</p>
       </section>
       <section>
         <h2>Regulatory Disclosures, Privacy & Consumer Protections</h2>
@@ -1789,7 +1789,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           <li><strong>Quotes, Underwriting & TCPA Rights:</strong> Rate estimates are informational and subject to formal carrier underwriting approval. Consumers may revoke SMS/electronic contact consent at any time by replying STOP or emailing info@ahbinsurancesolutions.com.</li>
         </ul>
         <h3>Broker Compensation, Electronic Submissions & Governing Law</h3>
-        <p>Licensed broker compensation is paid directly by represented insurance carriers according to regulated Florida commission schedules, ensuring consumers pay identical state-approved rates with zero consulting surcharges. Coverage is never bound until formal carrier underwriting review and policy issuance are completed. All disputes or regulatory inquiries fall under Florida statutory insurance oversight, and consumers retain the right to request access, correction, or deletion of stored inquiry records by contacting <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> or calling <a href="tel:+13522258389">+1 (352) 225-8389</a> at our Gainesville headquarters.</p>
+        <p>Licensed broker compensation is paid directly by represented insurance carriers according to regulated Florida commission schedules, ensuring consumers pay identical state-approved rates with zero consulting surcharges. Coverage is never bound until formal carrier underwriting review and policy issuance are completed. All disputes or regulatory inquiries fall under Florida statutory insurance oversight, and consumers retain the right to request access, correction, or deletion of stored inquiry records by contacting <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> or calling <a href="tel:+13522258389">+1 (352) 225-8389</a>.</p>
       </section>
     `;
   }
@@ -1896,7 +1896,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
 
         <section>
           <h2>${isEs ? `Asesoría Gratuita con el Broker Andrés Bozo en ${city.cityName}` : `Free Insurance Consultation in ${city.cityName} with Andres Bozo`}</h2>
-          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) directly at +1 (352) 225-8389 for a free rate comparison across Florida-licensed carriers."}</p>
+          <p>${isEs ? "Comuníquese directamente con el broker licenciado Andrés Bozo (NPN 21228432; dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público) al (352) 225-8389 para recibir su análisis comparativo sin costo." : "Call licensed independent broker Andres Bozo (NPN 21228432; mailing/admin address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in office) directly at +1 (352) 225-8389 for a free rate comparison across Florida-licensed carriers."}</p>
         </section>
       `;
     }
@@ -1926,7 +1926,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <ul>
           <li><strong>Fuentes Primarias Verificables:</strong> Los deducibles de Medicare Parte A y B, los límites anuales de la Parte D y los plazos de Inscripción Anual (AEP) se contrastan directamente con publicaciones oficiales de CMS.gov y Medicare.gov antes de actualizar cada guía, diferenciando claramente 2026 de 2027.</li>
           <li><strong>Divulgación Honesta de Cargos y Límites:</strong> En artículos sobre Vida Universal Indexada (IUL) y anualidades, distinguimos explícitamente entre el piso contractual del 0% en la acreditación del índice y los cargos internos de póliza, costos del seguro (COI) o periodos de rescate aplicables.</li>
-          <li><strong>Independencia Comercial:</strong> Como agencia independiente en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, nuestras explicaciones reflejan la elegibilidad del cliente y comparativas reales de mercado, sin cuotas corporativas de venta.</li>
+          <li><strong>Independencia Comercial:</strong> Como agencia independiente (dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607), nuestras explicaciones reflejan la elegibilidad del cliente y comparativas reales de mercado, sin cuotas corporativas de venta.</li>
           <li><strong>Correcciones y Transparencia:</strong> Cualquier actualización normativa o corrección se fecha visiblemente con atribución al corredor principal Andrés H. Bozo (NPN 21228432). Para reportar observaciones, comuníquese al <a href="tel:+13522258389">(352) 225-8389</a> o <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a>.</li>
         </ul>
         <h3>Ciclo de Revisión Anual y Aviso Regulatorio</h3>
@@ -1944,7 +1944,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
         <ul>
           <li><strong>Primary Regulatory Verification:</strong> Medicare Part A and Part B deductibles, Part D out-of-pocket caps, and Annual Enrollment Period dates are verified against official CMS.gov and Medicare.gov publications and clearly labeled by plan year (2026 vs. 2027).</li>
           <li><strong>Fair Product & Charge Disclosures:</strong> Educational guides covering Indexed Universal Life (IUL) and fixed annuities explicitly distinguish between contractual 0% index crediting floors and internal policy charges, Cost of Insurance (COI) deductions, or surrender charge schedules.</li>
-          <li><strong>Independent Editorial Integrity:</strong> Operating from 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, our guidance evaluates policy suitability, underwriting requirements, and exclusions honestly rather than following single-carrier quotas.</li>
+          <li><strong>Independent Editorial Integrity:</strong> As an independent Florida brokerage (mailing/administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607), our guidance evaluates policy suitability, underwriting requirements, and exclusions honestly rather than following single-carrier quotas.</li>
           <li><strong>Corrections & Transparency:</strong> Published and last-modified dates alongside author credentials (Andres H. Bozo, NPN 21228432) appear on guides across our site. Direct feedback or correction inquiries may be sent to <a href="mailto:andreshbozo@ahbinsurancesolutions.com">andreshbozo@ahbinsurancesolutions.com</a> or <a href="tel:+13522258389">+1 (352) 225-8389</a>.</li>
         </ul>
         <h3>Annual Regulatory Review Cadence & Consumer Standards</h3>
@@ -2014,7 +2014,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Asesoría Bilingüe Independiente en el Sur de Florida</h2>
-            <p>Como corredor independiente licenciado por el Departamento de Servicios Financieros de Florida (NPN: 21228432), Andrés H. Bozo compara objetivamente pólizas disponibles de aseguradoras reconocidas sin ningún costo adicional. Oficina central en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; atención telefónica y virtual para todo Miami-Dade al <a href="tel:+13522258389">+1 (352) 225-8389</a> o mediante nuestra página de <a href="/es/contacto">Contacto Directo</a>.</p>
+            <p>Como corredor independiente licenciado por el Departamento de Servicios Financieros de Florida (NPN: 21228432), Andrés H. Bozo compara objetivamente pólizas disponibles de aseguradoras reconocidas sin ningún costo adicional. Atención remota por teléfono y videollamada para todo Miami-Dade al <a href="tel:+13522258389">+1 (352) 225-8389</a> o mediante nuestra página de <a href="/es/contacto">Contacto Directo</a> (dirección postal/administrativa en Gainesville: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público).</p>
           </section>
         ` : `
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/final-expense">Final Expense</a> &gt; <span>Miami, FL</span></p></nav>
@@ -2043,7 +2043,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Independent Bilingual Brokerage Across South Florida</h2>
-            <p>As an independent broker licensed by the Florida Department of Financial Services (NPN: 21228432), Andres H. Bozo compares available permanent life policies across established national carriers with zero broker fees. Agency headquarters: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit our <a href="/contact">Contact Page</a> to review personalized Miami ZIP code options.</p>
+            <p>As an independent broker licensed by the Florida Department of Financial Services (NPN: 21228432), Andres H. Bozo compares available permanent life policies across established national carriers with zero broker fees via remote phone and video consultations across Miami-Dade (mailing/administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; no walk-in office). Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit our <a href="/contact">Contact Page</a> to review personalized Miami ZIP code options.</p>
           </section>
         `;
       } else if (cleanPath === "/burial-insurance-tampa" || cleanPath === "/es/seguro-gastos-finales-tampa") {
@@ -2085,7 +2085,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Cotización Comparativa Sin Compromiso en Hillsborough y Pinellas</h2>
-            <p>Consulte gratuitamente con el corredor independiente Andrés H. Bozo (NPN: 21228432), oficina registrada en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> para revisar alternativas en su código postal.</p>
+            <p>Consulte gratuitamente de forma remota por teléfono o videollamada con el corredor independiente Andrés H. Bozo (NPN: 21228432; dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público). Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> para revisar alternativas en su código postal.</p>
           </section>
         ` : `
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/final-expense">Final Expense</a> &gt; <span>Tampa Bay, FL</span></p></nav>
@@ -2114,7 +2114,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Independent Tampa Bay Consultation — Zero Broker Fees</h2>
-            <p>Compare permanent whole life options objectively with licensed broker Andres H. Bozo (NPN: 21228432), headquartered at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 and serving Tampa Bay residents statewide by phone and online. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit <a href="/contact">Contact Us</a> for a personalized comparison.</p>
+            <p>Compare permanent whole life options objectively by phone or video with licensed broker Andres H. Bozo (NPN: 21228432; mailing/admin address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in office) serving Tampa Bay residents remotely statewide. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or visit <a href="/contact">Contact Us</a> for a personalized comparison.</p>
           </section>
         `;
       } else if (cleanPath === "/iul-retirement-tampa" || cleanPath === "/es/iul-jubilacion-tampa") {
@@ -2152,7 +2152,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Ilustración Personalizada IUL en Tampa Bay</h2>
-            <p>Solicite una ilustración clara lado a lado revisando proyecciones conservadoras y estructura de costos con Andrés H. Bozo (NPN: 21228432), oficina en 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Llame al <a href="tel:+13522258389">+1 (352) 225-8389</a> o utilice <a href="/es/contacto">Contacto Directo</a>.</p>
+            <p>Solicite una ilustración clara lado a lado revisando proyecciones conservadoras y estructura de costos de forma remota por teléfono o videollamada con Andrés H. Bozo (NPN: 21228432; dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público). Llame al <a href="tel:+13522258389">+1 (352) 225-8389</a> o utilice <a href="/es/contacto">Contacto Directo</a>.</p>
           </section>
         ` : `
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/iul-retirement">IUL Guide</a> &gt; <span>Tampa Bay, FL</span></p></nav>
@@ -2181,7 +2181,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Request a Personalized Tampa IUL Policy Illustration</h2>
-            <p>Review conservative index modeling and full policy charge disclosures with licensed broker Andres H. Bozo (NPN: 21228432), 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or reach us via <a href="/contact">Contact Page</a>.</p>
+            <p>Review conservative index modeling and full policy charge disclosures remotely via phone or video with licensed broker Andres H. Bozo (NPN: 21228432; mailing/admin address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in office). Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or reach us via <a href="/contact">Contact Page</a>.</p>
           </section>
         `;
       } else if (cleanPath === "/orlando-spanish-insurance" || cleanPath === "/es/seguros-orlando" || cleanPath === "/spanish-insurance-orlando") {
@@ -2223,7 +2223,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Hable Hoy en Español con Andrés Bozo</h2>
-            <p>Atendemos a toda la comunidad hispana de Orange, Osceola y Seminole County desde nuestra sede en Florida (5500 SW Archer Road, Ste H103, Gainesville, FL 32607). Llame directo al <a href="tel:+13522258389">+1 (352) 225-8389</a> o visite <a href="/es/contacto">Contacto Directo</a>. <em>Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para consultar todas las opciones.</em></p>
+            <p>Atendemos a toda la comunidad hispana de Orange, Osceola y Seminole County de forma remota por teléfono y videollamada (dirección postal/administrativa en Florida: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público). Llame directo al <a href="tel:+13522258389">+1 (352) 225-8389</a> o visite <a href="/es/contacto">Contacto Directo</a>. <em>Aviso CMS: No ofrecemos todos los planes disponibles en su área; visite Medicare.gov o llame al 1-800-MEDICARE para consultar todas las opciones.</em></p>
           </section>
         ` : `
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <a href="/city-guides">Florida Cities</a> &gt; <span>Orlando, FL</span></p></nav>
@@ -2252,7 +2252,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
           </section>
           <section>
             <h2>Direct Bilingual Consultations Across Central Florida</h2>
-            <p>Serving Orange, Osceola, and Seminole Counties from our Florida brokerage headquarters at 5500 SW Archer Road, Ste H103, Gainesville, FL 32607. Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or use our <a href="/contact">Contact Form</a>. <em>CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all options.</em></p>
+            <p>Serving Orange, Osceola, and Seminole Counties remotely via phone and video consultations (Florida mailing/administrative address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607; no walk-in public office). Call <a href="tel:+13522258389">+1 (352) 225-8389</a> or use our <a href="/contact">Contact Form</a>. <em>CMS Notice: We do not offer every plan available in your area; please contact Medicare.gov or 1-800-MEDICARE for information on all options.</em></p>
           </section>
         `;
       } else if (cleanPath.includes("annuities") || cleanPath.includes("anualidades")) {
@@ -2278,7 +2278,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <p>${escapeHtml(description)}</p>
               <div class="broker-contact-badge">
                 <p><strong>Broker Licenciado:</strong> Andrés Bozo (NPN: 21228432)</p>
-                <p><strong>Oficina:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
+                <p><strong>Dirección Postal / Administrativa (sin atención al público):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
                 <p><strong>Teléfono Directo:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
               </div>
             </header>
@@ -2415,7 +2415,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <p>${escapeHtml(description)}</p>
               <div class="broker-contact-badge">
                 <p><strong>Licensed Broker:</strong> Andres Bozo (NPN: 21228432)</p>
-                <p><strong>Office:</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
+                <p><strong>Mailing / Administrative Address (no walk-in office):</strong> 5500 SW Archer Road, Ste H103, Gainesville, FL 32607</p>
                 <p><strong>Direct Phone:</strong> <a href="tel:+13522258389">+1 (352) 225-8389</a></p>
               </div>
             </header>
@@ -2581,7 +2581,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <dd>Sí, muchas pólizas PPO le permiten visitar cualquier dentista licenciado dentro o fuera de la red, ofreciendo mayores descuentos negociados con proveedores participantes en red.</dd>
             </dl>
             <h2>Compare Redes Dentales en Todo Florida sin Costo de Corretaje</h2>
-            <p>Atendemos a adultos mayores en Gainesville, Miami, Tampa, Orlando y Jacksonville comparando planes disponibles según sus dentistas preferidos y códigos postales. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> (Oficina: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607).</p>
+            <p>Atendemos de forma remota en Miami, Tampa, Orlando y Jacksonville, y con cita en Gainesville, comparando planes disponibles según sus dentistas preferidos y códigos postales. Llame hoy al <a href="tel:+13522258389">+1 (352) 225-8389</a> o escriba en <a href="/es/contacto">Contacto Directo</a> (dirección postal/administrativa: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, sin atención al público).</p>
           </section>
         ` : `
           <nav aria-label="Breadcrumb"><p><a href="/">Home</a> &gt; <span>Senior Dental, Vision & Hearing</span></p></nav>
@@ -2609,7 +2609,7 @@ export function getSeoMetadata(requestPath: string): SeoMetaData {
               <dd>Many PPO dental plans allow visits to any licensed dentist inside or outside the network, with stronger negotiated fee discounts inside the carrier network.</dd>
             </dl>
             <h2>Free Florida Dental & Vision Comparison</h2>
-            <p>Speak directly with independent broker Andres H. Bozo (NPN: 21228432, 5500 SW Archer Road, Ste H103, Gainesville, FL 32607) at <a href="tel:+13522258389">+1 (352) 225-8389</a> or via our <a href="/contact">Contact Page</a> to compare premiums across Miami, Tampa, Orlando, Jacksonville, and Gainesville ZIP codes.</p>
+            <p>Speak directly with independent broker Andres H. Bozo (NPN: 21228432; mailing/admin address: 5500 SW Archer Road, Ste H103, Gainesville, FL 32607, no walk-in office) at <a href="tel:+13522258389">+1 (352) 225-8389</a> or via our <a href="/contact">Contact Page</a> to compare premiums across Miami, Tampa, Orlando, Jacksonville, and Gainesville ZIP codes.</p>
           </section>
         `;
       }
@@ -2744,12 +2744,6 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
       "postalCode": "32607",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 29.6015,
-      "longitude": -82.4013
-    },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=5500+SW+Archer+Road+Ste+H103+Gainesville+FL+32607+USA",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -2761,6 +2755,9 @@ export function generateJsonLd(metadata: SeoMetaData): Record<string, unknown>[]
     "areaServed": [
       { "@type": "State", "name": "Florida" },
       { "@type": "AdministrativeArea", "name": "Alachua County, Florida" },
+      { "@type": "AdministrativeArea", "name": "Marion County, Florida" },
+      { "@type": "AdministrativeArea", "name": "Lake County, Florida" },
+      { "@type": "AdministrativeArea", "name": "Putnam County, Florida" },
       { "@type": "AdministrativeArea", "name": "Miami-Dade County, Florida" },
       { "@type": "AdministrativeArea", "name": "Orange County, Florida" },
       { "@type": "AdministrativeArea", "name": "Hillsborough County, Florida" },
@@ -3273,7 +3270,7 @@ export function rewriteHtmlForSeo(indexHtml: string, metadata: SeoMetaData, incl
     const noscriptNav = isEsPage
       ? `<nav aria-label="Enlaces Principales"><a href="/es/seguro-medicare-florida">Medicare</a> | <a href="/es/gastos-finales">Gastos Finales</a> | <a href="/es/iul-jubilacion">IUL</a> | <a href="/es/privacidad">Privacidad</a> | <a href="/es/terminos">Términos</a> | <a href="/es/politica-editorial">Política Editorial</a></nav>`
       : `<nav aria-label="Primary Links"><a href="/medicare-florida">Medicare</a> | <a href="/final-expense">Final Expense</a> | <a href="/iul-retirement">IUL</a> | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms</a> | <a href="/editorial-policy">Editorial Policy</a></nav>`;
-    const noscriptSummary = `<noscript>\n      <div class="noscript-content">\n        <p>AHB Insurance Solutions LLC · 5500 SW Archer Road, Ste H103, Gainesville, FL 32607 · NPN: 21228432 · <a href="tel:+13522258389">+1 (352) 225-8389</a></p>\n        ${noscriptNav}\n      </div>\n    </noscript>`;
+    const noscriptSummary = `<noscript>\n      <div class="noscript-content">\n        <p>AHB Insurance Solutions LLC · Gainesville, FL 32607 (Mailing/Admin: 5500 SW Archer Road, Ste H103, no walk-in office) · NPN: 21228432 · <a href="tel:+13522258389">+1 (352) 225-8389</a></p>\n        ${noscriptNav}\n      </div>\n    </noscript>`;
     if (noscriptRegex.test(rewritten)) {
       rewritten = rewritten.replace(noscriptRegex, noscriptSummary);
     }

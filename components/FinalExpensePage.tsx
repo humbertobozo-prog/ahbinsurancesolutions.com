@@ -702,7 +702,7 @@ export const FinalExpensePage: React.FC<FinalExpensePageProps> = ({ language, on
                                     : 'As a state-licensed independent Florida insurance broker, I represent you, not an insurance conglomerate. My objective is to shop the entire marketplace to identify the highest coverage at the lowest locked-in rate, backed by lifelong personal support and independent expertise.'}
                             </p>
                             <p className="text-xs font-semibold text-primary pt-1">
-                                {isEs ? '📍 Sede en Gainesville, FL (5500 SW Archer Road, Ste H103) | Servicio en toda Florida' : '📍 Office in Gainesville, FL (5500 SW Archer Road, Ste H103) | Serving all of Florida'}
+                                {isEs ? '📍 Base operativa en Gainesville, FL (atención remota en toda Florida; dirección postal: 5500 SW Archer Road, Ste H103, sin atención al público)' : '📍 Based in Gainesville, FL (statewide remote service; mailing address: 5500 SW Archer Road, Ste H103, no walk-in office)'}
                             </p>
                         </div>
                     </section>
