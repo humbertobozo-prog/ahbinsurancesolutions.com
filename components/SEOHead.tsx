@@ -196,7 +196,7 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
             "email": "andreshbozo@ahbinsurancesolutions.com",
             "priceRange": "$$",
             "currenciesAccepted": "USD",
-            "paymentAccepted": "Cash, Credit Card, Bank Transfer, Direct Debit",
+            "publicAccess": false,
             "identifier": {
                 "@type": "PropertyValue",
                 "name": "National Producer Number (NPN)",
@@ -219,25 +219,24 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
                     "contactType": "customer service",
                     "email": "andreshbozo@ahbinsurancesolutions.com",
                     "areaServed": "US-FL",
-                    "availableLanguage": ["English", "Spanish"]
+                    "availableLanguage": ["English", "Spanish"],
+                    "hoursAvailable": [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                            "opens": "08:00",
+                            "closes": "20:00"
+                        }
+                    ]
                 }
             ],
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Ste H103",
                 "addressLocality": "Gainesville",
                 "addressRegion": "FL",
                 "postalCode": "32607",
                 "addressCountry": "US"
             },
-            "openingHoursSpecification": [
-                {
-                    "@type": "OpeningHoursSpecification",
-                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                    "opens": "08:00",
-                    "closes": "20:00"
-                }
-            ],
             "areaServed": [
                 { "@type": "State", "name": "Florida" },
                 { "@type": "AdministrativeArea", "name": "Alachua County, Florida" },

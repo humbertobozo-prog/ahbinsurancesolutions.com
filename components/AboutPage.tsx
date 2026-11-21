@@ -82,9 +82,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
             "name": "AHB Insurance Solutions",
             "url": baseUrl,
             "telephone": "+1-352-225-8389",
+            "publicAccess": false,
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Ste H103",
                 "addressLocality": "Gainesville",
                 "addressRegion": "FL",
                 "postalCode": "32607",
@@ -528,7 +528,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ language, onOpenQuote }) =
                                     <span className="text-accent font-bold">📍</span>
                                     <span>
                                         <span className="block text-[10px] font-bold uppercase tracking-wider text-accent">
-                                            {isEs ? 'Dirección Postal / Administrativa (Sin atención al público):' : 'Mailing & Administrative Address (No walk-in office):'}
+                                            {isEs ? 'Oficina Privada Operativa / Dirección Postal (Sin atención presencial al público):' : 'Private Operative Office / Mailing Address (No public walk-in reception):'}
                                         </span>
                                         5500 SW Archer Road, Ste H103, Gainesville, FL 32607
                                     </span>

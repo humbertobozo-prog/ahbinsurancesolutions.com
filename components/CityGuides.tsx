@@ -32,8 +32,17 @@ export const CityGuides: React.FC<CityGuidesProps> = ({
     return {
       '@context': 'https://schema.org',
       '@type': 'InsuranceAgency',
+      '@id': 'https://www.ahbinsurancesolutions.com/#organization',
       name: `AHB Insurance Solutions - ${activeCity.cityName}`,
       description: isEs ? activeCity.taglineEs : activeCity.taglineEn,
+      publicAccess: false,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Gainesville',
+        addressRegion: 'FL',
+        postalCode: '32607',
+        addressCountry: 'US',
+      },
       areaServed: {
         '@type': 'AdministrativeArea',
         name: `${activeCity.cityName}, ${activeCity.county}, Florida`,

@@ -118,7 +118,7 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                             <li><a href="/es/iul-jubilacion" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/iul-jubilacion'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">IUL y Retiro</a></li>
                             <li><a href="/es/anualidades-florida" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/anualidades-florida'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Anualidades FL</a></li>
                             <li><a href="/es/dental-vision-florida" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/dental-vision-florida'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Dental & Visión</a></li>
-                            <li><a href="/es/localidades/gainesville-fl" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/localidades/gainesville-fl'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-amber-400 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors font-black inline-block">📍 Gainesville FL</a></li>
+                            <li><a href="/es/localidades/gainesville-fl" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/localidades/gainesville-fl'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-amber-400 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors font-black inline-block">📍 Gainesville y Alachua, FL</a></li>
                             <li><a href="/es/preguntas-frecuentes" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/preguntas-frecuentes'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Preguntas Frecuentes</a></li>
                             <li><a href="/es/sobre-andres-bozo" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/sobre-andres-bozo'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">Sobre Andrés Bozo</a></li>
                             <li><a href="/es/contacto" onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', '/es/contacto'); window.dispatchEvent(new Event('popstate')); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="text-gray-200 hover:text-accent focus-visible:ring-2 focus-visible:ring-accent outline-none px-1 py-1 rounded transition-colors inline-block">{content.links.contact}</a></li>
@@ -172,10 +172,15 @@ const Footer: React.FC<FooterProps> = ({ content, common, language = 'en', onOpe
                                     </svg>
                                     <address className="not-italic leading-relaxed text-xs sm:text-sm">
                                         <span className="block text-[11px] font-bold text-accent uppercase tracking-wider mb-0.5">
-                                            {isEs ? 'Dirección Postal / Administrativa (Sin atención al público):' : 'Mailing & Administrative Address (No walk-in office):'}
+                                            {isEs ? 'Oficina Privada Operativa / Dirección Postal:' : 'Private Operative Office / Mailing Address:'}
                                         </span>
                                         5500 SW Archer Road, Ste H103<br />
                                         Gainesville, FL 32607, USA
+                                        <span className="block text-[11px] text-gray-300 mt-1">
+                                            {isEs
+                                                ? 'Sin atención presencial al público · Citas locales programadas y asesoría remota en toda Florida'
+                                                : 'No in-person public reception · By-appointment local & statewide remote service'}
+                                        </span>
                                     </address>
                                 </div>
                             </li>

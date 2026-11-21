@@ -160,13 +160,18 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
         "description": description,
         "mainEntity": {
             "@type": "InsuranceAgency",
+            "@id": `${baseUrl}/#organization`,
             "name": "AHB Insurance Solutions",
             "url": baseUrl,
             "telephone": "+1-352-225-8389",
             "email": "andreshbozo@ahbinsurancesolutions.com",
+            "publicAccess": false,
+            "areaServed": {
+                "@type": "State",
+                "name": "Florida"
+            },
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "5500 SW Archer Road, Ste H103",
                 "addressLocality": "Gainesville",
                 "addressRegion": "FL",
                 "postalCode": "32607",
@@ -537,12 +542,14 @@ export const ContactPage: React.FC<ContactPageProps> = ({ language }) => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-700">
                         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
                             <h3 className="font-black text-primary uppercase tracking-wider text-xs mb-2">
-                                {isEs ? 'Oficina en Gainesville, Florida' : 'Gainesville, Florida Office'}
+                                {isEs ? 'Oficina Privada Operativa — Gainesville, FL' : 'Private Operative Office — Gainesville, FL'}
                             </h3>
                             <p className="text-xs leading-relaxed">
                                 5500 SW Archer Road, Ste H103<br />
                                 Gainesville, FL 32607<br />
-                                {isEs ? 'Citas presenciales en Alachua y atención remota en todo Florida.' : 'In-person appointments in Alachua County and statewide video or phone consultations.'}
+                                {isEs
+                                    ? 'Dirección postal/administrativa sin atención presencial al público. Citas locales programadas y asesoría remota en todo Florida.'
+                                    : 'Administrative & mailing address with no public walk-in reception. By-appointment local visits & statewide video/phone consultations.'}
                             </p>
                         </div>
                         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">

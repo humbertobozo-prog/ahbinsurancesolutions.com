@@ -195,14 +195,19 @@ export const LocationLandingPage: React.FC<LocationLandingPageProps> = ({
     const localBusinessSchema = {
         "@context": "https://schema.org",
         "@type": "InsuranceAgency",
+        "@id": `${baseUrl}/#organization`,
         "name": "AHB Insurance Solutions",
         "url": canonical,
         "telephone": "+1-352-225-8389",
         "email": "andreshbozo@ahbinsurancesolutions.com",
         "description": details.description,
+        "publicAccess": false,
+        "areaServed": {
+            "@type": "State",
+            "name": "Florida"
+        },
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "5500 SW Archer Road, Ste H103",
             "addressLocality": "Gainesville",
             "addressRegion": "FL",
             "postalCode": "32607",
